@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="pythonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#306998"/>
+      <stop offset="100%" style="stop-color:#FFD43B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="#1e1e1e"/>
+
+  <!-- Decorative elements -->
+  <rect x="0" y="0" width="8" height="200" fill="#306998"/>
+  <rect x="792" y="0" width="8" height="200" fill="#FFD43B"/>
+
+  <!-- Week badge -->
+  <rect x="30" y="25" width="120" height="40" rx="20" fill="#306998"/>
+  <text x="90" y="52" font-family="Segoe UI, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">SEMANA 04</text>
+
+  <!-- Main title -->
+  <text x="400" y="75" font-family="Segoe UI, sans-serif" font-size="36" font-weight="bold" fill="#FFD43B" text-anchor="middle">Comprehensions y Funciones</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="110" font-family="Segoe UI, sans-serif" font-size="18" fill="#e0e0e0" text-anchor="middle">De bucles a expresiones concisas • Modulariza tu código</text>
+
+  <!-- Topic boxes -->
+  <g transform="translate(80, 130)">
+    <!-- List Comprehensions -->
+    <rect x="0" y="0" width="145" height="50" rx="8" fill="#252526" stroke="#569cd6" stroke-width="2"/>
+    <text x="72" y="22" font-family="Consolas, monospace" font-size="11" fill="#569cd6" text-anchor="middle">[x for x in ...]</text>
+    <text x="72" y="40" font-family="Segoe UI, sans-serif" font-size="11" fill="#b0b0b0" text-anchor="middle">Comprehensions</text>
+  </g>
+
+  <g transform="translate(245, 130)">
+    <!-- Dict/Set Comprehensions -->
+    <rect x="0" y="0" width="145" height="50" rx="8" fill="#252526" stroke="#4ec9b0" stroke-width="2"/>
+    <text x="72" y="22" font-family="Consolas, monospace" font-size="11" fill="#4ec9b0" text-anchor="middle">{k: v for ...}</text>
+    <text x="72" y="40" font-family="Segoe UI, sans-serif" font-size="11" fill="#b0b0b0" text-anchor="middle">Dict &amp; Set</text>
+  </g>
+
+  <g transform="translate(410, 130)">
+    <!-- Functions -->
+    <rect x="0" y="0" width="145" height="50" rx="8" fill="#252526" stroke="#dcdcaa" stroke-width="2"/>
+    <text x="72" y="22" font-family="Consolas, monospace" font-size="11" fill="#dcdcaa" text-anchor="middle">def func():</text>
+    <text x="72" y="40" font-family="Segoe UI, sans-serif" font-size="11" fill="#b0b0b0" text-anchor="middle">Funciones</text>
+  </g>
+
+  <g transform="translate(575, 130)">
+    <!-- Parameters -->
+    <rect x="0" y="0" width="145" height="50" rx="8" fill="#252526" stroke="#ce9178" stroke-width="2"/>
+    <text x="72" y="22" font-family="Consolas, monospace" font-size="11" fill="#ce9178" text-anchor="middle">*args **kwargs</text>
+    <text x="72" y="40" font-family="Segoe UI, sans-serif" font-size="11" fill="#b0b0b0" text-anchor="middle">Parámetros</text>
+  </g>
+
+  <!-- Duration badge -->
+  <rect x="670" y="25" width="100" height="35" rx="17" fill="#252526" stroke="#4ec9b0" stroke-width="1"/>
+  <text x="720" y="48" font-family="Segoe UI, sans-serif" font-size="14" fill="#4ec9b0" text-anchor="middle">⏱️ 6 horas</text>
+</svg>
