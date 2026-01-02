@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <!-- Background gradient simulation with solid colors -->
+  <rect width="800" height="200" fill="#1a1a2e"/>
+  <rect x="0" y="0" width="800" height="200" fill="#16213e" opacity="0.7"/>
+
+  <!-- Decorative elements -->
+  <g opacity="0.1">
+    <circle cx="50" cy="100" r="80" fill="#4fc3f7"/>
+    <circle cx="750" cy="100" r="100" fill="#306998"/>
+  </g>
+
+  <!-- File icon -->
+  <g transform="translate(80, 50)">
+    <!-- File body -->
+    <path d="M0 10 L0 90 Q0 100 10 100 L60 100 Q70 100 70 90 L70 30 L50 10 L10 10 Q0 10 0 20 Z"
+          fill="#2d2d2d" stroke="#4fc3f7" stroke-width="2"/>
+    <!-- Folded corner -->
+    <path d="M50 10 L50 30 L70 30" fill="none" stroke="#4fc3f7" stroke-width="2"/>
+    <!-- Lines representing text -->
+    <line x1="12" y1="45" x2="55" y2="45" stroke="#4fc3f7" stroke-width="2" opacity="0.7"/>
+    <line x1="12" y1="58" x2="45" y2="58" stroke="#4fc3f7" stroke-width="2" opacity="0.5"/>
+    <line x1="12" y1="71" x2="50" y2="71" stroke="#4fc3f7" stroke-width="2" opacity="0.3"/>
+  </g>
+
+  <!-- Warning/Exception symbol -->
+  <g transform="translate(180, 60)">
+    <polygon points="25,0 50,45 0,45" fill="none" stroke="#FFD43B" stroke-width="3"/>
+    <text x="25" y="38" font-family="Arial, sans-serif" font-size="28" fill="#FFD43B" text-anchor="middle" font-weight="bold">!</text>
+  </g>
+
+  <!-- Context manager symbol (brackets) -->
+  <g transform="translate(630, 50)">
+    <text x="0" y="50" font-family="monospace" font-size="60" fill="#98c379" opacity="0.8">{</text>
+    <text x="50" y="50" font-family="monospace" font-size="60" fill="#98c379" opacity="0.8">}</text>
+    <text x="25" y="85" font-family="monospace" font-size="14" fill="#888" text-anchor="middle">with</text>
+  </g>
+
+  <!-- Main title -->
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    Semana 11
+  </text>
+
+  <!-- Subtitle -->
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="18" fill="#4fc3f7" text-anchor="middle">
+    Archivos, Excepciones y Context Managers
+  </text>
+
+  <!-- Topics -->
+  <g font-family="Arial, sans-serif" font-size="12" fill="#888">
+    <text x="280" y="155" text-anchor="middle">📄 Files I/O</text>
+    <text x="400" y="155" text-anchor="middle">⚠️ Exceptions</text>
+    <text x="520" y="155" text-anchor="middle">🔐 Context Managers</text>
+  </g>
+
+  <!-- Week indicator -->
+  <g transform="translate(720, 20)">
+    <rect x="0" y="0" width="60" height="25" rx="12" fill="#306998"/>
+    <text x="30" y="17" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">11/14</text>
+  </g>
+
+  <!-- Python logo hint -->
+  <g transform="translate(20, 160)" opacity="0.6">
+    <text font-family="Arial, sans-serif" font-size="11" fill="#FFD43B">🐍 Python 3.13+</text>
+  </g>
+
+  <!-- Decorative code snippets -->
+  <g font-family="monospace" font-size="10" opacity="0.3">
+    <text x="50" y="185" fill="#4fc3f7">with open(file) as f:</text>
+    <text x="550" y="185" fill="#e06c75">except FileNotFoundError:</text>
+  </g>
+</svg>

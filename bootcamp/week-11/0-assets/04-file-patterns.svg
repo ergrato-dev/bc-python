@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#306998"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="550" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Inter, sans-serif" font-size="22" font-weight="bold" fill="#FFD43B" text-anchor="middle">Patrones de Manejo de Archivos</text>
+
+  <!-- Pattern 1: Read All -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e3a5f" stroke="#306998" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="25" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">Lectura Completa</text>
+    <text x="15" y="50" font-family="monospace" font-size="10" fill="#82aaff">with open(path) as f:</text>
+    <text x="25" y="68" font-family="monospace" font-size="10" fill="#a0a0a0">content = f.read()</text>
+    <rect x="15" y="80" width="200" height="30" rx="3" fill="#27ae60" fill-opacity="0.2"/>
+    <text x="115" y="100" font-family="Inter, sans-serif" font-size="9" fill="#27ae60" text-anchor="middle">✓ Archivos pequeños</text>
+  </g>
+
+  <!-- Pattern 2: Line by Line -->
+  <g transform="translate(285, 70)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#1e5f3a" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="25" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">Línea por Línea</text>
+    <text x="15" y="50" font-family="monospace" font-size="10" fill="#a9dc76">with open(path) as f:</text>
+    <text x="25" y="68" font-family="monospace" font-size="10" fill="#a0a0a0">for line in f:</text>
+    <text x="35" y="83" font-family="monospace" font-size="10" fill="#a0a0a0">process(line)</text>
+    <rect x="15" y="92" width="200" height="20" rx="3" fill="#27ae60" fill-opacity="0.2"/>
+    <text x="115" y="106" font-family="Inter, sans-serif" font-size="9" fill="#27ae60" text-anchor="middle">✓ Archivos grandes (streaming)</text>
+  </g>
+
+  <!-- Pattern 3: Atomic Write -->
+  <g transform="translate(540, 70)">
+    <rect x="0" y="0" width="230" height="120" rx="8" fill="#5f3a1e" stroke="#e67e22" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="25" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">Escritura Atómica</text>
+    <text x="15" y="48" font-family="monospace" font-size="9" fill="#ffcb6b">temp = path + ".tmp"</text>
+    <text x="15" y="63" font-family="monospace" font-size="9" fill="#ffcb6b">with open(temp, "w") as f:</text>
+    <text x="25" y="78" font-family="monospace" font-size="9" fill="#a0a0a0">f.write(data)</text>
+    <text x="15" y="93" font-family="monospace" font-size="9" fill="#ffcb6b">os.replace(temp, path)</text>
+    <rect x="15" y="100" width="200" height="15" rx="3" fill="#27ae60" fill-opacity="0.2"/>
+    <text x="115" y="111" font-family="Inter, sans-serif" font-size="8" fill="#27ae60" text-anchor="middle">✓ Evita corrupción</text>
+  </g>
+
+  <!-- Pattern 4: CSV -->
+  <g transform="translate(30, 210)">
+    <rect x="0" y="0" width="230" height="130" rx="8" fill="#3a1e5f" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="25" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">CSV con DictReader</text>
+    <text x="15" y="48" font-family="monospace" font-size="9" fill="#c792ea">import csv</text>
+    <text x="15" y="65" font-family="monospace" font-size="9" fill="#c792ea">with open(path) as f:</text>
+    <text x="25" y="80" font-family="monospace" font-size="9" fill="#a0a0a0">reader = csv.DictReader(f)</text>
+    <text x="25" y="95" font-family="monospace" font-size="9" fill="#a0a0a0">for row in reader:</text>
+    <text x="35" y="110" font-family="monospace" font-size="9" fill="#a0a0a0">row["campo"]</text>
+  </g>
+
+  <!-- Pattern 5: JSON -->
+  <g transform="translate(285, 210)">
+    <rect x="0" y="0" width="230" height="130" rx="8" fill="#1e5f5f" stroke="#1abc9c" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="25" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">JSON Read/Write</text>
+    <text x="15" y="48" font-family="monospace" font-size="9" fill="#1abc9c">import json</text>
+    <text x="15" y="65" font-family="monospace" font-size="9" fill="#a0a0a0"># Leer</text>
+    <text x="15" y="80" font-family="monospace" font-size="9" fill="#1abc9c">data = json.loads(path.read_text())</text>
+    <text x="15" y="98" font-family="monospace" font-size="9" fill="#a0a0a0"># Escribir</text>
+    <text x="15" y="113" font-family="monospace" font-size="9" fill="#1abc9c">path.write_text(json.dumps(data))</text>
+  </g>
+
+  <!-- Pattern 6: pathlib -->
+  <g transform="translate(540, 210)">
+    <rect x="0" y="0" width="230" height="130" rx="8" fill="#1e3a5f" stroke="#306998" stroke-width="2" filter="url(#shadow)"/>
+    <text x="115" y="25" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">pathlib (Moderno)</text>
+    <text x="15" y="48" font-family="monospace" font-size="9" fill="#306998">from pathlib import Path</text>
+    <text x="15" y="68" font-family="monospace" font-size="9" fill="#82aaff">p = Path("data.txt")</text>
+    <text x="15" y="85" font-family="monospace" font-size="9" fill="#a0a0a0">content = p.read_text()</text>
+    <text x="15" y="100" font-family="monospace" font-size="9" fill="#a0a0a0">p.write_text("nuevo")</text>
+    <text x="15" y="115" font-family="monospace" font-size="9" fill="#a0a0a0">p.exists() / p.is_file()</text>
+  </g>
+
+  <!-- Anti-patterns section -->
+  <g transform="translate(30, 360)">
+    <rect x="0" y="0" width="355" height="90" rx="8" fill="#5f1e1e" stroke="#e74c3c" stroke-width="2"/>
+    <text x="177" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c" text-anchor="middle">❌ Anti-patrones a Evitar</text>
+    <text x="15" y="45" font-family="monospace" font-size="9" fill="#ff6b6b">f = open("file.txt")  # Sin with</text>
+    <text x="15" y="60" font-family="monospace" font-size="9" fill="#ff6b6b">content = f.read(huge_file)  # Memoria</text>
+    <text x="15" y="75" font-family="monospace" font-size="9" fill="#ff6b6b">f.write(data)  # Sin encoding explícito</text>
+  </g>
+
+  <!-- Best practices -->
+  <g transform="translate(410, 360)">
+    <rect x="0" y="0" width="360" height="90" rx="8" fill="#1e5f3a" stroke="#27ae60" stroke-width="2"/>
+    <text x="180" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#27ae60" text-anchor="middle">✓ Mejores Prácticas</text>
+    <text x="15" y="45" font-family="monospace" font-size="9" fill="#a9dc76">with open(path, encoding="utf-8") as f:</text>
+    <text x="15" y="60" font-family="monospace" font-size="9" fill="#a9dc76">for line in f:  # Streaming</text>
+    <text x="15" y="75" font-family="monospace" font-size="9" fill="#a9dc76">Path(path).read_text(encoding="utf-8")</text>
+  </g>
+
+  <!-- Encoding reminder -->
+  <g transform="translate(250, 470)">
+    <rect x="0" y="0" width="300" height="50" rx="5" fill="#2d2d44" stroke="#f1c40f" stroke-width="1"/>
+    <text x="150" y="20" font-family="Inter, sans-serif" font-size="11" fill="#f1c40f" text-anchor="middle">⚠️ Siempre especifica encoding</text>
+    <text x="150" y="38" font-family="monospace" font-size="10" fill="#a0a0a0" text-anchor="middle">encoding="utf-8" es el estándar</text>
+  </g>
+</svg>

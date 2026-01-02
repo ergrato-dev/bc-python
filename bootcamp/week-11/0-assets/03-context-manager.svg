@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#306998"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Inter, sans-serif" font-size="22" font-weight="bold" fill="#FFD43B" text-anchor="middle">Context Manager - Ciclo de Vida</text>
+
+  <!-- WITH Statement -->
+  <g transform="translate(280, 60)">
+    <rect x="0" y="0" width="240" height="50" rx="8" fill="#1e3a5f" stroke="#306998" stroke-width="2" filter="url(#shadow)"/>
+    <text x="120" y="22" font-family="monospace" font-size="12" fill="#82aaff" text-anchor="middle">with open("file") as f:</text>
+    <text x="120" y="40" font-family="Inter, sans-serif" font-size="10" fill="#a0a0a0" text-anchor="middle">Inicia el context manager</text>
+  </g>
+
+  <!-- Arrow down -->
+  <path d="M400 110 L400 140" stroke="#306998" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- __enter__ Block -->
+  <g transform="translate(280, 145)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#1e5f3a" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
+    <text x="120" y="22" font-family="monospace" font-size="13" font-weight="bold" fill="#a9dc76" text-anchor="middle">__enter__(self)</text>
+    <text x="120" y="42" font-family="Inter, sans-serif" font-size="10" fill="#a0a0a0" text-anchor="middle">1. Adquiere el recurso</text>
+    <text x="120" y="58" font-family="Inter, sans-serif" font-size="10" fill="#a0a0a0" text-anchor="middle">2. Retorna valor para "as"</text>
+  </g>
+
+  <!-- Arrow down -->
+  <path d="M400 215 L400 245" stroke="#306998" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Code Block -->
+  <g transform="translate(280, 250)">
+    <rect x="0" y="0" width="240" height="60" rx="8" fill="#2d2d44" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
+    <text x="120" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#c792ea" text-anchor="middle">Bloque with</text>
+    <text x="120" y="42" font-family="monospace" font-size="10" fill="#a0a0a0" text-anchor="middle">f.read() / f.write()</text>
+    <text x="120" y="55" font-family="Inter, sans-serif" font-size="9" fill="#6c5ce7" text-anchor="middle">usa el recurso</text>
+  </g>
+
+  <!-- Arrow down -->
+  <path d="M400 310 L400 340" stroke="#306998" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- __exit__ Block -->
+  <g transform="translate(280, 345)">
+    <rect x="0" y="0" width="240" height="80" rx="8" fill="#5f1e1e" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+    <text x="120" y="20" font-family="monospace" font-size="12" font-weight="bold" fill="#ff6b6b" text-anchor="middle">__exit__(self, exc_type,</text>
+    <text x="120" y="36" font-family="monospace" font-size="12" font-weight="bold" fill="#ff6b6b" text-anchor="middle">exc_val, exc_tb)</text>
+    <text x="120" y="55" font-family="Inter, sans-serif" font-size="10" fill="#a0a0a0" text-anchor="middle">1. SIEMPRE se ejecuta</text>
+    <text x="120" y="70" font-family="Inter, sans-serif" font-size="10" fill="#a0a0a0" text-anchor="middle">2. Libera el recurso</text>
+  </g>
+
+  <!-- Left side: Class-based -->
+  <g transform="translate(30, 130)">
+    <rect x="0" y="0" width="200" height="150" rx="5" fill="#2d2d44" stroke="#306998" stroke-width="1"/>
+    <text x="100" y="20" font-family="Inter, sans-serif" font-size="11" font-weight="bold" fill="#FFD43B" text-anchor="middle">Basado en Clase</text>
+    <text x="10" y="45" font-family="monospace" font-size="9" fill="#82aaff">class MyContext:</text>
+    <text x="20" y="62" font-family="monospace" font-size="9" fill="#a9dc76">def __enter__(self):</text>
+    <text x="30" y="77" font-family="monospace" font-size="9" fill="#a0a0a0">return self</text>
+    <text x="20" y="97" font-family="monospace" font-size="9" fill="#ff6b6b">def __exit__(self,</text>
+    <text x="30" y="112" font-family="monospace" font-size="9" fill="#ff6b6b">*args):</text>
+    <text x="30" y="127" font-family="monospace" font-size="9" fill="#a0a0a0">cleanup()</text>
+    <text x="30" y="142" font-family="monospace" font-size="9" fill="#a0a0a0">return False</text>
+  </g>
+
+  <!-- Right side: Decorator-based -->
+  <g transform="translate(570, 130)">
+    <rect x="0" y="0" width="200" height="150" rx="5" fill="#2d2d44" stroke="#27ae60" stroke-width="1"/>
+    <text x="100" y="20" font-family="Inter, sans-serif" font-size="11" font-weight="bold" fill="#FFD43B" text-anchor="middle">Basado en Decorador</text>
+    <text x="10" y="45" font-family="monospace" font-size="9" fill="#c792ea">from contextlib import</text>
+    <text x="20" y="60" font-family="monospace" font-size="9" fill="#c792ea">contextmanager</text>
+    <text x="10" y="82" font-family="monospace" font-size="9" fill="#a9dc76">@contextmanager</text>
+    <text x="10" y="97" font-family="monospace" font-size="9" fill="#82aaff">def my_context():</text>
+    <text x="20" y="112" font-family="monospace" font-size="9" fill="#a0a0a0">setup()</text>
+    <text x="20" y="127" font-family="monospace" font-size="9" fill="#FFD43B">yield resource</text>
+    <text x="20" y="142" font-family="monospace" font-size="9" fill="#a0a0a0">cleanup()</text>
+  </g>
+
+  <!-- Bottom: Return value explanation -->
+  <g transform="translate(30, 340)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#2d2d44" stroke="#f1c40f" stroke-width="1"/>
+    <text x="100" y="18" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="#f1c40f" text-anchor="middle">__exit__ return value</text>
+    <text x="10" y="38" font-family="monospace" font-size="9" fill="#27ae60">return True</text>
+    <text x="85" y="38" font-family="Inter, sans-serif" font-size="9" fill="#a0a0a0">→ suprime excepción</text>
+    <text x="10" y="58" font-family="monospace" font-size="9" fill="#e74c3c">return False</text>
+    <text x="85" y="58" font-family="Inter, sans-serif" font-size="9" fill="#a0a0a0">→ propaga excepción</text>
+    <text x="10" y="73" font-family="Inter, sans-serif" font-size="8" fill="#6c5ce7">(False es lo más común)</text>
+  </g>
+
+  <!-- Bottom right: Common uses -->
+  <g transform="translate(570, 320)">
+    <rect x="0" y="0" width="200" height="100" rx="5" fill="#2d2d44" stroke="#4a4a6a" stroke-width="1"/>
+    <text x="100" y="18" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="#FFD43B" text-anchor="middle">Usos Comunes</text>
+    <text x="10" y="38" font-family="Inter, sans-serif" font-size="9" fill="#82aaff">• Archivos (open)</text>
+    <text x="10" y="53" font-family="Inter, sans-serif" font-size="9" fill="#a9dc76">• Conexiones DB</text>
+    <text x="10" y="68" font-family="Inter, sans-serif" font-size="9" fill="#c792ea">• Locks (threading)</text>
+    <text x="10" y="83" font-family="Inter, sans-serif" font-size="9" fill="#ffcb6b">• Transacciones</text>
+  </g>
+
+  <!-- Guarantee note -->
+  <g transform="translate(280, 440)">
+    <rect x="0" y="0" width="240" height="40" rx="5" fill="#27ae60" fill-opacity="0.2" stroke="#27ae60" stroke-width="1"/>
+    <text x="120" y="25" font-family="Inter, sans-serif" font-size="11" fill="#27ae60" text-anchor="middle">✓ Garantiza limpieza de recursos</text>
+  </g>
+</svg>

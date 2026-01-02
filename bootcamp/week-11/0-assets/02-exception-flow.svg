@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#306998"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="550" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Inter, sans-serif" font-size="22" font-weight="bold" fill="#FFD43B" text-anchor="middle">Flujo de Excepciones en Python</text>
+
+  <!-- TRY Block -->
+  <g transform="translate(300, 60)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#1e3a5f" stroke="#306998" stroke-width="2" filter="url(#shadow)"/>
+    <text x="100" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFD43B" text-anchor="middle">try:</text>
+    <text x="100" y="48" font-family="monospace" font-size="11" fill="#82aaff" text-anchor="middle">código que puede fallar</text>
+  </g>
+
+  <!-- Decision Diamond -->
+  <g transform="translate(400, 160)">
+    <polygon points="0,40 60,0 120,40 60,80" fill="#2d2d44" stroke="#9b59b6" stroke-width="2"/>
+    <text x="60" y="45" font-family="Inter, sans-serif" font-size="11" fill="#c792ea" text-anchor="middle">¿Error?</text>
+  </g>
+
+  <!-- Arrow from TRY to Decision -->
+  <path d="M400 130 L400 160" stroke="#306998" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- NO Path (Success) - to ELSE -->
+  <g transform="translate(550, 180)">
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#1e5f3a" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
+    <text x="80" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFD43B" text-anchor="middle">else:</text>
+    <text x="80" y="45" font-family="monospace" font-size="10" fill="#a9dc76" text-anchor="middle">ejecuta si NO hay error</text>
+  </g>
+  <path d="M520 200 L550 200" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <text x="535" y="195" font-family="Inter, sans-serif" font-size="10" fill="#27ae60">No</text>
+
+  <!-- YES Path (Error) - to EXCEPT -->
+  <g transform="translate(90, 270)">
+    <rect x="0" y="0" width="200" height="80" rx="8" fill="#5f1e1e" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+    <text x="100" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFD43B" text-anchor="middle">except ErrorType as e:</text>
+    <text x="100" y="48" font-family="monospace" font-size="10" fill="#ff6b6b" text-anchor="middle">maneja el error específico</text>
+    <text x="100" y="65" font-family="monospace" font-size="9" fill="#a0a0a0" text-anchor="middle">logging, retry, re-raise</text>
+  </g>
+  <path d="M400 240 L400 270 L290 270" stroke="#e74c3c" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="395" y="260" font-family="Inter, sans-serif" font-size="10" fill="#e74c3c">Sí</text>
+
+  <!-- Multiple except blocks hint -->
+  <g transform="translate(90, 360)">
+    <rect x="0" y="0" width="200" height="50" rx="8" fill="#3a3a5f" stroke="#6c5ce7" stroke-width="1" stroke-dasharray="5,3"/>
+    <text x="100" y="20" font-family="Inter, sans-serif" font-size="10" fill="#a0a0a0" text-anchor="middle">Múltiples except permitidos</text>
+    <text x="100" y="38" font-family="monospace" font-size="9" fill="#6c5ce7" text-anchor="middle">except (TypeError, ValueError):</text>
+  </g>
+
+  <!-- FINALLY Block -->
+  <g transform="translate(300, 440)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#5f5f1e" stroke="#f1c40f" stroke-width="2" filter="url(#shadow)"/>
+    <text x="100" y="25" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFD43B" text-anchor="middle">finally:</text>
+    <text x="100" y="48" font-family="monospace" font-size="10" fill="#f1c40f" text-anchor="middle">SIEMPRE se ejecuta</text>
+    <text x="100" y="63" font-family="monospace" font-size="9" fill="#a0a0a0" text-anchor="middle">limpieza de recursos</text>
+  </g>
+
+  <!-- Arrows to FINALLY -->
+  <!-- From EXCEPT: sale por la izquierda y baja -->
+  <path d="M90 310 L50 310 L50 475 L300 475" stroke="#f1c40f" stroke-width="2" fill="none"/>
+  <!-- From ELSE: sale por la derecha y baja -->
+  <path d="M710 240 L750 240 L750 475 L500 475" stroke="#f1c40f" stroke-width="2" fill="none"/>
+
+  <!-- Exception Hierarchy (right side) -->
+  <g transform="translate(580, 290)">
+    <rect x="0" y="0" width="180" height="160" rx="5" fill="#2d2d44" stroke="#4a4a6a" stroke-width="1"/>
+    <text x="90" y="20" font-family="Inter, sans-serif" font-size="11" font-weight="bold" fill="#FFD43B" text-anchor="middle">Jerarquía Común</text>
+
+    <text x="15" y="45" font-family="monospace" font-size="10" fill="#ff6b6b">BaseException</text>
+    <text x="25" y="62" font-family="monospace" font-size="10" fill="#e74c3c">└─ Exception</text>
+    <text x="40" y="79" font-family="monospace" font-size="9" fill="#c792ea">├─ ValueError</text>
+    <text x="40" y="94" font-family="monospace" font-size="9" fill="#c792ea">├─ TypeError</text>
+    <text x="40" y="109" font-family="monospace" font-size="9" fill="#c792ea">├─ KeyError</text>
+    <text x="40" y="124" font-family="monospace" font-size="9" fill="#c792ea">├─ FileNotFoundError</text>
+    <text x="40" y="139" font-family="monospace" font-size="9" fill="#c792ea">└─ OSError</text>
+  </g>
+
+  <!-- Best Practice Note -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="180" height="90" rx="5" fill="#2d2d44" stroke="#27ae60" stroke-width="1"/>
+    <text x="90" y="18" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="#27ae60" text-anchor="middle">✓ Buenas Prácticas</text>
+    <text x="10" y="38" font-family="Inter, sans-serif" font-size="9" fill="#a0a0a0">• Captura excepciones específicas</text>
+    <text x="10" y="53" font-family="Inter, sans-serif" font-size="9" fill="#a0a0a0">• No uses except: vacío</text>
+    <text x="10" y="68" font-family="Inter, sans-serif" font-size="9" fill="#a0a0a0">• Usa raise from para encadenar</text>
+    <text x="10" y="83" font-family="Inter, sans-serif" font-size="9" fill="#a0a0a0">• finally para cleanup</text>
+  </g>
+</svg>
