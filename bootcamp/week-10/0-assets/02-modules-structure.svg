@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420">
+  <!-- Background -->
+  <rect width="700" height="420" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="350" y="30" font-family="Arial, sans-serif" font-size="20" fill="#4fc3f7" text-anchor="middle" font-weight="bold">
+    Estructura de Módulos e Imports
+  </text>
+
+  <!-- Project Root -->
+  <g transform="translate(250, 50)">
+    <rect x="0" y="0" width="200" height="35" rx="5" fill="#306998" stroke="#4fc3f7" stroke-width="2"/>
+    <text x="20" y="23" font-family="monospace" font-size="14" fill="#ffffff">📁 my_project/</text>
+  </g>
+
+  <!-- Main files -->
+  <g transform="translate(80, 100)">
+    <!-- main.py -->
+    <rect x="0" y="0" width="140" height="30" rx="4" fill="#2d2d2d" stroke="#98c379" stroke-width="1"/>
+    <text x="10" y="20" font-family="monospace" font-size="11" fill="#98c379">📄 main.py</text>
+  </g>
+
+  <!-- config.py -->
+  <g transform="translate(80, 140)">
+    <rect x="0" y="0" width="140" height="30" rx="4" fill="#2d2d2d" stroke="#98c379" stroke-width="1"/>
+    <text x="10" y="20" font-family="monospace" font-size="11" fill="#98c379">📄 config.py</text>
+  </g>
+
+  <!-- Models package -->
+  <g transform="translate(280, 100)">
+    <rect x="0" y="0" width="160" height="110" rx="5" fill="#252525" stroke="#FFD43B" stroke-width="2"/>
+    <text x="10" y="20" font-family="monospace" font-size="12" fill="#FFD43B">📦 models/</text>
+
+    <text x="20" y="42" font-family="monospace" font-size="10" fill="#888">__init__.py</text>
+    <text x="20" y="58" font-family="monospace" font-size="10" fill="#888">user.py</text>
+    <text x="20" y="74" font-family="monospace" font-size="10" fill="#888">product.py</text>
+    <text x="20" y="90" font-family="monospace" font-size="10" fill="#888">order.py</text>
+  </g>
+
+  <!-- Services package -->
+  <g transform="translate(480, 100)">
+    <rect x="0" y="0" width="160" height="95" rx="5" fill="#252525" stroke="#FFD43B" stroke-width="2"/>
+    <text x="10" y="20" font-family="monospace" font-size="12" fill="#FFD43B">📦 services/</text>
+
+    <text x="20" y="42" font-family="monospace" font-size="10" fill="#888">__init__.py</text>
+    <text x="20" y="58" font-family="monospace" font-size="10" fill="#888">auth_service.py</text>
+    <text x="20" y="74" font-family="monospace" font-size="10" fill="#888">cart_service.py</text>
+  </g>
+
+  <!-- Utils package -->
+  <g transform="translate(480, 210)">
+    <rect x="0" y="0" width="160" height="80" rx="5" fill="#252525" stroke="#FFD43B" stroke-width="2"/>
+    <text x="10" y="20" font-family="monospace" font-size="12" fill="#FFD43B">📦 utils/</text>
+
+    <text x="20" y="42" font-family="monospace" font-size="10" fill="#888">__init__.py</text>
+    <text x="20" y="58" font-family="monospace" font-size="10" fill="#888">validators.py</text>
+    <text x="20" y="74" font-family="monospace" font-size="10" fill="#888">helpers.py</text>
+  </g>
+
+  <!-- Import arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4fc3f7"/>
+    </marker>
+  </defs>
+
+  <!-- main.py -> models -->
+  <line x1="220" y1="115" x2="275" y2="130" stroke="#4fc3f7" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- main.py -> services -->
+  <line x1="220" y1="115" x2="475" y2="130" stroke="#4fc3f7" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- services -> models -->
+  <line x1="480" y1="160" x2="445" y2="150" stroke="#e5c07b" stroke-width="1.5" marker-end="url(#arrowhead)" stroke-dasharray="4,2"/>
+
+  <!-- services -> utils -->
+  <line x1="560" y1="195" x2="560" y2="205" stroke="#e5c07b" stroke-width="1.5" marker-end="url(#arrowhead)" stroke-dasharray="4,2"/>
+
+  <!-- Import examples box -->
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="380" height="170" rx="8" fill="#252525" stroke="#333" stroke-width="1"/>
+    <text x="15" y="25" font-family="Arial, sans-serif" font-size="12" fill="#4fc3f7" font-weight="bold">Tipos de Imports:</text>
+
+    <!-- Absolute import -->
+    <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#98c379">✓ Absoluto (desde main.py):</text>
+    <text x="25" y="68" font-family="monospace" font-size="10" fill="#e5c07b">from</text>
+    <text x="55" y="68" font-family="monospace" font-size="10" fill="#ffffff">my_project.models</text>
+    <text x="175" y="68" font-family="monospace" font-size="10" fill="#e5c07b">import</text>
+    <text x="215" y="68" font-family="monospace" font-size="10" fill="#ffffff">User</text>
+
+    <!-- Relative import same dir -->
+    <text x="15" y="95" font-family="Arial, sans-serif" font-size="11" fill="#98c379">✓ Relativo mismo directorio:</text>
+    <text x="25" y="113" font-family="monospace" font-size="10" fill="#e5c07b">from</text>
+    <text x="55" y="113" font-family="monospace" font-size="10" fill="#c678dd">.user</text>
+    <text x="95" y="113" font-family="monospace" font-size="10" fill="#e5c07b">import</text>
+    <text x="140" y="113" font-family="monospace" font-size="10" fill="#ffffff">User</text>
+    <text x="180" y="113" font-family="monospace" font-size="10" fill="#888"># en models/</text>
+
+    <!-- Relative import parent -->
+    <text x="15" y="140" font-family="Arial, sans-serif" font-size="11" fill="#98c379">✓ Relativo directorio padre:</text>
+    <text x="25" y="158" font-family="monospace" font-size="10" fill="#e5c07b">from</text>
+    <text x="55" y="158" font-family="monospace" font-size="10" fill="#c678dd">..utils</text>
+    <text x="105" y="158" font-family="monospace" font-size="10" fill="#e5c07b">import</text>
+    <text x="150" y="158" font-family="monospace" font-size="10" fill="#ffffff">validate</text>
+    <text x="210" y="158" font-family="monospace" font-size="10" fill="#888"># en services/</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(470, 310)">
+    <rect x="0" y="0" width="180" height="90" rx="5" fill="#252525" stroke="#333" stroke-width="1"/>
+    <text x="10" y="18" font-family="Arial, sans-serif" font-size="11" fill="#888" font-weight="bold">Leyenda:</text>
+
+    <line x1="10" y1="35" x2="40" y2="35" stroke="#4fc3f7" stroke-width="2"/>
+    <text x="50" y="39" font-family="Arial, sans-serif" font-size="10" fill="#4fc3f7">Import absoluto</text>
+
+    <line x1="10" y1="55" x2="40" y2="55" stroke="#e5c07b" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="50" y="59" font-family="Arial, sans-serif" font-size="10" fill="#e5c07b">Import relativo</text>
+
+    <rect x="10" y="68" width="25" height="12" rx="2" fill="none" stroke="#FFD43B" stroke-width="1"/>
+    <text x="50" y="78" font-family="Arial, sans-serif" font-size="10" fill="#FFD43B">Paquete</text>
+  </g>
+</svg>

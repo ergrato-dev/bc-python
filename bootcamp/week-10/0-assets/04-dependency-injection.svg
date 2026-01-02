@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380">
+  <!-- Background -->
+  <rect width="700" height="380" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="350" y="30" font-family="Arial, sans-serif" font-size="20" fill="#4fc3f7" text-anchor="middle" font-weight="bold">
+    Inyección de Dependencias con Protocols
+  </text>
+
+  <!-- Protocol Interface -->
+  <g transform="translate(250, 55)">
+    <rect x="0" y="0" width="200" height="70" rx="8" fill="#2d2d2d" stroke="#FFD43B" stroke-width="2" stroke-dasharray="6,3"/>
+    <text x="100" y="20" font-family="monospace" font-size="11" fill="#FFD43B" text-anchor="middle">«Protocol»</text>
+    <text x="100" y="38" font-family="monospace" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">EmailService</text>
+    <line x1="10" y1="48" x2="190" y2="48" stroke="#444" stroke-width="1"/>
+    <text x="15" y="63" font-family="monospace" font-size="10" fill="#888">def send(to, msg) → bool</text>
+  </g>
+
+  <!-- Implementations -->
+  <!-- SMTP Implementation -->
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="170" height="80" rx="8" fill="#2d2d2d" stroke="#306998" stroke-width="2"/>
+    <text x="85" y="20" font-family="monospace" font-size="12" fill="#306998" text-anchor="middle" font-weight="bold">SMTPService</text>
+    <line x1="10" y1="30" x2="160" y2="30" stroke="#444" stroke-width="1"/>
+    <text x="15" y="48" font-family="monospace" font-size="10" fill="#98c379">def send(to, msg):</text>
+    <text x="25" y="63" font-family="monospace" font-size="9" fill="#888"># Real SMTP</text>
+    <text x="25" y="75" font-family="monospace" font-size="9" fill="#888">return True</text>
+  </g>
+
+  <!-- Mock Implementation -->
+  <g transform="translate(265, 180)">
+    <rect x="0" y="0" width="170" height="80" rx="8" fill="#2d2d2d" stroke="#e06c75" stroke-width="2"/>
+    <text x="85" y="20" font-family="monospace" font-size="12" fill="#e06c75" text-anchor="middle" font-weight="bold">MockService</text>
+    <line x1="10" y1="30" x2="160" y2="30" stroke="#444" stroke-width="1"/>
+    <text x="15" y="48" font-family="monospace" font-size="10" fill="#98c379">def send(to, msg):</text>
+    <text x="25" y="63" font-family="monospace" font-size="9" fill="#888"># Solo guarda</text>
+    <text x="25" y="75" font-family="monospace" font-size="9" fill="#888">return True</text>
+  </g>
+
+  <!-- AWS SES Implementation -->
+  <g transform="translate(480, 180)">
+    <rect x="0" y="0" width="170" height="80" rx="8" fill="#2d2d2d" stroke="#306998" stroke-width="2"/>
+    <text x="85" y="20" font-family="monospace" font-size="12" fill="#306998" text-anchor="middle" font-weight="bold">AWSSESService</text>
+    <line x1="10" y1="30" x2="160" y2="30" stroke="#444" stroke-width="1"/>
+    <text x="15" y="48" font-family="monospace" font-size="10" fill="#98c379">def send(to, msg):</text>
+    <text x="25" y="63" font-family="monospace" font-size="9" fill="#888"># AWS SES API</text>
+    <text x="25" y="75" font-family="monospace" font-size="9" fill="#888">return True</text>
+  </g>
+
+  <!-- Consumer Service -->
+  <g transform="translate(220, 290)">
+    <rect x="0" y="0" width="260" height="75" rx="8" fill="#2d2d2d" stroke="#4fc3f7" stroke-width="2"/>
+    <text x="130" y="20" font-family="monospace" font-size="13" fill="#4fc3f7" text-anchor="middle" font-weight="bold">UserService</text>
+    <line x1="10" y1="30" x2="250" y2="30" stroke="#444" stroke-width="1"/>
+    <text x="15" y="48" font-family="monospace" font-size="10" fill="#c678dd">email_service: EmailService</text>
+    <text x="15" y="65" font-family="monospace" font-size="10" fill="#888">def notify_user(user): ...</text>
+  </g>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4fc3f7"/>
+    </marker>
+    <marker id="arrow4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#98c379"/>
+    </marker>
+  </defs>
+
+  <!-- Implementation arrows (implements Protocol) -->
+  <g stroke="#98c379" stroke-width="1.5" fill="none" stroke-dasharray="4,2">
+    <path d="M135 180 L270 125"/>
+    <path d="M350 180 L350 125"/>
+    <path d="M565 180 L430 125"/>
+  </g>
+
+  <!-- Injection arrow -->
+  <path d="M350 290 L350 265" stroke="#4fc3f7" stroke-width="2" fill="none" marker-end="url(#arrow3)"/>
+
+  <!-- Labels -->
+  <g font-family="Arial, sans-serif" font-size="10" fill="#888">
+    <text x="180" y="150">implementa</text>
+    <text x="395" y="150">implementa</text>
+    <text x="530" y="150">implementa</text>
+    <text x="360" y="280">se inyecta</text>
+  </g>
+
+  <!-- Usage boxes -->
+  <g transform="translate(30, 290)">
+    <rect x="0" y="0" width="150" height="60" rx="5" fill="#1f3d1f" stroke="#98c379" stroke-width="1"/>
+    <text x="10" y="18" font-family="Arial, sans-serif" font-size="10" fill="#98c379" font-weight="bold">Producción:</text>
+    <text x="10" y="35" font-family="monospace" font-size="9" fill="#888">UserService(</text>
+    <text x="15" y="48" font-family="monospace" font-size="9" fill="#98c379">SMTPService()</text>
+    <text x="10" y="58" font-family="monospace" font-size="9" fill="#888">)</text>
+  </g>
+
+  <g transform="translate(520, 290)">
+    <rect x="0" y="0" width="150" height="60" rx="5" fill="#3d1f1f" stroke="#e06c75" stroke-width="1"/>
+    <text x="10" y="18" font-family="Arial, sans-serif" font-size="10" fill="#e06c75" font-weight="bold">Testing:</text>
+    <text x="10" y="35" font-family="monospace" font-size="9" fill="#888">UserService(</text>
+    <text x="15" y="48" font-family="monospace" font-size="9" fill="#e06c75">MockService()</text>
+    <text x="10" y="58" font-family="monospace" font-size="9" fill="#888">)</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="140" height="85" rx="5" fill="#252525" stroke="#333" stroke-width="1"/>
+    <text x="10" y="18" font-family="Arial, sans-serif" font-size="10" fill="#888" font-weight="bold">Ventajas DI:</text>
+    <text x="10" y="35" font-family="Arial, sans-serif" font-size="9" fill="#98c379">✓ Desacoplamiento</text>
+    <text x="10" y="50" font-family="Arial, sans-serif" font-size="9" fill="#98c379">✓ Testeable</text>
+    <text x="10" y="65" font-family="Arial, sans-serif" font-size="9" fill="#98c379">✓ Intercambiable</text>
+    <text x="10" y="80" font-family="Arial, sans-serif" font-size="9" fill="#98c379">✓ SOLID compliant</text>
+  </g>
+</svg>

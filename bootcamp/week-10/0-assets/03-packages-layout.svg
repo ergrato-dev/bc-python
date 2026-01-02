@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450">
+  <!-- Background -->
+  <rect width="700" height="450" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="350" y="30" font-family="Arial, sans-serif" font-size="20" fill="#4fc3f7" text-anchor="middle" font-weight="bold">
+    Estructura de Paquete Distribuible (src layout)
+  </text>
+
+  <!-- Project root -->
+  <g transform="translate(50, 55)">
+    <!-- Root folder -->
+    <rect x="0" y="0" width="280" height="380" rx="8" fill="#252525" stroke="#306998" stroke-width="2"/>
+    <text x="15" y="25" font-family="monospace" font-size="14" fill="#306998" font-weight="bold">📁 my-package/</text>
+
+    <!-- pyproject.toml -->
+    <g transform="translate(20, 40)">
+      <rect x="0" y="0" width="240" height="25" rx="3" fill="#2d2d2d" stroke="#FFD43B" stroke-width="1"/>
+      <text x="10" y="17" font-family="monospace" font-size="11" fill="#FFD43B">📄 pyproject.toml</text>
+    </g>
+
+    <!-- README.md -->
+    <g transform="translate(20, 70)">
+      <rect x="0" y="0" width="240" height="25" rx="3" fill="#2d2d2d" stroke="#98c379" stroke-width="1"/>
+      <text x="10" y="17" font-family="monospace" font-size="11" fill="#98c379">📄 README.md</text>
+    </g>
+
+    <!-- uv.lock -->
+    <g transform="translate(20, 100)">
+      <rect x="0" y="0" width="240" height="25" rx="3" fill="#2d2d2d" stroke="#888" stroke-width="1"/>
+      <text x="10" y="17" font-family="monospace" font-size="11" fill="#888">🔒 uv.lock</text>
+    </g>
+
+    <!-- src folder -->
+    <g transform="translate(20, 135)">
+      <rect x="0" y="0" width="240" height="140" rx="5" fill="#1e1e1e" stroke="#4fc3f7" stroke-width="2"/>
+      <text x="10" y="20" font-family="monospace" font-size="12" fill="#4fc3f7" font-weight="bold">📁 src/</text>
+
+      <!-- Package inside src -->
+      <g transform="translate(15, 30)">
+        <rect x="0" y="0" width="210" height="100" rx="4" fill="#2d2d2d" stroke="#c678dd" stroke-width="1"/>
+        <text x="10" y="18" font-family="monospace" font-size="11" fill="#c678dd">📦 my_package/</text>
+
+        <text x="20" y="38" font-family="monospace" font-size="10" fill="#888">__init__.py</text>
+        <text x="20" y="53" font-family="monospace" font-size="10" fill="#888">core.py</text>
+        <text x="20" y="68" font-family="monospace" font-size="10" fill="#888">utils.py</text>
+        <text x="20" y="83" font-family="monospace" font-size="10" fill="#888">cli.py</text>
+      </g>
+    </g>
+
+    <!-- tests folder -->
+    <g transform="translate(20, 285)">
+      <rect x="0" y="0" width="240" height="80" rx="5" fill="#1e1e1e" stroke="#e06c75" stroke-width="1"/>
+      <text x="10" y="20" font-family="monospace" font-size="12" fill="#e06c75">📁 tests/</text>
+
+      <text x="25" y="40" font-family="monospace" font-size="10" fill="#888">__init__.py</text>
+      <text x="25" y="55" font-family="monospace" font-size="10" fill="#888">test_core.py</text>
+      <text x="25" y="70" font-family="monospace" font-size="10" fill="#888">test_utils.py</text>
+    </g>
+  </g>
+
+  <!-- pyproject.toml content -->
+  <g transform="translate(370, 55)">
+    <rect x="0" y="0" width="300" height="220" rx="8" fill="#252525" stroke="#FFD43B" stroke-width="2"/>
+    <text x="15" y="22" font-family="Arial, sans-serif" font-size="12" fill="#FFD43B" font-weight="bold">pyproject.toml</text>
+
+    <g transform="translate(10, 35)">
+      <text x="0" y="12" font-family="monospace" font-size="10" fill="#c678dd">[project]</text>
+      <text x="0" y="27" font-family="monospace" font-size="10" fill="#98c379">name</text>
+      <text x="30" y="27" font-family="monospace" font-size="10" fill="#888">= "my-package"</text>
+      <text x="0" y="42" font-family="monospace" font-size="10" fill="#98c379">version</text>
+      <text x="50" y="42" font-family="monospace" font-size="10" fill="#888">= "1.0.0"</text>
+      <text x="0" y="57" font-family="monospace" font-size="10" fill="#98c379">dependencies</text>
+      <text x="80" y="57" font-family="monospace" font-size="10" fill="#888">= [...]</text>
+
+      <text x="0" y="82" font-family="monospace" font-size="10" fill="#c678dd">[project.scripts]</text>
+      <text x="0" y="97" font-family="monospace" font-size="10" fill="#98c379">my-cli</text>
+      <text x="40" y="97" font-family="monospace" font-size="10" fill="#888">= "my_package.cli:main"</text>
+
+      <text x="0" y="122" font-family="monospace" font-size="10" fill="#c678dd">[build-system]</text>
+      <text x="0" y="137" font-family="monospace" font-size="10" fill="#98c379">requires</text>
+      <text x="55" y="137" font-family="monospace" font-size="10" fill="#888">= ["hatchling"]</text>
+      <text x="0" y="152" font-family="monospace" font-size="10" fill="#98c379">build-backend</text>
+      <text x="90" y="152" font-family="monospace" font-size="10" fill="#888">= "..."</text>
+
+      <text x="0" y="177" font-family="monospace" font-size="10" fill="#c678dd">[tool.hatch.build]</text>
+      <text x="0" y="192" font-family="monospace" font-size="10" fill="#98c379">packages</text>
+      <text x="60" y="192" font-family="monospace" font-size="10" fill="#888">= ["src/my_package"]</text>
+    </g>
+  </g>
+
+  <!-- Commands box -->
+  <g transform="translate(370, 290)">
+    <rect x="0" y="0" width="300" height="145" rx="8" fill="#252525" stroke="#4fc3f7" stroke-width="2"/>
+    <text x="15" y="22" font-family="Arial, sans-serif" font-size="12" fill="#4fc3f7" font-weight="bold">Comandos uv:</text>
+
+    <g transform="translate(10, 35)" font-family="monospace" font-size="10">
+      <text x="0" y="12" fill="#888"># Crear proyecto</text>
+      <text x="0" y="27" fill="#98c379">$ uv init my-package</text>
+
+      <text x="0" y="50" fill="#888"># Agregar dependencia</text>
+      <text x="0" y="65" fill="#98c379">$ uv add requests</text>
+
+      <text x="0" y="88" fill="#888"># Instalar en modo editable</text>
+      <text x="0" y="103" fill="#98c379">$ uv pip install -e .</text>
+    </g>
+  </g>
+
+  <!-- Arrows and labels -->
+  <g font-family="Arial, sans-serif" font-size="10">
+    <!-- Arrow from pyproject to entry point -->
+    <path d="M335 150 L365 150" stroke="#FFD43B" stroke-width="1.5" fill="none" marker-end="url(#arrow2)"/>
+
+    <!-- Note about src layout -->
+    <text x="350" y="445" fill="#888" text-anchor="middle" font-size="11">
+      El src/ layout evita conflictos de imports durante desarrollo
+    </text>
+  </g>
+
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#FFD43B"/>
+    </marker>
+  </defs>
+</svg>
