@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .method-name { fill: #DCDCAA; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .description { fill: #D4D4D4; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .box-add { fill: #264F78; stroke: #306998; stroke-width: 2; }
+      .box-remove { fill: #5D2D2D; stroke: #D16969; stroke-width: 2; }
+      .box-info { fill: #2D4F2D; stroke: #6A9955; stroke-width: 2; }
+      .box-order { fill: #4F3D26; stroke: #CE9178; stroke-width: 2; }
+      .category { fill: #569CD6; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .arrow { fill: #6A9955; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Métodos de Listas en Python</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Operaciones más comunes para manipular listas</text>
+
+  <!-- Category: Agregar elementos -->
+  <text class="category" x="30" y="90">➕ AGREGAR ELEMENTOS</text>
+
+  <!-- append -->
+  <rect class="box-add" x="30" y="100" width="175" height="70" rx="5"/>
+  <text class="method-name" x="40" y="120">.append(item)</text>
+  <text class="description" x="40" y="138">Agrega al final</text>
+  <text class="code" x="40" y="158">[1,2].append(3) → [1,2,3]</text>
+
+  <!-- extend -->
+  <rect class="box-add" x="215" y="100" width="175" height="70" rx="5"/>
+  <text class="method-name" x="225" y="120">.extend(iter)</text>
+  <text class="description" x="225" y="138">Agrega múltiples</text>
+  <text class="code" x="225" y="158">[1].extend([2,3])→[1,2,3]</text>
+
+  <!-- insert -->
+  <rect class="box-add" x="400" y="100" width="175" height="70" rx="5"/>
+  <text class="method-name" x="410" y="120">.insert(i, x)</text>
+  <text class="description" x="410" y="138">Inserta en posición i</text>
+  <text class="code" x="410" y="158">[1,3].insert(1,2)→[1,2,3]</text>
+
+  <!-- Category: Eliminar elementos -->
+  <text class="category" x="30" y="200">➖ ELIMINAR ELEMENTOS</text>
+
+  <!-- remove -->
+  <rect class="box-remove" x="30" y="210" width="175" height="70" rx="5"/>
+  <text class="method-name" x="40" y="230">.remove(value)</text>
+  <text class="description" x="40" y="248">Elimina primera ocurrencia</text>
+  <text class="code" x="40" y="268">[1,2,2].remove(2) → [1,2]</text>
+
+  <!-- pop -->
+  <rect class="box-remove" x="215" y="210" width="175" height="70" rx="5"/>
+  <text class="method-name" x="225" y="230">.pop([i])</text>
+  <text class="description" x="225" y="248">Elimina y retorna [índice]</text>
+  <text class="code" x="225" y="268">[1,2,3].pop() → 3</text>
+
+  <!-- clear -->
+  <rect class="box-remove" x="400" y="210" width="175" height="70" rx="5"/>
+  <text class="method-name" x="410" y="230">.clear()</text>
+  <text class="description" x="410" y="248">Elimina todos</text>
+  <text class="code" x="410" y="268">[1,2,3].clear() → []</text>
+
+  <!-- Category: Buscar/Contar -->
+  <text class="category" x="30" y="310">🔍 BUSCAR / CONTAR</text>
+
+  <!-- index -->
+  <rect class="box-info" x="30" y="320" width="175" height="70" rx="5"/>
+  <text class="method-name" x="40" y="340">.index(value)</text>
+  <text class="description" x="40" y="358">Posición de primera ocurrencia</text>
+  <text class="code" x="40" y="378">[1,2,3].index(2) → 1</text>
+
+  <!-- count -->
+  <rect class="box-info" x="215" y="320" width="175" height="70" rx="5"/>
+  <text class="method-name" x="225" y="340">.count(value)</text>
+  <text class="description" x="225" y="358">Cuenta ocurrencias</text>
+  <text class="code" x="225" y="378">[1,2,2,3].count(2) → 2</text>
+
+  <!-- copy -->
+  <rect class="box-info" x="400" y="320" width="175" height="70" rx="5"/>
+  <text class="method-name" x="410" y="340">.copy()</text>
+  <text class="description" x="410" y="358">Copia superficial</text>
+  <text class="code" x="410" y="378">[1,2].copy() → [1,2]</text>
+
+  <!-- Category: Ordenar -->
+  <text class="category" x="30" y="420">📊 ORDENAR</text>
+
+  <!-- sort -->
+  <rect class="box-order" x="30" y="430" width="175" height="60" rx="5"/>
+  <text class="method-name" x="40" y="450">.sort(reverse=False)</text>
+  <text class="description" x="40" y="468">Ordena in-place</text>
+  <text class="code" x="40" y="483">[3,1,2].sort() → [1,2,3]</text>
+
+  <!-- reverse -->
+  <rect class="box-order" x="215" y="430" width="175" height="60" rx="5"/>
+  <text class="method-name" x="225" y="450">.reverse()</text>
+  <text class="description" x="225" y="468">Invierte in-place</text>
+  <text class="code" x="225" y="483">[1,2,3].reverse()→[3,2,1]</text>
+
+  <!-- Visual: List representation -->
+  <rect x="600" y="100" width="180" height="380" rx="8" fill="#252526" stroke="#3C3C3C" stroke-width="2"/>
+  <text class="subtitle" x="690" y="125" text-anchor="middle">Lista Visual</text>
+
+  <!-- List boxes -->
+  <rect x="620" y="145" width="140" height="35" rx="4" fill="#306998" stroke="#FFD43B" stroke-width="2"/>
+  <text fill="#fff" font-family="Consolas" font-size="14" x="690" y="168" text-anchor="middle">[0] "apple"</text>
+
+  <rect x="620" y="190" width="140" height="35" rx="4" fill="#306998" stroke="#FFD43B" stroke-width="2"/>
+  <text fill="#fff" font-family="Consolas" font-size="14" x="690" y="213" text-anchor="middle">[1] "banana"</text>
+
+  <rect x="620" y="235" width="140" height="35" rx="4" fill="#306998" stroke="#FFD43B" stroke-width="2"/>
+  <text fill="#fff" font-family="Consolas" font-size="14" x="690" y="258" text-anchor="middle">[2] "cherry"</text>
+
+  <!-- Arrows showing operations -->
+  <path d="M620 300 L620 320 L690 320 L690 280" stroke="#6A9955" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text fill="#6A9955" font-family="Consolas" font-size="11" x="700" y="315">.append()</text>
+
+  <rect x="620" y="330" width="140" height="35" rx="4" fill="#264F78" stroke="#6A9955" stroke-width="2" stroke-dasharray="5,3"/>
+  <text fill="#6A9955" font-family="Consolas" font-size="14" x="690" y="353" text-anchor="middle">[3] "new"</text>
+
+  <!-- Pop arrow -->
+  <path d="M760 168 L780 168 L780 400 L740 400" stroke="#D16969" stroke-width="2" fill="none"/>
+  <text fill="#D16969" font-family="Consolas" font-size="11" x="745" y="420">.pop(0)</text>
+
+  <!-- Legend -->
+  <rect x="620" y="440" width="12" height="12" fill="#264F78" stroke="#306998"/>
+  <text fill="#D4D4D4" font-family="Segoe UI" font-size="10" x="638" y="450">Agregar</text>
+
+  <rect x="690" y="440" width="12" height="12" fill="#5D2D2D" stroke="#D16969"/>
+  <text fill="#D4D4D4" font-family="Segoe UI" font-size="10" x="708" y="450">Eliminar</text>
+
+  <rect x="620" y="458" width="12" height="12" fill="#2D4F2D" stroke="#6A9955"/>
+  <text fill="#D4D4D4" font-family="Segoe UI" font-size="10" x="638" y="468">Info</text>
+
+  <rect x="690" y="458" width="12" height="12" fill="#4F3D26" stroke="#CE9178"/>
+  <text fill="#D4D4D4" font-family="Segoe UI" font-size="10" x="708" y="468">Ordenar</text>
+</svg>

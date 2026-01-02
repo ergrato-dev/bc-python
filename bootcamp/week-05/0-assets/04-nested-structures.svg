@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .label { fill: #D4D4D4; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 13px; }
+      .code-large { fill: #DCDCAA; font-family: 'Consolas', monospace; font-size: 14px; }
+      .index { fill: #569CD6; font-family: 'Consolas', monospace; font-size: 11px; }
+      .value { fill: #fff; font-family: 'Consolas', monospace; font-size: 14px; }
+      .cell { fill: #306998; stroke: #FFD43B; stroke-width: 2; }
+      .cell-highlight { fill: #4B8BBE; stroke: #6A9955; stroke-width: 3; }
+      .row-label { fill: #569CD6; font-family: 'Consolas', monospace; font-size: 12px; }
+      .col-label { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 12px; }
+      .box { fill: #252526; stroke: #3C3C3C; stroke-width: 2; }
+      .result { fill: #6A9955; font-family: 'Consolas', monospace; font-size: 13px; }
+      .arrow { stroke: #FFD43B; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Estructuras Anidadas</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Matrices: Listas de listas para datos bidimensionales</text>
+
+  <!-- Matrix definition -->
+  <rect class="box" x="30" y="75" width="350" height="100" rx="8"/>
+  <text class="code-large" x="45" y="100">matrix = [</text>
+  <text class="code-large" x="65" y="120">[1, 2, 3],</text>
+  <text class="code-large" x="65" y="140">[4, 5, 6],</text>
+  <text class="code-large" x="65" y="160">[7, 8, 9]</text>
+  <text class="code-large" x="45" y="175">]</text>
+
+  <!-- Visual matrix -->
+  <text class="subtitle" x="520" y="85">Representación Visual</text>
+
+  <!-- Column headers -->
+  <text class="col-label" x="480" y="108">col 0</text>
+  <text class="col-label" x="540" y="108">col 1</text>
+  <text class="col-label" x="600" y="108">col 2</text>
+
+  <!-- Row 0 -->
+  <text class="row-label" x="420" y="138">row 0</text>
+  <rect class="cell" x="465" y="115" width="50" height="35" rx="4"/>
+  <text class="value" x="490" y="138" text-anchor="middle">1</text>
+  <rect class="cell" x="525" y="115" width="50" height="35" rx="4"/>
+  <text class="value" x="550" y="138" text-anchor="middle">2</text>
+  <rect class="cell" x="585" y="115" width="50" height="35" rx="4"/>
+  <text class="value" x="610" y="138" text-anchor="middle">3</text>
+
+  <!-- Row 1 -->
+  <text class="row-label" x="420" y="178">row 1</text>
+  <rect class="cell" x="465" y="155" width="50" height="35" rx="4"/>
+  <text class="value" x="490" y="178" text-anchor="middle">4</text>
+  <rect class="cell-highlight" x="525" y="155" width="50" height="35" rx="4"/>
+  <text class="value" x="550" y="178" text-anchor="middle">5</text>
+  <rect class="cell" x="585" y="155" width="50" height="35" rx="4"/>
+  <text class="value" x="610" y="178" text-anchor="middle">6</text>
+
+  <!-- Row 2 -->
+  <text class="row-label" x="420" y="218">row 2</text>
+  <rect class="cell" x="465" y="195" width="50" height="35" rx="4"/>
+  <text class="value" x="490" y="218" text-anchor="middle">7</text>
+  <rect class="cell" x="525" y="195" width="50" height="35" rx="4"/>
+  <text class="value" x="550" y="218" text-anchor="middle">8</text>
+  <rect class="cell" x="585" y="195" width="50" height="35" rx="4"/>
+  <text class="value" x="610" y="218" text-anchor="middle">9</text>
+
+  <!-- Highlight annotation -->
+  <path class="arrow" d="M575 155 L680 120 L750 120"/>
+  <text class="code" x="660" y="115">matrix[1][1] = 5</text>
+
+  <!-- Access examples box -->
+  <rect class="box" x="30" y="195" width="350" height="130" rx="8"/>
+  <text class="subtitle" x="45" y="218">Acceso a Elementos</text>
+
+  <text class="code" x="45" y="245">matrix[0]</text>
+  <text class="result" x="180" y="245">→ [1, 2, 3]</text>
+  <text class="label" x="270" y="245"># primera fila</text>
+
+  <text class="code" x="45" y="270">matrix[1][1]</text>
+  <text class="result" x="180" y="270">→ 5</text>
+  <text class="label" x="270" y="270"># fila 1, col 1</text>
+
+  <text class="code" x="45" y="295">matrix[2][0]</text>
+  <text class="result" x="180" y="295">→ 7</text>
+  <text class="label" x="270" y="295"># fila 2, col 0</text>
+
+  <text class="code" x="45" y="320">matrix[-1][-1]</text>
+  <text class="result" x="180" y="320">→ 9</text>
+  <text class="label" x="270" y="320"># última celda</text>
+
+  <!-- Iteration example -->
+  <rect class="box" x="30" y="340" width="350" height="145" rx="8"/>
+  <text class="subtitle" x="45" y="363">Iteración con Índices</text>
+
+  <text class="code" x="45" y="390">for i, row in enumerate(matrix):</text>
+  <text class="code" x="65" y="410">for j, val in enumerate(row):</text>
+  <text class="code" x="85" y="430">print(f"[{i}][{j}] = {val}")</text>
+
+  <text class="label" x="45" y="465" fill="#6A9955"># Imprime todas las celdas con sus índices</text>
+
+  <!-- Column extraction -->
+  <rect class="box" x="400" y="250" width="380" height="235" rx="8"/>
+  <text class="subtitle" x="415" y="273">Operaciones Comunes</text>
+
+  <!-- Get column -->
+  <text class="code-large" x="415" y="300">Obtener columna:</text>
+  <text class="code" x="415" y="325">col_1 = [row[1] for row in matrix]</text>
+  <text class="result" x="415" y="345">→ [2, 5, 8]</text>
+
+  <!-- Flatten -->
+  <text class="code-large" x="415" y="380">Aplanar matriz:</text>
+  <text class="code" x="415" y="405">[x for row in matrix for x in row]</text>
+  <text class="result" x="415" y="425">→ [1,2,3,4,5,6,7,8,9]</text>
+
+  <!-- Diagonal -->
+  <text class="code-large" x="415" y="460">Diagonal principal:</text>
+  <text class="code" x="415" y="480">diag = [matrix[i][i] for i in range(3)]</text>
+  <text class="result" x="680" y="480">→ [1, 5, 9]</text>
+
+  <!-- Visual annotation for [row][col] -->
+  <rect x="655" y="145" width="130" height="60" rx="5" fill="#252526" stroke="#FFD43B" stroke-width="1"/>
+  <text class="label" x="665" y="165" fill="#FFD43B">Acceso:</text>
+  <text class="code" x="665" y="185">mat[row][col]</text>
+  <text class="label" x="665" y="200" fill="#9CDCFE">↓ fila primero</text>
+</svg>

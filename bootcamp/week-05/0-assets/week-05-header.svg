@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <rect x="30" y="50" width="120" height="100" rx="8" fill="#306998" opacity="0.9"/>
+  <text x="90" y="90" text-anchor="middle" fill="white" font-family="monospace" font-size="14">[1, 2, 3]</text>
+  <text x="90" y="115" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="12" font-weight="bold">Listas</text>
+  <text x="90" y="135" text-anchor="middle" fill="#c0c0c0" font-family="Inter, sans-serif" font-size="10">mutables</text>
+
+  <rect x="170" y="50" width="120" height="100" rx="8" fill="#c586c0" opacity="0.9"/>
+  <text x="230" y="90" text-anchor="middle" fill="white" font-family="monospace" font-size="14">(x, y, z)</text>
+  <text x="230" y="115" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="12" font-weight="bold">Tuplas</text>
+  <text x="230" y="135" text-anchor="middle" fill="#c0c0c0" font-family="Inter, sans-serif" font-size="10">inmutables</text>
+
+  <rect x="310" y="50" width="120" height="100" rx="8" fill="#4CAF50" opacity="0.9"/>
+  <text x="370" y="85" text-anchor="middle" fill="white" font-family="monospace" font-size="12">[1:4:2]</text>
+  <text x="370" y="115" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="12" font-weight="bold">Slicing</text>
+  <text x="370" y="135" text-anchor="middle" fill="#c0c0c0" font-family="Inter, sans-serif" font-size="10">start:stop:step</text>
+
+  <text x="580" y="85" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="36" font-weight="bold">Semana 05</text>
+  <text x="580" y="120" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="20">Listas y Tuplas</text>
+  <text x="580" y="150" text-anchor="middle" fill="#a0a0a0" font-family="Inter, sans-serif" font-size="14">Estructuras de Datos I</text>
+
+  <circle cx="760" cy="40" r="25" fill="#306998" opacity="0.6"/>
+  <circle cx="750" cy="165" r="18" fill="#FFD43B" opacity="0.4"/>
+  <circle cx="460" cy="170" r="12" fill="#4CAF50" opacity="0.5"/>
+</svg>

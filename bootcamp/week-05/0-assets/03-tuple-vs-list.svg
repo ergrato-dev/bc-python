@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .label { fill: #D4D4D4; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 13px; }
+      .header { fill: #569CD6; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .list-box { fill: #264F78; stroke: #306998; stroke-width: 2; }
+      .tuple-box { fill: #4F3D26; stroke: #CE9178; stroke-width: 2; }
+      .value { fill: #fff; font-family: 'Consolas', monospace; font-size: 13px; }
+      .yes { fill: #6A9955; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .no { fill: #D16969; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .feature { fill: #D4D4D4; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .bracket-list { fill: #569CD6; font-family: 'Consolas', monospace; font-size: 20px; font-weight: bold; }
+      .bracket-tuple { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 20px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="450"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Lista vs Tupla</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Diferencias clave entre secuencias mutables e inmutables</text>
+
+  <!-- List column -->
+  <rect x="50" y="75" width="320" height="360" rx="10" fill="#1a2a3a" stroke="#306998" stroke-width="3"/>
+  <text class="header" x="210" y="100" text-anchor="middle" fill="#569CD6" font-size="18">📋 LISTA (list)</text>
+
+  <!-- List visual -->
+  <text class="bracket-list" x="100" y="140">[</text>
+  <rect class="list-box" x="120" y="120" width="50" height="30" rx="4"/>
+  <text class="value" x="145" y="140" text-anchor="middle">1</text>
+  <rect class="list-box" x="175" y="120" width="50" height="30" rx="4"/>
+  <text class="value" x="200" y="140" text-anchor="middle">2</text>
+  <rect class="list-box" x="230" y="120" width="50" height="30" rx="4"/>
+  <text class="value" x="255" y="140" text-anchor="middle">3</text>
+  <text class="bracket-list" x="290" y="140">]</text>
+
+  <text class="code" x="110" y="175">my_list = [1, 2, 3]</text>
+
+  <!-- List features -->
+  <text class="yes" x="70" y="210">✓ Mutable</text>
+  <text class="feature" x="165" y="210">- Puede modificarse</text>
+
+  <text class="yes" x="70" y="235">✓ append()</text>
+  <text class="feature" x="165" y="235">- Agregar elementos</text>
+
+  <text class="yes" x="70" y="260">✓ remove()</text>
+  <text class="feature" x="165" y="260">- Eliminar elementos</text>
+
+  <text class="yes" x="70" y="285">✓ sort()</text>
+  <text class="feature" x="165" y="285">- Ordenar in-place</text>
+
+  <text class="yes" x="70" y="310">✓ [i] = x</text>
+  <text class="feature" x="165" y="310">- Reasignar índice</text>
+
+  <!-- List use cases -->
+  <rect x="60" y="330" width="300" height="95" rx="5" fill="#252526"/>
+  <text class="subtitle" x="70" y="350">Usar cuando:</text>
+  <text class="feature" x="70" y="370">• Colección que cambiará</text>
+  <text class="feature" x="70" y="390">• Agregar/eliminar elementos</text>
+  <text class="feature" x="70" y="410">• Ordenar datos dinámicamente</text>
+
+  <!-- Tuple column -->
+  <rect x="430" y="75" width="320" height="360" rx="10" fill="#2a2518" stroke="#CE9178" stroke-width="3"/>
+  <text class="header" x="590" y="100" text-anchor="middle" fill="#CE9178" font-size="18">📦 TUPLA (tuple)</text>
+
+  <!-- Tuple visual -->
+  <text class="bracket-tuple" x="480" y="140">(</text>
+  <rect class="tuple-box" x="500" y="120" width="50" height="30" rx="4"/>
+  <text class="value" x="525" y="140" text-anchor="middle">1</text>
+  <rect class="tuple-box" x="555" y="120" width="50" height="30" rx="4"/>
+  <text class="value" x="580" y="140" text-anchor="middle">2</text>
+  <rect class="tuple-box" x="610" y="120" width="50" height="30" rx="4"/>
+  <text class="value" x="635" y="140" text-anchor="middle">3</text>
+  <text class="bracket-tuple" x="670" y="140">)</text>
+
+  <text class="code" x="490" y="175">my_tuple = (1, 2, 3)</text>
+
+  <!-- Tuple features -->
+  <text class="no" x="450" y="210">✗ Inmutable</text>
+  <text class="feature" x="545" y="210">- No modificable</text>
+
+  <text class="no" x="450" y="235">✗ append()</text>
+  <text class="feature" x="545" y="235">- No disponible</text>
+
+  <text class="no" x="450" y="260">✗ remove()</text>
+  <text class="feature" x="545" y="260">- No disponible</text>
+
+  <text class="yes" x="450" y="285">✓ index()</text>
+  <text class="feature" x="545" y="285">- Buscar posición</text>
+
+  <text class="yes" x="450" y="310">✓ count()</text>
+  <text class="feature" x="545" y="310">- Contar elementos</text>
+
+  <!-- Tuple use cases -->
+  <rect x="440" y="330" width="300" height="95" rx="5" fill="#252526"/>
+  <text class="subtitle" x="450" y="350">Usar cuando:</text>
+  <text class="feature" x="450" y="370">• Datos que no deben cambiar</text>
+  <text class="feature" x="450" y="390">• Claves de diccionario</text>
+  <text class="feature" x="450" y="410">• Retornar múltiples valores</text>
+
+  <!-- VS divider -->
+  <circle cx="400" cy="250" r="25" fill="#FFD43B"/>
+  <text x="400" y="257" text-anchor="middle" font-family="Segoe UI" font-size="16" font-weight="bold" fill="#1e1e1e">VS</text>
+</svg>
