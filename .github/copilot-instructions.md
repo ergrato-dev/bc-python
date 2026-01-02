@@ -114,6 +114,60 @@ bootcamp/week-XX/
 - **`_scripts/`**: Scripts de automatización y utilidades
 - **`bootcamp/`**: Contenido semanal del bootcamp
 
+### 📋 Cheat Sheets
+
+El bootcamp debe incluir **Cheat Sheets** (hojas de referencia rápida) completos:
+
+```
+_docs/cheatsheets/
+├── python-basics.md          # Variables, tipos, operadores
+├── python-basics.pdf         # Versión PDF para impresión
+├── data-structures.md        # Listas, diccionarios, sets, tuplas
+├── data-structures.pdf
+├── oop-python.md             # Clases, objetos, herencia, POO
+├── oop-python.pdf
+├── file-handling.md          # Archivos, excepciones, context managers
+├── file-handling.pdf
+├── testing-debugging.md      # pytest, debugging, logging
+├── testing-debugging.pdf
+└── complete-reference.md     # Cheat sheet completo unificado
+    complete-reference.pdf
+```
+
+**Requisitos de los Cheat Sheets:**
+
+- ✅ **Formato dual**: Markdown (.md) + PDF (.pdf)
+- ✅ **Contenido conciso**: Sintaxis, ejemplos mínimos, tips
+- ✅ **Organización visual**: Tablas, código con colores, secciones claras
+- ✅ **Imprimible**: PDF optimizado para impresión A4/Letter
+- ✅ **Referencias cruzadas**: Links entre cheat sheets relacionados
+- ✅ **Actualizado**: Sincronizado con el contenido de las semanas
+
+**Estructura de un Cheat Sheet:**
+
+```markdown
+# 📋 Cheat Sheet: [Tema]
+
+## Sección 1
+
+| Concepto | Sintaxis | Ejemplo   |
+| -------- | -------- | --------- |
+| ...      | `código` | `ejemplo` |
+
+## Sección 2
+
+\`\`\`python
+
+# Ejemplo de código
+
+\`\`\`
+
+## Tips y Errores Comunes
+
+- ✅ Hacer esto
+- ❌ Evitar esto
+```
+
 ---
 
 ## 🎓 Componentes de Cada Semana

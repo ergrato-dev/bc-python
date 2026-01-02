@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="22" font-weight="bold">Atributos de Clase vs Atributos de Instancia</text>
+
+  <!-- Class Definition Box -->
+  <g transform="translate(220, 55)">
+    <rect width="360" height="100" rx="10" fill="#252526" stroke="#306998" stroke-width="2"/>
+    <text x="180" y="25" text-anchor="middle" fill="#306998" font-family="Inter, sans-serif" font-size="14" font-weight="bold">class Dog:</text>
+    <text x="25" y="50" fill="#9cdcfe" font-family="monospace" font-size="12">species = "Canis"</text>
+    <text x="200" y="50" fill="#666" font-family="Inter, sans-serif" font-size="10">← Atributo de clase</text>
+    <text x="25" y="75" fill="#dcdcaa" font-family="monospace" font-size="12">def __init__(self, name):</text>
+    <text x="40" y="92" fill="#9cdcfe" font-family="monospace" font-size="12">self.name = name</text>
+    <text x="200" y="92" fill="#666" font-family="Inter, sans-serif" font-size="10">← Atributo de instancia</text>
+  </g>
+
+  <!-- Class Attribute Section -->
+  <g transform="translate(50, 180)">
+    <!-- Class box -->
+    <rect width="300" height="280" rx="12" fill="#1e3a5f" stroke="#4a90d9" stroke-width="3" filter="url(#shadow3)"/>
+    <text x="150" y="30" text-anchor="middle" fill="#4a90d9" font-family="Inter, sans-serif" font-size="16" font-weight="bold">ATRIBUTO DE CLASE</text>
+
+    <!-- Class representation -->
+    <rect x="75" y="50" width="150" height="60" rx="8" fill="#2d4a6f" stroke="#6ab0ff" stroke-width="2"/>
+    <text x="150" y="75" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="13" font-weight="bold">Dog</text>
+    <text x="150" y="100" text-anchor="middle" fill="#9cdcfe" font-family="monospace" font-size="11">species = "Canis"</text>
+
+    <!-- Shared arrows to instances -->
+    <line x1="150" y1="115" x2="80" y2="150" stroke="#FFD43B" stroke-width="2"/>
+    <line x1="150" y1="115" x2="150" y2="150" stroke="#FFD43B" stroke-width="2"/>
+    <line x1="150" y1="115" x2="220" y2="150" stroke="#FFD43B" stroke-width="2"/>
+
+    <!-- Instance boxes -->
+    <rect x="30" y="155" width="75" height="45" rx="5" fill="#3d5a7f" stroke="#6ab0ff" stroke-width="1"/>
+    <text x="67" y="175" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="10">dog1</text>
+    <text x="67" y="192" text-anchor="middle" fill="#9cdcfe" font-family="monospace" font-size="9">"Rex"</text>
+
+    <rect x="112" y="155" width="75" height="45" rx="5" fill="#3d5a7f" stroke="#6ab0ff" stroke-width="1"/>
+    <text x="150" y="175" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="10">dog2</text>
+    <text x="150" y="192" text-anchor="middle" fill="#9cdcfe" font-family="monospace" font-size="9">"Luna"</text>
+
+    <rect x="195" y="155" width="75" height="45" rx="5" fill="#3d5a7f" stroke="#6ab0ff" stroke-width="1"/>
+    <text x="232" y="175" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="10">dog3</text>
+    <text x="232" y="192" text-anchor="middle" fill="#9cdcfe" font-family="monospace" font-size="9">"Max"</text>
+
+    <!-- Description -->
+    <text x="150" y="225" text-anchor="middle" fill="#aaa" font-family="Inter, sans-serif" font-size="11">Todos comparten species</text>
+
+    <!-- Key points -->
+    <text x="20" y="250" fill="#98d998" font-family="Inter, sans-serif" font-size="11">✓ Un solo valor en memoria</text>
+    <text x="20" y="268" fill="#98d998" font-family="Inter, sans-serif" font-size="11">✓ Compartido por todas las instancias</text>
+  </g>
+
+  <!-- VS Divider -->
+  <g transform="translate(375, 300)">
+    <circle cx="25" cy="25" r="25" fill="#FFD43B"/>
+    <text x="25" y="32" text-anchor="middle" fill="#1e1e1e" font-family="Inter, sans-serif" font-size="16" font-weight="bold">vs</text>
+  </g>
+
+  <!-- Instance Attribute Section -->
+  <g transform="translate(450, 180)">
+    <!-- Instance box -->
+    <rect width="300" height="280" rx="12" fill="#3d2d1e" stroke="#d99a4a" stroke-width="3" filter="url(#shadow3)"/>
+    <text x="150" y="30" text-anchor="middle" fill="#d99a4a" font-family="Inter, sans-serif" font-size="16" font-weight="bold">ATRIBUTO DE INSTANCIA</text>
+
+    <!-- Instance representations with own values -->
+    <g transform="translate(30, 50)">
+      <rect width="75" height="70" rx="8" fill="#5a4a3d" stroke="#d9a06a" stroke-width="2"/>
+      <text x="37" y="22" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="bold">dog1</text>
+      <line x1="10" y1="30" x2="65" y2="30" stroke="#d9a06a"/>
+      <text x="37" y="50" text-anchor="middle" fill="#9cdcfe" font-family="monospace" font-size="10">name=</text>
+      <text x="37" y="65" text-anchor="middle" fill="#ce9178" font-family="monospace" font-size="10">"Rex"</text>
+    </g>
+
+    <g transform="translate(115, 50)">
+      <rect width="75" height="70" rx="8" fill="#5a4a3d" stroke="#d9a06a" stroke-width="2"/>
+      <text x="37" y="22" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="bold">dog2</text>
+      <line x1="10" y1="30" x2="65" y2="30" stroke="#d9a06a"/>
+      <text x="37" y="50" text-anchor="middle" fill="#9cdcfe" font-family="monospace" font-size="10">name=</text>
+      <text x="37" y="65" text-anchor="middle" fill="#ce9178" font-family="monospace" font-size="10">"Luna"</text>
+    </g>
+
+    <g transform="translate(200, 50)">
+      <rect width="75" height="70" rx="8" fill="#5a4a3d" stroke="#d9a06a" stroke-width="2"/>
+      <text x="37" y="22" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="bold">dog3</text>
+      <line x1="10" y1="30" x2="65" y2="30" stroke="#d9a06a"/>
+      <text x="37" y="50" text-anchor="middle" fill="#9cdcfe" font-family="monospace" font-size="10">name=</text>
+      <text x="37" y="65" text-anchor="middle" fill="#ce9178" font-family="monospace" font-size="10">"Max"</text>
+    </g>
+
+    <!-- Memory representation -->
+    <text x="150" y="150" text-anchor="middle" fill="#aaa" font-family="Inter, sans-serif" font-size="11">Cada uno tiene su propio name</text>
+
+    <!-- Memory boxes -->
+    <rect x="30" y="165" width="55" height="30" rx="4" fill="#4a3a2a" stroke="#888"/>
+    <text x="57" y="185" text-anchor="middle" fill="#ce9178" font-family="monospace" font-size="10">"Rex"</text>
+
+    <rect x="122" y="165" width="55" height="30" rx="4" fill="#4a3a2a" stroke="#888"/>
+    <text x="150" y="185" text-anchor="middle" fill="#ce9178" font-family="monospace" font-size="10">"Luna"</text>
+
+    <rect x="215" y="165" width="55" height="30" rx="4" fill="#4a3a2a" stroke="#888"/>
+    <text x="242" y="185" text-anchor="middle" fill="#ce9178" font-family="monospace" font-size="10">"Max"</text>
+
+    <!-- Key points -->
+    <text x="20" y="225" fill="#98d998" font-family="Inter, sans-serif" font-size="11">✓ Valor único por instancia</text>
+    <text x="20" y="243" fill="#98d998" font-family="Inter, sans-serif" font-size="11">✓ Definido en __init__ con self</text>
+    <text x="20" y="261" fill="#98d998" font-family="Inter, sans-serif" font-size="11">✓ Cada objeto tiene su copia</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="485" text-anchor="middle" fill="#666" font-family="Inter, sans-serif" font-size="11">Semana 08 • Clases y Objetos</text>
+</svg>

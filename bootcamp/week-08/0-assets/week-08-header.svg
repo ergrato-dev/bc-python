@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 36px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 18px; }
+      .week { fill: #306998; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .icon { fill: #4EC9B0; }
+      .accent { fill: #FFD43B; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 12px; }
+      .keyword { fill: #569CD6; font-family: 'Consolas', monospace; font-size: 12px; }
+      .class-box { fill: #264F78; stroke: #569CD6; stroke-width: 2; rx: 8; }
+      .method-box { fill: #2D2D2D; stroke: #4EC9B0; stroke-width: 1; rx: 4; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="200"/>
+
+  <!-- Week badge -->
+  <rect x="20" y="20" width="90" height="28" rx="14" fill="#306998"/>
+  <text class="week" x="65" y="39" text-anchor="middle" fill="#FFFFFF">WEEK 08</text>
+
+  <!-- Title -->
+  <text class="title" x="400" y="70" text-anchor="middle">🎭 Clases y Objetos</text>
+  <text class="subtitle" x="400" y="100" text-anchor="middle">Programación Orientada a Objetos en Python</text>
+
+  <!-- Class diagram illustration -->
+  <!-- Class box -->
+  <rect class="class-box" x="180" y="120" width="140" height="65"/>
+  <text class="code" x="250" y="138" text-anchor="middle" fill="#4EC9B0">class Book:</text>
+  <line x1="180" y1="145" x2="320" y2="145" stroke="#569CD6" stroke-width="1"/>
+  <text class="code" x="190" y="160">title, author</text>
+  <line x1="180" y1="168" x2="320" y2="168" stroke="#569CD6" stroke-width="1"/>
+  <text class="code" x="190" y="182">borrow(), return_()</text>
+
+  <!-- Arrow to instance -->
+  <line x1="320" y1="152" x2="360" y2="152" stroke="#FFD43B" stroke-width="2"/>
+  <polygon points="360,152 350,147 350,157" fill="#FFD43B"/>
+
+  <!-- Instance box -->
+  <rect class="method-box" x="370" y="130" width="130" height="45"/>
+  <text class="code" x="435" y="150" text-anchor="middle" fill="#9CDCFE">book1 = Book()</text>
+  <text class="code" x="435" y="168" text-anchor="middle" fill="#CE9178">"1984", "Orwell"</text>
+
+  <!-- Second instance -->
+  <rect class="method-box" x="510" y="130" width="130" height="45"/>
+  <text class="code" x="575" y="150" text-anchor="middle" fill="#9CDCFE">book2 = Book()</text>
+  <text class="code" x="575" y="168" text-anchor="middle" fill="#CE9178">"Quijote", "Cerv."</text>
+
+  <!-- Icons -->
+  <text x="660" y="155" font-size="40">📚</text>
+  <text x="710" y="155" font-size="40">🎯</text>
+
+  <!-- Decorative elements -->
+  <circle cx="750" cy="40" r="25" fill="#306998" opacity="0.3"/>
+  <circle cx="770" cy="70" r="15" fill="#FFD43B" opacity="0.3"/>
+</svg>
