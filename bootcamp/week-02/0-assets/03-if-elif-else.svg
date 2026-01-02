@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFD43B" text-anchor="middle">Estructura if / elif / else</text>
+  <text x="400" y="65" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#888" text-anchor="middle">Diagrama de flujo de decisiones</text>
+
+  <!-- Start node -->
+  <ellipse cx="400" cy="110" rx="50" ry="25" fill="#306998" stroke="#FFD43B" stroke-width="2"/>
+  <text x="400" y="115" font-family="Inter, sans-serif" font-size="12" fill="white" text-anchor="middle">Inicio</text>
+
+  <!-- Arrow down from start -->
+  <line x1="400" y1="135" x2="400" y2="165" stroke="#888" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- IF condition diamond -->
+  <polygon points="400,170 500,220 400,270 300,220" fill="#252526" stroke="#c586c0" stroke-width="2"/>
+  <text x="400" y="215" font-family="monospace" font-size="11" fill="#c586c0" text-anchor="middle">if</text>
+  <text x="400" y="230" font-family="monospace" font-size="10" fill="#e0e0e0" text-anchor="middle">score >= 90</text>
+
+  <!-- True arrow from IF (right) -->
+  <line x1="500" y1="220" x2="580" y2="220" stroke="#4EC9B0" stroke-width="2"/>
+  <text x="535" y="210" font-family="Inter, sans-serif" font-size="10" fill="#4EC9B0">True</text>
+
+  <!-- IF True action box -->
+  <rect x="580" y="195" width="120" height="50" rx="8" fill="#252526" stroke="#4EC9B0" stroke-width="2"/>
+  <text x="640" y="215" font-family="monospace" font-size="11" fill="#569cd6" text-anchor="middle">grade = "A"</text>
+  <text x="640" y="232" font-family="Inter, sans-serif" font-size="9" fill="#888" text-anchor="middle">Excelente</text>
+
+  <!-- False arrow from IF (down) -->
+  <line x1="400" y1="270" x2="400" y2="300" stroke="#ce9178" stroke-width="2"/>
+  <text x="415" y="290" font-family="Inter, sans-serif" font-size="10" fill="#ce9178">False</text>
+
+  <!-- ELIF condition diamond -->
+  <polygon points="400,305 500,355 400,405 300,355" fill="#252526" stroke="#c586c0" stroke-width="2"/>
+  <text x="400" y="350" font-family="monospace" font-size="11" fill="#c586c0" text-anchor="middle">elif</text>
+  <text x="400" y="365" font-family="monospace" font-size="10" fill="#e0e0e0" text-anchor="middle">score >= 70</text>
+
+  <!-- True arrow from ELIF (right) -->
+  <line x1="500" y1="355" x2="580" y2="355" stroke="#4EC9B0" stroke-width="2"/>
+  <text x="535" y="345" font-family="Inter, sans-serif" font-size="10" fill="#4EC9B0">True</text>
+
+  <!-- ELIF True action box -->
+  <rect x="580" y="330" width="120" height="50" rx="8" fill="#252526" stroke="#4EC9B0" stroke-width="2"/>
+  <text x="640" y="350" font-family="monospace" font-size="11" fill="#569cd6" text-anchor="middle">grade = "B"</text>
+  <text x="640" y="367" font-family="Inter, sans-serif" font-size="9" fill="#888" text-anchor="middle">Aprobado</text>
+
+  <!-- False arrow from ELIF (down) -->
+  <line x1="400" y1="405" x2="400" y2="435" stroke="#ce9178" stroke-width="2"/>
+  <text x="415" y="425" font-family="Inter, sans-serif" font-size="10" fill="#ce9178">False</text>
+
+  <!-- ELSE box -->
+  <rect x="340" y="440" width="120" height="50" rx="8" fill="#252526" stroke="#c586c0" stroke-width="2"/>
+  <text x="400" y="460" font-family="monospace" font-size="11" fill="#c586c0" text-anchor="middle">else</text>
+  <text x="400" y="478" font-family="monospace" font-size="10" fill="#569cd6" text-anchor="middle">grade = "F"</text>
+
+  <!-- Convergence lines -->
+  <!-- Grade A: sale a la derecha, baja por fuera, y conecta abajo -->
+  <line x1="700" y1="220" x2="730" y2="220" stroke="#888" stroke-width="1.5"/>
+  <line x1="730" y1="220" x2="730" y2="520" stroke="#888" stroke-width="1.5"/>
+  <!-- Grade B: sale a la derecha y baja -->
+  <line x1="700" y1="355" x2="730" y2="355" stroke="#888" stroke-width="1.5"/>
+  <!-- Grade F (else): baja y conecta -->
+  <line x1="400" y1="490" x2="400" y2="520" stroke="#888" stroke-width="1.5"/>
+  <!-- Línea horizontal de convergencia -->
+  <line x1="400" y1="520" x2="730" y2="520" stroke="#888" stroke-width="1.5"/>
+  <!-- Flecha hacia Continúa -->
+  <line x1="565" y1="520" x2="565" y2="545" stroke="#888" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- End node -->
+  <ellipse cx="520" cy="570" rx="50" ry="20" fill="#306998" stroke="#FFD43B" stroke-width="2"/>
+  <text x="520" y="575" font-family="Inter, sans-serif" font-size="11" fill="white" text-anchor="middle">Continúa</text>
+
+  <!-- Code example on the left -->
+  <rect x="50" y="180" width="180" height="160" rx="8" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="60" y="200" font-family="Inter, sans-serif" font-size="10" fill="#FFD43B">Código Python:</text>
+
+  <text x="60" y="225" font-family="monospace" font-size="10" fill="#c586c0">if</text>
+  <text x="75" y="225" font-family="monospace" font-size="10" fill="#e0e0e0"> score >= </text>
+  <text x="140" y="225" font-family="monospace" font-size="10" fill="#b5cea8">90</text>
+  <text x="155" y="225" font-family="monospace" font-size="10" fill="#e0e0e0">:</text>
+
+  <text x="70" y="245" font-family="monospace" font-size="10" fill="#569cd6">grade</text>
+  <text x="105" y="245" font-family="monospace" font-size="10" fill="#e0e0e0"> = </text>
+  <text x="125" y="245" font-family="monospace" font-size="10" fill="#ce9178">"A"</text>
+
+  <text x="60" y="270" font-family="monospace" font-size="10" fill="#c586c0">elif</text>
+  <text x="85" y="270" font-family="monospace" font-size="10" fill="#e0e0e0"> score >= </text>
+  <text x="150" y="270" font-family="monospace" font-size="10" fill="#b5cea8">70</text>
+  <text x="165" y="270" font-family="monospace" font-size="10" fill="#e0e0e0">:</text>
+
+  <text x="70" y="290" font-family="monospace" font-size="10" fill="#569cd6">grade</text>
+  <text x="105" y="290" font-family="monospace" font-size="10" fill="#e0e0e0"> = </text>
+  <text x="125" y="290" font-family="monospace" font-size="10" fill="#ce9178">"B"</text>
+
+  <text x="60" y="315" font-family="monospace" font-size="10" fill="#c586c0">else</text>
+  <text x="85" y="315" font-family="monospace" font-size="10" fill="#e0e0e0">:</text>
+
+  <text x="70" y="335" font-family="monospace" font-size="10" fill="#569cd6">grade</text>
+  <text x="105" y="335" font-family="monospace" font-size="10" fill="#e0e0e0"> = </text>
+  <text x="125" y="335" font-family="monospace" font-size="10" fill="#ce9178">"F"</text>
+
+  <!-- Legend -->
+  <rect x="50" y="370" width="180" height="80" rx="8" fill="#252526"/>
+  <text x="60" y="390" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="#FFD43B">Leyenda:</text>
+
+  <polygon points="75,410 95,420 75,430 55,420" fill="none" stroke="#c586c0" stroke-width="1.5"/>
+  <text x="105" y="425" font-family="Inter, sans-serif" font-size="9" fill="#e0e0e0">Decisión</text>
+
+  <rect x="55" y="435" width="40" height="15" rx="3" fill="none" stroke="#4EC9B0" stroke-width="1.5"/>
+  <text x="105" y="447" font-family="Inter, sans-serif" font-size="9" fill="#e0e0e0">Acción</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Footer -->
+  <text x="400" y="592" font-family="Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">Python Bootcamp - Semana 02</text>
+</svg>

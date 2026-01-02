@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <!-- Background -->
+  <rect width="800" height="550" fill="#1e1e1e"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFD43B" text-anchor="middle">Operadores Lógicos en Python</text>
+  <text x="400" y="65" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#888" text-anchor="middle">Combinan expresiones booleanas</text>
+
+  <!-- AND Section -->
+  <g transform="translate(50, 90)">
+    <rect width="220" height="180" rx="12" fill="#252526" stroke="#306998" stroke-width="2"/>
+    <text x="110" y="35" font-family="monospace" font-size="26" font-weight="bold" fill="#c586c0" text-anchor="middle">and</text>
+    <text x="110" y="60" font-family="Inter, sans-serif" font-size="12" fill="#888" text-anchor="middle">Ambos deben ser True</text>
+
+    <!-- Truth table for AND -->
+    <text x="40" y="90" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="85" y="90" font-family="monospace" font-size="11" fill="#c586c0">and</text>
+    <text x="120" y="90" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="165" y="90" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="185" y="90" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+
+    <text x="40" y="110" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="85" y="110" font-family="monospace" font-size="11" fill="#c586c0">and</text>
+    <text x="120" y="110" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="165" y="110" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="185" y="110" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+
+    <text x="40" y="130" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="85" y="130" font-family="monospace" font-size="11" fill="#c586c0">and</text>
+    <text x="120" y="130" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="165" y="130" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="185" y="130" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+
+    <text x="40" y="150" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="85" y="150" font-family="monospace" font-size="11" fill="#c586c0">and</text>
+    <text x="120" y="150" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="165" y="150" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="185" y="150" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+
+    <text x="110" y="172" font-family="Inter, sans-serif" font-size="10" fill="#666" text-anchor="middle">Solo True si AMBOS True</text>
+  </g>
+
+  <!-- OR Section -->
+  <g transform="translate(290, 90)">
+    <rect width="220" height="180" rx="12" fill="#252526" stroke="#306998" stroke-width="2"/>
+    <text x="110" y="35" font-family="monospace" font-size="26" font-weight="bold" fill="#c586c0" text-anchor="middle">or</text>
+    <text x="110" y="60" font-family="Inter, sans-serif" font-size="12" fill="#888" text-anchor="middle">Al menos uno debe ser True</text>
+
+    <!-- Truth table for OR -->
+    <text x="40" y="90" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="85" y="90" font-family="monospace" font-size="11" fill="#c586c0">or</text>
+    <text x="110" y="90" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="155" y="90" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="175" y="90" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+
+    <text x="40" y="110" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="85" y="110" font-family="monospace" font-size="11" fill="#c586c0">or</text>
+    <text x="110" y="110" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="155" y="110" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="175" y="110" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+
+    <text x="40" y="130" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="85" y="130" font-family="monospace" font-size="11" fill="#c586c0">or</text>
+    <text x="110" y="130" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+    <text x="155" y="130" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="175" y="130" font-family="monospace" font-size="11" fill="#4EC9B0">True</text>
+
+    <text x="40" y="150" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="85" y="150" font-family="monospace" font-size="11" fill="#c586c0">or</text>
+    <text x="110" y="150" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+    <text x="155" y="150" font-family="monospace" font-size="11" fill="#d4d4d4">→</text>
+    <text x="175" y="150" font-family="monospace" font-size="11" fill="#ce9178">False</text>
+
+    <text x="110" y="172" font-family="Inter, sans-serif" font-size="10" fill="#666" text-anchor="middle">Solo False si AMBOS False</text>
+  </g>
+
+  <!-- NOT Section -->
+  <g transform="translate(530, 90)">
+    <rect width="220" height="180" rx="12" fill="#252526" stroke="#306998" stroke-width="2"/>
+    <text x="110" y="35" font-family="monospace" font-size="26" font-weight="bold" fill="#c586c0" text-anchor="middle">not</text>
+    <text x="110" y="60" font-family="Inter, sans-serif" font-size="12" fill="#888" text-anchor="middle">Invierte el valor</text>
+
+    <!-- Truth table for NOT -->
+    <text x="50" y="100" font-family="monospace" font-size="12" fill="#c586c0">not</text>
+    <text x="85" y="100" font-family="monospace" font-size="12" fill="#4EC9B0">True</text>
+    <text x="135" y="100" font-family="monospace" font-size="12" fill="#d4d4d4">→</text>
+    <text x="160" y="100" font-family="monospace" font-size="12" fill="#ce9178">False</text>
+
+    <text x="50" y="130" font-family="monospace" font-size="12" fill="#c586c0">not</text>
+    <text x="85" y="130" font-family="monospace" font-size="12" fill="#ce9178">False</text>
+    <text x="135" y="130" font-family="monospace" font-size="12" fill="#d4d4d4">→</text>
+    <text x="160" y="130" font-family="monospace" font-size="12" fill="#4EC9B0">True</text>
+
+    <text x="110" y="172" font-family="Inter, sans-serif" font-size="10" fill="#666" text-anchor="middle">Invierte True ↔ False</text>
+  </g>
+
+  <!-- Practical Example -->
+  <rect x="50" y="290" width="700" height="130" rx="10" fill="#252526" stroke="#444" stroke-width="1"/>
+  <text x="70" y="320" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFD43B">Ejemplo práctico: Validación de acceso</text>
+
+  <text x="70" y="355" font-family="monospace" font-size="13" fill="#569cd6">age</text>
+  <text x="100" y="355" font-family="monospace" font-size="13" fill="#d4d4d4"> = </text>
+  <text x="120" y="355" font-family="monospace" font-size="13" fill="#b5cea8">25</text>
+
+  <text x="200" y="355" font-family="monospace" font-size="13" fill="#569cd6">has_ticket</text>
+  <text x="285" y="355" font-family="monospace" font-size="13" fill="#d4d4d4"> = </text>
+  <text x="305" y="355" font-family="monospace" font-size="13" fill="#4EC9B0">True</text>
+
+  <text x="400" y="355" font-family="monospace" font-size="13" fill="#569cd6">is_banned</text>
+  <text x="480" y="355" font-family="monospace" font-size="13" fill="#d4d4d4"> = </text>
+  <text x="500" y="355" font-family="monospace" font-size="13" fill="#ce9178">False</text>
+
+  <text x="70" y="390" font-family="monospace" font-size="13" fill="#c586c0">if</text>
+  <text x="95" y="390" font-family="monospace" font-size="13" fill="#569cd6"> age</text>
+  <text x="130" y="390" font-family="monospace" font-size="13" fill="#d4d4d4"> &gt;= </text>
+  <text x="160" y="390" font-family="monospace" font-size="13" fill="#b5cea8">18</text>
+  <text x="185" y="390" font-family="monospace" font-size="13" fill="#c586c0"> and </text>
+  <text x="230" y="390" font-family="monospace" font-size="13" fill="#569cd6">has_ticket</text>
+  <text x="320" y="390" font-family="monospace" font-size="13" fill="#c586c0"> and </text>
+  <text x="365" y="390" font-family="monospace" font-size="13" fill="#c586c0">not </text>
+  <text x="405" y="390" font-family="monospace" font-size="13" fill="#569cd6">is_banned</text>
+  <text x="490" y="390" font-family="monospace" font-size="13" fill="#d4d4d4">:</text>
+
+  <text x="545" y="390" font-family="monospace" font-size="12" fill="#6a9955"># True</text>
+
+  <!-- Result badge -->
+  <rect x="620" y="340" width="110" height="60" rx="8" fill="#306998"/>
+  <text x="675" y="365" font-family="Inter, sans-serif" font-size="11" fill="white" text-anchor="middle">✅ Acceso</text>
+  <text x="675" y="385" font-family="Inter, sans-serif" font-size="11" fill="white" text-anchor="middle">Permitido</text>
+
+  <!-- Short-circuit note -->
+  <rect x="50" y="440" width="700" height="80" rx="10" fill="#1e1e1e" stroke="#FFD43B" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="70" y="468" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B">💡 Short-circuit evaluation:</text>
+  <text x="70" y="495" font-family="Inter, sans-serif" font-size="12" fill="#e0e0e0">• </text>
+  <text x="85" y="495" font-family="monospace" font-size="12" fill="#c586c0">and</text>
+  <text x="120" y="495" font-family="Inter, sans-serif" font-size="12" fill="#e0e0e0">: si el primero es False, no evalúa el segundo</text>
+  <text x="420" y="495" font-family="Inter, sans-serif" font-size="12" fill="#e0e0e0">• </text>
+  <text x="435" y="495" font-family="monospace" font-size="12" fill="#c586c0">or</text>
+  <text x="460" y="495" font-family="Inter, sans-serif" font-size="12" fill="#e0e0e0">: si el primero es True, no evalúa el segundo</text>
+
+  <!-- Footer -->
+  <text x="400" y="540" font-family="Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">Python Bootcamp - Semana 02</text>
+</svg>
