@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #c0c0c0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-method { fill: #264653; stroke: #306998; stroke-width: 2; rx: 6; }
+      .box-return { fill: #1a3a4a; stroke: #4a9eff; stroke-width: 1; rx: 4; }
+      .text-method { fill: #61afef; font-family: 'Consolas', monospace; font-size: 13px; font-weight: bold; }
+      .text-desc { fill: #c0c0c0; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .text-return { fill: #98c379; font-family: 'Consolas', monospace; font-size: 11px; }
+      .text-category { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .divider { stroke: #444; stroke-width: 1; stroke-dasharray: 5,5; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="550"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Métodos de Diccionarios</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Operaciones más utilizadas organizadas por categoría</text>
+
+  <!-- Category 1: Access -->
+  <text class="text-category" x="30" y="90">📖 ACCESO</text>
+
+  <rect class="box-method" x="30" y="100" width="170" height="50"/>
+  <text class="text-method" x="40" y="120">d.get(key, default)</text>
+  <text class="text-desc" x="40" y="140">Acceso seguro (no KeyError)</text>
+
+  <rect class="box-method" x="210" y="100" width="170" height="50"/>
+  <text class="text-method" x="220" y="120">d[key]</text>
+  <text class="text-desc" x="220" y="140">Acceso directo (KeyError)</text>
+
+  <rect class="box-method" x="390" y="100" width="190" height="50"/>
+  <text class="text-method" x="400" y="120">d.setdefault(k, v)</text>
+  <text class="text-desc" x="400" y="140">Obtiene o crea con default</text>
+
+  <rect class="box-method" x="590" y="100" width="180" height="50"/>
+  <text class="text-method" x="600" y="120">key in d</text>
+  <text class="text-desc" x="600" y="140">Verifica existencia → bool</text>
+
+  <!-- Divider -->
+  <line class="divider" x1="30" y1="165" x2="770" y2="165"/>
+
+  <!-- Category 2: Views -->
+  <text class="text-category" x="30" y="190">👁️ VISTAS</text>
+
+  <rect class="box-method" x="30" y="200" width="230" height="55"/>
+  <text class="text-method" x="40" y="220">d.keys()</text>
+  <text class="text-desc" x="40" y="238">Vista de claves</text>
+  <rect class="box-return" x="155" y="210" width="95" height="20"/>
+  <text class="text-return" x="160" y="225">dict_keys</text>
+
+  <rect class="box-method" x="280" y="200" width="230" height="55"/>
+  <text class="text-method" x="290" y="220">d.values()</text>
+  <text class="text-desc" x="290" y="238">Vista de valores</text>
+  <rect class="box-return" x="415" y="210" width="85" height="20"/>
+  <text class="text-return" x="420" y="225">dict_values</text>
+
+  <rect class="box-method" x="530" y="200" width="240" height="55"/>
+  <text class="text-method" x="540" y="220">d.items()</text>
+  <text class="text-desc" x="540" y="238">Vista de pares (k, v)</text>
+  <rect class="box-return" x="675" y="210" width="85" height="20"/>
+  <text class="text-return" x="680" y="225">dict_items</text>
+
+  <!-- Divider -->
+  <line class="divider" x1="30" y1="270" x2="770" y2="270"/>
+
+  <!-- Category 3: Modification -->
+  <text class="text-category" x="30" y="295">✏️ MODIFICACIÓN</text>
+
+  <rect class="box-method" x="30" y="305" width="170" height="55"/>
+  <text class="text-method" x="40" y="325">d[key] = value</text>
+  <text class="text-desc" x="40" y="343">Agregar/actualizar</text>
+
+  <rect class="box-method" x="210" y="305" width="170" height="55"/>
+  <text class="text-method" x="220" y="325">d.update(other)</text>
+  <text class="text-desc" x="220" y="343">Combinar diccionarios</text>
+
+  <rect class="box-method" x="390" y="305" width="180" height="55"/>
+  <text class="text-method" x="400" y="325">d | other</text>
+  <text class="text-desc" x="400" y="343">Merge (Python 3.9+)</text>
+
+  <rect class="box-method" x="580" y="305" width="190" height="55"/>
+  <text class="text-method" x="590" y="325">d |= other</text>
+  <text class="text-desc" x="590" y="343">Merge in-place (3.9+)</text>
+
+  <!-- Divider -->
+  <line class="divider" x1="30" y1="375" x2="770" y2="375"/>
+
+  <!-- Category 4: Deletion -->
+  <text class="text-category" x="30" y="400">🗑️ ELIMINACIÓN</text>
+
+  <rect class="box-method" x="30" y="410" width="170" height="55"/>
+  <text class="text-method" x="40" y="430">del d[key]</text>
+  <text class="text-desc" x="40" y="448">Elimina (KeyError si no)</text>
+
+  <rect class="box-method" x="210" y="410" width="170" height="55"/>
+  <text class="text-method" x="220" y="430">d.pop(key, def)</text>
+  <text class="text-desc" x="220" y="448">Elimina y retorna valor</text>
+
+  <rect class="box-method" x="390" y="410" width="180" height="55"/>
+  <text class="text-method" x="400" y="430">d.popitem()</text>
+  <text class="text-desc" x="400" y="448">Elimina último par (LIFO)</text>
+
+  <rect class="box-method" x="580" y="410" width="190" height="55"/>
+  <text class="text-method" x="590" y="430">d.clear()</text>
+  <text class="text-desc" x="590" y="448">Vacía todo el diccionario</text>
+
+  <!-- Divider -->
+  <line class="divider" x1="30" y1="480" x2="770" y2="480"/>
+
+  <!-- Category 5: Copy -->
+  <text class="text-category" x="30" y="505">📋 COPIA</text>
+
+  <rect class="box-method" x="30" y="510" width="230" height="35"/>
+  <text class="text-method" x="40" y="533">d.copy()</text>
+  <text class="text-desc" x="130" y="533">Copia superficial</text>
+
+  <rect class="box-method" x="280" y="510" width="230" height="35"/>
+  <text class="text-method" x="290" y="533">copy.deepcopy(d)</text>
+  <text class="text-desc" x="430" y="533">Copia profunda</text>
+
+  <rect class="box-method" x="530" y="510" width="240" height="35"/>
+  <text class="text-method" x="540" y="533">dict.fromkeys(keys, v)</text>
+  <text class="text-desc" x="700" y="533">Crear nuevo</text>
+</svg>

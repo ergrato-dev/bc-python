@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #c0c0c0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-key { fill: #264653; stroke: #306998; stroke-width: 2; rx: 6; }
+      .box-value { fill: #1a3a4a; stroke: #4a9eff; stroke-width: 2; rx: 6; }
+      .text-key { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 14px; }
+      .text-value { fill: #98c379; font-family: 'Consolas', monospace; font-size: 14px; }
+      .text-label { fill: #c0c0c0; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .text-code { fill: #e06c75; font-family: 'Consolas', monospace; font-size: 13px; }
+      .arrow { stroke: #4a9eff; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .brace { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 48px; }
+      .colon { fill: #c0c0c0; font-family: 'Consolas', monospace; font-size: 20px; font-weight: bold; }
+      .hash-box { fill: #3d3d3d; stroke: #666; stroke-width: 1; rx: 4; }
+      .hash-text { fill: #888; font-family: 'Consolas', monospace; font-size: 11px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a9eff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Anatomía de un Diccionario</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Estructura de pares clave-valor con acceso O(1)</text>
+
+  <!-- Main dictionary box -->
+  <rect class="box" x="100" y="80" width="600" height="180"/>
+
+  <!-- Braces -->
+  <text class="brace" x="115" y="185">{</text>
+  <text class="brace" x="665" y="185">}</text>
+
+  <!-- Entry 1: "name" -> "Alice" -->
+  <rect class="box-key" x="160" y="110" width="90" height="35"/>
+  <text class="text-key" x="205" y="133" text-anchor="middle">"name"</text>
+  <text class="colon" x="265" y="133">:</text>
+  <rect class="box-value" x="285" y="110" width="100" height="35"/>
+  <text class="text-value" x="335" y="133" text-anchor="middle">"Alice"</text>
+  <text class="text-label" x="400" y="133">,</text>
+
+  <!-- Entry 2: "age" -> 30 -->
+  <rect class="box-key" x="160" y="160" width="90" height="35"/>
+  <text class="text-key" x="205" y="183" text-anchor="middle">"age"</text>
+  <text class="colon" x="265" y="183">:</text>
+  <rect class="box-value" x="285" y="160" width="100" height="35"/>
+  <text class="text-value" x="335" y="183" text-anchor="middle">30</text>
+  <text class="text-label" x="400" y="183">,</text>
+
+  <!-- Entry 3: "city" -> "Madrid" -->
+  <rect class="box-key" x="160" y="210" width="90" height="35"/>
+  <text class="text-key" x="205" y="233" text-anchor="middle">"city"</text>
+  <text class="colon" x="265" y="233">:</text>
+  <rect class="box-value" x="285" y="210" width="100" height="35"/>
+  <text class="text-value" x="335" y="233" text-anchor="middle">"Madrid"</text>
+
+  <!-- Labels -->
+  <text class="text-label" x="475" y="128">← Clave (Key)</text>
+  <text class="text-label" x="475" y="148" style="fill: #4a9eff;">   Inmutable, hashable</text>
+
+  <text class="text-label" x="475" y="188">← Valor (Value)</text>
+  <text class="text-label" x="475" y="208" style="fill: #98c379;">   Cualquier tipo</text>
+
+  <!-- Hash Table visualization -->
+  <text class="subtitle" x="400" y="295" text-anchor="middle">Implementación interna: Hash Table</text>
+
+  <!-- Hash boxes -->
+  <rect class="hash-box" x="120" y="315" width="60" height="30"/>
+  <text class="hash-text" x="150" y="335" text-anchor="middle">hash()</text>
+
+  <rect class="hash-box" x="220" y="315" width="80" height="30"/>
+  <text class="hash-text" x="260" y="335" text-anchor="middle">"name"</text>
+
+  <path class="arrow" d="M180 330 L215 330"/>
+
+  <rect class="hash-box" x="340" y="315" width="100" height="30"/>
+  <text class="hash-text" x="390" y="335" text-anchor="middle">→ índice: 42</text>
+
+  <path class="arrow" d="M300 330 L335 330"/>
+
+  <rect class="hash-box" x="480" y="315" width="100" height="30"/>
+  <text class="hash-text" x="530" y="335" text-anchor="middle">bucket[42]</text>
+
+  <path class="arrow" d="M440 330 L475 330"/>
+
+  <rect class="box-value" x="620" y="315" width="80" height="30"/>
+  <text class="text-value" x="660" y="335" text-anchor="middle">"Alice"</text>
+
+  <path class="arrow" d="M580 330 L615 330"/>
+
+  <!-- Key characteristics -->
+  <rect class="box" x="100" y="370" width="280" height="110"/>
+  <text class="text-key" x="120" y="395">✓ Claves válidas (hashables)</text>
+  <text class="text-code" x="130" y="420">str, int, float, tuple, bool</text>
+  <text class="text-label" x="130" y="445">Inmutables → hash consistente</text>
+  <text class="text-label" x="130" y="465">Acceso O(1) promedio</text>
+
+  <rect class="box" x="420" y="370" width="280" height="110"/>
+  <text class="text-key" x="440" y="395">✗ Claves inválidas</text>
+  <text class="text-code" x="450" y="420">list, dict, set</text>
+  <text class="text-label" x="450" y="445">Mutables → hash puede cambiar</text>
+  <text class="text-label" x="450" y="465">TypeError al intentar usar</text>
+</svg>

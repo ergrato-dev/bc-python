@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #c0c0c0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-code { fill: #1a1a2e; stroke: #306998; stroke-width: 1; rx: 4; }
+      .box-output { fill: #1e3a1e; stroke: #4a9; stroke-width: 1; rx: 4; }
+      .text-code { fill: #abb2bf; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-keyword { fill: #c678dd; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-func { fill: #61afef; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-string { fill: #98c379; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-var { fill: #e5c07b; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-output { fill: #98c379; font-family: 'Consolas', monospace; font-size: 11px; }
+      .text-label { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .text-desc { fill: #888; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .arrow { stroke: #4a9eff; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .connector { stroke: #555; stroke-width: 1; stroke-dasharray: 3,3; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a9eff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Iteración sobre Diccionarios</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Tres formas de recorrer: keys(), values(), items()</text>
+
+  <!-- Source dictionary -->
+  <rect class="box" x="280" y="70" width="240" height="60"/>
+  <text class="text-label" x="400" y="90" text-anchor="middle">Diccionario fuente</text>
+  <text class="text-code" x="300" y="115">data = {"a": 1, "b": 2, "c": 3}</text>
+
+  <!-- Three branches -->
+  <path class="connector" d="M400 130 L400 150"/>
+  <path class="connector" d="M400 150 L150 150 L150 170"/>
+  <path class="connector" d="M400 150 L400 170"/>
+  <path class="connector" d="M400 150 L650 150 L650 170"/>
+
+  <!-- Branch 1: keys() -->
+  <rect class="box" x="30" y="170" width="240" height="145"/>
+  <text class="text-label" x="150" y="195" text-anchor="middle">🔑 Iterar CLAVES</text>
+
+  <rect class="box-code" x="45" y="205" width="210" height="60"/>
+  <text class="text-keyword" x="55" y="225">for</text>
+  <text class="text-var" x="80" y="225">key</text>
+  <text class="text-keyword" x="105" y="225">in</text>
+  <text class="text-code" x="125" y="225">data:</text>
+  <text class="text-func" x="65" y="245">print</text>
+  <text class="text-code" x="95" y="245">(key)</text>
+  <text class="text-desc" x="55" y="260"># o data.keys()</text>
+
+  <rect class="box-output" x="45" y="270" width="210" height="35"/>
+  <text class="text-output" x="55" y="292">→ a  b  c</text>
+
+  <!-- Branch 2: values() -->
+  <rect class="box" x="280" y="170" width="240" height="145"/>
+  <text class="text-label" x="400" y="195" text-anchor="middle">📦 Iterar VALORES</text>
+
+  <rect class="box-code" x="295" y="205" width="210" height="60"/>
+  <text class="text-keyword" x="305" y="225">for</text>
+  <text class="text-var" x="330" y="225">val</text>
+  <text class="text-keyword" x="355" y="225">in</text>
+  <text class="text-code" x="375" y="225">data.values():</text>
+  <text class="text-func" x="315" y="245">print</text>
+  <text class="text-code" x="345" y="245">(val)</text>
+
+  <rect class="box-output" x="295" y="270" width="210" height="35"/>
+  <text class="text-output" x="305" y="292">→ 1  2  3</text>
+
+  <!-- Branch 3: items() -->
+  <rect class="box" x="530" y="170" width="240" height="145"/>
+  <text class="text-label" x="650" y="195" text-anchor="middle">🔗 Iterar PARES</text>
+
+  <rect class="box-code" x="545" y="205" width="210" height="60"/>
+  <text class="text-keyword" x="555" y="225">for</text>
+  <text class="text-var" x="580" y="225">k, v</text>
+  <text class="text-keyword" x="610" y="225">in</text>
+  <text class="text-code" x="630" y="225">data.items():</text>
+  <text class="text-func" x="565" y="245">print</text>
+  <text class="text-code" x="595" y="245">(k, v)</text>
+
+  <rect class="box-output" x="545" y="270" width="210" height="35"/>
+  <text class="text-output" x="555" y="292">→ a 1  b 2  c 3</text>
+
+  <!-- Advanced patterns -->
+  <text class="text-label" x="30" y="345">Patrones Avanzados</text>
+
+  <!-- enumerate -->
+  <rect class="box" x="30" y="355" width="240" height="130"/>
+  <text class="text-label" x="150" y="375" text-anchor="middle">📊 Con enumerate()</text>
+
+  <rect class="box-code" x="45" y="385" width="210" height="50"/>
+  <text class="text-keyword" x="55" y="405">for</text>
+  <text class="text-var" x="80" y="405">i, (k, v)</text>
+  <text class="text-keyword" x="145" y="405">in</text>
+  <text class="text-func" x="55" y="425">enumerate</text>
+  <text class="text-code" x="115" y="425">(data.items()):</text>
+
+  <rect class="box-output" x="45" y="440" width="210" height="35"/>
+  <text class="text-output" x="55" y="462">→ 0:a=1  1:b=2  2:c=3</text>
+
+  <!-- sorted -->
+  <rect class="box" x="280" y="355" width="240" height="130"/>
+  <text class="text-label" x="400" y="375" text-anchor="middle">🔤 Ordenado</text>
+
+  <rect class="box-code" x="295" y="385" width="210" height="50"/>
+  <text class="text-keyword" x="305" y="405">for</text>
+  <text class="text-var" x="330" y="405">k</text>
+  <text class="text-keyword" x="345" y="405">in</text>
+  <text class="text-func" x="365" y="405">sorted</text>
+  <text class="text-code" x="405" y="405">(data):</text>
+  <text class="text-func" x="315" y="425">print</text>
+  <text class="text-code" x="345" y="425">(k, data[k])</text>
+
+  <rect class="box-output" x="295" y="440" width="210" height="35"/>
+  <text class="text-output" x="305" y="462">→ a:1  b:2  c:3 (alfabético)</text>
+
+  <!-- filter comprehension -->
+  <rect class="box" x="530" y="355" width="240" height="130"/>
+  <text class="text-label" x="650" y="375" text-anchor="middle">🎯 Filtrar</text>
+
+  <rect class="box-code" x="545" y="385" width="210" height="50"/>
+  <text class="text-code" x="555" y="405">{k: v</text>
+  <text class="text-keyword" x="595" y="405">for</text>
+  <text class="text-code" x="620" y="405">k, v</text>
+  <text class="text-keyword" x="655" y="405">in</text>
+  <text class="text-code" x="555" y="425">data.items()</text>
+  <text class="text-keyword" x="645" y="425">if</text>
+  <text class="text-code" x="665" y="425">v > 1}</text>
+
+  <rect class="box-output" x="545" y="440" width="210" height="35"/>
+  <text class="text-output" x="555" y="462">→ {"b": 2, "c": 3}</text>
+</svg>

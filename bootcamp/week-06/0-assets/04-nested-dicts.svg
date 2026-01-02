@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #c0c0c0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box-l1 { fill: #2d2d2d; stroke: #306998; stroke-width: 3; rx: 10; }
+      .box-l2 { fill: #264653; stroke: #4a9eff; stroke-width: 2; rx: 8; }
+      .box-l3 { fill: #1a3a4a; stroke: #61afef; stroke-width: 1; rx: 6; }
+      .box-value { fill: #2d4a2d; stroke: #4a9; stroke-width: 1; rx: 4; }
+      .text-key-l1 { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .text-key-l2 { fill: #61afef; font-family: 'Consolas', monospace; font-size: 13px; }
+      .text-key-l3 { fill: #c678dd; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-value { fill: #98c379; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-label { fill: #888; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .text-access { fill: #e5c07b; font-family: 'Consolas', monospace; font-size: 12px; }
+      .text-code { fill: #abb2bf; font-family: 'Consolas', monospace; font-size: 11px; }
+      .connector { stroke: #555; stroke-width: 1; }
+      .arrow { stroke: #4a9eff; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .brace { fill: #888; font-family: 'Consolas', monospace; font-size: 24px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a9eff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="520"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Diccionarios Anidados</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Estructuras jerárquicas multinivel</text>
+
+  <!-- Level indicators -->
+  <text class="text-label" x="30" y="90">Nivel 1</text>
+  <text class="text-label" x="30" y="180">Nivel 2</text>
+  <text class="text-label" x="30" y="290">Nivel 3</text>
+
+  <!-- Main structure visualization -->
+  <!-- Level 1: company -->
+  <rect class="box-l1" x="100" y="70" width="650" height="250"/>
+  <text class="text-key-l1" x="120" y="95">"company"</text>
+  <text class="brace" x="220" y="100">{</text>
+
+  <!-- Level 2: departments -->
+  <rect class="box-l2" x="140" y="110" width="290" height="195"/>
+  <text class="text-key-l2" x="160" y="135">"engineering"</text>
+  <text class="brace" x="280" y="138" style="font-size: 18px;">{</text>
+
+  <!-- Level 3: employees -->
+  <rect class="box-l3" x="170" y="150" width="240" height="65"/>
+  <text class="text-key-l3" x="185" y="170">"alice"</text>
+  <text class="brace" x="245" y="172" style="font-size: 14px;">{</text>
+  <rect class="box-value" x="270" y="158" width="125" height="20"/>
+  <text class="text-value" x="280" y="173">"role": "senior"</text>
+  <rect class="box-value" x="270" y="183" width="125" height="20"/>
+  <text class="text-value" x="280" y="198">"salary": 80000</text>
+  <text class="brace" x="395" y="185" style="font-size: 14px;">}</text>
+
+  <rect class="box-l3" x="170" y="225" width="240" height="65"/>
+  <text class="text-key-l3" x="185" y="245">"bob"</text>
+  <text class="brace" x="230" y="247" style="font-size: 14px;">{</text>
+  <rect class="box-value" x="255" y="233" width="125" height="20"/>
+  <text class="text-value" x="265" y="248">"role": "junior"</text>
+  <rect class="box-value" x="255" y="258" width="125" height="20"/>
+  <text class="text-value" x="265" y="273">"salary": 50000</text>
+  <text class="brace" x="380" y="260" style="font-size: 14px;">}</text>
+
+  <text class="brace" x="415" y="200" style="font-size: 18px;">}</text>
+
+  <!-- Second department -->
+  <rect class="box-l2" x="450" y="110" width="280" height="120"/>
+  <text class="text-key-l2" x="470" y="135">"marketing"</text>
+  <text class="brace" x="575" y="138" style="font-size: 18px;">{</text>
+
+  <rect class="box-l3" x="480" y="150" width="230" height="65"/>
+  <text class="text-key-l3" x="495" y="170">"carol"</text>
+  <text class="brace" x="545" y="172" style="font-size: 14px;">{</text>
+  <rect class="box-value" x="570" y="158" width="130" height="20"/>
+  <text class="text-value" x="580" y="173">"role": "manager"</text>
+  <rect class="box-value" x="570" y="183" width="125" height="20"/>
+  <text class="text-value" x="580" y="198">"salary": 90000</text>
+  <text class="brace" x="695" y="185" style="font-size: 14px;">}</text>
+
+  <text class="brace" x="715" y="165" style="font-size: 18px;">}</text>
+  <text class="brace" x="735" y="200" style="font-size: 24px;">}</text>
+
+  <!-- Access patterns -->
+  <text class="text-key-l1" x="100" y="355">Acceso a Datos Anidados</text>
+
+  <!-- Direct access -->
+  <rect class="box-l2" x="100" y="365" width="320" height="70"/>
+  <text class="text-label" x="115" y="385">Acceso directo (si estás seguro que existe):</text>
+  <text class="text-access" x="115" y="410">company["engineering"]["alice"]["salary"]</text>
+  <text class="text-value" x="115" y="425">→ 80000</text>
+
+  <!-- Safe access -->
+  <rect class="box-l2" x="440" y="365" width="320" height="70"/>
+  <text class="text-label" x="455" y="385">Acceso seguro con get():</text>
+  <text class="text-access" x="455" y="410">company.get("sales", {}).get("x", {})</text>
+  <text class="text-value" x="455" y="425">→ {} (no existe, retorna default)</text>
+
+  <!-- Iteration pattern -->
+  <rect class="box-l1" x="100" y="450" width="660" height="60"/>
+  <text class="text-label" x="115" y="470">Iteración multinivel:</text>
+  <text class="text-code" x="115" y="488">for dept, employees in company.items():</text>
+  <text class="text-code" x="135" y="502">for name, info in employees.items(): print(name, info["role"])</text>
+</svg>
