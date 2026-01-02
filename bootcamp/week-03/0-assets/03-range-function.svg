@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #4ec9b0; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .label { fill: #e0e0e0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .label-small { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .code { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 13px; }
+      .keyword { fill: #569cd6; font-family: 'Consolas', monospace; font-size: 13px; }
+      .function { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 13px; }
+      .number { fill: #b5cea8; font-family: 'Consolas', monospace; font-size: 13px; }
+      .box-form { fill: #1e3a5f; stroke: #569cd6; stroke-width: 2; }
+      .box-result { fill: #2d5016; stroke: #4ec9b0; stroke-width: 2; }
+      .num-box { fill: #3d2a5c; stroke: #c586c0; stroke-width: 1.5; }
+      .num-box-excluded { fill: #4a1f1f; stroke: #f14c4c; stroke-width: 1.5; stroke-dasharray: 4; }
+      .arrow { fill: none; stroke: #808080; stroke-width: 1.5; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#808080"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="700" height="420"/>
+
+  <!-- Title -->
+  <text class="title" x="350" y="30" text-anchor="middle">🔢 Función range() - Las 3 Formas</text>
+
+  <!-- Form 1: range(stop) -->
+  <rect class="box-form" x="20" y="50" width="210" height="110" rx="8"/>
+  <text class="subtitle" x="125" y="75" text-anchor="middle">Forma 1: range(stop)</text>
+
+  <text class="function" x="35" y="100">range(</text>
+  <text class="number" x="82" y="100">5</text>
+  <text class="function" x="95" y="100">)</text>
+
+  <text class="label-small" x="35" y="120">Desde 0 hasta stop-1</text>
+
+  <!-- Numbers for form 1 -->
+  <g transform="translate(35, 135)">
+    <rect class="num-box" x="0" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="14" y="16" text-anchor="middle">0</text>
+
+    <rect class="num-box" x="32" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="46" y="16" text-anchor="middle">1</text>
+
+    <rect class="num-box" x="64" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="78" y="16" text-anchor="middle">2</text>
+
+    <rect class="num-box" x="96" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="110" y="16" text-anchor="middle">3</text>
+
+    <rect class="num-box" x="128" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="142" y="16" text-anchor="middle">4</text>
+
+    <rect class="num-box-excluded" x="160" y="0" width="28" height="22" rx="3"/>
+    <text fill="#f14c4c" font-family="Consolas" font-size="12" x="174" y="16" text-anchor="middle">5</text>
+  </g>
+
+  <!-- Form 2: range(start, stop) -->
+  <rect class="box-form" x="245" y="50" width="210" height="110" rx="8"/>
+  <text class="subtitle" x="350" y="75" text-anchor="middle">Forma 2: range(start, stop)</text>
+
+  <text class="function" x="260" y="100">range(</text>
+  <text class="number" x="307" y="100">2</text>
+  <text class="code" x="317" y="100">, </text>
+  <text class="number" x="330" y="100">7</text>
+  <text class="function" x="343" y="100">)</text>
+
+  <text class="label-small" x="260" y="120">Desde start hasta stop-1</text>
+
+  <!-- Numbers for form 2 -->
+  <g transform="translate(260, 135)">
+    <rect class="num-box" x="0" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="14" y="16" text-anchor="middle">2</text>
+
+    <rect class="num-box" x="32" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="46" y="16" text-anchor="middle">3</text>
+
+    <rect class="num-box" x="64" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="78" y="16" text-anchor="middle">4</text>
+
+    <rect class="num-box" x="96" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="110" y="16" text-anchor="middle">5</text>
+
+    <rect class="num-box" x="128" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="142" y="16" text-anchor="middle">6</text>
+
+    <rect class="num-box-excluded" x="160" y="0" width="28" height="22" rx="3"/>
+    <text fill="#f14c4c" font-family="Consolas" font-size="12" x="174" y="16" text-anchor="middle">7</text>
+  </g>
+
+  <!-- Form 3: range(start, stop, step) -->
+  <rect class="box-form" x="470" y="50" width="210" height="110" rx="8"/>
+  <text class="subtitle" x="575" y="75" text-anchor="middle">Forma 3: range(start, stop, step)</text>
+
+  <text class="function" x="485" y="100">range(</text>
+  <text class="number" x="532" y="100">0</text>
+  <text class="code" x="542" y="100">, </text>
+  <text class="number" x="555" y="100">10</text>
+  <text class="code" x="573" y="100">, </text>
+  <text class="number" x="586" y="100">2</text>
+  <text class="function" x="599" y="100">)</text>
+
+  <text class="label-small" x="485" y="120">Con incremento de step</text>
+
+  <!-- Numbers for form 3 -->
+  <g transform="translate(485, 135)">
+    <rect class="num-box" x="0" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="14" y="16" text-anchor="middle">0</text>
+
+    <rect class="num-box" x="32" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="46" y="16" text-anchor="middle">2</text>
+
+    <rect class="num-box" x="64" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="78" y="16" text-anchor="middle">4</text>
+
+    <rect class="num-box" x="96" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="110" y="16" text-anchor="middle">6</text>
+
+    <rect class="num-box" x="128" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="142" y="16" text-anchor="middle">8</text>
+  </g>
+
+  <!-- Negative step example -->
+  <rect class="box-form" x="20" y="180" width="320" height="100" rx="8"/>
+  <text class="subtitle" x="180" y="205" text-anchor="middle">Paso Negativo (Cuenta Regresiva)</text>
+
+  <text class="function" x="35" y="235">range(</text>
+  <text class="number" x="82" y="235">5</text>
+  <text class="code" x="92" y="235">, </text>
+  <text class="number" x="105" y="235">0</text>
+  <text class="code" x="118" y="235">, </text>
+  <text class="number" x="131" y="235">-1</text>
+  <text class="function" x="150" y="235">)</text>
+
+  <!-- Arrow showing direction -->
+  <text class="label-small" x="180" y="235">←</text>
+
+  <!-- Numbers for negative step -->
+  <g transform="translate(35, 250)">
+    <rect class="num-box" x="0" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="14" y="16" text-anchor="middle">5</text>
+
+    <rect class="num-box" x="32" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="46" y="16" text-anchor="middle">4</text>
+
+    <rect class="num-box" x="64" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="78" y="16" text-anchor="middle">3</text>
+
+    <rect class="num-box" x="96" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="110" y="16" text-anchor="middle">2</text>
+
+    <rect class="num-box" x="128" y="0" width="28" height="22" rx="3"/>
+    <text class="number" x="142" y="16" text-anchor="middle">1</text>
+
+    <rect class="num-box-excluded" x="160" y="0" width="28" height="22" rx="3"/>
+    <text fill="#f14c4c" font-family="Consolas" font-size="12" x="174" y="16" text-anchor="middle">0</text>
+  </g>
+
+  <!-- Key points -->
+  <rect fill="#252526" x="360" y="180" width="320" height="100" rx="8"/>
+  <text class="subtitle" x="520" y="205" text-anchor="middle">⚠️ Puntos Importantes</text>
+
+  <text class="label-small" x="375" y="230">• stop NUNCA se incluye en el resultado</text>
+  <text class="label-small" x="375" y="250">• step por defecto es 1</text>
+  <text class="label-small" x="375" y="270">• Con step negativo: start > stop</text>
+
+  <!-- Common patterns -->
+  <rect fill="#252526" x="20" y="295" width="320" height="115" rx="8"/>
+  <text class="subtitle" x="180" y="320" text-anchor="middle">Patrones Comunes</text>
+
+  <text class="function" x="35" y="345">range(</text>
+  <text class="number" x="82" y="345">10</text>
+  <text class="function" x="100" y="345">)</text>
+  <text class="label-small" x="150" y="345">→ 0 a 9 (10 elementos)</text>
+
+  <text class="function" x="35" y="370">range(</text>
+  <text class="number" x="82" y="370">1</text>
+  <text class="code" x="92" y="370">, </text>
+  <text class="number" x="105" y="370">11</text>
+  <text class="function" x="123" y="370">)</text>
+  <text class="label-small" x="150" y="370">→ 1 a 10</text>
+
+  <text class="function" x="35" y="395">range(</text>
+  <text class="number" x="82" y="395">0</text>
+  <text class="code" x="92" y="395">, </text>
+  <text class="number" x="105" y="395">101</text>
+  <text class="code" x="128" y="395">, </text>
+  <text class="number" x="141" y="395">10</text>
+  <text class="function" x="159" y="395">)</text>
+  <text class="label-small" x="175" y="395">→ 0, 10, 20...100</text>
+
+  <!-- Memory efficiency -->
+  <rect class="box-result" x="360" y="295" width="320" height="115" rx="8"/>
+  <text class="subtitle" x="520" y="320" text-anchor="middle">💡 Eficiencia de Memoria</text>
+
+  <text class="label-small" x="375" y="350">range() NO crea todos los números</text>
+  <text class="label-small" x="375" y="370">en memoria. Los genera bajo demanda.</text>
+
+  <text class="function" x="375" y="400">range(1_000_000)</text>
+  <text class="label-small" x="520" y="400">→ ~48 bytes</text>
+</svg>

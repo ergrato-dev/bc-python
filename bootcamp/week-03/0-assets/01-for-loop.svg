@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 20px; font-weight: bold; }
+      .label { fill: #e0e0e0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .label-small { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .code { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 13px; }
+      .keyword { fill: #569cd6; font-family: 'Consolas', monospace; font-size: 13px; }
+      .box-start { fill: #2d5016; stroke: #4ec9b0; stroke-width: 2; }
+      .box-process { fill: #1e3a5f; stroke: #569cd6; stroke-width: 2; }
+      .box-decision { fill: #5c4a1f; stroke: #FFD43B; stroke-width: 2; }
+      .box-end { fill: #4a1f1f; stroke: #f14c4c; stroke-width: 2; }
+      .box-iteration { fill: #3d2a5c; stroke: #c586c0; stroke-width: 2; }
+      .arrow { fill: none; stroke: #808080; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-yes { fill: none; stroke: #4ec9b0; stroke-width: 2; marker-end: url(#arrowhead-yes); }
+      .arrow-no { fill: none; stroke: #f14c4c; stroke-width: 2; marker-end: url(#arrowhead-no); }
+      .yes-label { fill: #4ec9b0; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-weight: bold; }
+      .no-label { fill: #f14c4c; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#808080"/>
+    </marker>
+    <marker id="arrowhead-yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ec9b0"/>
+    </marker>
+    <marker id="arrowhead-no" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f14c4c"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="700" height="450"/>
+
+  <!-- Title -->
+  <text class="title" x="350" y="35" text-anchor="middle">🔄 Bucle FOR - Flujo de Ejecución</text>
+
+  <!-- Left side: Flowchart -->
+  <text class="label" x="175" y="65" text-anchor="middle" font-weight="bold">Diagrama de Flujo</text>
+
+  <!-- Start -->
+  <rect class="box-start" x="100" y="80" width="150" height="35" rx="17"/>
+  <text class="label" x="175" y="103" text-anchor="middle">Inicio del for</text>
+
+  <!-- Arrow to get first -->
+  <path class="arrow" d="M175 115 L175 140"/>
+
+  <!-- Get next item -->
+  <rect class="box-process" x="100" y="145" width="150" height="35" rx="5"/>
+  <text class="label" x="175" y="168" text-anchor="middle">Obtener siguiente</text>
+
+  <!-- Arrow to decision -->
+  <path class="arrow" d="M175 180 L175 210"/>
+
+  <!-- Decision: more items? -->
+  <polygon class="box-decision" points="175,215 260,255 175,295 90,255"/>
+  <text class="label" x="175" y="252" text-anchor="middle" font-size="12">¿Más</text>
+  <text class="label" x="175" y="267" text-anchor="middle" font-size="12">elementos?</text>
+
+  <!-- Yes arrow to execute -->
+  <path class="arrow-yes" d="M175 295 L175 325"/>
+  <text class="yes-label" x="185" y="315">Sí</text>
+
+  <!-- Execute block -->
+  <rect class="box-iteration" x="100" y="330" width="150" height="35" rx="5"/>
+  <text class="label" x="175" y="353" text-anchor="middle">Ejecutar bloque</text>
+
+  <!-- Arrow back to get next -->
+  <path class="arrow" d="M100 347 L60 347 L60 162 L95 162"/>
+
+  <!-- No arrow to end -->
+  <path class="arrow-no" d="M260 255 L310 255 L310 400 L175 400"/>
+  <text class="no-label" x="270" y="245">No</text>
+
+  <!-- End -->
+  <rect class="box-end" x="100" y="385" width="150" height="35" rx="17"/>
+  <text class="label" x="175" y="408" text-anchor="middle">Fin del for</text>
+
+  <!-- Right side: Code example -->
+  <rect fill="#252526" x="370" y="75" width="300" height="180" rx="8"/>
+  <text class="label" x="520" y="65" text-anchor="middle" font-weight="bold">Ejemplo de Código</text>
+
+  <!-- Code -->
+  <text class="keyword" x="385" y="100">for</text>
+  <text class="code" x="410" y="100"> i </text>
+  <text class="keyword" x="425" y="100">in</text>
+  <text class="code" x="445" y="100"> [</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="13" x="453" y="100">10</text>
+  <text class="code" x="470" y="100">, </text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="13" x="483" y="100">20</text>
+  <text class="code" x="500" y="100">, </text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="13" x="513" y="100">30</text>
+  <text class="code" x="530" y="100">]:</text>
+
+  <text class="code" x="400" y="125">    print(i)</text>
+
+  <!-- Output -->
+  <text class="label-small" x="385" y="155">Salida:</text>
+  <rect fill="#1e1e1e" x="385" y="165" width="80" height="80" rx="4"/>
+  <text fill="#4ec9b0" font-family="Consolas" font-size="12" x="395" y="185">10</text>
+  <text fill="#4ec9b0" font-family="Consolas" font-size="12" x="395" y="205">20</text>
+  <text fill="#4ec9b0" font-family="Consolas" font-size="12" x="395" y="225">30</text>
+
+  <!-- Iteration visualization -->
+  <text class="label" x="520" y="280" text-anchor="middle" font-weight="bold">Iteraciones</text>
+
+  <!-- Iteration boxes -->
+  <rect fill="#3d2a5c" stroke="#c586c0" x="380" y="295" width="80" height="50" rx="5"/>
+  <text class="label-small" x="420" y="315" text-anchor="middle">Iter 1</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="12" x="420" y="335" text-anchor="middle">i = 10</text>
+
+  <rect fill="#3d2a5c" stroke="#c586c0" x="470" y="295" width="80" height="50" rx="5"/>
+  <text class="label-small" x="510" y="315" text-anchor="middle">Iter 2</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="12" x="510" y="335" text-anchor="middle">i = 20</text>
+
+  <rect fill="#3d2a5c" stroke="#c586c0" x="560" y="295" width="80" height="50" rx="5"/>
+  <text class="label-small" x="600" y="315" text-anchor="middle">Iter 3</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="12" x="600" y="335" text-anchor="middle">i = 30</text>
+
+  <!-- Arrows between iterations -->
+  <path stroke="#808080" stroke-width="1.5" fill="none" d="M460 320 L465 320" marker-end="url(#arrowhead)"/>
+  <path stroke="#808080" stroke-width="1.5" fill="none" d="M550 320 L555 320" marker-end="url(#arrowhead)"/>
+
+  <!-- Key points -->
+  <text class="label" x="520" y="380" text-anchor="middle" font-weight="bold">Puntos Clave</text>
+  <text class="label-small" x="385" y="400">• La variable toma cada valor de la secuencia</text>
+  <text class="label-small" x="385" y="420">• El bloque se ejecuta una vez por elemento</text>
+  <text class="label-small" x="385" y="440">• Termina cuando no hay más elementos</text>
+</svg>

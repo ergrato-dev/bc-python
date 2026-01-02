@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 20px; font-weight: bold; }
+      .label { fill: #e0e0e0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .label-small { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .code { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 13px; }
+      .keyword { fill: #569cd6; font-family: 'Consolas', monospace; font-size: 13px; }
+      .box-start { fill: #2d5016; stroke: #4ec9b0; stroke-width: 2; }
+      .box-process { fill: #1e3a5f; stroke: #569cd6; stroke-width: 2; }
+      .box-decision { fill: #5c4a1f; stroke: #FFD43B; stroke-width: 2; }
+      .box-end { fill: #4a1f1f; stroke: #f14c4c; stroke-width: 2; }
+      .box-iteration { fill: #3d2a5c; stroke: #c586c0; stroke-width: 2; }
+      .arrow { fill: none; stroke: #808080; stroke-width: 2; marker-end: url(#arrowhead); }
+      .arrow-yes { fill: none; stroke: #4ec9b0; stroke-width: 2; marker-end: url(#arrowhead-yes); }
+      .arrow-no { fill: none; stroke: #f14c4c; stroke-width: 2; marker-end: url(#arrowhead-no); }
+      .yes-label { fill: #4ec9b0; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-weight: bold; }
+      .no-label { fill: #f14c4c; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-weight: bold; }
+      .warning { fill: #f14c4c; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#808080"/>
+    </marker>
+    <marker id="arrowhead-yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ec9b0"/>
+    </marker>
+    <marker id="arrowhead-no" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f14c4c"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="700" height="450"/>
+
+  <!-- Title -->
+  <text class="title" x="350" y="35" text-anchor="middle">🔁 Bucle WHILE - Flujo de Ejecución</text>
+
+  <!-- Left side: Flowchart -->
+  <text class="label" x="175" y="65" text-anchor="middle" font-weight="bold">Diagrama de Flujo</text>
+
+  <!-- Start -->
+  <rect class="box-start" x="100" y="80" width="150" height="35" rx="17"/>
+  <text class="label" x="175" y="103" text-anchor="middle">Inicio del while</text>
+
+  <!-- Arrow to decision -->
+  <path class="arrow" d="M175 115 L175 155"/>
+
+  <!-- Decision: condition? -->
+  <polygon class="box-decision" points="175,160 260,200 175,240 90,200"/>
+  <text class="label" x="175" y="197" text-anchor="middle" font-size="12">¿Condición</text>
+  <text class="label" x="175" y="212" text-anchor="middle" font-size="12">True?</text>
+
+  <!-- Yes arrow to execute -->
+  <path class="arrow-yes" d="M175 240 L175 275"/>
+  <text class="yes-label" x="185" y="262">Sí</text>
+
+  <!-- Execute block -->
+  <rect class="box-iteration" x="100" y="280" width="150" height="35" rx="5"/>
+  <text class="label" x="175" y="303" text-anchor="middle">Ejecutar bloque</text>
+
+  <!-- Update variable -->
+  <path class="arrow" d="M175 315 L175 340"/>
+  <rect class="box-process" x="100" y="345" width="150" height="35" rx="5"/>
+  <text class="label" x="175" y="368" text-anchor="middle">Actualizar variable</text>
+
+  <!-- Arrow back to condition -->
+  <path class="arrow" d="M100 362 L60 362 L60 200 L85 200"/>
+
+  <!-- No arrow to end -->
+  <path class="arrow-no" d="M260 200 L310 200 L310 410 L250 410"/>
+  <text class="no-label" x="270" y="190">No</text>
+
+  <!-- End -->
+  <rect class="box-end" x="100" y="395" width="150" height="35" rx="17"/>
+  <text class="label" x="175" y="418" text-anchor="middle">Fin del while</text>
+
+  <!-- Right side: Code example -->
+  <rect fill="#252526" x="370" y="75" width="300" height="150" rx="8"/>
+  <text class="label" x="520" y="65" text-anchor="middle" font-weight="bold">Ejemplo de Código</text>
+
+  <!-- Code -->
+  <text class="code" x="385" y="100">count = </text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="13" x="450" y="100">1</text>
+
+  <text class="keyword" x="385" y="125">while</text>
+  <text class="code" x="430" y="125"> count &lt;= </text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="13" x="505" y="125">3</text>
+  <text class="code" x="515" y="125">:</text>
+
+  <text class="code" x="400" y="150">    print(count)</text>
+  <text class="code" x="400" y="175">    count += </text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="13" x="500" y="175">1</text>
+
+  <!-- Output -->
+  <text class="label-small" x="385" y="205">Salida: 1  2  3</text>
+
+  <!-- Iteration visualization -->
+  <text class="label" x="520" y="250" text-anchor="middle" font-weight="bold">Ejecución Paso a Paso</text>
+
+  <!-- Step boxes -->
+  <rect fill="#1e3a5f" stroke="#569cd6" x="375" y="265" width="145" height="70" rx="5"/>
+  <text class="label-small" x="447" y="285" text-anchor="middle" font-weight="bold">Iteración 1</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="11" x="385" y="305">count = 1</text>
+  <text fill="#4ec9b0" font-family="Consolas" font-size="11" x="385" y="320">1 &lt;= 3 → True ✓</text>
+
+  <rect fill="#1e3a5f" stroke="#569cd6" x="530" y="265" width="145" height="70" rx="5"/>
+  <text class="label-small" x="602" y="285" text-anchor="middle" font-weight="bold">Iteración 2</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="11" x="540" y="305">count = 2</text>
+  <text fill="#4ec9b0" font-family="Consolas" font-size="11" x="540" y="320">2 &lt;= 3 → True ✓</text>
+
+  <rect fill="#1e3a5f" stroke="#569cd6" x="375" y="345" width="145" height="70" rx="5"/>
+  <text class="label-small" x="447" y="365" text-anchor="middle" font-weight="bold">Iteración 3</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="11" x="385" y="385">count = 3</text>
+  <text fill="#4ec9b0" font-family="Consolas" font-size="11" x="385" y="400">3 &lt;= 3 → True ✓</text>
+
+  <rect fill="#4a1f1f" stroke="#f14c4c" x="530" y="345" width="145" height="70" rx="5"/>
+  <text class="label-small" x="602" y="365" text-anchor="middle" font-weight="bold">Fin</text>
+  <text fill="#b5cea8" font-family="Consolas" font-size="11" x="540" y="385">count = 4</text>
+  <text fill="#f14c4c" font-family="Consolas" font-size="11" x="540" y="400">4 &lt;= 3 → False ✗</text>
+
+  <!-- Warning box -->
+  <rect fill="#3d1f1f" stroke="#f14c4c" stroke-dasharray="4" x="370" y="425" width="300" height="20" rx="4"/>
+  <text class="warning" x="520" y="440" text-anchor="middle">⚠️ ¡Siempre actualiza la variable para evitar bucle infinito!</text>
+</svg>

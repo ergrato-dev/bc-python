@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 20px; font-weight: bold; }
+      .subtitle { fill: #4ec9b0; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .label { fill: #e0e0e0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .label-small { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .code { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #569cd6; font-family: 'Consolas', monospace; font-size: 11px; }
+      .number { fill: #b5cea8; font-family: 'Consolas', monospace; font-size: 11px; }
+      .box-break { fill: #4a1f1f; stroke: #f14c4c; stroke-width: 2; }
+      .box-continue { fill: #3d3d1f; stroke: #dcdcaa; stroke-width: 2; }
+      .box-iter { fill: #1e3a5f; stroke: #569cd6; stroke-width: 2; }
+      .box-skip { fill: #3d3d1f; stroke: #dcdcaa; stroke-width: 2; opacity: 0.7; }
+      .box-exec { fill: #2d5016; stroke: #4ec9b0; stroke-width: 2; }
+      .box-stop { fill: #4a1f1f; stroke: #f14c4c; stroke-width: 2; }
+      .arrow { fill: none; stroke: #808080; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .arrow-break { fill: none; stroke: #f14c4c; stroke-width: 2; stroke-dasharray: 5; }
+      .arrow-continue { fill: none; stroke: #dcdcaa; stroke-width: 2; stroke-dasharray: 5; }
+    </style>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#808080"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="700" height="460"/>
+
+  <!-- Title -->
+  <text class="title" x="350" y="28" text-anchor="middle">⏹️ Break y Continue - Control de Bucles</text>
+
+  <!-- ========== BREAK Section ========== -->
+  <rect class="box-break" x="20" y="45" width="320" height="175" rx="8"/>
+  <text class="subtitle" x="180" y="68" text-anchor="middle">BREAK - Sale del Bucle</text>
+
+  <!-- Break code example -->
+  <rect fill="#252526" x="35" y="80" width="135" height="80" rx="5"/>
+  <text class="keyword" x="45" y="100">for</text>
+  <text class="code" x="65" y="100"> i </text>
+  <text class="keyword" x="80" y="100">in</text>
+  <text class="code" x="98" y="100"> range(5):</text>
+  <text class="keyword" x="55" y="118">if</text>
+  <text class="code" x="70" y="118"> i == 3:</text>
+  <text class="keyword" x="65" y="136">break</text>
+  <text class="code" x="55" y="154">print(i)</text>
+
+  <!-- Break visualization -->
+  <g transform="translate(185, 80)">
+    <text class="label-small" x="65" y="10" text-anchor="middle">Iteraciones:</text>
+
+    <!-- Row 1: i=0, i=1, i=2 -->
+    <rect class="box-exec" x="10" y="20" width="32" height="26" rx="4"/>
+    <text class="number" x="26" y="38" text-anchor="middle">0</text>
+
+    <rect class="box-exec" x="50" y="20" width="32" height="26" rx="4"/>
+    <text class="number" x="66" y="38" text-anchor="middle">1</text>
+
+    <rect class="box-exec" x="90" y="20" width="32" height="26" rx="4"/>
+    <text class="number" x="106" y="38" text-anchor="middle">2</text>
+
+    <!-- Row 2: i=3 BREAK, i=4 skipped -->
+    <rect class="box-stop" x="10" y="55" width="32" height="26" rx="4"/>
+    <text fill="#f14c4c" font-family="Consolas" font-size="10" x="26" y="72" text-anchor="middle">3</text>
+    <text fill="#f14c4c" font-family="Segoe UI" font-size="8" x="26" y="92" text-anchor="middle">BREAK!</text>
+
+    <rect fill="#2a2a2a" stroke="#555" stroke-dasharray="3" x="50" y="55" width="32" height="26" rx="4"/>
+    <text fill="#555" font-family="Consolas" font-size="10" x="66" y="72" text-anchor="middle">4</text>
+    <text fill="#555" font-family="Segoe UI" font-size="7" x="66" y="92" text-anchor="middle">no ejecuta</text>
+  </g>
+
+  <text class="label-small" x="35" y="200">Salida: 0  1  2</text>
+  <text fill="#f14c4c" font-family="Segoe UI" font-size="10" x="130" y="200">← 3 y 4 NO se imprimen</text>
+
+  <!-- ========== CONTINUE Section ========== -->
+  <rect class="box-continue" x="360" y="45" width="320" height="175" rx="8"/>
+  <text class="subtitle" x="520" y="68" text-anchor="middle">CONTINUE - Salta Iteración</text>
+
+  <!-- Continue code example -->
+  <rect fill="#252526" x="375" y="80" width="135" height="80" rx="5"/>
+  <text class="keyword" x="385" y="100">for</text>
+  <text class="code" x="405" y="100"> i </text>
+  <text class="keyword" x="420" y="100">in</text>
+  <text class="code" x="438" y="100"> range(5):</text>
+  <text class="keyword" x="395" y="118">if</text>
+  <text class="code" x="410" y="118"> i == 2:</text>
+  <text class="keyword" x="405" y="136">continue</text>
+  <text class="code" x="395" y="154">print(i)</text>
+
+  <!-- Continue visualization -->
+  <g transform="translate(525, 80)">
+    <text class="label-small" x="65" y="10" text-anchor="middle">Iteraciones:</text>
+
+    <!-- Row 1: i=0, i=1, i=2 SKIP -->
+    <rect class="box-exec" x="10" y="20" width="32" height="26" rx="4"/>
+    <text class="number" x="26" y="38" text-anchor="middle">0</text>
+
+    <rect class="box-exec" x="50" y="20" width="32" height="26" rx="4"/>
+    <text class="number" x="66" y="38" text-anchor="middle">1</text>
+
+    <rect class="box-skip" x="90" y="20" width="32" height="26" rx="4"/>
+    <text fill="#dcdcaa" font-family="Consolas" font-size="10" x="106" y="38" text-anchor="middle">2</text>
+    <text fill="#dcdcaa" font-family="Segoe UI" font-size="8" x="106" y="58" text-anchor="middle">SKIP</text>
+
+    <!-- Row 2: i=3, i=4 -->
+    <rect class="box-exec" x="10" y="65" width="32" height="26" rx="4"/>
+    <text class="number" x="26" y="83" text-anchor="middle">3</text>
+
+    <rect class="box-exec" x="50" y="65" width="32" height="26" rx="4"/>
+    <text class="number" x="66" y="83" text-anchor="middle">4</text>
+  </g>
+
+  <text class="label-small" x="375" y="200">Salida: 0  1  3  4</text>
+  <text fill="#dcdcaa" font-family="Segoe UI" font-size="10" x="480" y="200">← 2 se salta</text>
+
+  <!-- ========== Comparison table ========== -->
+  <rect fill="#252526" x="20" y="235" width="320" height="90" rx="8"/>
+  <text class="subtitle" x="180" y="258" text-anchor="middle">Comparación</text>
+
+  <text class="label-small" x="45" y="280" font-weight="bold">Sentencia</text>
+  <text class="label-small" x="140" y="280" font-weight="bold">Efecto</text>
+
+  <text class="keyword" x="45" y="298">break</text>
+  <text class="label-small" x="140" y="298">Termina el bucle completamente</text>
+
+  <text class="keyword" x="45" y="316">continue</text>
+  <text class="label-small" x="140" y="316">Salta a la siguiente iteración</text>
+
+  <!-- ========== ELSE in loops ========== -->
+  <rect fill="#252526" x="360" y="235" width="320" height="90" rx="8"/>
+  <text class="subtitle" x="520" y="258" text-anchor="middle">ELSE en Bucles</text>
+
+  <text class="label-small" x="375" y="280">• Se ejecuta si el bucle termina</text>
+  <text class="label-small" x="385" y="296">SIN ejecutar break</text>
+  <text class="label-small" x="375" y="316">• Útil para búsquedas (encontrado/no)</text>
+
+  <!-- ========== Visual flow diagram ========== -->
+  <rect fill="#252526" x="20" y="340" width="660" height="110" rx="8"/>
+  <text class="subtitle" x="350" y="365" text-anchor="middle">Flujo Visual de Ejecución</text>
+
+  <!-- Iter 1 -->
+  <rect class="box-iter" x="40" y="385" width="50" height="28" rx="4"/>
+  <text class="label-small" x="65" y="404" text-anchor="middle">Iter 1</text>
+
+  <line x1="90" y1="399" x2="110" y2="399" stroke="#808080" stroke-width="1.5"/>
+
+  <!-- Iter 2 -->
+  <rect class="box-iter" x="110" y="385" width="50" height="28" rx="4"/>
+  <text class="label-small" x="135" y="404" text-anchor="middle">Iter 2</text>
+
+  <line x1="160" y1="399" x2="180" y2="399" stroke="#808080" stroke-width="1.5"/>
+
+  <!-- Continue -->
+  <rect class="box-skip" x="180" y="385" width="65" height="28" rx="4"/>
+  <text fill="#dcdcaa" font-family="Segoe UI" font-size="10" font-weight="bold" x="212" y="403" text-anchor="middle">continue</text>
+
+  <!-- Arrow curving up (skip) -->
+  <path d="M245 399 L260 399 L260 375 L290 375" fill="none" stroke="#dcdcaa" stroke-width="1.5" stroke-dasharray="4"/>
+
+  <!-- Iter 4 -->
+  <rect class="box-iter" x="290" y="385" width="50" height="28" rx="4"/>
+  <text class="label-small" x="315" y="404" text-anchor="middle">Iter 4</text>
+
+  <line x1="340" y1="399" x2="360" y2="399" stroke="#808080" stroke-width="1.5"/>
+
+  <!-- ... (more iterations) -->
+  <rect fill="#2a2a2a" stroke="#555" stroke-dasharray="3" x="360" y="385" width="35" height="28" rx="4"/>
+  <text fill="#555" font-family="Segoe UI" font-size="10" x="378" y="404" text-anchor="middle">...</text>
+
+  <line x1="395" y1="399" x2="415" y2="399" stroke="#808080" stroke-width="1.5"/>
+
+  <!-- Break -->
+  <rect class="box-stop" x="415" y="385" width="55" height="28" rx="4"/>
+  <text fill="#f14c4c" font-family="Segoe UI" font-size="10" font-weight="bold" x="442" y="403" text-anchor="middle">break</text>
+
+  <!-- Arrow to end -->
+  <path d="M470 399 L500 399" fill="none" stroke="#f14c4c" stroke-width="2" stroke-dasharray="4"/>
+
+  <!-- End box -->
+  <rect fill="#4a1f1f" stroke="#f14c4c" x="500" y="385" width="80" height="28" rx="4"/>
+  <text class="label-small" x="540" y="404" text-anchor="middle">Fin bucle</text>
+
+  <!-- Legend -->
+  <text fill="#808080" font-family="Segoe UI" font-size="9" x="600" y="400">Iter 3 fue</text>
+  <text fill="#808080" font-family="Segoe UI" font-size="9" x="600" y="412">saltada</text>
+
+</svg>
