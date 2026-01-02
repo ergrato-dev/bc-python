@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #ffffff; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-impl { fill: #2d2d2d; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .class-base { fill: #306998; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 12px; }
+      .result { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 12px; }
+      .arrow { stroke: #FFD43B; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-poly { stroke: #4ec9b0; stroke-width: 2; fill: none; marker-end: url(#arrowhead-green); }
+      .label { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-style: italic; }
+      .code-bg { fill: #1a1a1a; rx: 4; }
+      .code { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .highlight { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 11px; }
+      .string { fill: #ce9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .section-title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .divider { stroke: #404040; stroke-width: 1; }
+      .poly-box { fill: #3d3d3d; stroke: #FFD43B; stroke-width: 2; rx: 6; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFD43B"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ec9b0"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="520"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Polimorfismo</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">"Muchas formas" - mismo método, diferente comportamiento</text>
+
+  <!-- Base Class -->
+  <rect class="box" x="320" y="70" width="160" height="60"/>
+  <text class="class-base" x="400" y="95" text-anchor="middle">Shape</text>
+  <line class="divider" x1="320" y1="105" x2="480" y2="105"/>
+  <text class="method" x="335" y="122">area() → float</text>
+
+  <!-- Arrows to children -->
+  <path class="arrow" d="M 340 130 L 140 175"/>
+  <path class="arrow" d="M 400 130 L 400 175"/>
+  <path class="arrow" d="M 460 130 L 660 175"/>
+
+  <!-- Circle -->
+  <rect class="box-impl" x="60" y="180" width="160" height="75"/>
+  <text class="class-name" x="140" y="200" text-anchor="middle">Circle</text>
+  <line class="divider" x1="60" y1="210" x2="220" y2="210"/>
+  <text class="method" x="75" y="228">area() → float</text>
+  <text class="result" x="75" y="245">π × r²</text>
+
+  <!-- Rectangle -->
+  <rect class="box-impl" x="320" y="180" width="160" height="75"/>
+  <text class="class-name" x="400" y="200" text-anchor="middle">Rectangle</text>
+  <line class="divider" x1="320" y1="210" x2="480" y2="210"/>
+  <text class="method" x="335" y="228">area() → float</text>
+  <text class="result" x="335" y="245">width × height</text>
+
+  <!-- Triangle -->
+  <rect class="box-impl" x="580" y="180" width="160" height="75"/>
+  <text class="class-name" x="660" y="200" text-anchor="middle">Triangle</text>
+  <line class="divider" x1="580" y1="210" x2="740" y2="210"/>
+  <text class="method" x="595" y="228">area() → float</text>
+  <text class="result" x="595" y="245">½ × base × height</text>
+
+  <!-- Polymorphic Function Box -->
+  <rect class="poly-box" x="250" y="280" width="300" height="80"/>
+  <text class="section-title" x="400" y="300" text-anchor="middle">Función Polimórfica</text>
+
+  <rect class="code-bg" x="265" y="310" width="270" height="40"/>
+  <text class="keyword" x="275" y="330">def</text>
+  <text class="method" x="305" y="330">total_area</text>
+  <text class="code" x="375" y="330">(shapes: list[</text>
+  <text class="class-base" x="453" y="330">Shape</text>
+  <text class="code" x="488" y="330">]):</text>
+  <text class="keyword" x="285" y="345">return</text>
+  <text class="code" x="325" y="345">sum(s.</text>
+  <text class="highlight" x="360" y="345">area()</text>
+  <text class="keyword" x="400" y="345">for</text>
+  <text class="code" x="425" y="345">s</text>
+  <text class="keyword" x="438" y="345">in</text>
+  <text class="code" x="455" y="345">shapes)</text>
+
+  <!-- Arrows from function to shapes -->
+  <path class="arrow-poly" d="M 310 280 L 140 260"/>
+  <path class="arrow-poly" d="M 400 280 L 400 260"/>
+  <path class="arrow-poly" d="M 490 280 L 660 260"/>
+
+  <text class="label" x="400" y="375" text-anchor="middle">¡Un mismo código funciona con TODAS las formas!</text>
+
+  <!-- Duck Typing Section -->
+  <rect x="30" y="400" width="355" height="105" fill="#252525" rx="6"/>
+  <text class="section-title" x="50" y="425">Duck Typing 🦆</text>
+  <text class="subtitle" x="50" y="445">"Si hace cuac como pato, es un pato"</text>
+
+  <rect class="code-bg" x="45" y="455" width="325" height="40"/>
+  <text class="code" x="55" y="472"># No requiere herencia, solo el método</text>
+  <text class="keyword" x="55" y="487">class</text>
+  <text class="class-name" x="90" y="487">Square</text>
+  <text class="code" x="140" y="487">:  # Sin heredar de Shape</text>
+  <text class="keyword" x="260" y="487">def</text>
+  <text class="method" x="285" y="487">area</text>
+  <text class="code" x="310" y="487">(self): ...</text>
+
+  <!-- Benefits Section -->
+  <rect x="415" y="400" width="355" height="105" fill="#252525" rx="6"/>
+  <text class="section-title" x="435" y="425">Beneficios del Polimorfismo</text>
+
+  <text class="highlight" x="435" y="450">✓</text>
+  <text class="code" x="455" y="450">Código genérico y reutilizable</text>
+
+  <text class="highlight" x="435" y="470">✓</text>
+  <text class="code" x="455" y="470">Fácil de extender (nuevas clases)</text>
+
+  <text class="highlight" x="435" y="490">✓</text>
+  <text class="code" x="455" y="490">Cada clase maneja su propia lógica</text>
+</svg>

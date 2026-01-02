@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="headerGrad9" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1f33;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#headerGrad9)"/>
+
+  <!-- Decorative inheritance lines -->
+  <g opacity="0.1">
+    <line x1="100" y1="50" x2="100" y2="150" stroke="#FFD43B" stroke-width="3"/>
+    <line x1="100" y1="100" x2="180" y2="150" stroke="#FFD43B" stroke-width="3"/>
+    <line x1="100" y1="100" x2="20" y2="150" stroke="#FFD43B" stroke-width="3"/>
+
+    <line x1="700" y1="50" x2="700" y2="150" stroke="#306998" stroke-width="3"/>
+    <line x1="700" y1="100" x2="780" y2="150" stroke="#306998" stroke-width="3"/>
+    <line x1="700" y1="100" x2="620" y2="150" stroke="#306998" stroke-width="3"/>
+  </g>
+
+  <!-- Week number badge -->
+  <g transform="translate(50, 70)">
+    <rect width="80" height="60" rx="10" fill="#306998"/>
+    <text x="40" y="25" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="14" font-weight="bold">SEMANA</text>
+    <text x="40" y="50" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="28" font-weight="bold">09</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="85" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="36" font-weight="bold">Herencia y Polimorfismo</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="120" text-anchor="middle" fill="#a0c4e8" font-family="Inter, sans-serif" font-size="18">Extendiendo clases • Sobrescritura • Código flexible</text>
+
+  <!-- Inheritance diagram icon -->
+  <g transform="translate(620, 60)">
+    <!-- Parent class -->
+    <rect x="40" y="0" width="60" height="30" rx="5" fill="#FFD43B"/>
+    <text x="70" y="20" text-anchor="middle" fill="#1e1e1e" font-family="monospace" font-size="10" font-weight="bold">Parent</text>
+
+    <!-- Line down -->
+    <line x1="70" y1="30" x2="70" y2="50" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Horizontal spread -->
+    <line x1="30" y1="50" x2="110" y2="50" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Lines to children -->
+    <line x1="30" y1="50" x2="30" y2="65" stroke="#ffffff" stroke-width="2"/>
+    <line x1="70" y1="50" x2="70" y2="65" stroke="#ffffff" stroke-width="2"/>
+    <line x1="110" y1="50" x2="110" y2="65" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Child classes -->
+    <rect x="5" y="65" width="50" height="25" rx="4" fill="#306998"/>
+    <text x="30" y="82" text-anchor="middle" fill="#fff" font-family="monospace" font-size="8">Child1</text>
+
+    <rect x="45" y="65" width="50" height="25" rx="4" fill="#306998"/>
+    <text x="70" y="82" text-anchor="middle" fill="#fff" font-family="monospace" font-size="8">Child2</text>
+
+    <rect x="85" y="65" width="50" height="25" rx="4" fill="#306998"/>
+    <text x="110" y="82" text-anchor="middle" fill="#fff" font-family="monospace" font-size="8">Child3</text>
+  </g>
+
+  <!-- Tags -->
+  <g transform="translate(180, 145)">
+    <rect width="100" height="28" rx="14" fill="rgba(255,212,59,0.2)" stroke="#FFD43B" stroke-width="1"/>
+    <text x="50" y="19" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="12">inheritance</text>
+  </g>
+
+  <g transform="translate(300, 145)">
+    <rect width="80" height="28" rx="14" fill="rgba(48,105,152,0.3)" stroke="#306998" stroke-width="1"/>
+    <text x="40" y="19" text-anchor="middle" fill="#6ab0ff" font-family="Inter, sans-serif" font-size="12">super()</text>
+  </g>
+
+  <g transform="translate(400, 145)">
+    <rect width="110" height="28" rx="14" fill="rgba(255,212,59,0.2)" stroke="#FFD43B" stroke-width="1"/>
+    <text x="55" y="19" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="12">polymorphism</text>
+  </g>
+
+  <g transform="translate(530, 145)">
+    <rect width="70" height="28" rx="14" fill="rgba(48,105,152,0.3)" stroke="#306998" stroke-width="1"/>
+    <text x="35" y="19" text-anchor="middle" fill="#6ab0ff" font-family="Inter, sans-serif" font-size="12">MRO</text>
+  </g>
+
+  <!-- Python logo hint -->
+  <circle cx="760" cy="170" r="20" fill="rgba(48,105,152,0.3)"/>
+  <text x="760" y="176" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="16">🐍</text>
+</svg>

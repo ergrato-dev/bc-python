@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #ffffff; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .class-box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .class-box-child { fill: #2d2d2d; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 16px; font-weight: bold; }
+      .class-name-parent { fill: #306998; font-family: 'Consolas', monospace; font-size: 16px; font-weight: bold; }
+      .attribute { fill: #9cdcfe; font-family: 'Consolas', monospace; font-size: 12px; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 12px; }
+      .arrow { stroke: #FFD43B; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .label { fill: #ce9178; font-family: 'Segoe UI', sans-serif; font-size: 12px; font-style: italic; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .code-bg { fill: #1a1a1a; rx: 4; }
+      .code { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 11px; }
+      .highlight { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 11px; }
+      .divider { stroke: #404040; stroke-width: 1; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFD43B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Herencia en Python</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">La clase hija hereda atributos y métodos de la clase padre</text>
+
+  <!-- Parent Class Box -->
+  <rect class="class-box" x="300" y="80" width="200" height="130"/>
+  <line class="divider" x1="300" y1="110" x2="500" y2="110"/>
+  <line class="divider" x1="300" y1="155" x2="500" y2="155"/>
+
+  <text class="class-name-parent" x="400" y="100" text-anchor="middle">Animal</text>
+  <text class="label" x="510" y="100">(Padre)</text>
+
+  <!-- Parent Attributes -->
+  <text class="attribute" x="315" y="130">name: str</text>
+  <text class="attribute" x="315" y="145">age: int</text>
+
+  <!-- Parent Methods -->
+  <text class="method" x="315" y="175">speak() → str</text>
+  <text class="method" x="315" y="190">move() → str</text>
+
+  <!-- Inheritance Arrow -->
+  <path class="arrow" d="M 400 210 L 400 250"/>
+  <text class="label" x="420" y="235">hereda de</text>
+
+  <!-- Child Class Box -->
+  <rect class="class-box-child" x="300" y="260" width="200" height="150"/>
+  <line class="divider" x1="300" y1="290" x2="500" y2="290"/>
+  <line class="divider" x1="300" y1="335" x2="500" y2="335"/>
+
+  <text class="class-name" x="400" y="280" text-anchor="middle">Dog</text>
+  <text class="label" x="510" y="280">(Hijo)</text>
+
+  <!-- Child Attributes (inherited + own) -->
+  <text class="attribute" x="315" y="310" opacity="0.6">name: str</text>
+  <text class="label" x="390" y="310" font-size="10">(heredado)</text>
+  <text class="attribute" x="315" y="325" opacity="0.6">age: int</text>
+  <text class="attribute" x="315" y="355">breed: str</text>
+  <text class="label" x="380" y="355" font-size="10">(propio)</text>
+
+  <!-- Child Methods -->
+  <text class="method" x="315" y="380">speak() → str</text>
+  <text class="label" x="400" y="380" font-size="10">(override)</text>
+  <text class="method" x="315" y="395">fetch() → str</text>
+  <text class="label" x="390" y="395" font-size="10">(propio)</text>
+
+  <!-- Code Example -->
+  <rect class="code-bg" x="550" y="100" width="220" height="140"/>
+  <text class="keyword" x="560" y="120">class</text>
+  <text class="code" x="595" y="120">Animal:</text>
+  <text class="code" x="570" y="135">def speak(self):</text>
+  <text class="code" x="580" y="150">return "..."</text>
+
+  <text class="keyword" x="560" y="175">class</text>
+  <text class="code" x="595" y="175">Dog(</text>
+  <text class="highlight" x="625" y="175">Animal</text>
+  <text class="code" x="675" y="175">):</text>
+  <text class="code" x="570" y="190">def speak(self):</text>
+  <text class="code" x="580" y="205">return "Woof!"</text>
+  <text class="code" x="570" y="220">def fetch(self):</text>
+  <text class="code" x="580" y="235">return "🎾"</text>
+
+  <!-- Is-a Relationship -->
+  <rect class="code-bg" x="550" y="270" width="220" height="70"/>
+  <text class="subtitle" x="560" y="290">Relación "is-a":</text>
+  <text class="code" x="560" y="310">Dog </text>
+  <text class="highlight" x="590" y="310">IS-A</text>
+  <text class="code" x="625" y="310"> Animal</text>
+  <text class="code" x="560" y="330">isinstance(dog, Animal) →</text>
+  <text class="highlight" x="720" y="330">True</text>
+
+  <!-- Legend -->
+  <rect x="50" y="420" width="700" height="60" fill="#252525" rx="6"/>
+  <text class="subtitle" x="70" y="445">Beneficios de la herencia:</text>
+  <text class="code" x="70" y="465">• Reutilización de código</text>
+  <text class="code" x="270" y="465">• Jerarquías lógicas</text>
+  <text class="code" x="450" y="465">• Polimorfismo</text>
+  <text class="code" x="600" y="465">• Extensibilidad</text>
+</svg>

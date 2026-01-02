@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #ffffff; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box-a { fill: #2d2d2d; stroke: #e06c75; stroke-width: 2; rx: 8; }
+      .box-b { fill: #2d2d2d; stroke: #61afef; stroke-width: 2; rx: 8; }
+      .box-c { fill: #2d2d2d; stroke: #98c379; stroke-width: 2; rx: 8; }
+      .box-d { fill: #2d2d2d; stroke: #FFD43B; stroke-width: 2; rx: 8; }
+      .class-a { fill: #e06c75; font-family: 'Consolas', monospace; font-size: 16px; font-weight: bold; }
+      .class-b { fill: #61afef; font-family: 'Consolas', monospace; font-size: 16px; font-weight: bold; }
+      .class-c { fill: #98c379; font-family: 'Consolas', monospace; font-size: 16px; font-weight: bold; }
+      .class-d { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 16px; font-weight: bold; }
+      .arrow { stroke: #606060; stroke-width: 2; fill: none; marker-end: url(#arrowhead-gray); }
+      .mro-arrow { stroke: #FFD43B; stroke-width: 3; fill: none; marker-end: url(#arrowhead-yellow); stroke-dasharray: 8,4; }
+      .label { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-style: italic; }
+      .code-bg { fill: #1a1a1a; rx: 4; }
+      .code { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .highlight { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 12px; font-weight: bold; }
+      .section-title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .mro-num { fill: #1e1e1e; font-family: 'Segoe UI', sans-serif; font-size: 12px; font-weight: bold; }
+      .mro-circle { fill: #FFD43B; }
+      .divider { stroke: #404040; stroke-width: 1; }
+    </style>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#606060"/>
+    </marker>
+    <marker id="arrowhead-yellow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFD43B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="550"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">MRO: Method Resolution Order</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Cómo Python resuelve el "Problema del Diamante"</text>
+
+  <!-- Diamond Problem Diagram -->
+  <text class="section-title" x="150" y="85" text-anchor="middle">Problema del Diamante</text>
+
+  <!-- Class A (top) -->
+  <rect class="box-a" x="100" y="100" width="100" height="45"/>
+  <text class="class-a" x="150" y="128" text-anchor="middle">A</text>
+
+  <!-- Arrows A to B and C -->
+  <path class="arrow" d="M 125 145 L 85 175"/>
+  <path class="arrow" d="M 175 145 L 215 175"/>
+
+  <!-- Class B (left) -->
+  <rect class="box-b" x="35" y="180" width="100" height="45"/>
+  <text class="class-b" x="85" y="208" text-anchor="middle">B(A)</text>
+
+  <!-- Class C (right) -->
+  <rect class="box-c" x="165" y="180" width="100" height="45"/>
+  <text class="class-c" x="215" y="208" text-anchor="middle">C(A)</text>
+
+  <!-- Arrows B and C to D -->
+  <path class="arrow" d="M 85 225 L 125 255"/>
+  <path class="arrow" d="M 215 225 L 175 255"/>
+
+  <!-- Class D (bottom) -->
+  <rect class="box-d" x="100" y="260" width="100" height="45"/>
+  <text class="class-d" x="150" y="288" text-anchor="middle">D(B, C)</text>
+
+  <!-- Question -->
+  <text class="subtitle" x="150" y="325" text-anchor="middle">¿Qué greet() usa D?</text>
+
+  <!-- MRO Solution -->
+  <text class="section-title" x="530" y="85" text-anchor="middle">Solución: MRO (C3 Linearization)</text>
+
+  <!-- MRO Path visualization -->
+  <rect x="350" y="100" width="380" height="210" fill="#252525" rx="8"/>
+
+  <!-- MRO Order -->
+  <text class="code" x="370" y="130">D.__mro__ = (</text>
+
+  <!-- D -->
+  <circle class="mro-circle" cx="400" cy="165" r="18"/>
+  <text class="mro-num" x="400" y="170" text-anchor="middle">1</text>
+  <text class="class-d" x="400" y="200" text-anchor="middle">D</text>
+
+  <!-- Arrow D to B -->
+  <path class="mro-arrow" d="M 420 165 L 465 165"/>
+
+  <!-- B -->
+  <circle class="mro-circle" cx="490" cy="165" r="18"/>
+  <text class="mro-num" x="490" y="170" text-anchor="middle">2</text>
+  <text class="class-b" x="490" y="200" text-anchor="middle">B</text>
+
+  <!-- Arrow B to C -->
+  <path class="mro-arrow" d="M 510 165 L 555 165"/>
+
+  <!-- C -->
+  <circle class="mro-circle" cx="580" cy="165" r="18"/>
+  <text class="mro-num" x="580" y="170" text-anchor="middle">3</text>
+  <text class="class-c" x="580" y="200" text-anchor="middle">C</text>
+
+  <!-- Arrow C to A -->
+  <path class="mro-arrow" d="M 600 165 L 645 165"/>
+
+  <!-- A -->
+  <circle class="mro-circle" cx="670" cy="165" r="18"/>
+  <text class="mro-num" x="670" y="170" text-anchor="middle">4</text>
+  <text class="class-a" x="670" y="200" text-anchor="middle">A</text>
+
+  <text class="code" x="370" y="235">)</text>
+
+  <!-- Explanation -->
+  <text class="code" x="370" y="260">d.greet()  # Busca en orden:</text>
+  <text class="highlight" x="370" y="280">D → B → C → A → object</text>
+  <text class="code" x="370" y="295">Encuentra en B, usa B.greet()</text>
+
+  <!-- Code Example -->
+  <rect class="code-bg" x="30" y="345" width="280" height="100"/>
+  <text class="keyword" x="45" y="365">class</text>
+  <text class="class-a" x="80" y="365">A</text>
+  <text class="code" x="90" y="365">:</text>
+  <text class="keyword" x="55" y="380">def</text>
+  <text class="code" x="80" y="380">greet(self): </text>
+  <text class="keyword" x="155" y="380">return</text>
+  <text class="code" x="195" y="380">"A"</text>
+
+  <text class="keyword" x="45" y="400">class</text>
+  <text class="class-b" x="80" y="400">B</text>
+  <text class="code" x="90" y="400">(A):</text>
+  <text class="keyword" x="55" y="415">def</text>
+  <text class="code" x="80" y="415">greet(self): </text>
+  <text class="keyword" x="155" y="415">return</text>
+  <text class="code" x="195" y="415">"B"</text>
+
+  <text class="keyword" x="45" y="435">class</text>
+  <text class="class-d" x="80" y="435">D</text>
+  <text class="code" x="90" y="435">(B, C): </text>
+  <text class="keyword" x="140" y="435">pass</text>
+
+  <!-- Ver MRO -->
+  <rect class="code-bg" x="330" y="345" width="200" height="55"/>
+  <text class="subtitle" x="345" y="365">Ver el MRO:</text>
+  <text class="code" x="345" y="385">print(D.__mro__)</text>
+  <text class="code" x="345" y="400">print(D.mro())</text>
+
+  <!-- super() with MRO -->
+  <rect class="code-bg" x="550" y="345" width="220" height="55"/>
+  <text class="subtitle" x="565" y="365">super() sigue el MRO:</text>
+  <text class="code" x="565" y="385">super() # No es "padre"</text>
+  <text class="code" x="565" y="400"># Es "siguiente en MRO"</text>
+
+  <!-- Key Takeaways -->
+  <rect x="30" y="460" width="740" height="75" fill="#252525" rx="6"/>
+  <text class="section-title" x="50" y="485">Puntos Clave:</text>
+
+  <text class="highlight" x="50" y="510">1.</text>
+  <text class="code" x="70" y="510">MRO: Orden de búsqueda de métodos</text>
+
+  <text class="highlight" x="280" y="510">2.</text>
+  <text class="code" x="300" y="510">super() → siguiente en MRO</text>
+
+  <text class="highlight" x="490" y="510">3.</text>
+  <text class="code" x="510" y="510">Orden de padres importa: D(B,C)</text>
+
+  <text class="code" x="50" y="525">El algoritmo C3 garantiza un orden consistente y sin conflictos</text>
+</svg>

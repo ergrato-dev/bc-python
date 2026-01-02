@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #ffffff; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #b0b0b0; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-child { fill: #2d2d2d; stroke: #4ec9b0; stroke-width: 2; rx: 8; }
+      .class-name { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 15px; font-weight: bold; }
+      .class-parent { fill: #306998; font-family: 'Consolas', monospace; font-size: 15px; font-weight: bold; }
+      .method { fill: #dcdcaa; font-family: 'Consolas', monospace; font-size: 12px; }
+      .method-override { fill: #f0e68c; font-family: 'Consolas', monospace; font-size: 12px; font-weight: bold; }
+      .arrow { stroke: #FFD43B; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-call { stroke: #4ec9b0; stroke-width: 2; fill: none; stroke-dasharray: 5,3; marker-end: url(#arrowhead-green); }
+      .label { fill: #ce9178; font-family: 'Segoe UI', sans-serif; font-size: 11px; font-style: italic; }
+      .code-bg { fill: #1a1a1a; rx: 4; }
+      .code { fill: #d4d4d4; font-family: 'Consolas', monospace; font-size: 11px; }
+      .keyword { fill: #c586c0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .highlight { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 11px; }
+      .super-call { fill: #4ec9b0; font-family: 'Consolas', monospace; font-size: 11px; }
+      .section-title { fill: #569cd6; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .divider { stroke: #404040; stroke-width: 1; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFD43B"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ec9b0"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="520"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Override y super()</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Sobrescribir métodos del padre y extender funcionalidad</text>
+
+  <!-- Section 1: Override Completo -->
+  <text class="section-title" x="30" y="85">1. Override Completo (Reemplazar)</text>
+
+  <rect class="box" x="30" y="95" width="160" height="70"/>
+  <text class="class-parent" x="110" y="115" text-anchor="middle">Notification</text>
+  <line class="divider" x1="30" y1="125" x2="190" y2="125"/>
+  <text class="method" x="45" y="145">send() → bool</text>
+
+  <path class="arrow" d="M 110 165 L 110 190"/>
+
+  <rect class="box-child" x="30" y="195" width="160" height="70"/>
+  <text class="class-name" x="110" y="215" text-anchor="middle">EmailNotification</text>
+  <line class="divider" x1="30" y1="225" x2="190" y2="225"/>
+  <text class="method-override" x="45" y="245">send() → bool</text>
+  <text class="label" x="140" y="258">override</text>
+
+  <!-- Code for Override -->
+  <rect class="code-bg" x="200" y="95" width="180" height="90"/>
+  <text class="keyword" x="210" y="115">def</text>
+  <text class="method" x="235" y="115">send</text>
+  <text class="code" x="260" y="115">(self):</text>
+  <text class="code" x="220" y="132"># Nueva implementación</text>
+  <text class="code" x="220" y="149">print("📧 Email")</text>
+  <text class="keyword" x="220" y="166">return</text>
+  <text class="code" x="260" y="166">True</text>
+
+  <!-- Section 2: Override con super() -->
+  <text class="section-title" x="420" y="85">2. Extender con super()</text>
+
+  <rect class="box" x="420" y="95" width="150" height="70"/>
+  <text class="class-parent" x="495" y="115" text-anchor="middle">Shape</text>
+  <line class="divider" x1="420" y1="125" x2="570" y2="125"/>
+  <text class="method" x="435" y="145">describe()</text>
+
+  <path class="arrow" d="M 495 165 L 495 190"/>
+
+  <rect class="box-child" x="420" y="195" width="150" height="70"/>
+  <text class="class-name" x="495" y="215" text-anchor="middle">Circle</text>
+  <line class="divider" x1="420" y1="225" x2="570" y2="225"/>
+  <text class="method-override" x="435" y="245">describe()</text>
+  <text class="label" x="510" y="258">extiende</text>
+
+  <!-- Code for super() -->
+  <rect class="code-bg" x="585" y="95" width="195" height="105"/>
+  <text class="keyword" x="595" y="115">def</text>
+  <text class="method" x="620" y="115">describe</text>
+  <text class="code" x="675" y="115">(self):</text>
+  <text class="code" x="605" y="132"># Llama al padre</text>
+  <text class="code" x="605" y="149">base = </text>
+  <text class="super-call" x="645" y="149">super()</text>
+  <text class="code" x="690" y="149">.describe()</text>
+  <text class="code" x="605" y="166"># Añade info</text>
+  <text class="keyword" x="605" y="183">return</text>
+  <text class="code" x="650" y="183">f"{base} r={self.r}"</text>
+
+  <!-- Section 3: __init__ con super() -->
+  <text class="section-title" x="30" y="300">3. super() en __init__()</text>
+
+  <rect class="code-bg" x="30" y="315" width="350" height="120"/>
+
+  <text class="keyword" x="45" y="335">class</text>
+  <text class="class-name" x="80" y="335">Manager</text>
+  <text class="code" x="145" y="335">(Employee):</text>
+
+  <text class="keyword" x="55" y="360">def</text>
+  <text class="method" x="80" y="360">__init__</text>
+  <text class="code" x="130" y="360">(self, name, salary, dept):</text>
+
+  <text class="code" x="65" y="385"># Inicializa atributos del padre</text>
+  <text class="super-call" x="65" y="405">super().__init__</text>
+  <text class="code" x="160" y="405">(name, salary)</text>
+
+  <text class="code" x="65" y="425"># Atributo propio</text>
+  <text class="code" x="65" y="425">self.department = dept</text>
+
+  <!-- Diagram for __init__ flow -->
+  <rect class="box" x="410" y="315" width="170" height="55"/>
+  <text class="class-parent" x="495" y="335" text-anchor="middle">Employee.__init__</text>
+  <text class="code" x="425" y="355">self.name = name</text>
+
+  <path class="arrow-call" d="M 495 370 L 495 395"/>
+  <text class="label" x="505" y="387">llama</text>
+
+  <rect class="box-child" x="410" y="400" width="170" height="55"/>
+  <text class="class-name" x="495" y="420" text-anchor="middle">Manager.__init__</text>
+  <text class="code" x="425" y="440">self.dept = dept</text>
+
+  <!-- Summary Box -->
+  <rect x="30" y="455" width="740" height="50" fill="#252525" rx="6"/>
+
+  <text class="subtitle" x="50" y="475">Patrones de Override:</text>
+
+  <text class="highlight" x="180" y="475">Reemplazar</text>
+  <text class="code" x="255" y="475">→ Nueva lógica completa</text>
+
+  <text class="highlight" x="430" y="475">Extender</text>
+  <text class="code" x="495" y="475">→ super() + lógica adicional</text>
+
+  <text class="highlight" x="180" y="495">Condicional</text>
+  <text class="code" x="260" y="495">→ Validar antes/después</text>
+
+  <text class="highlight" x="430" y="495">Decorar</text>
+  <text class="code" x="485" y="495">→ Envolver el método padre</text>
+</svg>
