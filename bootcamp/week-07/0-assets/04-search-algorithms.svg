@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .label { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .label-bold { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .label-small { fill: #AAAAAA; font-family: 'Segoe UI', sans-serif; font-size: 10px; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .box { fill: #2D2D2D; stroke: #404040; stroke-width: 1; rx: 6; }
+      .cell { fill: #264F78; stroke: #569CD6; stroke-width: 1; }
+      .cell-checked { fill: #306998; stroke: #4B8BBE; stroke-width: 2; }
+      .cell-found { fill: #4EC9B0; stroke: #4EC9B0; stroke-width: 2; }
+      .cell-text { fill: #FFFFFF; font-family: 'Consolas', monospace; font-size: 11px; }
+      .arrow { fill: none; stroke: #FFD43B; stroke-width: 2; }
+      .arrow-head { fill: #FFD43B; }
+      .highlight { fill: #FFD43B; }
+      .step { fill: #306998; }
+      .step-text { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 10px; font-weight: bold; }
+      .complexity { fill: #4EC9B0; font-family: 'Consolas', monospace; font-size: 12px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="520"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Algoritmos de Búsqueda</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Comparación: Búsqueda Lineal vs Búsqueda Binaria</text>
+
+  <!-- LINEAR SEARCH -->
+  <rect class="box" x="20" y="70" width="370" height="200"/>
+  <text class="label-bold" x="205" y="95" text-anchor="middle">Búsqueda Lineal</text>
+  <text class="complexity" x="205" y="115" text-anchor="middle">O(n)</text>
+
+  <!-- Array for linear search -->
+  <text class="label-small" x="40" y="145">Buscando: 22</text>
+
+  <!-- Cells -->
+  <rect class="cell-checked" x="40" y="155" width="40" height="30"/>
+  <text class="cell-text" x="60" y="175" text-anchor="middle">64</text>
+  <circle class="step" cx="60" cy="200" r="8"/>
+  <text class="step-text" x="60" y="204" text-anchor="middle">1</text>
+
+  <rect class="cell-checked" x="85" y="155" width="40" height="30"/>
+  <text class="cell-text" x="105" y="175" text-anchor="middle">34</text>
+  <circle class="step" cx="105" cy="200" r="8"/>
+  <text class="step-text" x="105" y="204" text-anchor="middle">2</text>
+
+  <rect class="cell-checked" x="130" y="155" width="40" height="30"/>
+  <text class="cell-text" x="150" y="175" text-anchor="middle">25</text>
+  <circle class="step" cx="150" cy="200" r="8"/>
+  <text class="step-text" x="150" y="204" text-anchor="middle">3</text>
+
+  <rect class="cell-checked" x="175" y="155" width="40" height="30"/>
+  <text class="cell-text" x="195" y="175" text-anchor="middle">12</text>
+  <circle class="step" cx="195" cy="200" r="8"/>
+  <text class="step-text" x="195" y="204" text-anchor="middle">4</text>
+
+  <rect class="cell-found" x="220" y="155" width="40" height="30"/>
+  <text class="cell-text" x="240" y="175" text-anchor="middle">22</text>
+  <circle fill="#4EC9B0" cx="240" cy="200" r="8"/>
+  <text class="step-text" x="240" y="204" text-anchor="middle">5</text>
+
+  <rect class="cell" x="265" y="155" width="40" height="30"/>
+  <text class="cell-text" x="285" y="175" text-anchor="middle">11</text>
+
+  <rect class="cell" x="310" y="155" width="40" height="30"/>
+  <text class="cell-text" x="330" y="175" text-anchor="middle">90</text>
+
+  <!-- Result -->
+  <text class="label" x="40" y="235">✓ Encontrado en índice 4</text>
+  <text class="label-small" x="40" y="250">5 comparaciones (revisa uno por uno)</text>
+
+  <!-- BINARY SEARCH -->
+  <rect class="box" x="410" y="70" width="370" height="200"/>
+  <text class="label-bold" x="595" y="95" text-anchor="middle">Búsqueda Binaria</text>
+  <text class="complexity" x="595" y="115" text-anchor="middle">O(log n)</text>
+
+  <!-- Array for binary search (SORTED) -->
+  <text class="label-small" x="430" y="145">Lista ORDENADA - Buscando: 22</text>
+
+  <!-- Step 1: Full range, mid=25 -->
+  <rect class="cell" x="430" y="155" width="35" height="25"/>
+  <text class="cell-text" x="447" y="172" text-anchor="middle" font-size="10">11</text>
+
+  <rect class="cell" x="468" y="155" width="35" height="25"/>
+  <text class="cell-text" x="485" y="172" text-anchor="middle" font-size="10">12</text>
+
+  <rect class="cell" x="506" y="155" width="35" height="25"/>
+  <text class="cell-text" x="523" y="172" text-anchor="middle" font-size="10">22</text>
+
+  <rect class="cell-checked" x="544" y="155" width="35" height="25"/>
+  <text class="cell-text" x="561" y="172" text-anchor="middle" font-size="10">25</text>
+  <circle class="step" cx="561" cy="195" r="8"/>
+  <text class="step-text" x="561" y="199" text-anchor="middle">1</text>
+
+  <rect class="cell" x="582" y="155" width="35" height="25"/>
+  <text class="cell-text" x="599" y="172" text-anchor="middle" font-size="10">34</text>
+
+  <rect class="cell" x="620" y="155" width="35" height="25"/>
+  <text class="cell-text" x="637" y="172" text-anchor="middle" font-size="10">64</text>
+
+  <rect class="cell" x="658" y="155" width="35" height="25"/>
+  <text class="cell-text" x="675" y="172" text-anchor="middle" font-size="10">90</text>
+
+  <text class="label-small" x="595" y="195" text-anchor="middle">mid=25, 22&lt;25 → izquierda</text>
+
+  <!-- Step 2: Left half, mid=12 -->
+  <rect class="cell" x="430" y="210" width="35" height="25"/>
+  <text class="cell-text" x="447" y="227" text-anchor="middle" font-size="10">11</text>
+
+  <rect class="cell-checked" x="468" y="210" width="35" height="25"/>
+  <text class="cell-text" x="485" y="227" text-anchor="middle" font-size="10">12</text>
+  <circle class="step" cx="485" cy="250" r="8"/>
+  <text class="step-text" x="485" y="254" text-anchor="middle">2</text>
+
+  <rect class="cell-found" x="506" y="210" width="35" height="25"/>
+  <text class="cell-text" x="523" y="227" text-anchor="middle" font-size="10">22</text>
+  <circle fill="#4EC9B0" cx="523" cy="250" r="8"/>
+  <text class="step-text" x="523" y="254" text-anchor="middle">3</text>
+
+  <!-- Result -->
+  <text class="label-small" x="480" y="265" text-anchor="middle">mid=12 → der | mid=22 ✓</text>
+
+  <!-- Comparison section -->
+  <rect class="box" x="20" y="290" width="760" height="110"/>
+  <text class="label-bold" x="400" y="315" text-anchor="middle">Comparación de Rendimiento</text>
+
+  <!-- Table -->
+  <text class="label" x="100" y="345" text-anchor="middle">Elementos</text>
+  <text class="label" x="250" y="345" text-anchor="middle">Lineal (peor)</text>
+  <text class="label" x="400" y="345" text-anchor="middle">Binaria (peor)</text>
+  <text class="label" x="550" y="345" text-anchor="middle">Diferencia</text>
+
+  <line x1="40" y1="355" x2="760" y2="355" stroke="#404040" stroke-width="1"/>
+
+  <text class="code" x="100" y="375" text-anchor="middle">100</text>
+  <text class="code" x="250" y="375" text-anchor="middle">100 pasos</text>
+  <text class="code" x="400" y="375" text-anchor="middle">7 pasos</text>
+  <text class="highlight" x="550" y="375" text-anchor="middle" font-size="11">14x más rápido</text>
+
+  <text class="code" x="100" y="395" text-anchor="middle">1,000,000</text>
+  <text class="code" x="250" y="395" text-anchor="middle">1,000,000 pasos</text>
+  <text class="code" x="400" y="395" text-anchor="middle">20 pasos</text>
+  <text class="highlight" x="550" y="395" text-anchor="middle" font-size="11">50,000x más rápido</text>
+
+  <!-- Key insight -->
+  <rect class="box" x="20" y="415" width="760" height="90"/>
+  <text class="label-bold" x="400" y="440" text-anchor="middle">Puntos Clave</text>
+
+  <text class="label" x="40" y="465">• Búsqueda Lineal: Funciona en cualquier lista, simple pero lenta para datos grandes</text>
+  <text class="label" x="40" y="485">• Búsqueda Binaria: REQUIERE lista ordenada, extremadamente rápida - divide espacio a la mitad</text>
+  <text class="code" x="40" y="500">Tip: Usa set para O(1) si solo necesitas verificar existencia: x in my_set</text>
+</svg>

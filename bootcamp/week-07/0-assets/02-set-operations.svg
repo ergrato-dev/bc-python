@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .label { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .label-bold { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .op-symbol { fill: #FFD43B; font-family: 'Consolas', monospace; font-size: 18px; font-weight: bold; }
+      .set-a { fill: #306998; fill-opacity: 0.7; stroke: #4B8BBE; stroke-width: 2; }
+      .set-b { fill: #FFD43B; fill-opacity: 0.5; stroke: #FFE873; stroke-width: 2; }
+      .result { fill: #4EC9B0; fill-opacity: 0.8; }
+      .result-border { fill: none; stroke: #4EC9B0; stroke-width: 3; }
+      .box { fill: #2D2D2D; stroke: #404040; stroke-width: 1; rx: 6; }
+      .element { fill: #FFFFFF; font-family: 'Consolas', monospace; font-size: 11px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="550"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Operaciones de Conjuntos</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">A = {1, 2, 3, 4}    B = {3, 4, 5, 6}</text>
+
+  <!-- Row 1: Union and Intersection -->
+
+  <!-- UNION -->
+  <rect class="box" x="20" y="70" width="370" height="115"/>
+  <text class="label-bold" x="205" y="90" text-anchor="middle">UNIÓN (Union)</text>
+
+  <!-- Venn diagram for union -->
+  <ellipse class="set-a" cx="140" cy="135" rx="50" ry="35"/>
+  <ellipse class="set-b" cx="190" cy="135" rx="50" ry="35"/>
+  <!-- Highlight entire area -->
+  <ellipse cx="140" cy="135" rx="50" ry="35" fill="none" stroke="#4EC9B0" stroke-width="3"/>
+  <ellipse cx="190" cy="135" rx="50" ry="35" fill="none" stroke="#4EC9B0" stroke-width="3"/>
+
+  <text class="element" x="110" y="135">1,2</text>
+  <text class="element" x="160" y="140">3,4</text>
+  <text class="element" x="205" y="135">5,6</text>
+
+  <!-- Result -->
+  <text class="op-symbol" x="260" y="140">|</text>
+  <text class="code" x="280" y="130">A | B</text>
+  <text class="code" x="280" y="145">union()</text>
+  <text class="label" x="280" y="165">= {1,2,3,4,5,6}</text>
+
+  <!-- INTERSECTION -->
+  <rect class="box" x="410" y="70" width="370" height="115"/>
+  <text class="label-bold" x="595" y="90" text-anchor="middle">INTERSECCIÓN (Intersection)</text>
+
+  <!-- Venn diagram for intersection -->
+  <ellipse class="set-a" cx="530" cy="135" rx="50" ry="35"/>
+  <ellipse class="set-b" cx="580" cy="135" rx="50" ry="35"/>
+  <!-- Highlight intersection only -->
+  <path d="M555,105 A50,35 0 0,1 555,165 A50,35 0 0,1 555,105" class="result"/>
+
+  <text class="element" x="500" y="135">1,2</text>
+  <text class="element" x="555" y="140" fill="#1e1e1e">3,4</text>
+  <text class="element" x="600" y="135">5,6</text>
+
+  <!-- Result -->
+  <text class="op-symbol" x="650" y="140">&amp;</text>
+  <text class="code" x="670" y="130">A &amp; B</text>
+  <text class="code" x="670" y="145">intersection()</text>
+  <text class="label" x="670" y="165">= {3, 4}</text>
+
+  <!-- Row 2: Difference A-B and B-A -->
+
+  <!-- DIFFERENCE A-B -->
+  <rect class="box" x="20" y="200" width="370" height="115"/>
+  <text class="label-bold" x="205" y="220" text-anchor="middle">DIFERENCIA (A - B)</text>
+
+  <!-- Venn diagram -->
+  <ellipse class="set-a" cx="140" cy="265" rx="50" ry="35"/>
+  <ellipse class="set-b" cx="190" cy="265" rx="50" ry="35"/>
+  <!-- Highlight A only -->
+  <path d="M90,265 A50,35 0 1,1 165,235" fill="#4EC9B0" fill-opacity="0.8"/>
+  <path d="M90,265 A50,35 0 0,0 165,295" fill="#4EC9B0" fill-opacity="0.8"/>
+
+  <text class="element" x="105" y="265" fill="#1e1e1e">1,2</text>
+  <text class="element" x="160" y="270">3,4</text>
+  <text class="element" x="205" y="265">5,6</text>
+
+  <!-- Result -->
+  <text class="op-symbol" x="260" y="270">-</text>
+  <text class="code" x="280" y="260">A - B</text>
+  <text class="code" x="280" y="275">difference()</text>
+  <text class="label" x="280" y="295">= {1, 2}</text>
+
+  <!-- DIFFERENCE B-A -->
+  <rect class="box" x="410" y="200" width="370" height="115"/>
+  <text class="label-bold" x="595" y="220" text-anchor="middle">DIFERENCIA (B - A)</text>
+
+  <!-- Venn diagram -->
+  <ellipse class="set-a" cx="530" cy="265" rx="50" ry="35"/>
+  <ellipse class="set-b" cx="580" cy="265" rx="50" ry="35"/>
+  <!-- Highlight B only -->
+  <path d="M630,265 A50,35 0 1,0 555,235" fill="#4EC9B0" fill-opacity="0.8"/>
+  <path d="M630,265 A50,35 0 0,1 555,295" fill="#4EC9B0" fill-opacity="0.8"/>
+
+  <text class="element" x="500" y="265">1,2</text>
+  <text class="element" x="555" y="270">3,4</text>
+  <text class="element" x="603" y="265" fill="#1e1e1e">5,6</text>
+
+  <!-- Result -->
+  <text class="op-symbol" x="650" y="270">-</text>
+  <text class="code" x="670" y="260">B - A</text>
+  <text class="code" x="670" y="275">difference()</text>
+  <text class="label" x="670" y="295">= {5, 6}</text>
+
+  <!-- Row 3: Symmetric Difference and Subset -->
+
+  <!-- SYMMETRIC DIFFERENCE -->
+  <rect class="box" x="20" y="330" width="370" height="115"/>
+  <text class="label-bold" x="205" y="350" text-anchor="middle">DIFERENCIA SIMÉTRICA</text>
+
+  <!-- Venn diagram -->
+  <ellipse class="set-a" cx="140" cy="395" rx="50" ry="35"/>
+  <ellipse class="set-b" cx="190" cy="395" rx="50" ry="35"/>
+  <!-- Highlight both outer parts -->
+  <path d="M90,395 A50,35 0 1,1 165,365" fill="#4EC9B0" fill-opacity="0.8"/>
+  <path d="M90,395 A50,35 0 0,0 165,425" fill="#4EC9B0" fill-opacity="0.8"/>
+  <path d="M240,395 A50,35 0 1,0 165,365" fill="#4EC9B0" fill-opacity="0.8"/>
+  <path d="M240,395 A50,35 0 0,1 165,425" fill="#4EC9B0" fill-opacity="0.8"/>
+
+  <text class="element" x="105" y="395" fill="#1e1e1e">1,2</text>
+  <text class="element" x="160" y="400">3,4</text>
+  <text class="element" x="208" y="395" fill="#1e1e1e">5,6</text>
+
+  <!-- Result -->
+  <text class="op-symbol" x="260" y="400">^</text>
+  <text class="code" x="280" y="390">A ^ B</text>
+  <text class="code" x="280" y="405">symmetric_diff()</text>
+  <text class="label" x="280" y="425">= {1,2,5,6}</text>
+
+  <!-- SUBSET/SUPERSET -->
+  <rect class="box" x="410" y="330" width="370" height="115"/>
+  <text class="label-bold" x="595" y="350" text-anchor="middle">SUBCONJUNTO / SUPERCONJUNTO</text>
+
+  <!-- Nested circles -->
+  <ellipse cx="530" cy="395" rx="70" ry="45" fill="#306998" fill-opacity="0.5" stroke="#4B8BBE" stroke-width="2"/>
+  <ellipse cx="530" cy="395" rx="35" ry="25" fill="#FFD43B" fill-opacity="0.7" stroke="#FFE873" stroke-width="2"/>
+
+  <text class="element" x="530" y="400" text-anchor="middle">{1,2}</text>
+  <text class="element" x="530" y="430" text-anchor="middle">{1,2,3,4}</text>
+
+  <!-- Result -->
+  <text class="code" x="620" y="375">{1,2} &lt;= {1,2,3,4}</text>
+  <text class="label" x="620" y="395">→ True (subset)</text>
+  <text class="code" x="620" y="420">{1,2,3,4} >= {1,2}</text>
+  <text class="label" x="620" y="440">→ True (superset)</text>
+
+  <!-- Legend at bottom -->
+  <rect class="box" x="20" y="460" width="760" height="75"/>
+  <text class="label-bold" x="400" y="480" text-anchor="middle">Resumen de Operadores</text>
+
+  <text class="op-symbol" x="60" y="510">|</text>
+  <text class="label" x="80" y="510">Unión</text>
+
+  <text class="op-symbol" x="160" y="510">&amp;</text>
+  <text class="label" x="180" y="510">Intersección</text>
+
+  <text class="op-symbol" x="290" y="510">-</text>
+  <text class="label" x="310" y="510">Diferencia</text>
+
+  <text class="op-symbol" x="410" y="510">^</text>
+  <text class="label" x="430" y="510">Dif. Simétrica</text>
+
+  <text class="op-symbol" x="550" y="510">&lt;=</text>
+  <text class="label" x="580" y="510">Subconjunto</text>
+
+  <text class="op-symbol" x="680" y="510">>=</text>
+  <text class="label" x="710" y="510">Superconjunto</text>
+</svg>

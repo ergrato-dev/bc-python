@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 36px; font-weight: bold; }
+      .subtitle { fill: #c0c0c0; font-family: 'Segoe UI', sans-serif; font-size: 18px; }
+      .week { fill: #306998; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+      .icon-circle { fill: none; stroke: #306998; stroke-width: 3; }
+      .icon-fill { fill: #306998; opacity: 0.3; }
+      .set-element { fill: #4CAF50; }
+      .set-overlap { fill: #FFD43B; opacity: 0.7; }
+      .accent { fill: #4a9eff; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="200"/>
+
+  <!-- Decorative sets (Venn diagram style) -->
+  <!-- Set A -->
+  <circle class="icon-fill" cx="120" cy="100" r="50"/>
+  <circle class="icon-circle" cx="120" cy="100" r="50"/>
+
+  <!-- Set B (overlapping) -->
+  <circle class="icon-fill" cx="160" cy="100" r="50"/>
+  <circle class="icon-circle" cx="160" cy="100" r="50"/>
+
+  <!-- Overlap highlight -->
+  <ellipse class="set-overlap" cx="140" cy="100" rx="20" ry="40"/>
+
+  <!-- Set elements dots -->
+  <circle class="set-element" cx="95" cy="90" r="6"/>
+  <circle class="set-element" cx="105" cy="115" r="6"/>
+  <circle class="accent" cx="140" cy="85" r="6"/>
+  <circle class="accent" cx="140" cy="115" r="6"/>
+  <circle class="set-element" cx="175" cy="90" r="6"/>
+  <circle class="set-element" cx="185" cy="110" r="6"/>
+
+  <!-- Week indicator -->
+  <rect x="30" y="25" width="80" height="25" rx="12" fill="#306998"/>
+  <text class="week" x="70" y="43" text-anchor="middle">WEEK 07</text>
+
+  <!-- Title -->
+  <text class="title" x="400" y="85" text-anchor="middle">Sets y Algoritmos</text>
+  <text class="subtitle" x="400" y="115" text-anchor="middle">Conjuntos, operaciones matemáticas y búsqueda</text>
+
+  <!-- Topics -->
+  <text class="subtitle" x="400" y="155" text-anchor="middle" style="font-size: 14px; fill: #888;">
+    Sets • Unión • Intersección • Diferencia • Frozenset • Búsqueda • Ordenamiento
+  </text>
+
+  <!-- Decorative algorithm visualization -->
+  <!-- Sorted array representation -->
+  <rect x="620" y="70" width="25" height="20" rx="3" fill="#264653" stroke="#306998"/>
+  <rect x="650" y="70" width="25" height="30" rx="3" fill="#264653" stroke="#306998"/>
+  <rect x="680" y="70" width="25" height="45" rx="3" fill="#264653" stroke="#306998"/>
+  <rect x="710" y="70" width="25" height="60" rx="3" fill="#306998" stroke="#306998"/>
+  <rect x="740" y="70" width="25" height="75" rx="3" fill="#264653" stroke="#306998"/>
+
+  <!-- Search arrow -->
+  <path d="M722 55 L722 65" stroke="#FFD43B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="722" y="50" text-anchor="middle" fill="#FFD43B" font-size="12" font-family="Consolas">?</text>
+
+  <!-- Decorative circles -->
+  <circle cx="50" cy="170" r="8" fill="#306998" opacity="0.5"/>
+  <circle cx="750" cy="165" r="15" fill="#FFD43B" opacity="0.4"/>
+  <circle cx="580" cy="160" r="10" fill="#4CAF50" opacity="0.5"/>
+</svg>

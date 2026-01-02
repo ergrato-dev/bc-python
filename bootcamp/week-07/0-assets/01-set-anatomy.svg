@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 24px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 14px; }
+      .label { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .label-small { fill: #CCCCCC; font-family: 'Segoe UI', sans-serif; font-size: 11px; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 12px; }
+      .code-keyword { fill: #569CD6; font-family: 'Consolas', monospace; font-size: 12px; }
+      .code-string { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 12px; }
+      .element { fill: #264F78; stroke: #569CD6; stroke-width: 2; }
+      .element-text { fill: #FFFFFF; font-family: 'Consolas', monospace; font-size: 14px; font-weight: bold; }
+      .set-border { fill: none; stroke: #306998; stroke-width: 3; stroke-dasharray: 8,4; }
+      .arrow { fill: none; stroke: #FFD43B; stroke-width: 2; }
+      .arrow-head { fill: #FFD43B; }
+      .box { fill: #2D2D2D; stroke: #404040; stroke-width: 1; rx: 8; }
+      .highlight { fill: #306998; }
+      .accent { fill: #FFD43B; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="35" text-anchor="middle">Anatomía de un Set</text>
+  <text class="subtitle" x="400" y="55" text-anchor="middle">Colección no ordenada de elementos únicos</text>
+
+  <!-- Left side: Visual representation -->
+  <rect class="box" x="30" y="80" width="350" height="200"/>
+  <text class="label" x="205" y="105" text-anchor="middle" font-weight="bold">Representación Visual</text>
+
+  <!-- Set boundary (cloud-like shape) -->
+  <ellipse class="set-border" cx="205" cy="185" rx="140" ry="70"/>
+
+  <!-- Elements inside set -->
+  <circle class="element" cx="130" cy="165" r="25"/>
+  <text class="element-text" x="130" y="170" text-anchor="middle">"a"</text>
+
+  <circle class="element" cx="200" cy="145" r="25"/>
+  <text class="element-text" x="200" y="150" text-anchor="middle">"b"</text>
+
+  <circle class="element" cx="270" cy="170" r="25"/>
+  <text class="element-text" x="270" y="175" text-anchor="middle">"c"</text>
+
+  <circle class="element" cx="165" cy="210" r="25"/>
+  <text class="element-text" x="165" y="215" text-anchor="middle">1</text>
+
+  <circle class="element" cx="245" cy="215" r="25"/>
+  <text class="element-text" x="245" y="220" text-anchor="middle">2</text>
+
+  <!-- Label -->
+  <text class="label-small" x="205" y="270" text-anchor="middle" fill="#888">Sin orden definido</text>
+
+  <!-- Right side: Code -->
+  <rect class="box" x="420" y="80" width="350" height="200"/>
+  <text class="label" x="595" y="105" text-anchor="middle" font-weight="bold">Código Python</text>
+
+  <text class="code-keyword" x="440" y="135">my_set</text>
+  <text class="code" x="502" y="135">= {</text>
+  <text class="code-string" x="520" y="135">"a"</text>
+  <text class="code" x="545" y="135">,</text>
+  <text class="code-string" x="555" y="135">"b"</text>
+  <text class="code" x="580" y="135">,</text>
+  <text class="code-string" x="590" y="135">"c"</text>
+  <text class="code" x="615" y="135">,</text>
+  <text class="code" x="625" y="135">1,</text>
+  <text class="code" x="645" y="135">2}</text>
+
+  <text class="code" x="440" y="165"># Elementos únicos y hashables</text>
+
+  <text class="code-keyword" x="440" y="195">len</text>
+  <text class="code" x="462" y="195">(my_set)</text>
+  <text class="label-small" x="545" y="195">→ 5</text>
+
+  <text class="code-string" x="440" y="225">"a"</text>
+  <text class="code-keyword" x="470" y="225"> in </text>
+  <text class="code" x="497" y="225">my_set</text>
+  <text class="label-small" x="560" y="225">→ True (O(1))</text>
+
+  <text class="code" x="440" y="255"># Acceso por índice: ❌ NO</text>
+
+  <!-- Bottom section: Characteristics -->
+  <rect class="box" x="30" y="300" width="740" height="180"/>
+  <text class="label" x="400" y="325" text-anchor="middle" font-weight="bold">Características Principales</text>
+
+  <!-- 4 columns of characteristics -->
+  <!-- Column 1 -->
+  <rect class="highlight" x="50" y="345" width="150" height="50" rx="5"/>
+  <text class="label" x="125" y="365" text-anchor="middle" font-weight="bold">No Ordenado</text>
+  <text class="label-small" x="125" y="385" text-anchor="middle">Sin índices</text>
+
+  <!-- Column 2 -->
+  <rect class="highlight" x="220" y="345" width="150" height="50" rx="5"/>
+  <text class="label" x="295" y="365" text-anchor="middle" font-weight="bold">Sin Duplicados</text>
+  <text class="label-small" x="295" y="385" text-anchor="middle">Elementos únicos</text>
+
+  <!-- Column 3 -->
+  <rect class="highlight" x="390" y="345" width="150" height="50" rx="5"/>
+  <text class="label" x="465" y="365" text-anchor="middle" font-weight="bold">Mutable</text>
+  <text class="label-small" x="465" y="385" text-anchor="middle">add(), remove()</text>
+
+  <!-- Column 4 -->
+  <rect class="highlight" x="560" y="345" width="150" height="50" rx="5"/>
+  <text class="label" x="635" y="365" text-anchor="middle" font-weight="bold">Hashable</text>
+  <text class="label-small" x="635" y="385" text-anchor="middle">Solo tipos inmutables</text>
+
+  <!-- Valid/Invalid types -->
+  <text class="label" x="50" y="430" fill="#4EC9B0">✓ Válidos:</text>
+  <text class="code" x="130" y="430">int, str, float, bool, tuple, frozenset</text>
+
+  <text class="label" x="50" y="455" fill="#F14C4C">✗ Inválidos:</text>
+  <text class="code" x="140" y="455">list, dict, set</text>
+  <text class="label-small" x="270" y="455">(tipos mutables no son hashables)</text>
+</svg>

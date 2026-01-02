@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .title { fill: #FFD43B; font-family: 'Segoe UI', sans-serif; font-size: 22px; font-weight: bold; }
+      .subtitle { fill: #9CDCFE; font-family: 'Segoe UI', sans-serif; font-size: 13px; }
+      .label { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 12px; }
+      .label-bold { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; }
+      .label-small { fill: #AAAAAA; font-family: 'Segoe UI', sans-serif; font-size: 10px; }
+      .code { fill: #CE9178; font-family: 'Consolas', monospace; font-size: 11px; }
+      .set-a { fill: #306998; fill-opacity: 0.6; stroke: #4B8BBE; stroke-width: 2; }
+      .set-b { fill: #FFD43B; fill-opacity: 0.5; stroke: #FFE873; stroke-width: 2; }
+      .intersection { fill: #4EC9B0; fill-opacity: 0.7; }
+      .box { fill: #2D2D2D; stroke: #404040; stroke-width: 1; rx: 6; }
+      .element { fill: #FFFFFF; font-family: 'Consolas', monospace; font-size: 11px; }
+      .set-label { fill: #FFFFFF; font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="450"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="30" text-anchor="middle">Diagramas de Venn</text>
+  <text class="subtitle" x="400" y="50" text-anchor="middle">Visualización de operaciones de conjuntos</text>
+
+  <!-- Example 1: Two sets -->
+  <rect class="box" x="20" y="70" width="370" height="170"/>
+  <text class="label-bold" x="205" y="90" text-anchor="middle">Dos Conjuntos</text>
+
+  <!-- Set A circle -->
+  <circle class="set-a" cx="160" cy="165" r="55"/>
+  <text class="set-label" x="120" y="125">A</text>
+
+  <!-- Set B circle -->
+  <circle class="set-b" cx="230" cy="165" r="55"/>
+  <text class="set-label" x="270" y="125">B</text>
+
+  <!-- Labels for regions -->
+  <text class="element" x="125" y="165">Solo A</text>
+  <text class="element" x="180" y="175">A∩B</text>
+  <text class="element" x="245" y="165">Solo B</text>
+
+  <!-- Legend -->
+  <text class="code" x="320" y="145">A = {1,2,3,4}</text>
+  <text class="code" x="320" y="165">B = {3,4,5,6}</text>
+  <text class="code" x="320" y="185">A∩B = {3,4}</text>
+  <text class="code" x="320" y="205">A∪B = {1..6}</text>
+
+  <!-- Example 2: Three sets -->
+  <rect class="box" x="410" y="70" width="370" height="170"/>
+  <text class="label-bold" x="595" y="90" text-anchor="middle">Tres Conjuntos</text>
+
+  <!-- Set A -->
+  <circle cx="560" cy="150" r="50" fill="#306998" fill-opacity="0.5" stroke="#4B8BBE" stroke-width="2"/>
+  <text class="set-label" x="525" y="115">A</text>
+
+  <!-- Set B -->
+  <circle cx="620" cy="150" r="50" fill="#FFD43B" fill-opacity="0.4" stroke="#FFE873" stroke-width="2"/>
+  <text class="set-label" x="660" y="115">B</text>
+
+  <!-- Set C -->
+  <circle cx="590" cy="200" r="50" fill="#4EC9B0" fill-opacity="0.4" stroke="#4EC9B0" stroke-width="2"/>
+  <text class="set-label" x="590" y="250" text-anchor="middle">C</text>
+
+  <!-- Center intersection label -->
+  <text class="element" x="590" y="170" text-anchor="middle" font-size="9">A∩B∩C</text>
+
+  <!-- Example 3: Disjoint sets -->
+  <rect class="box" x="20" y="260" width="240" height="170"/>
+  <text class="label-bold" x="140" y="280" text-anchor="middle">Conjuntos Disjuntos</text>
+
+  <circle class="set-a" cx="90" cy="355" r="40"/>
+  <circle class="set-b" cx="190" cy="355" r="40"/>
+
+  <text class="element" x="90" y="360" text-anchor="middle">A</text>
+  <text class="element" x="190" y="360" text-anchor="middle">B</text>
+
+  <text class="code" x="60" y="410">A.isdisjoint(B) → True</text>
+  <text class="label-small" x="140" y="425" text-anchor="middle">Sin elementos comunes</text>
+
+  <!-- Example 4: Subset -->
+  <rect class="box" x="280" y="260" width="240" height="170"/>
+  <text class="label-bold" x="400" y="280" text-anchor="middle">Subconjunto</text>
+
+  <circle cx="400" cy="355" r="55" fill="#306998" fill-opacity="0.5" stroke="#4B8BBE" stroke-width="2"/>
+  <circle cx="400" cy="355" r="30" fill="#FFD43B" fill-opacity="0.7" stroke="#FFE873" stroke-width="2"/>
+
+  <text class="element" x="400" y="360" text-anchor="middle">A</text>
+  <text class="element" x="400" y="395" text-anchor="middle">B</text>
+
+  <text class="code" x="330" y="415">A &lt;= B → True</text>
+  <text class="label-small" x="400" y="425" text-anchor="middle">A es subconjunto de B</text>
+
+  <!-- Example 5: Real world -->
+  <rect class="box" x="540" y="260" width="240" height="170"/>
+  <text class="label-bold" x="660" y="280" text-anchor="middle">Caso Real: Usuarios</text>
+
+  <circle cx="620" cy="350" r="45" fill="#306998" fill-opacity="0.5" stroke="#4B8BBE" stroke-width="2"/>
+  <circle cx="700" cy="350" r="45" fill="#FFD43B" fill-opacity="0.4" stroke="#FFE873" stroke-width="2"/>
+
+  <text class="element" x="595" y="340" font-size="9">alice</text>
+  <text class="element" x="595" y="355" font-size="9">bob</text>
+  <text class="element" x="655" y="355" font-size="9">carol</text>
+  <text class="element" x="710" y="340" font-size="9">david</text>
+  <text class="element" x="715" y="355" font-size="9">eve</text>
+
+  <text class="label-small" x="620" y="400" text-anchor="middle">Premium</text>
+  <text class="label-small" x="700" y="400" text-anchor="middle">Activos</text>
+
+  <text class="code" x="570" y="420">Premium ∩ Activos = {carol}</text>
+</svg>
