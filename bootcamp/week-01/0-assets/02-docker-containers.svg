@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-docker { fill: #2d2d2d; stroke: #2496ED; stroke-width: 2; rx: 8; }
+      .box-python { fill: #2d2d2d; stroke: #FFD43B; stroke-width: 2; rx: 8; }
+      .host { fill: #1a1a2e; stroke: #444; stroke-width: 2; rx: 12; }
+      .text-title { fill: #ffffff; font-family: Inter, system-ui, sans-serif; font-size: 18px; font-weight: 600; }
+      .text-main { fill: #e0e0e0; font-family: Inter, system-ui, sans-serif; font-size: 14px; }
+      .text-code { fill: #FFD43B; font-family: monospace; font-size: 12px; }
+      .text-small { fill: #888888; font-family: Inter, system-ui, sans-serif; font-size: 11px; }
+      .text-docker { fill: #2496ED; font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="450"/>
+
+  <!-- Title -->
+  <text class="text-title" x="400" y="35" text-anchor="middle">Docker: Entornos Aislados para Python</text>
+
+  <!-- Host Machine -->
+  <rect class="host" x="40" y="60" width="720" height="370"/>
+  <text class="text-main" x="400" y="90" text-anchor="middle">💻 Tu Computadora (Host)</text>
+
+  <!-- Docker Engine -->
+  <rect class="box-docker" x="70" y="110" width="660" height="300"/>
+  <text class="text-docker" x="400" y="140" text-anchor="middle">🐳 Docker Engine</text>
+
+  <!-- Container 1 -->
+  <rect class="box-python" x="100" y="165" width="180" height="220"/>
+  <text class="text-main" x="190" y="195" text-anchor="middle" font-weight="600">📦 Contenedor 1</text>
+  <text class="text-small" x="190" y="220" text-anchor="middle">Python 3.13</text>
+  <rect fill="#1e1e1e" x="115" y="235" width="150" height="70" rx="4"/>
+  <text class="text-code" x="190" y="260" text-anchor="middle">Tu Proyecto</text>
+  <text class="text-code" x="190" y="280" text-anchor="middle">+ Dependencias</text>
+  <text class="text-small" x="190" y="320" text-anchor="middle">uv, pytest, etc.</text>
+  <text class="text-small" x="190" y="340" text-anchor="middle" fill="#4ade80">✅ Aislado</text>
+  <text class="text-small" x="190" y="360" text-anchor="middle" fill="#4ade80">✅ Reproducible</text>
+
+  <!-- Container 2 -->
+  <rect class="box-python" x="310" y="165" width="180" height="220"/>
+  <text class="text-main" x="400" y="195" text-anchor="middle" font-weight="600">📦 Contenedor 2</text>
+  <text class="text-small" x="400" y="220" text-anchor="middle">Python 3.11</text>
+  <rect fill="#1e1e1e" x="325" y="235" width="150" height="70" rx="4"/>
+  <text class="text-code" x="400" y="260" text-anchor="middle">Otro Proyecto</text>
+  <text class="text-code" x="400" y="280" text-anchor="middle">+ Otras Deps</text>
+  <text class="text-small" x="400" y="320" text-anchor="middle">Django, etc.</text>
+  <text class="text-small" x="400" y="340" text-anchor="middle" fill="#4ade80">✅ Sin conflictos</text>
+  <text class="text-small" x="400" y="360" text-anchor="middle" fill="#4ade80">✅ Portable</text>
+
+  <!-- Benefits Box -->
+  <rect class="box" x="520" y="165" width="190" height="220"/>
+  <text class="text-main" x="615" y="195" text-anchor="middle" font-weight="600">🎯 Beneficios</text>
+  <text class="text-small" x="530" y="230" text-anchor="start">• Mismo entorno para todos</text>
+  <text class="text-small" x="530" y="255" text-anchor="start">• No instalar Python local</text>
+  <text class="text-small" x="530" y="280" text-anchor="start">• Fácil de limpiar</text>
+  <text class="text-small" x="530" y="305" text-anchor="start">• Versiones específicas</text>
+  <text class="text-small" x="530" y="330" text-anchor="start">• "Funciona en mi</text>
+  <text class="text-small" x="540" y="350" text-anchor="start">máquina" resuelto</text>
+</svg>

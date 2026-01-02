@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-yellow { fill: #2d2d2d; stroke: #FFD43B; stroke-width: 2; rx: 8; }
+      .arrow { stroke: #306998; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .text-title { fill: #ffffff; font-family: Inter, system-ui, sans-serif; font-size: 18px; font-weight: 600; }
+      .text-main { fill: #e0e0e0; font-family: Inter, system-ui, sans-serif; font-size: 14px; }
+      .text-code { fill: #FFD43B; font-family: monospace; font-size: 13px; }
+      .text-small { fill: #888888; font-family: Inter, system-ui, sans-serif; font-size: 12px; }
+      .icon { fill: #306998; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#306998"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="400"/>
+
+  <!-- Title -->
+  <text class="text-title" x="400" y="35" text-anchor="middle">Cómo Python Ejecuta tu Código</text>
+
+  <!-- Box 1: Source Code -->
+  <rect class="box" x="50" y="80" width="180" height="120"/>
+  <text class="text-main" x="140" y="110" text-anchor="middle" font-weight="600">📄 Código Fuente</text>
+  <text class="text-code" x="140" y="140" text-anchor="middle">hola.py</text>
+  <text class="text-small" x="140" y="165" text-anchor="middle">print("¡Hola!")</text>
+  <text class="text-small" x="140" y="185" text-anchor="middle">x = 5 + 3</text>
+
+  <!-- Arrow 1 -->
+  <path class="arrow" d="M 230 140 L 290 140"/>
+
+  <!-- Box 2: Interpreter -->
+  <rect class="box-yellow" x="310" y="80" width="180" height="120"/>
+  <text class="text-main" x="400" y="110" text-anchor="middle" font-weight="600">🐍 Intérprete</text>
+  <text class="text-main" x="400" y="135" text-anchor="middle">Python 3.13</text>
+  <text class="text-small" x="400" y="160" text-anchor="middle">Lee línea por línea</text>
+  <text class="text-small" x="400" y="180" text-anchor="middle">Traduce y ejecuta</text>
+
+  <!-- Arrow 2 -->
+  <path class="arrow" d="M 490 140 L 550 140"/>
+
+  <!-- Box 3: Output -->
+  <rect class="box" x="570" y="80" width="180" height="120"/>
+  <text class="text-main" x="660" y="110" text-anchor="middle" font-weight="600">💻 Salida</text>
+  <text class="text-code" x="660" y="145" text-anchor="middle">¡Hola!</text>
+  <text class="text-code" x="660" y="175" text-anchor="middle">8</text>
+
+  <!-- Bottom section: Comparison -->
+  <text class="text-title" x="400" y="260" text-anchor="middle">Interpretado vs Compilado</text>
+
+  <!-- Interpreted -->
+  <rect class="box" x="80" y="285" width="280" height="90"/>
+  <text class="text-main" x="220" y="315" text-anchor="middle" font-weight="600">🐍 Python (Interpretado)</text>
+  <text class="text-small" x="220" y="340" text-anchor="middle">Código → Ejecuta línea por línea</text>
+  <text class="text-small" x="220" y="360" text-anchor="middle">✅ Rápido para desarrollar</text>
+
+  <!-- Compiled -->
+  <rect class="box" x="440" y="285" width="280" height="90"/>
+  <text class="text-main" x="580" y="315" text-anchor="middle" font-weight="600">⚙️ C/Java (Compilado)</text>
+  <text class="text-small" x="580" y="340" text-anchor="middle">Código → Compila → Ejecuta</text>
+  <text class="text-small" x="580" y="360" text-anchor="middle">✅ Rápido en ejecución</text>
+</svg>

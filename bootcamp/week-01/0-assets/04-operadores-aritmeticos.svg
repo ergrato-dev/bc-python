@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .bg { fill: #1e1e1e; }
+      .box { fill: #2d2d2d; stroke: #306998; stroke-width: 2; rx: 8; }
+      .box-op { fill: #1a2e1a; stroke: #4ade80; stroke-width: 2; rx: 6; }
+      .text-title { fill: #ffffff; font-family: Inter, system-ui, sans-serif; font-size: 18px; font-weight: 600; }
+      .text-main { fill: #e0e0e0; font-family: Inter, system-ui, sans-serif; font-size: 14px; }
+      .text-code { fill: #FFD43B; font-family: monospace; font-size: 14px; }
+      .text-result { fill: #4ade80; font-family: monospace; font-size: 14px; }
+      .text-small { fill: #888888; font-family: Inter, system-ui, sans-serif; font-size: 12px; }
+      .text-op { fill: #60a5fa; font-family: monospace; font-size: 24px; font-weight: bold; }
+      .divider { stroke: #444; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="800" height="500"/>
+
+  <!-- Title -->
+  <text class="text-title" x="400" y="35" text-anchor="middle">Operadores Aritméticos en Python</text>
+  <text class="text-small" x="400" y="55" text-anchor="middle">Ejemplo: a = 10, b = 3</text>
+
+  <!-- Row 1 -->
+  <!-- Suma -->
+  <rect class="box" x="40" y="80" width="170" height="100"/>
+  <text class="text-op" x="125" y="115" text-anchor="middle">+</text>
+  <text class="text-main" x="125" y="140" text-anchor="middle">Suma</text>
+  <text class="text-code" x="125" y="165" text-anchor="middle">10 + 3 = </text>
+  <text class="text-result" x="175" y="165">13</text>
+
+  <!-- Resta -->
+  <rect class="box" x="230" y="80" width="170" height="100"/>
+  <text class="text-op" x="315" y="115" text-anchor="middle">-</text>
+  <text class="text-main" x="315" y="140" text-anchor="middle">Resta</text>
+  <text class="text-code" x="315" y="165" text-anchor="middle">10 - 3 = </text>
+  <text class="text-result" x="365" y="165">7</text>
+
+  <!-- Multiplicación -->
+  <rect class="box" x="420" y="80" width="170" height="100"/>
+  <text class="text-op" x="505" y="115" text-anchor="middle">*</text>
+  <text class="text-main" x="505" y="140" text-anchor="middle">Multiplicación</text>
+  <text class="text-code" x="505" y="165" text-anchor="middle">10 * 3 = </text>
+  <text class="text-result" x="555" y="165">30</text>
+
+  <!-- División -->
+  <rect class="box" x="610" y="80" width="170" height="100"/>
+  <text class="text-op" x="695" y="115" text-anchor="middle">/</text>
+  <text class="text-main" x="695" y="140" text-anchor="middle">División</text>
+  <text class="text-code" x="695" y="165" text-anchor="middle">10 / 3 = </text>
+  <text class="text-result" x="745" y="165">3.33</text>
+
+  <!-- Row 2 -->
+  <!-- División Entera -->
+  <rect class="box" x="90" y="210" width="200" height="100"/>
+  <text class="text-op" x="190" y="245" text-anchor="middle">//</text>
+  <text class="text-main" x="190" y="270" text-anchor="middle">División Entera</text>
+  <text class="text-code" x="190" y="295" text-anchor="middle">10 // 3 = </text>
+  <text class="text-result" x="230" y="295">3</text>
+
+  <!-- Módulo -->
+  <rect class="box" x="310" y="210" width="200" height="100"/>
+  <text class="text-op" x="410" y="245" text-anchor="middle">%</text>
+  <text class="text-main" x="410" y="270" text-anchor="middle">Módulo (Resto)</text>
+  <text class="text-code" x="410" y="295" text-anchor="middle">10 % 3 = </text>
+  <text class="text-result" x="450" y="295">1</text>
+
+  <!-- Potencia -->
+  <rect class="box" x="530" y="210" width="200" height="100"/>
+  <text class="text-op" x="630" y="245" text-anchor="middle">**</text>
+  <text class="text-main" x="630" y="270" text-anchor="middle">Potencia</text>
+  <text class="text-code" x="630" y="295" text-anchor="middle">10 ** 3 = </text>
+  <text class="text-result" x="680" y="295">1000</text>
+
+  <!-- Divider -->
+  <line class="divider" x1="40" y1="340" x2="760" y2="340"/>
+
+  <!-- Special Section: División vs División Entera -->
+  <text class="text-title" x="400" y="375" text-anchor="middle" font-size="16px">⚠️ División (/) vs División Entera (//)</text>
+
+  <rect class="box-op" x="100" y="395" width="280" height="80"/>
+  <text class="text-main" x="240" y="420" text-anchor="middle" font-weight="600">/ siempre retorna float</text>
+  <text class="text-code" x="240" y="450" text-anchor="middle">10 / 2 = 5.0</text>
+
+  <rect class="box-op" x="420" y="395" width="280" height="80"/>
+  <text class="text-main" x="560" y="420" text-anchor="middle" font-weight="600">// trunca hacia abajo</text>
+  <text class="text-code" x="560" y="450" text-anchor="middle">-10 // 3 = -4</text>
+</svg>

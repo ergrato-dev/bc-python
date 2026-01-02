@@ -452,22 +452,80 @@ Los assets SVG en `0-assets/` de cada semana tienen un propósito educativo espe
 - ✅ **Visualización de procesos** (loops, condicionales, etc.)
 - ✅ **Headers de semana** para identificación visual
 
-**Reglas de vinculación:**
+### Nomenclatura de Assets
 
-1. Todo SVG debe estar **vinculado en al menos un archivo** de teoría o ejercicio
-2. Usar sintaxis markdown: `![Descripción](../0-assets/nombre.svg)`
-3. Incluir texto alternativo descriptivo para accesibilidad
-4. Nombrar archivos descriptivamente: `for-loop-flow.svg`, `list-methods.svg`
+Los archivos SVG deben estar **numerados secuencialmente** con prefijo de dos dígitos:
+
+```
+0-assets/
+├── 01-nombre-descriptivo.svg
+├── 02-otro-concepto.svg
+├── 03-diagrama-flujo.svg
+└── week-XX-header.svg          # Header de la semana (opcional)
+```
+
+**Convención de nombres:**
+
+- Prefijo numérico: `01-`, `02-`, `03-`... (orden de aparición en teoría)
+- Nombres en kebab-case: `01-variables-memoria.svg`
+- Nombres descriptivos del concepto que ilustran
+- El header de semana puede no tener número: `week-01-header.svg`
+
+**Ejemplos por semana:**
+
+```
+week-01/0-assets/
+├── 01-python-interpreter.svg     # Vinculado en 01-que-es-python.md
+├── 02-docker-containers.svg      # Vinculado en 02-configuracion-entorno.md
+├── 03-variables-memoria.svg      # Vinculado en 04-variables-tipos.md
+├── 04-operadores-aritmeticos.svg # Vinculado en 05-operadores.md
+└── week-01-header.svg            # Header de la semana
+```
+
+### Reglas de Vinculación
+
+1. **Todo SVG debe estar vinculado** en al menos un archivo de teoría o ejercicio
+2. **Usar sintaxis markdown estándar**: `![Descripción](../0-assets/01-nombre.svg)`
+3. **Incluir texto alternativo descriptivo** para accesibilidad
+4. **Ubicar el diagrama cerca del concepto** que explica
+5. **Referenciar el diagrama en el texto** que lo acompaña
 
 ```markdown
-<!-- Ejemplo de vinculación correcta en teoría -->
+<!-- ✅ CORRECTO: Ejemplo de vinculación en archivo de teoría -->
 
-## Flujo de un Bucle For
+## 1. ¿Qué es una Variable?
 
-![Diagrama del flujo de un bucle for](../0-assets/for-loop-flow.svg)
+Una **variable** es un nombre que se refiere a un valor almacenado en memoria.
 
-Como se observa en el diagrama, el bucle itera...
+![Diagrama de variables en memoria](../0-assets/03-variables-memoria.svg)
+
+Como se observa en el diagrama, cuando asignamos `nombre = "Ana"`, Python:
+
+1. Crea el string "Ana" en memoria
+2. Asocia el nombre `nombre` a esa ubicación
 ```
+
+```markdown
+<!-- ❌ INCORRECTO: SVG sin vincular o mal vinculado -->
+
+## Variables
+
+Las variables almacenan datos.
+
+<!-- El SVG existe pero no está vinculado -->
+<!-- O peor: el SVG no existe en 0-assets/ -->
+```
+
+### Contenido Recomendado por Tipo de Diagrama
+
+| Tipo de Diagrama   | Uso                            | Ejemplo                  |
+| ------------------ | ------------------------------ | ------------------------ |
+| **Flujo de datos** | Mostrar cómo fluye información | Input → Proceso → Output |
+| **Comparativo**    | Contrastar conceptos           | Síncrono vs Asíncrono    |
+| **Arquitectura**   | Estructura de componentes      | Capas de una aplicación  |
+| **Proceso/Pasos**  | Secuencia de acciones          | Ciclo de un bucle for    |
+| **Memoria**        | Cómo se almacenan datos        | Variables y referencias  |
+| **Jerarquía**      | Relaciones padre-hijo          | Herencia de clases       |
 
 ### Tema Visual
 
@@ -555,7 +613,97 @@ def calculate_discount(price: float, percentage: float) -> float:
 
 ---
 
-## 📊 Evaluación
+## � Control de Versiones y Commits
+
+### Conventional Commits
+
+Todos los mensajes de commit deben seguir el estándar **Conventional Commits** en **inglés**.
+
+#### Formato
+
+```
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+#### Tipos Permitidos
+
+| Tipo       | Descripción                                           |
+| ---------- | ----------------------------------------------------- |
+| `feat`     | Nueva funcionalidad                                   |
+| `fix`      | Corrección de bug                                     |
+| `docs`     | Cambios en documentación                              |
+| `style`    | Formato, espacios, puntuación (sin cambios de código) |
+| `refactor` | Refactorización de código                             |
+| `test`     | Agregar o modificar tests                             |
+| `chore`    | Tareas de mantenimiento, configuración                |
+| `perf`     | Mejoras de rendimiento                                |
+| `ci`       | Cambios en CI/CD                                      |
+| `build`    | Cambios en build o dependencias                       |
+
+#### Guía: What? For? Impact?
+
+Al escribir un mensaje de commit, responde estas tres preguntas:
+
+1. **What?** - ¿Qué cambió? (descripción concisa)
+2. **For?** - ¿Por qué se hizo este cambio? (contexto/motivación)
+3. **Impact?** - ¿Qué impacto tiene? (efectos secundarios, breaking changes)
+
+#### Ejemplos
+
+```bash
+# ✅ CORRECTO - Claro, descriptivo, en inglés
+feat(week-01): add variables and data types theory
+
+Add comprehensive theory content covering:
+- Variable declaration and assignment
+- Python's dynamic typing
+- Basic data types (int, float, str, bool)
+
+This enables students to understand memory management basics.
+
+# ✅ CORRECTO - Fix con contexto
+fix(calculator): handle division by zero error
+
+The calculator crashed when users attempted to divide by zero.
+Now shows a friendly error message instead.
+
+Closes #42
+
+# ✅ CORRECTO - Docs simple
+docs(readme): update installation instructions
+
+# ✅ CORRECTO - Refactor con impacto
+refactor(exercises): restructure starter code format
+
+BREAKING CHANGE: Exercise format changed from TODOs to
+uncomment-based learning. Update all existing exercises.
+
+# ❌ INCORRECTO - Vago, sin contexto
+fix: bug
+
+# ❌ INCORRECTO - En español
+feat: agregar contenido de la semana 2
+
+# ❌ INCORRECTO - Demasiado largo en una línea
+feat(week-01): add all the theory files for variables and types and also operators and input output
+```
+
+#### Scope Sugeridos
+
+- `week-XX` - Contenido de semana específica
+- `docs` - Documentación general
+- `assets` - Recursos visuales
+- `config` - Configuración del proyecto
+- `ci` - GitHub Actions y CI/CD
+- `docker` - Configuración de contenedores
+
+---
+
+## �📊 Evaluación
 
 Cada semana incluye **tres tipos de evidencias**:
 
