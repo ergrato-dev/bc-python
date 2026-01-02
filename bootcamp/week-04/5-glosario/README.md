@@ -86,11 +86,11 @@ Cadena de documentación que describe qué hace una función, sus parámetros y 
 def add(a: int, b: int) -> int:
     """
     Suma dos números enteros.
-    
+
     Args:
         a: Primer número
         b: Segundo número
-    
+
     Returns:
         La suma de a y b
     """
