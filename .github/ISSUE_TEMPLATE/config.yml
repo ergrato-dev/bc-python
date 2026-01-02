@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/epti-dev/bc-python/discussions
+    about: Para preguntas generales, usa GitHub Discussions en lugar de Issues
+  - name: 📚 Documentación
+    url: https://github.com/epti-dev/bc-python/tree/main/_docs
+    about: Revisa la documentación antes de abrir un issue
+  - name: 🔒 Reportar Vulnerabilidad
+    url: https://github.com/epti-dev/bc-python/security/advisories/new
+    about: Para reportar vulnerabilidades de seguridad, usa Security Advisories

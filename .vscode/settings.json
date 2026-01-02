@@ -1,0 +1,95 @@
+{
+  // Python
+  "python.defaultInterpreterPath": "/usr/local/bin/python",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+
+  // Editor
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "editor.rulers": [88, 120],
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  // Files
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.pyc": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true
+  },
+
+  // Ruff (linter/formatter)
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true
+  },
+  "ruff.lint.args": ["--select=E,F,W,I,N,UP"],
+
+  // Markdown
+  "[markdown]": {
+    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "markdown.preview.fontSize": 14,
+
+  // Git
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+
+  // Spell checker
+  "cSpell.language": "en,es",
+  "cSpell.enableFiletypes": ["markdown", "python"],
+
+  // Todo Tree
+  "todo-tree.general.tags": ["TODO", "FIXME", "BUG", "HACK", "XXX", "NOTE"],
+
+  // Error Lens
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+
+  // Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "python": true
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#3c84bf",
+    "activityBar.background": "#3c84bf",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#e8b6d2",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#3c84bf",
+    "sideBar.border": "#3c84bf",
+    "statusBar.background": "#306998",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#3c84bf",
+    "statusBarItem.remoteBackground": "#306998",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#306998",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#30699899",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#306998"
+}

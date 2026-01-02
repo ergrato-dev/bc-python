@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <!-- Background -->
+  <rect width="800" height="200" fill="#1a1a2e"/>
+
+  <!-- Decorative grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#252542" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="200" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Python Logo Stylized (Left side) -->
+  <g transform="translate(60, 100)">
+    <!-- Blue snake part -->
+    <path d="M-30,-40 Q-30,-60 -10,-60 L30,-60 Q50,-60 50,-40 L50,-10 Q50,10 30,10 L10,10 L10,25"
+          fill="none" stroke="#306998" stroke-width="12" stroke-linecap="round"/>
+    <!-- Yellow snake part -->
+    <path d="M30,40 Q30,60 10,60 L-30,60 Q-50,60 -50,40 L-50,10 Q-50,-10 -30,-10 L-10,-10 L-10,-25"
+          fill="none" stroke="#FFD43B" stroke-width="12" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <circle cx="-15" cy="-45" r="5" fill="#1a1a2e"/>
+    <circle cx="15" cy="45" r="5" fill="#1a1a2e"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="150" y="75" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="#ffffff">
+    Bootcamp Python
+  </text>
+
+  <!-- Subtitle with gradient effect using two colors -->
+  <text x="150" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="bold">
+    <tspan fill="#306998">Zero</tspan>
+    <tspan fill="#ffffff"> to </tspan>
+    <tspan fill="#FFD43B">Hero</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="150" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#8892b0" letter-spacing="2">
+    DE PRINCIPIANTE A DESARROLLADOR EN 14 SEMANAS
+  </text>
+
+  <!-- Stats badges (right side) -->
+  <g transform="translate(620, 50)">
+    <!-- 14 Weeks badge -->
+    <rect x="0" y="0" width="80" height="30" rx="4" fill="#306998"/>
+    <text x="40" y="20" font-family="system-ui, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">14 SEMANAS</text>
+
+    <!-- 84 Hours badge -->
+    <rect x="90" y="0" width="70" height="30" rx="4" fill="#FFD43B"/>
+    <text x="125" y="20" font-family="system-ui, sans-serif" font-size="12" fill="#1a1a2e" text-anchor="middle" font-weight="bold">84 HORAS</text>
+  </g>
+
+  <!-- Python version badge -->
+  <g transform="translate(620, 95)">
+    <rect x="0" y="0" width="160" height="30" rx="4" fill="#252542"/>
+    <text x="80" y="20" font-family="system-ui, sans-serif" font-size="12" fill="#8892b0" text-anchor="middle">
+      <tspan fill="#FFD43B">🐍</tspan> Python 3.13+ Modern
+    </text>
+  </g>
+
+  <!-- Tech stack icons (bottom right) -->
+  <g transform="translate(620, 140)">
+    <rect x="0" y="0" width="160" height="25" rx="4" fill="#252542"/>
+    <text x="80" y="17" font-family="system-ui, sans-serif" font-size="10" fill="#8892b0" text-anchor="middle">
+      pytest • Docker • uv • Git
+    </text>
+  </g>
+
+  <!-- Decorative corner accents -->
+  <path d="M0,0 L50,0 L50,5 L5,5 L5,50 L0,50 Z" fill="#306998"/>
+  <path d="M800,200 L750,200 L750,195 L795,195 L795,150 L800,150 Z" fill="#FFD43B"/>
+
+  <!-- Code decoration -->
+  <g transform="translate(490, 55)" opacity="0.3">
+    <text font-family="monospace" font-size="10" fill="#306998">
+      <tspan x="0" y="0">def learn_python():</tspan>
+      <tspan x="0" y="14">    return "hero"</tspan>
+    </text>
+  </g>
+</svg>
