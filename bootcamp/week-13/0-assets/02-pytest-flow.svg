@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90d9"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="450" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="26" font-weight="bold">Flujo de Ejecución de pytest</text>
+
+  <!-- Step 1: Discovery -->
+  <rect x="30" y="90" width="140" height="80" rx="10" fill="#306998" stroke="#4a90d9" stroke-width="2"/>
+  <text x="100" y="125" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">1. Discovery</text>
+  <text x="100" y="145" text-anchor="middle" fill="#a0d0ff" font-family="Inter, sans-serif" font-size="11">Buscar test_*.py</text>
+  <text x="100" y="160" text-anchor="middle" fill="#a0d0ff" font-family="Inter, sans-serif" font-size="11">Encontrar Test*</text>
+
+  <!-- Arrow 1-2 -->
+  <line x1="170" y1="130" x2="210" y2="130" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2: Collection -->
+  <rect x="220" y="90" width="140" height="80" rx="10" fill="#306998" stroke="#4a90d9" stroke-width="2"/>
+  <text x="290" y="125" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">2. Collection</text>
+  <text x="290" y="145" text-anchor="middle" fill="#a0d0ff" font-family="Inter, sans-serif" font-size="11">Recopilar tests</text>
+  <text x="290" y="160" text-anchor="middle" fill="#a0d0ff" font-family="Inter, sans-serif" font-size="11">Aplicar markers</text>
+
+  <!-- Arrow 2-3 -->
+  <line x1="360" y1="130" x2="400" y2="130" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 3: conftest -->
+  <rect x="410" y="90" width="140" height="80" rx="10" fill="#FFD43B" stroke="#ffd700" stroke-width="2"/>
+  <text x="480" y="125" text-anchor="middle" fill="#1a1a2e" font-family="Inter, sans-serif" font-size="14" font-weight="bold">3. Load Fixtures</text>
+  <text x="480" y="145" text-anchor="middle" fill="#333333" font-family="Inter, sans-serif" font-size="11">conftest.py</text>
+  <text x="480" y="160" text-anchor="middle" fill="#333333" font-family="Inter, sans-serif" font-size="11">@pytest.fixture</text>
+
+  <!-- Arrow 3-4 -->
+  <line x1="550" y1="130" x2="590" y2="130" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 4: Setup -->
+  <rect x="600" y="90" width="140" height="80" rx="10" fill="#27ae60" stroke="#2ecc71" stroke-width="2"/>
+  <text x="670" y="125" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">4. Setup</text>
+  <text x="670" y="145" text-anchor="middle" fill="#a0ffa0" font-family="Inter, sans-serif" font-size="11">Ejecutar fixtures</text>
+  <text x="670" y="160" text-anchor="middle" fill="#a0ffa0" font-family="Inter, sans-serif" font-size="11">Preparar entorno</text>
+
+  <!-- Arrow 4-5 -->
+  <line x1="740" y1="130" x2="780" y2="130" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 5: Execute -->
+  <rect x="790" y="90" width="90" height="80" rx="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="835" y="125" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">5. Run</text>
+  <text x="835" y="145" text-anchor="middle" fill="#d0a0ff" font-family="Inter, sans-serif" font-size="11">test_*()</text>
+
+  <!-- Arrow down from Execute -->
+  <line x1="835" y1="170" x2="835" y2="210" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 6: Assert -->
+  <rect x="770" y="220" width="110" height="70" rx="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="825" y="250" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">6. Assert</text>
+  <text x="825" y="270" text-anchor="middle" fill="#ffcccc" font-family="Inter, sans-serif" font-size="11">Verificar</text>
+
+  <!-- Arrow from Assert -->
+  <line x1="770" y1="255" x2="680" y2="255" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 7: Teardown -->
+  <rect x="540" y="220" width="130" height="70" rx="10" fill="#27ae60" stroke="#2ecc71" stroke-width="2"/>
+  <text x="605" y="250" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">7. Teardown</text>
+  <text x="605" y="270" text-anchor="middle" fill="#a0ffa0" font-family="Inter, sans-serif" font-size="11">Limpiar (yield)</text>
+
+  <!-- Arrow from Teardown -->
+  <line x1="540" y1="255" x2="430" y2="255" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 8: Report -->
+  <rect x="290" y="220" width="130" height="70" rx="10" fill="#306998" stroke="#4a90d9" stroke-width="2"/>
+  <text x="355" y="250" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">8. Report</text>
+  <text x="355" y="270" text-anchor="middle" fill="#a0d0ff" font-family="Inter, sans-serif" font-size="11">✓ PASSED / ✗ FAILED</text>
+
+  <!-- Results boxes -->
+  <rect x="100" y="320" width="300" height="100" rx="8" fill="#1e3a5f" stroke="#306998" stroke-width="1"/>
+  <text x="250" y="345" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="13" font-weight="bold">Resultado PASSED ✓</text>
+  <text x="120" y="370" fill="#2ecc71" font-family="monospace" font-size="11">test_add PASSED</text>
+  <text x="120" y="390" fill="#2ecc71" font-family="monospace" font-size="11">test_subtract PASSED</text>
+  <text x="120" y="410" fill="#a0d0ff" font-family="monospace" font-size="11">2 passed in 0.03s</text>
+
+  <rect x="500" y="320" width="300" height="100" rx="8" fill="#3d1e1e" stroke="#e74c3c" stroke-width="1"/>
+  <text x="650" y="345" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="13" font-weight="bold">Resultado FAILED ✗</text>
+  <text x="520" y="370" fill="#e74c3c" font-family="monospace" font-size="11">test_divide FAILED</text>
+  <text x="520" y="390" fill="#ff9999" font-family="monospace" font-size="11">AssertionError: 5 != 4</text>
+  <text x="520" y="410" fill="#ffcccc" font-family="monospace" font-size="11">1 failed in 0.02s</text>
+
+  <!-- Connecting lines to results -->
+  <line x1="355" y1="290" x2="250" y2="320" stroke="#2ecc71" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="355" y1="290" x2="650" y2="320" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+</svg>
