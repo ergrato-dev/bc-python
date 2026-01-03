@@ -6,14 +6,14 @@
 
 ## 📚 Cheat Sheets Disponibles
 
-| Archivo | Descripción | Semanas |
-|---------|-------------|---------|
-| [python-basics.md](python-basics.md) | Variables, tipos, operadores, strings, I/O, funciones | 1-4 |
-| [data-structures.md](data-structures.md) | Listas, tuplas, diccionarios, sets, comprensiones | 5-7 |
-| [oop-python.md](oop-python.md) | Clases, herencia, propiedades, dataclasses, patrones | 8-10 |
-| [file-handling.md](file-handling.md) | Archivos, JSON, CSV, excepciones, context managers | 11-12 |
-| [testing-debugging.md](testing-debugging.md) | pytest, fixtures, mocking, logging, debugging | 13 |
-| [complete-reference.md](complete-reference.md) | Referencia completa unificada | Todas |
+| Archivo | PDF | Descripción | Semanas |
+|---------|-----|-------------|---------|
+| [python-basics.md](python-basics.md) | [📄 PDF](python-basics.pdf) | Variables, tipos, operadores, strings, I/O, funciones | 1-4 |
+| [data-structures.md](data-structures.md) | [📄 PDF](data-structures.pdf) | Listas, tuplas, diccionarios, sets, comprensiones | 5-7 |
+| [oop-python.md](oop-python.md) | [📄 PDF](oop-python.pdf) | Clases, herencia, propiedades, dataclasses, patrones | 8-10 |
+| [file-handling.md](file-handling.md) | [📄 PDF](file-handling.pdf) | Archivos, JSON, CSV, excepciones, context managers | 11-12 |
+| [testing-debugging.md](testing-debugging.md) | [📄 PDF](testing-debugging.pdf) | pytest, fixtures, mocking, logging, debugging | 13 |
+| [complete-reference.md](complete-reference.md) | [📄 PDF](complete-reference.pdf) | Referencia completa unificada | Todas |
 
 ---
 
@@ -35,7 +35,17 @@
 
 Cada cheat sheet está disponible en:
 - **Markdown (.md)**: Para visualizar en GitHub/VS Code
-- **PDF (.pdf)**: Para imprimir (próximamente)
+- **PDF (.pdf)**: Para imprimir o leer offline
+
+### Generar PDFs
+
+Si necesitas regenerar los PDFs, ejecuta el script incluido:
+
+```bash
+# Requisitos: pandoc, texlive
+cd _docs/cheatsheets
+./generate-pdfs.sh
+```
 
 ---
 
