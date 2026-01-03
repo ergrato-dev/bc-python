@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="50%" style="stop-color:#FFA500"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+    <linearGradient id="pythonBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#306998"/>
+      <stop offset="100%" style="stop-color:#1a4971"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Decorative elements - celebration -->
+  <circle cx="50" cy="40" r="3" fill="#FFD700" opacity="0.8"/>
+  <circle cx="100" cy="60" r="2" fill="#FFD43B" opacity="0.6"/>
+  <circle cx="750" cy="50" r="3" fill="#FFD700" opacity="0.8"/>
+  <circle cx="700" cy="70" r="2" fill="#FFD43B" opacity="0.6"/>
+  <circle cx="80" cy="150" r="2" fill="#4a90d9" opacity="0.5"/>
+  <circle cx="720" cy="140" r="2" fill="#4a90d9" opacity="0.5"/>
+
+  <!-- Stars decoration -->
+  <polygon points="150,30 152,36 158,36 153,40 155,46 150,42 145,46 147,40 142,36 148,36" fill="#FFD700" opacity="0.7"/>
+  <polygon points="650,35 652,41 658,41 653,45 655,51 650,47 645,51 647,45 642,41 648,41" fill="#FFD700" opacity="0.7"/>
+
+  <!-- Trophy icon -->
+  <g transform="translate(60, 70)">
+    <path d="M25,0 L55,0 L55,15 Q55,35 40,45 Q25,35 25,15 Z" fill="url(#goldGrad)" stroke="#FFA500" stroke-width="2"/>
+    <rect x="35" y="45" width="10" height="15" fill="#FFD700"/>
+    <rect x="28" y="58" width="24" height="6" rx="2" fill="#FFD700"/>
+    <ellipse cx="40" cy="20" rx="8" ry="6" fill="#FFED4A" opacity="0.5"/>
+    <!-- Trophy handles -->
+    <path d="M25,8 Q10,8 10,20 Q10,28 20,28" fill="none" stroke="url(#goldGrad)" stroke-width="4"/>
+    <path d="M55,8 Q70,8 70,20 Q70,28 60,28" fill="none" stroke="url(#goldGrad)" stroke-width="4"/>
+  </g>
+
+  <!-- Week number badge -->
+  <circle cx="720" cy="100" r="40" fill="url(#pythonBlue)" stroke="#4a90d9" stroke-width="3"/>
+  <text x="720" y="95" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="bold">SEMANA</text>
+  <text x="720" y="118" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="24" font-weight="bold">14</text>
+
+  <!-- Main title -->
+  <text x="400" y="85" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="36" font-weight="bold">🎓 Proyecto Final</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="120" text-anchor="middle" fill="#FFD43B" font-family="Inter, sans-serif" font-size="20">Weather Dashboard CLI</text>
+
+  <!-- Description line -->
+  <text x="400" y="155" text-anchor="middle" fill="#a0a0a0" font-family="Inter, sans-serif" font-size="14">Integración de todos los conceptos del bootcamp</text>
+
+  <!-- Bottom accent line with gradient -->
+  <rect x="200" y="175" width="400" height="4" rx="2" fill="url(#goldGrad)"/>
+
+  <!-- Completion badge -->
+  <g transform="translate(140, 85)">
+    <rect x="0" y="0" width="80" height="24" rx="12" fill="#27ae60" stroke="#2ecc71" stroke-width="1"/>
+    <text x="40" y="16" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="10" font-weight="bold">🏆 FINAL</text>
+  </g>
+
+  <!-- Tech tags -->
+  <g transform="translate(280, 165)">
+    <rect x="0" y="0" width="60" height="18" rx="9" fill="#306998" opacity="0.8"/>
+    <text x="30" y="13" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">requests</text>
+  </g>
+  <g transform="translate(350, 165)">
+    <rect x="0" y="0" width="50" height="18" rx="9" fill="#306998" opacity="0.8"/>
+    <text x="25" y="13" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">pytest</text>
+  </g>
+  <g transform="translate(410, 165)">
+    <rect x="0" y="0" width="40" height="18" rx="9" fill="#306998" opacity="0.8"/>
+    <text x="20" y="13" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">CLI</text>
+  </g>
+  <g transform="translate(460, 165)">
+    <rect x="0" y="0" width="40" height="18" rx="9" fill="#306998" opacity="0.8"/>
+    <text x="20" y="13" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="9">API</text>
+  </g>
+</svg>
