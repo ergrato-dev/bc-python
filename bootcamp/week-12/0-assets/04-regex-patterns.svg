@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <!-- Background -->
+  <rect width="800" height="550" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#4fc3f7" text-anchor="middle">Regex Pattern Components</text>
+
+  <!-- Pattern anatomy -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="700" height="100" rx="8" fill="#252540" stroke="#306998" stroke-width="2"/>
+    <text x="350" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFD43B" text-anchor="middle">Pattern Anatomy: Email Validation</text>
+
+    <!-- Pattern display -->
+    <text x="50" y="55" font-family="monospace" font-size="14" fill="#4fc3f7">r"</text>
+    <text x="70" y="55" font-family="monospace" font-size="14" fill="#c792ea">^</text>
+    <text x="82" y="55" font-family="monospace" font-size="14" fill="#82aaff">[a-zA-Z0-9._%+-]</text>
+    <text x="230" y="55" font-family="monospace" font-size="14" fill="#4CAF50">+</text>
+    <text x="245" y="55" font-family="monospace" font-size="14" fill="#f78c6c">@</text>
+    <text x="262" y="55" font-family="monospace" font-size="14" fill="#82aaff">[a-zA-Z0-9.-]</text>
+    <text x="385" y="55" font-family="monospace" font-size="14" fill="#4CAF50">+</text>
+    <text x="400" y="55" font-family="monospace" font-size="14" fill="#f78c6c">\.</text>
+    <text x="425" y="55" font-family="monospace" font-size="14" fill="#82aaff">[a-zA-Z]</text>
+    <text x="512" y="55" font-family="monospace" font-size="14" fill="#4CAF50">{2,}</text>
+    <text x="555" y="55" font-family="monospace" font-size="14" fill="#c792ea">$</text>
+    <text x="567" y="55" font-family="monospace" font-size="14" fill="#4fc3f7">"</text>
+
+    <!-- Labels -->
+    <text x="75" y="85" font-family="Arial, sans-serif" font-size="9" fill="#c792ea" text-anchor="middle">start</text>
+    <text x="155" y="85" font-family="Arial, sans-serif" font-size="9" fill="#82aaff" text-anchor="middle">char class</text>
+    <text x="235" y="85" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50" text-anchor="middle">1+</text>
+    <text x="252" y="85" font-family="Arial, sans-serif" font-size="9" fill="#f78c6c" text-anchor="middle">literal</text>
+    <text x="330" y="85" font-family="Arial, sans-serif" font-size="9" fill="#82aaff" text-anchor="middle">char class</text>
+    <text x="412" y="85" font-family="Arial, sans-serif" font-size="9" fill="#f78c6c" text-anchor="middle">escaped</text>
+    <text x="530" y="85" font-family="Arial, sans-serif" font-size="9" fill="#4CAF50" text-anchor="middle">2+ times</text>
+    <text x="560" y="85" font-family="Arial, sans-serif" font-size="9" fill="#c792ea" text-anchor="middle">end</text>
+  </g>
+
+  <!-- Metacharacters Section -->
+  <g transform="translate(30, 180)">
+    <rect x="0" y="0" width="230" height="170" rx="8" fill="#252540" stroke="#c792ea" stroke-width="1"/>
+    <text x="115" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c792ea" text-anchor="middle">Metacharacters</text>
+
+    <text x="15" y="48" font-family="monospace" font-size="11" fill="#c792ea">.</text>
+    <text x="40" y="48" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Any char (except \n)</text>
+
+    <text x="15" y="68" font-family="monospace" font-size="11" fill="#c792ea">^</text>
+    <text x="40" y="68" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Start of string</text>
+
+    <text x="15" y="88" font-family="monospace" font-size="11" fill="#c792ea">$</text>
+    <text x="40" y="88" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">End of string</text>
+
+    <text x="15" y="108" font-family="monospace" font-size="11" fill="#c792ea">\d</text>
+    <text x="40" y="108" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Digit [0-9]</text>
+
+    <text x="15" y="128" font-family="monospace" font-size="11" fill="#c792ea">\w</text>
+    <text x="40" y="128" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Word char [a-zA-Z0-9_]</text>
+
+    <text x="15" y="148" font-family="monospace" font-size="11" fill="#c792ea">\s</text>
+    <text x="40" y="148" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Whitespace</text>
+
+    <text x="15" y="165" font-family="monospace" font-size="11" fill="#c792ea">\b</text>
+    <text x="40" y="165" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Word boundary</text>
+  </g>
+
+  <!-- Quantifiers Section -->
+  <g transform="translate(280, 180)">
+    <rect x="0" y="0" width="230" height="170" rx="8" fill="#252540" stroke="#4CAF50" stroke-width="1"/>
+    <text x="115" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4CAF50" text-anchor="middle">Quantifiers</text>
+
+    <text x="15" y="48" font-family="monospace" font-size="11" fill="#4CAF50">*</text>
+    <text x="40" y="48" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">0 or more (greedy)</text>
+
+    <text x="15" y="68" font-family="monospace" font-size="11" fill="#4CAF50">+</text>
+    <text x="40" y="68" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">1 or more (greedy)</text>
+
+    <text x="15" y="88" font-family="monospace" font-size="11" fill="#4CAF50">?</text>
+    <text x="40" y="88" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">0 or 1 (optional)</text>
+
+    <text x="15" y="108" font-family="monospace" font-size="11" fill="#4CAF50">{n}</text>
+    <text x="55" y="108" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Exactly n times</text>
+
+    <text x="15" y="128" font-family="monospace" font-size="11" fill="#4CAF50">{n,m}</text>
+    <text x="65" y="128" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Between n and m</text>
+
+    <text x="15" y="148" font-family="monospace" font-size="11" fill="#4CAF50">*?</text>
+    <text x="40" y="148" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Non-greedy (lazy)</text>
+
+    <text x="15" y="165" font-family="monospace" font-size="11" fill="#4CAF50">+?</text>
+    <text x="40" y="165" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Non-greedy 1+</text>
+  </g>
+
+  <!-- Groups Section -->
+  <g transform="translate(530, 180)">
+    <rect x="0" y="0" width="240" height="170" rx="8" fill="#252540" stroke="#82aaff" stroke-width="1"/>
+    <text x="120" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#82aaff" text-anchor="middle">Groups &amp; Alternation</text>
+
+    <text x="15" y="48" font-family="monospace" font-size="11" fill="#82aaff">(...)</text>
+    <text x="55" y="48" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Capture group</text>
+
+    <text x="15" y="68" font-family="monospace" font-size="11" fill="#82aaff">(?:...)</text>
+    <text x="70" y="68" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Non-capturing</text>
+
+    <text x="15" y="88" font-family="monospace" font-size="11" fill="#82aaff">(?P&lt;name&gt;)</text>
+    <text x="105" y="88" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Named group</text>
+
+    <text x="15" y="108" font-family="monospace" font-size="11" fill="#82aaff">a|b</text>
+    <text x="50" y="108" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Either a or b</text>
+
+    <text x="15" y="128" font-family="monospace" font-size="11" fill="#82aaff">[abc]</text>
+    <text x="60" y="128" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Character class</text>
+
+    <text x="15" y="148" font-family="monospace" font-size="11" fill="#82aaff">[^abc]</text>
+    <text x="65" y="148" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Negated class</text>
+
+    <text x="15" y="165" font-family="monospace" font-size="11" fill="#82aaff">[a-z]</text>
+    <text x="60" y="165" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Range</text>
+  </g>
+
+  <!-- re Module Functions -->
+  <g transform="translate(30, 370)">
+    <rect x="0" y="0" width="360" height="160" rx="8" fill="#252540" stroke="#FFD43B" stroke-width="1"/>
+    <text x="180" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">re Module Functions</text>
+
+    <text x="15" y="48" font-family="monospace" font-size="11" fill="#82aaff">re.match</text>
+    <text x="90" y="48" font-family="monospace" font-size="11" fill="#a0a0a0">(pattern, string)</text>
+    <text x="240" y="48" font-family="Arial, sans-serif" font-size="10" fill="#888">Match at start</text>
+
+    <text x="15" y="68" font-family="monospace" font-size="11" fill="#82aaff">re.search</text>
+    <text x="95" y="68" font-family="monospace" font-size="11" fill="#a0a0a0">(pattern, string)</text>
+    <text x="245" y="68" font-family="Arial, sans-serif" font-size="10" fill="#888">First match</text>
+
+    <text x="15" y="88" font-family="monospace" font-size="11" fill="#82aaff">re.findall</text>
+    <text x="100" y="88" font-family="monospace" font-size="11" fill="#a0a0a0">(pattern, string)</text>
+    <text x="250" y="88" font-family="Arial, sans-serif" font-size="10" fill="#888">All matches</text>
+
+    <text x="15" y="108" font-family="monospace" font-size="11" fill="#82aaff">re.finditer</text>
+    <text x="105" y="108" font-family="monospace" font-size="11" fill="#a0a0a0">(pattern, string)</text>
+    <text x="255" y="108" font-family="Arial, sans-serif" font-size="10" fill="#888">Iterator</text>
+
+    <text x="15" y="128" font-family="monospace" font-size="11" fill="#82aaff">re.sub</text>
+    <text x="70" y="128" font-family="monospace" font-size="11" fill="#a0a0a0">(pattern, repl, string)</text>
+    <text x="235" y="128" font-family="Arial, sans-serif" font-size="10" fill="#888">Replace</text>
+
+    <text x="15" y="148" font-family="monospace" font-size="11" fill="#82aaff">re.compile</text>
+    <text x="100" y="148" font-family="monospace" font-size="11" fill="#a0a0a0">(pattern)</text>
+    <text x="180" y="148" font-family="Arial, sans-serif" font-size="10" fill="#888">Compile for reuse</text>
+  </g>
+
+  <!-- Flags Section -->
+  <g transform="translate(410, 370)">
+    <rect x="0" y="0" width="360" height="160" rx="8" fill="#252540" stroke="#f44336" stroke-width="1"/>
+    <text x="180" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f44336" text-anchor="middle">Flags (Modifiers)</text>
+
+    <text x="15" y="48" font-family="monospace" font-size="11" fill="#f44336">re.IGNORECASE</text>
+    <text x="130" y="48" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Case insensitive</text>
+    <text x="240" y="48" font-family="monospace" font-size="10" fill="#888">re.I</text>
+
+    <text x="15" y="68" font-family="monospace" font-size="11" fill="#f44336">re.MULTILINE</text>
+    <text x="125" y="68" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">^ $ per line</text>
+    <text x="220" y="68" font-family="monospace" font-size="10" fill="#888">re.M</text>
+
+    <text x="15" y="88" font-family="monospace" font-size="11" fill="#f44336">re.DOTALL</text>
+    <text x="105" y="88" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">. matches \n</text>
+    <text x="200" y="88" font-family="monospace" font-size="10" fill="#888">re.S</text>
+
+    <text x="15" y="108" font-family="monospace" font-size="11" fill="#f44336">re.VERBOSE</text>
+    <text x="115" y="108" font-family="Arial, sans-serif" font-size="10" fill="#a0a0a0">Allow comments</text>
+    <text x="230" y="108" font-family="monospace" font-size="10" fill="#888">re.X</text>
+
+    <!-- Usage example -->
+    <text x="15" y="135" font-family="Arial, sans-serif" font-size="10" fill="#888">Usage:</text>
+    <text x="15" y="152" font-family="monospace" font-size="10" fill="#a0a0a0">re.search(r"\d+", s, re.I | re.M)</text>
+  </g>
+</svg>

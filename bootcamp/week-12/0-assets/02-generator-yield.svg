@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4fc3f7"/>
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4CAF50"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#4fc3f7" text-anchor="middle">Generator Flow: yield Pauses and Resumes</text>
+
+  <!-- Generator Function Code -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="250" height="140" rx="8" fill="#252540" stroke="#306998" stroke-width="2"/>
+    <text x="125" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">Generator Function</text>
+    <text x="15" y="48" font-family="monospace" font-size="11" fill="#89ddff">def</text>
+    <text x="42" y="48" font-family="monospace" font-size="11" fill="#82aaff"> countdown</text>
+    <text x="115" y="48" font-family="monospace" font-size="11" fill="#a0a0a0">(n):</text>
+    <text x="25" y="68" font-family="monospace" font-size="11" fill="#89ddff">while</text>
+    <text x="62" y="68" font-family="monospace" font-size="11" fill="#a0a0a0"> n > 0:</text>
+    <text x="35" y="88" font-family="monospace" font-size="11" fill="#c792ea">yield</text>
+    <text x="72" y="88" font-family="monospace" font-size="11" fill="#f78c6c"> n</text>
+    <text x="90" y="88" font-family="monospace" font-size="11" fill="#888">  # ← pause</text>
+    <text x="35" y="108" font-family="monospace" font-size="11" fill="#a0a0a0">n -= 1</text>
+    <text x="95" y="108" font-family="monospace" font-size="11" fill="#888"># ← resume</text>
+    <text x="15" y="128" font-family="monospace" font-size="11" fill="#89ddff">print</text>
+    <text x="48" y="128" font-family="monospace" font-size="11" fill="#a0a0a0">("Done!")</text>
+  </g>
+
+  <!-- Execution Timeline -->
+  <g transform="translate(310, 60)">
+    <rect x="0" y="0" width="460" height="140" rx="8" fill="#252540" stroke="#4CAF50" stroke-width="2"/>
+    <text x="230" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4CAF50" text-anchor="middle">Execution Timeline</text>
+
+    <!-- Timeline line -->
+    <line x1="30" y1="80" x2="430" y2="80" stroke="#555" stroke-width="2"/>
+
+    <!-- State 1: Created -->
+    <circle cx="50" cy="80" r="12" fill="#1e3a5f" stroke="#4fc3f7" stroke-width="2"/>
+    <text x="50" y="84" font-family="Arial, sans-serif" font-size="10" fill="#4fc3f7" text-anchor="middle">1</text>
+    <text x="50" y="55" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">create</text>
+    <text x="50" y="105" font-family="monospace" font-size="9" fill="#a0a0a0" text-anchor="middle">gen=f(3)</text>
+
+    <!-- State 2: First yield -->
+    <circle cx="130" cy="80" r="12" fill="#2d4a2d" stroke="#4CAF50" stroke-width="2"/>
+    <text x="130" y="84" font-family="Arial, sans-serif" font-size="10" fill="#4CAF50" text-anchor="middle">2</text>
+    <text x="130" y="55" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">next()</text>
+    <text x="130" y="105" font-family="monospace" font-size="9" fill="#4CAF50" text-anchor="middle">→ 3</text>
+
+    <!-- State 3: Second yield -->
+    <circle cx="210" cy="80" r="12" fill="#2d4a2d" stroke="#4CAF50" stroke-width="2"/>
+    <text x="210" y="84" font-family="Arial, sans-serif" font-size="10" fill="#4CAF50" text-anchor="middle">3</text>
+    <text x="210" y="55" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">next()</text>
+    <text x="210" y="105" font-family="monospace" font-size="9" fill="#4CAF50" text-anchor="middle">→ 2</text>
+
+    <!-- State 4: Third yield -->
+    <circle cx="290" cy="80" r="12" fill="#2d4a2d" stroke="#4CAF50" stroke-width="2"/>
+    <text x="290" y="84" font-family="Arial, sans-serif" font-size="10" fill="#4CAF50" text-anchor="middle">4</text>
+    <text x="290" y="55" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">next()</text>
+    <text x="290" y="105" font-family="monospace" font-size="9" fill="#4CAF50" text-anchor="middle">→ 1</text>
+
+    <!-- State 5: Exhausted -->
+    <circle cx="370" cy="80" r="12" fill="#5a2d2d" stroke="#f44336" stroke-width="2"/>
+    <text x="370" y="84" font-family="Arial, sans-serif" font-size="10" fill="#f44336" text-anchor="middle">5</text>
+    <text x="370" y="55" font-family="Arial, sans-serif" font-size="9" fill="#888" text-anchor="middle">next()</text>
+    <text x="370" y="105" font-family="monospace" font-size="8" fill="#f44336" text-anchor="middle">StopIteration</text>
+  </g>
+
+  <!-- yield vs return comparison -->
+  <g transform="translate(30, 220)">
+    <rect x="0" y="0" width="350" height="130" rx="8" fill="#252540" stroke="#306998" stroke-width="1"/>
+    <text x="175" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">yield vs return</text>
+
+    <!-- return side -->
+    <text x="20" y="50" font-family="monospace" font-size="11" fill="#c792ea">return</text>
+    <text x="70" y="50" font-family="monospace" font-size="11" fill="#a0a0a0"> [1, 2, 3]</text>
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="10" fill="#888">• Creates full list in memory</text>
+    <text x="20" y="85" font-family="Arial, sans-serif" font-size="10" fill="#888">• Returns once, function ends</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="10" fill="#f44336">• Memory: O(n)</text>
+
+    <!-- Divider -->
+    <line x1="175" y1="40" x2="175" y2="120" stroke="#555" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- yield side -->
+    <text x="190" y="50" font-family="monospace" font-size="11" fill="#c792ea">yield</text>
+    <text x="228" y="50" font-family="monospace" font-size="11" fill="#a0a0a0"> 1, yield 2, yield 3</text>
+    <text x="190" y="70" font-family="Arial, sans-serif" font-size="10" fill="#888">• One value at a time</text>
+    <text x="190" y="85" font-family="Arial, sans-serif" font-size="10" fill="#888">• Pauses, remembers state</text>
+    <text x="190" y="100" font-family="Arial, sans-serif" font-size="10" fill="#4CAF50">• Memory: O(1)</text>
+  </g>
+
+  <!-- Generator Expression -->
+  <g transform="translate(400, 220)">
+    <rect x="0" y="0" width="370" height="130" rx="8" fill="#252540" stroke="#4CAF50" stroke-width="1"/>
+    <text x="185" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4CAF50" text-anchor="middle">Generator Expression</text>
+
+    <text x="20" y="48" font-family="monospace" font-size="11" fill="#888"># List comprehension (eager)</text>
+    <text x="20" y="65" font-family="monospace" font-size="11" fill="#a0a0a0">[x**2</text>
+    <text x="60" y="65" font-family="monospace" font-size="11" fill="#89ddff"> for</text>
+    <text x="88" y="65" font-family="monospace" font-size="11" fill="#a0a0a0"> x</text>
+    <text x="100" y="65" font-family="monospace" font-size="11" fill="#89ddff"> in</text>
+    <text x="122" y="65" font-family="monospace" font-size="11" fill="#a0a0a0"> range(n)]</text>
+
+    <text x="20" y="88" font-family="monospace" font-size="11" fill="#888"># Generator expression (lazy)</text>
+    <text x="20" y="105" font-family="monospace" font-size="11" fill="#4CAF50">(x**2</text>
+    <text x="60" y="105" font-family="monospace" font-size="11" fill="#89ddff"> for</text>
+    <text x="88" y="105" font-family="monospace" font-size="11" fill="#4CAF50"> x</text>
+    <text x="100" y="105" font-family="monospace" font-size="11" fill="#89ddff"> in</text>
+    <text x="122" y="105" font-family="monospace" font-size="11" fill="#4CAF50"> range(n))</text>
+  </g>
+
+  <!-- yield from section -->
+  <g transform="translate(30, 370)">
+    <rect x="0" y="0" width="350" height="130" rx="8" fill="#252540" stroke="#c792ea" stroke-width="1"/>
+    <text x="175" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c792ea" text-anchor="middle">yield from (Delegation)</text>
+
+    <text x="15" y="48" font-family="monospace" font-size="11" fill="#89ddff">def</text>
+    <text x="42" y="48" font-family="monospace" font-size="11" fill="#82aaff"> flatten</text>
+    <text x="95" y="48" font-family="monospace" font-size="11" fill="#a0a0a0">(nested):</text>
+    <text x="25" y="68" font-family="monospace" font-size="11" fill="#89ddff">for</text>
+    <text x="50" y="68" font-family="monospace" font-size="11" fill="#a0a0a0"> item</text>
+    <text x="85" y="68" font-family="monospace" font-size="11" fill="#89ddff"> in</text>
+    <text x="105" y="68" font-family="monospace" font-size="11" fill="#a0a0a0"> nested:</text>
+    <text x="35" y="88" font-family="monospace" font-size="11" fill="#89ddff">if</text>
+    <text x="52" y="88" font-family="monospace" font-size="11" fill="#a0a0a0"> isinstance(item, list):</text>
+    <text x="45" y="108" font-family="monospace" font-size="11" fill="#c792ea">yield from</text>
+    <text x="120" y="108" font-family="monospace" font-size="11" fill="#a0a0a0"> flatten(item)</text>
+  </g>
+
+  <!-- Pipeline concept -->
+  <g transform="translate(400, 370)">
+    <rect x="0" y="0" width="370" height="130" rx="8" fill="#252540" stroke="#FFD43B" stroke-width="1"/>
+    <text x="185" y="22" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFD43B" text-anchor="middle">Generator Pipeline (Lazy Processing)</text>
+
+    <!-- Pipeline boxes -->
+    <rect x="20" y="45" width="80" height="35" rx="4" fill="#1e3a5f" stroke="#4fc3f7" stroke-width="1"/>
+    <text x="60" y="67" font-family="monospace" font-size="10" fill="#4fc3f7" text-anchor="middle">read()</text>
+
+    <line x1="105" y1="62" x2="125" y2="62" stroke="#4fc3f7" stroke-width="1" marker-end="url(#arrowhead)"/>
+
+    <rect x="130" y="45" width="80" height="35" rx="4" fill="#1e3a5f" stroke="#4fc3f7" stroke-width="1"/>
+    <text x="170" y="67" font-family="monospace" font-size="10" fill="#4fc3f7" text-anchor="middle">filter()</text>
+
+    <line x1="215" y1="62" x2="235" y2="62" stroke="#4fc3f7" stroke-width="1" marker-end="url(#arrowhead)"/>
+
+    <rect x="240" y="45" width="80" height="35" rx="4" fill="#1e3a5f" stroke="#4fc3f7" stroke-width="1"/>
+    <text x="280" y="67" font-family="monospace" font-size="10" fill="#4fc3f7" text-anchor="middle">transform()</text>
+
+    <text x="185" y="105" font-family="Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Each step processes one item at a time</text>
+    <text x="185" y="120" font-family="Arial, sans-serif" font-size="10" fill="#4CAF50" text-anchor="middle">✓ Memory efficient for large data</text>
+  </g>
+</svg>
