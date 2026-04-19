@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="_assets/bootcamp-header.svg" alt="Python Zero to Hero Bootcamp" width="800">
+  <img src="assets/bootcamp-header.svg" alt="Python Zero to Hero Bootcamp" width="800">
 </p>
 
 <p align="center">
@@ -62,7 +62,7 @@ Python is the most versatile and in-demand programming language in the world. Th
 Each week includes:
 
 ```
-bootcamp/week-XX/
+bootcamp/week-XX-tema_principal/
 ├── README.md                 # Description and objectives
 ├── rubrica-evaluacion.md     # Evaluation criteria
 ├── 0-assets/                 # Images and diagrams
@@ -132,7 +132,7 @@ code .
 ### 3. Navigate to Current Week
 
 ```bash
-cd bootcamp/week-01
+cd bootcamp/week-01-introduccion_python_y_entorno
 ```
 
 ### 4. Follow Instructions
@@ -233,8 +233,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 </p>
 
 <p align="center">
-  <a href="bootcamp/week-01">Start Week 1</a> •
-  <a href="_docs">View Documentation</a> •
+  <a href="bootcamp/week-01-introduccion_python_y_entorno">Start Week 1</a> •
+  <a href="docs">View Documentation</a> •
   <a href="https://github.com/epti-dev/bc-python/issues">Report Issue</a> •
   <a href="CONTRIBUTING.md">Contribute</a>
 </p>

@@ -43,7 +43,7 @@ Si necesitas regenerar los PDFs, ejecuta el script incluido:
 
 ```bash
 # Requisitos: pandoc, texlive
-cd _docs/cheatsheets
+cd docs/cheatsheets
 ./generate-pdfs.sh
 ```
 

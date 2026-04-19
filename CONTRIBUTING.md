@@ -200,9 +200,9 @@ bc-python/
 │   ├── ISSUE_TEMPLATE/
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── copilot-instructions.md
-├── _assets/                  # Assets globales
-├── _docs/                    # Documentación general
-├── _scripts/                 # Scripts de utilidad
+├── assets/                   # Assets globales
+├── docs/                     # Documentación general
+├── scripts/                  # Scripts de utilidad
 ├── bootcamp/
 │   └── week-XX/
 │       ├── README.md

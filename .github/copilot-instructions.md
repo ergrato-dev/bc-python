@@ -109,9 +109,9 @@ bootcamp/week-XX/
 
 ### 📁 Carpetas Raíz
 
-- **`_assets/`**: Recursos visuales globales (logos, headers, etc.)
-- **`_docs/`**: Documentación general que aplica a todo el bootcamp
-- **`_scripts/`**: Scripts de automatización y utilidades
+- **`assets/`**: Recursos visuales globales (logos, headers, etc.)
+- **`docs/`**: Documentación general que aplica a todo el bootcamp
+- **`scripts/`**: Scripts de automatización y utilidades
 - **`bootcamp/`**: Contenido semanal del bootcamp
 
 ### 📋 Cheat Sheets
@@ -119,7 +119,7 @@ bootcamp/week-XX/
 El bootcamp debe incluir **Cheat Sheets** (hojas de referencia rápida) completos:
 
 ```
-_docs/cheatsheets/
+docs/cheatsheets/
 ├── python-basics.md          # Variables, tipos, operadores
 ├── python-basics.pdf         # Versión PDF para impresión
 ├── data-structures.md        # Listas, diccionarios, sets, tuplas
@@ -965,8 +965,8 @@ Cuando trabajes en este proyecto:
 ## 🔗 Enlaces Importantes
 
 - **Repositorio**: https://github.com/epti-dev/bc-python
-- **Documentación general**: [\_docs/README.md](_docs/README.md)
-- **Primera semana**: [bootcamp/week-01/README.md](bootcamp/week-01/README.md)
+- **Documentación general**: [docs/README.md](docs/README.md)
+- **Primera semana**: [bootcamp/week-01-introduccion_python_y_entorno/README.md](bootcamp/week-01-introduccion_python_y_entorno/README.md)
 
 ---
 
