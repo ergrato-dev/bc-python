@@ -1,53 +1,75 @@
-🌐 Semana 19: HTTP y APIs con httpx
+# Semana 19: HTTP y APIs con httpx
 
 > **Fase 2 — Python Profesional** · _Junior → Mid-level_
 
-## 🎯 Objetivos de Aprendizaje
-
-> 🚧 **Contenido en desarrollo.** Ver el [plan de expansión completo](../../docs/expansion-zero-to-master.md).
+## Objetivos de Aprendizaje
 
 Al finalizar esta semana, serás capaz de:
 
-- 🔲 httpx sync y async: cliente moderno para Python
-- 🔲 Autenticación: Bearer Token, API Key, OAuth2 básico
-- 🔲 Retry logic, timeouts y rate limiting
-- 🔲 Manejo robusto de errores HTTP y excepciones
-- 🔲 Integración con APIs externas de clientes y proveedores
+- Usar **httpx** en modo sync y async con sesiones reutilizables
+- Implementar los esquemas de autenticación más comunes: Bearer Token, API Key, OAuth2 client credentials
+- Hacer APIs resilientes con **tenacity**: retry, backoff exponencial y timeouts
+- Respetar rate limits con token bucket y el header `Retry-After`
+- Validar respuestas de APIs con **Pydantic** y manejar errores HTTP de forma robusta
 
 ---
 
-## 🗂️ Estructura de la Semana
+## Contenidos
+
+| # | Archivo | Tema |
+|---|---------|------|
+| 01 | [httpx — Fundamentos](1-teoria/01-httpx-fundamentos.md) | Sync/async, Client, params, headers, response object |
+| 02 | [Autenticación](1-teoria/02-autenticacion.md) | Bearer Token, API Key, OAuth2 client credentials |
+| 03 | [Resiliencia y Retry](1-teoria/03-resiliencia-retry.md) | tenacity, backoff exponencial, timeouts, circuit breaker |
+| 04 | [Rate Limiting](1-teoria/04-rate-limiting.md) | Token bucket, sliding window, Retry-After |
+| 05 | [Manejo de Errores](1-teoria/05-manejo-errores.md) | HTTPStatusError, ConnectError, validación con Pydantic |
+
+---
+
+## Estructura de la Semana
 
 ```
-week-19-week-19-http_y_apis_httpx/
+week-19-http_y_apis_httpx/
 ├── README.md
 ├── rubrica-evaluacion.md
-├── 0-assets/          # Diagramas y recursos visuales
-├── 1-teoria/          # Material teórico (.md)
-├── 2-ejercicios/      # Ejercicios guiados
-├── 3-proyecto/        # Proyecto semanal integrador
-│   ├── README.md
-│   ├── starter/       # Código inicial
-│   └── solution/      # ⚠️ Solo instructores
+├── 0-assets/               # SVGs de apoyo a la teoría
+├── 1-teoria/               # 5 archivos .md
+├── 2-ejercicios/
+│   ├── 01-ejercicio-httpx-basico/
+│   ├── 02-ejercicio-autenticacion/
+│   ├── 03-ejercicio-retry-tenacity/
+│   └── 04-ejercicio-pydantic-responses/
+├── 3-proyecto/
+│   ├── README.md           # Studio BC API Client
+│   ├── starter/
+│   └── solution/
 ├── 4-recursos/
-│   ├── ebooks-free/
-│   ├── videografia/
-│   └── webgrafia/
 └── 5-glosario/
 ```
 
 ---
 
-## ⏱️ Distribución del Tiempo (6h)
+## Distribución del Tiempo (6h)
 
 | Bloque | Actividad | Tiempo |
 |--------|-----------|--------|
-| 1 | Teoría y conceptos | 1.5 - 2h |
-| 2 | Ejercicios guiados | 2.5 - 3h |
-| 3 | Proyecto semanal | 1.5 - 2h |
+| 1 | Teoría: httpx fundamentos + autenticación | 1.5h |
+| 2 | Teoría: resiliencia + rate limiting + errores | 1.0h |
+| 3 | Ejercicios guiados (4) | 2.0h |
+| 4 | Proyecto semanal | 1.5h |
 
 ---
 
-## 🔗 Navegación
+## Entregables
+
+- [ ] Ejercicio 01: Cliente httpx sync/async, params y headers
+- [ ] Ejercicio 02: Auth — Bearer Token y API Key con `httpx.Auth`
+- [ ] Ejercicio 03: Retry con tenacity, timeouts configurables
+- [ ] Ejercicio 04: Validar respuestas de API con modelos Pydantic
+- [ ] Proyecto: `studio-api-client` — cliente de APIs de proveedores de Studio BC
+
+---
+
+## Navegación
 
 ← [Semana 18](../week-18-gestion_datos_polars/README.md) · [Semana 20](../week-20-bases_de_datos_sqlmodel/README.md) →
