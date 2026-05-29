@@ -1,0 +1,81 @@
+<svg width="720" height="400" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <rect width="720" height="400" fill="#0d1117" rx="8"/>
+
+  <!-- title -->
+  <text x="360" y="34" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="middle">Anatomía de una Dataclass Avanzada</text>
+
+  <!-- main code block -->
+  <rect x="30" y="50" width="380" height="300" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="50" y="73" font-size="11" fill="#a371f7" font-weight="600">@dataclass</text>
+  <text x="50" y="89" font-size="11" fill="#58a6ff" font-weight="600">(slots=True, frozen=False)</text>
+  <text x="50" y="107" font-size="11" fill="#e6edf3" font-weight="600">class Asset:</text>
+
+  <!-- name field -->
+  <rect x="44" y="114" width="356" height="18" rx="3" fill="#1c2a38"/>
+  <text x="58" y="126" font-size="10" fill="#7ee787">name: str</text>
+  <text x="260" y="126" font-size="9" fill="#8b949e">← atributo posicional</text>
+
+  <!-- KW_ONLY sentinel -->
+  <rect x="44" y="136" width="356" height="18" rx="3" fill="#1c2a38"/>
+  <text x="58" y="148" font-size="10" fill="#FFD43B">_: KW_ONLY</text>
+  <text x="210" y="148" font-size="9" fill="#8b949e">← todo lo siguiente es keyword-only</text>
+
+  <!-- file_path field -->
+  <rect x="44" y="158" width="356" height="18" rx="3" fill="#1c2a38"/>
+  <text x="58" y="170" font-size="10" fill="#7ee787">file_path: str</text>
+  <text x="260" y="170" font-size="9" fill="#8b949e">← keyword-only</text>
+
+  <!-- field() -->
+  <rect x="44" y="180" width="356" height="18" rx="3" fill="#1c2a38"/>
+  <text x="58" y="192" font-size="10" fill="#7ee787">tags: list[str] = </text>
+  <text x="178" y="192" font-size="10" fill="#ff7b72">field(default_factory=list)</text>
+
+  <!-- InitVar -->
+  <rect x="44" y="202" width="356" height="18" rx="3" fill="#1c2a38"/>
+  <text x="58" y="214" font-size="10" fill="#a371f7">raw_bytes: InitVar[int]</text>
+  <text x="228" y="214" font-size="9" fill="#8b949e">← en init, no en objeto</text>
+
+  <!-- computed field -->
+  <rect x="44" y="224" width="356" height="18" rx="3" fill="#1c2a38"/>
+  <text x="58" y="236" font-size="10" fill="#7ee787">size_mb: float = </text>
+  <text x="174" y="236" font-size="10" fill="#ff7b72">field(init=False)</text>
+
+  <!-- post_init -->
+  <rect x="44" y="252" width="356" height="52" rx="3" fill="#1a2433"/>
+  <text x="58" y="268" font-size="10" fill="#58a6ff" font-weight="600">def __post_init__(</text>
+  <text x="58" y="282" font-size="10" fill="#58a6ff">    self, raw_bytes: int) → None:</text>
+  <text x="58" y="298" font-size="10" fill="#e6edf3">    self.size_mb = raw_bytes / 1_048_576</text>
+
+  <!-- slots -->
+  <rect x="44" y="312" width="356" height="30" rx="3" fill="#162d21"/>
+  <text x="58" y="326" font-size="9" fill="#3fb950" font-weight="600">✅ slots=True</text>
+  <text x="58" y="338" font-size="9" fill="#8b949e">Sin __dict__ → ~30% menos memoria por instancia</text>
+
+  <!-- RIGHT: annotations -->
+  <!-- annotation 1: KW_ONLY -->
+  <line x1="410" y1="145" x2="460" y2="145" stroke="#FFD43B" stroke-width="1.5"/>
+  <rect x="460" y="128" width="230" height="34" rx="4" fill="#1c2a38" stroke="#FFD43B" stroke-width="1"/>
+  <text x="575" y="142" font-size="10" fill="#FFD43B" text-anchor="middle" font-weight="600">KW_ONLY</text>
+  <text x="575" y="154" font-size="9" fill="#8b949e" text-anchor="middle">Evita errores de orden en el constructor</text>
+
+  <!-- annotation 2: field() -->
+  <line x1="410" y1="189" x2="460" y2="189" stroke="#ff7b72" stroke-width="1.5"/>
+  <rect x="460" y="172" width="230" height="34" rx="4" fill="#1c2a38" stroke="#ff7b72" stroke-width="1"/>
+  <text x="575" y="186" font-size="10" fill="#ff7b72" text-anchor="middle" font-weight="600">field(default_factory=list)</text>
+  <text x="575" y="198" font-size="9" fill="#8b949e" text-anchor="middle">Nunca usar [] directamente como default</text>
+
+  <!-- annotation 3: InitVar -->
+  <line x1="410" y1="211" x2="460" y2="240" stroke="#a371f7" stroke-width="1.5"/>
+  <rect x="460" y="224" width="230" height="34" rx="4" fill="#1c2a38" stroke="#a371f7" stroke-width="1"/>
+  <text x="575" y="238" font-size="10" fill="#a371f7" text-anchor="middle" font-weight="600">InitVar[T]</text>
+  <text x="575" y="250" font-size="9" fill="#8b949e" text-anchor="middle">Param de init que NO se guarda como attr</text>
+
+  <!-- annotation 4: post_init -->
+  <line x1="410" y1="278" x2="460" y2="295" stroke="#58a6ff" stroke-width="1.5"/>
+  <rect x="460" y="280" width="230" height="34" rx="4" fill="#1c2a38" stroke="#58a6ff" stroke-width="1"/>
+  <text x="575" y="294" font-size="10" fill="#58a6ff" text-anchor="middle" font-weight="600">__post_init__</text>
+  <text x="575" y="306" font-size="9" fill="#8b949e" text-anchor="middle">Validación y cómputo post-construcción</text>
+
+  <!-- footer -->
+  <text x="360" y="390" font-size="10" fill="#484f58" text-anchor="middle">Semana 15 · bc-python · Studio BC</text>
+</svg>

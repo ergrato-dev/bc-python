@@ -1,0 +1,81 @@
+<svg width="720" height="380" viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <rect width="720" height="380" fill="#0d1117" rx="8"/>
+
+  <!-- title -->
+  <text x="360" y="34" font-size="15" font-weight="700" fill="#e6edf3" text-anchor="middle">Subtipado Nominal vs Estructural</text>
+
+  <!-- LEFT: NOMINAL (ABC) -->
+  <rect x="30" y="55" width="310" height="295" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="185" y="79" font-size="13" font-weight="700" fill="#ff7b72" text-anchor="middle">Nominal (ABC / herencia)</text>
+
+  <!-- ABC box -->
+  <rect x="110" y="92" width="150" height="44" rx="5" fill="#1c2a38" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="185" y="110" font-size="11" fill="#58a6ff" text-anchor="middle" font-weight="600">class Drawable(ABC):</text>
+  <text x="185" y="126" font-size="10" fill="#8b949e" text-anchor="middle">  @abstractmethod draw()</text>
+
+  <!-- arrows down -->
+  <line x1="185" y1="136" x2="185" y2="156" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- subclass boxes -->
+  <rect x="60" y="156" width="120" height="38" rx="5" fill="#1c2a38" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="120" y="172" font-size="10" fill="#3fb950" text-anchor="middle" font-weight="600">class Circle</text>
+  <text x="120" y="185" font-size="9" fill="#8b949e" text-anchor="middle">(Drawable):  ← requerido</text>
+
+  <rect x="200" y="156" width="120" height="38" rx="5" fill="#1c2a38" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="260" y="172" font-size="10" fill="#3fb950" text-anchor="middle" font-weight="600">class Square</text>
+  <text x="260" y="185" font-size="9" fill="#8b949e" text-anchor="middle">(Drawable):  ← requerido</text>
+
+  <!-- external lib box -->
+  <rect x="100" y="218" width="170" height="44" rx="5" fill="#2d1a1a" stroke="#f85149" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="185" y="236" font-size="10" fill="#f85149" text-anchor="middle" font-weight="600">ExtCircle (librería externa)</text>
+  <text x="185" y="250" font-size="9" fill="#f85149" text-anchor="middle">❌ no hereda de Drawable</text>
+  <text x="185" y="262" font-size="9" fill="#8b949e" text-anchor="middle">no puede usarse aunque tenga draw()</text>
+
+  <!-- problem label -->
+  <rect x="50" y="290" width="220" height="44" rx="5" fill="#1c2a38"/>
+  <text x="160" y="308" font-size="10" fill="#ff7b72" text-anchor="middle" font-weight="600">⚠️ Acoplamiento fuerte</text>
+  <text x="160" y="322" font-size="9" fill="#8b949e" text-anchor="middle">Las clases deben conocer tu ABC</text>
+  <text x="160" y="334" font-size="9" fill="#8b949e" text-anchor="middle">y heredar de él explícitamente</text>
+
+  <!-- RIGHT: STRUCTURAL (Protocol) -->
+  <rect x="380" y="55" width="310" height="295" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="535" y="79" font-size="13" font-weight="700" fill="#3fb950" text-anchor="middle">Estructural (Protocol)</text>
+
+  <!-- Protocol box -->
+  <rect x="460" y="92" width="150" height="44" rx="5" fill="#1c2a38" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="535" y="110" font-size="11" fill="#58a6ff" text-anchor="middle" font-weight="600">class Drawable(Protocol):</text>
+  <text x="535" y="126" font-size="10" fill="#8b949e" text-anchor="middle">  def draw() → None ...</text>
+
+  <!-- check arrows -->
+  <line x1="535" y1="136" x2="535" y2="154" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="535" y="151" font-size="18" fill="#3fb950" text-anchor="middle">↓</text>
+
+  <!-- duck typing boxes -->
+  <rect x="410" y="156" width="120" height="38" rx="5" fill="#1c2a38" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="470" y="172" font-size="10" fill="#3fb950" text-anchor="middle" font-weight="600">class Circle:</text>
+  <text x="470" y="185" font-size="9" fill="#8b949e" text-anchor="middle">  def draw(): ...  ✅</text>
+
+  <rect x="550" y="156" width="120" height="38" rx="5" fill="#1c2a38" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="610" y="172" font-size="10" fill="#3fb950" text-anchor="middle" font-weight="600">ExtCircle:</text>
+  <text x="610" y="185" font-size="9" fill="#8b949e" text-anchor="middle">  def draw(): ...  ✅</text>
+
+  <!-- check label -->
+  <rect x="430" y="218" width="210" height="44" rx="5" fill="#162d21" stroke="#3fb950" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="535" y="236" font-size="10" fill="#3fb950" text-anchor="middle" font-weight="600">✅ Si tiene draw() → es Drawable</text>
+  <text x="535" y="250" font-size="9" fill="#8b949e" text-anchor="middle">Sin importar de dónde viene</text>
+  <text x="535" y="262" font-size="9" fill="#8b949e" text-anchor="middle">ni qué hereda</text>
+
+  <!-- benefit label -->
+  <rect x="400" y="290" width="220" height="44" rx="5" fill="#1c2a38"/>
+  <text x="510" y="308" font-size="10" fill="#3fb950" text-anchor="middle" font-weight="600">✅ Desacoplado</text>
+  <text x="510" y="322" font-size="9" fill="#8b949e" text-anchor="middle">Las clases no necesitan conocer</text>
+  <text x="510" y="334" font-size="9" fill="#8b949e" text-anchor="middle">tu Protocol. Duck typing tipado.</text>
+
+  <!-- vs divider -->
+  <line x1="360" y1="70" x2="360" y2="345" stroke="#30363d" stroke-width="1" stroke-dasharray="4,4"/>
+  <circle cx="360" cy="200" r="16" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="360" y="205" font-size="11" font-weight="700" fill="#8b949e" text-anchor="middle">VS</text>
+
+  <!-- footer -->
+  <text x="360" y="368" font-size="10" fill="#484f58" text-anchor="middle">Semana 15 · bc-python · Studio BC</text>
+</svg>

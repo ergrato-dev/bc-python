@@ -1,0 +1,20 @@
+<svg width="800" height="160" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Roboto, system-ui, sans-serif">
+  <rect width="800" height="160" fill="#0d1117"/>
+  <!-- accent bar -->
+  <rect width="800" height="4" fill="#306998"/>
+  <!-- phase pill -->
+  <rect x="32" y="24" width="130" height="22" rx="11" fill="#1c2a38"/>
+  <text x="97" y="39" font-size="11" fill="#58a6ff" text-anchor="middle" font-weight="600" letter-spacing="0.5">FASE 2 · SEMANA 15</text>
+  <!-- title -->
+  <text x="32" y="86" font-size="34" font-weight="700" fill="#e6edf3">Python Moderno</text>
+  <text x="32" y="122" font-size="34" font-weight="700" fill="#306998">Avanzado</text>
+  <!-- subtitle -->
+  <text x="32" y="147" font-size="13" fill="#6e7681">Protocol · Pattern Matching · Dataclasses · Generics · 3.12/3.13</text>
+  <!-- icon area -->
+  <circle cx="728" cy="80" r="48" fill="#1c2a38"/>
+  <text x="728" y="70" font-size="28" text-anchor="middle" fill="#FFD43B">🔬</text>
+  <text x="728" y="100" font-size="11" text-anchor="middle" fill="#58a6ff" font-weight="600">Junior →</text>
+  <text x="728" y="114" font-size="11" text-anchor="middle" fill="#58a6ff" font-weight="600">Mid-level</text>
+  <!-- bottom accent -->
+  <rect y="156" width="800" height="4" fill="#FFD43B" opacity="0.4"/>
+</svg>

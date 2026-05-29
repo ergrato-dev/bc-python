@@ -1,0 +1,19 @@
+[project]
+name = "studio-bc-models"
+version = "0.1.0"
+description = "Studio BC domain models — Week 15"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13",
+    "pytest>=8.3",
+]
+
+[tool.mypy]
+strict = true
+python_version = "3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
