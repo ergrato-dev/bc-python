@@ -2,16 +2,17 @@
 
 ## 📋 Contexto del Bootcamp
 
-Este es un **Bootcamp de Python Zero to Hero** estructurado para llevar a estudiantes de cero a héroe en programación con Python moderno.
+Este es el **Bootcamp de Python Zero to Master** — programa de 36 semanas que lleva a estudiantes de cero a nivel Master, con énfasis en Python moderno, automatización y pipelines aplicados a un estudio de producción audiovisual (**Studio BC**).
 
 ### 📊 Datos del Bootcamp
 
-- **Duración**: 14 semanas (~3.5 meses)
+- **Duración**: 36 semanas (~9 meses)
 - **Dedicación semanal**: 6 horas
-- **Total de horas**: ~84 horas
-- **Nivel de salida**: Desarrollador Python Junior
-- **Enfoque**: Python moderno 3.13+
-- **Stack**: Python 3.13+, pytest, uv (gestor de paquetes), Docker
+- **Total de horas**: ~216 horas
+- **Nivel de salida**: Desarrollador Python Master
+- **Enfoque**: Python moderno 3.13+ · Automatización · Pipelines de media
+- **Dominio aplicado**: Studio BC — estudio de producción audiovisual
+- **Stack completo**: ver sección Stack Tecnológico
 
 ---
 
@@ -19,68 +20,74 @@ Este es un **Bootcamp de Python Zero to Hero** estructurado para llevar a estudi
 
 Al finalizar el bootcamp, los estudiantes serán capaces de:
 
+**Fase 1 — Junior (semanas 1–14):**
 - ✅ Dominar los fundamentos de Python moderno (3.13+)
 - ✅ Aplicar type hints y tipado estático correctamente
-- ✅ Trabajar con estructuras de datos complejas
 - ✅ Implementar Programación Orientada a Objetos (POO)
-- ✅ Manejar archivos, excepciones y módulos
-- ✅ Escribir código limpio y mantenible
 - ✅ Crear tests automatizados con pytest
-- ✅ Usar control de versiones con Git
-- ✅ Trabajar con librerías populares del ecosistema Python
-- ✅ Desarrollar proyectos completos desde cero
+
+**Fase 2 — Mid-level (semanas 15–21):**
+- ✅ Usar el type system avanzado (Protocols, TypeGuard, Generics)
+- ✅ Programar concurrentemente con asyncio y concurrent.futures
+- ✅ Construir CLIs profesionales con Typer y Rich
+- ✅ Gestionar datos con Polars y bases de datos con SQLModel
+
+**Fase 3 — Senior (semanas 22–30):**
+- ✅ Automatizar flujos del sistema de archivos con watchdog
+- ✅ Procesar imagen, audio y video con Pillow, pydub, ffmpeg-python
+- ✅ Integrar cloud storage (S3, Google Drive) y plataformas (YouTube, Vimeo, Slack)
+- ✅ Diseñar y monitorear pipelines de automatización
+
+**Fase 4 — Master (semanas 31–36):**
+- ✅ Aplicar Clean Architecture y Domain-Driven Design
+- ✅ Integrar IA (OpenAI API, Whisper) en pipelines de media
+- ✅ Optimizar performance con profiling y caching
+- ✅ Implementar CI/CD y DevOps con Docker y GitHub Actions
 
 ---
 
 ## 📚 Estructura del Bootcamp
 
-### Distribución por Etapas
+### Distribución por Fases
 
-#### **Fundamentos (Semanas 1-4)** - 24 horas
+#### **Fase 1 — Fundamentos y POO (Semanas 1–14)** · 84 horas · Nivel: Junior
 
-- Introducción a Python y configuración del entorno
-- Variables, tipos de datos y operadores
-- Input/Output y formateo de strings
-- Condicionales (if/elif/else)
-- Bucles (for, while) y control de flujo
-- Comprensiones de listas, diccionarios y sets
-- Funciones: definición, parámetros y retorno
+- Semanas 1–4: Variables, tipos, condicionales, bucles, funciones
+- Semanas 5–7: Listas, diccionarios, sets, algoritmos
+- Semanas 8–10: Clases, herencia, módulos, paquetes, uv
+- Semanas 11–13: Archivos, excepciones, decoradores, testing
+- Semana 14: Proyecto integrador — Weather Dashboard CLI
 
-#### **Estructuras de Datos (Semanas 5-7)** - 18 horas
+#### **Fase 2 — Python Profesional (Semanas 15–21)** · 42 horas · Nivel: Mid-level
 
-- Listas: métodos, slicing y operaciones
-- Tuplas y su inmutabilidad
-- Diccionarios: operaciones y métodos
-- Sets y operaciones de conjuntos
-- Estructuras anidadas y complejas
-- Algoritmos básicos de búsqueda y ordenamiento
+- Semana 15: Type system avanzado (Protocols, TypeGuard, TypeAlias)
+- Semana 16: Concurrencia y AsyncIO
+- Semana 17: CLI profesional con Typer y Rich
+- Semana 18: Gestión de datos con Polars
+- Semana 19: HTTP y APIs con httpx
+- Semana 20: Bases de datos con SQLModel + Alembic
+- Semana 21: Proyecto — Herramienta de gestión Studio BC
 
-#### **POO y Modularidad (Semanas 8-10)** - 18 horas
+#### **Fase 3 — Automatización y Pipelines de Media (Semanas 22–30)** · 54 horas · Nivel: Senior
 
-- Clases y objetos
-- Atributos y métodos
-- Encapsulamiento y propiedades
-- Herencia y polimorfismo
-- Clases abstractas e interfaces
-- Módulos y paquetes
-- Manejo de dependencias con uv
+- Semana 22: Automatización del sistema de archivos (watchdog)
+- Semana 23: Procesamiento de imágenes (Pillow, thumbnails)
+- Semana 24: Procesamiento de audio (pydub, Whisper)
+- Semana 25: Procesamiento de video con FFmpeg
+- Semana 26: Cloud storage (S3, Google Drive)
+- Semana 27: Arquitectura de pipelines
+- Semana 28: Integraciones (YouTube, Vimeo, Slack, Notion)
+- Semana 29: Monitoreo de pipelines
+- Semana 30: Proyecto — Pipeline de producción end-to-end
 
-#### **Temas Avanzados (Semanas 11-13)** - 18 horas
+#### **Fase 4 — Arquitectura Master (Semanas 31–36)** · 36 horas · Nivel: Master
 
-- Manejo de archivos (lectura/escritura)
-- Excepciones: try/except/finally
-- Context managers (with)
-- Decoradores y generadores
-- Expresiones regulares (regex)
-- Testing con pytest
-- Debugging y logging
-
-#### **Proyecto Integrador (Semana 14)** - 6 horas
-
-- Proyecto final que integra todos los conceptos
-- Uso de librerías externas (requests, etc.)
-- Documentación y buenas prácticas
-- Presentación del proyecto
+- Semana 31: Clean Architecture y DDD
+- Semana 32: IA aplicada a media (OpenAI, embeddings)
+- Semana 33: Performance y optimización (profiling, Redis)
+- Semana 34: DevOps y CI/CD (Docker multi-stage, GitHub Actions)
+- Semana 35: Seguridad (OWASP, secrets, bandit)
+- Semana 36: Proyecto Final Master — Sistema Studio BC completo
 
 ---
 
@@ -113,6 +120,39 @@ bootcamp/week-XX/
 - **`docs/`**: Documentación general que aplica a todo el bootcamp
 - **`scripts/`**: Scripts de automatización y utilidades
 - **`bootcamp/`**: Contenido semanal del bootcamp
+
+### 🏭 Dominio: Studio BC
+
+Todos los proyectos de las Fases 2–4 usan el dominio **Studio BC** (estudio de producción audiovisual ficticio):
+
+```
+Entidades principales:
+  Client        — Cliente del estudio
+  Project       — Proyecto de producción
+  Phase         — Fase (preproducción, producción, post, entrega)
+  Deliverable   — Entregable de una fase
+  Asset         — Archivo de media (video, audio, imagen, documento)
+  Pipeline      — Configuración de automatización
+  PipelineRun   — Ejecución de un pipeline
+```
+
+**Progresión de proyectos por fase:**
+- Fase 2 → CLI + BD: herramienta de gestión del estudio
+- Fase 3 → + Pipeline: automatización de producción y distribución
+- Fase 4 → + IA + CI/CD: sistema completo producción-ready
+
+---
+
+### 📊 Stack Tecnológico
+
+| Fase | Stack |
+|------|-------|
+| 1 (original) | Python 3.13+, pytest, uv, Docker |
+| 2 | mypy, pyright, asyncio, typer, rich, textual, polars, httpx, tenacity, sqlmodel, alembic |
+| 3 | watchdog, Pillow, imageio, pydub, librosa, openai-whisper, ffmpeg-python, boto3, google-api-python-client, rq, redis, slack-sdk, structlog |
+| 4 | openai, sentence-transformers, py-spy, memory-profiler, dependency-injector, bandit, safety, python-jose, GitHub Actions |
+
+---
 
 ### 📋 Cheat Sheets
 
@@ -754,6 +794,8 @@ feat(week-01): add all the theory files for variables and types and also operato
 - `config` - Configuración del proyecto
 - `ci` - GitHub Actions y CI/CD
 - `docker` - Configuración de contenedores
+- `pipeline` - Código de pipelines de automatización
+- `studio` - CLI y sistema Studio BC
 
 ---
 
@@ -997,5 +1039,5 @@ Cuando crees contenido para una nueva semana:
 
 ---
 
-_Última actualización: Enero 2026_
-_Versión: 1.0_
+_Última actualización: Mayo 2026_
+_Versión: 2.0 — Expansión Zero to Master_

@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="assets/bootcamp-header.svg" alt="Bootcamp Python Zero to Hero" width="800">
+  <img src="assets/bootcamp-header.svg" alt="Bootcamp Python Zero to Master" width="800">
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"></a>
-  <a href="#"><img src="https://img.shields.io/badge/semanas-14-yellow.svg" alt="14 Semanas"></a>
-  <a href="#"><img src="https://img.shields.io/badge/horas-84-orange.svg" alt="84 Horas"></a>
+  <a href="#"><img src="https://img.shields.io/badge/semanas-36-yellow.svg" alt="36 Semanas"></a>
+  <a href="#"><img src="https://img.shields.io/badge/horas-216-orange.svg" alt="216 Horas"></a>
   <a href="#"><img src="https://img.shields.io/badge/Python-3.13+-306998?logo=python&logoColor=white" alt="Python 3.13+"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
 </p>
@@ -18,42 +18,89 @@
 
 ## 📋 Descripción
 
-Bootcamp intensivo de **14 semanas (~3.5 meses)** enfocado en el dominio de **Python moderno** desde cero. Diseñado para llevar a estudiantes de principiantes absolutos a **Desarrollador Python Junior**, con énfasis en código limpio, mejores prácticas y proyectos del mundo real.
+Bootcamp completo de **36 semanas (~9 meses)** que lleva a estudiantes de cero a nivel **Master** en Python moderno. Énfasis en **automatización**, **procesamiento de media** y **pipelines**, aplicados al dominio de un **estudio de producción audiovisual** (Studio BC).
 
-### 🎯 Objetivos
+> Ver el plan curricular completo en [docs/expansion-zero-to-master.md](docs/expansion-zero-to-master.md)
 
-Al finalizar el bootcamp, los estudiantes serán capaces de:
+### 🎯 Objetivos por Fase
 
-- ✅ Dominar los fundamentos de Python moderno (3.13+)
-- ✅ Aplicar type hints y tipado estático correctamente
-- ✅ Trabajar con estructuras de datos complejas
-- ✅ Implementar Programación Orientada a Objetos (POO)
-- ✅ Manejar archivos, excepciones y módulos
-- ✅ Escribir código limpio y mantenible
-- ✅ Crear tests automatizados con pytest
-- ✅ Usar control de versiones con Git
-- ✅ Trabajar con librerías populares del ecosistema Python
-- ✅ Desarrollar proyectos completos desde cero
+| Fase | Semanas | Horas | Nivel | Logros principales |
+|:----:|:-------:|:-----:|:-----:|---------------------|
+| **1** | 1–14 | 84h | Junior | Fundamentos, POO, testing, proyecto CLI |
+| **2** | 15–21 | 42h | Mid-level | Types avanzados, async, CLI Typer, Polars, SQLModel |
+| **3** | 22–30 | 54h | Senior | Pipelines de imagen/audio/video, cloud, integraciones |
+| **4** | 31–36 | 36h | Master | Clean Architecture, IA, performance, CI/CD, seguridad |
 
 ### 🚀 ¿Por qué Python?
 
-> **Python moderno desde el día 1** - Sin código legacy, solo las mejores prácticas actuales.
+> **Python moderno desde el día 1** — Sin código legacy, solo las mejores prácticas actuales.
 
-Python es el lenguaje de programación más versátil y demandado del mundo. Este bootcamp se enfoca exclusivamente en Python 3.13+ con características modernas como type hints, match statements y f-strings. Los estudiantes aprenden directamente las herramientas y técnicas que usarán en el mundo profesional.
+Python es el lenguaje de programación más versátil del mundo, y el único lenguaje con ecosistema de primera clase para automatización, ciencia de datos, IA y desarrollo web simultáneamente. Este bootcamp se enfoca en Python 3.13+, type hints estrictos, async/await y las herramientas que se usan en producción real.
 
 ---
 
 ## 🗓️ Estructura del Bootcamp
 
+### Fase 1 — Fundamentos y POO (Semanas 1–14) · 84h · Junior
+
 |          Etapa           | Semanas | Horas | Temas Principales                                  |
 | :----------------------: | :-----: | :---: | -------------------------------------------------- |
-|     **Fundamentos**      |   1-4   |  24h  | Variables, tipos, condicionales, bucles, funciones |
-| **Estructuras de Datos** |   5-7   |  18h  | Listas, diccionarios, sets, tuplas, algoritmos     |
-|  **POO y Modularidad**   |  8-10   |  18h  | Clases, herencia, módulos, paquetes, uv            |
-|   **Temas Avanzados**    |  11-13  |  18h  | Archivos, excepciones, decoradores, testing        |
-| **Proyecto Integrador**  |   14    |  6h   | Proyecto final, librerías externas, presentación   |
+|     **Fundamentos**      |   1–4   |  24h  | Variables, tipos, condicionales, bucles, funciones |
+| **Estructuras de Datos** |   5–7   |  18h  | Listas, diccionarios, sets, tuplas, algoritmos     |
+|  **POO y Modularidad**   |  8–10   |  18h  | Clases, herencia, módulos, paquetes, uv            |
+|   **Temas Avanzados**    |  11–13  |  18h  | Archivos, excepciones, decoradores, testing        |
+| **Proyecto Integrador**  |   14    |   6h  | Weather Dashboard CLI                              |
 
-**Total: 14 semanas** | **84 horas** de formación intensiva
+### Fase 2 — Python Profesional (Semanas 15–21) · 42h · Mid-level
+
+|          Etapa                | Semanas | Horas | Temas Principales                                      |
+| :---------------------------: | :-----: | :---: | ------------------------------------------------------ |
+|  **Python Moderno Avanzado**  |   15    |   6h  | Protocols, TypeGuard, Structural Pattern Matching      |
+|  **Concurrencia y AsyncIO**   |   16    |   6h  | asyncio, concurrent.futures, threading vs processes   |
+| **CLI Profesional**           |   17    |   6h  | Typer, Rich, Textual                                   |
+| **Gestión de Datos**          |   18    |   6h  | Polars, Parquet, reportes del estudio                  |
+| **HTTP y APIs**               |   19    |   6h  | httpx async, retry, OAuth2                             |
+| **Bases de Datos**            |   20    |   6h  | SQLModel, Alembic, migraciones                         |
+| **Proyecto Fase 2**           |   21    |   6h  | CLI Studio BC: proyectos, clientes, entregables        |
+
+### Fase 3 — Automatización y Pipelines de Media (Semanas 22–30) · 54h · Senior
+
+|          Etapa               | Semanas | Horas | Temas Principales                                      |
+| :--------------------------: | :-----: | :---: | ------------------------------------------------------ |
+| **Sistema de Archivos**      |   22    |   6h  | watchdog, pathlib avanzado, auto-organización          |
+| **Procesamiento Imágenes**   |   23    |   6h  | Pillow, thumbnails automáticos, watermarks             |
+| **Procesamiento Audio**      |   24    |   6h  | pydub, Whisper, transcripción                          |
+| **Video con FFmpeg**         |   25    |   6h  | ffmpeg-python, proxies, transcodificación              |
+| **Cloud Storage**            |   26    |   6h  | S3, Google Drive, sync automático                      |
+| **Arquitectura Pipelines**   |   27    |   6h  | Colas, retry, dead-letter, estado                      |
+| **Integraciones**            |   28    |   6h  | YouTube API, Vimeo, Slack, Discord, Notion             |
+| **Monitoreo**                |   29    |   6h  | structlog, alertas, dashboards                         |
+| **Proyecto Fase 3**          |   30    |   6h  | Pipeline end-to-end: watch → process → deliver         |
+
+### Fase 4 — Arquitectura Master (Semanas 31–36) · 36h · Master
+
+|          Etapa               | Semanas | Horas | Temas Principales                                      |
+| :--------------------------: | :-----: | :---: | ------------------------------------------------------ |
+| **Clean Architecture + DDD** |   31    |   6h  | Repository, Service Layer, Aggregates, DI              |
+| **IA Aplicada a Media**      |   32    |   6h  | OpenAI, Whisper, embeddings, auto-tagging              |
+| **Performance**              |   33    |   6h  | Profiling, Redis, streaming de archivos grandes        |
+| **DevOps y CI/CD**           |   34    |   6h  | Docker multi-stage, GitHub Actions, Makefile           |
+| **Seguridad**                |   35    |   6h  | OWASP, secrets, bandit, hardening                      |
+| **Proyecto Final Master**    |   36    |   6h  | Sistema Studio BC completo — producción-ready          |
+
+**Total: 36 semanas** | **216 horas** de formación intensiva
+
+---
+
+## 🏭 Dominio: Studio BC
+
+El hilo conductor de las Fases 2–4 es **Studio BC**, un estudio de producción audiovisual ficticio con proyectos, clientes, assets y flujos de entrega reales. Cada fase agrega una capa nueva al sistema del estudio:
+
+```
+Fase 2  →  CLI de gestión (clientes, proyectos, entregables)
+Fase 3  →  Pipeline de automatización (ingest → process → deliver → notify)
+Fase 4  →  Sistema completo: gestión + pipelines + IA + CI/CD
+```
 
 ---
 
@@ -87,6 +134,8 @@ bootcamp/week-XX-tema_principal/
 
 ## 🛠️ Stack Tecnológico
 
+### Base (todas las fases)
+
 | Tecnología     | Versión    | Uso                  |
 | -------------- | ---------- | -------------------- |
 | Python         | **3.13+**  | Lenguaje principal   |
@@ -95,7 +144,15 @@ bootcamp/week-XX-tema_principal/
 | Docker Compose | **2.31+**  | Orquestación         |
 | uv             | **0.5+**   | Gestión de paquetes  |
 | Git            | **2.40+**  | Control de versiones |
-| VS Code        | **Latest** | Editor recomendado   |
+
+### Fase 2 — Python Profesional
+`mypy` · `pyright` · `typer` · `rich` · `textual` · `polars` · `httpx` · `tenacity` · `sqlmodel` · `alembic`
+
+### Fase 3 — Automatización y Media
+`watchdog` · `Pillow` · `pydub` · `openai-whisper` · `ffmpeg-python` · `boto3` · `google-api-python-client` · `rq` · `redis` · `slack-sdk` · `structlog`
+
+### Fase 4 — Arquitectura Master
+`openai` · `sentence-transformers` · `py-spy` · `redis` · `dependency-injector` · `bandit` · `safety` · `GitHub Actions` · `Docker multi-stage`
 
 **Entorno de desarrollo**: Docker + docker compose (❌ NO instalar Python localmente)
 
@@ -220,6 +277,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 📚 Documentación Adicional
 
+- [📐 Plan de Expansión Zero to Master](docs/expansion-zero-to-master.md)
 - [🤖 Instrucciones de Copilot](.github/copilot-instructions.md)
 - [🤝 Guía de Contribución](CONTRIBUTING.md)
 - [📜 Código de Conducta](CODE_OF_CONDUCT.md)
@@ -228,13 +286,13 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 ---
 
 <p align="center">
-  <strong>🎓 Bootcamp Python - Zero to Hero</strong><br>
-  <em>De cero a desarrollador Python en 3.5 meses</em>
+  <strong>🎓 Bootcamp Python - Zero to Master</strong><br>
+  <em>De cero a desarrollador Python Master en 9 meses · Studio BC</em>
 </p>
 
 <p align="center">
   <a href="bootcamp/week-01-introduccion_python_y_entorno">Comenzar Semana 1</a> •
-  <a href="docs">Ver Documentación</a> •
+  <a href="docs/expansion-zero-to-master.md">Plan Curricular</a> •
   <a href="https://github.com/epti-dev/bc-python/issues">Reportar Issue</a> •
   <a href="CONTRIBUTING.md">Contribuir</a>
 </p>
