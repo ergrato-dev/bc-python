@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 520" width="860" height="520">
+  <rect width="860" height="520" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="430" y="36" fill="#e6edf3" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Árbol de Decisión — Concurrencia en Python</text>
+
+  <!-- ── Root question ── -->
+  <rect x="290" y="58" width="280" height="44" rx="8" fill="#161b22" stroke="#306998" stroke-width="2"/>
+  <text x="430" y="76" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">¿Cuello de botella?</text>
+  <text x="430" y="94" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">I/O (red, disco) · o · CPU</text>
+
+  <!-- root → I/O branch -->
+  <line x1="340" y1="102" x2="200" y2="148" stroke="#30363d" stroke-width="1.5"/>
+  <text x="252" y="126" fill="#3fb950" font-family="sans-serif" font-size="11" text-anchor="middle">I/O-bound</text>
+
+  <!-- root → CPU branch -->
+  <line x1="520" y1="102" x2="660" y2="148" stroke="#30363d" stroke-width="1.5"/>
+  <text x="607" y="126" fill="#FFD43B" font-family="sans-serif" font-size="11" text-anchor="middle">CPU-bound</text>
+
+  <!-- ── I/O subtree ── -->
+  <rect x="80" y="148" width="240" height="44" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="200" y="166" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">¿Hay libs async?</text>
+  <text x="200" y="183" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">httpx, aiofiles, asyncpg…</text>
+
+  <!-- I/O → yes async -->
+  <line x1="155" y1="192" x2="100" y2="240" stroke="#30363d" stroke-width="1.5"/>
+  <text x="115" y="220" fill="#3fb950" font-family="sans-serif" font-size="11">SÍ</text>
+
+  <!-- I/O → no async -->
+  <line x1="245" y1="192" x2="300" y2="240" stroke="#30363d" stroke-width="1.5"/>
+  <text x="270" y="220" fill="#e05252" font-family="sans-serif" font-size="11">NO</text>
+
+  <!-- asyncio result box -->
+  <rect x="30" y="240" width="150" height="52" rx="8" fill="#163356" stroke="#306998" stroke-width="2"/>
+  <text x="105" y="261" fill="#FFD43B" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">asyncio</text>
+  <text x="105" y="278" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">httpx, aiofiles</text>
+  <text x="105" y="292" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">gather / TaskGroup</text>
+
+  <!-- ThreadPoolExecutor result box -->
+  <rect x="240" y="240" width="170" height="52" rx="8" fill="#1c2030" stroke="#8b949e" stroke-width="2"/>
+  <text x="325" y="261" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">ThreadPoolExecutor</text>
+  <text x="325" y="278" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">run_in_executor</text>
+  <text x="325" y="292" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">código sync legacy</text>
+
+  <!-- ── "Miles de conexiones?" node under asyncio ── -->
+  <line x1="105" y1="292" x2="105" y2="334" stroke="#30363d" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <rect x="36" y="334" width="138" height="38" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="105" y="349" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">¿Miles de conexiones</text>
+  <text x="105" y="364" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">simultáneas?</text>
+  <text x="68" y="388" fill="#3fb950" font-family="sans-serif" font-size="10">SÍ → asyncio escala mejor</text>
+  <text x="68" y="403" fill="#e05252" font-family="sans-serif" font-size="10">NO → ThreadPool OK</text>
+
+  <!-- ── CPU subtree ── -->
+  <rect x="540" y="148" width="240" height="44" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="660" y="166" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">¿Paralelismo real?</text>
+  <text x="660" y="183" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">¿múltiples cores necesarios?</text>
+
+  <!-- CPU → yes parallel -->
+  <line x1="615" y1="192" x2="560" y2="240" stroke="#30363d" stroke-width="1.5"/>
+  <text x="570" y="220" fill="#3fb950" font-family="sans-serif" font-size="11">SÍ</text>
+
+  <!-- CPU → no parallel -->
+  <line x1="705" y1="192" x2="760" y2="240" stroke="#30363d" stroke-width="1.5"/>
+  <text x="740" y="220" fill="#e05252" font-family="sans-serif" font-size="11">NO</text>
+
+  <!-- ProcessPoolExecutor result box -->
+  <rect x="468" y="240" width="178" height="52" rx="8" fill="#2d1f00" stroke="#FFD43B" stroke-width="2"/>
+  <text x="557" y="261" fill="#FFD43B" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">ProcessPoolExecutor</text>
+  <text x="557" y="278" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">multiprocessing</text>
+  <text x="557" y="292" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">transcoding, ML inference</text>
+
+  <!-- Single thread result box -->
+  <rect x="692" y="240" width="150" height="52" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="767" y="261" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Thread único</text>
+  <text x="767" y="278" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">o ThreadPool si la lib</text>
+  <text x="767" y="292" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">libera el GIL (NumPy)</text>
+
+  <!-- ── Summary table at bottom ── -->
+  <rect x="50" y="430" width="760" height="74" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Table header -->
+  <text x="80" y="450" fill="#8b949e" font-family="sans-serif" font-size="11" font-weight="bold">Modelo</text>
+  <text x="240" y="450" fill="#8b949e" font-family="sans-serif" font-size="11" font-weight="bold">GIL</text>
+  <text x="330" y="450" fill="#8b949e" font-family="sans-serif" font-size="11" font-weight="bold">Paralelismo real</text>
+  <text x="500" y="450" fill="#8b949e" font-family="sans-serif" font-size="11" font-weight="bold">Mejor para</text>
+
+  <line x1="60" y1="456" x2="800" y2="456" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Row 1: asyncio -->
+  <text x="80" y="470" fill="#306998" font-family="sans-serif" font-size="11" font-weight="bold">asyncio</text>
+  <text x="240" y="470" fill="#8b949e" font-family="sans-serif" font-size="11">no aplica</text>
+  <text x="330" y="470" fill="#e05252" font-family="sans-serif" font-size="11">No</text>
+  <text x="500" y="470" fill="#8b949e" font-family="sans-serif" font-size="11">I/O async, muchas conexiones</text>
+
+  <!-- Row 2: threading -->
+  <text x="80" y="486" fill="#e6edf3" font-family="sans-serif" font-size="11">threading</text>
+  <text x="240" y="486" fill="#e05252" font-family="sans-serif" font-size="11">afectado</text>
+  <text x="330" y="486" fill="#e05252" font-family="sans-serif" font-size="11">No (Python puro)</text>
+  <text x="500" y="486" fill="#8b949e" font-family="sans-serif" font-size="11">I/O síncrono, código legacy</text>
+
+  <!-- Row 3: multiprocessing -->
+  <text x="80" y="502" fill="#FFD43B" font-family="sans-serif" font-size="11">multiprocessing</text>
+  <text x="240" y="502" fill="#3fb950" font-family="sans-serif" font-size="11">evadido</text>
+  <text x="330" y="502" fill="#3fb950" font-family="sans-serif" font-size="11">Sí</text>
+  <text x="500" y="502" fill="#8b949e" font-family="sans-serif" font-size="11">CPU-bound, múltiples cores</text>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460">
+  <rect width="860" height="460" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="430" y="36" fill="#e6edf3" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Concurrencia vs Paralelismo</text>
+
+  <!-- ──────────────── LEFT: Concurrencia (asyncio / threading) ──────────────── -->
+  <text x="215" y="72" fill="#306998" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Concurrencia</text>
+  <text x="215" y="91" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">(asyncio · threading)</text>
+
+  <!-- 1 CPU core box -->
+  <rect x="60" y="108" width="310" height="34" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="82" y="129" fill="#8b949e" font-family="sans-serif" font-size="11">CPU core 1</text>
+
+  <!-- Timeline rows: Task A, B, C on single core -->
+  <!-- Task A -->
+  <text x="78" y="165" fill="#e6edf3" font-family="sans-serif" font-size="11">Task A</text>
+  <rect x="118" y="152" width="60" height="22" rx="3" fill="#306998"/>
+  <rect x="218" y="152" width="30" height="22" rx="3" fill="#306998"/>
+  <rect x="298" y="152" width="50" height="22" rx="3" fill="#306998"/>
+
+  <!-- Task B -->
+  <text x="78" y="203" fill="#e6edf3" font-family="sans-serif" font-size="11">Task B</text>
+  <rect x="178" y="190" width="40" height="22" rx="3" fill="#FFD43B"/>
+  <rect x="248" y="190" width="50" height="22" rx="3" fill="#FFD43B"/>
+
+  <!-- Task C -->
+  <text x="78" y="241" fill="#e6edf3" font-family="sans-serif" font-size="11">Task C</text>
+  <rect x="178" y="228" width="38" height="22" rx="3" fill="#3fb950"/>
+  <rect x="350" y="228" width="18" height="22" rx="3" fill="#3fb950"/>
+
+  <!-- await pause indicators -->
+  <text x="182" y="178" fill="#555" font-family="sans-serif" font-size="9" text-anchor="middle">await</text>
+  <text x="252" y="178" fill="#555" font-family="sans-serif" font-size="9" text-anchor="middle">await</text>
+
+  <!-- time arrow left -->
+  <line x1="118" y1="265" x2="375" y2="265" stroke="#30363d" stroke-width="1"/>
+  <polygon points="375,265 366,261 366,269" fill="#30363d"/>
+  <text x="245" y="280" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">tiempo →</text>
+
+  <!-- key: 1 thread, interleaved -->
+  <text x="215" y="308" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">1 thread · intercalado · no simultáneo</text>
+  <text x="215" y="326" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">Ideal para I/O-bound</text>
+
+  <!-- ──────────────── DIVIDER ──────────────── -->
+  <line x1="430" y1="60" x2="430" y2="370" stroke="#30363d" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ──────────────── RIGHT: Paralelismo (multiprocessing) ──────────────── -->
+  <text x="645" y="72" fill="#FFD43B" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Paralelismo</text>
+  <text x="645" y="91" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">(multiprocessing · ProcessPoolExecutor)</text>
+
+  <!-- 3 CPU core boxes -->
+  <rect x="490" y="108" width="310" height="34" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="512" y="129" fill="#8b949e" font-family="sans-serif" font-size="11">CPU core 1</text>
+  <rect x="490" y="150" width="310" height="34" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="512" y="171" fill="#8b949e" font-family="sans-serif" font-size="11">CPU core 2</text>
+  <rect x="490" y="192" width="310" height="34" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="512" y="213" fill="#8b949e" font-family="sans-serif" font-size="11">CPU core 3</text>
+
+  <!-- Process bars: simultaneous, full width -->
+  <!-- Core 1 — Process A -->
+  <rect x="598" y="112" width="190" height="22" rx="3" fill="#306998"/>
+  <text x="693" y="127" fill="#fff" font-family="sans-serif" font-size="11" text-anchor="middle">Proceso A</text>
+
+  <!-- Core 2 — Process B -->
+  <rect x="598" y="154" width="190" height="22" rx="3" fill="#FFD43B"/>
+  <text x="693" y="169" fill="#0d1117" font-family="sans-serif" font-size="11" text-anchor="middle">Proceso B</text>
+
+  <!-- Core 3 — Process C -->
+  <rect x="598" y="196" width="190" height="22" rx="3" fill="#3fb950"/>
+  <text x="693" y="211" fill="#0d1117" font-family="sans-serif" font-size="11" text-anchor="middle">Proceso C</text>
+
+  <!-- vertical "simultaneous" brace -->
+  <line x1="796" y1="112" x2="796" y2="218" stroke="#e6edf3" stroke-width="1.5"/>
+  <line x1="796" y1="112" x2="803" y2="112" stroke="#e6edf3" stroke-width="1.5"/>
+  <line x1="796" y1="218" x2="803" y2="218" stroke="#e6edf3" stroke-width="1.5"/>
+  <text x="812" y="170" fill="#e6edf3" font-family="sans-serif" font-size="10" text-anchor="start">al mismo</text>
+  <text x="812" y="184" fill="#e6edf3" font-family="sans-serif" font-size="10" text-anchor="start">tiempo</text>
+
+  <!-- time arrow right -->
+  <line x1="598" y1="265" x2="796" y2="265" stroke="#30363d" stroke-width="1"/>
+  <polygon points="796,265 787,261 787,269" fill="#30363d"/>
+  <text x="695" y="280" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">tiempo →</text>
+
+  <!-- key: N processes, real parallel -->
+  <text x="645" y="308" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">N procesos · ejecución real simultánea</text>
+  <text x="645" y="326" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">Ideal para CPU-bound</text>
+
+  <!-- ──────────────── Bottom note ──────────────── -->
+  <rect x="160" y="355" width="540" height="36" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="430" y="370" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">threading: concurrencia con GIL (no paralelismo en Python puro)</text>
+  <text x="430" y="385" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">GIL se libera durante I/O → threading sí ayuda para I/O-bound</text>
+
+  <!-- ──────────────── Legend ──────────────── -->
+  <rect x="60" y="415" width="14" height="14" rx="2" fill="#306998"/>
+  <text x="80" y="427" fill="#8b949e" font-family="sans-serif" font-size="11">Task / Proceso A</text>
+  <rect x="210" y="415" width="14" height="14" rx="2" fill="#FFD43B"/>
+  <text x="230" y="427" fill="#8b949e" font-family="sans-serif" font-size="11">Task / Proceso B</text>
+  <rect x="360" y="415" width="14" height="14" rx="2" fill="#3fb950"/>
+  <text x="380" y="427" fill="#8b949e" font-family="sans-serif" font-size="11">Task / Proceso C</text>
+</svg>

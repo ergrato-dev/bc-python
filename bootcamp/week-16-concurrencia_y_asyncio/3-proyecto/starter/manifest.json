@@ -1,0 +1,45 @@
+{
+  "project_id": "studio-bc-reel-2025",
+  "assets": [
+    {
+      "name": "intro.mp4",
+      "url": "https://cdn.studio.bc/intro.mp4",
+      "type": "video"
+    },
+    {
+      "name": "logo.png",
+      "url": "https://cdn.studio.bc/logo.png",
+      "type": "image"
+    },
+    {
+      "name": "soundtrack.wav",
+      "url": "https://cdn.studio.bc/soundtrack.wav",
+      "type": "audio"
+    },
+    {
+      "name": "thumbnail.jpg",
+      "url": "https://cdn.studio.bc/thumbnail.jpg",
+      "type": "image"
+    },
+    {
+      "name": "credits.mp4",
+      "url": "https://cdn.studio.bc/credits.mp4",
+      "type": "video"
+    },
+    {
+      "name": "banner.png",
+      "url": "https://cdn.studio.bc/banner.png",
+      "type": "image"
+    },
+    {
+      "name": "outro.mp4",
+      "url": "https://cdn.studio.bc/outro.mp4",
+      "type": "video"
+    },
+    {
+      "name": "broken.mp4",
+      "url": "https://cdn.studio.bc/broken.mp4",
+      "type": "video"
+    }
+  ]
+}
