@@ -1,0 +1,11 @@
+project_id,employee,hours,date,billable
+reel-2025,Ana,8.0,2025-01-13,true
+reel-2025,Luis,6.5,2025-01-13,true
+reel-2025,Ana,7.0,2025-01-14,true
+spot-bc-01,Ana,4.0,2025-01-13,false
+spot-bc-01,Carlos,7.5,2025-01-14,true
+spot-bc-01,Carlos,8.5,2025-01-15,true
+short-film,Luis,5.0,2025-01-15,true
+short-film,Marta,9.0,2025-01-15,true
+short-film,Marta,3.5,2025-01-16,false
+reel-2025,Luis,4.0,2025-01-16,true

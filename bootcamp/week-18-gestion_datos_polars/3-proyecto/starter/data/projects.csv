@@ -1,0 +1,5 @@
+project_id,client,budget_usd,start_date,status
+reel-2025,Estudio Norte,8000.0,2025-01-10,active
+spot-bc-01,BC Media,2500.0,2025-01-12,active
+short-film,Canal 9,5000.0,2025-01-14,active
+archive-doc,Freelance,1200.0,2024-12-01,completed

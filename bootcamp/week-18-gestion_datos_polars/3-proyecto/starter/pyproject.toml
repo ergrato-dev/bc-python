@@ -1,0 +1,19 @@
+[project]
+name = "studio-bc-kpi"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "polars>=1.0",
+    "pyarrow>=16.0",
+    "rich>=13.0",
+]
+
+[tool.mypy]
+strict = true
+python_version = "3.13"
+
+[tool.uv]
+dev-dependencies = [
+    "mypy>=1.11",
+    "pytest>=8.0",
+]
