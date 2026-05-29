@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "studio-ingest-daemon"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "watchdog>=4.0",
+    "typer>=0.12",
+    "rich>=13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "mypy>=1.10",
+]
+
+[tool.mypy]
+strict = true
