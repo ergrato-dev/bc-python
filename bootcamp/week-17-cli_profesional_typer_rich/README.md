@@ -1,34 +1,48 @@
-🖥️ Semana 17: CLI Profesional con Typer y Rich
+# Semana 17: CLI Profesional con Typer y Rich
 
 > **Fase 2 — Python Profesional** · _Junior → Mid-level_
 
-## 🎯 Objetivos de Aprendizaje
-
-> 🚧 **Contenido en desarrollo.** Ver el [plan de expansión completo](../../docs/expansion-zero-to-master.md).
+## Objetivos de Aprendizaje
 
 Al finalizar esta semana, serás capaz de:
 
-- 🔲 Typer: comandos, opciones y argumentos tipados
-- 🔲 Rich: tablas, progress bars, panels, markdown en terminal
-- 🔲 Textual: TUIs interactivas con widgets
-- 🔲 Click vs Typer: migración y comparación
-- 🔲 Construcción de herramienta CLI interna del estudio
+- Construir CLIs con subcomandos, opciones tipadas y autocompletion usando **Typer**
+- Crear salidas de terminal ricas: tablas, progress bars, panels y markdown con **Rich**
+- Implementar TUIs interactivas con **Textual** (widgets, layouts, eventos)
+- Elegir entre Click y Typer según el proyecto y migrar código existente
+- Testear CLIs con `typer.testing.CliRunner` de forma reproducible
 
 ---
 
-## 🗂️ Estructura de la Semana
+## Contenidos
+
+| # | Archivo | Tema |
+|---|---------|------|
+| 01 | [Typer — Fundamentos](1-teoria/01-typer-fundamentos.md) | Comandos, opciones, argumentos, callbacks, autocompletion |
+| 02 | [Rich — Output](1-teoria/02-rich-output.md) | Console, tables, panels, syntax highlighting, Markdown |
+| 03 | [Rich — Live y Layout](1-teoria/03-rich-live-layout.md) | Progress bars, Live display, Layout, Columns |
+| 04 | [Textual — TUIs](1-teoria/04-textual-tui.md) | App, Widgets, layouts, eventos, CSS reactivo |
+| 05 | [Testing CLIs](1-teoria/05-testing-clis.md) | CliRunner, fixtures, testing subcomandos y errores |
+
+---
+
+## Estructura de la Semana
 
 ```
-week-17-week-17-cli_profesional_typer_rich/
+week-17-cli_profesional_typer_rich/
 ├── README.md
 ├── rubrica-evaluacion.md
-├── 0-assets/          # Diagramas y recursos visuales
-├── 1-teoria/          # Material teórico (.md)
-├── 2-ejercicios/      # Ejercicios guiados
-├── 3-proyecto/        # Proyecto semanal integrador
-│   ├── README.md
-│   ├── starter/       # Código inicial
-│   └── solution/      # ⚠️ Solo instructores
+├── 0-assets/               # SVGs de apoyo a la teoría
+├── 1-teoria/               # 5 archivos .md
+├── 2-ejercicios/
+│   ├── 01-ejercicio-typer-basico/
+│   ├── 02-ejercicio-rich-output/
+│   ├── 03-ejercicio-subcomandos/
+│   └── 04-ejercicio-tui-textual/
+├── 3-proyecto/
+│   ├── README.md           # Studio BC Asset CLI
+│   ├── starter/
+│   └── solution/           # Solo instructores
 ├── 4-recursos/
 │   ├── ebooks-free/
 │   ├── videografia/
@@ -38,16 +52,27 @@ week-17-week-17-cli_profesional_typer_rich/
 
 ---
 
-## ⏱️ Distribución del Tiempo (6h)
+## Distribución del Tiempo (6h)
 
 | Bloque | Actividad | Tiempo |
 |--------|-----------|--------|
-| 1 | Teoría y conceptos | 1.5 - 2h |
-| 2 | Ejercicios guiados | 2.5 - 3h |
-| 3 | Proyecto semanal | 1.5 - 2h |
+| 1 | Teoría: Typer fundamentos + Rich output | 1.5h |
+| 2 | Teoría: Rich Live + Textual + Testing CLIs | 1.0h |
+| 3 | Ejercicios guiados (4) | 2.0h |
+| 4 | Proyecto semanal | 1.5h |
 
 ---
 
-## 🔗 Navegación
+## Entregables
+
+- [ ] Ejercicio 01: CLI básica con Typer (comandos y opciones tipadas)
+- [ ] Ejercicio 02: Salida rich con tablas, panels y markdown
+- [ ] Ejercicio 03: CLI con subcomandos y estado compartido
+- [ ] Ejercicio 04: TUI básica con Textual
+- [ ] Proyecto: `bc-studio-cli` — herramienta interna de Studio BC
+
+---
+
+## Navegación
 
 ← [Semana 16](../week-16-concurrencia_y_asyncio/README.md) · [Semana 18](../week-18-gestion_datos_polars/README.md) →

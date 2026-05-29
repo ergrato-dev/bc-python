@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460">
+  <rect width="860" height="460" fill="#0d1117"/>
+  <text x="430" y="36" fill="#e6edf3" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Typer — Árbol de Comandos</text>
+
+  <!-- Root app -->
+  <rect x="330" y="60" width="200" height="48" rx="8" fill="#163356" stroke="#306998" stroke-width="2"/>
+  <text x="430" y="80" fill="#FFD43B" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">bc-studio-cli</text>
+  <text x="430" y="98" fill="#8b949e" font-family="sans-serif" font-size="11" text-anchor="middle">typer.Typer()</text>
+
+  <!-- Lines to sub-apps -->
+  <line x1="360" y1="108" x2="190" y2="168" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="430" y1="108" x2="430" y2="168" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="500" y1="108" x2="670" y2="168" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Sub-apps -->
+  <rect x="80" y="168" width="170" height="44" rx="8" fill="#1c2030" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="165" y="187" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">assets</text>
+  <text x="165" y="205" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">add_typer(assets_app)</text>
+
+  <rect x="340" y="168" width="180" height="44" rx="8" fill="#1c2030" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="430" y="187" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">projects</text>
+  <text x="430" y="205" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">add_typer(projects_app)</text>
+
+  <rect x="580" y="168" width="170" height="44" rx="8" fill="#1c2030" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="665" y="187" fill="#e6edf3" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">report</text>
+  <text x="665" y="205" fill="#8b949e" font-family="sans-serif" font-size="10" text-anchor="middle">add_typer(report_app)</text>
+
+  <!-- Lines to leaf commands -->
+  <line x1="130" y1="212" x2="80"  y2="268" stroke="#30363d" stroke-width="1.2"/>
+  <line x1="165" y1="212" x2="165" y2="268" stroke="#30363d" stroke-width="1.2"/>
+  <line x1="200" y1="212" x2="250" y2="268" stroke="#30363d" stroke-width="1.2"/>
+
+  <line x1="390" y1="212" x2="350" y2="268" stroke="#30363d" stroke-width="1.2"/>
+  <line x1="430" y1="212" x2="430" y2="268" stroke="#30363d" stroke-width="1.2"/>
+  <line x1="470" y1="212" x2="510" y2="268" stroke="#30363d" stroke-width="1.2"/>
+
+  <line x1="635" y1="212" x2="605" y2="268" stroke="#30363d" stroke-width="1.2"/>
+  <line x1="665" y1="212" x2="665" y2="268" stroke="#30363d" stroke-width="1.2"/>
+  <line x1="695" y1="212" x2="725" y2="268" stroke="#30363d" stroke-width="1.2"/>
+
+  <!-- Leaf commands: assets -->
+  <rect x="30"  y="268" width="90" height="32" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <text x="75"  y="288" fill="#3fb950" font-family="sans-serif" font-size="11" text-anchor="middle">list</text>
+  <rect x="128" y="268" width="90" height="32" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <text x="173" y="288" fill="#3fb950" font-family="sans-serif" font-size="11" text-anchor="middle">add</text>
+  <rect x="206" y="268" width="90" height="32" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <text x="251" y="288" fill="#3fb950" font-family="sans-serif" font-size="11" text-anchor="middle">delete</text>
+
+  <!-- Leaf commands: projects -->
+  <rect x="300" y="268" width="90" height="32" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.2"/>
+  <text x="345" y="288" fill="#FFD43B" font-family="sans-serif" font-size="11" text-anchor="middle">list</text>
+  <rect x="385" y="268" width="90" height="32" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.2"/>
+  <text x="430" y="288" fill="#FFD43B" font-family="sans-serif" font-size="11" text-anchor="middle">create</text>
+  <rect x="470" y="268" width="90" height="32" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.2"/>
+  <text x="515" y="288" fill="#FFD43B" font-family="sans-serif" font-size="11" text-anchor="middle">status</text>
+
+  <!-- Leaf commands: report -->
+  <rect x="558" y="268" width="90" height="32" rx="6" fill="#161b22" stroke="#306998" stroke-width="1.2"/>
+  <text x="603" y="288" fill="#306998" font-family="sans-serif" font-size="11" text-anchor="middle">generate</text>
+  <rect x="634" y="268" width="70" height="32" rx="6" fill="#161b22" stroke="#306998" stroke-width="1.2"/>
+  <text x="669" y="288" fill="#306998" font-family="sans-serif" font-size="11" text-anchor="middle">show</text>
+  <rect x="708" y="268" width="70" height="32" rx="6" fill="#161b22" stroke="#306998" stroke-width="1.2"/>
+  <text x="743" y="288" fill="#306998" font-family="sans-serif" font-size="11" text-anchor="middle">export</text>
+
+  <!-- Usage example box -->
+  <rect x="60" y="330" width="740" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="80" y="352" fill="#8b949e" font-family="sans-serif" font-size="11" font-weight="bold">Ejemplos de uso:</text>
+  <text x="80" y="372" fill="#3fb950" font-family="monospace" font-size="12">$ bc-studio-cli assets list reel-2025</text>
+  <text x="80" y="390" fill="#FFD43B" font-family="monospace" font-size="12">$ bc-studio-cli projects create reel-2025 --budget 5000</text>
+  <text x="80" y="408" fill="#306998" font-family="monospace" font-size="12">$ bc-studio-cli --verbose report generate reel-2025 --format pdf</text>
+
+  <!-- Legend -->
+  <rect x="60" y="435" width="14" height="14" rx="2" fill="#163356" stroke="#306998" stroke-width="2"/>
+  <text x="80" y="447" fill="#8b949e" font-family="sans-serif" font-size="11">app raíz</text>
+  <rect x="168" y="435" width="14" height="14" rx="2" fill="#1c2030" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="188" y="447" fill="#8b949e" font-family="sans-serif" font-size="11">sub-app (add_typer)</text>
+  <rect x="340" y="435" width="14" height="14" rx="2" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <text x="360" y="447" fill="#8b949e" font-family="sans-serif" font-size="11">comando hoja (@app.command)</text>
+</svg>
