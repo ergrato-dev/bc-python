@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" font-family="sans-serif">
+  <rect width="820" height="380" fill="#0d1117"/>
+  <text x="410" y="28" fill="#e6edf3" font-size="15" font-weight="bold" text-anchor="middle">Pipeline — studio-art-pipeline</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+    </marker>
+  </defs>
+
+  <!-- Input -->
+  <rect x="30" y="55" width="120" height="70" rx="6" fill="#21262d" stroke="#e6edf3" stroke-width="1.5"/>
+  <text x="90" y="82" fill="#e6edf3" font-size="11" font-weight="bold" text-anchor="middle">drop/</text>
+  <text x="90" y="98" fill="#8b949e" font-size="9" text-anchor="middle">foto.jpg</text>
+  <text x="90" y="112" fill="#8b949e" font-size="9" text-anchor="middle">4000 × 3000</text>
+
+  <line x1="150" y1="90" x2="178" y2="90" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- EXIF orient -->
+  <rect x="180" y="55" width="130" height="70" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.5"/>
+  <text x="245" y="78" fill="#FFD43B" font-size="10" font-weight="bold" text-anchor="middle">exif_transpose()</text>
+  <text x="245" y="96" fill="#8b949e" font-size="9" text-anchor="middle">Corregir rotación</text>
+  <text x="245" y="110" fill="#8b949e" font-size="9" text-anchor="middle">EXIF automático</text>
+
+  <line x1="310" y1="90" x2="338" y2="90" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Fan out to 4 profiles -->
+  <rect x="340" y="55" width="120" height="70" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="400" y="78" fill="#58a6ff" font-size="10" font-weight="bold" text-anchor="middle">generate_thumbnails()</text>
+  <text x="400" y="96" fill="#8b949e" font-size="9" text-anchor="middle">4 perfiles</text>
+  <text x="400" y="110" fill="#8b949e" font-size="9" text-anchor="middle">ThreadPoolExecutor</text>
+
+  <!-- Arrows to 4 outputs -->
+  <line x1="460" y1="72" x2="520" y2="150" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <line x1="460" y1="82" x2="520" y2="210" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <line x1="460" y1="92" x2="520" y2="270" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <line x1="460" y1="102" x2="520" y2="330" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-g)"/>
+
+  <!-- Output variants -->
+  <rect x="522" y="130" width="175" height="50" rx="5" fill="#21262d" stroke="#3fb950" stroke-width="1"/>
+  <text x="609" y="150" fill="#3fb950" font-size="10" font-weight="bold" text-anchor="middle">web — 1200×800</text>
+  <text x="609" y="165" fill="#8b949e" font-size="9" text-anchor="middle">thumbnail() · WebP 85</text>
+
+  <rect x="522" y="190" width="175" height="50" rx="5" fill="#21262d" stroke="#f85149" stroke-width="1"/>
+  <text x="609" y="210" fill="#f85149" font-size="10" font-weight="bold" text-anchor="middle">social — 1080×1080</text>
+  <text x="609" y="225" fill="#8b949e" font-size="9" text-anchor="middle">ImageOps.fit() · WebP 85</text>
+
+  <rect x="522" y="250" width="175" height="50" rx="5" fill="#21262d" stroke="#FFD43B" stroke-width="1"/>
+  <text x="609" y="270" fill="#FFD43B" font-size="10" font-weight="bold" text-anchor="middle">thumb — 300×300</text>
+  <text x="609" y="285" fill="#8b949e" font-size="9" text-anchor="middle">ImageOps.fit() · WebP 80</text>
+
+  <rect x="522" y="310" width="175" height="50" rx="5" fill="#21262d" stroke="#8b949e" stroke-width="1"/>
+  <text x="609" y="330" fill="#e6edf3" font-size="10" font-weight="bold" text-anchor="middle">print — 3000×2000</text>
+  <text x="609" y="345" fill="#8b949e" font-size="9" text-anchor="middle">thumbnail() · TIFF LZW</text>
+
+  <!-- Watermark step -->
+  <rect x="715" y="130" width="90" height="90" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="760" y="168" fill="#f85149" font-size="10" font-weight="bold" text-anchor="middle">watermark</text>
+  <text x="760" y="184" fill="#8b949e" font-size="9" text-anchor="middle">logo + texto</text>
+  <text x="760" y="200" fill="#8b949e" font-size="9" text-anchor="middle">alpha_composite</text>
+
+  <line x1="697" y1="155" x2="713" y2="155" stroke="#58a6ff" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="697" y1="215" x2="713" y2="175" stroke="#58a6ff" stroke-width="1" marker-end="url(#arr)"/>
+</svg>

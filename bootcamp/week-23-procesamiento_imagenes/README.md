@@ -1,53 +1,77 @@
-🖼️ Semana 23: Procesamiento de Imágenes
+# Semana 23: Procesamiento de Imágenes
 
 > **Fase 3 — Automatización y Pipelines de Media** · _Mid-level → Senior_
 
-## 🎯 Objetivos de Aprendizaje
-
-> 🚧 **Contenido en desarrollo.** Ver el [plan de expansión completo](../../docs/expansion-zero-to-master.md).
+## Objetivos de Aprendizaje
 
 Al finalizar esta semana, serás capaz de:
 
-- 🔲 Pillow: resize, crop, rotate, convert, composite
-- 🔲 imageio: lectura/escritura de múltiples formatos
-- 🔲 Thumbnails automáticos con dimensiones estándar
-- 🔲 Watermarks, overlays y branding automático
-- 🔲 Pipeline de arte: recibir → procesar → entregar thumbnails
+- Abrir, transformar y guardar imágenes con Pillow (`Image`, `ImageOps`, `ImageDraw`)
+- Convertir entre formatos: JPG, PNG, WebP, TIFF; leer RAW con `rawpy`
+- Generar thumbnails en múltiples resoluciones para web, social y print
+- Aplicar watermarks (logo + texto) con alpha compositing
+- Procesar lotes de cientos de imágenes con `concurrent.futures` y barra de progreso
 
 ---
 
-## 🗂️ Estructura de la Semana
+## Contenidos
+
+| # | Archivo | Tema |
+|---|---------|------|
+| 01 | [Pillow — Fundamentos](1-teoria/01-pillow-fundamentos.md) | Image.open, modos de color, resize, crop, rotate, save |
+| 02 | [Formatos y Conversión](1-teoria/02-formatos-conversion.md) | JPG, PNG, WebP, TIFF, RAW (rawpy), EXIF con piexif |
+| 03 | [Thumbnails Múltiples Resoluciones](1-teoria/03-thumbnails-resoluciones.md) | Tamaños web/social/print, LANCZOS, ImageOps.fit |
+| 04 | [Watermarks y Overlays](1-teoria/04-watermarks-overlays.md) | Logo overlay, texto con ImageDraw, alpha compositing |
+| 05 | [Batch Processing](1-teoria/05-batch-processing.md) | ThreadPoolExecutor, progress bar con Rich, error handling |
+
+---
+
+## Estructura de la Semana
 
 ```
-week-23-week-23-procesamiento_imagenes/
+week-23-procesamiento_imagenes/
 ├── README.md
 ├── rubrica-evaluacion.md
-├── 0-assets/          # Diagramas y recursos visuales
-├── 1-teoria/          # Material teórico (.md)
-├── 2-ejercicios/      # Ejercicios guiados
-├── 3-proyecto/        # Proyecto semanal integrador
-│   ├── README.md
-│   ├── starter/       # Código inicial
-│   └── solution/      # ⚠️ Solo instructores
+├── 0-assets/               # SVGs de apoyo a la teoría
+├── 1-teoria/               # 5 archivos .md
+├── 2-ejercicios/
+│   ├── 01-resize-y-crop/
+│   ├── 02-conversion-formatos/
+│   ├── 03-watermark/
+│   └── 04-batch-thumbnails/
+├── 3-proyecto/
+│   ├── README.md           # studio-art-pipeline
+│   ├── starter/
+│   └── solution/
 ├── 4-recursos/
-│   ├── ebooks-free/
-│   ├── videografia/
-│   └── webgrafia/
 └── 5-glosario/
 ```
 
 ---
 
-## ⏱️ Distribución del Tiempo (6h)
+## Distribución del Tiempo (6h)
 
 | Bloque | Actividad | Tiempo |
 |--------|-----------|--------|
-| 1 | Teoría y conceptos | 1.5 - 2h |
-| 2 | Ejercicios guiados | 2.5 - 3h |
-| 3 | Proyecto semanal | 1.5 - 2h |
+| 1 | Teoría: fundamentos + formatos | 1.5h |
+| 2 | Teoría: thumbnails + watermarks + batch | 1.0h |
+| 3 | Ejercicios guiados (4) | 2.0h |
+| 4 | Proyecto semanal | 1.5h |
 
 ---
 
-## 🔗 Navegación
+## Stack de la Semana
 
-← [Semana 22](../week-22-automatizacion_sistema_archivos/README.md) · [Semana 24](../week-24-procesamiento_audio/README.md) →
+| Librería | Rol |
+|----------|-----|
+| `Pillow` | Operaciones de imagen: resize, crop, draw, composite |
+| `rawpy` | Decodificación de archivos RAW (CR2, NEF, ARW) |
+| `piexif` | Lectura y escritura de metadatos EXIF |
+| `imageio` | I/O de imágenes en múltiples formatos |
+| `rich` | Progress bar para batch processing |
+
+---
+
+## Navegación
+
+← [Semana 22 — Automatización del Sistema de Archivos](../week-22-automatizacion_sistema_archivos/README.md) · [Semana 24 — Procesamiento de Audio](../week-24-procesamiento_audio/README.md) →
