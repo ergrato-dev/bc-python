@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" width="820" height="360" font-family="sans-serif">
+  <rect width="820" height="360" fill="#0d1117"/>
+  <text x="410" y="28" fill="#e6edf3" font-size="15" font-weight="bold" text-anchor="middle">studio-audio-pipeline — Flujo completo</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1: Input -->
+  <rect x="30" y="55" width="120" height="65" rx="6" fill="#21262d" stroke="#e6edf3" stroke-width="1.5"/>
+  <text x="90" y="78" fill="#e6edf3" font-size="11" font-weight="bold" text-anchor="middle">drop/</text>
+  <text x="90" y="95" fill="#8b949e" font-size="9" text-anchor="middle">entrevista.mp3</text>
+  <text x="90" y="110" fill="#8b949e" font-size="9" text-anchor="middle">audio.wav · ...</text>
+
+  <line x1="150" y1="87" x2="178" y2="87" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Pre-process -->
+  <rect x="180" y="55" width="130" height="65" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.5"/>
+  <text x="245" y="76" fill="#FFD43B" font-size="10" font-weight="bold" text-anchor="middle">Pre-procesado</text>
+  <text x="245" y="92" fill="#8b949e" font-size="9" text-anchor="middle">→ mono, 16 kHz</text>
+  <text x="245" y="106" fill="#8b949e" font-size="9" text-anchor="middle">normalizar -14 dBFS</text>
+
+  <line x1="310" y1="87" x2="338" y2="87" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Silence detection -->
+  <rect x="340" y="55" width="140" height="65" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="410" y="76" fill="#f85149" font-size="10" font-weight="bold" text-anchor="middle">Detección silencio</text>
+  <text x="410" y="92" fill="#8b949e" font-size="9" text-anchor="middle">split_on_silence()</text>
+  <text x="410" y="106" fill="#8b949e" font-size="9" text-anchor="middle">-40 dBFS · 700ms</text>
+
+  <line x1="480" y1="87" x2="508" y2="87" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 4: Whisper -->
+  <rect x="510" y="55" width="130" height="65" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="575" y="76" fill="#58a6ff" font-size="10" font-weight="bold" text-anchor="middle">Whisper</text>
+  <text x="575" y="92" fill="#8b949e" font-size="9" text-anchor="middle">model.transcribe()</text>
+  <text x="575" y="106" fill="#8b949e" font-size="9" text-anchor="middle">segments + timestamps</text>
+
+  <line x1="640" y1="87" x2="668" y2="87" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 5: Outputs -->
+  <rect x="670" y="55" width="130" height="65" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="735" y="76" fill="#3fb950" font-size="10" font-weight="bold" text-anchor="middle">Subtítulos</text>
+  <text x="735" y="92" fill="#8b949e" font-size="9" text-anchor="middle">generate_srt()</text>
+  <text x="735" y="106" fill="#8b949e" font-size="9" text-anchor="middle">generate_vtt()</text>
+
+  <!-- SRT format example -->
+  <rect x="30" y="165" width="370" height="165" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="215" y="185" fill="#FFD43B" font-size="11" font-weight="bold" text-anchor="middle">Formato SRT</text>
+  <text x="50" y="205" fill="#3fb950" font-size="10">1</text>
+  <text x="50" y="220" fill="#58a6ff" font-size="10">00:00:01,280 --> 00:00:04,720</text>
+  <text x="50" y="235" fill="#e6edf3" font-size="10">Bienvenidos a Studio BC.</text>
+  <text x="50" y="258" fill="#3fb950" font-size="10">2</text>
+  <text x="50" y="273" fill="#58a6ff" font-size="10">00:00:05,100 --> 00:00:08,340</text>
+  <text x="50" y="288" fill="#e6edf3" font-size="10">Este proyecto fue desarrollado</text>
+  <text x="50" y="302" fill="#e6edf3" font-size="10">para Canal 9.</text>
+
+  <!-- VTT format example -->
+  <rect x="420" y="165" width="370" height="165" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="605" y="185" fill="#FFD43B" font-size="11" font-weight="bold" text-anchor="middle">Formato WebVTT</text>
+  <text x="440" y="205" fill="#f85149" font-size="10">WEBVTT</text>
+  <text x="440" y="228" fill="#58a6ff" font-size="10">00:00:01.280 --> 00:00:04.720</text>
+  <text x="440" y="243" fill="#e6edf3" font-size="10">Bienvenidos a Studio BC.</text>
+  <text x="440" y="266" fill="#58a6ff" font-size="10">00:00:05.100 --> 00:00:08.340</text>
+  <text x="440" y="281" fill="#e6edf3" font-size="10">Este proyecto fue desarrollado para Canal 9.</text>
+  <text x="440" y="308" fill="#8b949e" font-size="9">punto (.) en lugar de coma — sin número de bloque</text>
+</svg>
