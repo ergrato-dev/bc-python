@@ -1,53 +1,76 @@
-🚀 Semana 30: Proyecto Fase 3: Pipeline de Producción
+# Semana 30: Proyecto Fase 3 — Pipeline de Producción
 
-> **Fase 3 — Automatización y Pipelines de Media** · _Mid-level → Senior_
+> **Fase 3 — Automatización y Pipelines de Media** · _Semana integradora_
 
-## 🎯 Objetivos de Aprendizaje
+## Descripción
 
-> 🚧 **Contenido en desarrollo.** Ver el [plan de expansión completo](../../docs/expansion-zero-to-master.md).
+Esta semana no tiene teoría ni ejercicios guiados: es la semana de **integración y entrega** de la Fase 3.
 
-Al finalizar esta semana, serás capaz de:
+El proyecto `studio-production-pipeline` une todo lo construido en las semanas 22–29 en un único sistema operativo end-to-end para Studio BC:
 
-- 🔲 Pipeline end-to-end: watch carpeta → validate → transcode → thumbnail
-- 🔲 Upload automático a S3 + Drive
-- 🔲 Publicación en YouTube/Vimeo con metadata completa
-- 🔲 Notificaciones al equipo en Slack/Discord
-- 🔲 Monitoreo y dashboard de estado en tiempo real
+```
+drop/   →  Ingest  →  Validate  →  Transcode  →  Cloud Upload
+                                                    ↓
+                                               Distribute
+                                           (YouTube · Vimeo)
+                                                    ↓
+                                                 Notify
+                                             (Slack · Discord)
+                                                    ↓
+                                             Dashboard Live
+                                         (Rich terminal monitor)
+```
 
 ---
 
-## 🗂️ Estructura de la Semana
+## Objetivos
+
+Al terminar esta semana, el estudiante habrá demostrado que puede:
+
+- Integrar watchdog, ffmpeg, boto3, Drive API, YouTube, Vimeo, Slack y Rich en un pipeline cohesivo
+- Diseñar etapas con el `Stage Protocol` y manejar fallos con DLQ y retry
+- Desplegar un daemon que procesa archivos nuevos y registra su estado en JSON
+- Escribir tests de integración que cubren el flujo completo sin credenciales reales
+- Defender técnicamente las decisiones de diseño
+
+---
+
+## Estructura
 
 ```
-week-30-week-30-proyecto_fase_3/
+week-30-proyecto_fase_3/
 ├── README.md
 ├── rubrica-evaluacion.md
-├── 0-assets/          # Diagramas y recursos visuales
-├── 1-teoria/          # Material teórico (.md)
-├── 2-ejercicios/      # Ejercicios guiados
-├── 3-proyecto/        # Proyecto semanal integrador
-│   ├── README.md
-│   ├── starter/       # Código inicial
-│   └── solution/      # ⚠️ Solo instructores
+├── 3-proyecto/
+│   ├── README.md           # Descripción del proyecto + TODOs
+│   ├── starter/            # Scaffolding para el estudiante
+│   └── solution/           # Solo instructores
 ├── 4-recursos/
-│   ├── ebooks-free/
-│   ├── videografia/
-│   └── webgrafia/
 └── 5-glosario/
 ```
 
 ---
 
-## ⏱️ Distribución del Tiempo (6h)
+## Distribución del Tiempo (6h)
 
 | Bloque | Actividad | Tiempo |
 |--------|-----------|--------|
-| 1 | Teoría y conceptos | 1.5 - 2h |
-| 2 | Ejercicios guiados | 2.5 - 3h |
-| 3 | Proyecto semanal | 1.5 - 2h |
+| 1 | Leer README del proyecto + planificar integración | 0.5h |
+| 2 | Implementar las 3 etapas con TODOs | 2.5h |
+| 3 | Escribir tests de integración + watcher | 1.5h |
+| 4 | Demo en vivo + dashboard + refinamiento | 1.5h |
 
 ---
 
-## 🔗 Navegación
+## Criterios de Aprobación
 
-← [Semana 29](../week-29-monitoreo_pipelines/README.md) · [Semana 31](../week-31-clean_architecture_ddd/README.md) →
+- Pipeline procesa un video de `drop/` de punta a punta sin intervención manual
+- `pytest tests/ -v` pasa con cobertura > 80 %
+- `mypy --strict src/` pasa sin errores
+- Demo en vivo ejecutándose en terminal con dashboard visible
+
+---
+
+## Navegación
+
+← [Semana 29 — Monitoreo de Pipelines](../week-29-monitoreo_pipelines/README.md) · [Semana 31 — Clean Architecture y DDD](../week-31-clean_architecture_ddd/README.md) →
