@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" width="860" height="480" font-family="sans-serif">
+  <rect width="860" height="480" fill="#0d1117"/>
+  <text x="430" y="30" fill="#e6edf3" font-size="16" font-weight="bold" text-anchor="middle">studio-cloud-backup — Arquitectura de Storage</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="arr-g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+    </marker>
+    <marker id="arr-y" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#FFD43B"/>
+    </marker>
+  </defs>
+
+  <!-- LOCAL STORAGE -->
+  <rect x="30" y="60" width="220" height="340" rx="8" fill="#161b22" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="140" y="85" fill="#8b949e" font-size="12" font-weight="bold" text-anchor="middle">Almacenamiento Local</text>
+
+  <rect x="50" y="100" width="180" height="44" rx="5" fill="#21262d" stroke="#8b949e" stroke-width="1"/>
+  <text x="140" y="118" fill="#e6edf3" font-size="11" text-anchor="middle">output/</text>
+  <text x="140" y="134" fill="#8b949e" font-size="9" text-anchor="middle">renders, exports, masters</text>
+
+  <rect x="50" y="158" width="180" height="44" rx="5" fill="#21262d" stroke="#8b949e" stroke-width="1"/>
+  <text x="140" y="176" fill="#e6edf3" font-size="11" text-anchor="middle">source/</text>
+  <text x="140" y="192" fill="#8b949e" font-size="9" text-anchor="middle">footage, audio, RAW</text>
+
+  <rect x="50" y="216" width="180" height="44" rx="5" fill="#21262d" stroke="#8b949e" stroke-width="1"/>
+  <text x="140" y="234" fill="#e6edf3" font-size="11" text-anchor="middle">deliverables/</text>
+  <text x="140" y="250" fill="#8b949e" font-size="9" text-anchor="middle">entregables finales cliente</text>
+
+  <rect x="50" y="320" width="180" height="44" rx="5" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="140" y="338" fill="#8b949e" font-size="10" text-anchor="middle">.sync_state.json</text>
+  <text x="140" y="354" fill="#8b949e" font-size="9" text-anchor="middle">checksums + timestamps</text>
+
+  <!-- SYNC ENGINE center -->
+  <rect x="320" y="185" width="220" height="80" rx="8" fill="#161b22" stroke="#FFD43B" stroke-width="1.5"/>
+  <text x="430" y="210" fill="#FFD43B" font-size="12" font-weight="bold" text-anchor="middle">SyncEngine</text>
+  <text x="430" y="228" fill="#8b949e" font-size="10" text-anchor="middle">needs_upload() → sha256()</text>
+  <text x="430" y="244" fill="#8b949e" font-size="10" text-anchor="middle">upload / skip / download</text>
+
+  <!-- Arrows local → sync -->
+  <line x1="230" y1="225" x2="318" y2="225" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- S3 -->
+  <rect x="610" y="60" width="220" height="180" rx="8" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="720" y="85" fill="#f85149" font-size="12" font-weight="bold" text-anchor="middle">Amazon S3</text>
+  <text x="720" y="101" fill="#8b949e" font-size="9" text-anchor="middle">studio-bc-prod-assets</text>
+
+  <rect x="630" y="110" width="180" height="38" rx="5" fill="#21262d" stroke="#f85149" stroke-width="1"/>
+  <text x="720" y="125" fill="#e6edf3" font-size="10" text-anchor="middle">STANDARD → renders/</text>
+  <text x="720" y="140" fill="#8b949e" font-size="9" text-anchor="middle">{cliente}/{proyecto}/{tipo}/{fecha}/</text>
+
+  <rect x="630" y="158" width="180" height="38" rx="5" fill="#21262d" stroke="#f85149" stroke-width="1"/>
+  <text x="720" y="173" fill="#e6edf3" font-size="10" text-anchor="middle">GLACIER_IR → source/</text>
+  <text x="720" y="188" fill="#8b949e" font-size="9" text-anchor="middle">lifecycle 90d → archive</text>
+
+  <rect x="630" y="205" width="180" height="22" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="720" y="220" fill="#8b949e" font-size="9" text-anchor="middle">Presigned URLs para descarga</text>
+
+  <!-- S3 arrows -->
+  <line x1="540" y1="205" x2="608" y2="175" stroke="#f85149" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="555" y="185" fill="#f85149" font-size="9">boto3</text>
+
+  <!-- DRIVE -->
+  <rect x="610" y="270" width="220" height="140" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="720" y="295" fill="#3fb950" font-size="12" font-weight="bold" text-anchor="middle">Google Drive</text>
+  <text x="720" y="311" fill="#8b949e" font-size="9" text-anchor="middle">Service Account</text>
+
+  <rect x="630" y="318" width="180" height="38" rx="5" fill="#21262d" stroke="#3fb950" stroke-width="1"/>
+  <text x="720" y="333" fill="#e6edf3" font-size="10" text-anchor="middle">Entregables/</text>
+  <text x="720" y="349" fill="#8b949e" font-size="9" text-anchor="middle">compartido → cliente (reader)</text>
+
+  <rect x="630" y="364" width="180" height="30" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="720" y="383" fill="#8b949e" font-size="9" text-anchor="middle">webViewLink compartible</text>
+
+  <!-- Drive arrows -->
+  <line x1="540" y1="240" x2="608" y2="310" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <text x="545" y="285" fill="#3fb950" font-size="9">Drive API</text>
+
+  <!-- Legend -->
+  <rect x="30" y="430" width="800" height="35" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="50" y="452" fill="#f85149" font-size="10">S3 = masters / backups técnicos</text>
+  <text x="260" y="452" fill="#3fb950" font-size="10">Drive = entregables compartidos con cliente</text>
+  <text x="530" y="452" fill="#FFD43B" font-size="10">SyncEngine = sync incremental por SHA-256</text>
+</svg>

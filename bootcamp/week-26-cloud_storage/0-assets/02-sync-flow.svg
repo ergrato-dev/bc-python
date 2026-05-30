@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" font-family="sans-serif">
+  <rect width="820" height="500" fill="#0d1117"/>
+  <text x="410" y="30" fill="#e6edf3" font-size="16" font-weight="bold" text-anchor="middle">Flujo de Sincronización Incremental</text>
+
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="ag" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+    </marker>
+    <marker id="ay" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#FFD43B"/>
+    </marker>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f85149"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1: Start -->
+  <rect x="310" y="55" width="200" height="44" rx="6" fill="#21262d" stroke="#e6edf3" stroke-width="1.5"/>
+  <text x="410" y="73" fill="#e6edf3" font-size="11" font-weight="bold" text-anchor="middle">Inicio del Backup</text>
+  <text x="410" y="89" fill="#8b949e" font-size="9" text-anchor="middle">studio-cloud-backup run</text>
+
+  <line x1="410" y1="99" x2="410" y2="123" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 2: Load state -->
+  <rect x="270" y="125" width="280" height="44" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.5"/>
+  <text x="410" y="143" fill="#FFD43B" font-size="11" font-weight="bold" text-anchor="middle">Cargar .sync_state.json</text>
+  <text x="410" y="159" fill="#8b949e" font-size="9" text-anchor="middle">sha256 → s3_key → synced_at por archivo</text>
+
+  <line x1="410" y1="169" x2="410" y2="193" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 3: Traverse -->
+  <rect x="270" y="195" width="280" height="44" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="410" y="213" fill="#58a6ff" font-size="11" font-weight="bold" text-anchor="middle">Recorrer local_dir.rglob("*")</text>
+  <text x="410" y="229" fill="#8b949e" font-size="9" text-anchor="middle">filtrar por extensión</text>
+
+  <line x1="410" y1="239" x2="410" y2="263" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Step 4: Decision diamond -->
+  <polygon points="410,265 530,295 410,325 290,295" fill="#161b22" stroke="#FFD43B" stroke-width="1.5"/>
+  <text x="410" y="291" fill="#FFD43B" font-size="10" font-weight="bold" text-anchor="middle">needs_upload()?</text>
+  <text x="410" y="305" fill="#8b949e" font-size="9" text-anchor="middle">sha256 != estado guardado</text>
+
+  <!-- NO branch -->
+  <line x1="290" y1="295" x2="190" y2="295" stroke="#3fb950" stroke-width="1.5" marker-end="url(#ag)"/>
+  <text x="234" y="288" fill="#3fb950" font-size="10">NO</text>
+
+  <rect x="60" y="270" width="128" height="44" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="124" y="287" fill="#3fb950" font-size="10" font-weight="bold" text-anchor="middle">SKIP</text>
+  <text x="124" y="303" fill="#8b949e" font-size="9" text-anchor="middle">stats["skipped"] += 1</text>
+
+  <!-- YES branch -->
+  <line x1="530" y1="295" x2="620" y2="295" stroke="#f85149" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="566" y="288" fill="#f85149" font-size="10">SÍ</text>
+
+  <rect x="622" y="265" width="155" height="60" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="700" y="287" fill="#f85149" font-size="10" font-weight="bold" text-anchor="middle">s3.upload_file()</text>
+  <text x="700" y="301" fill="#8b949e" font-size="9" text-anchor="middle">{cliente}/{proyecto}/</text>
+  <text x="700" y="313" fill="#8b949e" font-size="9" text-anchor="middle">{tipo}/{fecha}/archivo</text>
+
+  <!-- After upload: mark synced -->
+  <line x1="700" y1="325" x2="700" y2="360" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="622" y="362" width="155" height="44" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="700" y="380" fill="#58a6ff" font-size="10" font-weight="bold" text-anchor="middle">mark_synced()</text>
+  <text x="700" y="396" fill="#8b949e" font-size="9" text-anchor="middle">sha256 + timestamp en state</text>
+
+  <!-- Both converge to save state -->
+  <line x1="124" y1="314" x2="124" y2="430" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="124" y1="430" x2="360" y2="430" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="700" y1="406" x2="700" y2="430" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="700" y1="430" x2="462" y2="430" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="410" y1="326" x2="410" y2="430" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Save state box -->
+  <rect x="270" y="432" width="280" height="44" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.5"/>
+  <text x="410" y="450" fill="#FFD43B" font-size="11" font-weight="bold" text-anchor="middle">save_state() → .sync_state.json</text>
+  <text x="410" y="466" fill="#8b949e" font-size="9" text-anchor="middle">escritura atómica (tmp.replace)</text>
+</svg>
