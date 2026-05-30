@@ -1,53 +1,84 @@
-🤖 Semana 32: IA Aplicada a Media
+# Semana 32: IA Aplicada a Media
 
 > **Fase 4 — Arquitectura Master y Sistema de Producción** · _Senior → Master_
 
-## 🎯 Objetivos de Aprendizaje
-
-> 🚧 **Contenido en desarrollo.** Ver el [plan de expansión completo](../../docs/expansion-zero-to-master.md).
+## Objetivos de Aprendizaje
 
 Al finalizar esta semana, serás capaz de:
 
-- 🔲 OpenAI API: GPT-4o para análisis y descripción de assets
-- 🔲 Whisper avanzado: speaker diarization, timestamps
-- 🔲 Auto-tagging y categorización de contenido con IA
-- 🔲 Embeddings para búsqueda semántica de assets
-- 🔲 Generación automática de metadatos, títulos y descripciones SEO
+- Llamar a GPT-4o Vision para analizar frames de video y describir contenido visual
+- Transcribir audio con Whisper obteniendo timestamps a nivel de palabra y segmento
+- Generar embeddings con `text-embedding-3-small` e implementar búsqueda semántica
+- Construir un sistema de auto-tagging con embeddings + similitud coseno
+- Generar automáticamente títulos SEO, descripciones, tags y capítulos de video
 
 ---
 
-## 🗂️ Estructura de la Semana
+## Contenidos
+
+| # | Archivo | Tema |
+|---|---------|------|
+| 01 | [OpenAI API y GPT-4o Vision](1-teoria/01-openai-gpt4o-vision.md) | Chat completions, análisis de imágenes, prompting estructurado |
+| 02 | [Whisper — Transcripción Avanzada](1-teoria/02-whisper-avanzado.md) | verbose_json, timestamps de palabra, segmentos, idioma |
+| 03 | [Embeddings y Búsqueda Semántica](1-teoria/03-embeddings-busqueda.md) | text-embedding-3-small, cosine similarity, índice en memoria |
+| 04 | [Auto-Tagging y Clasificación](1-teoria/04-auto-tagging.md) | Few-shot prompting, clasificación por similitud, taxonomía |
+| 05 | [Generación Automática de Metadata](1-teoria/05-generacion-metadata.md) | Títulos SEO, descripciones, capítulos con timestamps |
+
+---
+
+## Estructura de la Semana
 
 ```
-week-32-week-32-ia_aplicada_media/
+week-32-ia_aplicada_media/
 ├── README.md
 ├── rubrica-evaluacion.md
-├── 0-assets/          # Diagramas y recursos visuales
-├── 1-teoria/          # Material teórico (.md)
-├── 2-ejercicios/      # Ejercicios guiados
-├── 3-proyecto/        # Proyecto semanal integrador
-│   ├── README.md
-│   ├── starter/       # Código inicial
-│   └── solution/      # ⚠️ Solo instructores
+├── 1-teoria/               # 5 archivos .md
+├── 2-ejercicios/
+│   ├── 01-vision-frame/
+│   ├── 02-whisper-timestamps/
+│   ├── 03-semantic-search/
+│   └── 04-metadata-generator/
+├── 3-proyecto/
+│   ├── README.md           # studio-ai-tagger
+│   ├── starter/
+│   └── solution/
 ├── 4-recursos/
-│   ├── ebooks-free/
-│   ├── videografia/
-│   └── webgrafia/
 └── 5-glosario/
 ```
 
 ---
 
-## ⏱️ Distribución del Tiempo (6h)
+## Distribución del Tiempo (6h)
 
 | Bloque | Actividad | Tiempo |
 |--------|-----------|--------|
-| 1 | Teoría y conceptos | 1.5 - 2h |
-| 2 | Ejercicios guiados | 2.5 - 3h |
-| 3 | Proyecto semanal | 1.5 - 2h |
+| 1 | Teoría: Vision + Whisper | 1.5h |
+| 2 | Teoría: Embeddings + Auto-tagging + Metadata | 1.0h |
+| 3 | Ejercicios guiados (4) | 2.0h |
+| 4 | Proyecto semanal | 1.5h |
 
 ---
 
-## 🔗 Navegación
+## Stack de la Semana
 
-← [Semana 31](../week-31-clean_architecture_ddd/README.md) · [Semana 33](../week-33-performance_y_optimizacion/README.md) →
+| Librería | Rol |
+|----------|-----|
+| `openai` | Cliente oficial — Chat Completions, Whisper, Embeddings |
+| `numpy` | Similitud coseno, operaciones vectoriales |
+| `base64` | Codificar imágenes para Vision API |
+| `pathlib` | Manejo de archivos de audio/imagen/video |
+
+---
+
+## Prerequisito
+
+```bash
+pip install openai numpy
+export OPENAI_API_KEY=sk-...
+```
+
+---
+
+## Navegación
+
+← [Semana 31 — Clean Architecture y DDD](../week-31-clean_architecture_ddd/README.md) · [Semana 33 — Performance y Optimización](../week-33-performance_y_optimizacion/README.md) →
