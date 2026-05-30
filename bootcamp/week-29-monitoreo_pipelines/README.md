@@ -1,53 +1,76 @@
-📡 Semana 29: Monitoreo de Pipelines
+# Semana 29: Monitoreo de Pipelines
 
 > **Fase 3 — Automatización y Pipelines de Media** · _Mid-level → Senior_
 
-## 🎯 Objetivos de Aprendizaje
-
-> 🚧 **Contenido en desarrollo.** Ver el [plan de expansión completo](../../docs/expansion-zero-to-master.md).
+## Objetivos de Aprendizaje
 
 Al finalizar esta semana, serás capaz de:
 
-- 🔲 Structured logging con structlog y loguru
-- 🔲 Métricas: tiempos, throughput, errores por etapa
-- 🔲 Alertas en tiempo real vía Slack/Discord/email
-- 🔲 Health checks y recuperación automática
-- 🔲 Dashboard de estado de entregas del estudio
+- Implementar structured logging con `structlog`: contexto por request, processors y JSON output
+- Recolectar métricas de pipeline: tiempos por etapa, tasa de error, throughput y cola pendiente
+- Configurar alertas automáticas con thresholds y notificaciones a Slack
+- Implementar health checks con watchdog timers y endpoints de status JSON
+- Construir un dashboard de terminal con `Rich Live` para monitoreo en tiempo real
 
 ---
 
-## 🗂️ Estructura de la Semana
+## Contenidos
+
+| # | Archivo | Tema |
+|---|---------|------|
+| 01 | [Structured Logging](1-teoria/01-structured-logging.md) | structlog, contexto, processors, JSON output |
+| 02 | [Métricas de Pipeline](1-teoria/02-metricas-pipeline.md) | Tiempos, throughput, tasa de error, cola pendiente |
+| 03 | [Alertas y Thresholds](1-teoria/03-alertas-thresholds.md) | Reglas de alerta, cooldown, notificaciones a Slack |
+| 04 | [Health Checks](1-teoria/04-health-checks.md) | Watchdog timers, status endpoint, circuit breaker |
+| 05 | [Dashboard Terminal](1-teoria/05-dashboard-terminal.md) | Rich Live, Layout, Table, Panel, Progress en tiempo real |
+
+---
+
+## Estructura de la Semana
 
 ```
-week-29-week-29-monitoreo_pipelines/
+week-29-monitoreo_pipelines/
 ├── README.md
 ├── rubrica-evaluacion.md
-├── 0-assets/          # Diagramas y recursos visuales
-├── 1-teoria/          # Material teórico (.md)
-├── 2-ejercicios/      # Ejercicios guiados
-├── 3-proyecto/        # Proyecto semanal integrador
-│   ├── README.md
-│   ├── starter/       # Código inicial
-│   └── solution/      # ⚠️ Solo instructores
+├── 0-assets/               # SVGs de apoyo a la teoría
+├── 1-teoria/               # 5 archivos .md
+├── 2-ejercicios/
+│   ├── 01-structlog-contexto/
+│   ├── 02-metricas-coleccion/
+│   ├── 03-alertas-slack/
+│   └── 04-rich-live-dashboard/
+├── 3-proyecto/
+│   ├── README.md           # studio-monitor
+│   ├── starter/
+│   └── solution/
 ├── 4-recursos/
-│   ├── ebooks-free/
-│   ├── videografia/
-│   └── webgrafia/
 └── 5-glosario/
 ```
 
 ---
 
-## ⏱️ Distribución del Tiempo (6h)
+## Distribución del Tiempo (6h)
 
 | Bloque | Actividad | Tiempo |
 |--------|-----------|--------|
-| 1 | Teoría y conceptos | 1.5 - 2h |
-| 2 | Ejercicios guiados | 2.5 - 3h |
-| 3 | Proyecto semanal | 1.5 - 2h |
+| 1 | Teoría: structlog + métricas | 1.5h |
+| 2 | Teoría: alertas + health checks + dashboard | 1.0h |
+| 3 | Ejercicios guiados (4) | 2.0h |
+| 4 | Proyecto semanal | 1.5h |
 
 ---
 
-## 🔗 Navegación
+## Stack de la Semana
 
-← [Semana 28](../week-28-integraciones_plataformas/README.md) · [Semana 30](../week-30-proyecto_fase_3/README.md) →
+| Librería | Rol |
+|----------|-----|
+| `structlog` | Logging estructurado con contexto y processors |
+| `rich` | `Live`, `Layout`, `Table`, `Panel`, `Progress` para dashboard |
+| `prometheus_client` | Contadores, histogramas y gauges (introducción básica) |
+| `httpx` | Envío de alertas a Slack webhook |
+
+---
+
+## Navegación
+
+← [Semana 28 — Integraciones con Plataformas](../week-28-integraciones_plataformas/README.md) · [Semana 30 — Proyecto Fase 3](../week-30-proyecto_fase_3/README.md) →

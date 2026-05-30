@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "studio-monitor"
+version = "0.1.0"
+description = "Pipeline monitoring daemon for Studio BC"
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13.0",
+    "structlog>=24.0",
+    "typer>=0.12",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.14",
+    "mypy>=1.10",
+]
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
