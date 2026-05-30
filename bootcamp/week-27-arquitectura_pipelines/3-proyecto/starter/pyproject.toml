@@ -1,0 +1,17 @@
+[project]
+name = "studio-pipeline"
+version = "0.1.0"
+description = "Framework de pipeline de media con etapas conectables y manejo de errores"
+requires-python = ">=3.12"
+dependencies = [
+    "tenacity>=8.2",
+    "typer>=0.12",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+rq = ["rq>=1.16", "redis>=5.0"]
+dev = ["mypy", "pytest"]
+
+[tool.mypy]
+strict = true

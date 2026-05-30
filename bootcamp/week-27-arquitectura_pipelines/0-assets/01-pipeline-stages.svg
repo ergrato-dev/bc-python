@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="sans-serif">
+  <rect width="900" height="420" fill="#0d1117"/>
+  <text x="450" y="30" fill="#e6edf3" font-size="16" font-weight="bold" text-anchor="middle">Arquitectura de Pipeline — Etapas y Colas</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <!-- INPUT -->
+  <rect x="20" y="170" width="100" height="60" rx="6" fill="#21262d" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="70" y="196" fill="#e6edf3" font-size="11" font-weight="bold" text-anchor="middle">Input</text>
+  <text x="70" y="212" fill="#8b949e" font-size="9" text-anchor="middle">clip.mp4</text>
+  <text x="70" y="224" fill="#8b949e" font-size="9" text-anchor="middle">project=canal9</text>
+
+  <line x1="120" y1="200" x2="150" y2="200" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- STAGE 1: INGEST -->
+  <rect x="152" y="155" width="120" height="90" rx="6" fill="#161b22" stroke="#FFD43B" stroke-width="1.5"/>
+  <text x="212" y="178" fill="#FFD43B" font-size="11" font-weight="bold" text-anchor="middle">Ingest</text>
+  <text x="212" y="195" fill="#8b949e" font-size="9" text-anchor="middle">leer path</text>
+  <text x="212" y="208" fill="#8b949e" font-size="9" text-anchor="middle">stat size</text>
+  <text x="212" y="222" fill="#8b949e" font-size="9" text-anchor="middle">extensión OK?</text>
+  <text x="212" y="236" fill="#3fb950" font-size="9" text-anchor="middle">→ StageResult</text>
+
+  <!-- QUEUE 1 -->
+  <rect x="288" y="178" width="60" height="44" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="318" y="196" fill="#8b949e" font-size="9" text-anchor="middle">Queue</text>
+  <text x="318" y="210" fill="#8b949e" font-size="8" text-anchor="middle">maxsize=10</text>
+
+  <line x1="272" y1="200" x2="286" y2="200" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="348" y1="200" x2="365" y2="200" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- STAGE 2: VALIDATE -->
+  <rect x="367" y="155" width="120" height="90" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="427" y="178" fill="#f85149" font-size="11" font-weight="bold" text-anchor="middle">Validate</text>
+  <text x="427" y="195" fill="#8b949e" font-size="9" text-anchor="middle">checksum</text>
+  <text x="427" y="208" fill="#8b949e" font-size="9" text-anchor="middle">duración > 0?</text>
+  <text x="427" y="222" fill="#8b949e" font-size="9" text-anchor="middle">ya procesado?</text>
+  <text x="427" y="236" fill="#3fb950" font-size="9" text-anchor="middle">→ StageResult</text>
+
+  <!-- QUEUE 2 -->
+  <rect x="503" y="178" width="60" height="44" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="533" y="196" fill="#8b949e" font-size="9" text-anchor="middle">Queue</text>
+  <text x="533" y="210" fill="#8b949e" font-size="8" text-anchor="middle">maxsize=5</text>
+
+  <line x1="487" y1="200" x2="501" y2="200" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="563" y1="200" x2="580" y2="200" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- STAGE 3: PROCESS -->
+  <rect x="582" y="155" width="120" height="90" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="642" y="178" fill="#58a6ff" font-size="11" font-weight="bold" text-anchor="middle">Process</text>
+  <text x="642" y="195" fill="#8b949e" font-size="9" text-anchor="middle">transcode</text>
+  <text x="642" y="208" fill="#8b949e" font-size="9" text-anchor="middle">thumbnail</text>
+  <text x="642" y="222" fill="#8b949e" font-size="9" text-anchor="middle">watermark</text>
+  <text x="642" y="236" fill="#3fb950" font-size="9" text-anchor="middle">→ StageResult</text>
+
+  <line x1="702" y1="200" x2="720" y2="200" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- STAGE 4: EXPORT -->
+  <rect x="722" y="155" width="120" height="90" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="782" y="178" fill="#3fb950" font-size="11" font-weight="bold" text-anchor="middle">Export</text>
+  <text x="782" y="195" fill="#8b949e" font-size="9" text-anchor="middle">S3 upload</text>
+  <text x="782" y="208" fill="#8b949e" font-size="9" text-anchor="middle">Drive share</text>
+  <text x="782" y="222" fill="#8b949e" font-size="9" text-anchor="middle">notify</text>
+  <text x="782" y="236" fill="#3fb950" font-size="9" text-anchor="middle">→ StageResult</text>
+
+  <!-- ERROR PATH: Validate → DLQ -->
+  <line x1="427" y1="245" x2="427" y2="310" stroke="#f85149" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <rect x="360" y="312" width="140" height="40" rx="5" fill="#21262d" stroke="#f85149" stroke-width="1"/>
+  <text x="430" y="328" fill="#f85149" font-size="10" font-weight="bold" text-anchor="middle">Dead-Letter Queue</text>
+  <text x="430" y="342" fill="#8b949e" font-size="9" text-anchor="middle">.dlq.jsonl — inspect + retry</text>
+  <text x="430" y="300" fill="#f85149" font-size="9" text-anchor="middle">fallo → DLQ</text>
+
+  <!-- STATE STORE -->
+  <rect x="290" y="60" width="320" height="55" rx="6" fill="#161b22" stroke="#8b949e" stroke-width="1.5"/>
+  <text x="450" y="80" fill="#e6edf3" font-size="11" font-weight="bold" text-anchor="middle">StateStore — .pipeline_state.json</text>
+  <text x="320" y="100" fill="#8b949e" font-size="9" text-anchor="middle">pending</text>
+  <text x="380" y="100" fill="#FFD43B" font-size="9" text-anchor="middle">→ running</text>
+  <text x="445" y="100" fill="#3fb950" font-size="9" text-anchor="middle">→ done</text>
+  <text x="510" y="100" fill="#f85149" font-size="9" text-anchor="middle">→ failed</text>
+  <text x="580" y="100" fill="#58a6ff" font-size="9" text-anchor="middle">→ retrying</text>
+
+  <line x1="450" y1="115" x2="450" y2="153" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- LEGEND -->
+  <rect x="20" y="360" width="860" height="40" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="40" y="378" fill="#FFD43B" font-size="10">Stage Protocol</text>
+  <text x="40" y="392" fill="#8b949e" font-size="9">name + process(data) → StageResult</text>
+  <text x="230" y="378" fill="#58a6ff" font-size="10">queue.Queue / asyncio.Queue</text>
+  <text x="230" y="392" fill="#8b949e" font-size="9">backpressure con maxsize</text>
+  <text x="460" y="378" fill="#3fb950" font-size="10">StageResult</text>
+  <text x="460" y="392" fill="#8b949e" font-size="9">success + data + error</text>
+  <text x="630" y="378" fill="#f85149" font-size="10">Dead-Letter Queue</text>
+  <text x="630" y="392" fill="#8b949e" font-size="9">jobs fallidos para inspección</text>
+</svg>
