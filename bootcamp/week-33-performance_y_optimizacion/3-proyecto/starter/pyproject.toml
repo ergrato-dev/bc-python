@@ -1,0 +1,16 @@
+[project]
+name = "studio-optimizer"
+version = "0.1.0"
+description = "Profiling, caching y benchmarking del pipeline Studio BC"
+requires-python = ">=3.12"
+dependencies = [
+    "redis>=5.0",
+    "typer>=0.12",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = ["mypy", "pytest", "pytest-benchmark", "types-redis"]
+
+[tool.mypy]
+strict = true
