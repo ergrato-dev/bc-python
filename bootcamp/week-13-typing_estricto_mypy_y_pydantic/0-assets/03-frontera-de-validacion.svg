@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">La frontera de validación</title>
+  <desc id="d">Tres zonas de izquierda a derecha. Fuera: los archivos medidas.json y escala.json, que pueden traer cualquier cosa. En la frontera, el módulo schemas.py: read_measurements valida cada medida con MeasurementIn dentro de un TypeAdapter de una lista, y read_scale valida la dataclass Scale con un TypeAdapter que ejecuta su __post_init__; un ValidationError sale como DataFileError. Dentro: Measurement, Series y Scale, las dataclasses del modelo, que usan describe, where y main sin saber que Pydantic existe. Las flechas de import van de schemas hacia model: el modelo no importa schemas.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="100" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="#94a3b8">Fuera</text>
+    <text x="400" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="#facc15">Frontera · schemas.py</text>
+    <text x="700" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="#4ade80">Dentro · el modelo</text>
+
+    <rect x="30" y="80" width="140" height="64" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="100" y="108" text-anchor="middle" font-weight="700">medidas.json</text>
+    <text x="100" y="128" text-anchor="middle" font-size="12" fill="#cbd5e1">"12,5", true, ""...</text>
+    <rect x="30" y="200" width="140" height="64" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="100" y="228" text-anchor="middle" font-weight="700">escala.json</text>
+    <text x="100" y="248" text-anchor="middle" font-size="12" fill="#cbd5e1">low 50, high 10...</text>
+    <path d="M172 112 L244 112" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M172 232 L244 232" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="200" y="60" width="2" height="300" fill="#334155"/>
+    <rect x="598" y="60" width="2" height="300" fill="#334155"/>
+
+    <rect x="250" y="72" width="300" height="84" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="266" y="98" font-weight="700" fill="#facc15">read_measurements(path)</text>
+    <text x="266" y="120" font-size="13">TypeAdapter(list[MeasurementIn])</text>
+    <text x="266" y="140" font-size="12" fill="#cbd5e1">coma, "NA", espacios, sin claves de más</text>
+    <rect x="250" y="192" width="300" height="84" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="266" y="218" font-weight="700" fill="#facc15">read_scale(path)</text>
+    <text x="266" y="240" font-size="13">TypeAdapter(Scale)</text>
+    <text x="266" y="260" font-size="12" fill="#cbd5e1">ejecuta el __post_init__ de Scale</text>
+    <rect x="250" y="300" width="300" height="50" rx="8" fill="#2a1215" stroke="#f87171"/>
+    <text x="266" y="322" font-size="13" fill="#f87171">ValidationError → DataFileError</text>
+    <text x="266" y="340" font-size="12" fill="#cbd5e1">"datos no válidos en ...: 1.label: ..."</text>
+    <path d="M552 112 L624 112" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M552 232 L624 232" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="630" y="80" width="160" height="64" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="710" y="106" text-anchor="middle" font-weight="700" fill="#4ade80">Series</text>
+    <text x="710" y="128" text-anchor="middle" font-size="12">de Measurement</text>
+    <rect x="630" y="200" width="160" height="64" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="710" y="226" text-anchor="middle" font-weight="700" fill="#4ade80">Scale</text>
+    <text x="710" y="248" text-anchor="middle" font-size="12">dataclass de siempre</text>
+    <text x="710" y="300" text-anchor="middle" font-size="13">describe, where, main</text>
+    <text x="710" y="322" text-anchor="middle" font-size="12" fill="#cbd5e1">confían en los tipos;</text>
+    <text x="710" y="340" text-anchor="middle" font-size="12" fill="#cbd5e1">no saben de Pydantic</text>
+  </g>
+</svg>

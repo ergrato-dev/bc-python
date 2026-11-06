@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" role="img" aria-labelledby="t d">
+  <title id="t">Any frente a object</title>
+  <desc id="d">Dos columnas con el mismo dato, el resultado de json.loads. A la izquierda, anotado como Any: mypy deja pasar data["limit"] + 1, data.upper() y return data como float, sin comprobar nada; el error llega al ejecutar. A la derecha, anotado como object: mypy rechaza las mismas operaciones hasta que una comprobación con isinstance estrecha el tipo; después de isinstance(data, dict), data["limit"] ya se puede usar.</desc>
+  <rect width="820" height="380" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="40" text-anchor="middle" font-size="16" font-weight="700">data = json.loads(text)</text>
+
+    <rect x="30" y="64" width="370" height="290" rx="10" fill="#2a1215" stroke="#f87171"/>
+    <text x="50" y="94" font-size="16" font-weight="700" fill="#f87171">data: Any</text>
+    <text x="50" y="118" font-size="13" fill="#cbd5e1">mypy apaga la comprobación</text>
+    <rect x="50" y="134" width="330" height="34" rx="6" fill="#1e293b"/>
+    <text x="64" y="156">data["limit"] + 1</text>
+    <text x="366" y="156" text-anchor="end" fill="#4ade80">pasa</text>
+    <rect x="50" y="176" width="330" height="34" rx="6" fill="#1e293b"/>
+    <text x="64" y="198">data.upper()</text>
+    <text x="366" y="198" text-anchor="end" fill="#4ade80">pasa</text>
+    <rect x="50" y="218" width="330" height="34" rx="6" fill="#1e293b"/>
+    <text x="64" y="240">return data  # como float</text>
+    <text x="366" y="240" text-anchor="end" fill="#4ade80">pasa</text>
+    <text x="50" y="286" font-weight="700" fill="#f87171">El error llega al ejecutar</text>
+    <text x="50" y="310" font-size="13" fill="#cbd5e1">Y lo que sale de un Any también es Any:</text>
+    <text x="50" y="330" font-size="13" fill="#cbd5e1">se contagia a todo lo que lo usa.</text>
+
+    <rect x="420" y="64" width="370" height="290" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="440" y="94" font-size="16" font-weight="700" fill="#4ade80">data: object</text>
+    <text x="440" y="118" font-size="13" fill="#cbd5e1">mypy no deja hacer nada sin comprobar</text>
+    <rect x="440" y="134" width="330" height="34" rx="6" fill="#1e293b"/>
+    <text x="454" y="156">data["limit"] + 1</text>
+    <text x="756" y="156" text-anchor="end" fill="#f87171">error</text>
+    <rect x="440" y="176" width="330" height="34" rx="6" fill="#1e293b"/>
+    <text x="454" y="198">if isinstance(data, dict):</text>
+    <text x="756" y="198" text-anchor="end" fill="#facc15">estrecha</text>
+    <rect x="440" y="218" width="330" height="34" rx="6" fill="#1e293b"/>
+    <text x="474" y="240">data["limit"]</text>
+    <text x="756" y="240" text-anchor="end" fill="#4ade80">pasa</text>
+    <text x="440" y="286" font-weight="700" fill="#4ade80">El error llega antes, en mypy</text>
+    <text x="440" y="310" font-size="13" fill="#cbd5e1">Pydantic hace estas comprobaciones</text>
+    <text x="440" y="330" font-size="13" fill="#cbd5e1">por ti, campo a campo.</text>
+  </g>
+</svg>

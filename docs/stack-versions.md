@@ -13,6 +13,8 @@
 | mypy | 2.4.1 | PyPI, 2026-10-28. Sin avisos en OSV. |
 | mypy (transitivas) | ast-serialize 0.13.1, librt 0.16.0, mypy-extensions 1.2.0, pathspec 1.1.1, typing-extensions 4.16.0 | Resueltas por uv 0.13.7 al añadir mypy al grupo `dev` del proyecto (semana 8, 2026-11-05). Sin avisos en OSV. |
 | colorama | 0.4.6 | Transitiva de pytest, solo en Windows: está en `uv.lock` (que es universal) pero no se instala en Linux ni macOS. Sin avisos en OSV (2026-11-05). |
+| pydantic | 2.14.2 | PyPI, 2026-10-29. Sin avisos en OSV (2026-11-06). 2.14.3 salió el 2026-11-05 y se espera a que madure. Primera dependencia del programa (no de `dev`): entra en la semana 13 con `uv add`. El plugin `pydantic.mypy` va en `[tool.mypy] plugins`. |
+| pydantic (transitivas) | pydantic-core 2.50.2, annotated-types 0.8.0, typing-inspection 0.4.5, typing-extensions 4.16.0 | Resueltas por uv 0.13.7 al añadir pydantic (semana 13, 2026-11-06). Sin avisos en OSV. |
 | PostgreSQL | `postgres:18.6-alpine` | Docker Hub (2026-11-05). El volumen va en `/var/lib/postgresql` (cambio de la imagen 18). |
 | Docker Engine | 29 o superior | Probado con 29.9.3 en el equipo del autor (2026-11-05). |
 | Docker Compose | plugin `docker compose` v5 | Probado con v5.7.0. Nunca `docker-compose` (v1, EOL desde 2023). |

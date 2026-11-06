@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">El orden de validación</title>
+  <desc id="d">Un dato de entrada, el valor "12,5" de una medida, recorre cuatro pasos de izquierda a derecha. Primero el field_validator con mode before, que recibe el dato crudo como object y lo convierte en 12.5. Después la validación del tipo y de Field, que comprueba que es un float y aplica strict y los límites. Después el field_validator con mode after, que recibe un float seguro. Cuando todos los campos han pasado, el model_validator con mode after recibe el modelo entero, self, y puede comparar campos. Si un paso lanza ValueError, sale un ValidationError y los pasos siguientes no se ejecutan.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="40" y="44" font-size="16" font-weight="700">Cada campo</text>
+    <text x="616" y="44" font-size="16" font-weight="700">El modelo</text>
+
+    <rect x="30" y="70" width="110" height="100" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="85" y="104" text-anchor="middle" font-weight="700" fill="#94a3b8">Entrada</text>
+    <text x="85" y="132" text-anchor="middle">"12,5"</text>
+    <text x="85" y="154" text-anchor="middle" font-size="12" fill="#cbd5e1">tal como llega</text>
+    <path d="M142 120 L164 120" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="170" y="70" width="140" height="100" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="240" y="98" text-anchor="middle" font-weight="700" fill="#facc15">before</text>
+    <text x="240" y="122" text-anchor="middle" font-size="12">recibe object</text>
+    <text x="240" y="142" text-anchor="middle" font-size="12">"12,5" → 12.5</text>
+    <text x="240" y="160" text-anchor="middle" font-size="12" fill="#cbd5e1">parse_text</text>
+    <path d="M312 120 L334 120" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="340" y="70" width="120" height="100" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="400" y="98" text-anchor="middle" font-weight="700" fill="#38bdf8">tipo y Field</text>
+    <text x="400" y="122" text-anchor="middle" font-size="12">¿es float?</text>
+    <text x="400" y="142" text-anchor="middle" font-size="12">strict, ge, min_length</text>
+    <path d="M462 120 L484 120" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="490" y="70" width="110" height="100" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="545" y="98" text-anchor="middle" font-weight="700" fill="#4ade80">after</text>
+    <text x="545" y="122" text-anchor="middle" font-size="12">recibe float</text>
+    <text x="545" y="142" text-anchor="middle" font-size="12">reglas del</text>
+    <text x="545" y="160" text-anchor="middle" font-size="12">dominio</text>
+    <path d="M602 120 L624 120" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="630" y="70" width="160" height="100" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="710" y="98" text-anchor="middle" font-weight="700" fill="#a78bfa">model_validator</text>
+    <text x="710" y="122" text-anchor="middle" font-size="12">recibe self</text>
+    <text x="710" y="142" text-anchor="middle" font-size="12">low &lt; high</text>
+    <text x="710" y="160" text-anchor="middle" font-size="12" fill="#cbd5e1">devuelve self</text>
+
+    <path d="M240 172 L240 236" stroke="#f87171" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+    <path d="M400 172 L400 236" stroke="#f87171" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+    <path d="M545 172 L545 236" stroke="#f87171" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+    <path d="M710 172 L710 236" stroke="#f87171" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/>
+    <rect x="170" y="240" width="620" height="56" rx="8" fill="#2a1215" stroke="#f87171"/>
+    <text x="190" y="266" font-weight="700" fill="#f87171">ValueError o tipo que no encaja → ValidationError</text>
+    <text x="190" y="286" font-size="13" fill="#cbd5e1">Los pasos siguientes de ese campo no se ejecutan, y el model_validator tampoco.</text>
+
+    <text x="30" y="336" font-size="13" fill="#cbd5e1">Pydantic revisa todos los campos antes de lanzar el error: un ValidationError</text>
+    <text x="30" y="358" font-size="13" fill="#cbd5e1">trae los fallos de todos, cada uno con su loc, su type y su msg.</text>
+  </g>
+</svg>

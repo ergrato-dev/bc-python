@@ -132,6 +132,6 @@ Los tests terminan en `passed` sin `failed` (al menos 364), ruff dice `All check
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 11](../week-11-data_model_dunders_iteradores_y_generadores/README.md) | **Semana 12** | Semana 13 (próximamente) |
+| [Semana 11](../week-11-data_model_dunders_iteradores_y_generadores/README.md) | **Semana 12** | [Semana 13](../week-13-typing_estricto_mypy_y_pydantic/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

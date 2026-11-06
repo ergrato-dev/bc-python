@@ -1,0 +1,16 @@
+[project]
+name = "models-lab"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 13: modelos de Pydantic"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "pydantic==2.14.2",
+]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.mypy]
+# El plugin de Pydantic enseña a mypy cómo son los modelos, como en tu proyecto.
+plugins = ["pydantic.mypy"]
