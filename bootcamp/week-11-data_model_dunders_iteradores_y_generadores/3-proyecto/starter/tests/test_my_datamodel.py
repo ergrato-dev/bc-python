@@ -1,4 +1,4 @@
-# Tus tests de la semana 11: sustituye este ejemplo por al menos 6 tests tuyos (paso 12).
+# Tus tests de la semana 11: sustituye este ejemplo por al menos 6 tests tuyos (paso 14).
 # Importa solo de observatorio.core y usa datos de tu dominio.
 from observatorio.core import Series, running_mean
 

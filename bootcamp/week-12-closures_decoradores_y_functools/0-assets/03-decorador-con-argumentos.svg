@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-labelledby="t d">
+  <title id="t">Decorador con argumentos</title>
+  <desc id="d">Tres funciones, una dentro de otra. repeat recibe times = 3 y devuelve decorator. decorator recibe func, la función beep, y devuelve wrapper. wrapper recibe text en cada llamada y llama a func tres veces. Abajo, una línea de tiempo: al definir beep con @repeat(3) se ejecutan repeat(3) y después decorator(beep); en cada llamada beep("alerta") se ejecuta wrapper("alerta"). wrapper recuerda times y func.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="30" y="30" width="500" height="250" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="50" y="58" font-weight="700" fill="#38bdf8">repeat(times)</text>
+    <text x="50" y="80" font-size="13">recibe 3 · devuelve decorator</text>
+
+    <rect x="60" y="96" width="440" height="164" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="80" y="122" font-weight="700" fill="#4ade80">decorator(func)</text>
+    <text x="80" y="144" font-size="13">recibe beep · devuelve wrapper</text>
+
+    <rect x="90" y="160" width="380" height="84" rx="10" fill="#3b0764" stroke="#c084fc"/>
+    <text x="110" y="186" font-weight="700" fill="#c084fc">wrapper(text)</text>
+    <text x="110" y="208" font-size="13">for _ in range(times): func(text)</text>
+    <text x="110" y="230" font-size="13" fill="#94a3b8">recuerda times y func</text>
+
+    <text x="560" y="58" font-weight="700">@repeat(3)</text>
+    <text x="560" y="80" font-weight="700">def beep(text): ...</text>
+    <text x="560" y="116" font-size="13">es lo mismo que</text>
+    <text x="560" y="140" font-size="13" fill="#facc15">beep = repeat(3)(beep)</text>
+    <text x="560" y="184" font-size="13">Sin paréntesis, @repeat</text>
+    <text x="560" y="206" font-size="13">hace repeat(beep): times</text>
+    <text x="560" y="228" font-size="13">recibe la función.</text>
+
+    <path d="M40 330 L780 330" stroke="#334155" stroke-width="2"/>
+    <text x="40" y="314" font-weight="700" fill="#94a3b8">Al definir beep</text>
+    <rect x="40" y="346" width="150" height="44" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="56" y="373">repeat(3)</text>
+    <path d="M194 368 L226 368" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <rect x="232" y="346" width="180" height="44" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="248" y="373">decorator(beep)</text>
+
+    <text x="470" y="314" font-weight="700" fill="#94a3b8">En cada llamada</text>
+    <rect x="470" y="346" width="210" height="44" rx="8" fill="#3b0764" stroke="#c084fc"/>
+    <text x="486" y="373">wrapper("alerta")</text>
+  </g>
+</svg>

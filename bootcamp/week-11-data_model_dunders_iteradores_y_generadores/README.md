@@ -132,6 +132,6 @@ Los tests terminan en `passed` sin `failed` (al menos 329), ruff dice `All check
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 10](../week-10-herencia_composicion_abc_y_protocol/README.md) | **Semana 11** | Semana 12 (próximamente) |
+| [Semana 10](../week-10-herencia_composicion_abc_y_protocol/README.md) | **Semana 11** | [Semana 12](../week-12-closures_decoradores_y_functools/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

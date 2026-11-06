@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">Un decorador envuelve</title>
+  <desc id="d">A la izquierda, antes de decorar: el nombre to_fahrenheit apunta a la función original. En el centro, la línea to_fahrenheit = announce(to_fahrenheit), que es lo que hace @announce. A la derecha, después: el nombre to_fahrenheit apunta a wrapper, que guarda dentro la original. Una llamada to_fahrenheit(10.0) entra en wrapper, que imprime el aviso, llama a la original con 10.0, recibe 50.0 y lo devuelve.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="40" y="50" font-weight="700" fill="#94a3b8">Antes</text>
+    <rect x="40" y="70" width="170" height="40" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="56" y="95">to_fahrenheit</text>
+    <path d="M125 112 L125 150" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <rect x="40" y="156" width="170" height="70" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="56" y="182" font-weight="700" fill="#38bdf8">original</text>
+    <text x="56" y="206" font-size="13">celsius * 9 / 5 + 32</text>
+
+    <rect x="240" y="150" width="180" height="82" rx="8" fill="#1e293b" stroke="#facc15"/>
+    <text x="256" y="176" font-weight="700" fill="#facc15">@announce</text>
+    <text x="256" y="200" font-size="12">to_fahrenheit =</text>
+    <text x="256" y="218" font-size="12">  announce(to_fahrenheit)</text>
+    <path d="M424 190 L456 190" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <text x="470" y="50" font-weight="700" fill="#94a3b8">Después</text>
+    <rect x="470" y="70" width="170" height="40" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="486" y="95">to_fahrenheit</text>
+    <path d="M555 112 L555 132" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <rect x="460" y="138" width="320" height="200" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="478" y="164" font-weight="700" fill="#4ade80">wrapper</text>
+    <text x="478" y="190" font-size="13">1. print("llamo a to_fahrenheit(10.0)")</text>
+    <text x="478" y="214" font-size="13">2. llama a la original con 10.0</text>
+    <rect x="490" y="226" width="200" height="56" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="506" y="250" font-weight="700" fill="#38bdf8">original</text>
+    <text x="506" y="270" font-size="12">guardada en la closure</text>
+    <text x="478" y="310" font-size="13">3. devuelve su resultado: 50.0</text>
+
+    <text x="40" y="282" font-weight="700">El decorador se ejecuta una vez,</text>
+    <text x="40" y="304" font-weight="700">al definir la función.</text>
+    <text x="40" y="334" font-size="13" fill="#94a3b8">wrapper se ejecuta en cada llamada.</text>
+    <text x="40" y="358" font-size="13" fill="#94a3b8">Con functools.wraps, wrapper se llama</text>
+    <text x="40" y="378" font-size="13" fill="#94a3b8">to_fahrenheit y __wrapped__ es la original.</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" role="img" aria-labelledby="t d">
+  <title id="t">Alcance LEGB</title>
+  <desc id="d">Cuatro cajas, una dentro de otra. La de fuera es built-in, con len, print y max. Dentro, global, el módulo, con limit = 50.0 y UNIT. Dentro, enclosing, la función make_threshold, con su parámetro limit = 10.0. Dentro de todo, local, la función is_above, con su parámetro value. Cuando is_above usa limit, Python lo busca primero en local, no lo encuentra, pasa a enclosing y lo encuentra: usa 10.0 y no sigue hasta el 50.0 global.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#facc15"/>
+    </marker>
+  </defs>
+  <rect width="820" height="430" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="30" y="30" width="520" height="370" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="50" y="58" font-weight="700" fill="#94a3b8">B · built-in</text>
+    <text x="50" y="80" font-size="13" fill="#94a3b8">len, print, max...</text>
+
+    <rect x="60" y="96" width="460" height="284" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="80" y="122" font-weight="700" fill="#38bdf8">G · global (el módulo)</text>
+    <text x="80" y="144" font-size="13">limit = 50.0 · UNIT = "°C"</text>
+
+    <rect x="90" y="160" width="400" height="200" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="110" y="186" font-weight="700" fill="#4ade80">E · enclosing: make_threshold</text>
+    <text x="110" y="208" font-size="13">limit = 10.0 (su parámetro)</text>
+
+    <rect x="120" y="224" width="340" height="116" rx="10" fill="#3b0764" stroke="#c084fc"/>
+    <text x="140" y="250" font-weight="700" fill="#c084fc">L · local: is_above</text>
+    <text x="140" y="274" font-size="13">value (su parámetro)</text>
+    <text x="140" y="306" font-size="13">return value &gt; limit</text>
+
+    <path d="M380 300 C420 300 440 240 404 212" stroke="#facc15" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+    <text x="580" y="70" font-weight="700">Buscar limit</text>
+    <text x="580" y="102" font-size="13" fill="#c084fc">1. L: no está</text>
+    <text x="580" y="128" font-size="13" fill="#4ade80">2. E: limit = 10.0</text>
+    <text x="580" y="154" font-size="13" fill="#facc15">   se detiene aquí</text>
+    <text x="580" y="180" font-size="13" fill="#94a3b8">3. G: no llega</text>
+    <text x="580" y="206" font-size="13" fill="#94a3b8">4. B: no llega</text>
+
+    <text x="580" y="260" font-weight="700">Asignar</text>
+    <text x="580" y="290" font-size="13">limit = ... dentro de</text>
+    <text x="580" y="312" font-size="13">is_above crea una local.</text>
+    <text x="580" y="342" font-size="13">nonlocal limit: la de E</text>
+    <text x="580" y="366" font-size="13">global limit: la de G</text>
+  </g>
+</svg>
