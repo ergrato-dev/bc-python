@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" aria-labelledby="t d">
+  <title id="t">La sintaxis y sus dunders</title>
+  <desc id="d">A la izquierda, lo que escribes con una serie y sus medidas; a la derecha, el método especial al que llama Python en la clase del objeto. len(serie) llama a __len__; if serie llama a __bool__ o, si no existe, a __len__; serie[0] llama a __getitem__; for m in serie llama a __iter__ y luego a __next__; m in serie llama a __contains__ o, si no existe, recorre con __iter__; a + b llama a __add__ y, si devuelve NotImplemented, a __radd__ de b; str(m) y print(m) llaman a __str__; repr(m) y las listas llaman a __repr__; a == b llama a __eq__. Abajo, la regla: Python busca el dunder en la clase, type(x), no en el objeto.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="470" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="40" y="40" font-weight="700" fill="#38bdf8" font-size="15">Lo que escribes</text>
+    <text x="440" y="40" font-weight="700" fill="#4ade80" font-size="15">Lo que llama Python en type(x)</text>
+
+    <g>
+      <rect x="40" y="56" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="78">len(serie)</text>
+      <rect x="440" y="56" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="78">__len__</text>
+
+      <rect x="40" y="98" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="120">if serie:</text>
+      <rect x="440" y="98" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="120">__bool__ · si no hay, __len__</text>
+
+      <rect x="40" y="140" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="162">serie[0]</text>
+      <rect x="440" y="140" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="162">__getitem__(0)</text>
+
+      <rect x="40" y="182" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="204">for m in serie:</text>
+      <rect x="440" y="182" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="204">__iter__ y después __next__</text>
+
+      <rect x="40" y="224" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="246">m in serie</text>
+      <rect x="440" y="224" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="246">__contains__ · si no hay, recorre</text>
+
+      <rect x="40" y="266" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="288">a + b</text>
+      <rect x="440" y="266" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="288">a.__add__(b) · NotImplemented: b.__radd__(a)</text>
+
+      <rect x="40" y="308" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="330">str(m) · print(m) · f"{m}"</text>
+      <rect x="440" y="308" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="330">__str__</text>
+
+      <rect x="40" y="350" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="372">repr(m) · [m] · f"{m!r}"</text>
+      <rect x="440" y="350" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="372">__repr__</text>
+
+      <rect x="40" y="392" width="300" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="56" y="414">a == b</text>
+      <rect x="440" y="392" width="340" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+      <text x="456" y="414">__eq__ · sin él, compara identidad</text>
+    </g>
+
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M344 73 L436 73"/>
+      <path d="M344 115 L436 115"/>
+      <path d="M344 157 L436 157"/>
+      <path d="M344 199 L436 199"/>
+      <path d="M344 241 L436 241"/>
+      <path d="M344 283 L436 283"/>
+      <path d="M344 325 L436 325"/>
+      <path d="M344 367 L436 367"/>
+      <path d="M344 409 L436 409"/>
+    </g>
+
+    <text x="40" y="454" fill="#facc15" font-size="13">Python busca el dunder en la clase del objeto. Tú los escribes; la sintaxis los llama.</text>
+  </g>
+</svg>

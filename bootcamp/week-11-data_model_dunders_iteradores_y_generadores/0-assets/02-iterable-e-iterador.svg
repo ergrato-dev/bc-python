@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">Iterable e iterador</title>
+  <desc id="d">A la izquierda, un iterable: la lista [12.5, 8.0, 55.1], o una Series. Con iter() entrega un iterador nuevo cada vez; en el dibujo, dos iteradores independientes, cada uno por su posición. A la derecha, un iterador: cada next() da un valor, 12.5, luego 8.0, luego 55.1, y al no quedar ninguno lanza StopIteration. Abajo, el for por dentro: llama a iter() una vez, a next() en cada vuelta y termina al capturar StopIteration. Un iterable se recorre muchas veces; un iterador, una sola vez.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="40" y="40" width="250" height="150" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="60" y="68" font-weight="700" fill="#38bdf8">Iterable</text>
+    <text x="60" y="94">[12.5, 8.0, 55.1]</text>
+    <text x="60" y="118" fill="#94a3b8" font-size="13">o tu Series</text>
+    <text x="60" y="150" font-size="13">__iter__: un iterador nuevo</text>
+    <text x="60" y="172" font-size="13">se recorre muchas veces</text>
+
+    <rect x="380" y="40" width="190" height="60" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="396" y="66" font-weight="700" fill="#4ade80">iterador A</text>
+    <text x="396" y="88" font-size="13">va por 8.0</text>
+    <rect x="380" y="130" width="190" height="60" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="396" y="156" font-weight="700" fill="#4ade80">iterador B</text>
+    <text x="396" y="178" font-size="13">va por 12.5</text>
+
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M294 90 L376 72"/>
+      <path d="M294 140 L376 158"/>
+    </g>
+    <text x="310" y="122" fill="#94a3b8" font-size="12">iter()</text>
+
+    <rect x="620" y="40" width="160" height="150" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="636" y="66" font-weight="700">next(A)</text>
+    <text x="636" y="92" font-size="13">12.5</text>
+    <text x="636" y="114" font-size="13">8.0</text>
+    <text x="636" y="136" font-size="13">55.1</text>
+    <text x="636" y="168" font-size="13" fill="#f87171">StopIteration</text>
+    <path d="M574 70 L616 70" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="40" y="240" width="740" height="150" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="268" font-weight="700" fill="#facc15">for value in values: lo que hace por dentro</text>
+    <rect x="60" y="290" width="180" height="70" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="76" y="318" font-weight="700">1. iter(values)</text>
+    <text x="76" y="342" font-size="13">una vez, al empezar</text>
+    <rect x="300" y="290" width="200" height="70" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="316" y="318" font-weight="700">2. next(cursor)</text>
+    <text x="316" y="342" font-size="13">en cada vuelta</text>
+    <rect x="560" y="290" width="200" height="70" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="576" y="318" font-weight="700">3. StopIteration</text>
+    <text x="576" y="342" font-size="13">el for la captura y sale</text>
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M244 325 L296 325"/>
+      <path d="M504 325 L556 325"/>
+    </g>
+    <path d="M400 364 C400 384 340 384 340 366" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="410" y="384" fill="#94a3b8" font-size="12">otra vuelta</text>
+
+    <text x="40" y="420" fill="#facc15" font-size="13">Un iterable se recorre muchas veces; un iterador avanza una sola vez y se agota.</text>
+  </g>
+</svg>

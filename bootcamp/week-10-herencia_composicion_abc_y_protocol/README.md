@@ -132,6 +132,6 @@ Los tests terminan en `passed` sin `failed` (al menos 298), ruff dice `All check
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 09](../week-09-clases_y_dataclasses/README.md) | **Semana 10** | Semana 11 (próximamente) |
+| [Semana 09](../week-09-clases_y_dataclasses/README.md) | **Semana 10** | [Semana 11](../week-11-data_model_dunders_iteradores_y_generadores/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-labelledby="t d">
+  <title id="t">Tubería perezosa</title>
+  <desc id="d">Cinco etapas de izquierda a derecha: el archivo medidas.txt, iter_lines, iter_measurements, la expresión que se queda con los valores y running_mean, y al final el for que imprime. Las flechas de arriba van hacia la izquierda: el for pide un valor a running_mean, que pide uno a la expresión, que pide una medida a iter_measurements, que pide una línea a iter_lines, que la lee del archivo. Las flechas de abajo van hacia la derecha: la línea "Norte;12,5" se convierte en Measurement("Norte", 12.5), luego en 12.5 y luego en la media 12.5, que imprime el for. Solo entonces se lee la línea siguiente. Abajo, la idea: en cada momento hay una línea, una medida y una media en memoria, sea el archivo de 10 líneas o de 10 millones.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#facc15"/>
+    </marker>
+  </defs>
+  <rect width="820" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="20" y="80" fill="#94a3b8" font-size="13">cada etapa pide el siguiente valor (next) a la anterior</text>
+
+    <rect x="20" y="140" width="95" height="80" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="32" y="174" font-weight="700" fill="#e2e8f0">archivo</text>
+    <text x="32" y="198" font-size="13">medidas.txt</text>
+
+    <rect x="137" y="140" width="110" height="80" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="149" y="174" font-weight="700" fill="#38bdf8">iter_lines</text>
+    <text x="149" y="198" font-size="13">una línea</text>
+
+    <rect x="269" y="140" width="150" height="80" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="281" y="174" font-weight="700" fill="#38bdf8">iter_measurements</text>
+    <text x="281" y="198" font-size="13">una medida</text>
+
+    <rect x="441" y="140" width="105" height="80" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="453" y="174" font-weight="700" fill="#38bdf8">(m.value ...)</text>
+    <text x="453" y="198" font-size="13">un valor</text>
+
+    <rect x="568" y="140" width="125" height="80" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="580" y="174" font-weight="700" fill="#4ade80">running_mean</text>
+    <text x="580" y="198" font-size="13">una media</text>
+
+    <rect x="715" y="140" width="85" height="80" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="727" y="174" font-weight="700" fill="#facc15">for</text>
+    <text x="727" y="198" font-size="13">la imprime</text>
+
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M735 136 L735 105 L673 105 L673 136"/>
+      <path d="M588 136 L588 105 L526 105 L526 136"/>
+      <path d="M461 136 L461 105 L399 105 L399 136"/>
+      <path d="M289 136 L289 105 L227 105 L227 136"/>
+      <path d="M157 136 L157 105 L95 105 L95 136"/>
+    </g>
+
+    <g stroke="#facc15" stroke-width="1.5" fill="none" marker-end="url(#y)">
+      <path d="M118 180 L134 180"/>
+      <path d="M250 180 L266 180"/>
+      <path d="M422 180 L438 180"/>
+      <path d="M549 180 L565 180"/>
+      <path d="M696 180 L712 180"/>
+    </g>
+
+    <g fill="#facc15" font-size="12">
+      <text x="137" y="244">"Norte;12,5"</text>
+      <text x="269" y="264">Measurement("Norte", 12.5)</text>
+      <text x="441" y="244">12.5</text>
+      <text x="568" y="244">media 12.5</text>
+    </g>
+    <text x="40" y="300" fill="#e2e8f0" font-size="13">El valor atraviesa toda la tubería y el for lo imprime. Solo entonces se lee la línea siguiente.</text>
+
+    <rect x="40" y="322" width="740" height="66" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="348" font-weight="700" fill="#4ade80">Memoria constante</text>
+    <text x="60" y="372" font-size="13">en cada momento hay una línea, una medida y una media, con 10 líneas o con 10 millones</text>
+  </g>
+</svg>

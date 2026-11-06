@@ -89,4 +89,4 @@ Se evalúa **cómo** construiste el proyecto, con evidencia del repositorio y un
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | Semana 11 (próximamente) |
+| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | [Semana 11](../week-11-data_model_dunders_iteradores_y_generadores/README.md) |

@@ -27,7 +27,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 |:--:|---|:--:|
 | [09](week-09-clases_y_dataclasses/README.md) | Clases y `dataclasses` | ✅ |
 | [10](week-10-herencia_composicion_abc_y_protocol/README.md) | Herencia, composición, ABC y `Protocol` | ✅ |
-| 11 | Data model: dunders, iteradores y generadores | ⬜ |
+| [11](week-11-data_model_dunders_iteradores_y_generadores/README.md) | Data model: dunders, iteradores y generadores | ✅ |
 | 12 | Closures, decoradores y `functools` | ⬜ |
 | 13 | Typing estricto con mypy y Pydantic v2 | ⬜ |
 | 14 | Testing profesional: fixtures, parametrize, mocks, Hypothesis, cobertura y logging | ⬜ |

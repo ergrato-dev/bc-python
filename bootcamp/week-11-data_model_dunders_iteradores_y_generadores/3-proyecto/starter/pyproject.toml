@@ -1,0 +1,34 @@
+[project]
+name = "observatorio"
+version = "0.10.0"
+description = "Observatorio de datos de mi dominio"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[project.scripts]
+# `uv run observatorio` ejecuta la función main() de src/observatorio/__main__.py.
+observatorio = "observatorio.__main__:main"
+
+[dependency-groups]
+dev = [
+    "mypy==2.4.1",
+    "pytest==9.2.0",
+    "ruff==0.17.3",
+]
+
+[build-system]
+requires = ["uv_build==0.13.7"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+# Líneas de hasta 100 caracteres (por defecto, 88). Las reglas del linter son las
+# recomendadas de ruff: no hace falta elegirlas.
+line-length = 100
+
+[tool.mypy]
+# `uv run mypy` sin argumentos revisa estas carpetas.
+files = ["src", "tests"]

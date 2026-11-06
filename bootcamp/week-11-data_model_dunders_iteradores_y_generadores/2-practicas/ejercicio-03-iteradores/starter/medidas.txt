@@ -1,0 +1,3 @@
+Norte;12,5
+Sur;8
+Centro;NA
