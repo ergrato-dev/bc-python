@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">continue y break cambian el camino del bucle</title>
+  <desc id="d">Un for con un cuerpo de dos partes. Un continue en la primera parte salta el resto del cuerpo y vuelve a la cabecera para el siguiente elemento. Un break sale del bucle de inmediato, sin mirar los elementos que quedan y sin ejecutar el else. Si el bucle termina porque se acabaron los elementos, sin break, se ejecuta el else y después sigue el programa.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="250" y="24" width="320" height="44" rx="8" fill="#1e293b" stroke="#60a5fa"/>
+    <text x="410" y="51" text-anchor="middle" font-weight="700">for value in values:</text>
+    <path d="M410 68V92" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="250" y="98" width="320" height="44" rx="8" fill="#1e293b" stroke="#64748b"/>
+    <text x="410" y="125" text-anchor="middle">if value is None: continue</text>
+    <path d="M410 142V166" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="250" y="172" width="320" height="44" rx="8" fill="#1e293b" stroke="#64748b"/>
+    <text x="410" y="199" text-anchor="middle">if value &gt; limit: break</text>
+    <path d="M410 216V240" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="250" y="246" width="320" height="44" rx="8" fill="#1e293b" stroke="#64748b"/>
+    <text x="410" y="273" text-anchor="middle">resto del cuerpo</text>
+    <path d="M250 268H210V46H244" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="200" y="236" fill="#94a3b8" font-size="12" text-anchor="end">fin de la vuelta</text>
+
+    <path d="M250 120H150V40H244" fill="none" stroke="#facc15" stroke-width="2.5" marker-end="url(#a)"/>
+    <rect x="30" y="96" width="110" height="48" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="85" y="117" text-anchor="middle" font-weight="700" fill="#facc15">continue</text>
+    <text x="85" y="135" text-anchor="middle" font-size="12">siguiente valor</text>
+
+    <path d="M570 194H584" fill="none" stroke="#f87171" stroke-width="2.5" marker-end="url(#a)"/>
+    <rect x="590" y="170" width="110" height="48" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="645" y="191" text-anchor="middle" font-weight="700" fill="#f87171">break</text>
+    <text x="645" y="209" text-anchor="middle" font-size="12">sale ya</text>
+    <path d="M645 218V324" fill="none" stroke="#f87171" stroke-width="2.5" marker-end="url(#a)"/>
+    <text x="635" y="280" fill="#f87171" font-size="12" text-anchor="end">se salta el else</text>
+
+    <path d="M570 46H760V90" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#a)"/>
+    <text x="665" y="38" fill="#4ade80" font-size="12" text-anchor="middle">no quedan elementos</text>
+    <rect x="710" y="96" width="100" height="48" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="760" y="117" text-anchor="middle" font-weight="700">else:</text>
+    <text x="760" y="135" text-anchor="middle" font-size="12">solo sin break</text>
+    <path d="M760 144V324" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+    <rect x="600" y="330" width="210" height="40" rx="8" fill="#1e293b" stroke="#64748b"/>
+    <text x="705" y="355" text-anchor="middle">sigue después del bucle</text>
+  </g>
+</svg>

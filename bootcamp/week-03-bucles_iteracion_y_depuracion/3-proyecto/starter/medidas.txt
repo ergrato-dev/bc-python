@@ -1,0 +1,11 @@
+# Medidas de ejemplo: una por línea, "etiqueta;valor". Sustitúyelas por las de tu dominio.
+Norte;12,5
+Sur;8
+Centro;NA
+
+Oriente;55,1
+Occidente;61
+Norte;48,9
+# Esta línea siguiente es inválida a propósito:
+Sur 9,5
+Sur;9,5

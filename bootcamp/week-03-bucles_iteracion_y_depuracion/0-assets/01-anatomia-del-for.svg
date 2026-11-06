@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">Cómo funciona un for</title>
+  <desc id="d">El for pide al iterable el siguiente elemento. Si queda alguno, lo asigna a la variable y ejecuta el cuerpo, y vuelve a pedir otro. Si no quedan, el bucle termina y el programa sigue con la primera línea sin sangría. A la derecha, una traza de for letter in "sol": en la vuelta 1 letter vale s, en la 2 vale o, en la 3 vale l, y en la cuarta petición no quedan elementos y el bucle termina.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="40" y="24" width="300" height="44" rx="8" fill="#1e293b" stroke="#60a5fa"/>
+    <text x="190" y="51" text-anchor="middle" font-weight="700">for letter in "sol":</text>
+    <path d="M190 68V92" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+    <polygon points="190,98 300,140 190,182 80,140" fill="#422006" stroke="#facc15"/>
+    <text x="190" y="137" text-anchor="middle">¿queda algún</text>
+    <text x="190" y="155" text-anchor="middle">elemento?</text>
+
+    <path d="M190 182V206" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#a)"/>
+    <text x="200" y="200" fill="#4ade80" font-size="13">sí</text>
+    <rect x="70" y="212" width="240" height="40" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="190" y="237" text-anchor="middle">letter = siguiente elemento</text>
+    <path d="M190 252V270" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="70" y="276" width="240" height="40" rx="8" fill="#1e293b" stroke="#4ade80"/>
+    <text x="190" y="301" text-anchor="middle">cuerpo (líneas con sangría)</text>
+    <path d="M70 296H40V140H74" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="30" y="226" fill="#94a3b8" font-size="12" transform="rotate(-90 30 226)">siguiente vuelta</text>
+
+    <path d="M300 140H360V354H316" fill="none" stroke="#f87171" stroke-width="2" marker-end="url(#a)"/>
+    <text x="368" y="236" fill="#f87171" font-size="13">no</text>
+    <rect x="70" y="334" width="240" height="40" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="190" y="359" text-anchor="middle">sigue después del bucle</text>
+
+    <rect x="430" y="24" width="360" height="350" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="610" y="54" text-anchor="middle" font-weight="700">Traza de for letter in "sol"</text>
+    <text x="470" y="90" fill="#94a3b8" font-size="13">petición</text>
+    <text x="580" y="90" fill="#94a3b8" font-size="13">¿queda?</text>
+    <text x="680" y="90" fill="#94a3b8" font-size="13">letter</text>
+    <path d="M450 100H770" stroke="#64748b"/>
+    <text x="490" y="130" text-anchor="middle">1</text><text x="605" y="130" text-anchor="middle" fill="#4ade80">sí</text><text x="700" y="130" text-anchor="middle">"s"</text>
+    <text x="490" y="170" text-anchor="middle">2</text><text x="605" y="170" text-anchor="middle" fill="#4ade80">sí</text><text x="700" y="170" text-anchor="middle">"o"</text>
+    <text x="490" y="210" text-anchor="middle">3</text><text x="605" y="210" text-anchor="middle" fill="#4ade80">sí</text><text x="700" y="210" text-anchor="middle">"l"</text>
+    <text x="490" y="250" text-anchor="middle">4</text><text x="605" y="250" text-anchor="middle" fill="#f87171">no</text><text x="700" y="250" text-anchor="middle" fill="#94a3b8">—</text>
+    <path d="M450 270H770" stroke="#64748b"/>
+    <text x="610" y="302" text-anchor="middle" font-size="13">3 elementos, 3 vueltas del cuerpo.</text>
+    <text x="610" y="326" text-anchor="middle" font-size="13" fill="#94a3b8">Tras el bucle, letter conserva "l",</text>
+    <text x="610" y="346" text-anchor="middle" font-size="13" fill="#94a3b8">el último valor que recibió.</text>
+  </g>
+</svg>

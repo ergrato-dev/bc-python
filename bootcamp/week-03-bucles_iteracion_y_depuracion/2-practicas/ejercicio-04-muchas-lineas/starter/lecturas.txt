@@ -1,0 +1,8 @@
+# estación;valor en µg/m³
+Norte;12,5
+Sur;8
+
+Centro;NA
+Oriente;55,1
+Occidente 61
+Norte;48,9

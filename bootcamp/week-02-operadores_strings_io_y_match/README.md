@@ -134,6 +134,6 @@ Los tests deben terminar en `passed`, sin `failed`, y el comando con código `0`
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 01](../week-01-entorno_docker_uv_y_tipos/README.md) | **Semana 02** | Semana 03 (próximamente) |
+| [Semana 01](../week-01-entorno_docker_uv_y_tipos/README.md) | **Semana 02** | [Semana 03](../week-03-bucles_iteracion_y_depuracion/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

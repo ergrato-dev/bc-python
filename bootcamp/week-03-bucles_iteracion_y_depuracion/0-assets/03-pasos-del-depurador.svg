@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">Los pasos del depurador: n, s, r y c</title>
+  <desc id="d">El programa está detenido en la línea value = parse_reading(text), dentro de un bucle. Con n, next o F10, ejecuta esa línea entera, incluida la llamada, y para en la siguiente línea del mismo bucle, total más igual value. Con s, step o F11, entra en la función parse_reading y para en su primera línea. Desde dentro, r, return o Shift más F11, termina la función y vuelve a la línea que la llamó. Con c, continue o F5, sigue sin parar hasta el próximo punto de parada.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="40" font-weight="700">Bucle principal</text>
+    <rect x="36" y="56" width="374" height="250" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="50" y="92">for index, line in enumerate(lines):</text>
+    <text x="70" y="132">label, _, text = line.partition(";")</text>
+    <rect x="44" y="152" width="352" height="34" rx="6" fill="#422006" stroke="#facc15"/>
+    <text x="52" y="174" fill="#facc15" font-weight="700">→</text>
+    <text x="70" y="174">value = parse_reading(text)</text>
+    <text x="70" y="226">total += value</text>
+    <text x="50" y="286" fill="#94a3b8" font-size="13">→ línea donde está detenido</text>
+
+    <text x="500" y="40" font-weight="700">parse_reading(text)</text>
+    <rect x="500" y="56" width="290" height="110" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="520" y="92">def parse_reading(text):</text>
+    <text x="540" y="132">return float(...)</text>
+
+    <path d="M44 172C24 180 24 214 62 221" fill="none" stroke="#60a5fa" stroke-width="2.5" marker-end="url(#a)"/>
+    <text x="20" y="200" fill="#60a5fa" font-weight="700" text-anchor="middle">n</text>
+
+    <path d="M396 160C450 150 470 132 530 132" fill="none" stroke="#4ade80" stroke-width="2.5" marker-end="url(#a)"/>
+    <text x="450" y="132" fill="#4ade80" font-weight="700">s</text>
+
+    <path d="M690 140C690 190 520 220 400 176" fill="none" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#a)"/>
+    <text x="640" y="200" fill="#a78bfa" font-weight="700">r</text>
+
+    <rect x="30" y="322" width="760" height="56" rx="8" fill="#0f172a" stroke="#64748b"/>
+    <text x="50" y="345"><tspan fill="#60a5fa" font-weight="700">n</tspan> · F10: ejecuta la línea entera y para en la siguiente</text>
+    <text x="440" y="345"><tspan fill="#4ade80" font-weight="700">s</tspan> · F11: entra en la función llamada</text>
+    <text x="50" y="367"><tspan fill="#a78bfa" font-weight="700">r</tspan> · Shift+F11: termina la función y vuelve</text>
+    <text x="440" y="367"><tspan fill="#facc15" font-weight="700">c</tspan> · F5: sigue hasta el próximo punto de parada</text>
+  </g>
+</svg>

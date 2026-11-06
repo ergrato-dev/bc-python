@@ -1,0 +1,10 @@
+[project]
+name = "while-break-y-continue"
+version = "0.1.0"
+description = "Ejercicio 01 de la semana 03: while, break, continue y else"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
