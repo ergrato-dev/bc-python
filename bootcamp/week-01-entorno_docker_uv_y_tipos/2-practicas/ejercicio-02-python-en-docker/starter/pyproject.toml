@@ -1,0 +1,18 @@
+[project]
+name = "python-en-docker"
+version = "0.1.0"
+description = "Ejercicio 02 de la semana 01: ejecutar Python y sus tests en Docker"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest==9.2.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Permite que los tests hagan `import report` desde la raíz del starter.
+pythonpath = ["."]

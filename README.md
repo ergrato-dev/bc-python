@@ -99,7 +99,7 @@ Versiones exactas, fechas y revisión de avisos de seguridad: [docs/stack-versio
 | Requisito | Detalle |
 |---|---|
 | Conocimientos previos | Ninguno de programación. Recomendado: [bc-linux-commandline](https://github.com/ergrato-dev/bc-linux-commandline) y [bc-github](https://github.com/ergrato-dev/bc-github) |
-| Equipo | 16 GB de RAM recomendados (8 GB mínimo hasta la fase 4). GPU opcional: las semanas de PyTorch funcionan en CPU con datos pequeños |
+| Equipo | 16 GB de RAM recomendados (8 GB mínimo hasta la fase 4). **No necesitas GPU**: todo el bootcamp, PyTorch incluido, está pensado para CPU, con datasets y modelos dimensionados para entrenar en minutos. Para usar GPU, [Google Colab](https://colab.research.google.com) es la alternativa oficial en los notebooks de las fases 4 y 5 |
 | Entorno | Linux, macOS o Windows con WSL2; Docker Engine + plugin `docker compose`, uv |
 
 ### 🔗 Para profundizar

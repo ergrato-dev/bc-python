@@ -1,0 +1,6 @@
+# Qué: archivos que no se copian a la imagen.
+# Para qué: que el .venv de tu máquina y las cachés no pisen las del contenedor.
+.venv/
+__pycache__/
+.pytest_cache/
+.git/

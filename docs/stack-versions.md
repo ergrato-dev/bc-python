@@ -6,6 +6,8 @@
 |---|---|---|
 | Python | 3.14.10 (`python:3.14.10-slim-trixie`) | endoflife.date (2026-11-05): 3.14.10 publicada el 2026-10-25. 3.15.2 existe; se adopta cuando lo soporten las bibliotecas de data/IA (NumPy, PyTorch, scikit-learn). Los proyectos fijan `requires-python = ">=3.14,<3.15"`. |
 | uv | 0.13.7 (`ghcr.io/astral-sh/uv:0.13.7`) | PyPI, publicada el 2026-11-03. Sin avisos en OSV. Equipo del autor con 0.12.2: actualizar con `uv self update`. |
+| uv_build | 0.13.7 | PyPI (`uv-build`), la misma versión que uv. Sin avisos en OSV. Backend de build de los proyectos (`[build-system]`), fijado con `==` (semana 01). |
+| pytest (transitivas) | iniconfig 2.3.1, packaging 26.3, pluggy 1.7.0, pygments 2.21.0 | Resueltas por uv 0.13.7 en los starters de la semana 01 (2026-11-05). Sin avisos en OSV. |
 | ruff | 0.17.3 | PyPI. Sin avisos en OSV. Hay 0.17.4 (2026-11-05), se revisa en la semana 8. |
 | pytest | 9.2.0 | PyPI, 2026-10-27. Sin avisos en OSV. |
 | mypy | 2.4.1 | PyPI, 2026-10-28. Sin avisos en OSV. |

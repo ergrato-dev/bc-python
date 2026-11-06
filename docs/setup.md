@@ -11,6 +11,19 @@ Para la semana 1 necesitas cuatro cosas. Todo lo demás (Python, bibliotecas, Po
 
 **No instales Python desde python.org ni con el gestor de paquetes del sistema.** `uv` descarga la versión exacta que pide cada proyecto (`.python-version` y `requires-python`) y la aísla del Python del sistema. Así nunca rompes herramientas del sistema operativo ni mezclas versiones.
 
+**Tampoco necesitas Anaconda ni conda**, ni siquiera en las fases de data science e IA. NumPy, pandas, scikit-learn, PyTorch, Transformers y JupyterLab se instalan con `uv add` desde PyPI, y lo que no es Python (bibliotecas del sistema) lo pone la imagen Docker. No necesitas GPU: PyTorch se instala en su versión para CPU y los ejercicios están dimensionados para entrenar en minutos en un portátil. Si ya tienes conda instalado, desactiva su entorno base para que no se cuele en el `PATH`: `conda config --set auto_activate_base false`.
+
+## Google Colab (alternativa oficial desde la semana 23)
+
+[Google Colab](https://colab.research.google.com) ejecuta notebooks en la nube, con GPU gratuita (limitada por tiempo). En el bootcamp es una **alternativa oficial** para los notebooks de las fases 4 y 5, y la forma de usar GPU en las semanas de PyTorch y Transformers (34-36) si tu equipo no tiene.
+
+| Uso | Dónde |
+|---|---|
+| Explorar datos, probar ideas, entrenar con GPU | Colab o JupyterLab local, a tu elección |
+| Entregar (tests, `uv.lock`, Docker, pull request) | Siempre tu repositorio local |
+
+Cada notebook trae un botón "Abrir en Colab" y una primera celda que instala las versiones fijadas del curso con uv. Sube a Colab solo datos sintéticos o anonimizados: lo que subes queda en tu Google Drive y en servidores de Google.
+
 ## Windows: usa WSL2
 
 Todo el bootcamp se trabaja dentro de Linux. En Windows:
