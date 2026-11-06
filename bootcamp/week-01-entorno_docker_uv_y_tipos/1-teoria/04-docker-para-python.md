@@ -36,7 +36,7 @@ Un contenedor que se borra (`--rm`) no deja nada en tu máquina. La imagen sigue
 
 ## 3. El Dockerfile de los starters, línea a línea
 
-Todos los starters que corren en Docker usan este patrón (el del ejercicio 02):
+Todos los starters que corren en Docker usan este patrón (el del proyecto de esta semana; el ejercicio 02 usa una versión sin pytest):
 
 ```dockerfile
 FROM ghcr.io/astral-sh/uv:0.13.7 AS uv

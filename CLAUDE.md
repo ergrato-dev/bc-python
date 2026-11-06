@@ -9,10 +9,11 @@ Reglas duras:
 - Docker donde haga falta un servicio o reproducibilidad: `Dockerfile` multi-stage con imagen `uv` pinada y `compose.yaml`.
 - Versiones completas pinadas, nunca `latest`; verificar tag y CVEs antes de fijar (`docs/stack-versions.md`, con fecha y fuente).
 - Carpeta de semana: `week-NN-slug_snake_case/{README.md,rubrica-evaluacion.md,0-assets,1-teoria,2-practicas,3-proyecto,4-recursos,5-glosario}`.
-- Prácticas: `2-practicas/ejercicio-NN-slug/{README.md,starter/}`. Sin `solution/`. Starter con `pyproject.toml` + `uv.lock`; `uv run pytest` arranca en rojo y termina en verde.
+- Prácticas: `2-practicas/ejercicio-NN-slug/{README.md,starter/}`. Sin `solution/`. Son guiadas y **no se entregan**: el código viene comentado por pasos (`# PASO N`), el aprendiz descomenta, ejecuta (`uv run python main.py`) y compara con la salida esperada del README.
+- Único entregable semanal: el proyecto en el dominio asignado, en el repo `python-<nombre>-<apellido>` del aprendiz, rama `week-NN` → PR a `main`. Starter del proyecto con `pyproject.toml` + `uv.lock`; `uv run pytest` arranca en rojo y termina en verde.
 - Ejercicios paso a paso, sin dar nada por sabido: comando exacto, salida esperada y tabla "🧯 Si algo sale mal".
 - Comentarios de código: qué / para qué / impacto, solo donde aportan, sin repetirse.
-- SVG según necesidad real de la teoría; cada SVG se referencia desde una teoría.
+- SVG según necesidad real de la teoría; cada SVG se referencia desde una teoría. Tema oscuro, colores planos (sin degradados), solo fuentes sans-serif (nada de monospace).
 - Todo `.md` de semana termina con tabla `## 🔗 Navegación` (Anterior | Actual | Siguiente).
 - Rúbrica 30/40/30 (conocimiento/desempeño/producto), mínimo 70% por evidencia.
 - Dominios por aprendiz (`docs/dominios.md`); un proyecto hilo conductor (`docs/proyecto-hilo-conductor.md`).

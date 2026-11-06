@@ -4,24 +4,22 @@
 
 ## Objetivo
 
-Implementar seis funciones pequeñas que te obligan a mirar de frente los detalles de los tipos: conversiones que fallan, `float` inexactos, `int` sin límite y la diferencia entre `None` y "vacío".
+Mirar de frente los detalles de los tipos: conversiones que fallan, `float` inexactos, `int` sin límite y la diferencia entre `None` y "vacío". Ejercicio **guiado**: el código está en `types_lab.py`, comentado por pasos; lo descomentas, ejecutas y comparas con la salida esperada. No se entrega.
 
 ## Antes de empezar
 
 ```bash
 cd bootcamp/week-01-entorno_docker_uv_y_tipos/2-practicas/ejercicio-03-tipos-y-conversiones/starter
-uv run pytest
+uv run python types_lab.py
 ```
 
-Salida esperada: `17 failed, 1 passed`. Hay 18 tests aunque el archivo tiene menos funciones de test: `@pytest.mark.parametrize` ejecuta la misma prueba con varios valores, y pytest cuenta cada valor como un test. El que ya pasa (`test_float_sum_is_not_exact_with_double_equals`) documenta cómo se comportan los `float`: no lo cambies.
-
-Para cada paso: **primero prueba en el REPL** (`uv run python`), después escribe la función en `types_lab.py` y ejecuta solo sus tests con `-k`.
+Salida esperada: `Ejercicio 03 · Tipos y conversiones`. Para cada paso: **primero prueba en el REPL** (`uv run python`) lo que dice el README, después descomenta el bloque del paso en `types_lab.py` (`Ctrl+K Ctrl+U` en VS Code) y ejecuta el archivo.
 
 ## Pasos
 
 ### 1. Predice antes de ejecutar
 
-Sin ejecutar nada, escribe en `NOTAS.md` qué crees que da cada línea. Después compruébalo en el REPL y marca tus aciertos:
+Sin ejecutar nada, piensa qué da cada línea (anótalo en un papel). Después compruébalo en el REPL y cuenta tus aciertos:
 
 ```python
 type(7 / 2)
@@ -32,47 +30,37 @@ bool("")
 True + True
 ```
 
-### 2. `type_name`
+Respuestas: `<class 'float'>`, `3`, `True`, `False`, `False`, `2`. Si fallaste alguna, la teoría 05 explica por qué.
 
-En el REPL:
+### 2. El nombre de cada tipo
 
 ```python
 >>> type(3.0)
 <class 'float'>
 >>> type(3.0).__name__
 'float'
->>> type(None).__name__
-'NoneType'
 ```
 
-`__name__` da el nombre del tipo como texto. Implementa `type_name` con `return type(value).__name__`.
+Descomenta el **PASO 2** y ejecuta. Línea nueva:
 
-```bash
-uv run pytest -k type_name
+```
+Tipos: int float str bool NoneType
 ```
 
-Esperado: `5 passed, 13 deselected` (un test por cada valor del `parametrize`).
+### 3. De texto a `int`
 
-### 3. `to_int`
+Descomenta el **PASO 3** y ejecuta. Esta vez el programa **se detiene** con un error:
 
-```python
->>> int(" 42 ")
-42
->>> int("4.5")
+```
+Entero: 42
+Traceback (most recent call last):
+  ...
 ValueError: invalid literal for int() with base 10: '4.5'
 ```
 
-`int()` ya ignora los espacios. Implementa `to_int` con `return int(text)`. El test `test_to_int_rejects_decimal_text` **espera** el `ValueError`: no lo evites, es el comportamiento correcto. Si llega un texto con decimales, el que llama a la función decide qué hacer.
+`int(" 42 ")` funcionó (ignora los espacios), pero `int("4.5")` no: un texto con decimales no es un entero. Es el comportamiento correcto: quien llama a la función decide qué hacer con ese dato. Lee el traceback de abajo arriba (teoría 02) y localiza la línea que falló. Después **vuelve a comentar** solo la línea `print("Con decimales:", ...)` y ejecuta otra vez para seguir.
 
-```bash
-uv run pytest -k to_int
-```
-
-Esperado: `2 passed`.
-
-### 4. `to_float`
-
-Tiene que aceptar `"3.5"` y `"3,5"`. En el REPL:
+### 4. De texto a `float`, con coma decimal
 
 ```python
 >>> float("3,5")
@@ -81,94 +69,49 @@ ValueError: could not convert string to float: '3,5'
 '3.5'
 ```
 
-Implementa `to_float`: quita espacios con `strip()`, cambia la coma por punto con `replace` y convierte con `float`. Puedes encadenar los métodos: `text.strip().replace(",", ".")`.
-
-```bash
-uv run pytest -k to_float
-```
-
-Esperado: `2 passed`.
-
-### 5. `floats_are_equal`
-
-```python
->>> import math
->>> 0.1 + 0.2 == 0.3
-False
->>> math.isclose(0.1 + 0.2, 0.3)
-True
->>> math.isclose(0.3, 0.31)
-False
-```
-
-El archivo ya importa `math`. Implementa `floats_are_equal` con `return math.isclose(a, b)`.
-
-```bash
-uv run pytest -k floats_are_equal
-```
-
-Esperado: `2 passed`. En `NOTAS.md`, explica con tus palabras por qué `0.1 + 0.2 == 0.3` es `False`.
-
-### 6. `digits_of_power_of_two`
-
-`2**exponent` es la potencia (`**` significa "elevado a"). Para contar cifras, convierte el número en texto y mide su longitud con `len`:
-
-```python
->>> 2**10
-1024
->>> str(2**10)
-'1024'
->>> len(str(2**10))
-4
->>> len(str(2**100))
-31
-```
-
-Implementa `digits_of_power_of_two` con `return len(str(2**exponent))`. Prueba después `2**1000` en el REPL: en Python un `int` no tiene límite de tamaño.
-
-```bash
-uv run pytest -k digits
-```
-
-Esperado: `1 passed`.
-
-### 7. `is_missing`
-
-`None` es "no hay dato"; `0`, `""`, `0.0` y `False` sí son datos. En el REPL:
-
-```python
->>> None is None
-True
->>> 0 is None
-False
->>> not 0
-True
-```
-
-La última línea es la trampa: `not value` es `True` para `0` y `""`, así que **no** sirve para saber si falta el dato. Implementa `is_missing` con `return value is None`.
-
-```bash
-uv run pytest
-```
-
-Esperado: `18 passed`. Ejecuta también el programa:
-
-```bash
-uv run python types_lab.py
-```
+Descomenta el **PASO 4**. Los métodos se encadenan: `text.strip().replace(",", ".")` primero quita espacios y luego cambia la coma.
 
 ```
-int float str bool NoneType
-42 3.5
-False True
-31
-True False
-3.141592653589793
+Decimal: 3.5 2.25
 ```
 
-### 8. Comprueba que las anotaciones no se verifican al ejecutar
+### 5. Comparar `float`
 
-En el REPL:
+Descomenta el **PASO 5**:
+
+```
+0.1 + 0.2 == 0.3: False
+isclose: True
+Con 17 decimales: 0.30000000000000004
+```
+
+La tercera línea muestra el porqué: `0.1` y `0.2` no se pueden guardar exactos en binario, y su suma queda un poco por encima de `0.3`. Por eso los `float` se comparan con `math.isclose`, nunca con `==`.
+
+### 6. `int` sin límite
+
+Descomenta el **PASO 6**:
+
+```
+Cifras de 2**10: 4
+Cifras de 2**1000: 302
+```
+
+En Python un `int` no tiene límite de tamaño: `2**1000` tiene 302 cifras y se calcula exacto. Pruébalo en el REPL: `2**1000`.
+
+### 7. `None` no es `0` ni `""`
+
+Descomenta el **PASO 7**:
+
+```
+Faltan: True False False False
+Con not: True True True True
+```
+
+La segunda línea es la trampa: `not value` es `True` para `None`, `0`, `""` y `0.0`, así que **no** sirve para saber si falta el dato. Para eso, `value is None`. En el proyecto de la semana, un `0` medido y un dato faltante tienen que ser cosas distintas.
+
+### 8. Las anotaciones no se verifican al ejecutar
+
+Con el paso 3 descomentado, en el REPL:
 
 ```python
 >>> from types_lab import to_int
@@ -176,20 +119,17 @@ En el REPL:
 42
 ```
 
-`to_int` dice recibir `text: str`, pero le pasaste un `int` y Python no protestó por el tipo: ejecutó la función. (Si en el paso 3 usaste `int(text.strip())`, verás `AttributeError: 'int' object has no attribute 'strip'`: el error llega igual, pero tarde, dentro de la función.) Responde en `NOTAS.md`: ¿quién detectaría este error, y en qué semana del bootcamp lo verás? (Pista: [teoría 05](../../1-teoria/05-variables-y-tipos.md), sección 5.)
+(Al importar, se ejecutan también los `print` del archivo: es normal.) `to_int` dice recibir `text: str`, pero le pasaste un `int` y Python no protestó: las anotaciones no se comprueban al ejecutar. Las comprueba una herramienta aparte, **mypy**, que verás en la semana 13 ([teoría 05](../../1-teoria/05-variables-y-tipos.md), sección 5).
 
 ## 🧯 Si algo sale mal
 
 | Síntoma | Qué hacer |
 |---|---|
 | `NameError: name 'math' is not defined` en el REPL | Escribe `import math` antes de usarlo; en `types_lab.py` ya está importado |
-| `test_to_int_rejects_decimal_text` falla con `DID NOT RAISE` | Tu `to_int` está convirtiendo de más (por ejemplo, con `float` primero). Usa solo `int(text)` |
-| `test_empty_values_are_not_missing[0]` falla | Usaste `not value` o `value == None`; usa `value is None` |
-| `-k` no selecciona ningún test (`18 deselected`) | Revisa que el texto de `-k` aparece en el nombre del test |
-
-## Entrega
-
-`uv run pytest` con 18 de 18 en verde, y `NOTAS.md` con las predicciones del paso 1 y las respuestas de los pasos 5 y 8.
+| `NameError: name 'to_int' is not defined` | Descomentaste el `print` pero no el `def` |
+| `IndentationError: unexpected indent` | Al descomentar quedó un espacio de más al principio de la línea |
+| El programa se detiene en el paso 3 y no ves los siguientes | Es lo esperado: vuelve a comentar la línea `print("Con decimales:", ...)` |
+| En el paso 8, `ModuleNotFoundError: No module named 'types_lab'` | Abre el REPL con `uv run python` desde `starter/` |
 
 ---
 

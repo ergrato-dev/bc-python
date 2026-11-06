@@ -4,7 +4,7 @@
 
 ## Objetivo
 
-Ejecutar el mismo código y los mismos tests en tu máquina y en un contenedor, ver la caché de capas en acción y corregir una imagen que corre como root.
+Ejecutar el mismo programa en tu máquina y en un contenedor, ver la caché de capas en acción, corregir una imagen que corre como root y ver cómo `--locked` frena un lock desactualizado. Ejercicio **guiado**: descomentas, ejecutas y comparas. No se entrega.
 
 ## Antes de empezar
 
@@ -19,9 +19,8 @@ Archivos del starter:
 
 | Archivo | Qué es |
 |---|---|
-| `report.py` | Tres funciones por completar y una ya hecha (`inside_container`) |
-| `tests/test_report.py` | 4 tests; uno solo se ejecuta dentro del contenedor |
-| `Dockerfile` | La receta de la imagen (teoría 04) |
+| `report.py` | El programa: un informe del entorno, con un paso comentado |
+| `Dockerfile` | La receta de la imagen (teoría 04), con un paso comentado |
 | `compose.yaml` | El servicio `app` que construye esa imagen |
 | `.dockerignore` | Lo que no se copia a la imagen |
 
@@ -29,17 +28,20 @@ Archivos del starter:
 
 ### 1. Lee el Dockerfile
 
-Ábrelo y relaciona cada bloque con la teoría 04. Responde en `NOTAS.md`: ¿por qué se copian `pyproject.toml` y `uv.lock` **antes** que el resto del código?
+Ábrelo y relaciona cada bloque con la teoría 04. Fíjate en el orden: `pyproject.toml` y `uv.lock` se copian **antes** que el código. La razón la ves en el paso 4.
 
-### 2. Tests en rojo, en tu máquina y en el contenedor
+### 2. El programa, en tu máquina y en el contenedor
 
 En tu máquina:
 
 ```bash
-uv run pytest
+uv run python report.py
 ```
 
-Salida esperada al final: `3 failed, 1 skipped`. El `skipped` es `test_container_does_not_run_as_root`: solo tiene sentido dentro de un contenedor, y el decorador `@pytest.mark.skipif` lo salta fuera.
+```
+Contenedor: False
+Carpeta:    /home/<tu-usuario>/.../starter
+```
 
 En el contenedor:
 
@@ -47,85 +49,72 @@ En el contenedor:
 docker compose run --build --rm app
 ```
 
-La primera vez descarga las imágenes de Python y uv (unos 50 MB) y construye. Al final: `4 failed`. Dentro del contenedor, el cuarto test sí se ejecuta.
+La primera vez descarga las imágenes de Python y uv (unos 50 MB) y construye. Al final:
 
-### 3. Implementa las tres funciones
+```
+Contenedor: True
+Carpeta:    /app
+```
 
-En `report.py`, sustituye cada `raise NotImplementedError(...)`:
+El mismo archivo, dos entornos: dentro del contenedor el código vive en `/app` (el `WORKDIR` del Dockerfile).
 
-| Función | Sustitúyelo por | Qué hace |
-|---|---|---|
-| `python_version` | `return platform.python_version()` | Versión del intérprete, como en el ejercicio 01 |
-| `current_user` | `return getpass.getuser()` | Nombre del usuario que ejecuta el proceso |
-| `is_root` | `return os.geteuid() == 0` | En Linux, root es el usuario con identificador 0; `==` compara y da `True` o `False` |
+### 3. Quién ejecuta el programa
 
-Los módulos `platform`, `getpass` y `os` ya están importados al principio del archivo.
-
-En tu máquina:
+Descomenta el **PASO 3** de `report.py` y ejecuta en tu máquina:
 
 ```bash
-uv run pytest
 uv run python report.py
 ```
 
-Salida esperada: `3 passed, 1 skipped`, y un informe con tu usuario, `Es root: False` y `Contenedor: False`.
+Las tres líneas nuevas muestran `Python: 3.14.10`, tu usuario y `Es root: False`.
 
-### 4. Mira la caché de capas
-
-Reconstruye y ejecuta en el contenedor:
+### 4. La caché de capas
 
 ```bash
 docker compose run --build --rm app
 ```
 
-Mira las líneas del build: la de `RUN uv sync --locked` dice `CACHED`. Solo cambió tu código, así que Docker reutilizó la capa de dependencias y solo rehízo `COPY . .`.
+Mira las líneas del build: la de `RUN uv sync --locked` dice `CACHED`. Solo cambió tu código, así que Docker reutilizó la capa de dependencias y solo rehízo `COPY . .`. Si el `COPY . .` fuera antes del `uv sync`, cada cambio de una línea de código reinstalaría todas las dependencias.
 
-Los tests dan `3 passed, 1 failed`. El que falla es `test_container_does_not_run_as_root`, con el mensaje `Paso 6: añade un usuario sin privilegios al Dockerfile`.
+### 5. Root dentro del contenedor
 
-### 5. Comprueba quién eres dentro del contenedor
-
-```bash
-docker compose run --rm app python report.py
-```
+La salida del paso 4 termina así:
 
 ```
+Contenedor: True
+Carpeta:    /app
 Python:     3.14.10
 Usuario:    root
 Es root:    True
-Contenedor: True
-Carpeta:    /app
-Sistema:    Linux
 ```
 
-Por defecto, el proceso del contenedor es root. Responde en `NOTAS.md`: ¿qué podría hacer un atacante que aprovechara un fallo de tu programa si este corre como root?
+Por defecto, el proceso del contenedor es root. Si un fallo de tu programa permite ejecutar código, ese código tiene todos los permisos dentro del contenedor: leer secretos montados, instalar herramientas, escribir donde quiera. La teoría 04 explica por qué la regla del bootcamp es **nunca root**.
 
 ### 6. Corrige la imagen: usuario sin privilegios
 
-En el `Dockerfile`, sustituye la línea `# Paso 6: aquí falta un usuario sin privilegios.` por:
-
-```dockerfile
-RUN useradd --create-home --uid 10001 app
-USER app
-```
-
-`useradd` crea el usuario `app` con el identificador 10001 (un número alto, que no coincide con usuarios del sistema). `USER app` hace que todo lo que viene después, incluido el `CMD`, corra con ese usuario.
+Descomenta el **PASO 6** del `Dockerfile` (las líneas `RUN useradd ...` y `USER app`). `useradd` crea el usuario `app` con el identificador 10001 (un número alto, que no coincide con usuarios del sistema). `USER app` hace que todo lo que viene después, incluido el `CMD`, corra con ese usuario.
 
 ```bash
 docker compose run --build --rm app
-docker compose run --rm app python report.py
 ```
 
-Salida esperada: `4 passed`, y en el informe `Usuario: app` y `Es root: False`.
+Salida esperada al final: `Usuario: app` y `Es root: False`.
 
 ### 7. Rompe el lock a propósito
 
-Abre `pyproject.toml` y cambia `"pytest==9.2.0"` por `"pytest==9.1.0"`, **sin** ejecutar `uv lock`. Reconstruye:
+Abre `pyproject.toml` y cambia `version = "0.1.0"` por `version = "0.2.0"`, **sin** ejecutar `uv lock`. Reconstruye:
 
 ```bash
 docker compose run --build --rm app
 ```
 
-El build se detiene en `RUN uv sync --locked`. Copia en `NOTAS.md` la línea del error que menciona el lockfile. Explica por qué es mejor que el build falle a que instale otra versión sin avisar. Deja `pyproject.toml` como estaba y comprueba que vuelve a dar `4 passed`.
+El build se detiene en `RUN uv sync --locked` con:
+
+```
+error: The lockfile at `uv.lock` needs to be updated, but `--locked` was provided.
+```
+
+`pyproject.toml` y `uv.lock` ya no coinciden, y `--locked` prefiere fallar a instalar algo distinto de lo que se probó. Con dependencias reales, esto evita que una imagen salga con versiones que nadie revisó. Deja `version = "0.1.0"` y comprueba que vuelve a construir.
 
 ### 8. Limpia
 
@@ -141,12 +130,8 @@ docker image rm local/python-en-docker:week-01
 | `Cannot connect to the Docker daemon` | Arranca Docker Desktop o `sudo systemctl start docker` |
 | El contenedor no ve tu cambio en `report.py` | Te faltó `--build` |
 | `docker: 'compose' is not a docker command` | Tienes Compose v1; instala el plugin `docker compose` ([`docs/setup.md`](../../../../docs/setup.md)) |
-| `useradd: command not found` | Escribiste `RUN useradd` antes de la línea `FROM python:...`; debe ir después |
+| `unknown instruction: USER` o `RUN` raro | Al descomentar quedó un espacio o un `#` de más al principio de la línea |
 | La descarga de imágenes se corta | Repite el comando; Docker retoma lo ya descargado |
-
-## Entrega
-
-`docker compose run --build --rm app` con 4 de 4 en verde, el `Dockerfile` con `USER app`, y `NOTAS.md` con las respuestas de los pasos 1, 5 y 7.
 
 ---
 

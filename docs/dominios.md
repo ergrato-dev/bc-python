@@ -1,6 +1,6 @@
 # Dominios del proyecto
 
-Cada aprendiz elige **un dominio** y construye con él su proyecto hilo conductor ([proyecto-hilo-conductor.md](proyecto-hilo-conductor.md)). Dos aprendices de la misma ficha no pueden repetir dominio; el instructor los asigna o los confirma. Copiar el proyecto de otro dominio anula la entrega.
+El instructor asigna **un dominio** a cada aprendiz, que construye con él su proyecto hilo conductor ([proyecto-hilo-conductor.md](proyecto-hilo-conductor.md)). Dos aprendices de la misma ficha no repiten dominio. Copiar el proyecto de otro dominio anula la entrega.
 
 Un dominio sirve si tiene tres cosas, porque el bootcamp las usa todas:
 

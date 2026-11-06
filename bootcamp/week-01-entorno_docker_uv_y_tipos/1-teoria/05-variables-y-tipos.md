@@ -157,7 +157,7 @@ Una **f-string** (texto con una `f` delante) inserta valores dentro del texto en
 
 ## 5. Tus primeras funciones y anotaciones de tipo
 
-Los ejercicios te piden completar **funciones**: bloques de código con nombre que reciben datos y **devuelven** un resultado con `return`. En la semana 4 las verás a fondo; esto es todo lo que necesitas hoy:
+El proyecto te pide completar **funciones**: bloques de código con nombre que reciben datos y **devuelven** un resultado con `return`. En la semana 4 las verás a fondo; esto es todo lo que necesitas hoy:
 
 ```python
 def to_celsius(fahrenheit: float) -> float:
@@ -193,7 +193,7 @@ def parse_value(text: str) -> float | None: ...
 
 ### Una decisión con `if`
 
-Algunos ejercicios necesitan elegir entre dos resultados. Lo justo para hoy (la semana 2 lo cubre entero):
+Algunas funciones necesitan elegir entre dos resultados. Lo justo para hoy (la semana 2 lo cubre entero):
 
 ```python
 def describe(value: float | None) -> str:

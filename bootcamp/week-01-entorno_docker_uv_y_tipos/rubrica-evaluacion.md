@@ -5,7 +5,7 @@
 | Tipo | Peso | Instrumento |
 | ---- | ---- | ----------- |
 | Conocimiento 🧠 | 30% | Cuestionario de autoevaluación (10 preguntas) |
-| Desempeño 💪 | 40% | Ejercicios 01, 02 y 03 verificados con `uv run pytest` y `docker compose run` |
+| Desempeño 💪 | 40% | Proceso en el proyecto: historial de Git, ejecución y sustentación ante el instructor |
 | Producto 📦 | 30% | Proyecto semanal: Observatorio, capa 0 |
 
 **Nota mínima para aprobar**: 70% en cada tipo de evidencia.
@@ -51,31 +51,16 @@ Responde por escrito **antes** de abrir las respuestas.
 
 ## 💪 Desempeño (40%)
 
-### Ejercicio 01 — Hola, entorno (12 puntos)
+Se evalúa **cómo** construiste el proyecto, con evidencia del repositorio y una sustentación corta (10 min) con el instructor. Los ejercicios guiados no se evalúan.
 
-| Criterio | Puntaje |
-| -------- | ------- |
-| `uv run pytest`: 5 de 5 en verde | 6 |
-| `NOTAS.md`: versiones (paso 1) y origen de las dependencias transitivas (paso 2) | 2 |
-| `NOTAS.md`: instrucción del bytecode (paso 6) y los dos errores explicados (paso 7) | 4 |
-| **Subtotal** | **12** |
-
-### Ejercicio 02 — Python en Docker (14 puntos)
-
-| Criterio | Puntaje |
-| -------- | ------- |
-| `docker compose run --build --rm app`: 4 de 4 en verde | 6 |
-| `Dockerfile` con usuario sin privilegios (`USER app`) | 4 |
-| `NOTAS.md`: orden de las capas (paso 1), riesgo de root (paso 5) y error del lock (paso 7) | 4 |
-| **Subtotal** | **14** |
-
-### Ejercicio 03 — Tipos y conversiones (14 puntos)
-
-| Criterio | Puntaje |
-| -------- | ------- |
-| `uv run pytest`: 18 de 18 en verde | 10 |
-| `NOTAS.md`: predicciones del paso 1 y respuestas de los pasos 5 y 8 | 4 |
-| **Subtotal** | **14** |
+| Criterio | Evidencia | Puntaje |
+| -------- | --------- | ------- |
+| Rojo antes que verde | El historial muestra el starter con tests en rojo y después los commits que los ponen en verde | 8 |
+| Commits con sentido | Commits pequeños, con Conventional Commits, sin `.venv/` ni `__pycache__/` | 6 |
+| Ejecución en vivo | Ante el instructor: `uv run pytest`, `uv run observatorio` y `docker compose run --build --rm app` desde un clon limpio | 10 |
+| Explica su código | Responde qué hace cada línea de `parse_value` y por qué `is_valid` comprueba `None` primero | 8 |
+| Explica su entorno | Dice qué guardan `pyproject.toml`, `uv.lock` y `.venv/`, y por qué la imagen no corre como root | 8 |
+| **Total** | | **40** |
 
 **Total Desempeño**: 40 puntos → 40% de la nota final.
 
@@ -91,7 +76,7 @@ Responde por escrito **antes** de abrir las respuestas.
 | Tests propios | Al menos 5 tests con valores del dominio calculados a mano, que cubren los 5 casos del paso 9 | 30 |
 | Dominio | `__main__.py` con 3 registros reales del dominio (uno faltante, uno con coma) y `README.md` completado | 15 |
 | Docker | `docker compose run --build --rm app` en verde | 10 |
-| Git | Repositorio `bc-python-<dominio>`, rama `week-01`, commits con Conventional Commits, sin `.venv/` en el repositorio | 10 |
+| Git | Repositorio `python-<nombre>-<apellido>`, rama `week-01`, commits con Conventional Commits, sin `.venv/` en el repositorio | 10 |
 | Pull request | Descripción con dominio, versiones y salidas pedidas en el paso 11 | 5 |
 | **Total** | | **100** |
 

@@ -14,9 +14,9 @@ El primer archivo del proyecto que te acompaña las 42 semanas ([proyecto hilo c
 
 ## Pasos
 
-### 1. Elige tu dominio
+### 1. Tu dominio
 
-Lee [`docs/dominios.md`](../../../docs/dominios.md) y elige uno. Confírmalo con tu instructor: dos aprendices de la misma ficha no pueden repetir dominio. Anota tres cosas: qué registras, la medida principal con su unidad, y su rango razonable (mínimo y máximo).
+Tu instructor te asigna un dominio de [`docs/dominios.md`](../../../docs/dominios.md). Anota tres cosas: qué registras, la medida principal con su unidad, y su rango razonable (mínimo y máximo).
 
 | Ejemplo (calidad del aire) | Tu dominio |
 |---|---|
@@ -26,12 +26,12 @@ Lee [`docs/dominios.md`](../../../docs/dominios.md) y elige uno. Confírmalo con
 
 ### 2. Crea tu repositorio
 
-En GitHub, crea un repositorio **vacío** (sin README ni `.gitignore`) llamado `bc-python-<tu-dominio>`, por ejemplo `bc-python-calidad-aire`. Después, en tu terminal (fuera de la carpeta del bootcamp):
+En GitHub, crea un repositorio **vacío** (sin README ni `.gitignore`) llamado `python-<nombre>-<apellido>`, por ejemplo `python-ana-perez`. Después, en tu terminal (fuera de la carpeta del bootcamp):
 
 ```bash
 mkdir -p ~/proyectos && cd ~/proyectos
-cp -r <ruta-al-bootcamp>/bootcamp/week-01-entorno_docker_uv_y_tipos/3-proyecto/starter bc-python-<tu-dominio>
-cd bc-python-<tu-dominio>
+cp -r <ruta-al-bootcamp>/bootcamp/week-01-entorno_docker_uv_y_tipos/3-proyecto/starter python-<nombre>-<apellido>
+cd python-<nombre>-<apellido>
 ls -A
 ```
 
@@ -46,7 +46,7 @@ printf '.venv/\n__pycache__/\n.pytest_cache/\n.env\n' > .gitignore
 git init -b main
 git add .
 git commit -m "chore: start observatorio from week-01 starter"
-git remote add origin git@github.com:<tu-usuario>/bc-python-<tu-dominio>.git
+git remote add origin git@github.com:<tu-usuario>/python-<nombre>-<apellido>.git
 git push -u origin main
 git switch -c week-01
 ```
@@ -60,6 +60,15 @@ uv run pytest
 ```
 
 Salida esperada: `13 failed`. Fallan los 12 de `tests/test_record.py` y el de ejemplo de `tests/test_my_domain.py`, todos con `NotImplementedError`.
+
+Un **test** es una función cuyo nombre empieza por `test_` y que comprueba un resultado con `assert`. Abre `tests/test_record.py` y lee el primero:
+
+```python
+def test_parse_value_with_dot() -> None:
+    assert parse_value("12.5") == 12.5
+```
+
+`assert` no hace nada si la condición es verdadera y hace fallar el test si es falsa. `pytest` busca todas las funciones `test_*` de la carpeta `tests/`, las ejecuta y cuenta cuántas pasan (`passed`) y cuántas fallan (`failed`). Ahora fallan todas porque tus funciones solo lanzan `NotImplementedError`: ese es el punto de partida, **en rojo**. Tu trabajo es dejarlas **en verde**.
 
 Mira cómo está organizado el código: `src/observatorio/` es el **paquete** (teoría 03). `__init__.py` lo marca como paquete; `record.py` tiene tus funciones; `__main__.py` es lo que se ejecuta con `uv run observatorio`.
 
@@ -180,7 +189,10 @@ En GitHub, abre un *pull request* de `week-01` hacia `main`. En la descripción 
 
 ## Entrega
 
-- Repositorio `bc-python-<tu-dominio>` con el `README.md` completado.
+El proyecto es el **único entregable** de la semana:
+
+
+- Repositorio `python-<nombre>-<apellido>` con el `README.md` completado.
 - Rama `week-01` con `uv run pytest` en verde, al menos 5 tests propios en `tests/test_my_domain.py` y `__main__.py` con datos de tu dominio.
 - *Pull request* `week-01` → `main` con la descripción del paso 11.
 

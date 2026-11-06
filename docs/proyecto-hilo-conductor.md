@@ -12,7 +12,8 @@ Un sistema en Python que **recoge, guarda, analiza y predice** datos de tu domin
 
 ## Reglas
 
-- Un repositorio por aprendiz: `bc-python-<tu-dominio>`.
+- Un repositorio por aprendiz: `python-<nombre>-<apellido>` (por ejemplo `python-ana-perez`).
+- El proyecto es el **único entregable** de cada semana; los ejercicios de `2-practicas/` son guiados y no se entregan.
 - Una rama y un *pull request* por semana (`week-NN` → `main`).
 - Nombres de código en inglés; datos y textos visibles en el idioma del dominio.
 - Todo corre con `docker compose up` desde la fase 3; antes, con `uv run`.

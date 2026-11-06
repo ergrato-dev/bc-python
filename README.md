@@ -116,7 +116,7 @@ cd bc-python
 ```
 
 1. Prepara tu máquina: [docs/setup.md](docs/setup.md).
-2. Elige tu dominio: [docs/dominios.md](docs/dominios.md).
+2. Recibe tu dominio asignado: [docs/dominios.md](docs/dominios.md).
 3. Empieza por la Semana 01 desde el [índice del bootcamp](bootcamp/README.md).
 
 Antes de publicar un cambio en el contenido, desde la raíz:

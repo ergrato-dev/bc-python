@@ -59,15 +59,17 @@ week-01-entorno_docker_uv_y_tipos/
 
 ### Prácticas
 
+Guiadas y sin entrega: el código viene comentado por pasos, lo descomentas, lo ejecutas y comparas con la salida esperada. Preparan el proyecto.
+
 | Ejercicio | Qué haces | Duración |
 | --------- | --------- | -------- |
-| [01 · Hola, entorno](2-practicas/ejercicio-01-hola-entorno/README.md) | Toolchain, 5 tests en verde, REPL, bytecode, los dos tipos de error | 2 h |
-| [02 · Python en Docker](2-practicas/ejercicio-02-python-en-docker/README.md) | Tests en el contenedor, caché de capas, usuario sin privilegios, lock roto | 2 h 30 min |
+| [01 · Hola, entorno](2-practicas/ejercicio-01-hola-entorno/README.md) | Toolchain, primera función, REPL, bytecode, los dos tipos de error | 2 h |
+| [02 · Python en Docker](2-practicas/ejercicio-02-python-en-docker/README.md) | El programa en el contenedor, caché de capas, usuario sin privilegios, lock roto | 2 h 30 min |
 | [03 · Tipos y conversiones](2-practicas/ejercicio-03-tipos-y-conversiones/README.md) | Conversiones que fallan, `float` inexactos, `int` sin límite, `None` | 2 h 30 min |
 
 ### Proyecto
 
-Eliges tu dominio, creas tu repositorio y escribes la capa 0 del Observatorio: leer, validar y mostrar una medida, con tests calculados a mano.
+Con el dominio que te asignó tu instructor, creas tu repositorio y escribes la capa 0 del Observatorio: leer, validar y mostrar una medida, con tests calculados a mano.
 → [3-proyecto/README.md](3-proyecto/README.md)
 
 ---
@@ -105,31 +107,26 @@ Eliges tu dominio, creas tu repositorio y escribes la capa 0 del Observatorio: l
 
 ## 📌 Entregables
 
-1. ✅ Ejercicio 01: `uv run pytest` con 5 de 5 en verde y `NOTAS.md` con los pasos 1, 2, 6 y 7
-2. ✅ Ejercicio 02: `docker compose run --build --rm app` con 4 de 4 en verde, `Dockerfile` con `USER app` y `NOTAS.md` con los pasos 1, 5 y 7
-3. ✅ Ejercicio 03: `uv run pytest` con 18 de 18 en verde y `NOTAS.md` con los pasos 1, 5 y 8
-4. ✅ Repositorio `bc-python-<tu-dominio>` con el dominio en su README
-5. ✅ Proyecto: rama `week-01` con al menos 5 tests propios, todo en verde en tu máquina y en Docker
-6. ✅ Pull request `week-01` → `main` con dominio, versiones y salidas
-7. ✅ Cuestionario de la [rúbrica](rubrica-evaluacion.md) respondido antes de mirar las respuestas
+El único entregable es el **proyecto**, en tu dominio asignado:
+
+1. ✅ Repositorio `python-<nombre>-<apellido>` con tu dominio en su README
+2. ✅ Rama `week-01` con al menos 5 tests propios, todo en verde en tu máquina y en Docker
+3. ✅ Pull request `week-01` → `main` con dominio, versiones y salidas
+
+El cuestionario de la [rúbrica](rubrica-evaluacion.md) es tu autoevaluación: respóndelo antes de mirar las respuestas.
 
 ---
 
 ## ✅ Verificación
 
-En cada `starter/` (ejercicios y proyecto):
+En tu proyecto:
 
 ```bash
 uv run pytest
-```
-
-Y en los que tienen `Dockerfile` (ejercicio 02 y proyecto):
-
-```bash
 docker compose run --build --rm app
 ```
 
-Todo debe terminar en `passed`, sin `failed`. Si algo falla antes de llegar a los tests (uv, Docker), las tablas de errores frecuentes de [03 · uv](1-teoria/03-uv-proyectos-y-entornos.md) y [04 · Docker](1-teoria/04-docker-para-python.md) cubren los casos habituales.
+Los dos deben terminar en `passed`, sin `failed`. En los ejercicios, cada paso descomentado debe dar la salida que muestra su README. Si algo falla antes de llegar a los tests (uv, Docker), las tablas de errores frecuentes de [03 · uv](1-teoria/03-uv-proyectos-y-entornos.md) y [04 · Docker](1-teoria/04-docker-para-python.md) cubren los casos habituales.
 
 ---
 
