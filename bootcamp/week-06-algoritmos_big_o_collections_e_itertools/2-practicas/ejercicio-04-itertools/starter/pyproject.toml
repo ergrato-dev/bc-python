@@ -1,0 +1,10 @@
+[project]
+name = "itertools-lab"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 06: el módulo itertools"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

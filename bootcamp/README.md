@@ -17,7 +17,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [03](week-03-bucles_iteracion_y_depuracion/README.md) | Bucles e iteración; depuración con `pdb` y VS Code | ✅ |
 | [04](week-04-funciones_scope_type_hints_y_pytest/README.md) | Funciones, scope, type hints y primer `pytest` | ✅ |
 | [05](week-05-colecciones_y_comprehensions/README.md) | Listas, tuplas, diccionarios, sets y comprehensions | ✅ |
-| 06 | Algoritmos y Big-O con `collections` e `itertools` | ⬜ |
+| [06](week-06-algoritmos_big_o_collections_e_itertools/README.md) | Algoritmos y Big-O con `collections` e `itertools` | ✅ |
 | 07 | `pathlib`, JSON, CSV, excepciones y context managers | ⬜ |
 | 08 | Proyectos con uv: módulos, paquetes, `pyproject.toml`, ruff y lock | ⬜ |
 

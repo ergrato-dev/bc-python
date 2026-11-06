@@ -132,6 +132,6 @@ Los tests terminan en `passed` sin `failed`, `mypy` dice `Success: no issues fou
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 04](../week-04-funciones_scope_type_hints_y_pytest/README.md) | **Semana 05** | Semana 06 (próximamente) |
+| [Semana 04](../week-04-funciones_scope_type_hints_y_pytest/README.md) | **Semana 05** | [Semana 06](../week-06-algoritmos_big_o_collections_e_itertools/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

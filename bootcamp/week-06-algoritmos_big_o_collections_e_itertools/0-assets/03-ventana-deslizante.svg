@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">Ventana deslizante y media móvil</title>
+  <desc id="d">Media móvil de ventana 3 sobre los valores 10, 20, 30, 40 y 50. En el primer paso la ventana cubre 10, 20 y 30: total 60, media 20. En el segundo avanza una posición: sale el 10, entra el 40, total 60 menos 10 más 40 igual a 90, media 30. En el tercero sale el 20 y entra el 50: total 120, media 40. Cada paso hace una resta y una suma, sea cual sea el tamaño de la ventana: O(n) en total.</desc>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="40" font-weight="700">moving_average([10, 20, 30, 40, 50], 3)</text>
+    <rect x="60" y="80" width="60" height="40" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="90" y="106" text-anchor="middle" fill="#e2e8f0">10</text>
+    <rect x="130" y="80" width="60" height="40" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="160" y="106" text-anchor="middle" fill="#e2e8f0">20</text>
+    <rect x="200" y="80" width="60" height="40" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="230" y="106" text-anchor="middle" fill="#e2e8f0">30</text>
+    <rect x="270" y="80" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="300" y="106" text-anchor="middle" fill="#475569">40</text>
+    <rect x="340" y="80" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="370" y="106" text-anchor="middle" fill="#475569">50</text>
+    <rect x="54" y="72" width="212" height="56" rx="10" fill="none" stroke="#facc15" stroke-width="2"/>
+    <text x="440" y="98" fill="#94a3b8" font-size="13">paso 1</text>
+    <text x="440" y="118">total = 60</text>
+    <text x="790" y="108" text-anchor="end" font-weight="700" fill="#facc15">media 20.0</text>
+    <rect x="60" y="190" width="60" height="40" rx="6" fill="#450a0a" stroke="#f87171"/>
+    <text x="90" y="216" text-anchor="middle" fill="#fca5a5">10</text>
+    <rect x="130" y="190" width="60" height="40" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="160" y="216" text-anchor="middle" fill="#e2e8f0">20</text>
+    <rect x="200" y="190" width="60" height="40" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="230" y="216" text-anchor="middle" fill="#e2e8f0">30</text>
+    <rect x="270" y="190" width="60" height="40" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="300" y="216" text-anchor="middle" fill="#e2e8f0">40</text>
+    <rect x="340" y="190" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="370" y="216" text-anchor="middle" fill="#475569">50</text>
+    <rect x="124" y="182" width="212" height="56" rx="10" fill="none" stroke="#facc15" stroke-width="2"/>
+    <text x="90" y="254" text-anchor="middle" fill="#f87171" font-size="12">sale</text>
+    <text x="300" y="254" text-anchor="middle" fill="#4ade80" font-size="12">entra</text>
+    <text x="440" y="208" fill="#94a3b8" font-size="13">paso 2</text>
+    <text x="440" y="228">60 − 10 + 40 = 90</text>
+    <text x="790" y="218" text-anchor="end" font-weight="700" fill="#facc15">media 30.0</text>
+    <rect x="60" y="300" width="60" height="40" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="90" y="326" text-anchor="middle" fill="#475569">10</text>
+    <rect x="130" y="300" width="60" height="40" rx="6" fill="#450a0a" stroke="#f87171"/>
+    <text x="160" y="326" text-anchor="middle" fill="#fca5a5">20</text>
+    <rect x="200" y="300" width="60" height="40" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="230" y="326" text-anchor="middle" fill="#e2e8f0">30</text>
+    <rect x="270" y="300" width="60" height="40" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="300" y="326" text-anchor="middle" fill="#e2e8f0">40</text>
+    <rect x="340" y="300" width="60" height="40" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="370" y="326" text-anchor="middle" fill="#e2e8f0">50</text>
+    <rect x="194" y="292" width="212" height="56" rx="10" fill="none" stroke="#facc15" stroke-width="2"/>
+    <text x="160" y="364" text-anchor="middle" fill="#f87171" font-size="12">sale</text>
+    <text x="370" y="364" text-anchor="middle" fill="#4ade80" font-size="12">entra</text>
+    <text x="440" y="318" fill="#94a3b8" font-size="13">paso 3</text>
+    <text x="440" y="338">90 − 20 + 50 = 120</text>
+    <text x="790" y="328" text-anchor="end" font-weight="700" fill="#facc15">media 40.0</text>
+    <text x="30" y="420" fill="#94a3b8" font-size="13">Cada paso: una resta y una suma, con ventana de 3 o de 1 000. Total: O(n), no O(n · k).</text>
+  </g>
+</svg>
