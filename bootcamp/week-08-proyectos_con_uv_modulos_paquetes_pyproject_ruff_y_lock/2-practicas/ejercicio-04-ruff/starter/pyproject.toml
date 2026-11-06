@@ -1,0 +1,21 @@
+[project]
+name = "ruff-lab"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 08: ruff"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[dependency-groups]
+dev = ["ruff==0.17.3"]
+
+# ============================================
+# PASO 5: configurar las reglas
+# ============================================
+# Descomenta las siguientes líneas:
+# [tool.ruff.lint]
+# # Además de las reglas por defecto, todas las de E (pycodestyle): estilo de PEP 8.
+# extend-select = ["E"]

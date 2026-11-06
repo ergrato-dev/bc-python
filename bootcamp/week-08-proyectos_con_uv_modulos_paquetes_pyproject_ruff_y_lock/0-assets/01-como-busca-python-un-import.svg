@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" aria-labelledby="t d">
+  <title id="t">Cómo busca Python un import</title>
+  <desc id="d">Al ejecutar import units, Python mira primero en sys.modules. Si el módulo ya está cargado, lo reutiliza sin ejecutar nada. Si no, recorre sys.path en orden: la carpeta del script, la biblioteca estándar y site-packages del entorno. Carga el primer archivo que coincide: lo ejecuta, lo guarda en sys.modules y deja el nombre units en tu archivo. Un statistics.py en la carpeta del script tapa al de la biblioteca estándar.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="470" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="60" y="30" width="220" height="50" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="170" y="61" text-anchor="middle" font-weight="700">import units</text>
+
+    <path d="M170 80 L170 116" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+    <rect x="60" y="120" width="220" height="56" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="170" y="144" text-anchor="middle" font-weight="700">¿Está en sys.modules?</text>
+    <text x="170" y="164" text-anchor="middle" fill="#94a3b8" font-size="13">los módulos ya cargados</text>
+
+    <path d="M280 148 L516 148" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="398" y="140" text-anchor="middle" fill="#4ade80" font-size="13">sí</text>
+    <rect x="520" y="120" width="250" height="56" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="645" y="144" text-anchor="middle" font-weight="700">Lo reutiliza</text>
+    <text x="645" y="164" text-anchor="middle" fill="#94a3b8" font-size="13">no ejecuta nada otra vez</text>
+
+    <path d="M170 176 L170 222" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="182" y="204" fill="#f87171" font-size="13">no: busca en sys.path, en orden</text>
+
+    <rect x="40" y="226" width="440" height="190" rx="10" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="250" fill="#94a3b8" font-size="13">sys.path</text>
+
+    <rect x="60" y="262" width="400" height="42" rx="6" fill="#0f172a" stroke="#38bdf8"/>
+    <text x="76" y="288" font-weight="700">1</text>
+    <text x="100" y="288">La carpeta del script</text>
+    <text x="444" y="288" text-anchor="end" fill="#94a3b8" font-size="13">units.py, tus módulos</text>
+
+    <rect x="60" y="312" width="400" height="42" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="76" y="338" font-weight="700">2</text>
+    <text x="100" y="338">La biblioteca estándar</text>
+    <text x="444" y="338" text-anchor="end" fill="#94a3b8" font-size="13">json, csv, statistics</text>
+
+    <rect x="60" y="362" width="400" height="42" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="76" y="388" font-weight="700">3</text>
+    <text x="100" y="388">site-packages del entorno</text>
+    <text x="444" y="388" text-anchor="end" fill="#94a3b8" font-size="13">pytest, observatorio</text>
+
+    <path d="M480 283 L516 283" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <rect x="520" y="226" width="250" height="114" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="645" y="252" text-anchor="middle" font-weight="700">El primero que coincide</text>
+    <text x="540" y="278" fill="#e2e8f0" font-size="13">1. lo guarda en sys.modules</text>
+    <text x="540" y="300" fill="#e2e8f0" font-size="13">2. ejecuta el archivo entero</text>
+    <text x="540" y="322" fill="#e2e8f0" font-size="13">3. deja el nombre units</text>
+
+    <rect x="520" y="356" width="250" height="60" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="645" y="381" text-anchor="middle" fill="#f87171" font-weight="700">Trampa</text>
+    <text x="645" y="402" text-anchor="middle" font-size="13">un statistics.py en 1 tapa al de 2</text>
+
+    <text x="410" y="448" text-anchor="middle" fill="#94a3b8" font-size="13">Un módulo se ejecuta una sola vez por programa, aunque lo importen diez archivos</text>
+  </g>
+</svg>

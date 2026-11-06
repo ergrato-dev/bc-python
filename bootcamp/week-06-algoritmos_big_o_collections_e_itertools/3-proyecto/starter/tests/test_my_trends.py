@@ -1,4 +1,4 @@
-# Tus tests de la semana 6: sustituye este ejemplo por al menos 6 tests tuyos (paso 13).
+# Tus tests de la semana 6: sustituye este ejemplo por al menos 6 tests tuyos (paso 12).
 from observatorio.trends import jumps
 
 

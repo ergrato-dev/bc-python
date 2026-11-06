@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">De pyproject.toml al entorno</title>
+  <desc id="d">Tres archivos en fila. pyproject.toml dice lo que admites, por ejemplo ruff==0.17.3. uv lock resuelve y escribe uv.lock, con la versión exacta y el hash de cada paquete, directo o transitivo, para Linux, macOS y Windows. uv sync instala exactamente eso en .venv. uv add cambia los tres de una vez. uv lock --check y uv sync --locked fallan si pyproject.toml y uv.lock no están de acuerdo. pyproject.toml y uv.lock se suben a Git; .venv no.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="30" y="60" width="210" height="150" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="135" y="88" text-anchor="middle" font-weight="700">pyproject.toml</text>
+    <text x="135" y="110" text-anchor="middle" fill="#38bdf8" font-size="13">lo que admites</text>
+    <text x="50" y="142" font-size="13">mypy==2.4.1</text>
+    <text x="50" y="164" font-size="13">pytest==9.2.0</text>
+    <text x="50" y="186" font-size="13">ruff==0.17.3</text>
+
+    <rect x="305" y="60" width="210" height="150" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="410" y="88" text-anchor="middle" font-weight="700">uv.lock</text>
+    <text x="410" y="110" text-anchor="middle" fill="#4ade80" font-size="13">lo que usas</text>
+    <text x="325" y="142" font-size="13">14 paquetes, con transitivas</text>
+    <text x="325" y="164" font-size="13">versión exacta y hash</text>
+    <text x="325" y="186" font-size="13">Linux, macOS y Windows</text>
+
+    <rect x="580" y="60" width="210" height="150" rx="10" fill="#1e293b" stroke="#334155"/>
+    <text x="685" y="88" text-anchor="middle" font-weight="700">.venv</text>
+    <text x="685" y="110" text-anchor="middle" fill="#94a3b8" font-size="13">lo instalado</text>
+    <text x="600" y="142" font-size="13">solo lo de tu sistema</text>
+    <text x="600" y="164" font-size="13">tu paquete, editable</text>
+    <text x="600" y="186" font-size="13">se rehace con uv sync</text>
+
+    <path d="M240 135 L301 135" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="272" y="126" text-anchor="middle" fill="#94a3b8" font-size="12">uv lock</text>
+    <path d="M515 135 L576 135" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="546" y="126" text-anchor="middle" fill="#94a3b8" font-size="12">uv sync</text>
+
+    <path d="M135 260 L135 214" stroke="#facc15" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M410 260 L410 214" stroke="#facc15" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M685 260 L685 214" stroke="#facc15" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <rect x="30" y="260" width="760" height="40" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="410" y="285" text-anchor="middle"><tspan font-weight="700" fill="#facc15">uv add / uv remove</tspan> cambian los tres de una vez</text>
+
+    <rect x="30" y="316" width="485" height="40" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="272" y="341" text-anchor="middle"><tspan font-weight="700" fill="#f87171">uv lock --check</tspan> y <tspan font-weight="700" fill="#f87171">uv sync --locked</tspan>: error si no coinciden</text>
+
+    <text x="135" y="392" text-anchor="middle" fill="#4ade80" font-size="13">a Git</text>
+    <text x="410" y="392" text-anchor="middle" fill="#4ade80" font-size="13">a Git</text>
+    <text x="685" y="392" text-anchor="middle" fill="#f87171" font-size="13">nunca a Git</text>
+    <text x="410" y="420" text-anchor="middle" fill="#94a3b8" font-size="13">Quien clona el repositorio ejecuta uv sync y obtiene exactamente tu entorno</text>
+  </g>
+</svg>

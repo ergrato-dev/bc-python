@@ -1,4 +1,4 @@
-# Tus tests de la semana 5: sustituye este ejemplo por al menos 6 tests tuyos (paso 12).
+# Tus tests de la semana 5: sustituye este ejemplo por al menos 6 tests tuyos (paso 13).
 from observatorio.groups import distinct_labels
 
 

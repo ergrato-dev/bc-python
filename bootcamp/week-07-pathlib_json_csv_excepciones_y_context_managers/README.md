@@ -133,6 +133,6 @@ Los tests terminan en `passed` sin `failed`, `mypy` dice `Success: no issues fou
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 06](../week-06-algoritmos_big_o_collections_e_itertools/README.md) | **Semana 07** | Semana 08 (próximamente) |
+| [Semana 06](../week-06-algoritmos_big_o_collections_e_itertools/README.md) | **Semana 07** | [Semana 08](../week-08-proyectos_con_uv_modulos_paquetes_pyproject_ruff_y_lock/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

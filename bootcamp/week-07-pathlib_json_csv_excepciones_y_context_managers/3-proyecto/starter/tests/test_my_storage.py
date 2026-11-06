@@ -1,4 +1,4 @@
-# Tus tests de la semana 7: sustituye este ejemplo por al menos 6 tests tuyos (paso 13).
+# Tus tests de la semana 7: sustituye este ejemplo por al menos 6 tests tuyos (paso 11).
 from pathlib import Path
 
 from observatorio.storage import read_lines

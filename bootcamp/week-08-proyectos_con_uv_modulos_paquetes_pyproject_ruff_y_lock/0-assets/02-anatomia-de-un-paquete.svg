@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" aria-labelledby="t d">
+  <title id="t">Anatomía de un paquete</title>
+  <desc id="d">A la izquierda, el árbol de archivos src/observatorio con __init__.py, __main__.py y el subpaquete core con su __init__.py, record.py y trends.py. A la derecha, el nombre de import de cada uno: observatorio, observatorio.__main__, observatorio.core, observatorio.core.record y observatorio.core.trends. Abajo, el __init__.py de core reexporta median desde trends, así que from observatorio.core import median funciona igual que from observatorio.core.trends import median.</desc>
+  <rect width="820" height="470" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="60" y="44" fill="#94a3b8" font-size="13">En el disco</text>
+    <text x="470" y="44" fill="#94a3b8" font-size="13">Nombre de import</text>
+
+    <rect x="40" y="58" width="340" height="276" rx="10" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="88" fill="#94a3b8">src/</text>
+    <text x="80" y="118" font-weight="700" fill="#38bdf8">observatorio/</text>
+    <text x="100" y="148">__init__.py</text>
+    <text x="100" y="178">__main__.py</text>
+    <text x="100" y="208" font-weight="700" fill="#4ade80">core/</text>
+    <text x="120" y="238">__init__.py</text>
+    <text x="120" y="268">record.py</text>
+    <text x="120" y="298">trends.py</text>
+    <text x="100" y="88" fill="#94a3b8" font-size="12">no forma parte del nombre</text>
+
+    <g stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4">
+      <path d="M200 143 L450 143"/>
+      <path d="M200 173 L450 173"/>
+      <path d="M220 233 L450 233"/>
+      <path d="M200 263 L450 263"/>
+      <path d="M200 293 L450 293"/>
+    </g>
+
+    <rect x="450" y="126" width="330" height="30" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="466" y="147">observatorio</text>
+    <text x="764" y="147" text-anchor="end" fill="#94a3b8" font-size="12">paquete</text>
+    <rect x="450" y="158" width="330" height="30" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="466" y="178">observatorio.__main__</text>
+    <text x="764" y="178" text-anchor="end" fill="#94a3b8" font-size="12">python -m observatorio</text>
+    <rect x="450" y="218" width="330" height="30" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="466" y="238">observatorio.core</text>
+    <text x="764" y="238" text-anchor="end" fill="#94a3b8" font-size="12">subpaquete</text>
+    <rect x="450" y="248" width="330" height="30" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="466" y="268">observatorio.core.record</text>
+    <text x="764" y="268" text-anchor="end" fill="#94a3b8" font-size="12">módulo</text>
+    <rect x="450" y="278" width="330" height="30" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="466" y="298">observatorio.core.trends</text>
+    <text x="764" y="298" text-anchor="end" fill="#94a3b8" font-size="12">módulo</text>
+
+    <rect x="40" y="354" width="740" height="92" rx="10" fill="#422006" stroke="#facc15"/>
+    <text x="60" y="380" font-weight="700" fill="#facc15">core/__init__.py reexporta</text>
+    <text x="60" y="406">from observatorio.core.trends import median</text>
+    <text x="430" y="406" fill="#94a3b8" font-size="13">dentro del __init__.py</text>
+    <text x="60" y="432">from observatorio.core import median</text>
+    <text x="430" y="432" fill="#94a3b8" font-size="13">quien usa el paquete: no sabe en qué módulo vive</text>
+  </g>
+</svg>
