@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" role="img" aria-labelledby="t d">
+  <title id="t">Anatomía de una list comprehension</title>
+  <desc id="d">Arriba, el bucle: values = [], después for text in texts (de dónde sale cada elemento), if text != "NA" (cuáles pasan) y values.append(float(...)) (qué se añade). Abajo, la comprehension equivalente con las mismas tres piezas en otro orden: primero qué se añade, float(...), después for text in texts y al final if text != "NA", todo entre corchetes. Los colores unen cada pieza del bucle con la misma pieza de la comprehension.</desc>
+  <rect width="820" height="380" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="15" fill="#e2e8f0">
+    <text x="30" y="40" font-weight="700">Bucle</text>
+    <rect x="30" y="56" width="560" height="140" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="50" y="86">values = []</text>
+    <rect x="46" y="98" width="190" height="28" rx="5" fill="#082f49" stroke="#38bdf8"/>
+    <text x="56" y="118">for text in texts:</text>
+    <rect x="76" y="132" width="180" height="28" rx="5" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="86" y="152">if text != "NA":</text>
+    <text x="106" y="186">values.append(</text>
+    <rect x="216" y="166" width="250" height="28" rx="5" fill="#052e16" stroke="#4ade80"/>
+    <text x="226" y="186">float(text.replace(",", "."))</text>
+    <text x="470" y="186">)</text>
+
+    <text x="620" y="114" fill="#38bdf8" font-size="13">de dónde sale</text>
+    <text x="620" y="150" fill="#a78bfa" font-size="13">cuáles pasan</text>
+    <text x="620" y="186" fill="#4ade80" font-size="13">qué se añade</text>
+
+    <text x="30" y="250" font-weight="700">Comprehension</text>
+    <rect x="30" y="266" width="760" height="70" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="46" y="307">values = [</text>
+    <rect x="124" y="286" width="250" height="32" rx="5" fill="#052e16" stroke="#4ade80"/>
+    <text x="134" y="308">float(text.replace(",", "."))</text>
+    <rect x="384" y="286" width="170" height="32" rx="5" fill="#082f49" stroke="#38bdf8"/>
+    <text x="394" y="308">for text in texts</text>
+    <rect x="564" y="286" width="160" height="32" rx="5" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="574" y="308">if text != "NA"</text>
+    <text x="732" y="307">]</text>
+    <text x="249" y="358" text-anchor="middle" fill="#4ade80" font-size="13">1. qué</text>
+    <text x="469" y="358" text-anchor="middle" fill="#38bdf8" font-size="13">2. de dónde</text>
+    <text x="644" y="358" text-anchor="middle" fill="#a78bfa" font-size="13">3. cuáles (opcional)</text>
+  </g>
+</svg>

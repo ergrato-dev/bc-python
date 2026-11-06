@@ -132,6 +132,6 @@ Los tests terminan en `passed` sin `failed`, `mypy` dice `Success: no issues fou
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 03](../week-03-bucles_iteracion_y_depuracion/README.md) | **Semana 04** | Semana 05 (próximamente) |
+| [Semana 03](../week-03-bucles_iteracion_y_depuracion/README.md) | **Semana 04** | [Semana 05](../week-05-colecciones_y_comprehensions/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

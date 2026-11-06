@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">Claves y valores de un diccionario</title>
+  <desc id="d">Arriba, el diccionario units como tabla de dos columnas: las claves aire, ruido y agua, que son únicas e inmutables, apuntan a sus valores µg/m³, dB y mg/L. units["ruido"] busca por la clave y da dB. Abajo, el agrupado de values_by_label: la lista de registros (Norte, 12.5), (Sur, 8.0), (Norte, 48.9), (Sur, 9.5) se convierte en un diccionario donde la clave Norte apunta a la lista [12.5, 48.9] y la clave Sur a [8.0, 9.5].</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="40" font-weight="700">units = {"aire": "µg/m³", "ruido": "dB", "agua": "mg/L"}</text>
+    <text x="110" y="74" text-anchor="middle" fill="#38bdf8" font-size="13">claves: únicas, inmutables</text>
+    <text x="400" y="74" text-anchor="middle" fill="#4ade80" font-size="13">valores: cualquier cosa</text>
+    <rect x="40" y="86" width="140" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="110" y="108" text-anchor="middle">"aire"</text>
+    <rect x="40" y="128" width="140" height="34" rx="6" fill="#082f49" stroke="#38bdf8" stroke-width="2.5"/>
+    <text x="110" y="150" text-anchor="middle">"ruido"</text>
+    <rect x="40" y="170" width="140" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="110" y="192" text-anchor="middle">"agua"</text>
+    <rect x="330" y="86" width="140" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="400" y="108" text-anchor="middle">"µg/m³"</text>
+    <rect x="330" y="128" width="140" height="34" rx="6" fill="#052e16" stroke="#4ade80" stroke-width="2.5"/>
+    <text x="400" y="150" text-anchor="middle">"dB"</text>
+    <rect x="330" y="170" width="140" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="400" y="192" text-anchor="middle">"mg/L"</text>
+    <path d="M180 103H324" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M180 145H324" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M180 187H324" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+    <rect x="540" y="118" width="250" height="54" rx="8" fill="#1e293b" stroke="#facc15"/>
+    <text x="665" y="142" text-anchor="middle">units["ruido"]  →  "dB"</text>
+    <text x="665" y="162" text-anchor="middle" fill="#94a3b8" font-size="12">busca por la clave, no por posición</text>
+
+    <path d="M30 236H790" stroke="#64748b" stroke-dasharray="4 6"/>
+
+    <text x="30" y="270" font-weight="700">Agrupar: values_by_label(records)</text>
+    <rect x="40" y="290" width="220" height="130" rx="8" fill="#1e293b" stroke="#64748b"/>
+    <text x="150" y="314" text-anchor="middle" fill="#94a3b8" font-size="13">lista de tuplas</text>
+    <text x="60" y="340">("Norte", 12.5)</text>
+    <text x="60" y="362">("Sur", 8.0)</text>
+    <text x="60" y="384">("Norte", 48.9)</text>
+    <text x="60" y="406">("Sur", 9.5)</text>
+    <path d="M260 355H324" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#a)"/>
+    <text x="292" y="345" text-anchor="middle" fill="#a78bfa" font-size="12">setdefault</text>
+    <rect x="330" y="300" width="140" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="400" y="322" text-anchor="middle">"Norte"</text>
+    <rect x="330" y="372" width="140" height="34" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="400" y="394" text-anchor="middle">"Sur"</text>
+    <rect x="540" y="300" width="250" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="665" y="322" text-anchor="middle">[12.5, 48.9]</text>
+    <rect x="540" y="372" width="250" height="34" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="665" y="394" text-anchor="middle">[8.0, 9.5]</text>
+    <path d="M470 317H534" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M470 389H534" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+    <text x="665" y="358" text-anchor="middle" fill="#94a3b8" font-size="12">cada valor es una lista que crece</text>
+  </g>
+</svg>
