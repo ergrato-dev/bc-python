@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" role="img" aria-labelledby="t d">
+  <title id="t">Elegir el modelo</title>
+  <desc id="d">Un árbol de decisión de arriba abajo. Primera pregunta: ¿llega de fuera con claves variables, como un JSON? Si sí, diccionario, o TypedDict si la forma es fija. Si no, segunda: ¿es una pareja que se crea y se desempaqueta al momento? Si sí, tupla. Si no, tercera: ¿hay código que ya la usa como tupla? Si sí, NamedTuple. Si no, cuarta: ¿tiene más comportamiento que datos? Si sí, clase normal. Si no, dataclass, y última pregunta: ¿cambia después de crearse? Si no, frozen=True y slots=True, como Scale y Measurement; si sí, solo slots=True, como Series.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="560" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <g fill="#1e293b" stroke="#334155">
+      <rect x="40" y="30" width="400" height="50" rx="8"/>
+      <rect x="40" y="120" width="400" height="50" rx="8"/>
+      <rect x="40" y="210" width="400" height="50" rx="8"/>
+      <rect x="40" y="300" width="400" height="50" rx="8"/>
+      <rect x="40" y="440" width="400" height="50" rx="8"/>
+    </g>
+    <text x="60" y="61">¿Llega de fuera con claves variables (un JSON)?</text>
+    <text x="60" y="151">¿Es una pareja que se desempaqueta al momento?</text>
+    <text x="60" y="241">¿Hay código que ya la usa como tupla?</text>
+    <text x="60" y="331">¿Tiene más comportamiento que datos?</text>
+    <text x="60" y="471">¿Cambia después de crearse?</text>
+
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M442 55 L516 55"/>
+      <path d="M442 145 L516 145"/>
+      <path d="M442 235 L516 235"/>
+      <path d="M442 325 L516 325"/>
+      <path d="M240 82 L240 116"/>
+      <path d="M240 172 L240 206"/>
+      <path d="M240 262 L240 296"/>
+      <path d="M240 352 L240 386"/>
+      <path d="M240 422 L240 436"/>
+      <path d="M442 465 L516 465"/>
+      <path d="M240 492 L240 506"/>
+    </g>
+    <g fill="#94a3b8" font-size="12">
+      <text x="470" y="48">sí</text>
+      <text x="470" y="138">sí</text>
+      <text x="470" y="228">sí</text>
+      <text x="470" y="318">sí</text>
+      <text x="470" y="458">no</text>
+      <text x="250" y="104">no</text>
+      <text x="250" y="194">no</text>
+      <text x="250" y="284">no</text>
+      <text x="250" y="374">no</text>
+      <text x="250" y="503">sí</text>
+    </g>
+
+    <rect x="520" y="30" width="260" height="50" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="536" y="52" font-weight="700" fill="#38bdf8">diccionario</text>
+    <text x="536" y="71" fill="#94a3b8" font-size="12">TypedDict si la forma es fija</text>
+    <rect x="520" y="120" width="260" height="50" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="536" y="142" font-weight="700" fill="#38bdf8">tupla</text>
+    <text x="536" y="161" fill="#94a3b8" font-size="12">for label, value in ...</text>
+    <rect x="520" y="210" width="260" height="50" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="536" y="232" font-weight="700" fill="#38bdf8">NamedTuple</text>
+    <text x="536" y="251" fill="#94a3b8" font-size="12">nombres sin romper los índices</text>
+    <rect x="520" y="300" width="260" height="50" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="536" y="322" font-weight="700" fill="#38bdf8">clase normal</text>
+    <text x="536" y="341" fill="#94a3b8" font-size="12">con __init__ y métodos a mano</text>
+
+    <rect x="40" y="390" width="400" height="30" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="60" y="410" font-weight="700" fill="#4ade80">dataclass</text>
+
+    <rect x="520" y="440" width="260" height="50" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="536" y="462" font-weight="700" fill="#4ade80">frozen=True, slots=True</text>
+    <text x="536" y="481" fill="#94a3b8" font-size="12">un valor: Scale, Measurement</text>
+    <rect x="40" y="510" width="400" height="36" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="60" y="533" font-weight="700" fill="#4ade80">slots=True</text>
+    <text x="420" y="533" text-anchor="end" fill="#94a3b8" font-size="12">acumula datos: Series</text>
+  </g>
+</svg>

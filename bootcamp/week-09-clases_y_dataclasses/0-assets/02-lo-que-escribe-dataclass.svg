@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" role="img" aria-labelledby="t d">
+  <title id="t">Lo que escribe @dataclass</title>
+  <desc id="d">A la izquierda, lo que escribes: el decorador @dataclass y la clase Station con tres campos, name, city y altitude, cada uno con su tipo. A la derecha, lo que genera @dataclass a partir de esos campos: __init__ con un parámetro por campo en el mismo orden, que guarda cada uno en self; __repr__, que escribe Station(name='Norte', city='Lima', altitude=154); y __eq__, que compara los tres campos en orden. Abajo, lo que añaden las opciones: frozen=True impide asignar campos y genera __hash__; order=True genera menor que y sus parientes; slots=True quita el __dict__.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="480" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="60" y="44" fill="#94a3b8" font-size="13">Lo que escribes</text>
+    <text x="400" y="44" fill="#94a3b8" font-size="13">Lo que genera @dataclass</text>
+
+    <rect x="40" y="58" width="280" height="196" rx="10" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="92" fill="#facc15">@dataclass</text>
+    <text x="60" y="120"><tspan fill="#38bdf8" font-weight="700">class</tspan> Station:</text>
+    <text x="84" y="152">name: str</text>
+    <text x="84" y="180">city: str</text>
+    <text x="84" y="208">altitude: int</text>
+    <text x="60" y="238" fill="#94a3b8" font-size="12">tres campos, con su tipo</text>
+
+    <path d="M322 156 L376 156" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <rect x="380" y="58" width="400" height="62" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="396" y="82" font-weight="700" fill="#4ade80">__init__(self, name, city, altitude)</text>
+    <text x="396" y="106" font-size="13">self.name = name · self.city = city · self.altitude = altitude</text>
+
+    <rect x="380" y="126" width="400" height="62" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="396" y="150" font-weight="700" fill="#4ade80">__repr__(self)</text>
+    <text x="396" y="174" font-size="13">Station(name='Norte', city='Lima', altitude=154)</text>
+
+    <rect x="380" y="194" width="400" height="62" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="396" y="218" font-weight="700" fill="#4ade80">__eq__(self, other)</text>
+    <text x="396" y="242" font-size="13">(name, city, altitude) == los de other, en orden</text>
+
+    <rect x="40" y="286" width="740" height="166" rx="10" fill="#422006" stroke="#facc15"/>
+    <text x="60" y="314" font-weight="700" fill="#facc15">Con opciones: @dataclass(frozen=True, order=True, slots=True)</text>
+    <text x="60" y="348" font-weight="700">frozen=True</text>
+    <text x="220" y="348">asignar un campo da FrozenInstanceError · genera __hash__</text>
+    <text x="60" y="380" font-weight="700">order=True</text>
+    <text x="220" y="380">genera &lt;, &lt;=, &gt; y &gt;=, que comparan los campos en orden</text>
+    <text x="60" y="412" font-weight="700">slots=True</text>
+    <text x="220" y="412">sin __dict__: menos memoria y ningún atributo inventado</text>
+    <text x="60" y="438" fill="#94a3b8" font-size="12">Y siempre: __match_args__ para match, y fields() para recorrer los campos</text>
+  </g>
+</svg>

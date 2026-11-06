@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" role="img" aria-labelledby="t d">
+  <title id="t">Objeto y clase</title>
+  <desc id="d">Arriba, la clase Sensor con su atributo de clase kind igual a aire y sus métodos __init__, record y mean, compartidos por todos los objetos. Abajo, dos objetos: north, con name Norte, unit, readings y un kind propio igual a agua, y south, con name Sur, unit y readings. Unas flechas van de cada objeto a la clase: si un atributo no está en el objeto, Python lo busca en la clase. south.kind encuentra aire en la clase; north.kind encuentra agua en el propio objeto, porque north.kind = "agua" escribió en el objeto.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="500" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="250" y="30" width="320" height="170" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="270" y="58" font-weight="700" fill="#38bdf8">class Sensor</text>
+    <text x="550" y="58" text-anchor="end" fill="#94a3b8" font-size="12">vars(Sensor)</text>
+    <text x="270" y="88" fill="#facc15">kind = "aire"</text>
+    <text x="550" y="88" text-anchor="end" fill="#94a3b8" font-size="12">atributo de clase</text>
+    <text x="270" y="118">__init__(self, name, unit)</text>
+    <text x="270" y="144">record(self, value)</text>
+    <text x="270" y="170">mean(self)</text>
+    <text x="550" y="144" text-anchor="end" fill="#94a3b8" font-size="12">métodos: uno</text>
+    <text x="550" y="162" text-anchor="end" fill="#94a3b8" font-size="12">para todos</text>
+
+    <rect x="40" y="290" width="330" height="160" rx="10" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="318" font-weight="700" fill="#4ade80">north</text>
+    <text x="350" y="318" text-anchor="end" fill="#94a3b8" font-size="12">vars(north)</text>
+    <text x="60" y="348">name = "Norte"</text>
+    <text x="60" y="374">unit = "µg/m³"</text>
+    <text x="60" y="400">readings = [12.5, 48.9]</text>
+    <text x="60" y="428" fill="#facc15">kind = "agua"</text>
+    <text x="350" y="428" text-anchor="end" fill="#94a3b8" font-size="12">tapa el de la clase</text>
+
+    <rect x="450" y="290" width="330" height="160" rx="10" fill="#1e293b" stroke="#334155"/>
+    <text x="470" y="318" font-weight="700" fill="#4ade80">south</text>
+    <text x="760" y="318" text-anchor="end" fill="#94a3b8" font-size="12">vars(south)</text>
+    <text x="470" y="348">name = "Sur"</text>
+    <text x="470" y="374">unit = "µg/m³"</text>
+    <text x="470" y="400">readings = [8.0]</text>
+    <text x="470" y="428" fill="#94a3b8" font-size="13">sin kind propio</text>
+
+    <path d="M205 290 L330 202" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
+    <path d="M615 290 L490 202" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
+    <text x="410" y="236" text-anchor="middle" fill="#94a3b8" font-size="13">si no está en el objeto,</text>
+    <text x="410" y="254" text-anchor="middle" fill="#94a3b8" font-size="13">Python lo busca en la clase</text>
+
+    <text x="40" y="482" font-size="13"><tspan fill="#facc15">north.kind</tspan> → "agua", del objeto · <tspan fill="#facc15">south.kind</tspan> → "aire", de la clase · <tspan fill="#facc15">north.kind = "agua"</tspan> escribe en north</text>
+  </g>
+</svg>

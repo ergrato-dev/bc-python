@@ -25,7 +25,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 
 | Semana | Tema | Estado |
 |:--:|---|:--:|
-| 09 | Clases y `dataclasses` | ⬜ |
+| [09](week-09-clases_y_dataclasses/README.md) | Clases y `dataclasses` | ✅ |
 | 10 | Herencia, composición, ABC y `Protocol` | ⬜ |
 | 11 | Data model: dunders, iteradores y generadores | ⬜ |
 | 12 | Closures, decoradores y `functools` | ⬜ |

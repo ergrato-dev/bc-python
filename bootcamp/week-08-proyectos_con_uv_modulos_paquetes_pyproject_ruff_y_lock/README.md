@@ -134,6 +134,6 @@ Los tests terminan en `passed` sin `failed`, ruff dice `All checks passed!` y `N
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 07](../week-07-pathlib_json_csv_excepciones_y_context_managers/README.md) | **Semana 08** | Semana 09 (próximamente) |
+| [Semana 07](../week-07-pathlib_json_csv_excepciones_y_context_managers/README.md) | **Semana 08** | [Semana 09](../week-09-clases_y_dataclasses/README.md) |
 
 ← [Volver al índice de semanas](../README.md)
