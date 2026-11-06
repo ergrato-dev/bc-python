@@ -38,7 +38,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | Semana | Tema | Estado |
 |:--:|---|:--:|
 | [16](week-16-concurrencia_hilos_procesos_gil_y_free_threading/README.md) | Concurrencia: hilos, procesos, GIL y free-threading | ✅ |
-| 17 | asyncio | ⬜ |
+| [17](week-17-asyncio_corrutinas_tareas_y_colas/README.md) | asyncio: corrutinas, tareas y colas | ✅ |
 | 18 | HTTP con httpx, reintentos, secretos y `.env` | ⬜ |
 | 19 | PostgreSQL con psycopg 3, SQLAlchemy 2 y Alembic | ⬜ |
 | 20 | FastAPI: lo justo para servir tu proyecto | ⬜ |

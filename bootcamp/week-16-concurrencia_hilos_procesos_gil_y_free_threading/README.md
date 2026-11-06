@@ -162,6 +162,6 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README, co
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 15](../week-15-cli_con_typer_y_rich/README.md) | **Semana 16** | Semana 17 (próximamente) |
+| [Semana 15](../week-15-cli_con_typer_y_rich/README.md) | **Semana 16** | [Semana 17](../week-17-asyncio_corrutinas_tareas_y_colas/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

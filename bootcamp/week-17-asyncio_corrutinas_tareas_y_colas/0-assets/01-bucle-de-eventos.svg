@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">El bucle de eventos</title>
+  <desc id="d">Tres tareas, A, B y C, en un solo hilo. Cada tarea ejecuta un tramo corto hasta su await y después espera; mientras espera, el bucle ejecuta la siguiente tarea lista. La fila del hilo muestra los tramos de A, B y C uno detrás de otro, y huecos en los que ninguna está lista y el bucle duerme hasta el próximo aviso. Debajo, las cuatro fases de cada vuelta del bucle: coge una tarea lista, la ejecuta hasta su await, apunta qué espera y pasa a la siguiente.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="700">Tres tareas, un solo hilo: el turno cambia en cada await</text>
+
+    <text x="24" y="80" font-weight="700" fill="#38bdf8">tarea A</text>
+    <text x="24" y="130" font-weight="700" fill="#a78bfa">tarea B</text>
+    <text x="24" y="180" font-weight="700" fill="#fbbf24">tarea C</text>
+
+    <rect x="140" y="64" width="60" height="26" rx="5" fill="#082f49" stroke="#38bdf8"/>
+    <line x1="200" y1="77" x2="420" y2="77" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 6"/>
+    <rect x="420" y="64" width="60" height="26" rx="5" fill="#082f49" stroke="#38bdf8"/>
+    <text x="310" y="70" text-anchor="middle" font-size="12" fill="#94a3b8">await sleep: espera</text>
+
+    <rect x="200" y="114" width="60" height="26" rx="5" fill="#2e1065" stroke="#a78bfa"/>
+    <line x1="260" y1="127" x2="500" y2="127" stroke="#a78bfa" stroke-width="2" stroke-dasharray="6 6"/>
+    <rect x="500" y="114" width="60" height="26" rx="5" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="380" y="120" text-anchor="middle" font-size="12" fill="#94a3b8">await: espera la red</text>
+
+    <rect x="260" y="164" width="60" height="26" rx="5" fill="#422006" stroke="#fbbf24"/>
+    <line x1="320" y1="177" x2="580" y2="177" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 6"/>
+    <rect x="580" y="164" width="60" height="26" rx="5" fill="#422006" stroke="#fbbf24"/>
+    <text x="450" y="170" text-anchor="middle" font-size="12" fill="#94a3b8">await: espera el disco</text>
+
+    <line x1="140" y1="210" x2="790" y2="210" stroke="#334155" stroke-width="2"/>
+    <text x="24" y="250" font-weight="700">el hilo</text>
+    <rect x="140" y="232" width="60" height="30" rx="5" fill="#082f49" stroke="#38bdf8"/>
+    <text x="170" y="252" text-anchor="middle" font-weight="700" fill="#38bdf8">A</text>
+    <rect x="200" y="232" width="60" height="30" rx="5" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="230" y="252" text-anchor="middle" font-weight="700" fill="#a78bfa">B</text>
+    <rect x="260" y="232" width="60" height="30" rx="5" fill="#422006" stroke="#fbbf24"/>
+    <text x="290" y="252" text-anchor="middle" font-weight="700" fill="#fbbf24">C</text>
+    <text x="370" y="252" text-anchor="middle" font-size="12" fill="#94a3b8">nadie listo:</text>
+    <text x="370" y="268" text-anchor="middle" font-size="12" fill="#94a3b8">el bucle duerme</text>
+    <rect x="420" y="232" width="60" height="30" rx="5" fill="#082f49" stroke="#38bdf8"/>
+    <text x="450" y="252" text-anchor="middle" font-weight="700" fill="#38bdf8">A</text>
+    <rect x="500" y="232" width="60" height="30" rx="5" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="530" y="252" text-anchor="middle" font-weight="700" fill="#a78bfa">B</text>
+    <rect x="580" y="232" width="60" height="30" rx="5" fill="#422006" stroke="#fbbf24"/>
+    <text x="610" y="252" text-anchor="middle" font-weight="700" fill="#fbbf24">C</text>
+    <path d="M650,247 L785,247" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="718" y="238" text-anchor="middle" font-size="12" fill="#94a3b8">tiempo</text>
+
+    <text x="410" y="306" text-anchor="middle" font-size="15" font-weight="700">Cada vuelta del bucle</text>
+    <rect x="24" y="322" width="170" height="64" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="109" y="349" text-anchor="middle">1. coge una tarea</text>
+    <text x="109" y="370" text-anchor="middle">lista</text>
+    <rect x="224" y="322" width="170" height="64" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="309" y="349" text-anchor="middle">2. la ejecuta hasta</text>
+    <text x="309" y="370" text-anchor="middle">su próximo await</text>
+    <rect x="424" y="322" width="170" height="64" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="509" y="349" text-anchor="middle">3. apunta qué espera</text>
+    <text x="509" y="370" text-anchor="middle">(reloj, red, disco)</text>
+    <rect x="624" y="322" width="170" height="64" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="709" y="349" text-anchor="middle">4. pasa a la</text>
+    <text x="709" y="370" text-anchor="middle">siguiente</text>
+    <path d="M194,354 L220,354" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M394,354 L420,354" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M594,354 L620,354" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M709,386 L709,410 L109,410 L109,392" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="410" y="428" text-anchor="middle" font-size="12" fill="#cbd5e1">entre dos await, ninguna otra tarea se ejecuta</text>
+  </g>
+</svg>

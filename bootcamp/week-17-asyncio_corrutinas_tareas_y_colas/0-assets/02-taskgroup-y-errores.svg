@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-labelledby="t d">
+  <title id="t">TaskGroup: un error cancela al resto</title>
+  <desc id="d">Un bloque async with TaskGroup con tres tareas que iban a tardar un segundo. A los 0,1 segundos, la tarea Sur falla con un ValueError. El grupo cancela a Norte y a Este, a las que les llega un CancelledError en su await, y espera a que terminen. Al salir del bloque, el grupo lanza un ExceptionGroup que contiene el ValueError, y un except asterisco ValueError lo captura. Abajo, una nota: un archivo que falta no llega al grupo, porque watch_file lo convierte en un FileReport con error.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="700">Si una tarea del grupo falla, el grupo cancela al resto</text>
+
+    <rect x="24" y="52" width="500" height="250" rx="10" fill="none" stroke="#475569" stroke-dasharray="8 6"/>
+    <text x="40" y="76" font-weight="700" fill="#94a3b8">async with asyncio.TaskGroup() as group:</text>
+
+    <text x="44" y="122" font-weight="700" fill="#38bdf8">Norte</text>
+    <rect x="110" y="104" width="120" height="28" rx="5" fill="#082f49" stroke="#38bdf8"/>
+    <text x="170" y="123" text-anchor="middle" font-size="12">esperando</text>
+    <rect x="240" y="104" width="150" height="28" rx="5" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="315" y="123" text-anchor="middle" font-size="12" fill="#cbd5e1">CancelledError</text>
+
+    <text x="44" y="172" font-weight="700" fill="#f87171">Sur</text>
+    <rect x="110" y="154" width="120" height="28" rx="5" fill="#450a0a" stroke="#f87171"/>
+    <text x="170" y="173" text-anchor="middle" font-size="12" fill="#f87171">ValueError</text>
+
+    <text x="44" y="222" font-weight="700" fill="#a78bfa">Este</text>
+    <rect x="110" y="204" width="120" height="28" rx="5" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="170" y="223" text-anchor="middle" font-size="12">esperando</text>
+    <rect x="240" y="204" width="150" height="28" rx="5" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="315" y="223" text-anchor="middle" font-size="12" fill="#cbd5e1">CancelledError</text>
+
+    <path d="M232,162 L262,136" stroke="#f87171" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M232,174 L262,200" stroke="#f87171" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="300" y="173" font-size="12" fill="#f87171">el grupo cancela</text>
+    <text x="300" y="189" font-size="12" fill="#f87171">a las demás</text>
+
+    <line x1="110" y1="256" x2="110" y2="266" stroke="#94a3b8"/>
+    <line x1="230" y1="256" x2="230" y2="266" stroke="#94a3b8"/>
+    <line x1="400" y1="256" x2="400" y2="266" stroke="#94a3b8"/>
+    <line x1="110" y1="261" x2="400" y2="261" stroke="#94a3b8"/>
+    <text x="110" y="284" text-anchor="middle" font-size="12" fill="#94a3b8">0 s</text>
+    <text x="230" y="284" text-anchor="middle" font-size="12" fill="#94a3b8">0,1 s</text>
+    <text x="400" y="284" text-anchor="middle" font-size="12" fill="#94a3b8">(iban a tardar 1 s)</text>
+
+    <path d="M524,177 L582,177" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="553" y="166" text-anchor="middle" font-size="12" fill="#94a3b8">al salir</text>
+    <rect x="588" y="120" width="210" height="114" rx="10" fill="#450a0a" stroke="#f87171"/>
+    <text x="693" y="148" text-anchor="middle" font-weight="700" fill="#f87171">ExceptionGroup</text>
+    <rect x="618" y="162" width="150" height="30" rx="6" fill="#0f172a" stroke="#f87171"/>
+    <text x="693" y="182" text-anchor="middle">ValueError</text>
+    <text x="693" y="220" text-anchor="middle" font-size="12" fill="#cbd5e1">except* ValueError</text>
+
+    <rect x="24" y="324" width="774" height="72" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="411" y="353" text-anchor="middle" fill="#4ade80" font-weight="700">En watch_files, un archivo que falta no es un error del grupo</text>
+    <text x="411" y="377" text-anchor="middle" font-size="13">watch_file lo convierte en FileReport(path, error=...) y el resto sigue; solo un bug llega aquí</text>
+  </g>
+</svg>
