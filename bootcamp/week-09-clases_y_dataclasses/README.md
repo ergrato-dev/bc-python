@@ -132,6 +132,6 @@ Los tests terminan en `passed` sin `failed` (al menos 267), ruff dice `All check
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 08](../week-08-proyectos_con_uv_modulos_paquetes_pyproject_ruff_y_lock/README.md) | **Semana 09** | Semana 10 (próximamente) |
+| [Semana 08](../week-08-proyectos_con_uv_modulos_paquetes_pyproject_ruff_y_lock/README.md) | **Semana 09** | [Semana 10](../week-10-herencia_composicion_abc_y_protocol/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

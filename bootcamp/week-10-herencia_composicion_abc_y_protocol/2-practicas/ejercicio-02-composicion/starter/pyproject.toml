@@ -1,0 +1,10 @@
+[project]
+name = "composition-lab"
+version = "0.1.0"
+description = "Ejercicio 02 de la semana 10: composición"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

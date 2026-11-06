@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" role="img" aria-labelledby="t d">
+  <title id="t">Herencia y orden de búsqueda</title>
+  <desc id="d">A la izquierda, una jerarquía de tres clases de arriba abajo: object; Sensor, con los atributos name y unit y los métodos describe y record; y AirSensor, que hereda de Sensor y sustituye describe, que llama a super().describe(). A la derecha, dónde busca Python al ejecutar pm25.describe(): primero en el propio objeto, donde no está; después en AirSensor, donde lo encuentra y lo usa; Sensor solo se consulta a través de super(); y object queda al final. Abajo, el orden completo: AirSensor.__mro__ es AirSensor, Sensor, object.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="500" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="60" y="44" fill="#94a3b8" font-size="13">La jerarquía</text>
+    <text x="440" y="44" fill="#94a3b8" font-size="13">pm25.describe(): ¿dónde busca Python?</text>
+
+    <rect x="40" y="58" width="320" height="50" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="88" font-weight="700">object</text>
+    <text x="340" y="88" text-anchor="end" fill="#94a3b8" font-size="12">la raíz de todas las clases</text>
+
+    <rect x="40" y="146" width="320" height="120" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="60" y="174" font-weight="700" fill="#38bdf8">class Sensor:</text>
+    <text x="80" y="200">name, unit</text>
+    <text x="80" y="224">describe()</text>
+    <text x="80" y="248">record(value)</text>
+
+    <rect x="40" y="304" width="320" height="96" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="60" y="332" font-weight="700" fill="#4ade80">class AirSensor(Sensor):</text>
+    <text x="80" y="358">describe()  ← sustituye</text>
+    <text x="80" y="382" fill="#94a3b8" font-size="13">llama a super().describe()</text>
+
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M200 144 L200 112"/>
+      <path d="M200 302 L200 270"/>
+    </g>
+    <g fill="#94a3b8" font-size="12">
+      <text x="212" y="132">hereda de</text>
+      <text x="212" y="290">hereda de</text>
+    </g>
+
+    <rect x="420" y="58" width="360" height="56" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="440" y="82" font-weight="700">1. El objeto: pm25.__dict__</text>
+    <text x="440" y="102" fill="#94a3b8" font-size="13">solo name y unit: aquí no está</text>
+
+    <rect x="420" y="130" width="360" height="56" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="440" y="154" font-weight="700" fill="#4ade80">2. AirSensor</text>
+    <text x="440" y="174" font-size="13">lo encuentra: usa este y deja de buscar</text>
+
+    <rect x="420" y="202" width="360" height="56" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="440" y="226" font-weight="700" fill="#38bdf8">3. Sensor</text>
+    <text x="440" y="246" font-size="13">solo si lo pide super(); record() sí sale de aquí</text>
+
+    <rect x="420" y="274" width="360" height="56" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="440" y="298" font-weight="700">4. object</text>
+    <text x="440" y="318" fill="#94a3b8" font-size="13">__repr__, __eq__ y demás, si nadie los escribió</text>
+
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M600 116 L600 128"/>
+      <path d="M600 188 L600 200"/>
+      <path d="M600 260 L600 272"/>
+    </g>
+
+    <rect x="40" y="428" width="740" height="44" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="60" y="455" font-weight="700" fill="#facc15">AirSensor.__mro__</text>
+    <text x="220" y="455">(AirSensor, Sensor, object): el orden de los pasos 2 a 4</text>
+  </g>
+</svg>

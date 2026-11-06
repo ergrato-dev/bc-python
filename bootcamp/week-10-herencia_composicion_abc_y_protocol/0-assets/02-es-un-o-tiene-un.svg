@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">Es un o tiene un</title>
+  <desc id="d">Dos formas de escribir una clase Readings que guarda lecturas y no admite valores negativos. A la izquierda, heredando: class Readings(list) recibe los más de cuarenta métodos de list; insert y extend se saltan la validación de append, y readings + [1.0] devuelve una list normal, no un Readings. A la derecha, componiendo: class Readings guarda una lista en el atributo _values y solo expone add, values y mean; add valida siempre, y cambiar la lista por un deque no afecta a quien usa la clase. Abajo, la regla: hereda si B es un A en todo; si B solo usa un A, compón.</desc>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="60" y="44" fill="#94a3b8" font-size="13">Heredar: Readings es una list</text>
+    <text x="440" y="44" fill="#94a3b8" font-size="13">Componer: Readings tiene una list</text>
+
+    <rect x="40" y="58" width="360" height="270" rx="10" fill="#450a0a" stroke="#f87171"/>
+    <text x="60" y="90" font-weight="700" fill="#f87171">class Readings(list):</text>
+    <text x="80" y="116">def append(self, value): valida</text>
+    <rect x="60" y="136" width="320" height="40" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="76" y="161" font-size="13">+ los 40 y pico métodos de list, todos públicos</text>
+    <text x="60" y="210" font-size="13">readings.insert(0, -5.0)</text>
+    <text x="380" y="210" text-anchor="end" fill="#f87171" font-size="13">se salta la validación</text>
+    <text x="60" y="240" font-size="13">readings.extend([-1.0])</text>
+    <text x="380" y="240" text-anchor="end" fill="#f87171" font-size="13">también</text>
+    <text x="60" y="270" font-size="13">readings + [1.0]</text>
+    <text x="380" y="270" text-anchor="end" fill="#f87171" font-size="13">da una list, no un Readings</text>
+    <text x="60" y="308" fill="#94a3b8" font-size="12">Tienes que vigilar métodos que no escribiste</text>
+
+    <rect x="420" y="58" width="360" height="270" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="440" y="90" font-weight="700" fill="#4ade80">class Readings:</text>
+    <text x="460" y="116">_values: list[float]  ← una pieza</text>
+    <rect x="440" y="136" width="320" height="40" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="456" y="161" font-size="13">solo add(), values() y mean(): tú decides</text>
+    <text x="440" y="210" font-size="13">readings.add(-5.0)</text>
+    <text x="760" y="210" text-anchor="end" fill="#4ade80" font-size="13">ValueError, siempre</text>
+    <text x="440" y="240" font-size="13">readings.insert(...)</text>
+    <text x="760" y="240" text-anchor="end" fill="#4ade80" font-size="13">no existe</text>
+    <text x="440" y="270" font-size="13">list cambia por deque</text>
+    <text x="760" y="270" text-anchor="end" fill="#4ade80" font-size="13">nadie se entera</text>
+    <text x="440" y="308" fill="#94a3b8" font-size="12">Delegas en la lista lo que necesitas, nada más</text>
+
+    <rect x="40" y="356" width="740" height="56" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="60" y="381" font-weight="700" fill="#facc15">La regla</text>
+    <text x="60" y="401" font-size="13">Hereda si «B es un A» en todo, también en lo que no piensas usar. Si B solo usa un A, compón.</text>
+  </g>
+</svg>

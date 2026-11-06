@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" aria-labelledby="t d">
+  <title id="t">ABC y Protocol</title>
+  <desc id="d">Las fuentes del Observatorio. Arriba, el Protocol Source, con un solo método, lines(), que devuelve list[str]; su borde es discontinuo porque nadie hereda de él. A la izquierda, LinesSource, con el campo data, lo cumple sin heredar: tiene lines(). A la derecha, la clase abstracta FileSource(ABC), con el campo path y el método abstracto lines(); también cumple Source. De FileSource heredan TextFile, que lee con read_lines, y CsvFile, que lee con read_csv. Abajo, la diferencia: un Protocol es estructural, basta con tener los métodos y lo comprueba mypy; una ABC es nominal, hay que heredar de ella, y da código común e impide crear la base.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="470" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="250" y="30" width="320" height="70" rx="8" fill="#422006" stroke="#facc15" stroke-dasharray="6 4"/>
+    <text x="270" y="58" font-weight="700" fill="#facc15">class Source(Protocol):</text>
+    <text x="290" y="84">def lines(self) -&gt; list[str]: ...</text>
+
+    <rect x="40" y="160" width="300" height="80" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="60" y="188" font-weight="700" fill="#38bdf8">LinesSource</text>
+    <text x="60" y="212">data: list[str]</text>
+    <text x="60" y="232" font-size="13">lines(): una copia de data</text>
+
+    <rect x="480" y="160" width="300" height="80" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="500" y="188" font-weight="700" fill="#4ade80">FileSource(ABC)</text>
+    <text x="500" y="212">path: Path</text>
+    <text x="500" y="232" font-size="13">@abstractmethod lines()</text>
+
+    <rect x="420" y="296" width="170" height="60" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="436" y="322" font-weight="700">TextFile</text>
+    <text x="436" y="344" fill="#94a3b8" font-size="13">read_lines(path)</text>
+    <rect x="610" y="296" width="170" height="60" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="626" y="322" font-weight="700">CsvFile</text>
+    <text x="626" y="344" fill="#94a3b8" font-size="13">read_csv(path)</text>
+
+    <g stroke="#facc15" stroke-width="1.5" fill="none" stroke-dasharray="5 4" marker-end="url(#a)">
+      <path d="M190 158 L320 104"/>
+      <path d="M630 158 L500 104"/>
+    </g>
+    <g fill="#facc15" font-size="12">
+      <text x="120" y="126">cumple: tiene lines()</text>
+      <text x="590" y="126">cumple también</text>
+    </g>
+    <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)">
+      <path d="M505 294 L590 244"/>
+      <path d="M695 294 L670 244"/>
+    </g>
+    <text x="700" y="272" fill="#94a3b8" font-size="12">heredan</text>
+
+    <rect x="40" y="380" width="360" height="70" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="60" y="406" font-weight="700" fill="#facc15">Protocol: estructural</text>
+    <text x="60" y="430" font-size="13">basta con tener los métodos; lo comprueba mypy</text>
+    <rect x="420" y="380" width="360" height="70" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="440" y="406" font-weight="700" fill="#4ade80">ABC: nominal</text>
+    <text x="440" y="430" font-size="13">hay que heredar; da código común y no se crea</text>
+  </g>
+</svg>
