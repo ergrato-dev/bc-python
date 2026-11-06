@@ -31,13 +31,13 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [12](week-12-closures_decoradores_y_functools/README.md) | Closures, decoradores y `functools` | ✅ |
 | [13](week-13-typing_estricto_mypy_y_pydantic/README.md) | Typing estricto con mypy y Pydantic v2 | ✅ |
 | [14](week-14-testing_profesional_fixtures_parametrize_mocks_hypothesis_cobertura_y_logging/README.md) | Testing profesional: fixtures, parametrize, mocks, Hypothesis, cobertura y logging | ✅ |
-| 15 | Proyecto de fase: CLI con Typer y Rich | ✅ |
+| [15](week-15-cli_con_typer_y_rich/README.md) | Proyecto de fase: CLI con Typer y Rich | ✅ |
 
 ### Fase 3 — Python profesional (S16-22, 126 h)
 
 | Semana | Tema | Estado |
 |:--:|---|:--:|
-| 16 | Concurrencia: threads, procesos, GIL y free-threading | ⬜ |
+| [16](week-16-concurrencia_hilos_procesos_gil_y_free_threading/README.md) | Concurrencia: hilos, procesos, GIL y free-threading | ✅ |
 | 17 | asyncio | ⬜ |
 | 18 | HTTP con httpx, reintentos, secretos y `.env` | ⬜ |
 | 19 | PostgreSQL con psycopg 3, SQLAlchemy 2 y Alembic | ⬜ |

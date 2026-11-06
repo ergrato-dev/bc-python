@@ -1,0 +1,10 @@
+[project]
+name = "gil-y-free-threading"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 16: el mismo programa con GIL y sin él"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

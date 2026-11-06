@@ -159,6 +159,6 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 14](../week-14-testing_profesional_fixtures_parametrize_mocks_hypothesis_cobertura_y_logging/README.md) | **Semana 15** | Semana 16 (próximamente) |
+| [Semana 14](../week-14-testing_profesional_fixtures_parametrize_mocks_hypothesis_cobertura_y_logging/README.md) | **Semana 15** | [Semana 16](../week-16-concurrencia_hilos_procesos_gil_y_free_threading/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

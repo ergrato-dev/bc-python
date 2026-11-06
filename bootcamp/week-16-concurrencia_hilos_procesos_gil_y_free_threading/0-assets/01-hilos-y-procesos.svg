@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" role="img" aria-labelledby="t d">
+  <title id="t">Hilos y procesos</title>
+  <desc id="d">A la izquierda, un proceso con tres hilos: los tres leen y escriben la misma memoria compartida, donde está la lista seen con los números 1, 2 y 3. Pasar datos no cuesta nada, pero dos hilos pueden pisarse. A la derecha, tu proceso y dos procesos hijos: cada uno tiene su propia memoria y su propio GIL. Tu proceso les envía las tareas como bytes con pickle y recibe los resultados igual; su lista seen sigue vacía. No pueden pisarse, pero enviar cuesta tiempo.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="380" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="210" y="36" text-anchor="middle" font-size="16" font-weight="700">Hilos: una memoria</text>
+    <text x="610" y="36" text-anchor="middle" font-size="16" font-weight="700">Procesos: una memoria cada uno</text>
+
+    <rect x="24" y="52" width="372" height="250" rx="10" fill="#111c33" stroke="#334155"/>
+    <text x="40" y="76" font-size="13" fill="#94a3b8">un proceso</text>
+    <rect x="70" y="90" width="280" height="62" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="210" y="116" text-anchor="middle" font-weight="700" fill="#38bdf8">Memoria compartida</text>
+    <text x="210" y="138" text-anchor="middle" font-size="13">seen = [1, 2, 3]</text>
+
+    <rect x="44" y="196" width="96" height="48" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="92" y="225" text-anchor="middle">hilo 1</text>
+    <rect x="162" y="196" width="96" height="48" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="210" y="225" text-anchor="middle">hilo 2</text>
+    <rect x="280" y="196" width="96" height="48" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="328" y="225" text-anchor="middle">hilo 3</text>
+    <path d="M92 194 L150 156" stroke="#38bdf8" stroke-width="2" fill="none" marker-start="url(#a)" marker-end="url(#a)"/>
+    <path d="M210 194 L210 156" stroke="#38bdf8" stroke-width="2" fill="none" marker-start="url(#a)" marker-end="url(#a)"/>
+    <path d="M328 194 L270 156" stroke="#38bdf8" stroke-width="2" fill="none" marker-start="url(#a)" marker-end="url(#a)"/>
+    <text x="210" y="268" text-anchor="middle" font-size="12" fill="#cbd5e1">leen y escriben los mismos objetos</text>
+    <text x="210" y="290" text-anchor="middle" font-size="12" fill="#94a3b8">un solo GIL para los tres</text>
+
+    <rect x="424" y="52" width="372" height="250" rx="10" fill="#111c33" stroke="#334155"/>
+    <rect x="490" y="70" width="240" height="62" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="610" y="96" text-anchor="middle" font-weight="700">Tu proceso</text>
+    <text x="610" y="118" text-anchor="middle" font-size="13">seen = []</text>
+
+    <rect x="444" y="214" width="156" height="72" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="522" y="240" text-anchor="middle" font-weight="700" fill="#a78bfa">proceso hijo 1</text>
+    <text x="522" y="260" text-anchor="middle" font-size="12">su memoria · su GIL</text>
+    <text x="522" y="278" text-anchor="middle" font-size="12" fill="#cbd5e1">seen = [1, 3]</text>
+    <rect x="620" y="214" width="156" height="72" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="698" y="240" text-anchor="middle" font-weight="700" fill="#a78bfa">proceso hijo 2</text>
+    <text x="698" y="260" text-anchor="middle" font-size="12">su memoria · su GIL</text>
+    <text x="698" y="278" text-anchor="middle" font-size="12" fill="#cbd5e1">seen = [2]</text>
+    <path d="M560 134 L530 210" stroke="#a78bfa" stroke-width="2" fill="none" marker-start="url(#a)" marker-end="url(#a)"/>
+    <path d="M660 134 L690 210" stroke="#a78bfa" stroke-width="2" fill="none" marker-start="url(#a)" marker-end="url(#a)"/>
+    <text x="610" y="168" text-anchor="middle" font-size="12" fill="#cbd5e1">tareas y resultados</text>
+    <text x="610" y="186" text-anchor="middle" font-size="12" fill="#cbd5e1">viajan en bytes (pickle)</text>
+
+    <rect x="24" y="318" width="372" height="44" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="210" y="345" text-anchor="middle" font-size="13">pasar datos no cuesta nada · riesgo: carreras</text>
+    <rect x="424" y="318" width="372" height="44" rx="8" fill="#422006" stroke="#fbbf24"/>
+    <text x="610" y="345" text-anchor="middle" font-size="13">no pueden pisarse · coste: copiar y enviar</text>
+  </g>
+</svg>

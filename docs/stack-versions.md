@@ -21,6 +21,7 @@
 | typer | 0.27.3 | PyPI, 2026-10-06. Sin avisos en OSV (2026-11-06). 0.28.0 salió el 2026-11-06 y se espera a que madure. Dependencia del programa desde la semana 15. Lleva Click dentro (`typer._click`): no aparece `click` en `uv.lock`. |
 | rich | 15.0.0 | PyPI, 2026-04-12. Sin avisos en OSV (2026-11-06). Typer ya la trae, pero se fija aparte porque `cli.py` la importa directamente (semana 15). |
 | typer y rich (transitivas) | shellingham 1.5.4, annotated-doc 0.0.5, markdown-it-py 4.2.0, mdurl 0.1.2 | Resueltas por uv 0.13.7 al añadir typer y rich (semana 15, 2026-11-06). Sin avisos en OSV. pygments 2.21.0 y colorama 0.4.6 ya estaban por pytest. |
+| Python free-threaded | 3.14.10t (`cpython-3.14.10+freethreaded`, gestionado por uv) | El mismo 3.14.10 compilado sin GIL (PEP 779: compatible oficialmente en 3.14). uv 0.13.7 lo descarga con `--python 3.14.10t` (comprobado el 2026-11-06). Solo para el ejercicio 03 y el paso 12 del proyecto de la semana 16, en un entorno aparte (`.venv-ft`); pydantic-core 2.50.2 tiene ruedas `cp314t` y la suite pasa con el GIL apagado. Las imágenes Docker siguen con el Python con GIL. |
 | PostgreSQL | `postgres:18.6-alpine` | Docker Hub (2026-11-05). El volumen va en `/var/lib/postgresql` (cambio de la imagen 18). |
 | Docker Engine | 29 o superior | Probado con 29.9.3 en el equipo del autor (2026-11-05). |
 | Docker Compose | plugin `docker compose` v5 | Probado con v5.7.0. Nunca `docker-compose` (v1, EOL desde 2023). |
