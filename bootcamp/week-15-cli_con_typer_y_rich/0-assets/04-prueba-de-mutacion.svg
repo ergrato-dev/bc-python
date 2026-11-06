@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" role="img" aria-labelledby="t d">
+  <title id="t">Prueba de mutación a mano</title>
+  <desc id="d">Se parte del código, por ejemplo if value > HIGH. Se cambia una sola cosa a propósito, el mutante: if value >= HIGH. Se ejecutan todos los tests. Si alguno falla, el mutante muere: hay un test que protege esa línea. Si todos pasan, el mutante sobrevive: ningún test mira ese caso, aunque la cobertura diga que la línea se ejecuta, y falta un test, aquí uno con el valor 50 en el umbral. Después se deshace el cambio.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="320" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="24" y="110" width="170" height="90" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="109" y="138" text-anchor="middle" font-weight="700">1 · El código</text>
+    <text x="109" y="168" text-anchor="middle" font-size="13" fill="#cbd5e1">if value &gt; HIGH:</text>
+
+    <rect x="226" y="110" width="170" height="90" rx="8" fill="#3b2a0a" stroke="#fbbf24"/>
+    <text x="311" y="138" text-anchor="middle" font-weight="700" fill="#fbbf24">2 · Un mutante</text>
+    <text x="311" y="168" text-anchor="middle" font-size="13">if value &gt;= HIGH:</text>
+    <text x="311" y="188" text-anchor="middle" font-size="12" fill="#cbd5e1">un solo cambio</text>
+
+    <rect x="428" y="110" width="150" height="90" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="503" y="138" text-anchor="middle" font-weight="700">3 · Todos</text>
+    <text x="503" y="158" text-anchor="middle" font-weight="700">los tests</text>
+    <text x="503" y="186" text-anchor="middle" font-size="12" fill="#cbd5e1">uv run pytest</text>
+
+    <path d="M194 155 L222 155" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M396 155 L424 155" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M578 140 L606 92" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M578 170 L606 218" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+    <rect x="610" y="30" width="186" height="110" rx="8" fill="#14352a" stroke="#4ade80"/>
+    <text x="703" y="56" text-anchor="middle" font-weight="700" fill="#4ade80">Alguno falla</text>
+    <text x="703" y="80" text-anchor="middle" font-size="13">el mutante muere</text>
+    <text x="703" y="104" text-anchor="middle" font-size="12" fill="#cbd5e1">un test protege</text>
+    <text x="703" y="122" text-anchor="middle" font-size="12" fill="#cbd5e1">esa línea</text>
+
+    <rect x="610" y="170" width="186" height="110" rx="8" fill="#2a1215" stroke="#f87171"/>
+    <text x="703" y="196" text-anchor="middle" font-weight="700" fill="#f87171">Todos pasan</text>
+    <text x="703" y="220" text-anchor="middle" font-size="13">el mutante sobrevive</text>
+    <text x="703" y="244" text-anchor="middle" font-size="12" fill="#cbd5e1">falta un test:</text>
+    <text x="703" y="262" text-anchor="middle" font-size="12" fill="#cbd5e1">el 50, en el umbral</text>
+
+    <text x="24" y="250" font-size="13" fill="#cbd5e1">La cobertura dice que la línea se ejecutó.</text>
+    <text x="24" y="270" font-size="13" fill="#cbd5e1">La mutación dice si algún test la comprobó.</text>
+    <text x="24" y="296" font-size="12" fill="#94a3b8">Después, deshaz el cambio.</text>
+  </g>
+</svg>

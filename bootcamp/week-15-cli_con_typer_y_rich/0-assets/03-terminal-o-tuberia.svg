@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" role="img" aria-labelledby="t d">
+  <title id="t">Rich según el destino de la salida</title>
+  <desc id="d">La misma llamada out.print(tabla) sale de dos formas. Si la salida va a una terminal, Rich pone colores y estilos y usa el ancho de la ventana. Si va a una tubería, a un archivo, a CliRunner en los tests o a Docker sin -t, escribe texto plano, sin códigos de escape, con un ancho de 80; la tabla conserva sus bordes. NO_COLOR quita los colores aunque haya terminal y FORCE_COLOR los pone aunque no la haya. Abajo, los errores van por una segunda consola a stderr.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="320" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="24" y="96" width="200" height="70" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="124" y="124" text-anchor="middle" font-weight="700">out.print(tabla)</text>
+    <text x="124" y="146" text-anchor="middle" font-size="12" fill="#cbd5e1">¿is_terminal?</text>
+
+    <path d="M224 115 L300 70" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M224 147 L300 192" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+    <rect x="304" y="28" width="492" height="96" rx="8" fill="#14352a" stroke="#4ade80"/>
+    <text x="324" y="54" font-weight="700" fill="#4ade80">Una terminal</text>
+    <text x="324" y="78" font-size="13">colores y estilos: medio en verde, alto en rojo y negrita</text>
+    <text x="324" y="98" font-size="13">el ancho de la ventana</text>
+    <text x="324" y="116" font-size="12" fill="#cbd5e1">NO_COLOR=1 quita los colores</text>
+
+    <rect x="304" y="140" width="492" height="96" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="324" y="166" font-weight="700">Una tubería, un archivo, CliRunner, Docker sin -t</text>
+    <text x="324" y="190" font-size="13">texto plano, sin códigos de escape; los bordes se quedan</text>
+    <text x="324" y="210" font-size="13">ancho 80: soft_wrap=True para no cortar las líneas</text>
+    <text x="324" y="228" font-size="12" fill="#cbd5e1">FORCE_COLOR=1 pone los colores</text>
+
+    <rect x="24" y="256" width="772" height="44" rx="8" fill="#2a1215" stroke="#f87171"/>
+    <text x="410" y="283" text-anchor="middle" font-size="13">err = Console(stderr=True): los errores van a stderr y no ensucian el informe de stdout</text>
+  </g>
+</svg>

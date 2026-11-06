@@ -31,7 +31,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [12](week-12-closures_decoradores_y_functools/README.md) | Closures, decoradores y `functools` | ✅ |
 | [13](week-13-typing_estricto_mypy_y_pydantic/README.md) | Typing estricto con mypy y Pydantic v2 | ✅ |
 | [14](week-14-testing_profesional_fixtures_parametrize_mocks_hypothesis_cobertura_y_logging/README.md) | Testing profesional: fixtures, parametrize, mocks, Hypothesis, cobertura y logging | ✅ |
-| 15 | Proyecto de fase: CLI con Typer y Rich | ⬜ |
+| 15 | Proyecto de fase: CLI con Typer y Rich | ✅ |
 
 ### Fase 3 — Python profesional (S16-22, 126 h)
 

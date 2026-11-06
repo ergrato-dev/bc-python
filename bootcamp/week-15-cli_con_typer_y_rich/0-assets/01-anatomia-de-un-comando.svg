@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 300" role="img" aria-labelledby="t d">
+  <title id="t">Anatomía de una línea de comandos</title>
+  <desc id="d">La línea observatorio -v informe -f medidas.csv "Norte;12,5" dividida en partes. observatorio es el programa. -v es una opción global sin valor, del callback, y va antes del comando. informe es el comando. -f medidas.csv es una opción del comando con su valor. "Norte;12,5" es un argumento, un dato por posición. Abajo, la regla: las opciones tienen nombre y van en cualquier orden; los argumentos van por posición.</desc>
+  <rect width="820" height="300" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="36" text-anchor="middle" font-size="16" font-weight="700">Una línea de comandos, por partes</text>
+
+    <rect x="24" y="64" width="150" height="48" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="99" y="94" text-anchor="middle" font-size="16" font-weight="700">observatorio</text>
+    <rect x="186" y="64" width="60" height="48" rx="8" fill="#3b2a0a" stroke="#fbbf24"/>
+    <text x="216" y="94" text-anchor="middle" font-size="16" font-weight="700" fill="#fbbf24">-v</text>
+    <rect x="258" y="64" width="120" height="48" rx="8" fill="#0c4a6e" stroke="#38bdf8"/>
+    <text x="318" y="94" text-anchor="middle" font-size="16" font-weight="700" fill="#38bdf8">informe</text>
+    <rect x="390" y="64" width="190" height="48" rx="8" fill="#14352a" stroke="#4ade80"/>
+    <text x="485" y="94" text-anchor="middle" font-size="16" font-weight="700" fill="#4ade80">-f medidas.csv</text>
+    <rect x="592" y="64" width="204" height="48" rx="8" fill="#2e1a47" stroke="#c084fc"/>
+    <text x="694" y="94" text-anchor="middle" font-size="16" font-weight="700" fill="#c084fc">"Norte;12,5"</text>
+
+    <g stroke="#475569" stroke-width="1.5">
+      <line x1="99" y1="112" x2="99" y2="138"/>
+      <line x1="216" y1="112" x2="216" y2="138"/>
+      <line x1="318" y1="112" x2="318" y2="138"/>
+      <line x1="485" y1="112" x2="485" y2="138"/>
+      <line x1="694" y1="112" x2="694" y2="138"/>
+    </g>
+
+    <text x="99" y="160" text-anchor="middle" font-weight="700">programa</text>
+    <text x="99" y="180" text-anchor="middle" font-size="12" fill="#cbd5e1">[project.scripts]</text>
+    <text x="216" y="160" text-anchor="middle" font-weight="700" fill="#fbbf24">opción global</text>
+    <text x="216" y="180" text-anchor="middle" font-size="12" fill="#cbd5e1">del callback,</text>
+    <text x="216" y="196" text-anchor="middle" font-size="12" fill="#cbd5e1">antes del comando</text>
+    <text x="318" y="160" text-anchor="middle" font-weight="700" fill="#38bdf8">comando</text>
+    <text x="318" y="180" text-anchor="middle" font-size="12" fill="#cbd5e1">@app.command()</text>
+    <text x="485" y="160" text-anchor="middle" font-weight="700" fill="#4ade80">opción con valor</text>
+    <text x="485" y="180" text-anchor="middle" font-size="12" fill="#cbd5e1">con nombre, opcional,</text>
+    <text x="485" y="196" text-anchor="middle" font-size="12" fill="#cbd5e1">en cualquier orden</text>
+    <text x="694" y="160" text-anchor="middle" font-weight="700" fill="#c084fc">argumento</text>
+    <text x="694" y="180" text-anchor="middle" font-size="12" fill="#cbd5e1">por su posición,</text>
+    <text x="694" y="196" text-anchor="middle" font-size="12" fill="#cbd5e1">sin nombre</text>
+
+    <rect x="24" y="226" width="772" height="50" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="410" y="248" text-anchor="middle" font-size="13">-f medidas.csv "Norte;12,5" o "Norte;12,5" -f medidas.csv: las opciones se reconocen por su nombre.</text>
+    <text x="410" y="266" text-anchor="middle" font-size="13" fill="#cbd5e1">-v detrás de informe no existe: es del callback, no del comando.</text>
+  </g>
+</svg>

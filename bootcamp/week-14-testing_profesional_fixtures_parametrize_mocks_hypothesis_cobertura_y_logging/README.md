@@ -158,6 +158,6 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 13](../week-13-typing_estricto_mypy_y_pydantic/README.md) | **Semana 14** | Semana 15 (próximamente) |
+| [Semana 13](../week-13-typing_estricto_mypy_y_pydantic/README.md) | **Semana 14** | [Semana 15](../week-15-cli_con_typer_y_rich/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

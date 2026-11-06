@@ -1,0 +1,10 @@
+[project]
+name = "argumentos-y-opciones"
+version = "0.1.0"
+description = "Ejercicio 01 de la semana 15: argumentos y opciones con Typer"
+requires-python = ">=3.14,<3.15"
+dependencies = ["typer==0.27.3"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

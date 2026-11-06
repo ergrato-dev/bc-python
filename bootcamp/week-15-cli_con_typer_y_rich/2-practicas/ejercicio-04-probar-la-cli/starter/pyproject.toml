@@ -1,0 +1,18 @@
+[project]
+name = "probar-la-cli"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 15: probar una CLI con CliRunner"
+requires-python = ">=3.14,<3.15"
+dependencies = ["typer==0.27.3"]
+
+[dependency-groups]
+dev = ["pytest==9.2.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# pythonpath: los tests importan app.py desde la carpeta del ejercicio.
+pythonpath = ["."]

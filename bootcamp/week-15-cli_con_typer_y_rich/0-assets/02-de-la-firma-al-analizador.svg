@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 340" role="img" aria-labelledby="t d">
+  <title id="t">De la firma de la función al analizador de argumentos</title>
+  <desc id="d">A la izquierda, la firma def clasificar(valor: float, bajo: float = 10.0). Typer la inspecciona: valor sin valor por defecto es un argumento obligatorio de tipo float; bajo con valor por defecto es la opción --bajo. Con eso construye el analizador. En la línea de abajo, argv llega al analizador: si es válido, convierte los textos y llama a tu función con un float; si no, por ejemplo con doce, escribe el error en stderr y termina con código 2 sin llamar a la función.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="340" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="24" y="30" width="250" height="110" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="149" y="56" text-anchor="middle" font-weight="700">Tu función</text>
+    <text x="149" y="86" text-anchor="middle" font-size="13" fill="#cbd5e1">def clasificar(</text>
+    <text x="149" y="106" text-anchor="middle" font-size="13" fill="#cbd5e1">valor: float,</text>
+    <text x="149" y="126" text-anchor="middle" font-size="13" fill="#cbd5e1">bajo: float = 10.0)</text>
+
+    <rect x="310" y="30" width="200" height="110" rx="8" fill="#0c4a6e" stroke="#38bdf8"/>
+    <text x="410" y="56" text-anchor="middle" font-weight="700" fill="#38bdf8">Typer inspecciona</text>
+    <text x="410" y="86" text-anchor="middle" font-size="13">valor → argumento float</text>
+    <text x="410" y="106" text-anchor="middle" font-size="13">bajo → opción --bajo</text>
+    <text x="410" y="126" text-anchor="middle" font-size="13">docstring → ayuda</text>
+
+    <rect x="546" y="30" width="250" height="110" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="671" y="56" text-anchor="middle" font-weight="700">El analizador</text>
+    <text x="671" y="86" text-anchor="middle" font-size="13" fill="#cbd5e1">conoce los nombres, los tipos</text>
+    <text x="671" y="106" text-anchor="middle" font-size="13" fill="#cbd5e1">y los valores por defecto,</text>
+    <text x="671" y="126" text-anchor="middle" font-size="13" fill="#cbd5e1">y escribe --help</text>
+
+    <path d="M274 85 L306 85" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M510 85 L542 85" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+    <rect x="24" y="190" width="250" height="60" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="149" y="215" text-anchor="middle" font-weight="700">argv</text>
+    <text x="149" y="236" text-anchor="middle" font-size="13" fill="#cbd5e1">["12.5", "--bajo", "15"]</text>
+    <path d="M274 220 L542 220" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M671 140 L671 186" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <rect x="546" y="190" width="250" height="60" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="671" y="215" text-anchor="middle" font-weight="700">analiza y convierte</text>
+    <text x="671" y="236" text-anchor="middle" font-size="13" fill="#cbd5e1">"12.5" → 12.5</text>
+
+    <rect x="310" y="270" width="230" height="50" rx="8" fill="#14352a" stroke="#4ade80"/>
+    <text x="425" y="292" text-anchor="middle" font-weight="700" fill="#4ade80">válido</text>
+    <text x="425" y="310" text-anchor="middle" font-size="12">clasificar(12.5, bajo=15.0)</text>
+    <rect x="566" y="270" width="230" height="50" rx="8" fill="#2a1215" stroke="#f87171"/>
+    <text x="681" y="292" text-anchor="middle" font-weight="700" fill="#f87171">"doce": no es un float</text>
+    <text x="681" y="310" text-anchor="middle" font-size="12">stderr, código 2, sin llamarla</text>
+    <path d="M600 250 L520 268" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M690 250 L690 266" stroke="#f87171" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  </g>
+</svg>
