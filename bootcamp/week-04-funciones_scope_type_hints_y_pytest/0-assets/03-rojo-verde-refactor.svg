@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" role="img" aria-labelledby="t d">
+  <title id="t">El ciclo rojo, verde, refactorizar</title>
+  <desc id="d">Tres pasos en ciclo. Rojo: escribe un test para algo que aún no existe y comprueba que falla por la razón correcta. Verde: escribe lo mínimo para que el test pase. Refactorizar: mejora nombres y estructura sin cambiar el comportamiento, con todos los tests en verde. Después se vuelve a rojo con el siguiente test.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="360" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="40" y="60" width="220" height="150" rx="12" fill="#450a0a" stroke="#f87171" stroke-width="2"/>
+    <text x="150" y="96" text-anchor="middle" font-weight="700" fill="#f87171" font-size="18">1. Rojo</text>
+    <text x="150" y="128" text-anchor="middle">Escribe un test</text>
+    <text x="150" y="150" text-anchor="middle">para lo que aún no existe</text>
+    <text x="150" y="182" text-anchor="middle" fill="#fca5a5" font-size="13">falla, y por la razón correcta</text>
+
+    <rect x="300" y="60" width="220" height="150" rx="12" fill="#052e16" stroke="#4ade80" stroke-width="2"/>
+    <text x="410" y="96" text-anchor="middle" font-weight="700" fill="#4ade80" font-size="18">2. Verde</text>
+    <text x="410" y="128" text-anchor="middle">Escribe lo mínimo</text>
+    <text x="410" y="150" text-anchor="middle">para que pase</text>
+    <text x="410" y="182" text-anchor="middle" fill="#86efac" font-size="13">sin adelantarte al futuro</text>
+
+    <rect x="560" y="60" width="220" height="150" rx="12" fill="#082f49" stroke="#38bdf8" stroke-width="2"/>
+    <text x="670" y="96" text-anchor="middle" font-weight="700" fill="#38bdf8" font-size="18">3. Refactorizar</text>
+    <text x="670" y="128" text-anchor="middle">Mejora nombres y estructura</text>
+    <text x="670" y="150" text-anchor="middle">sin cambiar lo que hace</text>
+    <text x="670" y="182" text-anchor="middle" fill="#7dd3fc" font-size="13">todos los tests siguen en verde</text>
+
+    <path d="M260 135H294" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M520 135H554" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M670 210V270H150V216" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="410" y="292" text-anchor="middle" fill="#94a3b8" font-size="13">siguiente test</text>
+    <text x="410" y="36" text-anchor="middle" font-weight="700">Desarrollo guiado por tests</text>
+    <text x="410" y="330" text-anchor="middle" fill="#94a3b8" font-size="13">En tu proyecto: los tests del starter son el rojo; tus commits, el verde; tus mejoras, el refactor.</text>
+  </g>
+</svg>

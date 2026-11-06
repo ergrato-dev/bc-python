@@ -1,0 +1,18 @@
+[project]
+name = "pytest-desde-cero"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 04: escribir y leer tests con pytest"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest==9.2.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# pythonpath: los tests importan temperature.py desde la carpeta del ejercicio.
+pythonpath = ["."]

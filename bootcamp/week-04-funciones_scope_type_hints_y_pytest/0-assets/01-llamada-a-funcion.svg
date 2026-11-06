@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" role="img" aria-labelledby="t d">
+  <title id="t">Qué pasa en una llamada a función</title>
+  <desc id="d">La línea text = describe("Norte", 12.54) llama a la función. Cada argumento se asigna a su parámetro: label recibe "Norte", value recibe 12.54 y unit toma su valor por defecto "µg/m³". El cuerpo se ejecuta con esas variables locales. El return entrega el texto "Norte: 12.5 µg/m³", que vuelve al punto de la llamada y se guarda en text. Al terminar, las variables locales desaparecen.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="380" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="40" font-weight="700">Quien llama</text>
+    <rect x="30" y="56" width="300" height="60" rx="8" fill="#1e293b" stroke="#60a5fa"/>
+    <text x="180" y="91" text-anchor="middle">text = describe("Norte", 12.54)</text>
+
+    <text x="440" y="40" font-weight="700">La llamada (variables locales)</text>
+    <rect x="440" y="56" width="350" height="250" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="460" y="88" fill="#94a3b8" font-size="13">1. argumentos a parámetros</text>
+    <rect x="460" y="98" width="310" height="96" rx="6" fill="#082f49" stroke="#38bdf8"/>
+    <text x="476" y="124">label = "Norte"</text>
+    <text x="476" y="150">value = 12.54</text>
+    <text x="476" y="176">unit = "µg/m³"  <tspan fill="#94a3b8" font-size="12">(valor por defecto)</tspan></text>
+    <text x="460" y="222" fill="#94a3b8" font-size="13">2. se ejecuta el cuerpo</text>
+    <rect x="460" y="232" width="310" height="56" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="476" y="256">return f"{label}: {value:.1f} {unit}"</text>
+    <text x="476" y="278" fill="#94a3b8" font-size="12">devuelve "Norte: 12.5 µg/m³"</text>
+
+    <path d="M330 80H434" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#a)"/>
+    <text x="382" y="72" text-anchor="middle" fill="#60a5fa" font-size="12">llama</text>
+    <path d="M460 260H125V212" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#a)"/>
+    <text x="290" y="250" fill="#4ade80" font-size="12">3. el valor vuelve y se guarda</text>
+
+    <rect x="30" y="156" width="190" height="56" rx="8" fill="#1e293b" stroke="#4ade80"/>
+    <text x="125" y="180" text-anchor="middle" font-size="13">text vale</text>
+    <text x="125" y="200" text-anchor="middle">"Norte: 12.5 µg/m³"</text>
+
+    <text x="440" y="336" fill="#94a3b8" font-size="13">4. al terminar, label, value y unit desaparecen</text>
+    <text x="30" y="336" fill="#94a3b8" font-size="13">Sin return, la llamada devuelve None</text>
+  </g>
+</svg>

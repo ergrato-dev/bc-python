@@ -135,6 +135,6 @@ Los tests deben terminar en `passed`, sin `failed`. El informe muestra una fila 
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 02](../week-02-operadores_strings_io_y_match/README.md) | **Semana 03** | Semana 04 (próximamente) |
+| [Semana 02](../week-02-operadores_strings_io_y_match/README.md) | **Semana 03** | [Semana 04](../week-04-funciones_scope_type_hints_y_pytest/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

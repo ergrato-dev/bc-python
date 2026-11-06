@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">Dónde busca Python un nombre: regla LEGB</title>
+  <desc id="d">Cuatro cajas anidadas. La más externa es Built-in, con len, print y sum. Dentro está Global, el módulo, con UNIT y la función label_total. Dentro, Enclosing, las funciones que contienen a la actual. Dentro, Local, con values y total. Para el nombre UNIT usado dentro de label_total, Python busca primero en Local, no está; luego en Enclosing, no está; luego en Global, y ahí lo encuentra. len se encuentra al final, en Built-in.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="24" y="24" width="500" height="352" rx="12" fill="#1e293b" stroke="#64748b"/>
+    <text x="44" y="52" font-weight="700">B · Built-in</text>
+    <text x="300" y="52" fill="#94a3b8" font-size="13">len, print, sum, max</text>
+    <rect x="44" y="68" width="460" height="290" rx="10" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="64" y="96" font-weight="700">G · Global (el módulo)</text>
+    <text x="300" y="96" fill="#c4b5fd" font-size="13">UNIT, LOW, HIGH, label_total</text>
+    <rect x="64" y="112" width="420" height="226" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="84" y="140" font-weight="700">E · Enclosing</text>
+    <text x="300" y="140" fill="#7dd3fc" font-size="13">funciones que la contienen</text>
+    <rect x="84" y="156" width="380" height="162" rx="10" fill="#052e16" stroke="#4ade80"/>
+    <text x="104" y="184" font-weight="700">L · Local (la llamada actual)</text>
+    <text x="104" y="214" fill="#86efac" font-size="13">values, total, value</text>
+    <text x="104" y="250">return f"{total} {UNIT}"</text>
+    <text x="104" y="290" fill="#94a3b8" font-size="13">¿Dónde está UNIT?</text>
+
+    <text x="560" y="60" font-weight="700">Búsqueda de UNIT</text>
+    <rect x="560" y="76" width="236" height="44" rx="8" fill="#1e293b" stroke="#4ade80"/>
+    <text x="576" y="103">1. Local</text><text x="780" y="103" text-anchor="end" fill="#f87171">no está</text>
+    <path d="M678 120V138" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="560" y="144" width="236" height="44" rx="8" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="576" y="171">2. Enclosing</text><text x="780" y="171" text-anchor="end" fill="#f87171">no está</text>
+    <path d="M678 188V206" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="560" y="212" width="236" height="44" rx="8" fill="#1e293b" stroke="#a78bfa"/>
+    <text x="576" y="239">3. Global</text><text x="780" y="239" text-anchor="end" fill="#4ade80">encontrado</text>
+    <rect x="560" y="280" width="236" height="44" rx="8" fill="#0f172a" stroke="#64748b" stroke-dasharray="5 4"/>
+    <text x="576" y="307" fill="#94a3b8">4. Built-in</text><text x="780" y="307" text-anchor="end" fill="#94a3b8">no hace falta</text>
+    <text x="560" y="356" fill="#94a3b8" font-size="13">El primero que encuentra, gana.</text>
+  </g>
+</svg>
