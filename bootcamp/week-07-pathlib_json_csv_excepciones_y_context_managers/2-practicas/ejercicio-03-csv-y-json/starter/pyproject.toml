@@ -1,0 +1,10 @@
+[project]
+name = "formats-lab"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 07: CSV y JSON"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

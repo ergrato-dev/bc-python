@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" role="img" aria-labelledby="t d">
+  <title id="t">Flujo de try, except, else y finally</title>
+  <desc id="d">Tres caminos desde el bloque try. Si no hay error, se ejecuta else y después finally, y el programa sigue. Si salta un error que coincide con el except, se ejecuta ese except, después finally, y el programa sigue. Si salta un error que ningún except captura, se ejecuta finally igualmente y el error sube a la función que llamó. finally se ejecuta en los tres caminos.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="460" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="320" y="30" width="180" height="56" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="410" y="54" text-anchor="middle" font-weight="700">try:</text>
+    <text x="410" y="74" text-anchor="middle" fill="#94a3b8" font-size="13">lo que puede fallar</text>
+
+    <path d="M360 86 L150 170" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M410 86 L410 170" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M460 86 L670 170" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="200" y="118" fill="#4ade80" font-size="13">sin error</text>
+    <text x="418" y="140" fill="#facc15" font-size="13">error que coincide</text>
+    <text x="600" y="118" fill="#f87171" font-size="13">error que no coincide</text>
+
+    <rect x="60" y="176" width="180" height="56" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="150" y="200" text-anchor="middle" font-weight="700">else:</text>
+    <text x="150" y="220" text-anchor="middle" fill="#94a3b8" font-size="13">solo si try no falló</text>
+
+    <rect x="320" y="176" width="180" height="56" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="410" y="200" text-anchor="middle" font-weight="700">except Tipo as error:</text>
+    <text x="410" y="220" text-anchor="middle" fill="#94a3b8" font-size="13">lo arregla o lo traduce</text>
+
+    <rect x="580" y="176" width="180" height="56" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="670" y="200" text-anchor="middle" fill="#94a3b8">ningún except</text>
+    <text x="670" y="220" text-anchor="middle" fill="#94a3b8" font-size="13">lo captura</text>
+
+    <path d="M150 232 L370 296" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M410 232 L410 296" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M670 232 L450 296" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+    <rect x="300" y="302" width="220" height="56" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="410" y="326" text-anchor="middle" font-weight="700">finally:</text>
+    <text x="410" y="346" text-anchor="middle" fill="#94a3b8" font-size="13">siempre: cierra, limpia</text>
+
+    <path d="M360 358 L190 410" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <path d="M460 358 L630 410" stroke="#f87171" stroke-width="2" fill="none" marker-end="url(#a)"/>
+    <text x="40" y="432" fill="#4ade80">el programa sigue después del try</text>
+    <text x="560" y="432" fill="#f87171">el error sube a quien llamó</text>
+  </g>
+</svg>

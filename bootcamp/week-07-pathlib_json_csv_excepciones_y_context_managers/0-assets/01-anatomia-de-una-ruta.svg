@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">Anatomía de una ruta con pathlib</title>
+  <desc id="d">La ruta /home/ana/proyectos/observatorio/medidas.csv partida en sus piezas. parent es la carpeta /home/ana/proyectos/observatorio. name es medidas.csv. Dentro del nombre, stem es medidas y suffix es .csv. Debajo, tres operaciones: Path("datos") / "medidas.csv" une piezas con la barra; path.with_suffix(".json") cambia la extensión y da medidas.json en la misma carpeta; path.exists() pregunta al disco si el archivo está.</desc>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="40" font-weight="700">path = Path("/home/ana/proyectos/observatorio/medidas.csv")</text>
+
+    <rect x="40" y="80" width="470" height="48" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="275" y="110" text-anchor="middle" font-size="16">/home/ana/proyectos/observatorio/</text>
+    <rect x="520" y="80" width="170" height="48" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="580" y="110" text-anchor="middle" font-size="16">medidas</text>
+    <rect x="650" y="86" width="34" height="36" rx="6" fill="#422006" stroke="#facc15"/>
+    <text x="667" y="110" text-anchor="middle" font-size="16">.csv</text>
+
+    <line x1="40" y1="150" x2="510" y2="150" stroke="#38bdf8" stroke-width="2"/>
+    <line x1="40" y1="144" x2="40" y2="156" stroke="#38bdf8" stroke-width="2"/>
+    <line x1="510" y1="144" x2="510" y2="156" stroke="#38bdf8" stroke-width="2"/>
+    <text x="275" y="176" text-anchor="middle" fill="#38bdf8" font-weight="700">path.parent</text>
+    <text x="275" y="196" text-anchor="middle" fill="#94a3b8" font-size="13">la carpeta que lo contiene (otra Path)</text>
+
+    <line x1="520" y1="150" x2="690" y2="150" stroke="#4ade80" stroke-width="2"/>
+    <line x1="520" y1="144" x2="520" y2="156" stroke="#4ade80" stroke-width="2"/>
+    <line x1="690" y1="144" x2="690" y2="156" stroke="#4ade80" stroke-width="2"/>
+    <text x="605" y="176" text-anchor="middle" fill="#4ade80" font-weight="700">path.name</text>
+    <text x="605" y="196" text-anchor="middle" fill="#94a3b8" font-size="13">"medidas.csv"</text>
+
+    <line x1="580" y1="74" x2="580" y2="60" stroke="#4ade80" stroke-width="2"/>
+    <text x="580" y="54" text-anchor="middle" fill="#4ade80">path.stem</text>
+    <line x1="667" y1="80" x2="740" y2="60" stroke="#facc15" stroke-width="2"/>
+    <text x="745" y="58" fill="#facc15">path.suffix</text>
+
+    <line x1="30" y1="226" x2="790" y2="226" stroke="#334155"/>
+
+    <text x="40" y="262" font-weight="700">Path("datos") / "medidas.csv"</text>
+    <text x="360" y="262" fill="#94a3b8">une piezas con / , en Linux, macOS y Windows</text>
+    <text x="40" y="302" font-weight="700">path.with_suffix(".json")</text>
+    <text x="360" y="302" fill="#94a3b8">…/observatorio/medidas.json : misma carpeta, otra extensión</text>
+    <text x="40" y="342" font-weight="700">path.exists()</text>
+    <text x="360" y="342" fill="#94a3b8">la única de las tres que pregunta al disco</text>
+    <text x="40" y="378" fill="#64748b" font-size="13">parent, name, stem y suffix solo leen el texto de la ruta: funcionan aunque el archivo no exista.</text>
+  </g>
+</svg>
