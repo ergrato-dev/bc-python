@@ -15,6 +15,9 @@
 | colorama | 0.4.6 | Transitiva de pytest, solo en Windows: está en `uv.lock` (que es universal) pero no se instala en Linux ni macOS. Sin avisos en OSV (2026-11-05). |
 | pydantic | 2.14.2 | PyPI, 2026-10-29. Sin avisos en OSV (2026-11-06). 2.14.3 salió el 2026-11-05 y se espera a que madure. Primera dependencia del programa (no de `dev`): entra en la semana 13 con `uv add`. El plugin `pydantic.mypy` va en `[tool.mypy] plugins`. |
 | pydantic (transitivas) | pydantic-core 2.50.2, annotated-types 0.8.0, typing-inspection 0.4.5, typing-extensions 4.16.0 | Resueltas por uv 0.13.7 al añadir pydantic (semana 13, 2026-11-06). Sin avisos en OSV. |
+| hypothesis | 6.170.8 | PyPI, 2026-10-22. Sin avisos en OSV (2026-11-06). Hypothesis publica casi a diario: se fija la última con dos semanas (6.170.15 es del 2026-11-06). Entra en el grupo `dev` en la semana 14. |
+| hypothesis (transitivas) | sortedcontainers 2.4.0 | Resuelta por uv 0.13.7 al añadir hypothesis (semana 14, 2026-11-06). Sin avisos en OSV. |
+| coverage | 7.17.0 | PyPI, 2026-10-22. Sin avisos en OSV (2026-11-06). 7.17.2 salió el 2026-11-04 y se espera a que madure. Grupo `dev`, semana 14; sin dependencias. Se usa sin `pytest-cov`: `coverage run -m pytest`. |
 | PostgreSQL | `postgres:18.6-alpine` | Docker Hub (2026-11-05). El volumen va en `/var/lib/postgresql` (cambio de la imagen 18). |
 | Docker Engine | 29 o superior | Probado con 29.9.3 en el equipo del autor (2026-11-05). |
 | Docker Compose | plugin `docker compose` v5 | Probado con v5.7.0. Nunca `docker-compose` (v1, EOL desde 2023). |

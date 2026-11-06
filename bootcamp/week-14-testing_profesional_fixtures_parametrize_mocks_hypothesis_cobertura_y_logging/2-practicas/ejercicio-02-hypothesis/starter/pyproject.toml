@@ -1,0 +1,18 @@
+[project]
+name = "propiedades-con-hypothesis"
+version = "0.1.0"
+description = "Ejercicio 02 de la semana 14: tests de propiedades con Hypothesis"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[dependency-groups]
+dev = ["hypothesis==6.170.8", "pytest==9.2.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# pythonpath: los tests importan codec.py desde la carpeta del ejercicio.
+pythonpath = ["."]

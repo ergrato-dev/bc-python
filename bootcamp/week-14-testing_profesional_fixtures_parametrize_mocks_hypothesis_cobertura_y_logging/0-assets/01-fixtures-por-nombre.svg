@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-labelledby="t d">
+  <title id="t">pytest encuentra las fixtures por el nombre del parámetro</title>
+  <desc id="d">A la izquierda, un test con dos parámetros, lines y series. pytest busca una fixture con cada nombre: las dos están en conftest.py, en el centro. La fixture series pide a su vez la fixture lines, y write_file pide tmp_path, una fixture que trae pytest, a la derecha. Abajo, el ciclo de una fixture con yield: lo de antes del yield prepara, el test recibe lo que el yield entrega y lo de después limpia, aunque el test falle. Con el alcance por defecto, function, el ciclo se repite en cada test.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="130" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#38bdf8">El test</text>
+    <text x="430" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#facc15">tests/conftest.py</text>
+    <text x="700" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#4ade80">pytest trae</text>
+
+    <rect x="30" y="64" width="200" height="150" rx="8" fill="#0c4a6e" stroke="#38bdf8"/>
+    <text x="46" y="92" font-weight="700" fill="#38bdf8">def test_...(</text>
+    <text x="62" y="124">lines,</text>
+    <text x="62" y="160">series,</text>
+    <text x="46" y="192" font-weight="700" fill="#38bdf8">):</text>
+
+    <rect x="330" y="64" width="200" height="56" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="346" y="88" font-weight="700" fill="#facc15">lines</text>
+    <text x="346" y="108" font-size="12" fill="#cbd5e1">["# medidas", "Norte;12,5", ...]</text>
+    <rect x="330" y="140" width="200" height="56" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="346" y="164" font-weight="700" fill="#facc15">series(lines)</text>
+    <text x="346" y="184" font-size="12" fill="#cbd5e1">Series.from_lines(lines)</text>
+    <rect x="330" y="216" width="200" height="56" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="346" y="240" font-weight="700" fill="#facc15">write_file(tmp_path)</text>
+    <text x="346" y="260" font-size="12" fill="#cbd5e1">devuelve una función</text>
+
+    <rect x="620" y="216" width="160" height="56" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="700" y="240" text-anchor="middle" font-weight="700" fill="#4ade80">tmp_path</text>
+    <text x="700" y="260" text-anchor="middle" font-size="12">carpeta nueva por test</text>
+    <text x="700" y="100" text-anchor="middle" font-size="13" fill="#cbd5e1">capsys, caplog,</text>
+    <text x="700" y="120" text-anchor="middle" font-size="13" fill="#cbd5e1">monkeypatch, tmp_path...</text>
+    <text x="700" y="140" text-anchor="middle" font-size="13" fill="#cbd5e1">sin importarlas</text>
+
+    <path d="M112 120 L324 92" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M120 156 L324 168" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M536 168 C580 168 580 92 536 92" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="586" y="134" font-size="12" fill="#cbd5e1">pide</text>
+    <path d="M532 244 L614 244" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="130" y="240" text-anchor="middle" font-size="12" fill="#cbd5e1">el nombre del parámetro</text>
+    <text x="130" y="258" text-anchor="middle" font-size="12" fill="#cbd5e1">es el de la fixture</text>
+
+    <text x="30" y="318" font-size="15" font-weight="700" fill="#e2e8f0">Una fixture con yield, en cada test (scope="function")</text>
+    <rect x="30" y="336" width="220" height="56" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="140" y="360" text-anchor="middle" font-weight="700">antes del yield</text>
+    <text x="140" y="380" text-anchor="middle" font-size="12" fill="#cbd5e1">prepara: abre, crea</text>
+    <rect x="300" y="336" width="220" height="56" rx="8" fill="#0c4a6e" stroke="#38bdf8"/>
+    <text x="410" y="360" text-anchor="middle" font-weight="700" fill="#38bdf8">el test</text>
+    <text x="410" y="380" text-anchor="middle" font-size="12" fill="#cbd5e1">recibe lo que entrega el yield</text>
+    <rect x="570" y="336" width="220" height="56" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="680" y="360" text-anchor="middle" font-weight="700">después del yield</text>
+    <text x="680" y="380" text-anchor="middle" font-size="12" fill="#cbd5e1">limpia, aunque el test falle</text>
+    <path d="M252 364 L294 364" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M522 364 L564 364" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  </g>
+</svg>

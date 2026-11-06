@@ -1,0 +1,18 @@
+[project]
+name = "fixtures-y-parametrize"
+version = "0.1.0"
+description = "Ejercicio 01 de la semana 14: fixtures, conftest.py y parametrize"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest==9.2.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# pythonpath: los tests importan readings.py desde la carpeta del ejercicio.
+pythonpath = ["."]

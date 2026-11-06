@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">El árbol de loggers del Observatorio</title>
+  <desc id="d">Los loggers forman un árbol por sus nombres con puntos. Abajo, observatorio.core.storage y observatorio.core.groups, creados con logging.getLogger(__name__), solo escriben mensajes y no tienen manejadores. Cada mensaje sube por el árbol, por observatorio.core y observatorio, hasta el logger raíz. Arriba, el raíz: sin configurar, solo deja pasar WARNING o más y los escribe con el último recurso; con observatorio -v, main llama a logging.basicConfig, que le pone nivel DEBUG y un manejador que escribe en stderr con el formato nivel, nombre y mensaje.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="250" y="24" width="320" height="76" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="410" y="50" text-anchor="middle" font-weight="700" fill="#4ade80">raíz · lo configura main</text>
+    <text x="410" y="72" text-anchor="middle" font-size="12">sin configurar: WARNING o más, por el último recurso</text>
+    <text x="410" y="90" text-anchor="middle" font-size="12">con -v: basicConfig(level=DEBUG) y un manejador a stderr</text>
+
+    <rect x="320" y="136" width="180" height="40" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="410" y="161" text-anchor="middle" font-weight="700">observatorio</text>
+    <rect x="320" y="212" width="180" height="40" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="410" y="237" text-anchor="middle" font-weight="700">observatorio.core</text>
+
+    <rect x="120" y="292" width="250" height="76" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="245" y="318" text-anchor="middle" font-weight="700" fill="#facc15">observatorio.core.storage</text>
+    <text x="245" y="340" text-anchor="middle" font-size="12">logger.debug("%d líneas leídas de %s", ...)</text>
+    <text x="245" y="358" text-anchor="middle" font-size="12" fill="#cbd5e1">sin manejadores</text>
+    <rect x="450" y="292" width="250" height="76" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="575" y="318" text-anchor="middle" font-weight="700" fill="#facc15">observatorio.core.groups</text>
+    <text x="575" y="340" text-anchor="middle" font-size="12">logger.debug("línea ignorada: %r", ...)</text>
+    <text x="575" y="358" text-anchor="middle" font-size="12" fill="#cbd5e1">sin manejadores</text>
+
+    <path d="M245 290 L380 256" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M575 290 L440 256" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M410 210 L410 182" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M410 134 L410 106" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+    <text x="640" y="180" font-size="13" fill="#cbd5e1">cada mensaje sube</text>
+    <text x="640" y="200" font-size="13" fill="#cbd5e1">por el árbol hasta</text>
+    <text x="640" y="220" font-size="13" fill="#cbd5e1">el raíz</text>
+    <text x="40" y="180" font-size="13" fill="#cbd5e1">el paquete escribe;</text>
+    <text x="40" y="200" font-size="13" fill="#cbd5e1">el programa decide</text>
+    <text x="40" y="220" font-size="13" fill="#cbd5e1">qué se ve y dónde</text>
+  </g>
+</svg>

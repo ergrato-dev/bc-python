@@ -1,0 +1,27 @@
+[project]
+name = "cobertura-y-logging"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 14: cobertura con coverage y registro con logging"
+requires-python = ">=3.14,<3.15"
+dependencies = []
+
+[dependency-groups]
+dev = ["coverage==7.17.0", "pytest==9.2.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# pythonpath: los tests importan alerts.py desde la carpeta del ejercicio.
+pythonpath = ["."]
+
+[tool.coverage.run]
+# Mide solo alerts.py, el código que prueban los tests.
+source = ["alerts"]
+# El paso 3 te pide descomentar esta línea:
+# branch = true
+
+[tool.coverage.report]
+show_missing = true

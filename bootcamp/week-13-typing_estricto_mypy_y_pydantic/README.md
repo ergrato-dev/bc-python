@@ -138,6 +138,6 @@ Los tests terminan en `passed` sin `failed` (al menos 401), ruff dice `All check
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 12](../week-12-closures_decoradores_y_functools/README.md) | **Semana 13** | Semana 14 (próximamente) |
+| [Semana 12](../week-12-closures_decoradores_y_functools/README.md) | **Semana 13** | [Semana 14](../week-14-testing_profesional_fixtures_parametrize_mocks_hypothesis_cobertura_y_logging/README.md) |
 
 ← [Volver al índice de semanas](../README.md)
