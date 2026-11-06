@@ -13,7 +13,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | Semana | Tema | Estado |
 |:--:|---|:--:|
 | [01](week-01-entorno_docker_uv_y_tipos/README.md) | Entorno: Docker, uv, Python 3.14, REPL y tipos básicos | ✅ |
-| 02 | Operadores, strings, entrada/salida, condicionales y `match` | ⬜ |
+| [02](week-02-operadores_strings_io_y_match/README.md) | Operadores, strings, entrada/salida, condicionales y `match` | ✅ |
 | 03 | Bucles e iteración; depuración con `pdb` y VS Code | ⬜ |
 | 04 | Funciones, scope, type hints y primer `pytest` | ⬜ |
 | 05 | Listas, tuplas, diccionarios, sets y comprehensions | ⬜ |

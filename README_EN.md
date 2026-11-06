@@ -40,3 +40,9 @@ One repository per learner, the **Data Observatory** of their own domain, that g
 ## 📄 License
 
 [CC BY-NC-SA 4.0](LICENSE). This repository does not accept external pull requests; if you find a bug, please open an issue. Security: [SECURITY.md](SECURITY.md).
+
+---
+
+## 🔗 Navigation
+
+→ [Start: index of the 42 weeks](bootcamp/README.md) (content in Spanish)

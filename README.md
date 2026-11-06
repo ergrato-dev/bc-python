@@ -145,3 +145,13 @@ Este repositorio es un recurso **educativo** creado con fines de aprendizaje. Al
 ## 📄 Licencia
 
 [CC BY-NC-SA 4.0](LICENSE). Este repositorio no acepta pull requests externos; si encuentras un error, abre un issue. Seguridad: [SECURITY.md](SECURITY.md).
+
+---
+
+## 🔗 Navegación
+
+| Anterior | Actual | Siguiente |
+| -------- | ------ | --------- |
+| — | **Inicio del bootcamp** | [Índice de semanas](bootcamp/README.md) |
+
+→ [Empezar: índice de las 42 semanas](bootcamp/README.md)

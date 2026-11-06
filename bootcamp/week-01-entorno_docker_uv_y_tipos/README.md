@@ -134,6 +134,6 @@ Los dos deben terminar en `passed`, sin `failed`. En los ejercicios, cada paso d
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Índice de semanas](../README.md) | **Semana 01** | Semana 02 (próximamente) |
+| [Índice de semanas](../README.md) | **Semana 01** | [Semana 02](../week-02-operadores_strings_io_y_match/README.md) |
 
 ← [Volver al inicio del bootcamp](../../README.md)

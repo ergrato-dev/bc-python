@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" role="img" aria-labelledby="t d">
+  <title id="t">match prueba los patrones de arriba abajo</title>
+  <desc id="d">El valor "sumar 2 3".split(), que es la lista sumar, 2, 3, entra al match. El primer case, hola con name, no encaja porque la primera palabra no es hola. El segundo case, sumar con a y b y una guarda que comprueba que son dígitos, encaja y captura a igual a 2 y b igual a 3; se ejecuta su bloque. Los case siguientes, unknown con rest y el comodín _, ya no se prueban.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="380" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="30" y="30" width="230" height="64" rx="8" fill="#1e293b" stroke="#60a5fa"/>
+    <text x="145" y="56" text-anchor="middle" font-weight="700">match command.split():</text>
+    <text x="145" y="80" text-anchor="middle" font-size="13" fill="#94a3b8">["sumar", "2", "3"]</text>
+    <path d="M145 94V120H320" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+    <rect x="330" y="100" width="300" height="44" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="480" y="127" text-anchor="middle">case ["hola", name]:</text>
+    <text x="650" y="127" fill="#fca5a5" font-size="13">✗ "sumar" ≠ "hola"</text>
+    <path d="M480 144V164" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+    <rect x="330" y="170" width="300" height="60" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="480" y="194" text-anchor="middle">case ["sumar", a, b]</text>
+    <text x="480" y="216" text-anchor="middle" font-size="13" fill="#86efac">if a.isdecimal() and b.isdecimal():</text>
+    <text x="650" y="194" fill="#86efac" font-size="13">✓ encaja: a = "2", b = "3"</text>
+    <text x="650" y="216" fill="#86efac" font-size="13">se ejecuta su bloque</text>
+
+    <rect x="330" y="250" width="300" height="44" rx="8" fill="#1e293b" stroke="#64748b" stroke-dasharray="6 4"/>
+    <text x="480" y="277" text-anchor="middle" fill="#94a3b8">case [unknown, *rest]:</text>
+    <rect x="330" y="306" width="300" height="44" rx="8" fill="#1e293b" stroke="#64748b" stroke-dasharray="6 4"/>
+    <text x="480" y="333" text-anchor="middle" fill="#94a3b8">case _:</text>
+    <text x="650" y="305" fill="#94a3b8" font-size="13">no se prueban:</text>
+    <text x="650" y="325" fill="#94a3b8" font-size="13">ya ganó un case</text>
+
+    <text x="30" y="150" font-size="13" fill="#94a3b8">De arriba abajo:</text>
+    <text x="30" y="172" font-size="13" fill="#94a3b8">gana el primero</text>
+    <text x="30" y="194" font-size="13" fill="#94a3b8">que encaja.</text>
+    <text x="30" y="236" font-size="13" fill="#94a3b8">"texto" compara.</text>
+    <text x="30" y="258" font-size="13" fill="#94a3b8">nombre suelto captura.</text>
+    <text x="30" y="280" font-size="13" fill="#94a3b8">_ recoge el resto.</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 300" role="img" aria-labelledby="t d">
+  <title id="t">Los tres flujos estándar y el código de salida</title>
+  <desc id="d">Los argumentos de sys.argv y la entrada estándar stdin, que viene del teclado o de una tubería, entran al programa. Dentro, main lee, llama a funciones de lógica pura y escribe. Salen dos flujos separados: stdout con print para los resultados, que se puede redirigir a un archivo, y stderr con print file=sys.stderr para los errores. Al terminar, el programa devuelve un código de salida: 0 éxito, 1 error, 2 uso incorrecto.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="300" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <rect x="20" y="40" width="190" height="56" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="115" y="64" text-anchor="middle" font-weight="700">sys.argv[1:]</text>
+    <text x="115" y="84" text-anchor="middle" font-size="12" fill="#94a3b8">argumentos al lanzar</text>
+    <rect x="20" y="130" width="190" height="56" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="115" y="154" text-anchor="middle" font-weight="700">stdin · input()</text>
+    <text x="115" y="174" text-anchor="middle" font-size="12" fill="#94a3b8">teclado o tubería |</text>
+    <path d="M210 68L290 110" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M210 158L290 138" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+
+    <rect x="300" y="50" width="220" height="150" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="410" y="78" text-anchor="middle" font-weight="700">programa</text>
+    <rect x="320" y="92" width="180" height="40" rx="6" fill="#0f172a" stroke="#94a3b8"/>
+    <text x="410" y="117" text-anchor="middle" font-size="13">main: lee, llama, escribe</text>
+    <rect x="320" y="144" width="180" height="40" rx="6" fill="#0f172a" stroke="#4ade80"/>
+    <text x="410" y="169" text-anchor="middle" font-size="13">lógica pura: devuelve</text>
+
+    <path d="M520 90H600" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M520 160H600" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="610" y="62" width="190" height="56" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="705" y="86" text-anchor="middle" font-weight="700">stdout · print()</text>
+    <text x="705" y="106" text-anchor="middle" font-size="12" fill="#86efac">resultados (&gt; archivo)</text>
+    <rect x="610" y="132" width="190" height="56" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="705" y="156" text-anchor="middle" font-weight="700">stderr</text>
+    <text x="705" y="176" text-anchor="middle" font-size="12" fill="#fca5a5">print(..., file=sys.stderr)</text>
+
+    <path d="M410 200V236" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="230" y="242" width="360" height="40" rx="8" fill="#422006" stroke="#facc15"/>
+    <text x="410" y="267" text-anchor="middle" font-size="13">código de salida: 0 éxito · 1 error · 2 uso incorrecto</text>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330" role="img" aria-labelledby="t d">
+  <title id="t">f-string frente a t-string</title>
+  <desc id="d">Con name igual a b Ana b entre etiquetas HTML, la f-string f"Hola, {name}" produce al instante un str con el valor ya pegado, y las etiquetas llegan tal cual al HTML. La t-string t"Hola, {name}" produce un Template con strings Hola y vacío, y una Interpolation con el valor; una función como html.escape procesa los valores y devuelve un str seguro con las etiquetas escapadas.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+  <rect width="820" height="330" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="36" font-size="13" fill="#94a3b8">name = "&lt;b&gt;Ana&lt;/b&gt;"</text>
+
+    <rect x="30" y="60" width="200" height="50" rx="8" fill="#1e293b" stroke="#60a5fa"/>
+    <text x="130" y="91" text-anchor="middle">f"Hola, {name}"</text>
+    <path d="M230 85H290" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="300" y="60" width="270" height="50" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="435" y="82" text-anchor="middle">str: 'Hola, &lt;b&gt;Ana&lt;/b&gt;'</text>
+    <text x="435" y="100" text-anchor="middle" font-size="12" fill="#fca5a5">el valor ya está pegado</text>
+    <text x="590" y="82" font-size="13" fill="#fca5a5">en HTML, las etiquetas</text>
+    <text x="590" y="100" font-size="13" fill="#fca5a5">se interpretan: inyección</text>
+
+    <rect x="30" y="170" width="200" height="50" rx="8" fill="#1e293b" stroke="#a78bfa"/>
+    <text x="130" y="201" text-anchor="middle">t"Hola, {name}"</text>
+    <path d="M230 195H290" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="300" y="140" width="270" height="110" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="435" y="164" text-anchor="middle" font-weight="700">Template</text>
+    <text x="320" y="190" font-size="13">strings: ('Hola, ', '')</text>
+    <text x="320" y="214" font-size="13">interpolations:</text>
+    <text x="330" y="236" font-size="13" fill="#c4b5fd">Interpolation('&lt;b&gt;Ana&lt;/b&gt;', 'name', ...)</text>
+    <path d="M570 195H620" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="597" y="185" text-anchor="middle" font-size="11" fill="#94a3b8">procesa</text>
+    <rect x="630" y="170" width="170" height="50" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="715" y="192" text-anchor="middle" font-size="12">html.escape a cada valor</text>
+    <text x="715" y="210" text-anchor="middle" font-size="12" fill="#86efac">str seguro</text>
+    <text x="300" y="282" font-size="13" fill="#86efac">'Hola, &amp;lt;b&amp;gt;Ana&amp;lt;/b&amp;gt;': el navegador muestra el texto, no lo ejecuta</text>
+    <text x="30" y="312" font-size="13" fill="#94a3b8">f-string: texto para personas. t-string: texto que va a otro sistema (HTML, SQL, terminal).</text>
+  </g>
+</svg>
