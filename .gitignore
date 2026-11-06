@@ -137,3 +137,9 @@ scripts/logs/
 *.tmp
 *.temp
 .cache/
+
+# Artefactos de ML
+mlruns/
+mlartifacts/
+*.ckpt
+*.pt

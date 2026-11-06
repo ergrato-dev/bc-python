@@ -19,7 +19,7 @@ Si descubres una vulnerabilidad de seguridad en este proyecto, por favor sigue e
 
 ### 📧 Proceso de Reporte
 
-1. **Envía un reporte privado** a través de [GitHub Security Advisories](https://github.com/epti-dev/bc-python/security/advisories/new)
+1. **Envía un reporte privado** a través de [GitHub Security Advisories](https://github.com/ergrato-dev/bc-python/security/advisories/new)
 
 2. **Incluye en tu reporte**:
 
@@ -70,12 +70,12 @@ Este bootcamp enseña buenas prácticas de seguridad en Python:
 
 Mantenemos las dependencias actualizadas y monitoreamos vulnerabilidades conocidas usando:
 
-- Dependabot (GitHub)
+- Revisión de versiones y avisos en OSV antes de fijar cada dependencia ([docs/stack-versions.md](docs/stack-versions.md))
 - Auditorías periódicas de seguridad
 
 ## Contacto
 
-Para cualquier pregunta relacionada con seguridad que no sea una vulnerabilidad, puedes abrir un [Discussion](https://github.com/epti-dev/bc-python/discussions) en la categoría de Seguridad.
+Para cualquier pregunta relacionada con seguridad que no sea una vulnerabilidad, puedes abrir un [Discussion](https://github.com/ergrato-dev/bc-python/discussions) en la categoría de Seguridad.
 
 ---
 
