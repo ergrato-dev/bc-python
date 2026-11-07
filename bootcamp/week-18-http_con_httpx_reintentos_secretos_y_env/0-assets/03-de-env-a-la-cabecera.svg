@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-labelledby="t d">
+  <title id="t">El camino del token</title>
+  <desc id="d">El camino de un token, de izquierda a derecha. Las variables de entorno OBSERVATORIO_ y el archivo .env, donde el entorno gana, llegan a Settings, que guarda el token como SecretStr y lo muestra como asteriscos. La CLI llama una sola vez a get_secret_value y se lo da a make_client, que lo pone en la cabecera Authorization: Bearer, por https. Abajo, cuatro sitios donde el token no debe llegar nunca: Git, protegido con .gitignore; la imagen Docker, con .dockerignore; los registros, que solo muestran la URL; y la URL, porque el token va en la cabecera y no en la consulta.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="700">El token sale del SecretStr una vez, para ir en la cabecera</text>
+
+    <rect x="24" y="60" width="160" height="58" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="104" y="84" text-anchor="middle" font-weight="700">entorno</text>
+    <text x="104" y="104" text-anchor="middle" font-size="12" fill="#cbd5e1">OBSERVATORIO_TOKEN</text>
+    <rect x="24" y="136" width="160" height="58" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="104" y="160" text-anchor="middle" font-weight="700">.env</text>
+    <text x="104" y="180" text-anchor="middle" font-size="12" fill="#cbd5e1">el entorno le gana</text>
+
+    <path d="M184,89 L222,118" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M184,165 L222,136" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="228" y="84" width="170" height="86" rx="10" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="313" y="110" text-anchor="middle" font-weight="700" fill="#a78bfa">Settings()</text>
+    <text x="313" y="132" text-anchor="middle" font-size="12">token: SecretStr</text>
+    <text x="313" y="154" text-anchor="middle" font-size="12" fill="#cbd5e1">se imprime '**********'</text>
+
+    <path d="M398,127 L436,127" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="442" y="84" width="150" height="86" rx="10" fill="#422006" stroke="#fbbf24"/>
+    <text x="517" y="110" text-anchor="middle" font-weight="700" fill="#fbbf24">cli.py</text>
+    <text x="517" y="132" text-anchor="middle" font-size="12">get_secret_value()</text>
+    <text x="517" y="154" text-anchor="middle" font-size="12" fill="#cbd5e1">una sola vez</text>
+
+    <path d="M592,127 L630,127" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="636" y="84" width="160" height="86" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="716" y="110" text-anchor="middle" font-weight="700" fill="#38bdf8">make_client</text>
+    <text x="716" y="132" text-anchor="middle" font-size="12">Authorization:</text>
+    <text x="716" y="152" text-anchor="middle" font-size="12">Bearer <tspan fill="#cbd5e1">(por https)</tspan></text>
+
+    <text x="410" y="230" text-anchor="middle" font-size="15" font-weight="700">Adonde no llega nunca</text>
+
+    <rect x="24" y="250" width="180" height="120" rx="10" fill="#450a0a" stroke="#f87171"/>
+    <text x="114" y="280" text-anchor="middle" font-weight="700" fill="#f87171">Git</text>
+    <text x="114" y="310" text-anchor="middle" font-size="13">.env en .gitignore</text>
+    <text x="114" y="332" text-anchor="middle" font-size="12" fill="#cbd5e1">a Git va .env.example,</text>
+    <text x="114" y="350" text-anchor="middle" font-size="12" fill="#cbd5e1">sin valores</text>
+
+    <rect x="220" y="250" width="180" height="120" rx="10" fill="#450a0a" stroke="#f87171"/>
+    <text x="310" y="280" text-anchor="middle" font-weight="700" fill="#f87171">la imagen</text>
+    <text x="310" y="310" text-anchor="middle" font-size="13">.env en .dockerignore</text>
+    <text x="310" y="332" text-anchor="middle" font-size="12" fill="#cbd5e1">se da al contenedor</text>
+    <text x="310" y="350" text-anchor="middle" font-size="12" fill="#cbd5e1">al arrancarlo</text>
+
+    <rect x="416" y="250" width="180" height="120" rx="10" fill="#450a0a" stroke="#f87171"/>
+    <text x="506" y="280" text-anchor="middle" font-weight="700" fill="#f87171">los registros</text>
+    <text x="506" y="310" text-anchor="middle" font-size="13">-v muestra la URL,</text>
+    <text x="506" y="332" text-anchor="middle" font-size="12" fill="#cbd5e1">no las cabeceras;</text>
+    <text x="506" y="350" text-anchor="middle" font-size="12" fill="#cbd5e1">un test lo comprueba</text>
+
+    <rect x="612" y="250" width="184" height="120" rx="10" fill="#450a0a" stroke="#f87171"/>
+    <text x="704" y="280" text-anchor="middle" font-weight="700" fill="#f87171">la URL</text>
+    <text x="704" y="310" text-anchor="middle" font-size="13">nunca ?token=...</text>
+    <text x="704" y="332" text-anchor="middle" font-size="12" fill="#cbd5e1">las URLs acaban en</text>
+    <text x="704" y="350" text-anchor="middle" font-size="12" fill="#cbd5e1">mensajes y registros</text>
+
+    <text x="410" y="400" text-anchor="middle" font-size="12" fill="#cbd5e1">si se filtra, revócalo: Git no olvida</text>
+  </g>
+</svg>

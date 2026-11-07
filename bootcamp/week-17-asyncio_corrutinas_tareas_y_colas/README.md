@@ -160,6 +160,6 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README, co
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 16](../week-16-concurrencia_hilos_procesos_gil_y_free_threading/README.md) | **Semana 17** | Semana 18 (próximamente) |
+| [Semana 16](../week-16-concurrencia_hilos_procesos_gil_y_free_threading/README.md) | **Semana 17** | [Semana 18](../week-18-http_con_httpx_reintentos_secretos_y_env/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

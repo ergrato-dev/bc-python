@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="t d">
+  <title id="t">Reintentos con espera exponencial</title>
+  <desc id="d">Una línea de tiempo con cuatro intentos de la misma petición, con retries igual a 3 y backoff igual a 0,5 segundos. El intento 1 recibe un 503, espera 0,5 segundos; el intento 2 recibe un 503, espera 1 segundo; el intento 3 no recibe respuesta, ConnectError, espera 2 segundos; el intento 4 recibe un 200. Las esperas suman 3,5 segundos. Abajo, dos casos que no se reintentan: un 404 falla en el primer intento, y un 200 que no valida es un error de datos.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="700">retries=3, backoff=0,5: cuatro intentos, cada espera el doble</text>
+
+    <rect x="40" y="70" width="90" height="44" rx="6" fill="#450a0a" stroke="#f87171"/>
+    <text x="85" y="90" text-anchor="middle" font-size="12" fill="#cbd5e1">intento 1</text>
+    <text x="85" y="106" text-anchor="middle" font-weight="700" fill="#f87171">503</text>
+
+    <line x1="130" y1="92" x2="200" y2="92" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="165" y="140" text-anchor="middle" font-size="13" fill="#94a3b8">0,5 s</text>
+
+    <rect x="200" y="70" width="90" height="44" rx="6" fill="#450a0a" stroke="#f87171"/>
+    <text x="245" y="90" text-anchor="middle" font-size="12" fill="#cbd5e1">intento 2</text>
+    <text x="245" y="106" text-anchor="middle" font-weight="700" fill="#f87171">503</text>
+
+    <line x1="290" y1="92" x2="420" y2="92" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="355" y="140" text-anchor="middle" font-size="13" fill="#94a3b8">1 s</text>
+
+    <rect x="420" y="70" width="110" height="44" rx="6" fill="#0f172a" stroke="#f87171" stroke-dasharray="6 4"/>
+    <text x="475" y="90" text-anchor="middle" font-size="12" fill="#cbd5e1">intento 3</text>
+    <text x="475" y="106" text-anchor="middle" font-weight="700" fill="#f87171">ConnectError</text>
+
+    <line x1="530" y1="92" x2="690" y2="92" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="610" y="140" text-anchor="middle" font-size="13" fill="#94a3b8">2 s</text>
+
+    <rect x="690" y="70" width="90" height="44" rx="6" fill="#052e16" stroke="#4ade80"/>
+    <text x="735" y="90" text-anchor="middle" font-size="12" fill="#cbd5e1">intento 4</text>
+    <text x="735" y="106" text-anchor="middle" font-weight="700" fill="#4ade80">200</text>
+
+    <path d="M40,172 L776,172" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="40" y="194" font-size="12" fill="#94a3b8">tiempo</text>
+    <text x="410" y="200" text-anchor="middle" font-size="13">esperas: 0,5 + 1 + 2 = <tspan font-weight="700" fill="#fbbf24">3,5 s</tspan> antes del último intento</text>
+    <text x="410" y="222" text-anchor="middle" font-size="12" fill="#cbd5e1">con await asyncio.sleep: mientras esta descarga espera, las demás siguen</text>
+
+    <text x="410" y="264" text-anchor="middle" font-size="15" font-weight="700">Lo que no se reintenta</text>
+    <rect x="40" y="282" width="360" height="86" rx="10" fill="#422006" stroke="#fbbf24"/>
+    <text x="220" y="308" text-anchor="middle" font-weight="700" fill="#fbbf24">404, 401, 403...</text>
+    <text x="220" y="330" text-anchor="middle" font-size="13">la petición está mal: repetirla da lo mismo</text>
+    <text x="220" y="352" text-anchor="middle" font-size="13" fill="#cbd5e1">error en el primer intento, sin esperas</text>
+    <rect x="420" y="282" width="360" height="86" rx="10" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="600" y="308" text-anchor="middle" font-weight="700" fill="#cbd5e1">200 que no valida</text>
+    <text x="600" y="330" text-anchor="middle" font-size="13">el servidor contestó lo que tiene</text>
+    <text x="600" y="352" text-anchor="middle" font-size="13" fill="#cbd5e1">error de datos, y no se guarda nada</text>
+  </g>
+</svg>

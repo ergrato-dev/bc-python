@@ -1,0 +1,2 @@
+# .env tiene tus secretos: nunca va a Git.
+.env

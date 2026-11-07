@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">Una petición HTTP y su respuesta</title>
+  <desc id="d">A la izquierda, el cliente observatorio; a la derecha, el servidor estaciones.example. Una flecha lleva la petición: la línea GET /datos/norte.json con su consulta, las cabeceras User-Agent, Accept y Authorization, y ningún cuerpo. Otra flecha trae la respuesta: la línea HTTP/1.1 200 OK, las cabeceras Content-Type y Content-Length y un cuerpo JSON con una lista de medidas. Abajo, las familias de códigos: 2xx bien, 3xx en otro sitio, 4xx error tuyo que no se reintenta, salvo 429, y 5xx error del servidor que se puede reintentar. Y un recuadro aparte: sin respuesta, una excepción de httpx.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="700">Una petición, una respuesta: primera línea, cabeceras y cuerpo</text>
+
+    <rect x="24" y="56" width="120" height="70" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="84" y="86" text-anchor="middle" font-weight="700" fill="#38bdf8">cliente</text>
+    <text x="84" y="108" text-anchor="middle" font-size="12">observatorio</text>
+
+    <rect x="676" y="56" width="120" height="70" rx="10" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="736" y="86" text-anchor="middle" font-weight="700" fill="#a78bfa">servidor</text>
+    <text x="736" y="108" text-anchor="middle" font-size="12">estaciones.example</text>
+
+    <rect x="168" y="50" width="484" height="104" rx="8" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="184" y="74" font-weight="700" fill="#38bdf8">GET /datos/norte.json?dia=2026-11-06 HTTP/1.1</text>
+    <text x="184" y="96" font-size="13" fill="#cbd5e1">User-Agent: observatorio/0.18.0</text>
+    <text x="184" y="116" font-size="13" fill="#cbd5e1">Accept: application/json</text>
+    <text x="184" y="136" font-size="13" fill="#cbd5e1">Authorization: Bearer ••••••</text>
+    <text x="636" y="136" text-anchor="end" font-size="12" fill="#94a3b8">sin cuerpo</text>
+    <path d="M144,82 L164,82" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M652,82 L672,82" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="168" y="170" width="484" height="104" rx="8" fill="#1e293b" stroke="#4ade80"/>
+    <text x="184" y="194" font-weight="700" fill="#4ade80">HTTP/1.1 200 OK</text>
+    <text x="184" y="216" font-size="13" fill="#cbd5e1">Content-Type: application/json</text>
+    <text x="184" y="236" font-size="13" fill="#cbd5e1">Content-Length: 72</text>
+    <text x="184" y="260" font-size="13">[{"label": "Norte", "value": 12.5}, ...]</text>
+    <text x="636" y="260" text-anchor="end" font-size="12" fill="#94a3b8">cuerpo: solo texto</text>
+    <path d="M676,210 L656,210" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M168,210 L148,210" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="84" y1="126" x2="84" y2="210" stroke="#475569" stroke-dasharray="4 4"/>
+    <line x1="736" y1="126" x2="736" y2="210" stroke="#475569" stroke-dasharray="4 4"/>
+
+    <text x="410" y="308" text-anchor="middle" font-size="15" font-weight="700">El código de estado dice qué hacer</text>
+    <rect x="24" y="322" width="150" height="62" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="99" y="347" text-anchor="middle" font-weight="700" fill="#4ade80">2xx · bien</text>
+    <text x="99" y="368" text-anchor="middle" font-size="12">valida el cuerpo</text>
+    <rect x="186" y="322" width="150" height="62" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="261" y="347" text-anchor="middle" font-weight="700" fill="#cbd5e1">3xx · en otro sitio</text>
+    <text x="261" y="368" text-anchor="middle" font-size="12">sigue Location</text>
+    <rect x="348" y="322" width="150" height="62" rx="8" fill="#422006" stroke="#fbbf24"/>
+    <text x="423" y="347" text-anchor="middle" font-weight="700" fill="#fbbf24">4xx · error tuyo</text>
+    <text x="423" y="368" text-anchor="middle" font-size="12">no reintentes (salvo 429)</text>
+    <rect x="510" y="322" width="150" height="62" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="585" y="347" text-anchor="middle" font-weight="700" fill="#f87171">5xx · del servidor</text>
+    <text x="585" y="368" text-anchor="middle" font-size="12">reintenta con espera</text>
+    <rect x="672" y="322" width="124" height="62" rx="8" fill="#0f172a" stroke="#f87171" stroke-dasharray="6 4"/>
+    <text x="734" y="347" text-anchor="middle" font-weight="700" fill="#f87171">sin respuesta</text>
+    <text x="734" y="368" text-anchor="middle" font-size="12">excepción de httpx</text>
+    <text x="410" y="418" text-anchor="middle" font-size="12" fill="#cbd5e1">un 404 es una respuesta; un servidor caído no responde: son errores distintos</text>
+  </g>
+</svg>

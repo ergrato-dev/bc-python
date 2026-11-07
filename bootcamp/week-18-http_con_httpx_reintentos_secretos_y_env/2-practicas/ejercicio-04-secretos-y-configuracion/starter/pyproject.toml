@@ -1,0 +1,10 @@
+[project]
+name = "secretos"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 18: secretos y configuración"
+requires-python = ">=3.14,<3.15"
+dependencies = ["pydantic-settings==2.16.1"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
