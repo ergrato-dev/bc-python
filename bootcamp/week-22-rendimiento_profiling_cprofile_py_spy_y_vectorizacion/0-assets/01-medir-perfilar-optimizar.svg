@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" role="img" aria-labelledby="t d">
+  <title id="t">El ciclo de optimizar</title>
+  <desc id="d">Cinco pasos en fila: medir el programa entero con datos reales y repitiendo; perfilar para ver dónde se va el tiempo; cambiar una sola cosa, la que más pesa; comprobar con los tests que el resultado no cambia; y medir otra vez igual que al principio. Si no mejoró, se deshace el cambio. Después se vuelve a perfilar, porque el cuello de botella ya es otro, salvo que se haya llegado al objetivo o el tiempo esté repartido, y entonces se para. Debajo, las vueltas de esta semana con el informe de 100 000 medidas: 21,3 segundos al empezar, 1,1 segundos tras pintar solo 20 filas de la tabla, y 1,05 segundos tras analizar cada línea una sola vez, una mejora dentro del ruido; con NumPy no se gana porque importarlo cuesta más de lo que ahorra.</desc>
+  <defs>
+    <marker id="grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="860" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Medir, perfilar, cambiar una cosa, comprobar y medir otra vez</text>
+
+    <rect x="20" y="62" width="144" height="118" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="92" y="88" text-anchor="middle" font-weight="700">1 · Medir</text>
+    <text x="34" y="114" font-size="12" fill="#cbd5e1">el programa entero,</text>
+    <text x="34" y="132" font-size="12" fill="#cbd5e1">datos reales, repetido</text>
+    <text x="34" y="162" font-size="12" fill="#fcd34d">time · timeit</text>
+
+    <line x1="164" y1="121" x2="186" y2="121" stroke="#94a3b8" stroke-width="2" marker-end="url(#grey)"/>
+
+    <rect x="190" y="62" width="144" height="118" rx="8" fill="#172554" stroke="#60a5fa"/>
+    <text x="262" y="88" text-anchor="middle" font-weight="700" fill="#93c5fd">2 · Perfilar</text>
+    <text x="204" y="114" font-size="12" fill="#cbd5e1">¿dónde se va</text>
+    <text x="204" y="132" font-size="12" fill="#cbd5e1">el tiempo?</text>
+    <text x="204" y="162" font-size="12" fill="#fcd34d">cProfile · py-spy</text>
+
+    <line x1="334" y1="121" x2="356" y2="121" stroke="#94a3b8" stroke-width="2" marker-end="url(#grey)"/>
+
+    <rect x="360" y="62" width="144" height="118" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="432" y="88" text-anchor="middle" font-weight="700">3 · Cambiar</text>
+    <text x="374" y="114" font-size="12" fill="#cbd5e1">una sola cosa:</text>
+    <text x="374" y="132" font-size="12" fill="#cbd5e1">la que más pesa</text>
+    <text x="374" y="162" font-size="12" fill="#94a3b8">no tres a la vez</text>
+
+    <line x1="504" y1="121" x2="526" y2="121" stroke="#94a3b8" stroke-width="2" marker-end="url(#grey)"/>
+
+    <rect x="530" y="62" width="144" height="118" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="602" y="88" text-anchor="middle" font-weight="700" fill="#86efac">4 · Comprobar</text>
+    <text x="544" y="114" font-size="12" fill="#cbd5e1">el resultado</text>
+    <text x="544" y="132" font-size="12" fill="#cbd5e1">no cambia</text>
+    <text x="544" y="162" font-size="12" fill="#fcd34d">uv run pytest</text>
+
+    <line x1="674" y1="121" x2="696" y2="121" stroke="#94a3b8" stroke-width="2" marker-end="url(#grey)"/>
+
+    <rect x="700" y="62" width="140" height="118" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="770" y="88" text-anchor="middle" font-weight="700">5 · Medir</text>
+    <text x="714" y="114" font-size="12" fill="#cbd5e1">otra vez, igual</text>
+    <text x="714" y="132" font-size="12" fill="#cbd5e1">que en el 1</text>
+    <text x="714" y="162" font-size="12" fill="#94a3b8">¿no mejoró? deshaz</text>
+
+    <path d="M770,180 L770,214 L262,214 L262,186" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#amber)"/>
+    <text x="516" y="236" text-anchor="middle" font-size="12" fill="#fcd34d">otra vuelta: el cuello de botella ya es otro</text>
+    <text x="516" y="256" text-anchor="middle" font-size="12" fill="#94a3b8">se para al llegar al objetivo o cuando el tiempo está repartido</text>
+
+    <text x="40" y="300" font-weight="700">Las vueltas de esta semana: informe con 100 000 medidas</text>
+    <rect x="40" y="314" width="780" height="1" fill="#334155"/>
+    <text x="40" y="340" font-size="13" fill="#cbd5e1">Semana 21, punto de partida</text>
+    <text x="520" y="340" font-size="13" fill="#fca5a5">21,3 s · 330 MB</text>
+    <text x="40" y="366" font-size="13" fill="#cbd5e1">Pintar solo 20 filas de la tabla (95 % del tiempo)</text>
+    <text x="520" y="366" font-size="13" fill="#86efac">1,1 s · 119 MB</text>
+    <text x="40" y="392" font-size="13" fill="#cbd5e1">Analizar cada línea una sola vez</text>
+    <text x="520" y="392" font-size="13" fill="#94a3b8">1,05 s · dentro del ruido</text>
+    <text x="40" y="418" font-size="13" fill="#cbd5e1">NumPy en las tendencias</text>
+    <text x="520" y="418" font-size="13" fill="#94a3b8">no compensa: importarlo cuesta 0,1 s</text>
+  </g>
+</svg>

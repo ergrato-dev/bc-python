@@ -170,4 +170,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README, co
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 20](../week-20-fastapi_lo_justo_para_servir_tu_proyecto/README.md) | **Semana 21** | Semana 22 (próximamente) |
+| [Semana 20](../week-20-fastapi_lo_justo_para_servir_tu_proyecto/README.md) | **Semana 21** | [Semana 22](../week-22-rendimiento_profiling_cprofile_py_spy_y_vectorizacion/README.md) |
