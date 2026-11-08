@@ -169,6 +169,6 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README, co
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 17](../week-17-asyncio_corrutinas_tareas_y_colas/README.md) | **Semana 18** | Semana 19 (próximamente) |
+| [Semana 17](../week-17-asyncio_corrutinas_tareas_y_colas/README.md) | **Semana 18** | [Semana 19](../week-19-postgresql_psycopg_sqlalchemy_y_alembic/README.md) |
 
 ← [Volver al índice de semanas](../README.md)

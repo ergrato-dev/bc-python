@@ -1,0 +1,10 @@
+[project]
+name = "orm"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 19: modelos y sesiones con el ORM"
+requires-python = ">=3.14,<3.15"
+dependencies = ["psycopg[binary]==3.3.6", "sqlalchemy==2.1.6"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

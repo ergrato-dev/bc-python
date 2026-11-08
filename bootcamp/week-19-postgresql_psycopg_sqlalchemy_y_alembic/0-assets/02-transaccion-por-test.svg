@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" role="img" aria-labelledby="t d">
+  <title id="t">Una transacción por test</title>
+  <desc id="d">Arriba, un test con la fixture session. La fixture abre una transacción con connection.begin. Dentro, la sesión abre un SAVEPOINT; el test hace INSERT y el código llama a session.commit, que solo libera el SAVEPOINT, y la sesión abre otro para seguir. Al terminar el test, transaction.rollback deshace todo, y el test siguiente encuentra la base como estaba. Abajo, un test de la CLI con la fixture db_env: antes del test, TRUNCATE loads, readings RESTART IDENTITY vacía las tablas y reinicia los números; la CLI hace commits de verdad, que se quedan hasta el siguiente TRUNCATE.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="440" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="700">Cada test deja la base como la encontró</text>
+
+    <text x="40" y="66" font-size="13" font-weight="700" fill="#cbd5e1">Fixture session: los tests de core/database.py</text>
+    <rect x="40" y="78" width="740" height="150" rx="10" fill="#082f49" stroke="#38bdf8"/>
+    <text x="56" y="100" font-size="13" font-weight="700" fill="#7dd3fc">connection.begin(): la transacción del test, que nunca se confirma</text>
+
+    <rect x="60" y="114" width="300" height="70" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-dasharray="6 4"/>
+    <text x="74" y="134" font-size="12" font-weight="700" fill="#c4b5fd">SAVEPOINT 1</text>
+    <text x="74" y="154" font-size="13" fill="#cbd5e1">save_series(...) · INSERT</text>
+    <text x="74" y="173" font-size="13" fill="#cbd5e1">session.commit()</text>
+
+    <line x1="360" y1="149" x2="410" y2="149" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="385" y="200" text-anchor="middle" font-size="12" fill="#94a3b8">el commit solo</text>
+    <text x="385" y="215" text-anchor="middle" font-size="12" fill="#94a3b8">libera el SAVEPOINT</text>
+
+    <rect x="412" y="114" width="200" height="70" rx="8" fill="#1e293b" stroke="#a78bfa" stroke-dasharray="6 4"/>
+    <text x="426" y="134" font-size="12" font-weight="700" fill="#c4b5fd">SAVEPOINT 2</text>
+    <text x="426" y="154" font-size="13" fill="#cbd5e1">load_series(...)</text>
+    <text x="426" y="173" font-size="13" fill="#cbd5e1">assert ...</text>
+
+    <rect x="630" y="114" width="136" height="70" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="698" y="140" text-anchor="middle" font-size="13" font-weight="700" fill="#f87171">rollback()</text>
+    <text x="698" y="160" text-anchor="middle" font-size="12" fill="#cbd5e1">todo deshecho,</text>
+    <text x="698" y="176" text-anchor="middle" font-size="12" fill="#cbd5e1">también el commit</text>
+
+    <text x="410" y="252" text-anchor="middle" font-size="13" fill="#94a3b8">join_transaction_mode="create_savepoint" · en PostgreSQL, hasta CREATE y DROP TABLE se deshacen</text>
+
+    <text x="40" y="290" font-size="13" font-weight="700" fill="#cbd5e1">Fixture db_env: los tests de la CLI, que confirman de verdad</text>
+    <rect x="40" y="302" width="230" height="84" rx="8" fill="#422006" stroke="#fbbf24"/>
+    <text x="155" y="326" text-anchor="middle" font-size="13" font-weight="700" fill="#fcd34d">antes del test</text>
+    <text x="155" y="348" text-anchor="middle" font-size="12" fill="#cbd5e1">TRUNCATE loads, readings</text>
+    <text x="155" y="366" text-anchor="middle" font-size="12" fill="#cbd5e1">RESTART IDENTITY</text>
+
+    <line x1="270" y1="344" x2="320" y2="344" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="322" y="302" width="230" height="84" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="437" y="326" text-anchor="middle" font-size="13" font-weight="700" fill="#86efac">el test</text>
+    <text x="437" y="348" text-anchor="middle" font-size="12" fill="#cbd5e1">observatorio guardar norte.txt</text>
+    <text x="437" y="366" text-anchor="middle" font-size="12" fill="#cbd5e1">commit de verdad: carga 1</text>
+
+    <line x1="552" y1="344" x2="602" y2="344" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="604" y="302" width="176" height="84" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="692" y="326" text-anchor="middle" font-size="13" font-weight="700">después</text>
+    <text x="692" y="348" text-anchor="middle" font-size="12" fill="#cbd5e1">los datos se quedan,</text>
+    <text x="692" y="366" text-anchor="middle" font-size="12" fill="#cbd5e1">a la vista con psql</text>
+
+    <text x="410" y="414" text-anchor="middle" font-size="13" fill="#94a3b8">RESTART IDENTITY: la primera carga de cada test es la 1, y el test puede esperarlo</text>
+  </g>
+</svg>

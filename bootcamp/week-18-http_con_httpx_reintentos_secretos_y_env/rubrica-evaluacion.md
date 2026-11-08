@@ -89,4 +89,4 @@ Se evalúa **cómo** construiste el proyecto, con evidencia del repositorio y un
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | Semana 19 (próximamente) |
+| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | [Semana 19](../week-19-postgresql_psycopg_sqlalchemy_y_alembic/README.md) |

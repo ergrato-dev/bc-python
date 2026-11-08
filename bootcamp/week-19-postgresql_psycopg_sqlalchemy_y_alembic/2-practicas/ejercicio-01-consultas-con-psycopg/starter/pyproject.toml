@@ -1,0 +1,10 @@
+[project]
+name = "consultas"
+version = "0.1.0"
+description = "Ejercicio 01 de la semana 19: consultas con psycopg"
+requires-python = ">=3.14,<3.15"
+dependencies = ["psycopg[binary]==3.3.6"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

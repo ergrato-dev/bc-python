@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" role="img" aria-labelledby="t d">
+  <title id="t">De Python a PostgreSQL, capa a capa</title>
+  <desc id="d">Seis capas apiladas, de arriba abajo. Tu código llama a save_series. El ORM de SQLAlchemy, con la sesión y los modelos, convierte objetos en operaciones. El Core construye el SQL, como INSERT INTO readings. El motor presta una conexión de su pool. psycopg 3, el driver, envía el SQL y los parámetros por separado. PostgreSQL, en su contenedor, guarda las tablas loads, readings y alembic_version. Una llave a la derecha marca que el ORM, el Core y el motor son SQLAlchemy.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="520" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="34" text-anchor="middle" font-size="16" font-weight="700">De tu código a PostgreSQL: cada capa hace una cosa</text>
+
+    <rect x="40" y="56" width="200" height="56" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="140" y="80" text-anchor="middle" font-weight="700">Tu código</text>
+    <text x="140" y="99" text-anchor="middle" font-size="12" fill="#cbd5e1">cli.py · core/database.py</text>
+    <text x="260" y="80" font-size="13" fill="#cbd5e1">save_series(session, "medidas.txt", series)</text>
+    <text x="260" y="99" font-size="12" fill="#94a3b8">objetos de Python: Load, Reading, Series</text>
+
+    <line x1="140" y1="112" x2="140" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="40" y="132" width="200" height="56" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="140" y="156" text-anchor="middle" font-weight="700" fill="#c4b5fd">ORM</text>
+    <text x="140" y="175" text-anchor="middle" font-size="12" fill="#cbd5e1">Session · modelos</text>
+    <text x="260" y="156" font-size="13" fill="#cbd5e1">session.add(load) · session.flush()</text>
+    <text x="260" y="175" font-size="12" fill="#94a3b8">mapa de identidad y unidad de trabajo: qué SQL hace falta</text>
+
+    <line x1="140" y1="188" x2="140" y2="206" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="40" y="208" width="200" height="56" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="140" y="232" text-anchor="middle" font-weight="700" fill="#7dd3fc">Core</text>
+    <text x="140" y="251" text-anchor="middle" font-size="12" fill="#cbd5e1">Table · select() · insert()</text>
+    <text x="260" y="232" font-size="13" fill="#cbd5e1">INSERT INTO readings (load_id, label, value) VALUES ...</text>
+    <text x="260" y="251" font-size="12" fill="#94a3b8">el SQL del dialecto de PostgreSQL, con huecos para los valores</text>
+
+    <line x1="140" y1="264" x2="140" y2="282" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="40" y="284" width="200" height="56" rx="8" fill="#422006" stroke="#fbbf24"/>
+    <text x="140" y="308" text-anchor="middle" font-weight="700" fill="#fcd34d">Motor y pool</text>
+    <text x="140" y="327" text-anchor="middle" font-size="12" fill="#cbd5e1">Engine</text>
+    <text x="260" y="308" font-size="13" fill="#cbd5e1">presta una conexión abierta y la recupera después</text>
+    <text x="260" y="327" font-size="12" fill="#94a3b8">abrir cuesta; reutilizar, casi nada · pool_pre_ping la comprueba</text>
+
+    <line x1="140" y1="340" x2="140" y2="358" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="40" y="360" width="200" height="56" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="140" y="384" text-anchor="middle" font-weight="700" fill="#86efac">psycopg 3</text>
+    <text x="140" y="403" text-anchor="middle" font-size="12" fill="#cbd5e1">el driver</text>
+    <text x="260" y="384" font-size="13" fill="#cbd5e1">el SQL por un lado, los valores por otro</text>
+    <text x="260" y="403" font-size="12" fill="#94a3b8">por eso un valor nunca se convierte en SQL</text>
+
+    <line x1="140" y1="416" x2="140" y2="444" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="152" y="435" font-size="12" fill="#94a3b8">red · puerto 5432</text>
+
+    <rect x="40" y="446" width="200" height="56" rx="8" fill="#1e293b" stroke="#cbd5e1" stroke-dasharray="6 4"/>
+    <text x="140" y="470" text-anchor="middle" font-weight="700">PostgreSQL 18</text>
+    <text x="140" y="489" text-anchor="middle" font-size="12" fill="#cbd5e1">contenedor db</text>
+    <text x="260" y="470" font-size="13" fill="#cbd5e1">loads · readings · alembic_version</text>
+    <text x="260" y="489" font-size="12" fill="#94a3b8">comprueba tipos y restricciones, agrupa, cuenta y confirma</text>
+
+    <path d="M760,136 L772,136 L772,336 L760,336" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <text x="790" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#cbd5e1" transform="rotate(90 790 240)">SQLAlchemy 2</text>
+  </g>
+</svg>

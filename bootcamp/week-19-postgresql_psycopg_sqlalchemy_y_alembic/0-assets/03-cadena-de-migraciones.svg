@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-labelledby="t d">
+  <title id="t">La cadena de migraciones</title>
+  <desc id="d">Tres eslabones en fila: base, sin tablas; la revisión 0001, que crea loads y readings; y la revisión 0002, un ejemplo futuro que añade una columna, marcada como head. Arriba, flechas verdes de upgrade de cada eslabón al siguiente; abajo, flechas rojas de downgrade en sentido contrario. Cada revisión apunta a la anterior con down_revision. Debajo, la base de datos con la tabla alembic_version, que guarda 0001: Alembic sabe que a esa base le falta 0002. A la izquierda, revision --autogenerate compara Base.metadata con la base y escribe el borrador de la migración siguiente, que hay que leer antes de aplicar.</desc>
+  <defs>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4ade80"/>
+    </marker>
+    <marker id="red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f87171"/>
+    </marker>
+    <marker id="grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="820" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="410" y="32" text-anchor="middle" font-size="16" font-weight="700">Cada migración apunta a la anterior; cada base sabe por cuál va</text>
+
+    <rect x="40" y="110" width="150" height="80" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="115" y="144" text-anchor="middle" font-weight="700">base</text>
+    <text x="115" y="166" text-anchor="middle" font-size="12" fill="#cbd5e1">sin tablas</text>
+
+    <rect x="300" y="110" width="210" height="80" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="405" y="136" text-anchor="middle" font-weight="700" fill="#7dd3fc">0001</text>
+    <text x="405" y="156" text-anchor="middle" font-size="12" fill="#cbd5e1">create loads and readings</text>
+    <text x="405" y="176" text-anchor="middle" font-size="12" fill="#94a3b8">down_revision = None</text>
+
+    <rect x="620" y="110" width="160" height="80" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-dasharray="6 4"/>
+    <text x="700" y="136" text-anchor="middle" font-weight="700" fill="#7dd3fc">0002 · head</text>
+    <text x="700" y="156" text-anchor="middle" font-size="12" fill="#cbd5e1">un ejemplo futuro:</text>
+    <text x="700" y="176" text-anchor="middle" font-size="12" fill="#94a3b8">down_revision = "0001"</text>
+
+    <path d="M190,96 C230,70 260,70 296,96" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#green)"/>
+    <path d="M510,96 C550,70 580,70 616,96" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#green)"/>
+    <text x="245" y="64" text-anchor="middle" font-size="12" fill="#4ade80">upgrade()</text>
+    <text x="565" y="64" text-anchor="middle" font-size="12" fill="#4ade80">upgrade()</text>
+
+    <path d="M296,204 C260,230 230,230 194,204" fill="none" stroke="#f87171" stroke-width="2" marker-end="url(#red)"/>
+    <path d="M616,204 C580,230 550,230 514,204" fill="none" stroke="#f87171" stroke-width="2" marker-end="url(#red)"/>
+    <text x="245" y="246" text-anchor="middle" font-size="12" fill="#f87171">downgrade()</text>
+    <text x="565" y="246" text-anchor="middle" font-size="12" fill="#f87171">downgrade()</text>
+
+    <rect x="300" y="290" width="210" height="96" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="405" y="316" text-anchor="middle" font-weight="700" fill="#86efac">tu base de datos</text>
+    <text x="405" y="340" text-anchor="middle" font-size="12" fill="#cbd5e1">tabla alembic_version</text>
+    <text x="405" y="362" text-anchor="middle" font-size="13" font-weight="700">version_num = 0001</text>
+
+    <line x1="405" y1="290" x2="405" y2="196" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#grey)"/>
+    <text x="560" y="322" font-size="12" fill="#94a3b8">alembic current: 0001</text>
+    <text x="560" y="342" font-size="12" fill="#94a3b8">alembic upgrade head:</text>
+    <text x="560" y="362" font-size="12" fill="#94a3b8">aplica solo 0002</text>
+
+    <rect x="40" y="290" width="220" height="96" rx="8" fill="#422006" stroke="#fbbf24"/>
+    <text x="150" y="314" text-anchor="middle" font-size="13" font-weight="700" fill="#fcd34d">revision --autogenerate</text>
+    <text x="150" y="336" text-anchor="middle" font-size="12" fill="#cbd5e1">compara Base.metadata</text>
+    <text x="150" y="354" text-anchor="middle" font-size="12" fill="#cbd5e1">con la base y escribe</text>
+    <text x="150" y="372" text-anchor="middle" font-size="12" fill="#cbd5e1">un borrador: léelo</text>
+  </g>
+</svg>

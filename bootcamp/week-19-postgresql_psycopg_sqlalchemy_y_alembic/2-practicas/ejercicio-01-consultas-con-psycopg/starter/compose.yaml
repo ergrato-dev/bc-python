@@ -1,0 +1,19 @@
+# El PostgreSQL de las prácticas de la semana 19. `name` es el mismo en los cuatro
+# ejercicios: todos usan el mismo contenedor y la misma base, `practicas`.
+# Puerto 5433 en tu máquina, para no chocar con el PostgreSQL de tu proyecto (5432).
+# Usuario y contraseña de desarrollo, solo para tu máquina.
+name: practicas-semana-19
+services:
+  db:
+    image: postgres:18.6-alpine
+    environment:
+      POSTGRES_USER: practicas
+      POSTGRES_PASSWORD: practicas
+      POSTGRES_DB: practicas
+    ports:
+      - "127.0.0.1:5433:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "practicas", "-d", "practicas"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
