@@ -168,4 +168,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README, co
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 18](../week-18-http_con_httpx_reintentos_secretos_y_env/README.md) | **Semana 19** | Semana 20 (próximamente) |
+| [Semana 18](../week-18-http_con_httpx_reintentos_secretos_y_env/README.md) | **Semana 19** | [Semana 20](../week-20-fastapi_lo_justo_para_servir_tu_proyecto/README.md) |

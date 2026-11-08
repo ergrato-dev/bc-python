@@ -89,4 +89,4 @@ Se evalúa **cómo** construiste el proyecto, con evidencia del repositorio y un
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | Semana 20 (próximamente) |
+| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | [Semana 20](../week-20-fastapi_lo_justo_para_servir_tu_proyecto/README.md) |

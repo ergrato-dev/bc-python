@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" role="img" aria-labelledby="t d">
+  <title id="t">def o async def</title>
+  <desc id="d">Tres carriles con cinco peticiones de 0,2 segundos cada una. Arriba, rutas def: FastAPI las ejecuta en hilos del pool, y las cinco barras van en paralelo, terminando a los 0,2 segundos. En medio, rutas async def que llaman a time.sleep o a una sesión de SQLAlchemy síncrona: bloquean el único bucle de eventos, y las cinco barras van una detrás de otra hasta 1 segundo. Abajo, rutas async def que esperan con await: el bucle atiende a las demás mientras esperan, y las cinco terminan a los 0,2 segundos. La regla: def si lo que hay dentro bloquea; async def solo si todo espera con await.</desc>
+  <rect width="860" height="430" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Cinco peticiones a la vez, de 0,2 s cada una</text>
+
+    <line x1="220" y1="56" x2="820" y2="56" stroke="#334155"/>
+    <text x="220" y="50" text-anchor="middle" font-size="11" fill="#94a3b8">0 s</text>
+    <text x="340" y="50" text-anchor="middle" font-size="11" fill="#94a3b8">0,2 s</text>
+    <text x="460" y="50" text-anchor="middle" font-size="11" fill="#94a3b8">0,4 s</text>
+    <text x="580" y="50" text-anchor="middle" font-size="11" fill="#94a3b8">0,6 s</text>
+    <text x="700" y="50" text-anchor="middle" font-size="11" fill="#94a3b8">0,8 s</text>
+    <text x="820" y="50" text-anchor="middle" font-size="11" fill="#94a3b8">1 s</text>
+    <line x1="340" y1="56" x2="340" y2="372" stroke="#334155" stroke-dasharray="4 4"/>
+
+    <text x="30" y="88" font-weight="700" fill="#86efac">def</text>
+    <text x="30" y="108" font-size="12" fill="#cbd5e1">en hilos del pool</text>
+    <text x="30" y="126" font-size="12" fill="#cbd5e1">de FastAPI</text>
+    <rect x="220" y="74" width="120" height="10" fill="#4ade80"/>
+    <rect x="220" y="88" width="120" height="10" fill="#4ade80"/>
+    <rect x="220" y="102" width="120" height="10" fill="#4ade80"/>
+    <rect x="220" y="116" width="120" height="10" fill="#4ade80"/>
+    <rect x="220" y="130" width="120" height="10" fill="#4ade80"/>
+    <text x="360" y="112" font-size="13" fill="#86efac">0,2 s: cada hilo bloquea solo el suyo</text>
+
+    <text x="30" y="188" font-weight="700" fill="#fca5a5">async def que bloquea</text>
+    <text x="30" y="208" font-size="12" fill="#cbd5e1">time.sleep, Session</text>
+    <text x="30" y="226" font-size="12" fill="#cbd5e1">en el bucle de eventos</text>
+    <rect x="220" y="174" width="120" height="10" fill="#f87171"/>
+    <rect x="340" y="188" width="120" height="10" fill="#f87171"/>
+    <rect x="460" y="202" width="120" height="10" fill="#f87171"/>
+    <rect x="580" y="216" width="120" height="10" fill="#f87171"/>
+    <rect x="700" y="230" width="120" height="10" fill="#f87171"/>
+    <text x="520" y="262" text-anchor="middle" font-size="13" fill="#fca5a5">1 s: mientras una bloquea, nadie más avanza, ni /health</text>
+
+    <text x="30" y="298" font-weight="700" fill="#7dd3fc">async def con await</text>
+    <text x="30" y="318" font-size="12" fill="#cbd5e1">asyncio.sleep, httpx</text>
+    <text x="30" y="336" font-size="12" fill="#cbd5e1">AsyncClient</text>
+    <rect x="220" y="284" width="120" height="10" fill="#38bdf8"/>
+    <rect x="220" y="298" width="120" height="10" fill="#38bdf8"/>
+    <rect x="220" y="312" width="120" height="10" fill="#38bdf8"/>
+    <rect x="220" y="326" width="120" height="10" fill="#38bdf8"/>
+    <rect x="220" y="340" width="120" height="10" fill="#38bdf8"/>
+    <text x="360" y="322" font-size="13" fill="#7dd3fc">0,2 s: al esperar, el bucle atiende a las demás</text>
+
+    <rect x="30" y="384" width="800" height="32" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="430" y="405" text-anchor="middle" font-size="13" fill="#e2e8f0">La regla: def si algo de dentro bloquea; async def solo si todo lo que espera lleva await</text>
+  </g>
+</svg>

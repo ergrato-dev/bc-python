@@ -1,0 +1,10 @@
+[project]
+name = "dependencias"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 20: dependencias y ciclo de vida"
+requires-python = ">=3.14,<3.15"
+dependencies = ["fastapi==0.162.0", "httpx2==2.16.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

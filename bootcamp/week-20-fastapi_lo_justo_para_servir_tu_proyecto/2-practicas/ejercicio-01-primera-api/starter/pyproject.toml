@@ -1,0 +1,10 @@
+[project]
+name = "primera-api"
+version = "0.1.0"
+description = "Ejercicio 01 de la semana 20: tu primera API con FastAPI"
+requires-python = ">=3.14,<3.15"
+dependencies = ["fastapi==0.162.0", "httpx2==2.16.0", "uvicorn==0.54.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
