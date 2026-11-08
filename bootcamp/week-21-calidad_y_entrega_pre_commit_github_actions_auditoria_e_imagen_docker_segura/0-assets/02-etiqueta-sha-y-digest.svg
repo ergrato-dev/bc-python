@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" role="img" aria-labelledby="t d">
+  <title id="t">Etiqueta, SHA y digest</title>
+  <desc id="d">Arriba, una etiqueta como v0.34.2 es un nombre que apunta a un commit, y quien controla el repositorio puede moverlo. Antes del ataque apuntaba al commit a1b2c3, el bueno; después apunta al commit e9f8d7, el malicioso. Un workflow que usa la acción por su etiqueta ejecuta ahora el código malicioso; uno que la usa por el SHA a1b2c3 sigue ejecutando el bueno. Así ocurrió en marzo de 2026 con más de 70 etiquetas de trivy-action, CVE-2026-33634. Abajo, las tres cosas que fija tu proyecto y cómo: los paquetes de PyPI con versión y hash sha256 en uv.lock, las acciones de GitHub con el SHA de 40 caracteres de su commit y un comentario con la versión, y las imágenes de Docker con su digest sha256 detrás de la etiqueta.</desc>
+  <defs>
+    <marker id="grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f87171"/>
+    </marker>
+    <marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4ade80"/>
+    </marker>
+  </defs>
+  <rect width="860" height="480" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Una etiqueta se puede mover; un SHA o un digest, no</text>
+
+    <rect x="316" y="64" width="228" height="48" rx="8" fill="#422006" stroke="#fbbf24"/>
+    <text x="430" y="86" text-anchor="middle" font-weight="700" fill="#fcd34d">etiqueta v0.34.2</text>
+    <text x="430" y="104" text-anchor="middle" font-size="12" fill="#cbd5e1">un nombre que apunta a un commit</text>
+
+    <rect x="80" y="170" width="220" height="56" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="190" y="194" text-anchor="middle" font-weight="700" fill="#86efac">commit a1b2c3…</text>
+    <text x="190" y="214" text-anchor="middle" font-size="12" fill="#cbd5e1">el código que revisaste</text>
+
+    <rect x="560" y="170" width="220" height="56" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="670" y="194" text-anchor="middle" font-weight="700" fill="#fca5a5">commit e9f8d7…</text>
+    <text x="670" y="214" text-anchor="middle" font-size="12" fill="#cbd5e1">código que roba tus secretos</text>
+
+    <line x1="370" y1="112" x2="230" y2="166" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#grey)"/>
+    <text x="250" y="136" text-anchor="middle" font-size="12" fill="#94a3b8">antes</text>
+    <line x1="490" y1="112" x2="630" y2="166" stroke="#f87171" stroke-width="2" marker-end="url(#red)"/>
+    <text x="612" y="136" text-anchor="middle" font-size="12" fill="#fca5a5">después: alguien la movió</text>
+
+    <rect x="40" y="262" width="300" height="40" rx="6" fill="#1e293b" stroke="#4ade80"/>
+    <text x="190" y="287" text-anchor="middle" font-size="12" fill="#86efac">uses: aquasecurity/trivy-action@a1b2c3…</text>
+    <line x1="190" y1="262" x2="190" y2="230" stroke="#4ade80" stroke-width="2" marker-end="url(#green)"/>
+
+    <rect x="520" y="262" width="300" height="40" rx="6" fill="#1e293b" stroke="#f87171"/>
+    <text x="670" y="287" text-anchor="middle" font-size="12" fill="#fca5a5">uses: aquasecurity/trivy-action@v0.34.2</text>
+    <line x1="670" y1="262" x2="670" y2="230" stroke="#f87171" stroke-width="2" marker-end="url(#red)"/>
+
+    <text x="430" y="326" text-anchor="middle" font-size="12" fill="#94a3b8">Marzo de 2026: más de 70 etiquetas de trivy-action, movidas a código malicioso durante unas 12 horas (CVE-2026-33634)</text>
+
+    <text x="40" y="368" font-weight="700">Lo que fija tu proyecto, y cómo</text>
+
+    <rect x="40" y="382" width="250" height="78" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="56" y="404" font-weight="700" fill="#ddd6fe">Paquetes de PyPI</text>
+    <text x="56" y="426" font-size="12" fill="#cbd5e1">uv.lock: versión exacta y</text>
+    <text x="56" y="446" font-size="12" fill="#cbd5e1">hash sha256 de cada archivo</text>
+
+    <rect x="305" y="382" width="250" height="78" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="321" y="404" font-weight="700" fill="#7dd3fc">Acciones de GitHub</text>
+    <text x="321" y="426" font-size="12" fill="#cbd5e1">@ + SHA del commit (40 caracteres)</text>
+    <text x="321" y="446" font-size="12" fill="#cbd5e1"># v7.0.1: la versión, para leerla</text>
+
+    <rect x="570" y="382" width="250" height="78" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="586" y="404" font-weight="700" fill="#86efac">Imágenes de Docker</text>
+    <text x="586" y="426" font-size="12" fill="#cbd5e1">etiqueta para leerla, y</text>
+    <text x="586" y="446" font-size="12" fill="#cbd5e1">@sha256:… el digest, el contenido</text>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+[project]
+name = "imagen-segura"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 21: una imagen Docker segura"
+requires-python = ">=3.14,<3.15"
+# rich es del programa: tiene que estar en la imagen. pytest es de desarrollo: no.
+dependencies = ["rich==15.0.0"]
+
+[dependency-groups]
+dev = ["pytest==9.2.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

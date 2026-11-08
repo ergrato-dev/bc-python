@@ -1,0 +1,14 @@
+[project]
+name = "auditar-dependencias"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 21: auditar y actualizar dependencias"
+requires-python = ">=3.14,<3.15"
+# Versiones viejas a propósito: el ejercicio las audita y las actualiza.
+dependencies = ["jinja2==3.1.4", "requests==2.32.3"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+# urllib3 no lo pides tú: lo trae requests. Esta línea lo sujeta en una versión vieja,
+# para que veas una vulnerabilidad en una dependencia transitiva (paso 4).
+constraint-dependencies = ["urllib3==2.2.3"]

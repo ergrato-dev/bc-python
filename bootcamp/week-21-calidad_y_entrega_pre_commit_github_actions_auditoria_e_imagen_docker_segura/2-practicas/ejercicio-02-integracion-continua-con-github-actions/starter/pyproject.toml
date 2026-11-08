@@ -1,0 +1,18 @@
+[project]
+name = "integracion-continua"
+version = "0.1.0"
+description = "Ejercicio 02 de la semana 21: integración continua con GitHub Actions"
+# Dos versiones de Python: el paso 3 prueba el programa en las dos.
+requires-python = ">=3.13,<3.15"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest==9.2.0", "ruff==0.17.3"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

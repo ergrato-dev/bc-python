@@ -1,0 +1,62 @@
+# Tres servicios: `db`, el PostgreSQL del Observatorio; `app`, tu programa y sus tests;
+# y `api`, la API HTTP servida con uvicorn.
+# Usuario y contraseña de desarrollo, solo para tu máquina: en un servidor de verdad
+# irían en un secreto, nunca en un archivo de Git.
+services:
+  db:
+    image: postgres:18.6-alpine
+    environment:
+      POSTGRES_USER: observatorio
+      POSTGRES_PASSWORD: observatorio
+      POSTGRES_DB: observatorio
+    # 127.0.0.1: el puerto solo se abre a tu máquina, no a la red en la que estés.
+    ports:
+      - "127.0.0.1:5432:5432"
+    # Los datos sobreviven a `docker compose down`; `down -v` los borra.
+    volumes:
+      - pgdata:/var/lib/postgresql
+    # `app` espera a que PostgreSQL acepte conexiones, no solo a que el contenedor arranque.
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "observatorio", "-d", "observatorio"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+
+  app:
+    build: .
+    image: local/observatorio:week-20
+    environment:
+      # Dentro de la red de compose, PostgreSQL se llama `db`, no 127.0.0.1.
+      OBSERVATORIO_DATABASE_URL: postgresql+psycopg://observatorio:observatorio@db:5432/observatorio
+      OBSERVATORIO_TEST_DATABASE_URL: postgresql+psycopg://observatorio:observatorio@db:5432/observatorio_test
+    depends_on:
+      db:
+        condition: service_healthy
+
+  api:
+    image: local/observatorio:week-20
+    # La misma imagen que `app`, con otra orden: servir en lugar de ejecutar los tests.
+    # 0.0.0.0 dentro del contenedor: con 127.0.0.1, solo se oiría a sí mismo.
+    command: ["observatorio", "servir", "--host", "0.0.0.0"]
+    environment:
+      OBSERVATORIO_DATABASE_URL: postgresql+psycopg://observatorio:observatorio@db:5432/observatorio
+    # Fuera del contenedor, el puerto solo se abre a tu máquina, como el de PostgreSQL.
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    # `docker compose up --wait` espera a que /health conteste 200. La imagen no trae
+    # curl: lo pregunta Python, que sí está.
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"
+      interval: 2s
+      timeout: 5s
+      retries: 15
+
+volumes:
+  pgdata:

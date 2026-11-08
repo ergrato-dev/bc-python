@@ -166,4 +166,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README, co
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 19](../week-19-postgresql_psycopg_sqlalchemy_y_alembic/README.md) | **Semana 20** | Semana 21 (próximamente) |
+| [Semana 19](../week-19-postgresql_psycopg_sqlalchemy_y_alembic/README.md) | **Semana 20** | [Semana 21](../week-21-calidad_y_entrega_pre_commit_github_actions_auditoria_e_imagen_docker_segura/README.md) |

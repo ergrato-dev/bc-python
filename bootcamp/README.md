@@ -42,7 +42,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [18](week-18-http_con_httpx_reintentos_secretos_y_env/README.md) | HTTP con httpx, reintentos, secretos y `.env` | ✅ |
 | [19](week-19-postgresql_psycopg_sqlalchemy_y_alembic/README.md) | PostgreSQL con psycopg 3, SQLAlchemy 2 y Alembic | ✅ |
 | [20](week-20-fastapi_lo_justo_para_servir_tu_proyecto/README.md) | FastAPI: lo justo para servir tu proyecto | ✅ |
-| 21 | Calidad y entrega: pre-commit, GitHub Actions, auditoría de dependencias e imagen Docker segura | ⬜ |
+| [21](week-21-calidad_y_entrega_pre_commit_github_actions_auditoria_e_imagen_docker_segura/README.md) | Calidad y entrega: pre-commit, GitHub Actions, auditoría de dependencias e imagen Docker segura | ✅ |
 | 22 | Performance: profiling, `cProfile`, `py-spy` y vectorización | ⬜ |
 
 ### Fase 4 — Data science (S23-30, 144 h)

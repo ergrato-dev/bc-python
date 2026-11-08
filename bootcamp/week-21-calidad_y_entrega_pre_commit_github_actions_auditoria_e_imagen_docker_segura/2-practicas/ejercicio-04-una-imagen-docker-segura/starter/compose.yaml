@@ -1,0 +1,19 @@
+# La imagen `segura` del Dockerfile, ejecutada con las restricciones de tu proyecto.
+name: practicas-semana-21
+services:
+  # ============================================
+  # PASO 5: Un contenedor que no puede cambiar nada
+  # ============================================
+  # Descomenta las siguientes líneas:
+  # segura:
+  #   build:
+  #     context: .
+  #     target: segura
+  #   image: local/practica-21:segura
+  #   read_only: true
+  #   tmpfs:
+  #     - /tmp
+  #   cap_drop:
+  #     - ALL
+  #   security_opt:
+  #     - no-new-privileges:true

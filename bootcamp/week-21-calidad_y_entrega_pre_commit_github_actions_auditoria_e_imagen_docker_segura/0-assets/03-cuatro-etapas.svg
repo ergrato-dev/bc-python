@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" role="img" aria-labelledby="t d">
+  <title id="t">Cuatro etapas, dos imágenes</title>
+  <desc id="d">El Dockerfile del Observatorio tiene cuatro etapas. La etapa uv solo aporta el binario de uv. La etapa builder, sobre python slim fijada por digest, copia uv y ejecuta uv sync --locked --no-dev --no-editable, que deja el programa y sus dependencias en /opt/venv. De builder salen dos imágenes. La etapa test parte de builder, copia todo el proyecto, instala también las dependencias de desarrollo, usa el usuario 10001 y ejecuta pytest; la usa el servicio app de compose y ocupa 768 MB. La etapa runtime, la última, parte otra vez de python slim, copia solo /opt/venv, aplica apt-get upgrade, borra pip, usa el usuario 10001 y sirve la API; la usa el servicio api, con el sistema de archivos en solo lectura, sin capacidades y sin poder ganar privilegios, y ocupa 301 MB. A runtime no llegan uv, pip, pytest, mypy, ruff, el código fuente ni los tests.</desc>
+  <defs>
+    <marker id="grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="860" height="500" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Un Dockerfile, cuatro etapas, dos imágenes: una para probar, otra para servir</text>
+
+    <rect x="40" y="64" width="160" height="70" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="120" y="90" text-anchor="middle" font-weight="700">uv</text>
+    <text x="120" y="112" text-anchor="middle" font-size="12" fill="#cbd5e1">solo el binario /uv</text>
+
+    <line x1="200" y1="99" x2="246" y2="99" stroke="#94a3b8" stroke-width="2" marker-end="url(#grey)"/>
+
+    <rect x="250" y="64" width="360" height="70" rx="8" fill="#2e1065" stroke="#a78bfa"/>
+    <text x="430" y="88" text-anchor="middle" font-weight="700" fill="#ddd6fe">builder · python:3.14.10-slim@sha256</text>
+    <text x="430" y="110" text-anchor="middle" font-size="12" fill="#fcd34d">uv sync --locked --no-dev --no-editable</text>
+    <text x="430" y="126" text-anchor="middle" font-size="12" fill="#cbd5e1">deja el programa y sus dependencias en /opt/venv</text>
+
+    <line x1="340" y1="134" x2="220" y2="174" stroke="#94a3b8" stroke-width="2" marker-end="url(#grey)"/>
+    <text x="262" y="152" text-anchor="end" font-size="12" fill="#94a3b8">FROM builder</text>
+    <line x1="520" y1="134" x2="640" y2="174" stroke="#94a3b8" stroke-width="2" marker-end="url(#grey)"/>
+    <text x="600" y="152" font-size="12" fill="#94a3b8">COPY --from=builder /opt/venv</text>
+
+    <rect x="40" y="178" width="360" height="200" rx="8" fill="#082f49" stroke="#38bdf8"/>
+    <text x="220" y="202" text-anchor="middle" font-weight="700" fill="#7dd3fc">test · para compose app</text>
+    <text x="58" y="230" font-size="12" fill="#cbd5e1">COPY . . y uv sync --locked: + dev</text>
+    <text x="58" y="252" font-size="12" fill="#cbd5e1">pytest, mypy, ruff, pre-commit, los tests</text>
+    <text x="58" y="274" font-size="12" fill="#cbd5e1">USER 10001:10001</text>
+    <text x="58" y="296" font-size="12" fill="#fcd34d">CMD ["pytest"]</text>
+    <text x="58" y="336" font-size="12" fill="#94a3b8">no se despliega: solo prueba</text>
+    <text x="382" y="362" text-anchor="end" font-size="20" font-weight="700" fill="#7dd3fc">768 MB</text>
+
+    <rect x="460" y="178" width="360" height="200" rx="8" fill="#052e16" stroke="#4ade80"/>
+    <text x="640" y="202" text-anchor="middle" font-weight="700" fill="#86efac">runtime · la última, para compose api</text>
+    <text x="478" y="230" font-size="12" fill="#cbd5e1">python:3.14.10-slim@sha256 + /opt/venv</text>
+    <text x="478" y="252" font-size="12" fill="#cbd5e1">apt-get upgrade · sin pip</text>
+    <text x="478" y="274" font-size="12" fill="#cbd5e1">USER 10001:10001</text>
+    <text x="478" y="296" font-size="12" fill="#fcd34d">CMD observatorio servir --host 0.0.0.0</text>
+    <text x="478" y="324" font-size="12" fill="#cbd5e1">compose: read_only · tmpfs /tmp</text>
+    <text x="478" y="344" font-size="12" fill="#cbd5e1">cap_drop ALL · no-new-privileges</text>
+    <text x="802" y="362" text-anchor="end" font-size="20" font-weight="700" fill="#86efac">301 MB</text>
+
+    <rect x="460" y="398" width="360" height="82" rx="8" fill="#450a0a" stroke="#f87171"/>
+    <text x="478" y="422" font-weight="700" fill="#fca5a5">No llega a runtime</text>
+    <text x="478" y="444" font-size="12" fill="#cbd5e1">uv · pip · pytest, mypy, ruff · src/ · tests/</text>
+    <text x="478" y="464" font-size="12" fill="#cbd5e1">la caché de uv · pyproject.toml · uv.lock</text>
+
+    <rect x="40" y="398" width="360" height="82" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="58" y="422" font-weight="700">La imagen de la semana 20</text>
+    <text x="58" y="444" font-size="12" fill="#cbd5e1">una sola etapa para todo: 718 MB, con uv,</text>
+    <text x="58" y="464" font-size="12" fill="#cbd5e1">pip y las herramientas de desarrollo dentro</text>
+  </g>
+</svg>

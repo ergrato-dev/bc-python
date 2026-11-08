@@ -1,0 +1,54 @@
+# Los ganchos que pre-commit ejecuta antes de cada `git commit`.
+repos:
+  # ============================================
+  # PASO 2: Ganchos genéricos de pre-commit-hooks
+  # ============================================
+  # `rev` con la etiqueta, por ahora: en el paso 6 la cambias por su SHA.
+  # Descomenta las siguientes líneas:
+  # - repo: https://github.com/pre-commit/pre-commit-hooks
+  #   rev: v6.0.0
+  #   hooks:
+  #     - id: trailing-whitespace
+  #     - id: end-of-file-fixer
+  #     - id: check-yaml
+  #     - id: check-toml
+  #     - id: check-added-large-files
+
+  # ============================================
+  # PASO 3: ruff, con la versión de uv.lock
+  # ============================================
+  # Descomenta las siguientes líneas:
+  # - repo: local
+  #   hooks:
+  #     - id: ruff-check
+  #       name: ruff check
+  #       entry: uv run --locked ruff check --fix
+  #       language: unsupported
+  #       types: [python]
+  #     - id: ruff-format
+  #       name: ruff format
+  #       entry: uv run --locked ruff format
+  #       language: unsupported
+  #       types: [python]
+
+  # ============================================
+  # PASO 4: mypy, sobre todo el proyecto
+  # ============================================
+  # Descomenta las siguientes líneas:
+  #     - id: mypy
+  #       name: mypy
+  #       entry: uv run --locked mypy
+  #       language: unsupported
+  #       types: [python]
+  #       pass_filenames: false
+
+  # ============================================
+  # PASO 5: uv.lock al día
+  # ============================================
+  # Descomenta las siguientes líneas:
+  #     - id: uv-lock
+  #       name: uv.lock al día
+  #       entry: uv lock --check
+  #       language: unsupported
+  #       files: ^(pyproject\.toml|uv\.lock)$
+  #       pass_filenames: false

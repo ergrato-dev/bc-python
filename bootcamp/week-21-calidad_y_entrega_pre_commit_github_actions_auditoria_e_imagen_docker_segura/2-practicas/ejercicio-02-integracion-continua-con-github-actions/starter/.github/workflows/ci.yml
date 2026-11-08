@@ -1,0 +1,57 @@
+# El workflow de la integración continua. GitHub lo lee de .github/workflows/.
+
+# ============================================
+# PASO 1: Un workflow, un job, cuatro pasos
+# ============================================
+# Descomenta las siguientes líneas:
+# name: CI
+#
+# on:
+#   push:
+#
+# jobs:
+#   hello:
+#     runs-on: ubuntu-24.04
+#     timeout-minutes: 5
+#     steps:
+#       - run: echo "hola desde $RUNNER_OS, en la rama $GITHUB_REF_NAME"
+#       - run: python3 --version
+#       - uses: actions/checkout@v7.0.1
+#       - run: ls -a
+
+# ============================================
+# PASO 2: Los tests, con uv
+# ============================================
+# Descomenta las siguientes líneas:
+#   tests:
+#     runs-on: ubuntu-24.04
+#     timeout-minutes: 10
+#     steps:
+#       - uses: actions/checkout@v7.0.1
+#       - uses: astral-sh/setup-uv@v10.3.2
+#         with:
+#           version: "0.13.7"
+#       - run: uv sync --locked
+#       - run: uv run --locked ruff check
+#       - run: uv run --locked pytest -v
+
+# ============================================
+# PASO 3: Una matriz de versiones de Python
+# ============================================
+# Descomenta las siguientes líneas:
+#     strategy:
+#       matrix:
+#         python: ["3.13", "3.14"]
+#     env:
+#       UV_PYTHON: ${{ matrix.python }}
+
+# ============================================
+# PASO 5: Solo leer, y una ejecución cada vez
+# ============================================
+# Descomenta las siguientes líneas:
+# permissions:
+#   contents: read
+#
+# concurrency:
+#   group: ci-${{ github.ref }}
+#   cancel-in-progress: true
