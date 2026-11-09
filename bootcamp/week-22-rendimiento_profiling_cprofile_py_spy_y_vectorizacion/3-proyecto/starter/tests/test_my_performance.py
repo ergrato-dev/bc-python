@@ -1,4 +1,4 @@
-# Tus tests de la semana 22: sustituye este ejemplo por al menos 6 tests tuyos (paso 13).
+# Tus tests de la semana 22: sustituye este ejemplo por al menos 6 tests tuyos (paso 16).
 # Usa las funciones de test_performance.py (calls_of, profiled_informe, lines_of,
 # table_rows): que informe pinte las filas de --filas y no más, que analice cada línea una
 # vez también con errores, que Series.parse dé lo mismo que process_lines con tus datos,

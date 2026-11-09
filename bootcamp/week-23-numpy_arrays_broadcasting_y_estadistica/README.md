@@ -150,7 +150,7 @@ gh pr checks
 Lo que debes ver:
 
 - todos los ganchos en `Passed` (o `Skipped`);
-- los tests terminan en `passed` sin `failed`, al menos 779;
+- los tests terminan en `passed` sin `failed`, al menos 891;
 - `coverage report` termina sin `Coverage failure`;
 - `alembic check` dice `No new upgrade operations detected.`;
 - `--version` escribe `observatorio 0.23.0`;
@@ -166,4 +166,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; lo
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 22](../week-22-rendimiento_profiling_cprofile_py_spy_y_vectorizacion/README.md) | **Semana 23** | Semana 24 (próximamente) |
+| [Semana 22](../week-22-rendimiento_profiling_cprofile_py_spy_y_vectorizacion/README.md) | **Semana 23** | [Semana 24](../week-24-pandas_series_dataframe_y_seleccion/README.md) |

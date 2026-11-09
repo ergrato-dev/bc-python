@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 425" role="img" aria-labelledby="t d">
+  <title id="t">Alineación por índice</title>
+  <desc id="d">Dos Series: monday con Norte 10 y Sur 20, y tuesday con Sur 5 y Este 7. Al sumarlas, pandas empareja las etiquetas: Sur está en las dos y da 25; Norte y Este solo están en una y dan NaN. El índice del resultado es la unión de los dos índices, ordenada: Este, Norte, Sur. Con add y fill_value=0, lo que falta en un lado cuenta como 0: Este 7, Norte 10, Sur 25. Con arrays de NumPy la suma iría por posición, 15 y 27, emparejando Norte con Sur y Sur con Este. pandas empareja por etiqueta: un índice mal puesto no da error, da NaN.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="860" height="425" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Las operaciones entre Series se alinean por etiqueta, no por posición</text>
+    <text x="40" y="78" font-weight="700" fill="#93c5fd">monday</text>
+    <rect x="40" y="90" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="80" y="112" text-anchor="middle" fill="#fcd34d" font-weight="700">Norte</text>
+    <rect x="120" y="90" width="80" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="160" y="112" text-anchor="middle" fill="#e2e8f0">10.0</text>
+    <rect x="40" y="124" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="80" y="146" text-anchor="middle" fill="#fcd34d" font-weight="700">Sur</text>
+    <rect x="120" y="124" width="80" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="160" y="146" text-anchor="middle" fill="#e2e8f0">20.0</text>
+    <text x="40" y="218" font-weight="700" fill="#93c5fd">tuesday</text>
+    <rect x="40" y="230" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="80" y="252" text-anchor="middle" fill="#fcd34d" font-weight="700">Sur</text>
+    <rect x="120" y="230" width="80" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="160" y="252" text-anchor="middle" fill="#e2e8f0">5.0</text>
+    <rect x="40" y="264" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="80" y="286" text-anchor="middle" fill="#fcd34d" font-weight="700">Este</text>
+    <rect x="120" y="264" width="80" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="160" y="286" text-anchor="middle" fill="#e2e8f0">7.0</text>
+    <text x="120" y="195" text-anchor="middle" font-size="22">+</text>
+    <text x="360" y="128" font-weight="700" fill="#86efac">monday + tuesday</text>
+    <rect x="360" y="140" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="400" y="162" text-anchor="middle" fill="#fcd34d" font-weight="700">Este</text>
+    <rect x="440" y="140" width="80" height="34" rx="0" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="480" y="162" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="360" y="174" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="400" y="196" text-anchor="middle" fill="#fcd34d" font-weight="700">Norte</text>
+    <rect x="440" y="174" width="80" height="34" rx="0" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="480" y="196" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="360" y="208" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="400" y="230" text-anchor="middle" fill="#fcd34d" font-weight="700">Sur</text>
+    <rect x="440" y="208" width="80" height="34" rx="0" fill="#1e293b" stroke="#86efac"/>
+    <text x="480" y="230" text-anchor="middle" fill="#e2e8f0">25.0</text>
+    <path d="M202 141 L356 225" stroke="#86efac" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M202 247 L356 227" stroke="#86efac" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M202 107 L356 191" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M202 281 L356 157" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="360" y="270" font-size="13" fill="#86efac">Sur está en las dos: 20 + 5 = 25</text>
+    <text x="360" y="290" font-size="13" fill="#fca5a5">Norte y Este, solo en una: NaN</text>
+    <text x="360" y="310" font-size="13" fill="#94a3b8">el índice del resultado es la unión, ordenada</text>
+    <text x="640" y="128" font-weight="700" fill="#86efac">add(fill_value=0)</text>
+    <rect x="640" y="140" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="680" y="162" text-anchor="middle" fill="#fcd34d" font-weight="700">Este</text>
+    <rect x="720" y="140" width="80" height="34" rx="0" fill="#1e293b" stroke="#86efac"/>
+    <text x="760" y="162" text-anchor="middle" fill="#e2e8f0">7.0</text>
+    <rect x="640" y="174" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="680" y="196" text-anchor="middle" fill="#fcd34d" font-weight="700">Norte</text>
+    <rect x="720" y="174" width="80" height="34" rx="0" fill="#1e293b" stroke="#86efac"/>
+    <text x="760" y="196" text-anchor="middle" fill="#e2e8f0">10.0</text>
+    <rect x="640" y="208" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="680" y="230" text-anchor="middle" fill="#fcd34d" font-weight="700">Sur</text>
+    <rect x="720" y="208" width="80" height="34" rx="0" fill="#1e293b" stroke="#86efac"/>
+    <text x="760" y="230" text-anchor="middle" fill="#e2e8f0">25.0</text>
+    <text x="640" y="270" font-size="13" fill="#94a3b8">lo que falta en un lado</text>
+    <text x="640" y="290" font-size="13" fill="#94a3b8">cuenta como 0</text>
+    <text x="430" y="375" text-anchor="middle" font-size="13" fill="#94a3b8">Con arrays de NumPy, la suma iría por posición: [10 + 5, 20 + 7] = [15, 27], Norte con Sur y Sur con Este.</text>
+    <text x="430" y="397" text-anchor="middle" font-size="13" fill="#94a3b8">pandas empareja por etiqueta: por eso un índice mal puesto no da error, da NaN.</text>
+  </g>
+</svg>

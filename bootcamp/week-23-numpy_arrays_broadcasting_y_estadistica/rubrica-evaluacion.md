@@ -89,4 +89,4 @@ Se evalúa **cómo** construiste el proyecto, con evidencia del repositorio y un
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | Semana 24 (próximamente) |
+| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | [Semana 24](../week-24-pandas_series_dataframe_y_seleccion/README.md) |

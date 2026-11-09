@@ -569,7 +569,7 @@ En `tests/test_my_arrays.py`, sustituye el ejemplo por **al menos 6 tests** tuyo
 - que `stats_of` dé la misma mediana que `trends.median` con **tus** datos de ejemplo;
 - que `estadisticas` con un `.csv` dé lo mismo que con el `.txt` equivalente.
 
-Haz que cada uno falle una vez, con un mutante, antes de darlo por bueno. Al final, al menos 779 tests en verde.
+Haz que cada uno falle una vez, con un mutante, antes de darlo por bueno. Al final, al menos 891 tests en verde.
 
 ### 14. README y pull request
 

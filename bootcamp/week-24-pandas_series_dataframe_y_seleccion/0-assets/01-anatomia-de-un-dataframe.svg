@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 475" role="img" aria-labelledby="t d">
+  <title id="t">Anatomía de un DataFrame</title>
+  <desc id="d">Una tabla con un índice llamado position, de 1 a 4, a la izquierda, y tres columnas: label de tipo str, value de tipo float64 y level de tipo str. Las etiquetas de las columnas forman columns y las de las filas forman index, que no es un dato más. La columna value está remarcada: frame['value'] es una Series que comparte el índice. Cada columna tiene un solo tipo; columnas distintas pueden tener tipos distintos. En la fila 3, value es NaN, el dato que falta en float64. frame.shape es (4, 3) porque el índice no cuenta como columna, y frame.loc[3] es la fila de etiqueta 3, otra Series.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="860" height="475" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Un DataFrame: un índice y columnas con nombre, cada una una Series con su tipo</text>
+    <rect x="140" y="110" width="110" height="34" rx="0" fill="#0f172a" stroke="#0f172a"/>
+    <text x="195" y="132" text-anchor="middle" fill="#fcd34d" font-style="italic">position</text>
+    <rect x="250" y="110" width="110" height="34" rx="0" fill="#172554" stroke="#93c5fd"/>
+    <text x="305" y="132" text-anchor="middle" font-weight="700" fill="#93c5fd">label</text>
+    <rect x="360" y="110" width="110" height="34" rx="0" fill="#172554" stroke="#93c5fd"/>
+    <text x="415" y="132" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="470" y="110" width="110" height="34" rx="0" fill="#172554" stroke="#93c5fd"/>
+    <text x="525" y="132" text-anchor="middle" font-weight="700" fill="#93c5fd">level</text>
+    <rect x="140" y="144" width="110" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="195" y="166" text-anchor="middle" font-weight="700" fill="#fcd34d">1</text>
+    <rect x="250" y="144" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="305" y="166" text-anchor="middle" fill="#e2e8f0">Norte</text>
+    <rect x="360" y="144" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="415" y="166" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="470" y="144" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="525" y="166" text-anchor="middle" fill="#e2e8f0">medio</text>
+    <rect x="140" y="178" width="110" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="195" y="200" text-anchor="middle" font-weight="700" fill="#fcd34d">2</text>
+    <rect x="250" y="178" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="305" y="200" text-anchor="middle" fill="#e2e8f0">Sur</text>
+    <rect x="360" y="178" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="415" y="200" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="470" y="178" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="525" y="200" text-anchor="middle" fill="#e2e8f0">bajo</text>
+    <rect x="140" y="212" width="110" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="195" y="234" text-anchor="middle" font-weight="700" fill="#fcd34d">3</text>
+    <rect x="250" y="212" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="305" y="234" text-anchor="middle" fill="#e2e8f0">Centro</text>
+    <rect x="360" y="212" width="110" height="34" rx="0" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="415" y="234" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="470" y="212" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="525" y="234" text-anchor="middle" fill="#e2e8f0">sin dato</text>
+    <rect x="140" y="246" width="110" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="195" y="268" text-anchor="middle" font-weight="700" fill="#fcd34d">4</text>
+    <rect x="250" y="246" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="305" y="268" text-anchor="middle" fill="#e2e8f0">Norte</text>
+    <rect x="360" y="246" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="415" y="268" text-anchor="middle" fill="#e2e8f0">48.9</text>
+    <rect x="470" y="246" width="110" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="525" y="268" text-anchor="middle" fill="#e2e8f0">medio</text>
+    <text x="305" y="302" text-anchor="middle" fill="#86efac" font-size="13">str</text>
+    <text x="415" y="302" text-anchor="middle" fill="#86efac" font-size="13">float64</text>
+    <text x="525" y="302" text-anchor="middle" fill="#86efac" font-size="13">str</text>
+    <rect x="360" y="110" width="110" height="170" rx="0" fill="none" stroke="#86efac"/>
+    <text x="40" y="70" fill="#93c5fd" font-weight="700">columns: las etiquetas de las columnas</text>
+    <path d="M250 76 L290 106" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="40" y="360" fill="#fcd34d" font-weight="700">index: las etiquetas de las filas,</text>
+    <text x="40" y="380" fill="#fcd34d" font-weight="700">no un dato más</text>
+    <path d="M140 345 L180 250" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="610" y="150" fill="#86efac" font-weight="700">frame["value"]</text>
+    <text x="610" y="172" fill="#94a3b8" font-size="13">una columna: una Series que</text>
+    <text x="610" y="190" fill="#94a3b8" font-size="13">comparte el índice</text>
+    <path d="M606 160 L474 175" stroke="#86efac" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="610" y="250" fill="#86efac" font-weight="700">dtypes: un tipo por columna</text>
+    <text x="610" y="272" fill="#94a3b8" font-size="13">dentro de una columna, todos iguales;</text>
+    <text x="610" y="290" fill="#94a3b8" font-size="13">entre columnas, distintos</text>
+    <text x="610" y="340" fill="#fca5a5" font-weight="700">NaN: el dato que falta en float64</text>
+    <path d="M606 335 L440 230" stroke="#fca5a5" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <text x="430" y="420" text-anchor="middle" font-size="13" fill="#94a3b8">frame.shape = (4, 3): el índice no cuenta como columna</text>
+    <text x="430" y="445" text-anchor="middle" font-size="13" fill="#94a3b8">frame.loc[3] es la fila de etiqueta 3: otra Series, con label, value y level como índice</text>
+  </g>
+</svg>
