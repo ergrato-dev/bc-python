@@ -49,7 +49,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 
 | Semana | Tema | Estado |
 |:--:|---|:--:|
-| 23 | NumPy | ⬜ |
+| [23](week-23-numpy_arrays_broadcasting_y_estadistica/README.md) | NumPy: arrays, broadcasting y estadística | ✅ |
 | 24 | pandas I: Series, DataFrame y selección | ⬜ |
 | 25 | pandas II: groupby, merge y series de tiempo | ⬜ |
 | 26 | Polars, Parquet y DuckDB | ⬜ |

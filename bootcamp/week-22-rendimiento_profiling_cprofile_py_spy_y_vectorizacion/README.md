@@ -169,4 +169,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README, co
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 21](../week-21-calidad_y_entrega_pre_commit_github_actions_auditoria_e_imagen_docker_segura/README.md) | **Semana 22** | Semana 23 (próximamente) |
+| [Semana 21](../week-21-calidad_y_entrega_pre_commit_github_actions_auditoria_e_imagen_docker_segura/README.md) | **Semana 22** | [Semana 23](../week-23-numpy_arrays_broadcasting_y_estadistica/README.md) |

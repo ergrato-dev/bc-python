@@ -1,0 +1,10 @@
+[project]
+name = "estadistica"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 23: NaN, estadística y aleatoriedad"
+requires-python = ">=3.14,<3.15"
+dependencies = ["numpy==2.5.4"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

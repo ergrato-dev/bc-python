@@ -1,0 +1,10 @@
+[project]
+name = "broadcasting"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 23: broadcasting y ejes"
+requires-python = ">=3.14,<3.15"
+dependencies = ["numpy==2.5.4"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

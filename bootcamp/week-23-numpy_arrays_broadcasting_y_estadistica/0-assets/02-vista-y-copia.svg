@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" role="img" aria-labelledby="t d">
+  <title id="t">Vista y copia</title>
+  <desc id="d">Un array a con seis valores: 12.5, 8, 55.1, 61, 48.9 y 9.5. Un corte, a[1:4], es una vista: no tiene memoria propia, mira los elementos 1 a 3 del mismo bloque, así que cambiar la vista cambia a, y a cambiar a, la vista. Un índice con lista, a[[0, 3]], y una máscara, a[a > 50], crean un array nuevo con su propio bloque: una copia. Cambiar la copia no toca a. Para que un corte no comparta memoria, se añade .copy(). np.shares_memory dice si dos arrays comparten bloque.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="860" height="430" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Un corte mira el mismo bloque; una lista o una máscara crean otro</text>
+    <text x="236" y="96" text-anchor="end" font-weight="700" fill="#fcd34d">a</text>
+    <rect x="250" y="70" width="60" height="40" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="280.0" y="96" text-anchor="middle">12.5</text>
+    <text x="280.0" y="128" text-anchor="middle" font-size="11" fill="#94a3b8">0</text>
+    <rect x="310" y="70" width="60" height="40" fill="#14532d" stroke="#fcd34d"/>
+    <text x="340.0" y="96" text-anchor="middle">8.0</text>
+    <text x="340.0" y="128" text-anchor="middle" font-size="11" fill="#94a3b8">1</text>
+    <rect x="370" y="70" width="60" height="40" fill="#14532d" stroke="#fcd34d"/>
+    <text x="400.0" y="96" text-anchor="middle">55.1</text>
+    <text x="400.0" y="128" text-anchor="middle" font-size="11" fill="#94a3b8">2</text>
+    <rect x="430" y="70" width="60" height="40" fill="#14532d" stroke="#fcd34d"/>
+    <text x="460.0" y="96" text-anchor="middle">61.0</text>
+    <text x="460.0" y="128" text-anchor="middle" font-size="11" fill="#94a3b8">3</text>
+    <rect x="490" y="70" width="60" height="40" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="520.0" y="96" text-anchor="middle">48.9</text>
+    <text x="520.0" y="128" text-anchor="middle" font-size="11" fill="#94a3b8">4</text>
+    <rect x="550" y="70" width="60" height="40" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="580.0" y="96" text-anchor="middle">9.5</text>
+    <text x="580.0" y="128" text-anchor="middle" font-size="11" fill="#94a3b8">5</text>
+    <rect x="25" y="190" width="250" height="170" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="150" y="220" text-anchor="middle" font-size="16" font-weight="700" fill="#86efac">a[1:4]</text>
+    <text x="150" y="246" text-anchor="middle" font-weight="700">corte: vista</text>
+    <text x="150" y="280" text-anchor="middle" font-size="13" fill="#cbd5e1">mismo bloque, sin copiar</text>
+    <text x="150" y="306" text-anchor="middle" font-size="13" fill="#cbd5e1">cambiarla cambia a</text>
+    <text x="150" y="332" text-anchor="middle" font-size="13" fill="#cbd5e1">shares_memory: True</text>
+    <rect x="305" y="190" width="250" height="170" rx="8" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="430" y="220" text-anchor="middle" font-size="16" font-weight="700" fill="#fca5a5">a[[0, 3]]</text>
+    <text x="430" y="246" text-anchor="middle" font-weight="700">lista de índices: copia</text>
+    <text x="430" y="280" text-anchor="middle" font-size="13" fill="#cbd5e1">bloque nuevo: 12.5, 61.0</text>
+    <text x="430" y="306" text-anchor="middle" font-size="13" fill="#cbd5e1">cambiarla no toca a</text>
+    <text x="430" y="332" text-anchor="middle" font-size="13" fill="#cbd5e1">shares_memory: False</text>
+    <rect x="585" y="190" width="250" height="170" rx="8" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="710" y="220" text-anchor="middle" font-size="16" font-weight="700" fill="#fca5a5">a[a > 50]</text>
+    <text x="710" y="246" text-anchor="middle" font-weight="700">máscara: copia</text>
+    <text x="710" y="280" text-anchor="middle" font-size="13" fill="#cbd5e1">bloque nuevo: 55.1, 61.0</text>
+    <text x="710" y="306" text-anchor="middle" font-size="13" fill="#cbd5e1">cambiarla no toca a</text>
+    <text x="710" y="332" text-anchor="middle" font-size="13" fill="#cbd5e1">shares_memory: False</text>
+    <line x1="360.0" y1="134" x2="170" y2="186" stroke="#86efac" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="430" y1="134" x2="430" y2="186" stroke="#94a3b8" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+    <line x1="520" y1="134" x2="690" y2="186" stroke="#94a3b8" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+    <text x="430" y="395" text-anchor="middle" font-size="13">¿Necesitas un corte independiente? a[1:4].copy(). ¿Dudas? np.shares_memory(a, b).</text>
+  </g>
+</svg>

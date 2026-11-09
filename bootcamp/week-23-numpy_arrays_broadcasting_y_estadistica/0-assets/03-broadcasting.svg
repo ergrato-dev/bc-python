@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 545" role="img" aria-labelledby="t d">
+  <title id="t">Broadcasting</title>
+  <desc id="d">Tres restas con una tabla de forma (3, 4). Primera: tabla menos un array de forma (4,), las medias de cada columna. Las formas se alinean por la derecha: 4 con 4 encaja, y el eje que falta cuenta como 1 y se estira a 3 filas sin copiar. Resultado de forma (3, 4). Segunda: tabla menos un array de forma (3,), las medias de cada fila. Alineadas por la derecha, 4 frente a 3: ni son iguales ni ninguno es 1, así que NumPy da ValueError: operands could not be broadcast together with shapes (3,4) (3,). Tercera: tabla menos un array de forma (3, 1), las mismas medias por fila con keepdims=True o con [:, None]. 4 frente a 1 encaja estirando la columna a 4, y 3 con 3 encaja. Resultado de forma (3, 4). La regla: comparando por la derecha, dos ejes encajan si son iguales o si uno de ellos es 1.</desc>
+  <rect width="860" height="545" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">Broadcasting: se comparan las formas por la derecha; cada eje, igual o 1</text>
+    <text x="40" y="70" font-weight="700" fill="#86efac">tabla - tabla.mean(axis=0)</text>
+    <text x="40" y="94" font-size="13" fill="#94a3b8">formas (3, 4)  y  (4,)</text>
+    <rect x="40" y="110" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="110" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="110" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="110" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="40" y="136" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="136" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="136" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="136" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="40" y="162" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="162" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="162" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="162" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="170" y="156" text-anchor="middle" font-size="20">−</text>
+    <rect x="195" y="110" width="26" height="26" fill="#14532d" stroke="#86efac"/>
+    <rect x="221" y="110" width="26" height="26" fill="#14532d" stroke="#86efac"/>
+    <rect x="247" y="110" width="26" height="26" fill="#14532d" stroke="#86efac"/>
+    <rect x="273" y="110" width="26" height="26" fill="#14532d" stroke="#86efac"/>
+    <rect x="195" y="136" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="221" y="136" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="247" y="136" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="273" y="136" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="195" y="162" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="221" y="162" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="247" y="162" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="273" y="162" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <text x="330" y="156" text-anchor="middle" font-size="20" fill="#86efac">=</text>
+    <text x="355" y="156" font-weight="700" fill="#86efac">encaja: (3, 4)</text>
+    <text x="40" y="220" font-weight="700" fill="#fca5a5">tabla - tabla.mean(axis=1)</text>
+    <text x="40" y="244" font-size="13" fill="#94a3b8">formas (3, 4)  y  (3,)</text>
+    <rect x="40" y="260" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="260" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="260" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="260" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="40" y="286" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="286" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="286" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="286" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="40" y="312" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="312" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="312" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="312" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="170" y="306" text-anchor="middle" font-size="20">−</text>
+    <rect x="195" y="260" width="26" height="26" fill="#3f1d1d" stroke="#fca5a5"/>
+    <rect x="221" y="260" width="26" height="26" fill="#3f1d1d" stroke="#fca5a5"/>
+    <rect x="247" y="260" width="26" height="26" fill="#3f1d1d" stroke="#fca5a5"/>
+    <text x="330" y="306" text-anchor="middle" font-size="20" fill="#fca5a5">✗</text>
+    <text x="355" y="306" font-weight="700" fill="#fca5a5">ValueError</text>
+    <text x="40" y="370" font-weight="700" fill="#86efac">tabla - tabla.mean(axis=1, keepdims=True)</text>
+    <text x="40" y="394" font-size="13" fill="#94a3b8">formas (3, 4)  y  (3, 1)</text>
+    <rect x="40" y="410" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="410" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="410" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="410" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="40" y="436" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="436" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="436" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="436" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="40" y="462" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="66" y="462" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="92" y="462" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <rect x="118" y="462" width="26" height="26" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="170" y="456" text-anchor="middle" font-size="20">−</text>
+    <rect x="195" y="410" width="26" height="26" fill="#14532d" stroke="#86efac"/>
+    <rect x="221" y="410" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="247" y="410" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="273" y="410" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="195" y="436" width="26" height="26" fill="#14532d" stroke="#86efac"/>
+    <rect x="221" y="436" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="247" y="436" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="273" y="436" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="195" y="462" width="26" height="26" fill="#14532d" stroke="#86efac"/>
+    <rect x="221" y="462" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="247" y="462" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <rect x="273" y="462" width="26" height="26" fill="#14532d" stroke="#86efac" stroke-dasharray="3 3" fill-opacity="0.35"/>
+    <text x="330" y="456" text-anchor="middle" font-size="20" fill="#86efac">=</text>
+    <text x="355" y="456" font-weight="700" fill="#86efac">encaja: (3, 4)</text>
+    <rect x="560" y="56" width="270" height="410" rx="8" fill="#1e293b" stroke="#334155"/>
+    <text x="695" y="84" text-anchor="middle" font-weight="700" fill="#fcd34d">Alinea por la derecha</text>
+    <text x="660" y="130" text-anchor="end">(3, 4)</text>
+    <text x="660" y="154" text-anchor="end">(4,)</text>
+    <line x1="590" y1="164" x2="668" y2="164" stroke="#94a3b8"/>
+    <text x="682" y="130" font-size="13" fill="#86efac">falta un eje: cuenta como 1</text>
+    <text x="682" y="152" font-size="13" fill="#86efac">y se estira a 3 filas</text>
+    <text x="660" y="260" text-anchor="end">(3, 4)</text>
+    <text x="660" y="284" text-anchor="end">(3,)</text>
+    <line x1="590" y1="294" x2="668" y2="294" stroke="#94a3b8"/>
+    <text x="682" y="260" font-size="13" fill="#fca5a5">4 frente a 3: distintos</text>
+    <text x="682" y="282" font-size="13" fill="#fca5a5">y ninguno es 1</text>
+    <text x="660" y="390" text-anchor="end">(3, 4)</text>
+    <text x="660" y="414" text-anchor="end">(3, 1)</text>
+    <line x1="590" y1="424" x2="668" y2="424" stroke="#94a3b8"/>
+    <text x="682" y="390" font-size="13" fill="#86efac">3 con 3 encaja;</text>
+    <text x="682" y="412" font-size="13" fill="#86efac">1 se estira a 4 columnas</text>
+    <text x="430" y="525" text-anchor="middle" font-size="13" fill="#94a3b8">Los cuadros a trazos no existen en memoria: NumPy repite la fila o la columna sin copiarla.</text>
+  </g>
+</svg>
