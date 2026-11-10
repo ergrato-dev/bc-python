@@ -173,4 +173,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; lo
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 25](../week-25-pandas_groupby_merge_y_series_de_tiempo/README.md) | **Semana 26** | Semana 27 (próximamente) |
+| [Semana 25](../week-25-pandas_groupby_merge_y_series_de_tiempo/README.md) | **Semana 26** | [Semana 27](../week-27-visualizacion_con_matplotlib_seaborn_y_plotly/README.md) |

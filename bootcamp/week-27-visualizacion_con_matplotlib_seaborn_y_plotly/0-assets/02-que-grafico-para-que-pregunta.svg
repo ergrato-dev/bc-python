@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" role="img" aria-labelledby="t d">
+  <title id="t">Qué gráfico para qué pregunta</title>
+  <desc id="d">Seis tarjetas, cada una con una pregunta y el gráfico que la responde. Cómo cambia con el tiempo: una línea. Qué grupo es mayor: barras que empiezan en cero. Cómo se reparten los valores: un histograma o una caja. Qué relación hay entre dos variables: puntos. Muchos grupos a la vez: un panel por grupo con la misma escala. Una cantidad en dos dimensiones: un mapa de calor con una paleta secuencial.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="880" height="520" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="38" font-size="20" font-weight="700">Qué gráfico para qué pregunta</text>
+    <rect x="30" y="60" width="260" height="205" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="44" y="86" font-weight="700">¿Cómo cambia con el tiempo?</text>
+    <text x="44" y="250" font-weight="700" fill="#93c5fd">Línea</text>
+    <line x1="60" y1="220" x2="260" y2="220" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="60" y1="220" x2="60" y2="105" stroke="#94a3b8" stroke-width="1.5"/>
+    <polyline points="70,180 110,150 150,165 190,125 230,140" fill="none" stroke="#93c5fd" stroke-width="3"/>
+    <rect x="310" y="60" width="260" height="205" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="324" y="86" font-weight="700">¿Qué grupo es mayor?</text>
+    <text x="324" y="250" font-weight="700" fill="#86efac">Barras desde cero</text>
+    <line x1="340" y1="220" x2="540" y2="220" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="340" y1="220" x2="340" y2="105" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="355" y="160" width="30" height="60" fill="#86efac"/>
+    <rect x="400" y="120" width="30" height="100" fill="#86efac"/>
+    <rect x="445" y="140" width="30" height="80" fill="#86efac"/>
+    <rect x="490" y="180" width="30" height="40" fill="#86efac"/>
+    <rect x="590" y="60" width="260" height="205" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="604" y="86" font-weight="700">¿Cómo se reparten?</text>
+    <text x="604" y="250" font-weight="700" fill="#fcd34d">Histograma o caja</text>
+    <line x1="620" y1="220" x2="820" y2="220" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="620" y1="220" x2="620" y2="105" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="630" y="210" width="21" height="10" fill="#fcd34d"/>
+    <rect x="653" y="190" width="21" height="30" fill="#fcd34d"/>
+    <rect x="676" y="160" width="21" height="60" fill="#fcd34d"/>
+    <rect x="699" y="125" width="21" height="95" fill="#fcd34d"/>
+    <rect x="722" y="140" width="21" height="80" fill="#fcd34d"/>
+    <rect x="745" y="175" width="21" height="45" fill="#fcd34d"/>
+    <rect x="768" y="200" width="21" height="20" fill="#fcd34d"/>
+    <rect x="791" y="212" width="21" height="8" fill="#fcd34d"/>
+    <rect x="30" y="285" width="260" height="205" rx="8" fill="#1e293b" stroke="#c4b5fd"/>
+    <text x="44" y="311" font-weight="700">¿Qué relación hay?</text>
+    <text x="44" y="475" font-weight="700" fill="#c4b5fd">Puntos</text>
+    <line x1="60" y1="445" x2="260" y2="445" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="60" y1="445" x2="60" y2="330" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="75" cy="415" r="3" fill="#c4b5fd"/>
+    <circle cx="82" cy="410" r="3" fill="#c4b5fd"/>
+    <circle cx="88" cy="400" r="3" fill="#c4b5fd"/>
+    <circle cx="94" cy="420" r="3" fill="#c4b5fd"/>
+    <circle cx="101" cy="422" r="3" fill="#c4b5fd"/>
+    <circle cx="108" cy="396" r="3" fill="#c4b5fd"/>
+    <circle cx="114" cy="408" r="3" fill="#c4b5fd"/>
+    <circle cx="120" cy="405" r="3" fill="#c4b5fd"/>
+    <circle cx="127" cy="389" r="3" fill="#c4b5fd"/>
+    <circle cx="134" cy="405" r="3" fill="#c4b5fd"/>
+    <circle cx="140" cy="381" r="3" fill="#c4b5fd"/>
+    <circle cx="146" cy="391" r="3" fill="#c4b5fd"/>
+    <circle cx="153" cy="401" r="3" fill="#c4b5fd"/>
+    <circle cx="160" cy="373" r="3" fill="#c4b5fd"/>
+    <circle cx="166" cy="380" r="3" fill="#c4b5fd"/>
+    <circle cx="172" cy="393" r="3" fill="#c4b5fd"/>
+    <circle cx="179" cy="367" r="3" fill="#c4b5fd"/>
+    <circle cx="186" cy="367" r="3" fill="#c4b5fd"/>
+    <circle cx="192" cy="365" r="3" fill="#c4b5fd"/>
+    <circle cx="198" cy="365" r="3" fill="#c4b5fd"/>
+    <circle cx="205" cy="352" r="3" fill="#c4b5fd"/>
+    <circle cx="212" cy="379" r="3" fill="#c4b5fd"/>
+    <circle cx="218" cy="348" r="3" fill="#c4b5fd"/>
+    <circle cx="224" cy="355" r="3" fill="#c4b5fd"/>
+    <circle cx="231" cy="364" r="3" fill="#c4b5fd"/>
+    <circle cx="238" cy="351" r="3" fill="#c4b5fd"/>
+    <circle cx="244" cy="356" r="3" fill="#c4b5fd"/>
+    <circle cx="250" cy="344" r="3" fill="#c4b5fd"/>
+    <rect x="310" y="285" width="260" height="205" rx="8" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="324" y="311" font-weight="700">¿Muchos grupos a la vez?</text>
+    <text x="324" y="475" font-weight="700" fill="#fca5a5">Un panel por grupo</text>
+    <line x1="340" y1="445" x2="540" y2="445" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="340" y1="445" x2="340" y2="330" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="345" y="340" width="190" height="32" rx="3" fill="#0f172a" stroke="#94a3b8"/>
+    <polyline points="352,362 400,350 450,360 525,348" fill="none" stroke="#fca5a5" stroke-width="2"/>
+    <rect x="345" y="377" width="190" height="32" rx="3" fill="#0f172a" stroke="#94a3b8"/>
+    <polyline points="352,399 400,390 450,397 525,385" fill="none" stroke="#fca5a5" stroke-width="2"/>
+    <rect x="345" y="414" width="190" height="32" rx="3" fill="#0f172a" stroke="#94a3b8"/>
+    <polyline points="352,436 400,430 450,434 525,422" fill="none" stroke="#fca5a5" stroke-width="2"/>
+    <rect x="590" y="285" width="260" height="205" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="604" y="311" font-weight="700">¿Una cantidad en dos ejes?</text>
+    <text x="604" y="475" font-weight="700" fill="#93c5fd">Mapa de calor</text>
+    <line x1="620" y1="445" x2="820" y2="445" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="620" y1="445" x2="620" y2="330" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect x="628" y="335" width="25" height="25" fill="#0c4a6e"/>
+    <rect x="655" y="335" width="25" height="25" fill="#0369a1"/>
+    <rect x="682" y="335" width="25" height="25" fill="#38bdf8"/>
+    <rect x="709" y="335" width="25" height="25" fill="#0c4a6e"/>
+    <rect x="736" y="335" width="25" height="25" fill="#0369a1"/>
+    <rect x="763" y="335" width="25" height="25" fill="#38bdf8"/>
+    <rect x="790" y="335" width="25" height="25" fill="#0c4a6e"/>
+    <rect x="628" y="362" width="25" height="25" fill="#075985"/>
+    <rect x="655" y="362" width="25" height="25" fill="#38bdf8"/>
+    <rect x="682" y="362" width="25" height="25" fill="#075985"/>
+    <rect x="709" y="362" width="25" height="25" fill="#075985"/>
+    <rect x="736" y="362" width="25" height="25" fill="#38bdf8"/>
+    <rect x="763" y="362" width="25" height="25" fill="#075985"/>
+    <rect x="790" y="362" width="25" height="25" fill="#075985"/>
+    <rect x="628" y="389" width="25" height="25" fill="#0369a1"/>
+    <rect x="655" y="389" width="25" height="25" fill="#0c4a6e"/>
+    <rect x="682" y="389" width="25" height="25" fill="#075985"/>
+    <rect x="709" y="389" width="25" height="25" fill="#0369a1"/>
+    <rect x="736" y="389" width="25" height="25" fill="#0c4a6e"/>
+    <rect x="763" y="389" width="25" height="25" fill="#075985"/>
+    <rect x="790" y="389" width="25" height="25" fill="#0369a1"/>
+    <rect x="628" y="416" width="25" height="25" fill="#0284c7"/>
+    <rect x="655" y="416" width="25" height="25" fill="#7dd3fc"/>
+    <rect x="682" y="416" width="25" height="25" fill="#075985"/>
+    <rect x="709" y="416" width="25" height="25" fill="#0284c7"/>
+    <rect x="736" y="416" width="25" height="25" fill="#7dd3fc"/>
+    <rect x="763" y="416" width="25" height="25" fill="#075985"/>
+    <rect x="790" y="416" width="25" height="25" fill="#0284c7"/>
+  </g>
+</svg>

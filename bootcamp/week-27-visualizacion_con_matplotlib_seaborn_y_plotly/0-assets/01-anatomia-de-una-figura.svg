@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="t d">
+  <title id="t">Anatomía de una figura de matplotlib</title>
+  <desc id="d">Una Figure es el lienzo entero. Dentro hay unos Axes: la zona de dibujo con su eje x, su eje y, su título y su leyenda. Dentro de los Axes, cada cosa que se ve es un artista: una Line2D por etiqueta, con sus marcadores, el texto del título, los nombres de los ejes, las marcas y la leyenda. Un NaN corta la línea. A la derecha, los métodos con los que se crea cada pieza.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="880" height="500" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="38" font-size="20" font-weight="700">Anatomía de una figura</text>
+    <rect x="30" y="60" width="540" height="410" rx="8" fill="#1e293b" stroke="#c4b5fd"/>
+    <text x="45" y="84" font-weight="700" fill="#c4b5fd">Figure</text>
+    <text x="300" y="92" text-anchor="middle" font-weight="700">medidas.txt: media cada 2h</text>
+    <rect x="110" y="110" width="380" height="270" rx="8" fill="#0f172a" stroke="#93c5fd"/>
+    <text x="118" y="128" font-weight="700" fill="#93c5fd">Axes</text>
+    <line x1="110" y1="380" x2="490" y2="380" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="110" y1="110" x2="110" y2="380" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="160" y1="380" x2="160" y2="387" stroke="#94a3b8" stroke-width="2"/>
+    <text x="160" y="403" text-anchor="middle" font-size="12" fill="#94a3b8">08:00</text>
+    <line x1="260" y1="380" x2="260" y2="387" stroke="#94a3b8" stroke-width="2"/>
+    <text x="260" y="403" text-anchor="middle" font-size="12" fill="#94a3b8">10:00</text>
+    <line x1="360" y1="380" x2="360" y2="387" stroke="#94a3b8" stroke-width="2"/>
+    <text x="360" y="403" text-anchor="middle" font-size="12" fill="#94a3b8">12:00</text>
+    <line x1="460" y1="380" x2="460" y2="387" stroke="#94a3b8" stroke-width="2"/>
+    <text x="460" y="403" text-anchor="middle" font-size="12" fill="#94a3b8">14:00</text>
+    <line x1="103" y1="330" x2="110" y2="330" stroke="#94a3b8" stroke-width="2"/>
+    <text x="97" y="334" text-anchor="end" font-size="12" fill="#94a3b8">10</text>
+    <line x1="103" y1="250" x2="110" y2="250" stroke="#94a3b8" stroke-width="2"/>
+    <text x="97" y="254" text-anchor="end" font-size="12" fill="#94a3b8">30</text>
+    <line x1="103" y1="170" x2="110" y2="170" stroke="#94a3b8" stroke-width="2"/>
+    <text x="97" y="174" text-anchor="end" font-size="12" fill="#94a3b8">50</text>
+    <text x="300" y="430" text-anchor="middle">periodo</text>
+    <text x="60" y="250" text-anchor="middle">media</text>
+    <polyline points="160,335 260,300" fill="none" stroke="#fcd34d" stroke-width="2.5"/>
+    <circle cx="160" cy="325" r="5" fill="#86efac"/>
+    <circle cx="360" cy="197" r="5" fill="#86efac"/>
+    <circle cx="160" cy="335" r="5" fill="#fcd34d"/>
+    <circle cx="260" cy="300" r="5" fill="#fcd34d"/>
+    <circle cx="460" cy="330" r="5" fill="#fcd34d"/>
+    <text x="260" y="190" text-anchor="middle" font-size="12" fill="#fca5a5">NaN: sin línea</text>
+    <line x1="260" y1="197" x2="260" y2="250" stroke="#fca5a5" stroke-width="1"/>
+    <rect x="375" y="120" width="105" height="62" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="385" y="138" font-size="12" font-weight="700">etiqueta</text>
+    <line x1="385" y1="155" x2="405" y2="155" stroke="#86efac" stroke-width="2.5"/>
+    <text x="412" y="159" font-size="12">Norte</text>
+    <line x1="385" y1="172" x2="405" y2="172" stroke="#fcd34d" stroke-width="2.5"/>
+    <text x="412" y="176" font-size="12">Sur</text>
+    <rect x="590" y="80" width="265" height="54" rx="8" fill="#1e293b" stroke="#c4b5fd"/>
+    <text x="602" y="102" font-size="13" font-weight="700" fill="#c4b5fd">Figure(figsize=(8, 4.5))</text>
+    <text x="602" y="122" font-size="12" fill="#94a3b8">el lienzo, en pulgadas</text>
+    <rect x="590" y="146" width="265" height="54" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="602" y="168" font-size="13" font-weight="700" fill="#93c5fd">figure.add_subplot()</text>
+    <text x="602" y="188" font-size="12" fill="#94a3b8">unos ejes dentro</text>
+    <rect x="590" y="212" width="265" height="54" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="602" y="234" font-size="13" font-weight="700" fill="#86efac">axes.plot(x, y, marker="o")</text>
+    <text x="602" y="254" font-size="12" fill="#94a3b8">una Line2D por etiqueta</text>
+    <rect x="590" y="278" width="265" height="54" rx="8" fill="#1e293b" stroke="#e2e8f0"/>
+    <text x="602" y="300" font-size="13" font-weight="700">axes.set(title=, xlabel=, ylabel=)</text>
+    <text x="602" y="320" font-size="12" fill="#94a3b8">los textos</text>
+    <rect x="590" y="344" width="265" height="54" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="602" y="366" font-size="13" font-weight="700" fill="#94a3b8">axes.legend(líneas, nombres)</text>
+    <text x="602" y="386" font-size="12" fill="#94a3b8">la leyenda</text>
+    <rect x="590" y="410" width="265" height="54" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="602" y="432" font-size="13" font-weight="700" fill="#fcd34d">figure.savefig("g.svg")</text>
+    <text x="602" y="452" font-size="12" fill="#94a3b8">el formato, por la extensión</text>
+  </g>
+</svg>

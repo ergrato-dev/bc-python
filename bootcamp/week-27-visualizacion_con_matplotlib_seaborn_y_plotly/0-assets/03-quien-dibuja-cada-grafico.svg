@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" role="img" aria-labelledby="t d">
+  <title id="t">matplotlib, seaborn y plotly: quién dibuja</title>
+  <desc id="d">Arriba, seaborn es una capa sobre matplotlib: recibe una tabla larga, agrupa y calcula, y dibuja con los Axes de matplotlib. matplotlib dibuja con el backend Agg, dentro de tu proceso de Python, y escribe PNG, SVG o PDF sin nada más. Abajo, plotly en Python solo construye una figura, un diccionario de data y layout que se convierte en JSON. Quien dibuja es plotly.js, en el navegador, dentro de un HTML. Para un PNG, plotly necesita Kaleido y un navegador Chrome.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="880" height="430" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="30" y="38" font-size="20" font-weight="700">Quién dibuja cada gráfico</text>
+    <rect x="20" y="58" width="840" height="170" rx="8" fill="#0f172a" stroke="#94a3b8" stroke-dasharray="5 4"/>
+    <text x="36" y="80" font-size="13" font-weight="700" fill="#94a3b8">Tu proceso de Python</text>
+    <rect x="40" y="100" width="150" height="50" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="115.0" y="130.0" text-anchor="middle">pd.DataFrame</text>
+    <rect x="240" y="100" width="150" height="50" rx="8" fill="#052e16" stroke="#86efac"/>
+    <text x="315.0" y="130.0" text-anchor="middle" font-weight="700" fill="#86efac">seaborn</text>
+    <text x="315" y="93" text-anchor="middle" font-size="12" fill="#94a3b8">agrupa, calcula, colorea</text>
+    <rect x="440" y="100" width="150" height="50" rx="8" fill="#082f49" stroke="#93c5fd"/>
+    <text x="515.0" y="130.0" text-anchor="middle" font-weight="700" fill="#93c5fd">matplotlib</text>
+    <text x="515" y="93" text-anchor="middle" font-size="12" fill="#94a3b8">Figure, Axes, Agg</text>
+    <rect x="660" y="100" width="180" height="50" rx="8" fill="#422006" stroke="#fcd34d"/>
+    <text x="750.0" y="130.0" text-anchor="middle" font-weight="700" fill="#fcd34d">PNG · SVG · PDF</text>
+    <line x1="190" y1="125" x2="238" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="390" y1="125" x2="438" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="590" y1="125" x2="658" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M115 150 C 115 205, 515 205, 515 152" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/>
+    <text x="315" y="216" text-anchor="middle" font-size="12" fill="#94a3b8">o directamente, con axes.plot</text>
+    <rect x="20" y="250" width="420" height="160" rx="8" fill="#0f172a" stroke="#94a3b8" stroke-dasharray="5 4"/>
+    <text x="36" y="272" font-size="13" font-weight="700" fill="#94a3b8">Tu proceso de Python</text>
+    <rect x="40" y="292" width="150" height="50" rx="8" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="115.0" y="322.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">plotly</text>
+    <rect x="240" y="292" width="180" height="50" rx="8" fill="#1e293b" stroke="#c4b5fd"/>
+    <text x="330.0" y="322.0" text-anchor="middle">data + layout (JSON)</text>
+    <line x1="190" y1="317" x2="238" y2="317" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="230" y="380" text-anchor="middle" font-size="12" fill="#94a3b8">Python no dibuja nada: describe</text>
+    <rect x="470" y="250" width="390" height="160" rx="8" fill="#0f172a" stroke="#94a3b8" stroke-dasharray="5 4"/>
+    <text x="486" y="272" font-size="13" font-weight="700" fill="#94a3b8">El navegador</text>
+    <rect x="490" y="292" width="160" height="50" rx="8" fill="#1e293b" stroke="#c4b5fd"/>
+    <text x="570.0" y="322.0" text-anchor="middle">HTML</text>
+    <rect x="680" y="292" width="160" height="50" rx="8" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="760.0" y="322.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">plotly.js dibuja</text>
+    <line x1="420" y1="317" x2="488" y2="317" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="650" y1="317" x2="678" y2="317" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="665" y="380" text-anchor="middle" font-size="12" fill="#94a3b8">¿Un PNG? Kaleido + Chrome</text>
+  </g>
+</svg>
