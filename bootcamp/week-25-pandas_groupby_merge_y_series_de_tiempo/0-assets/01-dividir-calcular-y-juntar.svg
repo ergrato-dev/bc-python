@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" role="img" aria-labelledby="t d">
+  <title id="t">Dividir, calcular y juntar</title>
+  <desc id="d">La tabla readings tiene seis filas con station y value: Sur 8.0, Norte 12.5, Sur 9.5, Este 30.0, Norte 48.9 y Norte 20.0. Primero, groupby('station') divide las filas en tres grupos: Este con 30.0, Norte con 12.5, 48.9 y 20.0, y Sur con 8.0 y 9.5. Después, mean() calcula la media de cada grupo por separado: 30.0, 27.1 y 8.75. Por último, pandas junta los tres resultados en una Series con la estación como índice, ordenada: Este 30.0, Norte 27.1, Sur 8.75.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="860" height="430" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">groupby: dividir, calcular y juntar</text>
+    <text x="40" y="72" font-weight="700" fill="#93c5fd">readings</text>
+    <rect x="40" y="84" width="90" height="30" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="85.0" y="104.0" text-anchor="middle" font-weight="700" fill="#93c5fd">station</text>
+    <rect x="130" y="84" width="70" height="30" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="165.0" y="104.0" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="40" y="114" width="90" height="32" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="85.0" y="135.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="130" y="114" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="165.0" y="135.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="40" y="146" width="90" height="32" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="85.0" y="167.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="130" y="146" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="165.0" y="167.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="40" y="178" width="90" height="32" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="85.0" y="199.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="130" y="178" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="165.0" y="199.0" text-anchor="middle" fill="#e2e8f0">9.5</text>
+    <rect x="40" y="210" width="90" height="32" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="85.0" y="231.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">Este</text>
+    <rect x="130" y="210" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="165.0" y="231.0" text-anchor="middle" fill="#e2e8f0">30.0</text>
+    <rect x="40" y="242" width="90" height="32" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="85.0" y="263.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="130" y="242" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="165.0" y="263.0" text-anchor="middle" fill="#e2e8f0">48.9</text>
+    <rect x="40" y="274" width="90" height="32" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="85.0" y="295.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="130" y="274" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="165.0" y="295.0" text-anchor="middle" fill="#e2e8f0">20.0</text>
+    <text x="270" y="72" font-weight="700" fill="#93c5fd">1 · dividir</text>
+    <text x="270" y="92" font-size="13" fill="#94a3b8">groupby("station")</text>
+    <text x="560" y="72" font-weight="700" fill="#93c5fd">2 · calcular</text>
+    <text x="560" y="92" font-size="13" fill="#94a3b8">["value"].mean()</text>
+    <text x="690" y="72" font-weight="700" fill="#93c5fd">3 · juntar</text>
+    <text x="690" y="92" font-size="13" fill="#94a3b8">una Series</text>
+    <rect x="270" y="110" width="70" height="34" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="305.0" y="132.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">Este</text>
+    <rect x="340" y="110" width="56" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="368.0" y="132.0" text-anchor="middle" fill="#e2e8f0">30.0</text>
+    <path d="M206 210 L264 127" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <path d="M402 127 L554 127" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="560" y="110" width="64" height="34" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="592.0" y="132.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">30.0</text>
+    <rect x="270" y="190" width="70" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="305.0" y="212.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="340" y="190" width="56" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="368.0" y="212.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="396" y="190" width="56" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="424.0" y="212.0" text-anchor="middle" fill="#e2e8f0">48.9</text>
+    <rect x="452" y="190" width="56" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="480.0" y="212.0" text-anchor="middle" fill="#e2e8f0">20.0</text>
+    <path d="M206 210 L264 207" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <path d="M514 207 L554 207" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="560" y="190" width="64" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="592.0" y="212.0" text-anchor="middle" font-weight="700" fill="#fcd34d">27.1</text>
+    <rect x="270" y="270" width="70" height="34" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="305.0" y="292.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="340" y="270" width="56" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="368.0" y="292.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="396" y="270" width="56" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="424.0" y="292.0" text-anchor="middle" fill="#e2e8f0">9.5</text>
+    <path d="M206 210 L264 287" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <path d="M458 287 L554 287" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="560" y="270" width="64" height="34" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="592.0" y="292.0" text-anchor="middle" font-weight="700" fill="#86efac">8.75</text>
+    <path d="M630 127 L684 177" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="690" y="160" width="80" height="34" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="730.0" y="182.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">Este</text>
+    <rect x="770" y="160" width="60" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="800.0" y="182.0" text-anchor="middle" fill="#e2e8f0">30.0</text>
+    <path d="M630 207 L684 211" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="690" y="194" width="80" height="34" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="730.0" y="216.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="770" y="194" width="60" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="800.0" y="216.0" text-anchor="middle" fill="#e2e8f0">27.1</text>
+    <path d="M630 287 L684 245" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="690" y="228" width="80" height="34" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="730.0" y="250.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="770" y="228" width="60" height="34" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="800.0" y="250.0" text-anchor="middle" fill="#e2e8f0">8.75</text>
+    <text x="690" y="150" font-size="13" fill="#94a3b8">station</text>
+    <text x="690" y="284" font-size="13" fill="#94a3b8">Name: value</text>
+    <text x="40" y="352" fill="#94a3b8">Las filas no tienen que estar juntas ni ordenadas: groupby las reparte por el valor de la clave.</text>
+    <text x="40" y="378" fill="#94a3b8">Nada se calcula hasta que pides algo: mean(), agg(...), transform(...), size()...</text>
+    <text x="40" y="404" fill="#94a3b8">El resultado tiene la clave como índice, ordenada; con sort=False, en el orden en que aparece cada una.</text>
+  </g>
+</svg>

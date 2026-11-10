@@ -167,4 +167,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; lo
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 23](../week-23-numpy_arrays_broadcasting_y_estadistica/README.md) | **Semana 24** | Semana 25 (próximamente) |
+| [Semana 23](../week-23-numpy_arrays_broadcasting_y_estadistica/README.md) | **Semana 24** | [Semana 25](../week-25-pandas_groupby_merge_y_series_de_tiempo/README.md) |

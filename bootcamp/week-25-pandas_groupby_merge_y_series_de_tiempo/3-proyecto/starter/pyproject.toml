@@ -1,0 +1,74 @@
+[project]
+name = "observatorio"
+version = "0.24.0"
+description = "Observatorio de datos de mi dominio"
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "alembic==1.20.1",
+    "fastapi==0.162.0",
+    "httpx==0.28.1",
+    "numpy==2.5.4",
+    "pandas==3.1.0",
+    "psycopg[binary]==3.3.6",
+    "pydantic==2.14.2",
+    "pydantic-settings==2.16.1",
+    "rich==15.0.0",
+    "sqlalchemy==2.1.6",
+    "typer==0.27.3",
+    "uvicorn==0.54.0",
+]
+
+[project.scripts]
+# `uv run observatorio` ejecuta la aplicación Typer `app` de src/observatorio/cli.py.
+observatorio = "observatorio.cli:app"
+
+[dependency-groups]
+dev = [
+    "coverage==7.17.0",
+    "httpx2==2.16.0",
+    "hypothesis==6.170.8",
+    "mypy==2.4.1",
+    "pandas-stubs==3.1.0.261029",
+    "pre-commit==4.7.0",
+    "py-spy==0.4.2",
+    "pytest==9.2.0",
+    "pyyaml==6.0.3",
+    "ruff==0.17.3",
+    "types-pyyaml==6.0.12.20260906",
+]
+
+[build-system]
+requires = ["uv_build==0.13.7"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+# Mide tu paquete, no los tests ni las bibliotecas, y cuenta también las ramas:
+# un if cuyo else nunca se ejecutó no está cubierto aunque su línea sí.
+source_pkgs = ["observatorio"]
+branch = true
+
+[tool.coverage.report]
+# `coverage report` falla por debajo del 95 % y dice qué líneas no ejecutó ningún test.
+fail_under = 95
+show_missing = true
+# El arranque desde la terminal se prueba ejecutando el programa, no con pytest.
+exclude_also = ['if __name__ == "__main__":']
+
+[tool.ruff]
+# Líneas de hasta 100 caracteres (por defecto, 88). Las reglas del linter son las
+# recomendadas de ruff: no hace falta elegirlas.
+line-length = 100
+
+[tool.mypy]
+# `uv run mypy` sin argumentos revisa estas carpetas.
+files = ["src", "tests", "migrations"]
+# strict activa todas las comprobaciones opcionales: funciones sin anotar, Any que se
+# cuelan, imports implícitos... (semana 13).
+strict = true
+# El plugin de Pydantic enseña a mypy cómo son los modelos: por ejemplo, que un modelo
+# frozen no deja cambiar sus campos.
+plugins = ["pydantic.mypy"]

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" role="img" aria-labelledby="t d">
+  <title id="t">pivot y resample</title>
+  <desc id="d">Una tabla larga tiene seis medidas, una por hora de las 8:00 a las 13:00, con su etiqueta y su valor: Norte 12.5, Norte 14.0, Sur 8.0, Norte 16.0, Sur sin valor y Norte 48.9. pivot(columns='label', values='value') la pasa a una tabla ancha: el mismo índice de tiempo y una columna por etiqueta, Norte y Sur, con NaN donde esa etiqueta no midió. resample('3h').mean() agrupa las filas en periodos de tres horas contados desde la medianoche: el de las 6:00 tiene la fila de las 8:00, el de las 9:00 las de las 9:00, 10:00 y 11:00, y el de las 12:00 las de las 12:00 y 13:00. La media de cada columna en cada periodo da Norte 12.5, 15.0 y 48.9, y Sur NaN, 8.0 y NaN: Sur no tiene ningún valor en los periodos de las 6:00 y las 12:00.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="860" height="470" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">evolution: pivot y después resample</text>
+    <text x="130" y="74" text-anchor="middle" font-weight="700" fill="#93c5fd">larga: una fila por medida</text>
+    <rect x="30" y="90" width="70" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="65.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">time</text>
+    <rect x="100" y="90" width="70" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="135.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">label</text>
+    <rect x="170" y="90" width="60" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="200.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="30" y="120" width="70" height="32" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="65.0" y="141.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">08:00</text>
+    <rect x="100" y="120" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="135.0" y="141.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="170" y="120" width="60" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="200.0" y="141.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="30" y="152" width="70" height="32" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="65.0" y="173.0" text-anchor="middle" font-weight="700" fill="#93c5fd">09:00</text>
+    <rect x="100" y="152" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="135.0" y="173.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="170" y="152" width="60" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="200.0" y="173.0" text-anchor="middle" fill="#e2e8f0">14.0</text>
+    <rect x="30" y="184" width="70" height="32" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="65.0" y="205.0" text-anchor="middle" font-weight="700" fill="#93c5fd">10:00</text>
+    <rect x="100" y="184" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="135.0" y="205.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="170" y="184" width="60" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="200.0" y="205.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="30" y="216" width="70" height="32" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="65.0" y="237.0" text-anchor="middle" font-weight="700" fill="#93c5fd">11:00</text>
+    <rect x="100" y="216" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="135.0" y="237.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="170" y="216" width="60" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="200.0" y="237.0" text-anchor="middle" fill="#e2e8f0">16.0</text>
+    <rect x="30" y="248" width="70" height="32" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="65.0" y="269.0" text-anchor="middle" font-weight="700" fill="#86efac">12:00</text>
+    <rect x="100" y="248" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="135.0" y="269.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="170" y="248" width="60" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="200.0" y="269.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="30" y="280" width="70" height="32" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="65.0" y="301.0" text-anchor="middle" font-weight="700" fill="#86efac">13:00</text>
+    <rect x="100" y="280" width="70" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="135.0" y="301.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="170" y="280" width="60" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="200.0" y="301.0" text-anchor="middle" fill="#e2e8f0">48.9</text>
+    <text x="265" y="196" text-anchor="middle" font-weight="700" fill="#fcd34d">pivot</text>
+    <path d="M236 216 L290 216" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <text x="397" y="74" text-anchor="middle" font-weight="700" fill="#93c5fd">ancha: una columna por etiqueta</text>
+    <rect x="298" y="90" width="70" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="333.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">time</text>
+    <rect x="368" y="90" width="64" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="400.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">Norte</text>
+    <rect x="432" y="90" width="64" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="464.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">Sur</text>
+    <rect x="298" y="120" width="70" height="32" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="333.0" y="141.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">08:00</text>
+    <rect x="368" y="120" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="400.0" y="141.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="432" y="120" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="464.0" y="141.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="298" y="152" width="70" height="32" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="333.0" y="173.0" text-anchor="middle" font-weight="700" fill="#93c5fd">09:00</text>
+    <rect x="368" y="152" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="400.0" y="173.0" text-anchor="middle" fill="#e2e8f0">14.0</text>
+    <rect x="432" y="152" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="464.0" y="173.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="298" y="184" width="70" height="32" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="333.0" y="205.0" text-anchor="middle" font-weight="700" fill="#93c5fd">10:00</text>
+    <rect x="368" y="184" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="400.0" y="205.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="432" y="184" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="464.0" y="205.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="298" y="216" width="70" height="32" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="333.0" y="237.0" text-anchor="middle" font-weight="700" fill="#93c5fd">11:00</text>
+    <rect x="368" y="216" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="400.0" y="237.0" text-anchor="middle" fill="#e2e8f0">16.0</text>
+    <rect x="432" y="216" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="464.0" y="237.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="298" y="248" width="70" height="32" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="333.0" y="269.0" text-anchor="middle" font-weight="700" fill="#86efac">12:00</text>
+    <rect x="368" y="248" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="400.0" y="269.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="432" y="248" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="464.0" y="269.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="298" y="280" width="70" height="32" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="333.0" y="301.0" text-anchor="middle" font-weight="700" fill="#86efac">13:00</text>
+    <rect x="368" y="280" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="400.0" y="301.0" text-anchor="middle" fill="#e2e8f0">48.9</text>
+    <rect x="432" y="280" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="464.0" y="301.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <text x="694" y="74" text-anchor="middle" font-weight="700" fill="#93c5fd">resample("3h").mean()</text>
+    <rect x="604" y="90" width="80" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="644.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">periodo</text>
+    <rect x="684" y="90" width="64" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="716.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">Norte</text>
+    <rect x="748" y="90" width="64" height="30" rx="0" fill="#0b2540" stroke="#93c5fd"/>
+    <text x="780.0" y="110.0" text-anchor="middle" font-weight="700" fill="#93c5fd">Sur</text>
+    <rect x="604" y="120" width="80" height="32" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="644.0" y="141.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">06:00</text>
+    <rect x="684" y="120" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="716.0" y="141.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="748" y="120" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="780.0" y="141.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <path d="M502 136.0 L598 136" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="604" y="152" width="80" height="32" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="644.0" y="173.0" text-anchor="middle" font-weight="700" fill="#93c5fd">09:00</text>
+    <rect x="684" y="152" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="716.0" y="173.0" text-anchor="middle" fill="#e2e8f0">15.0</text>
+    <rect x="748" y="152" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="780.0" y="173.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <path d="M502 200.0 L598 168" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <rect x="604" y="184" width="80" height="32" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="644.0" y="205.0" text-anchor="middle" font-weight="700" fill="#86efac">12:00</text>
+    <rect x="684" y="184" width="64" height="32" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="716.0" y="205.0" text-anchor="middle" fill="#e2e8f0">48.9</text>
+    <rect x="748" y="184" width="64" height="32" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="780.0" y="205.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <path d="M502 280.0 L598 200" stroke="#94a3b8" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+    <text x="604" y="244" font-size="13" fill="#94a3b8">Un periodo por fila: su inicio.</text>
+    <text x="604" y="264" font-size="13" fill="#94a3b8">Norte de las 9:00: (14.0 + 16.0) / 2.</text>
+    <text x="604" y="284" font-size="13" fill="#94a3b8">Sur de las 12:00: solo un NaN.</text>
+    <text x="30" y="352" fill="#94a3b8">pivot: el mismo índice de tiempo y una columna por etiqueta; NaN donde esa etiqueta no midió.</text>
+    <text x="30" y="378" fill="#94a3b8">resample: periodos contados desde la medianoche (6:00, 9:00, 12:00), no desde la primera medida.</text>
+    <text x="30" y="404" fill="#94a3b8">Cada periodo incluye su inicio y no su final: la medida de las 12:00 es del periodo de las 12:00.</text>
+    <text x="30" y="430" fill="#94a3b8">Los periodos sin ninguna medida también salen, con NaN en todas las columnas.</text>
+  </g>
+</svg>

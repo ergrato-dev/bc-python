@@ -1,0 +1,78 @@
+# Tres servicios: `db`, el PostgreSQL del Observatorio; `app`, tus tests, con la etapa
+# `test` del Dockerfile; y `api`, la API HTTP, con la etapa `runtime`.
+# Usuario y contraseña de desarrollo, solo para tu máquina: en un servidor de verdad
+# irían en un secreto, nunca en un archivo de Git.
+services:
+  db:
+    image: postgres:18.6-alpine@sha256:123b17998ccaf47e53b502e8c6a1e79afd8f579c6f3eec83c563da026f957395
+    environment:
+      POSTGRES_USER: observatorio
+      POSTGRES_PASSWORD: observatorio
+      POSTGRES_DB: observatorio
+    # 127.0.0.1: el puerto solo se abre a tu máquina, no a la red en la que estés.
+    ports:
+      - "127.0.0.1:5432:5432"
+    # Los datos sobreviven a `docker compose down`; `down -v` los borra.
+    volumes:
+      - pgdata:/var/lib/postgresql
+    # `app` espera a que PostgreSQL acepte conexiones, no solo a que el contenedor arranque.
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "observatorio", "-d", "observatorio"]
+      interval: 2s
+      timeout: 5s
+      retries: 15
+
+  app:
+    # La etapa `test` del Dockerfile: con las dependencias de desarrollo y los tests.
+    build:
+      context: .
+      target: test
+    image: local/observatorio:week-24-test
+    environment:
+      # Dentro de la red de compose, PostgreSQL se llama `db`, no 127.0.0.1.
+      OBSERVATORIO_DATABASE_URL: postgresql+psycopg://observatorio:observatorio@db:5432/observatorio
+      OBSERVATORIO_TEST_DATABASE_URL: postgresql+psycopg://observatorio:observatorio@db:5432/observatorio_test
+    depends_on:
+      db:
+        condition: service_healthy
+
+  api:
+    # La etapa `runtime`: la imagen pequeña, sin uv ni herramientas de desarrollo, cuya
+    # orden ya es servir en 0.0.0.0.
+    build:
+      context: .
+      target: runtime
+    image: local/observatorio:week-24
+    # Nada en la imagen se puede modificar mientras corre, salvo /tmp, que vive en
+    # memoria y se pierde al parar.
+    read_only: true
+    tmpfs:
+      - /tmp
+    # Sin capacidades especiales de Linux (cambiar de usuario, abrir puertos bajos...)
+    # y sin poder ganar privilegios nuevos, aunque haya un programa setuid en la imagen.
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      OBSERVATORIO_DATABASE_URL: postgresql+psycopg://observatorio:observatorio@db:5432/observatorio
+    # Fuera del contenedor, el puerto solo se abre a tu máquina, como el de PostgreSQL.
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    # `docker compose up --wait` espera a que /health conteste 200. La imagen no trae
+    # curl: lo pregunta Python, que sí está.
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"
+      interval: 2s
+      timeout: 5s
+      retries: 15
+
+volumes:
+  pgdata:

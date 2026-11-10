@@ -1,0 +1,10 @@
+[project]
+name = "combinar"
+version = "0.1.0"
+description = "Ejercicio 02 de la semana 25: combinar tablas con concat, merge y join"
+requires-python = ">=3.14,<3.15"
+dependencies = ["pandas==3.1.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

@@ -1,0 +1,10 @@
+[project]
+name = "tiempo"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 25: series de tiempo"
+requires-python = ">=3.14,<3.15"
+dependencies = ["pandas==3.1.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 482" role="img" aria-labelledby="t d">
+  <title id="t">Los cuatro how de merge</title>
+  <desc id="d">monday tiene medidas de Norte 12.5, Sur 8.0 y Oeste 3.1. stations tiene la región de Norte (montaña), Sur (costa) y Centro (valle). monday.merge(stations, on='station', how=...) cruza cada fila por la columna station. Con inner salen solo Norte y Sur, que están en las dos. Con left salen Norte, Sur y Oeste, y Oeste tiene la región en NaN. Con right salen Norte, Sur y Centro, y Centro tiene el valor en NaN. Con outer salen las cuatro, ordenadas: Centro, Norte, Oeste y Sur, con NaN donde falta la pareja. inner es el valor por defecto y quita filas sin avisar.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="860" height="482" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="32" text-anchor="middle" font-size="16" font-weight="700">monday.merge(stations, on="station", how=...)</text>
+    <text x="155" y="70" text-anchor="middle" font-weight="700" fill="#93c5fd">monday (izquierda)</text>
+    <rect x="80" y="80" width="80" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="120.0" y="99.0" text-anchor="middle" font-weight="700" fill="#93c5fd">station</text>
+    <rect x="160" y="80" width="70" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="195.0" y="99.0" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="80" y="108" width="80" height="28" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="120.0" y="127.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="160" y="108" width="70" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="195.0" y="127.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="80" y="136" width="80" height="28" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="120.0" y="155.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="160" y="136" width="70" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="195.0" y="155.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="80" y="164" width="80" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="120.0" y="183.0" text-anchor="middle" font-weight="700" fill="#93c5fd">Oeste</text>
+    <rect x="160" y="164" width="70" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="195.0" y="183.0" text-anchor="middle" fill="#e2e8f0">3.1</text>
+    <text x="405" y="70" text-anchor="middle" font-weight="700" fill="#93c5fd">stations (derecha)</text>
+    <rect x="320" y="80" width="80" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="360.0" y="99.0" text-anchor="middle" font-weight="700" fill="#93c5fd">station</text>
+    <rect x="400" y="80" width="90" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="445.0" y="99.0" text-anchor="middle" font-weight="700" fill="#93c5fd">region</text>
+    <rect x="320" y="108" width="80" height="28" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="360.0" y="127.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="400" y="108" width="90" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="445.0" y="127.0" text-anchor="middle" fill="#e2e8f0">montaña</text>
+    <rect x="320" y="136" width="80" height="28" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="360.0" y="155.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="400" y="136" width="90" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="445.0" y="155.0" text-anchor="middle" fill="#e2e8f0">costa</text>
+    <rect x="320" y="164" width="80" height="28" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="360.0" y="183.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">Centro</text>
+    <rect x="400" y="164" width="90" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="445.0" y="183.0" text-anchor="middle" fill="#e2e8f0">valle</text>
+    <text x="540" y="112" font-size="13" fill="#94a3b8">Oeste solo está a la izquierda;</text>
+    <text x="540" y="132" font-size="13" fill="#94a3b8">Centro, solo a la derecha.</text>
+    <rect x="24" y="212" width="202" height="200" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="125" y="234" text-anchor="middle" font-weight="700" fill="#e2e8f0">how="inner"</text>
+    <text x="125" y="254" text-anchor="middle" font-size="12" fill="#94a3b8">solo las que están en las dos</text>
+    <rect x="30" y="264" width="68" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="64.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">station</text>
+    <rect x="98" y="264" width="50" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="123.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="148" y="264" width="72" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="184.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">region</text>
+    <rect x="30" y="292" width="68" height="28" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="64.0" y="311.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="98" y="292" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="123.0" y="311.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="148" y="292" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="184.0" y="311.0" text-anchor="middle" fill="#e2e8f0">montaña</text>
+    <rect x="30" y="320" width="68" height="28" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="64.0" y="339.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="98" y="320" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="123.0" y="339.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="148" y="320" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="184.0" y="339.0" text-anchor="middle" fill="#e2e8f0">costa</text>
+    <rect x="230" y="212" width="202" height="200" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="331" y="234" text-anchor="middle" font-weight="700" fill="#fcd34d">how="left"</text>
+    <text x="331" y="254" text-anchor="middle" font-size="12" fill="#94a3b8">todas las de la izquierda</text>
+    <rect x="236" y="264" width="68" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="270.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">station</text>
+    <rect x="304" y="264" width="50" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="329.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="354" y="264" width="72" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="390.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">region</text>
+    <rect x="236" y="292" width="68" height="28" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="270.0" y="311.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="304" y="292" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="329.0" y="311.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="354" y="292" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="390.0" y="311.0" text-anchor="middle" fill="#e2e8f0">montaña</text>
+    <rect x="236" y="320" width="68" height="28" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="270.0" y="339.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="304" y="320" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="329.0" y="339.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="354" y="320" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="390.0" y="339.0" text-anchor="middle" fill="#e2e8f0">costa</text>
+    <rect x="236" y="348" width="68" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="270.0" y="367.0" text-anchor="middle" font-weight="700" fill="#93c5fd">Oeste</text>
+    <rect x="304" y="348" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="329.0" y="367.0" text-anchor="middle" fill="#e2e8f0">3.1</text>
+    <rect x="354" y="348" width="72" height="28" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="390.0" y="367.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="436" y="212" width="202" height="200" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="537" y="234" text-anchor="middle" font-weight="700" fill="#e2e8f0">how="right"</text>
+    <text x="537" y="254" text-anchor="middle" font-size="12" fill="#94a3b8">todas las de la derecha</text>
+    <rect x="442" y="264" width="68" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="476.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">station</text>
+    <rect x="510" y="264" width="50" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="535.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="560" y="264" width="72" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="596.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">region</text>
+    <rect x="442" y="292" width="68" height="28" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="476.0" y="311.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="510" y="292" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="535.0" y="311.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="560" y="292" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="596.0" y="311.0" text-anchor="middle" fill="#e2e8f0">montaña</text>
+    <rect x="442" y="320" width="68" height="28" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="476.0" y="339.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="510" y="320" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="535.0" y="339.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="560" y="320" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="596.0" y="339.0" text-anchor="middle" fill="#e2e8f0">costa</text>
+    <rect x="442" y="348" width="68" height="28" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="476.0" y="367.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">Centro</text>
+    <rect x="510" y="348" width="50" height="28" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="535.0" y="367.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="560" y="348" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="596.0" y="367.0" text-anchor="middle" fill="#e2e8f0">valle</text>
+    <rect x="642" y="212" width="202" height="200" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="743" y="234" text-anchor="middle" font-weight="700" fill="#e2e8f0">how="outer"</text>
+    <text x="743" y="254" text-anchor="middle" font-size="12" fill="#94a3b8">todas, ordenadas por la clave</text>
+    <rect x="648" y="264" width="68" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="682.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">station</text>
+    <rect x="716" y="264" width="50" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="741.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">value</text>
+    <rect x="766" y="264" width="72" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="802.0" y="283.0" text-anchor="middle" font-weight="700" fill="#93c5fd">region</text>
+    <rect x="648" y="292" width="68" height="28" rx="0" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="682.0" y="311.0" text-anchor="middle" font-weight="700" fill="#c4b5fd">Centro</text>
+    <rect x="716" y="292" width="50" height="28" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="741.0" y="311.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="766" y="292" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="802.0" y="311.0" text-anchor="middle" fill="#e2e8f0">valle</text>
+    <rect x="648" y="320" width="68" height="28" rx="0" fill="#422006" stroke="#fcd34d"/>
+    <text x="682.0" y="339.0" text-anchor="middle" font-weight="700" fill="#fcd34d">Norte</text>
+    <rect x="716" y="320" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="741.0" y="339.0" text-anchor="middle" fill="#e2e8f0">12.5</text>
+    <rect x="766" y="320" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="802.0" y="339.0" text-anchor="middle" fill="#e2e8f0">montaña</text>
+    <rect x="648" y="348" width="68" height="28" rx="0" fill="#082f49" stroke="#93c5fd"/>
+    <text x="682.0" y="367.0" text-anchor="middle" font-weight="700" fill="#93c5fd">Oeste</text>
+    <rect x="716" y="348" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="741.0" y="367.0" text-anchor="middle" fill="#e2e8f0">3.1</text>
+    <rect x="766" y="348" width="72" height="28" rx="0" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="802.0" y="367.0" text-anchor="middle" fill="#fca5a5">NaN</text>
+    <rect x="648" y="376" width="68" height="28" rx="0" fill="#052e16" stroke="#86efac"/>
+    <text x="682.0" y="395.0" text-anchor="middle" font-weight="700" fill="#86efac">Sur</text>
+    <rect x="716" y="376" width="50" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="741.0" y="395.0" text-anchor="middle" fill="#e2e8f0">8.0</text>
+    <rect x="766" y="376" width="72" height="28" rx="0" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="802.0" y="395.0" text-anchor="middle" fill="#e2e8f0">costa</text>
+    <text x="40" y="434" fill="#94a3b8">inner, el valor por defecto, quita a Oeste sin avisar: escribe siempre how.</text>
+    <text x="40" y="458" fill="#94a3b8">left es el más común: a tus medidas, añádeles los datos de su estación. indicator=True dice de dónde sale cada fila.</text>
+  </g>
+</svg>
