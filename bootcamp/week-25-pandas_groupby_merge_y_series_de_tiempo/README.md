@@ -170,4 +170,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; lo
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 24](../week-24-pandas_series_dataframe_y_seleccion/README.md) | **Semana 25** | Semana 26 (próximamente) |
+| [Semana 24](../week-24-pandas_series_dataframe_y_seleccion/README.md) | **Semana 25** | [Semana 26](../week-26-polars_parquet_y_duckdb/README.md) |

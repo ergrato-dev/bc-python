@@ -1,0 +1,10 @@
+[project]
+name = "una-pregunta-tres-herramientas"
+version = "0.1.0"
+description = "Ejercicio 04 de la semana 26: una pregunta, tres herramientas"
+requires-python = ">=3.14,<3.15"
+dependencies = ["duckdb==2.0.0", "numpy==2.5.4", "pandas==3.1.0", "polars==2.1.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

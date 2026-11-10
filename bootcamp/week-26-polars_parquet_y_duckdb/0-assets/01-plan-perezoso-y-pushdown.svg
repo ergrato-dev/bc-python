@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" role="img" aria-labelledby="t d">
+  <title id="t">El plan perezoso y el pushdown</title>
+  <desc id="d">A la izquierda, el plan tal como lo escribes con scan_parquet: leer medidas.parquet entero, filtrar station igual a Norte, añadir la columna tenths y calcular la media de value. Polars lo optimiza antes de ejecutar nada. A la derecha, el plan optimizado: la columna tenths desaparece porque nadie la usa, y el filtro y la elección de columnas bajan dentro de la lectura del archivo. Abajo, el archivo con sus tres columnas: time no se lee, station se lee solo para filtrar y value se lee; de las filas solo salen las del Norte.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="880" height="470" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="700">Un plan perezoso: Polars optimiza antes de leer</text>
+    <text x="40" y="70" font-weight="700" fill="#93c5fd">El plan que escribes</text>
+    <rect x="40" y="84" width="300" height="40" rx="8" fill="#082f49" stroke="#93c5fd"/>
+    <text x="190.0" y="109.0" text-anchor="middle">scan_parquet("medidas.parquet")</text>
+    <rect x="40" y="146" width="300" height="40" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="190.0" y="171.0" text-anchor="middle">filter(station == "Norte")</text>
+    <line x1="190" y1="124" x2="190" y2="144" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="40" y="208" width="300" height="40" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="190.0" y="233.0" text-anchor="middle">with_columns(tenths = value / 10)</text>
+    <line x1="190" y1="186" x2="190" y2="206" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="40" y="270" width="300" height="40" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="190.0" y="295.0" text-anchor="middle">select(col("value").mean())</text>
+    <line x1="190" y1="248" x2="190" y2="268" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="190" y="352" text-anchor="middle" font-size="13" fill="#94a3b8">se lee de arriba abajo; nada se ejecuta</text>
+    <line x1="360" y1="190" x2="460" y2="190" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="410" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#fcd34d">optimizar</text>
+    <text x="500" y="70" font-weight="700" fill="#86efac">El plan que se ejecuta</text>
+    <rect x="500" y="84" width="340" height="120" rx="8" fill="#052e16" stroke="#86efac"/>
+    <text x="520" y="110" font-weight="700" fill="#86efac">Parquet SCAN medidas.parquet</text>
+    <text x="520" y="138">PROJECT 2/3: station, value</text>
+    <text x="520" y="164">SELECTION: station == "Norte"</text>
+    <text x="520" y="190" font-size="13" fill="#94a3b8">solo se leen las filas y columnas útiles</text>
+    <line x1="670" y1="206" x2="670" y2="226" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="500" y="228" width="340" height="40" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="670.0" y="253.0" text-anchor="middle">select(col("value").mean())</text>
+    <rect x="500" y="292" width="340" height="40" rx="8" fill="#450a0a" stroke="#fca5a5" stroke-dasharray="5 4"/>
+    <text x="670.0" y="317.0" text-anchor="middle" fill="#fca5a5">with_columns(tenths): nadie la usa</text>
+    <line x1="510" y1="312" x2="830" y2="312" stroke="#fca5a5" stroke-width="2"/>
+    <text x="40" y="398" font-weight="700" fill="#94a3b8">medidas.parquet</text>
+    <rect x="180" y="376" width="200" height="34" rx="8" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="280.0" y="398.0" text-anchor="middle" font-weight="700" fill="#fca5a5">time</text>
+    <text x="280" y="434" text-anchor="middle" font-size="13" fill="#94a3b8">no se lee</text>
+    <rect x="400" y="376" width="200" height="34" rx="8" fill="#422006" stroke="#fcd34d"/>
+    <text x="500.0" y="398.0" text-anchor="middle" font-weight="700" fill="#fcd34d">station</text>
+    <text x="500" y="434" text-anchor="middle" font-size="13" fill="#94a3b8">se lee para filtrar</text>
+    <rect x="620" y="376" width="200" height="34" rx="8" fill="#052e16" stroke="#86efac"/>
+    <text x="720.0" y="398.0" text-anchor="middle" font-weight="700" fill="#86efac">value</text>
+    <text x="720" y="434" text-anchor="middle" font-size="13" fill="#94a3b8">se lee</text>
+    <text x="440" y="458" text-anchor="middle" font-size="13" fill="#94a3b8">de cada columna, solo los bloques que pueden tener filas del Norte</text>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" role="img" aria-labelledby="t d">
+  <title id="t">Filas en CSV, columnas en Parquet</title>
+  <desc id="d">Arriba, un CSV guarda las medidas fila a fila, como texto: etiqueta y valor juntos en cada línea; para leer solo los valores hay que leer todo. Abajo, un archivo Parquet: las filas se reparten en grupos de filas (row groups) de unas 125 000. Dentro de cada grupo, cada columna va en su propio bloque, comprimido por separado y con su mínimo y su máximo. Al final del archivo, el pie guarda el esquema con los tipos y dónde empieza cada bloque. Leer solo value, o saltarse un grupo cuyo máximo es menor que lo que buscas, no toca el resto del archivo.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="880" height="500" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="700">Filas en CSV, columnas en Parquet</text>
+    <text x="40" y="70" font-weight="700" fill="#93c5fd">medidas.csv: una línea por fila, todo texto</text>
+    <rect x="40" y="84" width="150" height="36" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="115.0" y="107.0" text-anchor="middle">Norte;12,5</text>
+    <rect x="200" y="84" width="150" height="36" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="275.0" y="107.0" text-anchor="middle">Sur;8</text>
+    <rect x="360" y="84" width="150" height="36" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="435.0" y="107.0" text-anchor="middle">Centro;NA</text>
+    <rect x="520" y="84" width="150" height="36" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="595.0" y="107.0" text-anchor="middle">Norte;48,9</text>
+    <rect x="680" y="84" width="150" height="36" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="755.0" y="107.0" text-anchor="middle">…</text>
+    <text x="40" y="146" font-size="13" fill="#94a3b8">para sumar los valores, lees también cada etiqueta, cada ; y cada salto de línea</text>
+    <text x="40" y="190" font-weight="700" fill="#86efac">medidas.parquet: grupos de filas, y dentro, una columna detrás de otra</text>
+    <rect x="40" y="204" width="280" height="210" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="54" y="228" font-weight="700" fill="#86efac">row group 0 · 125 000 filas</text>
+    <rect x="54" y="242" width="252" height="70" rx="8" fill="#422006" stroke="#fcd34d"/>
+    <text x="68" y="266" font-weight="700" fill="#fcd34d">label</text>
+    <text x="68" y="286" font-size="13">Centro Este Norte Oeste Sur</text>
+    <text x="68" y="304" font-size="12" fill="#94a3b8">zstd · mín Centro · máx Sur</text>
+    <rect x="54" y="326" width="252" height="74" rx="8" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="68" y="350" font-weight="700" fill="#c4b5fd">value</text>
+    <text x="68" y="370" font-size="13">38.2 74.5 42.9 … (en binario)</text>
+    <text x="68" y="390" font-size="12" fill="#94a3b8">zstd · mín 0.0 · máx 80.0</text>
+    <rect x="340" y="204" width="280" height="210" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="354" y="228" font-weight="700" fill="#86efac">row group 1 · 125 000 filas</text>
+    <rect x="354" y="242" width="252" height="70" rx="8" fill="#422006" stroke="#fcd34d"/>
+    <text x="368" y="266" font-weight="700" fill="#fcd34d">label</text>
+    <text x="368" y="286" font-size="13">Centro Este Norte Oeste Sur</text>
+    <text x="368" y="304" font-size="12" fill="#94a3b8">zstd · mín Centro · máx Sur</text>
+    <rect x="354" y="326" width="252" height="74" rx="8" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="368" y="350" font-weight="700" fill="#c4b5fd">value</text>
+    <text x="368" y="370" font-size="13">38.2 74.5 42.9 … (en binario)</text>
+    <text x="368" y="390" font-size="12" fill="#94a3b8">zstd · mín 0.0 · máx 80.0</text>
+    <rect x="640" y="204" width="100" height="210" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="690.0" y="314.0" text-anchor="middle">…</text>
+    <rect x="760" y="204" width="80" height="210" rx="8" fill="#082f49" stroke="#93c5fd"/>
+    <text x="800" y="290" text-anchor="middle" font-weight="700" fill="#93c5fd">pie</text>
+    <text x="800" y="314" text-anchor="middle" font-size="12">esquema</text>
+    <text x="800" y="332" text-anchor="middle" font-size="12">y dónde</text>
+    <text x="800" y="350" text-anchor="middle" font-size="12">empieza</text>
+    <text x="800" y="368" text-anchor="middle" font-size="12">cada bloque</text>
+    <text x="40" y="446" font-size="13">Leer solo value: se saltan los bloques de label.</text>
+    <text x="40" y="470" font-size="13">Buscar value &gt; 90: el pie dice que ningún grupo pasa de 80, y no se lee ninguno.</text>
+  </g>
+</svg>

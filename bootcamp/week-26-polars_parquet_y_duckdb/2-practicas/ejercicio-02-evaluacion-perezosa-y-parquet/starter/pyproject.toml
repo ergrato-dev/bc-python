@@ -1,0 +1,10 @@
+[project]
+name = "lazy-y-parquet"
+version = "0.1.0"
+description = "Ejercicio 02 de la semana 26: evaluación perezosa y Parquet"
+requires-python = ">=3.14,<3.15"
+dependencies = ["numpy==2.5.4", "polars==2.1.0"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

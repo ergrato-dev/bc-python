@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" role="img" aria-labelledby="t d">
+  <title id="t">DuckDB dentro de tu proceso</title>
+  <desc id="d">A la izquierda, PostgreSQL: tu programa de Python habla por la red con un servidor, otro proceso que es el único que toca sus archivos de datos; necesita arrancar, usuarios y contraseña, y atiende a muchos programas a la vez. A la derecha, DuckDB: es una biblioteca dentro de tu propio proceso de Python, sin red ni servidor, que lee directamente archivos Parquet y CSV o tablas de pandas, y guarda, si quieres, su propia base en un archivo .duckdb. Bueno para analizar; no para muchos programas escribiendo a la vez.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="880" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="700">PostgreSQL es un servidor; DuckDB vive en tu proceso</text>
+    <text x="40" y="72" font-weight="700" fill="#93c5fd">PostgreSQL (semana 19)</text>
+    <rect x="40" y="88" width="170" height="110" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="125" y="120" text-anchor="middle" font-weight="700">tu programa</text>
+    <text x="125" y="144" text-anchor="middle" font-size="13" fill="#94a3b8">Python</text>
+    <text x="125" y="166" text-anchor="middle" font-size="13" fill="#94a3b8">psycopg</text>
+    <line x1="212" y1="143" x2="268" y2="143" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="240" y="132" text-anchor="middle" font-size="12" fill="#fcd34d">red</text>
+    <rect x="270" y="88" width="150" height="110" rx="8" fill="#082f49" stroke="#93c5fd"/>
+    <text x="345" y="120" text-anchor="middle" font-weight="700" fill="#93c5fd">servidor</text>
+    <text x="345" y="144" text-anchor="middle" font-size="13" fill="#94a3b8">otro proceso</text>
+    <text x="345" y="166" text-anchor="middle" font-size="13" fill="#94a3b8">usuario y clave</text>
+    <line x1="345" y1="200" x2="345" y2="236" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="270" y="238" width="150" height="44" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="345.0" y="265.0" text-anchor="middle">sus archivos</text>
+    <text x="40" y="320" font-size="13">muchos programas leen y escriben a la vez</text>
+    <text x="40" y="342" font-size="13">transacciones, permisos, copias de seguridad</text>
+    <text x="40" y="364" font-size="13" fill="#94a3b8">hay que arrancarlo (compose) y mantenerlo</text>
+    <line x1="460" y1="66" x2="460" y2="390" stroke="#334155" stroke-width="1"/>
+    <text x="500" y="72" font-weight="700" fill="#86efac">DuckDB (esta semana)</text>
+    <rect x="500" y="88" width="340" height="150" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="520" y="114" font-weight="700">tu programa · un solo proceso de Python</text>
+    <rect x="520" y="130" width="300" height="40" rx="8" fill="#052e16" stroke="#86efac"/>
+    <text x="670.0" y="155.0" text-anchor="middle" font-size="13" fill="#86efac">import duckdb: el motor SQL es una biblioteca</text>
+    <text x="520" y="196" font-size="13" fill="#94a3b8">sin red, sin usuarios, sin nada que arrancar</text>
+    <text x="520" y="218" font-size="13" fill="#94a3b8">consulta tablas de pandas por su nombre</text>
+    <line x1="590" y1="240" x2="590" y2="276" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="760" y1="240" x2="760" y2="276" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="510" y="278" width="160" height="44" rx="8" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="590.0" y="305.0" text-anchor="middle" font-size="13" fill="#c4b5fd">medidas.parquet / .csv</text>
+    <rect x="690" y="278" width="150" height="44" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="765.0" y="305.0" text-anchor="middle" font-size="13">base.duckdb (si quieres)</text>
+    <text x="500" y="352" font-size="13">analizar: agrupar, cruzar, resumir millones de filas</text>
+    <text x="500" y="374" font-size="13" fill="#94a3b8">un solo programa escribe a la vez</text>
+  </g>
+</svg>

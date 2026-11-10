@@ -52,7 +52,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [23](week-23-numpy_arrays_broadcasting_y_estadistica/README.md) | NumPy: arrays, broadcasting y estadística | ✅ |
 | [24](week-24-pandas_series_dataframe_y_seleccion/README.md) | pandas I: Series, DataFrame y selección | ✅ |
 | [25](week-25-pandas_groupby_merge_y_series_de_tiempo/README.md) | pandas II: groupby, merge y series de tiempo | ✅ |
-| 26 | Polars, Parquet y DuckDB | ⬜ |
+| [26](week-26-polars_parquet_y_duckdb/README.md) | Polars, Parquet y DuckDB | ✅ |
 | 27 | Visualización con matplotlib, seaborn y plotly | ⬜ |
 | 28 | Estadística aplicada con SciPy y statsmodels | ⬜ |
 | 29 | EDA, notebooks reproducibles (JupyterLab en Docker) y ETL desde PostgreSQL | ⬜ |

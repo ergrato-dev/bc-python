@@ -143,3 +143,6 @@ mlruns/
 mlartifacts/
 *.ckpt
 *.pt
+
+# Archivos que escriben los ejercicios guiados al ejecutarse (semana 26)
+**/2-practicas/*/starter/salida/
