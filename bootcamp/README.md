@@ -54,7 +54,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [25](week-25-pandas_groupby_merge_y_series_de_tiempo/README.md) | pandas II: groupby, merge y series de tiempo | ✅ |
 | [26](week-26-polars_parquet_y_duckdb/README.md) | Polars, Parquet y DuckDB | ✅ |
 | [27](week-27-visualizacion_con_matplotlib_seaborn_y_plotly/README.md) | Visualización con matplotlib, seaborn y plotly | ✅ |
-| 28 | Estadística aplicada con SciPy y statsmodels | ⬜ |
+| [28](week-28-estadistica_aplicada_con_scipy_y_statsmodels/README.md) | Estadística aplicada con SciPy y statsmodels | ✅ |
 | 29 | EDA, notebooks reproducibles (JupyterLab en Docker) y ETL desde PostgreSQL | ⬜ |
 | 30 | Proyecto de fase: análisis de tu dominio | ⬜ |
 

@@ -172,4 +172,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; lo
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 26](../week-26-polars_parquet_y_duckdb/README.md) | **Semana 27** | Semana 28 (próximamente) |
+| [Semana 26](../week-26-polars_parquet_y_duckdb/README.md) | **Semana 27** | [Semana 28](../week-28-estadistica_aplicada_con_scipy_y_statsmodels/README.md) |

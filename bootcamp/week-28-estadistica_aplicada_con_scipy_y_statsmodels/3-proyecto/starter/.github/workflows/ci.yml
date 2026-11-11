@@ -1,0 +1,92 @@
+# Qué: la integración continua del Observatorio. GitHub la ejecuta en cada push a main y
+# en cada pull request.
+# Para qué: que las mismas comprobaciones que haces en tu máquina las haga una máquina
+# limpia, sin nada instalado a mano, y que el resultado se vea en el pull request.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# El token de GitHub de cada job solo puede leer el repositorio. Nadie lo necesita para
+# más, y si un paso se ve comprometido, no puede escribir en él.
+permissions:
+  contents: read
+
+# Un push nuevo a la misma rama cancela la ejecución anterior, que ya no interesa.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Todos los `uv sync` y `uv run` fallan si uv.lock no corresponde a pyproject.toml,
+# como `--locked`: la CI prueba exactamente lo que fijaste.
+env:
+  UV_LOCKED: "1"
+
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      # Cada acción, fijada al SHA de su commit; el comentario dice la versión.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          version: "0.13.7"
+      - run: uv sync
+      - run: uv run pre-commit run --all-files --show-diff-on-failure
+      - run: uv audit --preview-features audit-command
+
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    # Un PostgreSQL de verdad, como el de compose.yaml, en 127.0.0.1:5432 del runner.
+    services:
+      db:
+        image: postgres:18.6-alpine@sha256:123b17998ccaf47e53b502e8c6a1e79afd8f579c6f3eec83c563da026f957395
+        env:
+          POSTGRES_USER: observatorio
+          POSTGRES_PASSWORD: observatorio
+          POSTGRES_DB: observatorio
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U observatorio -d observatorio"
+          --health-interval 2s --health-timeout 5s --health-retries 15
+    env:
+      OBSERVATORIO_DATABASE_URL: postgresql+psycopg://observatorio:observatorio@127.0.0.1:5432/observatorio
+      # En GitHub Actions (GITHUB_ACTIONS=true), Typer fuerza los colores de Rich y la
+      # ayuda sale llena de códigos ANSI que rompen los tests de la CLI. TERM=dumb los
+      # quita. Lo reproduces en tu máquina con `GITHUB_ACTIONS=true uv run pytest`.
+      TERM: dumb
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          version: "0.13.7"
+      - run: uv sync
+      - run: uv run coverage run -m pytest
+      - run: uv run coverage report
+      - run: uv run alembic upgrade head
+      - run: uv run alembic check
+
+  image:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: docker build --target runtime --tag observatorio:ci .
+      - run: docker run --rm observatorio:ci observatorio --version
+      # Trivy busca vulnerabilidades conocidas en los paquetes del sistema y de Python de
+      # la imagen. Falla (exit 1) si hay alguna HIGH o CRITICAL con arreglo publicado.
+      - run: >-
+          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock
+          aquasec/trivy:0.76.1@sha256:790fd66d1697395d8693d1acaa1ea702406a20f109b6fc7bac8db623eca6c06c
+          image --exit-code 1 --severity HIGH,CRITICAL --ignore-unfixed observatorio:ci

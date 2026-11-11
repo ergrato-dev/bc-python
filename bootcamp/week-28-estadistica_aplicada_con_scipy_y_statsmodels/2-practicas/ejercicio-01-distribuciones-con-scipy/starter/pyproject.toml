@@ -1,0 +1,10 @@
+[project]
+name = "distribuciones-con-scipy"
+version = "0.1.0"
+description = "Ejercicio 01 de la semana 28: distribuciones con scipy.stats"
+requires-python = ">=3.14,<3.15"
+dependencies = ["numpy==2.5.4", "scipy==1.18.1"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
