@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" role="img" aria-labelledby="t d">
+  <title id="t">El estado oculto de un notebook</title>
+  <desc id="d">Las mismas tres celdas dan media 26,33 si ejecutas la segunda dos veces, y 13,17 en un kernel nuevo de arriba abajo.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="860" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="430" y="36" text-anchor="middle" font-size="17" font-weight="700">El archivo guarda el código; el kernel recuerda lo que ejecutaste</text>
+    <text x="220" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="#fca5a5">Tu sesión: la celda 2, dos veces</text>
+    <text x="64" y="126" text-anchor="end" font-size="14" font-weight="700" fill="#fca5a5">[1]</text>
+    <rect x="74" y="96" width="336" height="44" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="86" y="123" font-size="12">values = [12.5, 14.0, 13.0]; total = 0</text>
+    <text x="64" y="188" text-anchor="end" font-size="14" font-weight="700" fill="#fca5a5">[3]</text>
+    <rect x="74" y="158" width="336" height="44" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="86" y="185" font-size="12">for value in values: total = total + value</text>
+    <text x="64" y="250" text-anchor="end" font-size="14" font-weight="700" fill="#fca5a5">[4]</text>
+    <rect x="74" y="220" width="336" height="44" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="86" y="247" font-size="12">print(f"media {total / len(values):.2f}")</text>
+    <rect x="74" y="292" width="336" height="40" rx="8" fill="#450a0a" stroke="#fca5a5"/>
+    <text x="242.0" y="317.0" text-anchor="middle" font-size="15" font-weight="700" fill="#fca5a5">media 26.33</text>
+    <text x="242" y="360" text-anchor="middle" font-size="12" fill="#94a3b8">total sumó dos veces: nada en el archivo lo dice</text>
+    <text x="640" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="#86efac">Kernel nuevo, de arriba abajo</text>
+    <text x="484" y="126" text-anchor="end" font-size="14" font-weight="700" fill="#86efac">[1]</text>
+    <rect x="494" y="96" width="336" height="44" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="506" y="123" font-size="12">values = [12.5, 14.0, 13.0]; total = 0</text>
+    <text x="484" y="188" text-anchor="end" font-size="14" font-weight="700" fill="#86efac">[2]</text>
+    <rect x="494" y="158" width="336" height="44" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="506" y="185" font-size="12">for value in values: total = total + value</text>
+    <text x="484" y="250" text-anchor="end" font-size="14" font-weight="700" fill="#86efac">[3]</text>
+    <rect x="494" y="220" width="336" height="44" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="506" y="247" font-size="12">print(f"media {total / len(values):.2f}")</text>
+    <rect x="494" y="292" width="336" height="40" rx="8" fill="#052e16" stroke="#86efac"/>
+    <text x="662.0" y="317.0" text-anchor="middle" font-size="15" font-weight="700" fill="#86efac">media 13.17</text>
+    <text x="662" y="360" text-anchor="middle" font-size="12" fill="#94a3b8">Restart Kernel and Run All Cells: lo que verá otro</text>
+    <line x1="430" y1="70" x2="430" y2="370" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+</svg>

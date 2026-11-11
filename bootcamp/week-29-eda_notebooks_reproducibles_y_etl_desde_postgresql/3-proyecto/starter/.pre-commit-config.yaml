@@ -1,0 +1,44 @@
+# Qué: las comprobaciones que corren solas antes de cada `git commit`.
+# Para qué: que un error de formato, de tipos o un uv.lock desfasado no llegue al commit.
+# Impacto: si una falla, el commit no se hace; arreglas, vuelves a añadir y repites.
+repos:
+  # Ganchos genéricos. `rev` es el SHA del commit de la etiqueta, no la etiqueta: una
+  # etiqueta se puede mover, un SHA no. El comentario dice a qué versión corresponde.
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+      - id: detect-private-key
+
+  # Ganchos locales: usan las herramientas de tu proyecto, con las versiones de uv.lock.
+  # Así ruff y mypy son los mismos en el gancho, en tu terminal y en la CI.
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: uv run --locked ruff check --fix
+        language: unsupported
+        types: [python]
+      - id: ruff-format
+        name: ruff format
+        entry: uv run --locked ruff format
+        language: unsupported
+        types: [python]
+      # mypy revisa el proyecto entero ([tool.mypy] files), no solo los archivos del
+      # commit: un cambio en un archivo puede romper los tipos de otro.
+      - id: mypy
+        name: mypy
+        entry: uv run --locked mypy
+        language: unsupported
+        types: [python]
+        pass_filenames: false
+      - id: uv-lock
+        name: uv.lock al día
+        entry: uv lock --check
+        language: unsupported
+        files: ^(pyproject\.toml|uv\.lock)$
+        pass_filenames: false

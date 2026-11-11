@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="t d">
+  <title id="t">Cinco ingredientes de un análisis reproducible</title>
+  <desc id="d">Datos fijos con su huella, código sin salidas que se ejecuta de arriba abajo, versiones fijadas, semillas y el mismo entorno; si falta uno, otra persona obtiene otro resultado.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="360" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">Reproducible: otra persona, otro día, el mismo resultado</text>
+    <rect x="26" y="70" width="156" height="170" rx="8" fill="#422006" stroke="#fcd34d"/>
+    <text x="104.0" y="102" text-anchor="middle" font-size="16" font-weight="700" fill="#fcd34d">Datos</text>
+    <text x="104.0" y="140" text-anchor="middle" font-size="13">una instantánea,</text>
+    <text x="104.0" y="164" text-anchor="middle" font-size="13">no la base viva</text>
+    <text x="104.0" y="188" text-anchor="middle" font-size="13">+ su huella</text>
+    <text x="104.0" y="272" text-anchor="middle" font-size="12" fill="#94a3b8">si falta:</text>
+    <text x="104.0" y="294" text-anchor="middle" font-size="13" font-weight="700" fill="#fca5a5">otros datos</text>
+    <rect x="198" y="70" width="156" height="170" rx="8" fill="#082f49" stroke="#93c5fd"/>
+    <text x="276.0" y="102" text-anchor="middle" font-size="16" font-weight="700" fill="#93c5fd">Código</text>
+    <text x="276.0" y="140" text-anchor="middle" font-size="13">en Git, sin salidas;</text>
+    <text x="276.0" y="164" text-anchor="middle" font-size="13">corre de arriba</text>
+    <text x="276.0" y="188" text-anchor="middle" font-size="13">abajo</text>
+    <text x="276.0" y="272" text-anchor="middle" font-size="12" fill="#94a3b8">si falta:</text>
+    <text x="276.0" y="294" text-anchor="middle" font-size="13" font-weight="700" fill="#fca5a5">estado oculto</text>
+    <rect x="370" y="70" width="156" height="170" rx="8" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="448.0" y="102" text-anchor="middle" font-size="16" font-weight="700" fill="#c4b5fd">Versiones</text>
+    <text x="448.0" y="140" text-anchor="middle" font-size="13">uv.lock; en Colab,</text>
+    <text x="448.0" y="164" text-anchor="middle" font-size="13">la celda que</text>
+    <text x="448.0" y="188" text-anchor="middle" font-size="13">instala las fijadas</text>
+    <text x="448.0" y="272" text-anchor="middle" font-size="12" fill="#94a3b8">si falta:</text>
+    <text x="448.0" y="294" text-anchor="middle" font-size="13" font-weight="700" fill="#fca5a5">otro pandas</text>
+    <rect x="542" y="70" width="156" height="170" rx="8" fill="#052e16" stroke="#86efac"/>
+    <text x="620.0" y="102" text-anchor="middle" font-size="16" font-weight="700" fill="#86efac">Azar</text>
+    <text x="620.0" y="140" text-anchor="middle" font-size="13">default_rng(29)</text>
+    <text x="620.0" y="164" text-anchor="middle" font-size="13">y nada de</text>
+    <text x="620.0" y="188" text-anchor="middle" font-size="13">datetime.now()</text>
+    <text x="620.0" y="272" text-anchor="middle" font-size="12" fill="#94a3b8">si falta:</text>
+    <text x="620.0" y="294" text-anchor="middle" font-size="13" font-weight="700" fill="#fca5a5">otros números</text>
+    <rect x="714" y="70" width="156" height="170" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="792.0" y="102" text-anchor="middle" font-size="16" font-weight="700" fill="#93c5fd">Entorno</text>
+    <text x="792.0" y="140" text-anchor="middle" font-size="13">la misma imagen</text>
+    <text x="792.0" y="164" text-anchor="middle" font-size="13">de Docker, rutas</text>
+    <text x="792.0" y="188" text-anchor="middle" font-size="13">relativas</text>
+    <text x="792.0" y="272" text-anchor="middle" font-size="12" fill="#94a3b8">si falta:</text>
+    <text x="792.0" y="294" text-anchor="middle" font-size="13" font-weight="700" fill="#fca5a5">FileNotFoundError</text>
+    <text x="450" y="334" text-anchor="middle" font-size="13" fill="#94a3b8">Lo comprueba un test que ejecuta el notebook entero, en un proceso limpio, en la CI</text>
+  </g>
+</svg>

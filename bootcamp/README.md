@@ -55,7 +55,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [26](week-26-polars_parquet_y_duckdb/README.md) | Polars, Parquet y DuckDB | ✅ |
 | [27](week-27-visualizacion_con_matplotlib_seaborn_y_plotly/README.md) | Visualización con matplotlib, seaborn y plotly | ✅ |
 | [28](week-28-estadistica_aplicada_con_scipy_y_statsmodels/README.md) | Estadística aplicada con SciPy y statsmodels | ✅ |
-| 29 | EDA, notebooks reproducibles (JupyterLab en Docker) y ETL desde PostgreSQL | ⬜ |
+| [29](week-29-eda_notebooks_reproducibles_y_etl_desde_postgresql/README.md) | EDA, notebooks reproducibles (JupyterLab en Docker) y ETL desde PostgreSQL | ✅ |
 | 30 | Proyecto de fase: análisis de tu dominio | ⬜ |
 
 ### Fase 5 — IA y ML (S31-42, 216 h)

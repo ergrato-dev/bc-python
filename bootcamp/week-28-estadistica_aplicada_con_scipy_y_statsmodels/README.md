@@ -170,4 +170,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; lo
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 27](../week-27-visualizacion_con_matplotlib_seaborn_y_plotly/README.md) | **Semana 28** | Semana 29 (próximamente) |
+| [Semana 27](../week-27-visualizacion_con_matplotlib_seaborn_y_plotly/README.md) | **Semana 28** | [Semana 29](../week-29-eda_notebooks_reproducibles_y_etl_desde_postgresql/README.md) |

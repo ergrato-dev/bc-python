@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" role="img" aria-labelledby="t d">
+  <title id="t">De PostgreSQL al hallazgo</title>
+  <desc id="d">extraer lee las medidas con read_sql, añade el nivel y escribe instantanea.csv con su huella SHA-256; el notebook lee esa instantánea, comprueba la huella y escribe sus hallazgos.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="330" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">ETL: la base cambia cada día; la instantánea, no</text>
+    <rect x="24" y="80" width="128" height="72" rx="8" fill="#082f49" stroke="#93c5fd"/>
+    <text x="88.0" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#93c5fd">PostgreSQL</text>
+    <text x="88.0" y="132" text-anchor="middle" font-size="12" fill="#94a3b8">loads · readings</text>
+    <rect x="170" y="80" width="128" height="72" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="234.0" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#93c5fd">Extraer</text>
+    <text x="234.0" y="132" text-anchor="middle" font-size="12" fill="#94a3b8">read_sql</text>
+    <line x1="154" y1="116" x2="168" y2="116" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="316" y="80" width="128" height="72" rx="8" fill="#2e1065" stroke="#c4b5fd"/>
+    <text x="380.0" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#c4b5fd">Transformar</text>
+    <text x="380.0" y="132" text-anchor="middle" font-size="12" fill="#94a3b8">nivel · columnas</text>
+    <line x1="300" y1="116" x2="314" y2="116" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="462" y="80" width="128" height="72" rx="8" fill="#422006" stroke="#fcd34d"/>
+    <text x="526.0" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#fcd34d">Instantánea</text>
+    <text x="526.0" y="132" text-anchor="middle" font-size="12" fill="#94a3b8">instantanea.csv</text>
+    <line x1="446" y1="116" x2="460" y2="116" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="608" y="80" width="128" height="72" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="672.0" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#86efac">Notebook</text>
+    <text x="672.0" y="132" text-anchor="middle" font-size="12" fill="#94a3b8">eda.ipynb</text>
+    <line x1="592" y1="116" x2="606" y2="116" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="754" y="80" width="128" height="72" rx="8" fill="#052e16" stroke="#86efac"/>
+    <text x="818.0" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#86efac">Hallazgos</text>
+    <text x="818.0" y="132" text-anchor="middle" font-size="12" fill="#94a3b8">## Conclusiones</text>
+    <line x1="738" y1="116" x2="752" y2="116" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="462" y="176" width="128" height="34" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="526.0" y="198.0" text-anchor="middle" font-size="12" fill="#fcd34d">sha256: 3193…</text>
+    <line x1="592" y1="193" x2="648" y2="193" stroke="#fcd34d" stroke-width="2" marker-end="url(#a)" stroke-dasharray="5 4"/>
+    <text x="654" y="197" font-size="12" fill="#fcd34d">assert de la huella</text>
+    <rect x="24" y="238" width="420" height="68" rx="8" fill="#1e293b" stroke="#93c5fd" stroke-dasharray="5 4"/>
+    <text x="234.0" y="264" text-anchor="middle" font-size="13" font-weight="700" fill="#93c5fd">observatorio extraer instantanea.csv --carga 1</text>
+    <text x="234.0" y="288" text-anchor="middle" font-size="12" fill="#94a3b8">core/etl.py: extract · transform · write_snapshot</text>
+    <rect x="462" y="238" width="420" height="68" rx="8" fill="#1e293b" stroke="#86efac" stroke-dasharray="5 4"/>
+    <text x="672.0" y="264" text-anchor="middle" font-size="13" font-weight="700" fill="#86efac">notebooks/ en Git, sin salidas</text>
+    <text x="672.0" y="288" text-anchor="middle" font-size="12" fill="#94a3b8">JupyterLab en Docker · Colab · el test lo ejecuta</text>
+  </g>
+</svg>
