@@ -171,4 +171,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; la
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 29](../week-29-eda_notebooks_reproducibles_y_etl_desde_postgresql/README.md) | **Semana 30** | Semana 31 (próximamente) |
+| [Semana 29](../week-29-eda_notebooks_reproducibles_y_etl_desde_postgresql/README.md) | **Semana 30** | [Semana 31](../week-31-ml_con_scikit_learn_regresion_clasificacion_y_metricas/README.md) |

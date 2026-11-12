@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" role="img" aria-labelledby="t d">
+  <title id="t">Matriz de confusión</title>
+  <desc id="d">Matriz de dos por dos: 3 verdaderos positivos, 1 falso negativo, 2 falsos positivos y 14 verdaderos negativos. La exhaustividad sale de la fila real alto, 3 de 4; la precisión de la columna predicha alto, 3 de 5; la exactitud de la diagonal, 17 de 20.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">Matriz de confusión: filas, lo real; columnas, lo predicho</text>
+    <text x="450" y="60" text-anchor="middle" font-size="13" fill="#94a3b8">20 días, 4 de calor alto. confusion_matrix(real, predicho, labels=["alto", "normal"])</text>
+    <text x="370" y="96" text-anchor="middle" font-size="13" fill="#94a3b8">predicho</text>
+    <text x="140" y="250" text-anchor="middle" font-size="13" fill="#94a3b8">real</text>
+    <text x="310.0" y="120" text-anchor="middle" font-size="14" font-weight="700">alto</text>
+    <text x="236" y="195.0" text-anchor="end" font-size="14" font-weight="700">alto</text>
+    <text x="430.0" y="120" text-anchor="middle" font-size="14" font-weight="700">normal</text>
+    <text x="236" y="315.0" text-anchor="end" font-size="14" font-weight="700">normal</text>
+    <rect x="250" y="130" width="120" height="120" fill="#1e293b" stroke="#86efac" stroke-width="2"/>
+    <text x="310.0" y="194.0" text-anchor="middle" font-size="30" font-weight="700" fill="#86efac">3</text>
+    <text x="310.0" y="220.0" text-anchor="middle" font-size="12" fill="#94a3b8">VP</text>
+    <rect x="370" y="130" width="120" height="120" fill="#1e293b" stroke="#fca5a5" stroke-width="2"/>
+    <text x="430.0" y="194.0" text-anchor="middle" font-size="30" font-weight="700" fill="#fca5a5">1</text>
+    <text x="430.0" y="220.0" text-anchor="middle" font-size="12" fill="#94a3b8">FN · se escapa</text>
+    <rect x="250" y="250" width="120" height="120" fill="#1e293b" stroke="#fcd34d" stroke-width="2"/>
+    <text x="310.0" y="314.0" text-anchor="middle" font-size="30" font-weight="700" fill="#fcd34d">2</text>
+    <text x="310.0" y="340.0" text-anchor="middle" font-size="12" fill="#94a3b8">FP · falsa alarma</text>
+    <rect x="370" y="250" width="120" height="120" fill="#1e293b" stroke="#86efac" stroke-width="2"/>
+    <text x="430.0" y="314.0" text-anchor="middle" font-size="30" font-weight="700" fill="#86efac">14</text>
+    <text x="430.0" y="340.0" text-anchor="middle" font-size="12" fill="#94a3b8">VN</text>
+    <rect x="246" y="126" width="248" height="128" fill="none" stroke="#93c5fd" stroke-dasharray="6 4"/>
+    <rect x="252" y="132" width="116" height="236" fill="none" stroke="#e2e8f0" stroke-dasharray="2 4"/>
+    <text x="520" y="168" font-size="14" font-weight="700" fill="#93c5fd">exhaustividad = 3 / (3 + 1) = 0,75</text>
+    <text x="520" y="190" font-size="12" fill="#94a3b8">la fila real "alto": de los altos, cuántos encuentra</text>
+    <text x="520" y="260" font-size="14" font-weight="700">precisión = 3 / (3 + 2) = 0,60</text>
+    <text x="520" y="282" font-size="12" fill="#94a3b8">la columna predicha "alto": de sus avisos, cuántos aciertan</text>
+    <text x="520" y="340" font-size="14" font-weight="700" fill="#86efac">exactitud = (3 + 14) / 20 = 0,85</text>
+    <text x="520" y="362" font-size="12" fill="#94a3b8">la diagonal; siempre "normal" ya da 0,80</text>
+  </g>
+</svg>

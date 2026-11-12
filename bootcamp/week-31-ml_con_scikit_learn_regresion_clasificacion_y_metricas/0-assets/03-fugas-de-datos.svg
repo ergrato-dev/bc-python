@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 392" role="img" aria-labelledby="t d">
+  <title id="t">Fugas de datos</title>
+  <desc id="d">Tres paneles. El objetivo disfrazado: clasificar el nivel con el valor acierta siempre y no sirve. Calcular con la prueba: la media de cada sensor con todas las medidas da R² 0,11 en ruido, y sin fuga −0,51. El futuro y los repetidos: con cada medida dos veces, el vecino más cercano es su gemela y da R² 0,54 en datos al azar.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="392" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">Tres fugas: el modelo ve algo que en la realidad no sabría</text>
+    <rect x="24" y="70" width="268" height="240" rx="8" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="40" y="98" font-size="15" font-weight="700" fill="#fca5a5">El objetivo disfrazado</text>
+    <text x="40" y="124" font-size="13" fill="#e2e8f0">clasificar el nivel con el valor</text>
+    <text x="40" y="146" font-size="13" fill="#e2e8f0"></text>
+    <text x="40" y="168" font-size="13" fill="#e2e8f0">nivel = umbrales(valor)</text>
+    <text x="40" y="190" font-size="13" fill="#e2e8f0"></text>
+    <text x="40" y="212" font-size="13" fill="#e2e8f0">acierta el 100 %</text>
+    <text x="40" y="234" font-size="13" fill="#e2e8f0">y no sirve: si tienes el valor,</text>
+    <text x="40" y="256" font-size="13" fill="#e2e8f0">ya sabes el nivel</text>
+    <rect x="316" y="70" width="268" height="240" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="332" y="98" font-size="15" font-weight="700" fill="#fcd34d">Calcular con la prueba</text>
+    <text x="332" y="124" font-size="13" fill="#e2e8f0">media de cada sensor con</text>
+    <text x="332" y="146" font-size="13" fill="#e2e8f0">todas las medidas</text>
+    <text x="332" y="168" font-size="13" fill="#e2e8f0"></text>
+    <text x="332" y="190" font-size="13" fill="#e2e8f0">la prueba ya está dentro</text>
+    <text x="332" y="212" font-size="13" fill="#e2e8f0"></text>
+    <text x="332" y="234" font-size="13" fill="#e2e8f0">R² 0,11 en datos que son ruido</text>
+    <text x="332" y="256" font-size="13" fill="#e2e8f0">sin fuga: −0,51</text>
+    <rect x="608" y="70" width="268" height="240" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="624" y="98" font-size="15" font-weight="700" fill="#93c5fd">El futuro y los repetidos</text>
+    <text x="624" y="124" font-size="13" fill="#e2e8f0">medidas de mañana en</text>
+    <text x="624" y="146" font-size="13" fill="#e2e8f0">entrenamiento, o la misma</text>
+    <text x="624" y="168" font-size="13" fill="#e2e8f0">medida a los dos lados</text>
+    <text x="624" y="190" font-size="13" fill="#e2e8f0"></text>
+    <text x="624" y="212" font-size="13" fill="#e2e8f0">el vecino más cercano</text>
+    <text x="624" y="234" font-size="13" fill="#e2e8f0">es su gemela</text>
+    <text x="624" y="256" font-size="13" fill="#e2e8f0">R² 0,54 en datos al azar</text>
+    <text x="450" y="346" text-anchor="middle" font-size="14" fill="#86efac">La regla: todo lo que se aprende de los datos, solo con el entrenamiento</text>
+    <text x="450" y="370" text-anchor="middle" font-size="12" fill="#94a3b8">En tu Observatorio, features usa solo la etiqueta, y un test comprueba que el modelo no ve el valor</text>
+  </g>
+</svg>

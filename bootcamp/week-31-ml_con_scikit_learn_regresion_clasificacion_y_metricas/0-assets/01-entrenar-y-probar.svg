@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 376" role="img" aria-labelledby="t d">
+  <title id="t">Entrenar y probar</title>
+  <desc id="d">Las 1894 medidas con valor se reparten en 1420 de entrenamiento y 474 de prueba, con la misma proporción de niveles bajo, medio y alto en las dos. fit aprende solo con el entrenamiento; predict y las métricas usan solo la prueba, comparando cada modelo con su referencia.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="376" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">Aprende con unas medidas, se mide con otras</text>
+    <text x="450" y="60" text-anchor="middle" font-size="13" fill="#94a3b8">train_test_split(test_size=0.25, random_state=31, stratify=nivel) con las 1894 medidas con valor del starter</text>
+    <text x="40" y="100" font-size="14" font-weight="700">Entrenamiento · 1420 medidas</text>
+    <rect x="40.0" y="110" width="70.2" height="34" fill="#93c5fd"/>
+    <text x="75.1" y="132" text-anchor="middle" font-size="12" fill="#0f172a">bajo 13 %</text>
+    <rect x="110.2" y="110" width="270.0" height="34" fill="#86efac"/>
+    <text x="245.2" y="132" text-anchor="middle" font-size="12" fill="#0f172a">medio 50 %</text>
+    <rect x="380.2" y="110" width="199.8" height="34" fill="#fcd34d"/>
+    <text x="480.1" y="132" text-anchor="middle" font-size="12" fill="#0f172a">alto 37 %</text>
+    <text x="640" y="100" font-size="14" font-weight="700">Prueba · 474 medidas</text>
+    <rect x="640.0" y="110" width="28.6" height="34" fill="#93c5fd"/>
+    <rect x="668.6" y="110" width="110.0" height="34" fill="#86efac"/>
+    <text x="723.6" y="132" text-anchor="middle" font-size="12" fill="#0f172a">medio 50 %</text>
+    <rect x="778.6" y="110" width="81.4" height="34" fill="#fcd34d"/>
+    <text x="819.3" y="132" text-anchor="middle" font-size="12" fill="#0f172a">alto 37 %</text>
+    <text x="450" y="172" text-anchor="middle" font-size="12" fill="#94a3b8">estratificado: la misma proporción de cada nivel en las dos partes</text>
+    <rect x="40" y="200" width="250" height="110" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="56" y="228" font-size="15" font-weight="700" fill="#93c5fd">fit</text>
+    <text x="56" y="254" font-size="13" fill="#e2e8f0">LinearRegression</text>
+    <text x="56" y="276" font-size="13" fill="#94a3b8">LogisticRegression</text>
+    <text x="56" y="298" font-size="13" fill="#e2e8f0">y las referencias Dummy</text>
+    <rect x="325" y="200" width="250" height="110" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="341" y="228" font-size="15" font-weight="700" fill="#93c5fd">modelo entrenado</text>
+    <text x="341" y="254" font-size="13" fill="#e2e8f0">coef_, intercept_</text>
+    <text x="341" y="276" font-size="13" fill="#94a3b8">lo aprendido de las 1420</text>
+    <rect x="610" y="200" width="250" height="110" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="626" y="228" font-size="15" font-weight="700" fill="#86efac">predict y métricas</text>
+    <text x="626" y="254" font-size="13" fill="#e2e8f0">MAE, R², exactitud...</text>
+    <text x="626" y="276" font-size="13" fill="#94a3b8">solo con las 474</text>
+    <line x1="165" y1="150" x2="165" y2="196" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="292" y1="255" x2="321" y2="255" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="577" y1="255" x2="606" y2="255" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="750" y1="150" x2="750" y2="196" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="450" y="350" text-anchor="middle" font-size="13" fill="#fcd34d">Si el modelo no mejora a la referencia en la prueba, no ha aprendido nada útil</text>
+  </g>
+</svg>
