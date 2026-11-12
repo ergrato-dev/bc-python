@@ -174,4 +174,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README; lo
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 28](../week-28-estadistica_aplicada_con_scipy_y_statsmodels/README.md) | **Semana 29** | Semana 30 (próximamente) |
+| [Semana 28](../week-28-estadistica_aplicada_con_scipy_y_statsmodels/README.md) | **Semana 29** | [Semana 30](../week-30-proyecto_de_fase_analisis_de_tu_dominio/README.md) |

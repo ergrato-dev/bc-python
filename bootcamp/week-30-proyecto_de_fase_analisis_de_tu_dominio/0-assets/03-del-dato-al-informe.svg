@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-labelledby="t d">
+  <title id="t">Del dato al informe</title>
+  <desc id="d">Una medida va de la fuente a PostgreSQL con guardar, a una instantánea con huella con extraer, se explora en el notebook y se confirma con hallazgos; la instantánea, el notebook y el informe tienen cada uno sus tests.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="300" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">El camino de un dato: cada paso, un comando; cada archivo, un test</text>
+    <rect x="20" y="80" width="150" height="96" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="95" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#94a3b8">Fuente</text>
+    <text x="95" y="136" text-anchor="middle" font-size="13">medidas.txt · API</text>
+    <text x="95" y="158" text-anchor="middle" font-size="12" fill="#94a3b8">semanas 7 y 18</text>
+    <rect x="196" y="80" width="150" height="96" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="271" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#93c5fd">PostgreSQL</text>
+    <text x="271" y="136" text-anchor="middle" font-size="13">guardar</text>
+    <text x="271" y="158" text-anchor="middle" font-size="12" fill="#94a3b8">semana 19</text>
+    <line x1="172" y1="128" x2="192" y2="128" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="372" y="80" width="150" height="96" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="447" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#93c5fd">Instantánea</text>
+    <text x="447" y="136" text-anchor="middle" font-size="13">extraer · sha256</text>
+    <text x="447" y="158" text-anchor="middle" font-size="12" fill="#94a3b8">semana 29</text>
+    <line x1="348" y1="128" x2="368" y2="128" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="548" y="80" width="150" height="96" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="623" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#fcd34d">Notebook</text>
+    <text x="623" y="136" text-anchor="middle" font-size="13">explorar: ideas</text>
+    <text x="623" y="158" text-anchor="middle" font-size="12" fill="#94a3b8">semana 29</text>
+    <line x1="524" y1="128" x2="544" y2="128" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="724" y="80" width="150" height="96" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="799" y="112" text-anchor="middle" font-size="15" font-weight="700" fill="#86efac">Informe</text>
+    <text x="799" y="136" text-anchor="middle" font-size="13">hallazgos: confirmar</text>
+    <text x="799" y="158" text-anchor="middle" font-size="12" fill="#94a3b8">semana 30</text>
+    <line x1="700" y1="128" x2="720" y2="128" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="447" y1="178" x2="447" y2="208" stroke="#86efac" stroke-dasharray="4 4"/>
+    <text x="447" y="226" text-anchor="middle" font-size="13" fill="#86efac">test_etl</text>
+    <text x="447" y="244" text-anchor="middle" font-size="12" fill="#94a3b8">tipos, orden, huella</text>
+    <line x1="623" y1="178" x2="623" y2="208" stroke="#86efac" stroke-dasharray="4 4"/>
+    <text x="623" y="226" text-anchor="middle" font-size="13" fill="#86efac">test_notebook</text>
+    <text x="623" y="244" text-anchor="middle" font-size="12" fill="#94a3b8">de arriba abajo</text>
+    <line x1="799" y1="178" x2="799" y2="208" stroke="#86efac" stroke-dasharray="4 4"/>
+    <text x="799" y="226" text-anchor="middle" font-size="13" fill="#86efac">test_informe</text>
+    <text x="799" y="244" text-anchor="middle" font-size="12" fill="#94a3b8">al día</text>
+    <text x="450" y="276" text-anchor="middle" font-size="13" fill="#94a3b8">Fase 5: la misma instantánea entrena y evalúa un modelo</text>
+  </g>
+</svg>

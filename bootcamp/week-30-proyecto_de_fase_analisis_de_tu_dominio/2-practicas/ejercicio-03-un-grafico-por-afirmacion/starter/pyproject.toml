@@ -1,0 +1,10 @@
+[project]
+name = "un-grafico-por-afirmacion"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 30: gráficos que prueban una frase"
+requires-python = ">=3.14,<3.15"
+dependencies = ["matplotlib==3.11.2", "numpy==2.5.4", "scipy==1.18.1"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false

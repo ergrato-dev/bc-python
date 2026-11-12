@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 474" role="img" aria-labelledby="t d">
+  <title id="t">Anatomía del informe</title>
+  <desc id="d">La instantánea entra en observatorio hallazgos, que escribe hallazgos.md y diferencias.svg; el README.md, escrito a mano, tiene las secciones Pregunta, Datos, Hallazgos, Limitaciones y Siguientes pasos, y enlaza los dos archivos generados.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="474" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">informe/: el código escribe los números; tú, lo que significan</text>
+    <rect x="24" y="70" width="250" height="120" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="40" y="98" font-size="15" font-weight="700" fill="#94a3b8">instantanea.csv</text>
+    <text x="40" y="124" font-size="13" fill="#e2e8f0">los datos fijados</text>
+    <text x="40" y="146" font-size="13" fill="#94a3b8">sha256 3193…</text>
+    <text x="40" y="168" font-size="13" fill="#e2e8f0">notebooks/, en Git</text>
+    <rect x="325" y="70" width="250" height="120" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="341" y="98" font-size="15" font-weight="700" fill="#93c5fd">observatorio hallazgos</text>
+    <text x="341" y="124" font-size="13" fill="#e2e8f0">compare_all + BH</text>
+    <text x="341" y="146" font-size="13" fill="#94a3b8">differences_figure</text>
+    <text x="341" y="168" font-size="13" fill="#e2e8f0">render</text>
+    <rect x="626" y="70" width="250" height="56" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="642" y="98" font-size="15" font-weight="700" fill="#86efac">hallazgos.md</text>
+    <rect x="626" y="134" width="250" height="56" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="642" y="162" font-size="15" font-weight="700" fill="#86efac">diferencias.svg</text>
+    <line x1="276" y1="130" x2="322" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="577" y1="110" x2="622" y2="98" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="577" y1="150" x2="622" y2="162" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="24" y="232" width="852" height="190" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="40" y="260" font-size="15" font-weight="700" fill="#fcd34d">README.md: lo escribes tú</text>
+    <text x="48" y="290" font-size="14" font-weight="700">## Pregunta</text>
+    <text x="238" y="290" font-size="13" fill="#94a3b8">población, unidad, métrica, comparación</text>
+    <text x="48" y="318" font-size="14" font-weight="700">## Datos</text>
+    <text x="238" y="318" font-size="13" fill="#94a3b8">origen, huella, qué falta</text>
+    <text x="48" y="346" font-size="14" font-weight="700">## Hallazgos</text>
+    <text x="238" y="346" font-size="13" fill="#94a3b8">2-3 frases con su intervalo, y la figura</text>
+    <text x="48" y="374" font-size="14" font-weight="700">## Limitaciones</text>
+    <text x="238" y="374" font-size="13" fill="#94a3b8">lo que no se puede decir</text>
+    <text x="48" y="402" font-size="14" font-weight="700">## Siguientes pasos</text>
+    <text x="238" y="402" font-size="13" fill="#94a3b8">hipótesis y qué harías después</text>
+    <line x1="750" y1="192" x2="750" y2="228" stroke="#86efac" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/>
+    <text x="760" y="216" font-size="12" fill="#86efac">enlaza y cita</text>
+    <text x="450" y="452" text-anchor="middle" font-size="13" fill="#94a3b8">test_informe.py: hallazgos.md al día con la instantánea · las cinco secciones · la misma huella que el notebook</text>
+  </g>
+</svg>
