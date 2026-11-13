@@ -64,7 +64,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 |:--:|---|:--:|
 | [31](week-31-ml_con_scikit_learn_regresion_clasificacion_y_metricas/README.md) | Machine learning con scikit-learn: regresión, clasificación y métricas | ✅ |
 | [32](week-32-features_pipelines_validacion_cruzada_y_tuning/README.md) | Features, pipelines, validación cruzada y tuning | ✅ |
-| 33 | Árboles, ensembles, gradient boosting y aprendizaje no supervisado | ⬜ |
+| [33](week-33-arboles_ensembles_gradient_boosting_y_no_supervisado/README.md) | Árboles, ensembles, gradient boosting y aprendizaje no supervisado | ✅ |
 | 34 | PyTorch I: tensores, autograd y MLP | ⬜ |
 | 35 | PyTorch II: CNN, entrenamiento y transfer learning | ⬜ |
 | 36 | NLP y Transformers con Hugging Face | ⬜ |

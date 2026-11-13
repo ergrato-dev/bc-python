@@ -167,4 +167,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 31](../week-31-ml_con_scikit_learn_regresion_clasificacion_y_metricas/README.md) | **Semana 32** | Semana 33 (próximamente) |
+| [Semana 31](../week-31-ml_con_scikit_learn_regresion_clasificacion_y_metricas/README.md) | **Semana 32** | [Semana 33](../week-33-arboles_ensembles_gradient_boosting_y_no_supervisado/README.md) |

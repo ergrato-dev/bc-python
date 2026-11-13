@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 474" role="img" aria-labelledby="t d">
+  <title id="t">Un árbol de decisión</title>
+  <desc id="d">A la izquierda, un árbol de dos niveles: la primera pregunta es si el viento es de 1,9 o menos; después, en cada rama, si la humedad pasa de 88,5 o de 85,5. Sus cuatro hojas predicen 30,0, 22,7, 14,8 y 6,7. A la derecha, el plano del viento y la humedad partido en los cuatro rectángulos que forman esas hojas.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="474" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#e2e8f0">Un árbol de dos niveles: cuatro preguntas, cuatro rectángulos</text>
+    <text x="450" y="60" text-anchor="middle" font-size="12" fill="#94a3b8">DecisionTreeRegressor(max_depth=2): cada hoja predice la media de sus medidas de entrenamiento</text>
+    <rect x="135" y="96" width="150" height="34" rx="8" fill="#1e293b" stroke="#e2e8f0"/>
+    <text x="210" y="118" text-anchor="middle" font-size="13" fill="#e2e8f0">viento ≤ 1,9</text>
+    <rect x="25" y="186" width="160" height="34" rx="8" fill="#1e293b" stroke="#e2e8f0"/>
+    <text x="105" y="208" text-anchor="middle" font-size="13" fill="#e2e8f0">humedad ≤ 88,5</text>
+    <rect x="235" y="186" width="160" height="34" rx="8" fill="#1e293b" stroke="#e2e8f0"/>
+    <text x="315" y="208" text-anchor="middle" font-size="13" fill="#e2e8f0">humedad ≤ 85,5</text>
+    <line x1="190" y1="130" x2="125" y2="184" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="230" y1="130" x2="295" y2="184" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="140" y="158" text-anchor="middle" font-size="12" fill="#94a3b8">sí</text>
+    <text x="282" y="158" text-anchor="middle" font-size="12" fill="#94a3b8">no</text>
+    <rect x="13" y="286" width="84" height="34" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="55" y="308" text-anchor="middle" font-size="13" fill="#fcd34d">30,0</text>
+    <line x1="93" y1="220" x2="55" y2="284" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="66" y="256" text-anchor="middle" font-size="12" fill="#94a3b8">sí</text>
+    <rect x="113" y="286" width="84" height="34" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="155" y="308" text-anchor="middle" font-size="13" fill="#86efac">22,7</text>
+    <line x1="117" y1="220" x2="155" y2="284" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="144" y="256" text-anchor="middle" font-size="12" fill="#94a3b8">no</text>
+    <rect x="223" y="286" width="84" height="34" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="265" y="308" text-anchor="middle" font-size="13" fill="#93c5fd">14,8</text>
+    <line x1="303" y1="220" x2="265" y2="284" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="276" y="256" text-anchor="middle" font-size="12" fill="#94a3b8">sí</text>
+    <rect x="323" y="286" width="84" height="34" rx="8" fill="#1e293b" stroke="#c4b5fd"/>
+    <text x="365" y="308" text-anchor="middle" font-size="13" fill="#c4b5fd">6,7</text>
+    <line x1="327" y1="220" x2="365" y2="284" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="354" y="256" text-anchor="middle" font-size="12" fill="#94a3b8">no</text>
+    <text x="210" y="356" text-anchor="middle" font-size="13" fill="#e2e8f0">una medida baja por las preguntas</text>
+    <text x="210" y="376" text-anchor="middle" font-size="13" fill="#e2e8f0">hasta una hoja: esa es su predicción</text>
+    <rect x="500" y="131" width="68" height="249" fill="#fcd34d" fill-opacity="0.22" stroke="#fcd34d"/>
+    <text x="534" y="260" text-anchor="middle" font-size="14" fill="#fcd34d">30,0</text>
+    <rect x="500" y="90" width="68" height="41" fill="#86efac" fill-opacity="0.22" stroke="#86efac"/>
+    <text x="534" y="115" text-anchor="middle" font-size="14" fill="#86efac">22,7</text>
+    <rect x="568" y="143" width="292" height="237" fill="#93c5fd" fill-opacity="0.22" stroke="#93c5fd"/>
+    <text x="714" y="267" text-anchor="middle" font-size="14" fill="#93c5fd">14,8</text>
+    <rect x="568" y="90" width="292" height="53" fill="#c4b5fd" fill-opacity="0.22" stroke="#c4b5fd"/>
+    <text x="714" y="122" text-anchor="middle" font-size="14" fill="#c4b5fd">6,7</text>
+    <line x1="500" y1="380" x2="860" y2="380" stroke="#94a3b8"/>
+    <line x1="500" y1="90" x2="500" y2="380" stroke="#94a3b8"/>
+    <text x="500" y="398" text-anchor="middle" font-size="12" fill="#94a3b8">0</text>
+    <text x="572" y="398" text-anchor="middle" font-size="12" fill="#94a3b8">2</text>
+    <text x="644" y="398" text-anchor="middle" font-size="12" fill="#94a3b8">4</text>
+    <text x="716" y="398" text-anchor="middle" font-size="12" fill="#94a3b8">6</text>
+    <text x="788" y="398" text-anchor="middle" font-size="12" fill="#94a3b8">8</text>
+    <text x="860" y="398" text-anchor="middle" font-size="12" fill="#94a3b8">10</text>
+    <text x="492" y="384" text-anchor="end" font-size="12" fill="#94a3b8">30</text>
+    <text x="492" y="299" text-anchor="end" font-size="12" fill="#94a3b8">50</text>
+    <text x="492" y="213" text-anchor="end" font-size="12" fill="#94a3b8">70</text>
+    <text x="492" y="128" text-anchor="end" font-size="12" fill="#94a3b8">90</text>
+    <text x="680" y="420" text-anchor="middle" font-size="13" fill="#e2e8f0">viento (m/s)</text>
+    <text x="460" y="235.0" text-anchor="middle" font-size="13" fill="#e2e8f0" transform="rotate(-90 460 235.0)">humedad (%)</text>
+    <text x="450" y="452" text-anchor="middle" font-size="13" fill="#fcd34d">Cada corte es una línea recta, paralela a un eje: un árbol dibuja escalones, no curvas</text>
+  </g>
+</svg>

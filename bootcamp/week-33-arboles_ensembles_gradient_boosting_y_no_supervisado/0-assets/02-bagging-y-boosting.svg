@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 482" role="img" aria-labelledby="t d">
+  <title id="t">Bagging y boosting</title>
+  <desc id="d">A la izquierda, bagging: de tus medidas salen tres muestras con repetición, cada una entrena su árbol por su cuenta, y la predicción es la media; baja la varianza. A la derecha, boosting: se empieza con la media y cada árbol, uno detrás de otro, aprende el residuo de los anteriores; la predicción es la suma; baja el sesgo y con demasiados árboles sobreajusta.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="482" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#e2e8f0">Dos formas de juntar árboles</text>
+    <rect x="24" y="58" width="410" height="400" rx="10" fill="none" stroke="#86efac" stroke-dasharray="6 4"/>
+    <text x="229" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#86efac">Bagging · un bosque</text>
+    <rect x="144" y="100" width="170" height="34" rx="8" fill="#1e293b" stroke="#e2e8f0"/>
+    <text x="229" y="122" text-anchor="middle" font-size="13" fill="#e2e8f0">tus medidas</text>
+    <line x1="229" y1="134" x2="94" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="36" y="170" width="116" height="34" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="94" y="192" text-anchor="middle" font-size="13" fill="#94a3b8">muestra 1</text>
+    <line x1="94" y1="204" x2="94" y2="238" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="36" y="240" width="116" height="34" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="94" y="262" text-anchor="middle" font-size="13" fill="#86efac">árbol 1</text>
+    <line x1="94" y1="274" x2="229" y2="318" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="229" y1="134" x2="229" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="171" y="170" width="116" height="34" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="229" y="192" text-anchor="middle" font-size="13" fill="#94a3b8">muestra 2</text>
+    <line x1="229" y1="204" x2="229" y2="238" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="171" y="240" width="116" height="34" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="229" y="262" text-anchor="middle" font-size="13" fill="#86efac">árbol 2</text>
+    <line x1="229" y1="274" x2="229" y2="318" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="229" y1="134" x2="364" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="306" y="170" width="116" height="34" rx="8" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="364" y="192" text-anchor="middle" font-size="13" fill="#94a3b8">muestra 3</text>
+    <line x1="364" y1="204" x2="364" y2="238" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="306" y="240" width="116" height="34" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="364" y="262" text-anchor="middle" font-size="13" fill="#86efac">árbol 3</text>
+    <line x1="364" y1="274" x2="229" y2="318" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="144" y="320" width="170" height="34" rx="8" fill="#1e293b" stroke="#86efac"/>
+    <text x="229" y="342" text-anchor="middle" font-size="13" fill="#86efac">la media</text>
+    <text x="229" y="412" text-anchor="middle" font-size="13" fill="#e2e8f0">en paralelo: cada árbol, por su cuenta,</text>
+    <text x="229" y="432" text-anchor="middle" font-size="13" fill="#e2e8f0">con una muestra con repetición</text>
+    <text x="229" y="452" text-anchor="middle" font-size="13" fill="#fcd34d">baja la varianza</text>
+    <rect x="466" y="58" width="410" height="400" rx="10" fill="none" stroke="#93c5fd" stroke-dasharray="6 4"/>
+    <text x="671" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#93c5fd">Boosting · uno detrás de otro</text>
+    <rect x="586" y="100" width="170" height="34" rx="8" fill="#1e293b" stroke="#e2e8f0"/>
+    <text x="671" y="122" text-anchor="middle" font-size="13" fill="#e2e8f0">la media</text>
+    <line x1="671" y1="134" x2="671" y2="166" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="546" y="168" width="250" height="34" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="671" y="190" text-anchor="middle" font-size="13" fill="#93c5fd">árbol 1: aprende el residuo</text>
+    <line x1="671" y1="202" x2="671" y2="234" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="546" y="236" width="250" height="34" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="671" y="258" text-anchor="middle" font-size="13" fill="#93c5fd">árbol 2: aprende el residuo</text>
+    <line x1="671" y1="270" x2="671" y2="302" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="546" y="304" width="250" height="34" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="671" y="326" text-anchor="middle" font-size="13" fill="#93c5fd">árbol 3: aprende el residuo</text>
+    <line x1="671" y1="338" x2="671" y2="360" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="546" y="362" width="250" height="34" rx="8" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="671" y="384" text-anchor="middle" font-size="13" fill="#93c5fd">la suma, × learning_rate</text>
+    <text x="671" y="432" text-anchor="middle" font-size="13" fill="#e2e8f0">en fila: cada árbol corrige lo que falta</text>
+    <text x="671" y="452" text-anchor="middle" font-size="13" fill="#fcd34d">baja el sesgo; con demasiados, sobreajusta</text>
+  </g>
+</svg>
