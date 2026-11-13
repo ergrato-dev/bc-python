@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 474" role="img" aria-labelledby="t d">
+  <title id="t">El grafo de autograd</title>
+  <desc id="d">El grafo de la pérdida de una recta. w y x entran en una multiplicación; se suma b; se resta y; se eleva al cuadrado y se hace la media, que da una pérdida de 9,6667. Las flechas azules son la ida, que calcula la pérdida. Una flecha amarilla de vuelta representa backward, que aplica la regla de la cadena y deja en w.grad -13,3333 y en b.grad -6,0000.</desc>
+  <defs><marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#93c5fd"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fcd34d"/></marker></defs>
+  <rect width="900" height="474" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" fill="#e2e8f0" font-weight="700">El grafo de la pérdida: ida para calcular, vuelta para derivar</text>
+    <text x="450" y="60" text-anchor="middle" font-size="12" fill="#94a3b8">pérdida = media((w · x + b − y)²) · w = 1, b = 0, x = (1, 2, 3), y = (3, 5, 7)</text>
+    <line x1="98" y1="130" x2="190" y2="164" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <line x1="98" y1="220" x2="190" y2="186" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <line x1="250" y1="175" x2="338" y2="175" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <line x1="244" y1="272" x2="345" y2="194" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <line x1="400" y1="175" x2="488" y2="175" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <line x1="394" y1="272" x2="495" y2="194" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <line x1="550" y1="175" x2="638" y2="175" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <line x1="700" y1="175" x2="778" y2="175" stroke="#93c5fd" stroke-width="2" marker-end="url(#f)"/>
+    <circle cx="70" cy="120" r="28" fill="#1e293b" stroke="#fcd34d" stroke-width="3"/>
+    <text x="70" y="126" text-anchor="middle" font-size="18" fill="#fcd34d" font-weight="700">w</text>
+    <circle cx="70" cy="230" r="28" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+    <text x="70" y="236" text-anchor="middle" font-size="18" fill="#94a3b8" font-weight="700">x</text>
+    <circle cx="220" cy="175" r="28" fill="#1e293b" stroke="#93c5fd" stroke-width="2"/>
+    <text x="220" y="181" text-anchor="middle" font-size="18" fill="#93c5fd" font-weight="700">×</text>
+    <circle cx="220" cy="290" r="28" fill="#1e293b" stroke="#fcd34d" stroke-width="3"/>
+    <text x="220" y="296" text-anchor="middle" font-size="18" fill="#fcd34d" font-weight="700">b</text>
+    <circle cx="370" cy="175" r="28" fill="#1e293b" stroke="#93c5fd" stroke-width="2"/>
+    <text x="370" y="181" text-anchor="middle" font-size="18" fill="#93c5fd" font-weight="700">+</text>
+    <circle cx="370" cy="290" r="28" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+    <text x="370" y="296" text-anchor="middle" font-size="18" fill="#94a3b8" font-weight="700">y</text>
+    <circle cx="520" cy="175" r="28" fill="#1e293b" stroke="#93c5fd" stroke-width="2"/>
+    <text x="520" y="181" text-anchor="middle" font-size="18" fill="#93c5fd" font-weight="700">−</text>
+    <circle cx="670" cy="175" r="28" fill="#1e293b" stroke="#93c5fd" stroke-width="2"/>
+    <text x="670" y="181" text-anchor="middle" font-size="18" fill="#93c5fd" font-weight="700">²</text>
+    <circle cx="810" cy="175" r="40" fill="#1e293b" stroke="#93c5fd" stroke-width="2"/>
+    <text x="810" y="181" text-anchor="middle" font-size="14" fill="#93c5fd" font-weight="700">media</text>
+    <text x="70" y="80" text-anchor="middle" font-size="12" fill="#fcd34d">parámetro</text>
+    <text x="70" y="280" text-anchor="middle" font-size="12" fill="#94a3b8">dato</text>
+    <text x="810" y="240" text-anchor="middle" font-size="14" fill="#93c5fd" font-weight="700">9,6667</text>
+    <text x="810" y="260" text-anchor="middle" font-size="12" fill="#94a3b8">la pérdida</text>
+    <path d="M 790 360 L 120 360" stroke="#fcd34d" stroke-width="2" fill="none" marker-end="url(#b)"/>
+    <text x="455" y="350" text-anchor="middle" font-size="13" fill="#fcd34d">backward(): la regla de la cadena, de la pérdida hacia cada parámetro</text>
+    <rect x="40" y="385" width="380" height="64" rx="10" fill="#1e293b"/>
+    <text x="230" y="410" text-anchor="middle" font-size="13" fill="#e2e8f0">w.grad = 2 · media((w·x + b − y) · x)</text>
+    <text x="230" y="434" text-anchor="middle" font-size="15" fill="#fcd34d" font-weight="700">= −13,3333</text>
+    <rect x="480" y="385" width="380" height="64" rx="10" fill="#1e293b"/>
+    <text x="670" y="410" text-anchor="middle" font-size="13" fill="#e2e8f0">b.grad = 2 · media(w·x + b − y)</text>
+    <text x="670" y="434" text-anchor="middle" font-size="15" fill="#fcd34d" font-weight="700">= −6,0000</text>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 466" role="img" aria-labelledby="t d">
+  <title id="t">Broadcasting</title>
+  <desc id="d">Tres casos. Una tabla de 2 por 3 más una columna de 2 por 1: la columna se repite en las tres columnas y el resultado es de 2 por 3. La misma tabla más una fila de 3: la fila se repite en las dos filas. La misma tabla más una columna de 3 por 1: 2 y 3 no encajan y PyTorch lanza un RuntimeError.</desc>
+  <defs></defs>
+  <rect width="900" height="466" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" fill="#e2e8f0" font-weight="700">Broadcasting: las formas se comparan desde la derecha</text>
+    <text x="450" y="60" text-anchor="middle" font-size="12" fill="#94a3b8">Dos tamaños encajan si son iguales o si uno es 1; el 1 se estira (casillas discontinuas)</text>
+    <rect x="30" y="80" width="260" height="330" rx="10" fill="#1e293b"/>
+    <text x="160" y="108" text-anchor="middle" font-size="15" fill="#e2e8f0" font-weight="700">(2, 3) con (2, 1)</text>
+    <text x="160" y="130" text-anchor="middle" font-size="12" fill="#94a3b8">3 y 1 encajan · 2 y 2 encajan</text>
+    <rect x="50" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="84" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="118" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="50" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="84" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="118" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <text x="99.0" y="246" text-anchor="middle" font-size="13" fill="#94a3b8">(2, 3)</text>
+    <text x="160" y="200" text-anchor="middle" font-size="22" fill="#e2e8f0">+</text>
+    <rect x="180" y="160" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <rect x="214" y="160" width="30" height="30" rx="4" fill="#1e293b" stroke="#fcd34d" stroke-dasharray="4 3"/>
+    <rect x="248" y="160" width="30" height="30" rx="4" fill="#1e293b" stroke="#fcd34d" stroke-dasharray="4 3"/>
+    <rect x="180" y="194" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <rect x="214" y="194" width="30" height="30" rx="4" fill="#1e293b" stroke="#fcd34d" stroke-dasharray="4 3"/>
+    <rect x="248" y="194" width="30" height="30" rx="4" fill="#1e293b" stroke="#fcd34d" stroke-dasharray="4 3"/>
+    <text x="229.0" y="246" text-anchor="middle" font-size="13" fill="#94a3b8">(2, 1) estirado</text>
+    <line x1="50" y1="290" x2="270" y2="290" stroke="#94a3b8"/>
+    <rect x="109" y="305" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="143" y="305" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="177" y="305" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="109" y="339" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="143" y="339" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="177" y="339" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <text x="160" y="395" text-anchor="middle" font-size="13" fill="#86efac">(2, 3): la columna se repite</text>
+    <rect x="320" y="80" width="260" height="330" rx="10" fill="#1e293b"/>
+    <text x="450" y="108" text-anchor="middle" font-size="15" fill="#e2e8f0" font-weight="700">(2, 3) con (3,)</text>
+    <text x="450" y="130" text-anchor="middle" font-size="12" fill="#94a3b8">(3,) pasa a (1, 3) · encajan</text>
+    <rect x="340" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="374" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="408" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="340" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="374" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="408" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <text x="389.0" y="246" text-anchor="middle" font-size="13" fill="#94a3b8">(2, 3)</text>
+    <text x="450" y="200" text-anchor="middle" font-size="22" fill="#e2e8f0">+</text>
+    <rect x="470" y="160" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <rect x="504" y="160" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <rect x="538" y="160" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <rect x="470" y="194" width="30" height="30" rx="4" fill="#1e293b" stroke="#fcd34d" stroke-dasharray="4 3"/>
+    <rect x="504" y="194" width="30" height="30" rx="4" fill="#1e293b" stroke="#fcd34d" stroke-dasharray="4 3"/>
+    <rect x="538" y="194" width="30" height="30" rx="4" fill="#1e293b" stroke="#fcd34d" stroke-dasharray="4 3"/>
+    <text x="519.0" y="246" text-anchor="middle" font-size="13" fill="#94a3b8">(1, 3) estirado</text>
+    <line x1="340" y1="290" x2="560" y2="290" stroke="#94a3b8"/>
+    <rect x="399" y="305" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="433" y="305" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="467" y="305" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="399" y="339" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="433" y="339" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <rect x="467" y="339" width="30" height="30" rx="4" fill="#86efac" stroke="#86efac"/>
+    <text x="450" y="395" text-anchor="middle" font-size="13" fill="#86efac">(2, 3): la fila se repite</text>
+    <rect x="610" y="80" width="260" height="330" rx="10" fill="#1e293b"/>
+    <text x="740" y="108" text-anchor="middle" font-size="15" fill="#e2e8f0" font-weight="700">(2, 3) con (3, 1)</text>
+    <text x="740" y="130" text-anchor="middle" font-size="12" fill="#94a3b8">3 y 1 encajan · 2 y 3 no</text>
+    <rect x="630" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="664" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="698" y="160" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="630" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="664" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <rect x="698" y="194" width="30" height="30" rx="4" fill="#93c5fd" stroke="#93c5fd"/>
+    <text x="679.0" y="246" text-anchor="middle" font-size="13" fill="#94a3b8">(2, 3)</text>
+    <text x="740" y="200" text-anchor="middle" font-size="22" fill="#e2e8f0">+</text>
+    <rect x="780" y="160" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <rect x="780" y="194" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <rect x="780" y="228" width="30" height="30" rx="4" fill="#fcd34d" stroke="#fcd34d"/>
+    <text x="795.0" y="280" text-anchor="middle" font-size="13" fill="#94a3b8">(3, 1)</text>
+    <line x1="630" y1="290" x2="850" y2="290" stroke="#94a3b8"/>
+    <text x="740" y="335" text-anchor="middle" font-size="15" fill="#fca5a5" font-weight="700">2 y 3 no encajan</text>
+    <text x="740" y="360" text-anchor="middle" font-size="11" fill="#94a3b8">The size of tensor a (2) must match</text>
+    <text x="740" y="376" text-anchor="middle" font-size="11" fill="#94a3b8">the size of tensor b (3)</text>
+    <text x="450" y="440" text-anchor="middle" font-size="13" fill="#fcd34d">Cuidado con (n, 1) y (n,): encajan sin error y dan una tabla (n, n)</text>
+  </g>
+</svg>

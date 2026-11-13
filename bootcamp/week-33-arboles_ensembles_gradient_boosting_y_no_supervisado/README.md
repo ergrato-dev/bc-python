@@ -170,4 +170,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 32](../week-32-features_pipelines_validacion_cruzada_y_tuning/README.md) | **Semana 33** | Semana 34 (próximamente) |
+| [Semana 32](../week-32-features_pipelines_validacion_cruzada_y_tuning/README.md) | **Semana 33** | [Semana 34](../week-34-pytorch_tensores_autograd_y_mlp/README.md) |

@@ -88,4 +88,4 @@ Se evalúa **cómo** construiste el proyecto, con evidencia del repositorio y un
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | Semana 34 (próximamente) |
+| [Glosario](5-glosario/README.md) | **Rúbrica de evaluación** | [Semana 34](../week-34-pytorch_tensores_autograd_y_mlp/README.md) |
