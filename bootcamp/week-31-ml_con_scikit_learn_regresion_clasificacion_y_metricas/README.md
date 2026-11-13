@@ -171,4 +171,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 30](../week-30-proyecto_de_fase_analisis_de_tu_dominio/README.md) | **Semana 31** | Semana 32 (próximamente) |
+| [Semana 30](../week-30-proyecto_de_fase_analisis_de_tu_dominio/README.md) | **Semana 31** | [Semana 32](../week-32-features_pipelines_validacion_cruzada_y_tuning/README.md) |

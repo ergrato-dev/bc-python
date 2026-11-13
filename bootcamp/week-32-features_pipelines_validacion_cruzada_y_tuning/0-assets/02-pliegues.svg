@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="t d">
+  <title id="t">Pliegues al azar y por tiempo</title>
+  <desc id="d">Arriba, KFold con cinco pliegues: en cada fila un bloque distinto prueba y los otros cuatro entrenan, así cada medida prueba una vez. Abajo, TimeSeriesSplit con cuatro pliegues: el entrenamiento crece de izquierda a derecha y la prueba es siempre el bloque siguiente; lo que viene después no se usa.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="500" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">Pliegues al azar y por tiempo</text>
+    <text x="450" y="60" text-anchor="middle" font-size="13" fill="#94a3b8">Cada fila es un entrenamiento: en azul lo que entrena, en verde lo que prueba</text>
+    <text x="40" y="100" font-size="15" font-weight="700" fill="#93c5fd">KFold(5, shuffle=True)</text>
+    <text x="186" y="132" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 1</text>
+    <rect x="202" y="116" width="124" height="22" rx="3" fill="#86efac"/>
+    <rect x="330" y="116" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="458" y="116" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="586" y="116" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="714" y="116" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <text x="186" y="162" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 2</text>
+    <rect x="202" y="146" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="146" width="124" height="22" rx="3" fill="#86efac"/>
+    <rect x="458" y="146" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="586" y="146" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="714" y="146" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <text x="186" y="192" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 3</text>
+    <rect x="202" y="176" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="176" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="458" y="176" width="124" height="22" rx="3" fill="#86efac"/>
+    <rect x="586" y="176" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="714" y="176" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <text x="186" y="222" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 4</text>
+    <rect x="202" y="206" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="206" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="458" y="206" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="586" y="206" width="124" height="22" rx="3" fill="#86efac"/>
+    <rect x="714" y="206" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <text x="186" y="252" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 5</text>
+    <rect x="202" y="236" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="236" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="458" y="236" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="586" y="236" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="714" y="236" width="124" height="22" rx="3" fill="#86efac"/>
+    <text x="450" y="282" text-anchor="middle" font-size="13" fill="#e2e8f0">cada medida prueba una vez; mezcladas antes de cortar, con random_state</text>
+    <text x="40" y="324" font-size="15" font-weight="700" fill="#fcd34d">TimeSeriesSplit(4) · el tiempo va de izquierda a derecha</text>
+    <text x="186" y="356" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 1</text>
+    <rect x="202" y="340" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="340" width="124" height="22" rx="3" fill="#86efac"/>
+    <rect x="458" y="340" width="124" height="22" rx="3" fill="#1e293b"/>
+    <rect x="586" y="340" width="124" height="22" rx="3" fill="#1e293b"/>
+    <rect x="714" y="340" width="124" height="22" rx="3" fill="#1e293b"/>
+    <text x="186" y="386" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 2</text>
+    <rect x="202" y="370" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="370" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="458" y="370" width="124" height="22" rx="3" fill="#86efac"/>
+    <rect x="586" y="370" width="124" height="22" rx="3" fill="#1e293b"/>
+    <rect x="714" y="370" width="124" height="22" rx="3" fill="#1e293b"/>
+    <text x="186" y="416" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 3</text>
+    <rect x="202" y="400" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="400" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="458" y="400" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="586" y="400" width="124" height="22" rx="3" fill="#86efac"/>
+    <rect x="714" y="400" width="124" height="22" rx="3" fill="#1e293b"/>
+    <text x="186" y="446" text-anchor="end" font-size="13" fill="#94a3b8">pliegue 4</text>
+    <rect x="202" y="430" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="330" y="430" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="458" y="430" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="586" y="430" width="124" height="22" rx="3" fill="#93c5fd"/>
+    <rect x="714" y="430" width="124" height="22" rx="3" fill="#86efac"/>
+    <text x="450" y="476" text-anchor="middle" font-size="13" fill="#e2e8f0">la prueba siempre después de su entrenamiento; lo gris aún no ha llegado</text>
+  </g>
+</svg>

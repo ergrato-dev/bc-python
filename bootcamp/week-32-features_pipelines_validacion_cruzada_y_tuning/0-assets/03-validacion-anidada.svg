@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 458" role="img" aria-labelledby="t d">
+  <title id="t">Validación anidada</title>
+  <desc id="d">Un pliegue externo aparta una quinta parte para la prueba. Con las otras cuatro, GridSearchCV hace su propia validación cruzada interna para cada alpha y elige el mejor, que se reentrena con todo el entrenamiento externo y se mide con la prueba externa, que nadie usó para elegir. Se repite con cada pliegue externo.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="458" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700">Validación anidada: elegir con unos datos, medir con otros</text>
+    <text x="450" y="60" text-anchor="middle" font-size="13" fill="#94a3b8">cross_val_score(GridSearchCV(pipeline, rejilla, cv=interno), x, y, cv=externo)</text>
+    <text x="40" y="104" font-size="15" font-weight="700">Un pliegue externo de cinco</text>
+    <rect x="40" y="116" width="640" height="34" rx="4" fill="#93c5fd"/>
+    <text x="360" y="138" text-anchor="middle" font-size="13" fill="#0f172a">entrenamiento del pliegue externo · 4/5</text>
+    <rect x="690" y="116" width="170" height="34" rx="4" fill="#86efac"/>
+    <text x="775" y="138" text-anchor="middle" font-size="13" fill="#0f172a">prueba externa · 1/5</text>
+    <rect x="40" y="176" width="640" height="190" rx="10" fill="none" stroke="#93c5fd" stroke-dasharray="6 4"/>
+    <text x="56" y="200" font-size="14" font-weight="700" fill="#93c5fd">GridSearchCV, solo con el entrenamiento externo</text>
+    <rect x="60" y="216" width="76" height="18" rx="3" fill="#fcd34d"/>
+    <rect x="140" y="216" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="220" y="216" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="300" y="216" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="380" y="216" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="60" y="242" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="140" y="242" width="76" height="18" rx="3" fill="#fcd34d"/>
+    <rect x="220" y="242" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="300" y="242" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="380" y="242" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="60" y="268" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="140" y="268" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="220" y="268" width="76" height="18" rx="3" fill="#fcd34d"/>
+    <rect x="300" y="268" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <rect x="380" y="268" width="76" height="18" rx="3" fill="#94a3b8"/>
+    <text x="260" y="306" text-anchor="middle" font-size="12" fill="#94a3b8">... cinco pliegues internos por cada alpha</text>
+    <rect x="480" y="210" width="180" height="120" rx="8" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="496" y="238" font-size="15" font-weight="700" fill="#fcd34d">elige</text>
+    <text x="496" y="264" font-size="13" fill="#e2e8f0">alpha = 0,01 ... 100</text>
+    <text x="496" y="286" font-size="13" fill="#e2e8f0">el mejor en los</text>
+    <text x="496" y="308" font-size="13" fill="#e2e8f0">pliegues internos</text>
+    <text x="360" y="352" text-anchor="middle" font-size="12" fill="#94a3b8">y reentrena con todo el entrenamiento externo</text>
+    <line x1="662" y1="270" x2="775" y2="156" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <text x="775" y="300" text-anchor="middle" font-size="13" fill="#86efac">se mide aquí:</text>
+    <text x="775" y="320" text-anchor="middle" font-size="13" fill="#86efac">nadie la usó para elegir</text>
+    <text x="450" y="404" text-anchor="middle" font-size="13" fill="#e2e8f0">Se repite con cada pliegue externo: cinco medidas honradas, y cada una puede elegir otro alpha</text>
+    <text x="450" y="432" text-anchor="middle" font-size="13" fill="#fcd34d">best_score_ elige y mide con los mismos pliegues: sale optimista</text>
+  </g>
+</svg>

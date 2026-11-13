@@ -1,0 +1,10 @@
+[project]
+name = "validacion-cruzada"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 32: validación cruzada: medir con muchos repartos, y elegir cómo repartir"
+requires-python = ">=3.14,<3.15"
+dependencies = ["numpy==2.5.4", "pandas==3.1.0", "scikit-learn==1.9.1"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
