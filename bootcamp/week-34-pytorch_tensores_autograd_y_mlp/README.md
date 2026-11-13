@@ -173,4 +173,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 33](../week-33-arboles_ensembles_gradient_boosting_y_no_supervisado/README.md) | **Semana 34** | Semana 35 (próximamente) |
+| [Semana 33](../week-33-arboles_ensembles_gradient_boosting_y_no_supervisado/README.md) | **Semana 34** | [Semana 35](../week-35-pytorch_cnn_entrenamiento_y_transfer_learning/README.md) |

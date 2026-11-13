@@ -1,4 +1,4 @@
-# Tus tests de la semana 34: sustituye este ejemplo por al menos 6 tests tuyos (paso 10).
+# Tus tests de la semana 34: sustituye este ejemplo por al menos 6 tests tuyos (paso 9).
 # Usa las etiquetas y los valores de tu dominio y las funciones de test_validation.py
 # (frame_of, signal, noise, write), de test_ensembles.py (bump) y de test_neural.py (line):
 # una red que aprende tus etiquetas, una que memoriza ruido, un ritmo demasiado alto...

@@ -66,7 +66,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [32](week-32-features_pipelines_validacion_cruzada_y_tuning/README.md) | Features, pipelines, validación cruzada y tuning | ✅ |
 | [33](week-33-arboles_ensembles_gradient_boosting_y_no_supervisado/README.md) | Árboles, ensembles, gradient boosting y aprendizaje no supervisado | ✅ |
 | [34](week-34-pytorch_tensores_autograd_y_mlp/README.md) | PyTorch I: tensores, autograd y MLP | ✅ |
-| 35 | PyTorch II: CNN, entrenamiento y transfer learning | ⬜ |
+| [35](week-35-pytorch_cnn_entrenamiento_y_transfer_learning/README.md) | PyTorch II: CNN, entrenamiento y transfer learning | ✅ |
 | 36 | NLP y Transformers con Hugging Face | ⬜ |
 | 37 | LLMs por API: prompting, salida estructurada y tool use | ⬜ |
 | 38 | RAG: embeddings, pgvector en PostgreSQL y evaluación | ⬜ |

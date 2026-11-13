@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 395" role="img" aria-labelledby="t d">
+  <title id="t">Una CNN capa a capa</title>
+  <desc id="d">Un dígito de 1 por 8 por 8 pasa por Conv2d, MaxPool2d, otra Conv2d, otro MaxPool2d, Flatten y Linear hasta 10 puntuaciones, con la forma y los parámetros de cada capa.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="1000" height="395" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="500" y="36" text-anchor="middle" font-size="17" fill="#e2e8f0" font-weight="700">Una CNN, capa a capa: los mapas encogen y los canales crecen</text>
+    <text x="500" y="60" text-anchor="middle" font-size="12" fill="#94a3b8">Forma de un dígito al pasar por la red del ejercicio 02 (canales × alto × ancho)</text>
+    <rect x="53.0" y="148.0" width="64" height="64" rx="3" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="85" y="268" text-anchor="middle" font-size="13" fill="#93c5fd" font-weight="700">imagen</text>
+    <text x="85" y="288" text-anchor="middle" font-size="13" fill="#e2e8f0">1 × 8 × 8</text>
+    <text x="85" y="308" text-anchor="middle" font-size="12" fill="#94a3b8"></text>
+    <line x1="153" y1="180" x2="183" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="221.0" y="118.0" width="64" height="64" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="215.0" y="124.0" width="64" height="64" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="209.0" y="130.0" width="64" height="64" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="203.0" y="136.0" width="64" height="64" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="197.0" y="142.0" width="64" height="64" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="191.0" y="148.0" width="64" height="64" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="223" y="268" text-anchor="middle" font-size="13" fill="#fcd34d" font-weight="700">Conv2d + ReLU</text>
+    <text x="223" y="288" text-anchor="middle" font-size="13" fill="#e2e8f0">8 × 8 × 8</text>
+    <text x="223" y="308" text-anchor="middle" font-size="12" fill="#94a3b8">80 parámetros</text>
+    <line x1="291" y1="180" x2="321" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="375.0" y="134.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="369.0" y="140.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="363.0" y="146.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="357.0" y="152.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="351.0" y="158.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="345.0" y="164.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="361" y="268" text-anchor="middle" font-size="13" fill="#e2e8f0" font-weight="700">MaxPool2d(2)</text>
+    <text x="361" y="288" text-anchor="middle" font-size="13" fill="#e2e8f0">8 × 4 × 4</text>
+    <text x="361" y="308" text-anchor="middle" font-size="12" fill="#94a3b8">0</text>
+    <line x1="429" y1="180" x2="459" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="513.0" y="134.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="507.0" y="140.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="501.0" y="146.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="495.0" y="152.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="489.0" y="158.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <rect x="483.0" y="164.0" width="32" height="32" rx="3" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="499" y="268" text-anchor="middle" font-size="13" fill="#fcd34d" font-weight="700">Conv2d + ReLU</text>
+    <text x="499" y="288" text-anchor="middle" font-size="13" fill="#e2e8f0">16 × 4 × 4</text>
+    <text x="499" y="308" text-anchor="middle" font-size="12" fill="#94a3b8">1168 parámetros</text>
+    <line x1="567" y1="180" x2="597" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="659.0" y="142.0" width="16" height="16" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="653.0" y="148.0" width="16" height="16" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="647.0" y="154.0" width="16" height="16" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="641.0" y="160.0" width="16" height="16" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="635.0" y="166.0" width="16" height="16" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="629.0" y="172.0" width="16" height="16" rx="3" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="637" y="268" text-anchor="middle" font-size="13" fill="#e2e8f0" font-weight="700">MaxPool2d(2)</text>
+    <text x="637" y="288" text-anchor="middle" font-size="13" fill="#e2e8f0">16 × 2 × 2</text>
+    <text x="637" y="308" text-anchor="middle" font-size="12" fill="#94a3b8">0</text>
+    <line x1="705" y1="180" x2="735" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="769" y="120" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="769" y="135" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="769" y="150" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="769" y="165" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="769" y="180" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="769" y="195" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="769" y="210" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <rect x="769" y="225" width="12" height="12" rx="2" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="775" y="268" text-anchor="middle" font-size="13" fill="#e2e8f0" font-weight="700">Flatten</text>
+    <text x="775" y="288" text-anchor="middle" font-size="13" fill="#e2e8f0">64</text>
+    <text x="775" y="308" text-anchor="middle" font-size="12" fill="#94a3b8">0</text>
+    <line x1="843" y1="180" x2="873" y2="180" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="907" y="108" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="123" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="138" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="153" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="168" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="183" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="198" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="213" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="228" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <rect x="907" y="243" width="12" height="12" rx="2" fill="#1e293b" stroke="#86efac"/>
+    <text x="913" y="268" text-anchor="middle" font-size="13" fill="#86efac" font-weight="700">Linear</text>
+    <text x="913" y="288" text-anchor="middle" font-size="13" fill="#e2e8f0">10 puntuaciones</text>
+    <text x="913" y="308" text-anchor="middle" font-size="12" fill="#94a3b8">650 parámetros</text>
+    <text x="500" y="346" text-anchor="middle" font-size="13" fill="#94a3b8">Cada Conv2d mira vecindades de 3 × 3 de todos los canales; cada MaxPool2d se queda con el máximo de cada 2 × 2</text>
+    <text x="500" y="368" text-anchor="middle" font-size="13" fill="#94a3b8">1898 parámetros: menos que el MLP de 64 → 32 → 10 (2410), y los mismos filtros en toda la imagen</text>
+  </g>
+</svg>
