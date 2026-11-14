@@ -1,0 +1,128 @@
+{
+ "4b649602dcaeb82540c2e51f6e9b7364016196561a4e2af30a95d783245c9c0a": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Los fragmentos no lo dicen: hablan de calibrar y de revisar el analizador de ozono, no de su precio.\", \"citas\": []}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_03db6596acbb3feea41d8659",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 528,
+    "output_tokens": 42
+   }
+  }
+ ],
+ "5df59196ed37f3450c217e82cd974a5bc1143518a1869b96800fd4577b3b1e24": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Si dura más de cuatro horas, la estación se apaga y guarda los datos de las últimas 48 horas. Al volver la corriente, los datos de los primeros 30 minutos se marcan como no válidos.\", \"citas\": [7, 8]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_5c9201b910230f5a5317ad10",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 489,
+    "output_tokens": 67
+   }
+  }
+ ],
+ "63c7e04bb3e020f69da2a71a5e184c16dd5b9e90c1db0c14349720a211b32b1c": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"El cero se ha desplazado: repite el ajuste del cero antes de la calibración completa. Si la deriva supera 5 ppb en un mes, avisa al laboratorio.\", \"citas\": [5, 6]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_e0e2a1b9fc63114f885f821d",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 532,
+    "output_tokens": 56
+   }
+  }
+ ],
+ "70bd823fb582670db7b42ef6b6522a4f7e78909007929b76507c94e3916e816b": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Si el corte dura más de cuatro horas, la estación se apaga sola y guarda los datos de las últimas 48 horas.\", \"citas\": [7]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_6c34f62b4a525ec3656ade87",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 380,
+    "output_tokens": 45
+   }
+  }
+ ],
+ "af66434b148883df7cbcb4df3215b78cc77125b25791bf466da3c3d5d54c7add": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Cada 30 días, o antes si la caída de presión supera 50 Pa.\", \"citas\": [1]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_6f0c9fcc4e96f3bcb145c1c2",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 526,
+    "output_tokens": 30
+   }
+  }
+ ],
+ "f763758bd4ce4fe636dde226e059cfea1cc7eaf4c682a9686b4afb020a31922d": [
+  200,
+  {
+   "content": [
+    {
+     "text": "Depende del fabricante y del ambiente. Como orientación, muchos filtros de partículas se cambian cada uno a tres meses, o antes si se ven sucios o baja el caudal. Consulta el manual de tu equipo para el intervalo exacto.",
+     "type": "text"
+    }
+   ],
+   "id": "msg_9742189153c88af0846a720d",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 31,
+    "output_tokens": 69
+   }
+  }
+ ]
+}

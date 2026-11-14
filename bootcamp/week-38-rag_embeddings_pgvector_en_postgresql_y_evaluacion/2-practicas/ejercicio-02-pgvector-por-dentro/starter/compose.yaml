@@ -1,0 +1,18 @@
+# El PostgreSQL con pgvector del ejercicio 02 de la semana 38: la misma imagen que tu
+# proyecto. Puerto 5433 en tu máquina, para no chocar con el PostgreSQL de tu proyecto
+# (5432). Usuario y contraseña de desarrollo, solo para tu máquina.
+name: practicas-semana-38
+services:
+  db:
+    image: pgvector/pgvector:0.8.7-pg18-trixie@sha256:ab49524d18df7200b74ac9a475e1db6297fc1eb57da4c214c63d10ecc4b754fa
+    environment:
+      POSTGRES_USER: practicas
+      POSTGRES_PASSWORD: practicas
+      POSTGRES_DB: practicas
+    ports:
+      - "127.0.0.1:5433:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "practicas", "-d", "practicas"]
+      interval: 2s
+      timeout: 5s
+      retries: 15

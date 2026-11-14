@@ -1,0 +1,212 @@
+{
+ "09bd87c7f23e347710ce7e721b3b0cb51ae57619242efd805649fa44f054d465": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Los fragmentos no lo dicen: solo que, al volver la corriente, los analizadores tardan 30 minutos en estabilizarse.\", \"citas\": [8]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_ee6ada18fb933ebbcb2568ff",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 503,
+    "output_tokens": 47
+   }
+  }
+ ],
+ "1b6033ba7e487fa2f953b8af96b9b6cac70e544597993979d85f0c8b37e20e5b": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"fiel\": true, \"motivo\": \"Lo dice el fragmento 4.\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_789eb55f1a587c89392f6da4",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 556,
+    "output_tokens": 19
+   }
+  }
+ ],
+ "26df9e6b3c7e3c495816e915cf3585d445fdcb58df3d0614c0208e425817ac01": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"fiel\": true, \"motivo\": \"Dice que no lo sabe y lo que cita está en el fragmento 8.\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_09f2e6ec657ed6c220b758fb",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 519,
+    "output_tokens": 29
+   }
+  }
+ ],
+ "48acf3abe918665b8562d8f58db50d87daf32774e2db847f4a692240dd8d7773": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"fiel\": false, \"motivo\": \"Que la malla se cambie una vez al año no está en los fragmentos.\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_e7dac54b4b10259c76c7732a",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 504,
+    "output_tokens": 31
+   }
+  }
+ ],
+ "5bd383930880e01faf983e8edfa3f79736888294fd2db8a6ef89be8abab2a7f7": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Los fragmentos no lo explican: solo dicen que en la calibración se ajusta el cero con aire sin ozono.\", \"citas\": [4]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_3942cbdfd64a27b620939cd9",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 488,
+    "output_tokens": 43
+   }
+  }
+ ],
+ "80ae0d92ef0c98292a526d2b1dd9087fc4280ff2fe7f9b03c79588b10bb18065": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"fiel\": true, \"motivo\": \"No responde del todo, pero no añade nada que no esté.\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_e88660eed6b8ff0e9144a386",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 500,
+    "output_tokens": 28
+   }
+  }
+ ],
+ "8b5cd7af537c2b991029572c60084134af4058056252dda32119b3aa83fe6e42": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Con agua y un cepillo suave. La malla se cambia una vez al año.\", \"citas\": [3]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_0a683fcd89ecbda39e7f9e49",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 503,
+    "output_tokens": 32
+   }
+  }
+ ],
+ "a10cc82f164aa3ea1abbf802b7645986a06af5a04e9ce5a7e53156b63f2d9aa6": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Cuando la caída de presión supera 50 Pa.\", \"citas\": [1]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_bd89813b04c5c64060d17f6c",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 525,
+    "output_tokens": 25
+   }
+  }
+ ],
+ "c552d7b9d81a1f293ee32bb155ce4b9ee8509ebf5bd7f62bc751978db69a065f": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"fiel\": true, \"motivo\": \"Lo dice el fragmento 1.\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_ec99e64f7db74c1f12bb9734",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 519,
+    "output_tokens": 19
+   }
+  }
+ ],
+ "d133d15782f3958378035553bfdca88c898ce81bea28ce51d07dd4f09931678a": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"respuesta\": \"Cada tres meses, con un generador de ozono de referencia.\", \"citas\": [4]}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_2c0a55e014721368f9827952",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 557,
+    "output_tokens": 30
+   }
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="t d">
+  <title id="t">De una nota a un vector</title>
+  <desc id="d">Una nota pasa por TF-IDF, LSA y normalización hasta un vector de 32 números guardado en PostgreSQL. La distancia de coseno mide el ángulo entre vectores. TF-IDF compara palabras; un modelo preentrenado, sentidos.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#86efac"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fcd34d"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fca5a5"/></marker></defs>
+  <rect width="900" height="460" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="34" text-anchor="middle" font-size="18" fill="#e2e8f0" font-weight="bold">De una nota a un vector de 32 números</text>
+    <rect x="20" y="70" width="200" height="110" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="120" y="98" text-anchor="middle" font-size="15" fill="#93c5fd" font-weight="bold">Nota</text>
+    <text x="120" y="128" text-anchor="middle" font-size="13" fill="#e2e8f0">«El filtro de Sur estaba</text>
+    <text x="120" y="148" text-anchor="middle" font-size="13" fill="#e2e8f0">lleno de polvo»</text>
+    <line x1="222" y1="125" x2="258" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="260" y="70" width="200" height="110" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="360" y="98" text-anchor="middle" font-size="15" fill="#fcd34d" font-weight="bold">TF-IDF</text>
+    <text x="360" y="128" text-anchor="middle" font-size="13" fill="#e2e8f0">un número por palabra</text>
+    <text x="360" y="148" text-anchor="middle" font-size="12" fill="#94a3b8">miles de columnas, casi todo 0</text>
+    <line x1="462" y1="125" x2="498" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="500" y="70" width="180" height="110" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="590" y="98" text-anchor="middle" font-size="15" fill="#fcd34d" font-weight="bold">LSA (SVD)</text>
+    <text x="590" y="128" text-anchor="middle" font-size="13" fill="#e2e8f0">32 números</text>
+    <text x="590" y="148" text-anchor="middle" font-size="12" fill="#94a3b8">palabras que salen juntas</text>
+    <line x1="682" y1="125" x2="718" y2="125" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="720" y="70" width="160" height="110" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="800" y="98" text-anchor="middle" font-size="15" fill="#86efac" font-weight="bold">Longitud 1</text>
+    <text x="800" y="128" text-anchor="middle" font-size="13" fill="#e2e8f0">vector(32)</text>
+    <text x="800" y="148" text-anchor="middle" font-size="12" fill="#94a3b8">en PostgreSQL</text>
+    <rect x="20" y="210" width="420" height="230" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="230" y="238" text-anchor="middle" font-size="15" fill="#93c5fd" font-weight="bold">Distancia de coseno = 1 − coseno</text>
+    <line x1="80" y1="410" x2="380" y2="410" stroke="#475569" stroke-width="1"/>
+    <line x1="80" y1="410" x2="330" y2="300" stroke="#86efac" stroke-width="2" marker-end="url(#g)"/>
+    <line x1="80" y1="410" x2="360" y2="360" stroke="#86efac" stroke-width="2" marker-end="url(#g)"/>
+    <line x1="80" y1="410" x2="140" y2="270" stroke="#fca5a5" stroke-width="2" marker-end="url(#r)"/>
+    <text x="340" y="292" text-anchor="middle" font-size="13" fill="#86efac">nota A</text>
+    <text x="395" y="362" text-anchor="middle" font-size="13" fill="#86efac">nota B</text>
+    <text x="150" y="262" text-anchor="middle" font-size="13" fill="#fca5a5">nota C</text>
+    <text x="250" y="432" text-anchor="middle" font-size="12" fill="#94a3b8">ángulo pequeño: cerca · ángulo grande: lejos</text>
+    <rect x="460" y="210" width="420" height="230" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="670" y="238" text-anchor="middle" font-size="15" fill="#93c5fd" font-weight="bold">Léxico o semántico</text>
+    <text x="480" y="275" text-anchor="start" font-size="13" fill="#e2e8f0">«se cortó la electricidad»</text>
+    <text x="480" y="303" text-anchor="start" font-size="13" fill="#94a3b8">frente a «se apagó por un corte de energía»</text>
+    <text x="480" y="331" text-anchor="start" font-size="13" fill="#fca5a5">TF-IDF y LSA: 0,27 · comparten «la» y «se»</text>
+    <text x="480" y="359" text-anchor="start" font-size="13" fill="#86efac">modelo preentrenado: 0,69 · mismo sentido</text>
+    <text x="480" y="387" text-anchor="start" font-size="13" fill="#e2e8f0">Tu proyecto usa TF-IDF y LSA:</text>
+    <text x="480" y="415" text-anchor="start" font-size="13" fill="#94a3b8">sin descargas, rápido, pero compara palabras</text>
+  </g>
+</svg>

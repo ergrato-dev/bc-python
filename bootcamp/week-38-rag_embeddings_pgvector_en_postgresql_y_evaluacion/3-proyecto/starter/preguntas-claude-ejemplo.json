@@ -1,0 +1,56 @@
+{
+ "087a5bb8831f7dfdc9cd0e87a04889fad147d17ae966cd9f83181ae27c786de2": {
+  "content": [
+   {
+    "text": "{\"respuesta\": \"Las notas no lo dicen: hablan de filtros limpiados y de piezas que hay que cambiar, pero ninguna da un coste.\", \"citas\": []}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 592,
+   "output_tokens": 42
+  }
+ },
+ "29c22ae121546e186351ded627a989581f8e0cabbd26719dd6a4437ff038d366": {
+  "content": [
+   {
+    "text": "{\"respuesta\": \"En las notas que tengo, dos: un sensor y un equipo de Norte dejaron de enviar lecturas; la limpieza no lo arregló y hay que cambiar la pieza. Las otras tres notas de Norte son limpiezas.\", \"citas\": [133, 66]}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_2",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 591,
+   "output_tokens": 68
+  }
+ },
+ "331d0b1fc04eee8133d2f11e3109c0dd7b4a807d35a9fb068df6ca401da58e6b": {
+  "content": [
+   {
+    "text": "{\"respuesta\": \"En las notas que tengo, cinco: Este, Centro, Oeste, Sur y Norte. En todas, el equipo se apagó por un corte de energía y quedó fuera de servicio; en Norte, además, no se pudo calibrar.\", \"citas\": [73, 52, 57, 100, 49]}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 571,
+   "output_tokens": 70
+  }
+ }
+}

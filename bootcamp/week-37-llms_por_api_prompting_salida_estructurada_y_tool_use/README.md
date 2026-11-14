@@ -172,4 +172,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 36](../week-36-nlp_y_transformers_tokenizacion_atencion_y_hugging_face/README.md) | **Semana 37** | Semana 38 (próximamente) |
+| [Semana 36](../week-36-nlp_y_transformers_tokenizacion_atencion_y_hugging_face/README.md) | **Semana 37** | [Semana 38](../week-38-rag_embeddings_pgvector_en_postgresql_y_evaluacion/README.md) |
