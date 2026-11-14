@@ -1,0 +1,275 @@
+{
+ "020f73b06c436929f926f0e349e8a9933886f4d51e5a5463dfd498861b91c700": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"resumen\": \"Fuente quemada en el analizador de ozono de Oeste: no mide hasta el repuesto\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_4c9e820ce8279d8cc88dda04",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 285,
+    "output_tokens": 36
+   }
+  }
+ ],
+ "0b80b9664613417decd639bf841f8e517a5d9e97c94591dd1304352de2dd8341": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Placa quemada en Sur, repuesto pedido\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_93cd7b93556a9e67d8a7deb4",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 104,
+    "output_tokens": 30
+   }
+  }
+ ],
+ "2fa39e1cbe0431cc778bfe035bcf4a6956d319de8f74b2ed459d889309d65978": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sensor de Norte sin lecturas; limpiarlo no sirvió\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_2943f735d092cd557c4a7460",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 236,
+    "output_tokens": 33
+   }
+  }
+ ],
+ "5e3c50e84ff75ca4860c620d6e09e944528ec6654177357d14a288afc0963b7e": [
+  200,
+  {
+   "content": [
+    {
+     "text": "```json\n{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Filtro sucio cambiado en Centro\"}\n```",
+     "type": "text"
+    }
+   ],
+   "id": "msg_8d6e04f5023b6a6d056522e2",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 104,
+    "output_tokens": 32
+   }
+  }
+ ],
+ "7430268ecab2ad8a8df631f6e2a9ffedbc169de03f10da72613d9a22e727d296": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Placa quemada en Sur, repuesto pedido\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_cbeece6435818d4479b1e703",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 245,
+    "output_tokens": 30
+   }
+  }
+ ],
+ "7d3b91bc872265594fc599139db2d97aa7ee9a6525af0e22765d63ce081766ea": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"equipo\": \"analizador de ozono\", \"acciones\": [\"reiniciar el",
+     "type": "text"
+    }
+   ],
+   "id": "msg_031fa250a36e28feda87ee18",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "max_tokens",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 349,
+    "output_tokens": 30
+   }
+  }
+ ],
+ "8cf7f68f841d00bdfa91be6dc9e7f5b5ac873a2fd41b74e33121d8f2dbca01b2": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sensor de Norte sin lecturas; limpiarlo no sirvió\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_0bcac8e5ee5f1075f8047727",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 107,
+    "output_tokens": 33
+   }
+  }
+ ],
+ "9f22be9e21183a9ae67795b182a9c97184ea1752e5882b694898e3de136b809c": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Deriva corregida en el cero de Centro\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_544c0e2465ece6f49e9a92b5",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 107,
+    "output_tokens": 31
+   }
+  }
+ ],
+ "a6aa316a5cd9ee288281a8b6588099c5a94fa1a04819665bfa3285dda920f63d": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Placa quemada en Sur, repuesto pedido\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_6ad9e4149d60eda69567ed67",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 233,
+    "output_tokens": 30
+   }
+  }
+ ],
+ "bacb07e7b49bd791fb9740c6b2e79bb22ab08f5240e018b3d38a2fda9821c15b": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"averia\", \"equipo\": \"analizador de ozono\", \"acciones\": [\"reiniciar el equipo\", \"revisar el cableado\"], \"urgencia\": \"alta\", \"repuesto\": true}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_35ffce4297f00d54c3fae7ec",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 349,
+    "output_tokens": 48
+   }
+  }
+ ],
+ "c76addf2645991e36bc20a3ba3854ef20a28e09944f0e8a1994e91994349ad70": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Filtro sucio cambiado en Centro\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_7f9f1312062d2c04a1e14d10",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 233,
+    "output_tokens": 29
+   }
+  }
+ ],
+ "da8e4886996e469928aab5cf39e8a28bc8fac68b907280128f2e9434b6c7dc70": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Deriva corregida en el cero de Centro\"}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_ec7ae045956f7884ea2681e4",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 236,
+    "output_tokens": 31
+   }
+  }
+ ],
+ "ebc56142c7d341370ec713504eb8fc43dfcb01847120f8d93babe2ac4295f873": [
+  200,
+  {
+   "content": [
+    {
+     "text": "{\"tipo\": \"limpieza\", \"equipo\": null, \"acciones\": [\"revisión de rutina\"], \"urgencia\": \"baja\", \"repuesto\": false}",
+     "type": "text"
+    }
+   ],
+   "id": "msg_618830cbadd1c692cec36d7e",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 298,
+    "output_tokens": 37
+   }
+  }
+ ]
+}

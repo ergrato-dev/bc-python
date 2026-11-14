@@ -1,0 +1,301 @@
+etiqueta;tipo;texto
+Centro;averia;Visita a Centro, se revisó el equipo.
+Centro;limpieza;En Centro se quitó el polvo acumulado en la entrada, queda limpio.
+Centro;calibracion;El analizador de Centro tenía deriva y se corrigió el cero, tras la limpieza, se anotó el nuevo factor.
+Este;averia;El analizador de Este se apagó por un corte de energía, queda fuera de servicio.
+Sur;limpieza;En Sur se quitó el polvo acumulado en la entrada, no hizo falta calibrar, próxima visita en un mes.
+Centro;calibracion;El equipo de Centro mostraba un desfase de cinco unidades, queda calibrado.
+Norte;averia;El analizador de Norte tiene la placa quemada, no se pudo calibrar, queda fuera de servicio.
+Centro;limpieza;Durante la ronda en Centro se despejó la rejilla tapada, lecturas normales tras la limpieza.
+Oeste;calibracion;Se pasó por Oeste, ver informe del técnico.
+Oeste;averia;El equipo de Oeste tiene la placa quemada, hay que cambiar la pieza.
+Sur;limpieza;En la estación Sur se retiraron hojas y telarañas de la toma de aire, no hizo falta calibrar, lecturas normales tras la limpieza.
+Este;calibracion;El sensor de Este se ajustó la ganancia del sensor, no responde igual que antes del ajuste, queda calibrado.
+Oeste;averia;El equipo de Oeste no responde desde la madrugada, se intentó ajustar el cero sin éxito, hay que cambiar la pieza.
+Sur;limpieza;Hoy en Sur se retiraron hojas y telarañas de la toma de aire, queda limpio.
+Oeste;calibracion;El analizador de Oeste tenía deriva y se corrigió el cero, error dentro de tolerancia.
+Norte;averia;El sensor de Norte se apagó por un corte de energía, se limpió el filtro pero sigue igual, queda fuera de servicio.
+Norte;limpieza;Durante la ronda en Norte se retiraron hojas y telarañas de la toma de aire, no hizo falta calibrar, queda limpio.
+Centro;calibracion;El sensor de Centro mostraba un desfase de cinco unidades, queda calibrado.
+Sur;averia;El equipo de Sur se apagó por un corte de energía, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Sur;limpieza;En Sur se lavó la carcasa del equipo, no hizo falta calibrar, lecturas normales tras la limpieza.
+Norte;calibracion;La estación Norte tenía deriva y se corrigió el cero, tras la limpieza, error dentro de tolerancia.
+Oeste;averia;El analizador de Oeste tiene la placa quemada, hay que cambiar la pieza.
+Oeste;limpieza;Hoy en Oeste se retiraron hojas y telarañas de la toma de aire, queda limpio.
+Oeste;calibracion;El equipo de Oeste marcaba valores altos y se ajustó con el patrón, se anotó el nuevo factor.
+Sur;averia;El sensor de Sur tiene la placa quemada, se limpió el filtro pero sigue igual, hay que cambiar la pieza.
+Oeste;limpieza;En Oeste se cambió el filtro sucio, no hizo falta calibrar, lecturas normales tras la limpieza.
+Norte;calibracion;La estación Norte mostraba un desfase de cinco unidades, se anotó el nuevo factor.
+Este;averia;La estación Este no responde desde la madrugada, hay que cambiar la pieza.
+Este;limpieza;Durante la ronda en Este se lavó la carcasa del equipo, sin avería, próxima visita en un mes.
+Oeste;calibracion;El sensor de Oeste se comparó con el equipo de referencia, sin avería a la vista, se anotó el nuevo factor.
+Norte;averia;El equipo de Norte dejó de enviar lecturas, se pidió un repuesto.
+Sur;limpieza;Durante la ronda en Sur se limpió el filtro lleno de polvo, sin avería, próxima visita en un mes.
+Centro;calibracion;Visita a Centro, se revisó el equipo.
+Sur;averia;El equipo de Sur se apagó por un corte de energía, queda fuera de servicio.
+Este;limpieza;En Este se lavó la carcasa del equipo, los valores altos eran por el polvo, queda limpio.
+Este;calibracion;Se pasó por Este, ver informe del técnico.
+Oeste;averia;El equipo de Oeste no responde desde la madrugada, se intentó ajustar el cero sin éxito, queda fuera de servicio.
+Sur;limpieza;Hoy en Sur se despejó la rejilla tapada, sin avería, queda limpio.
+Oeste;calibracion;La estación Oeste se comparó con el equipo de referencia, error dentro de tolerancia.
+Este;averia;El sensor de Este perdió la conexión con el servidor, la limpieza no lo arregló, hay que cambiar la pieza.
+Este;limpieza;En Este se cambió el filtro sucio, el sensor responde bien, próxima visita en un mes.
+Norte;calibracion;El sensor de Norte mostraba un desfase de cinco unidades, se anotó el nuevo factor.
+Norte;averia;Se pasó por Norte, ver informe del técnico.
+Oeste;limpieza;Durante la ronda en Oeste se lavó la carcasa del equipo, queda limpio.
+Oeste;calibracion;El equipo de Oeste mostraba un desfase de cinco unidades, sin avería a la vista, queda calibrado.
+Este;averia;El analizador de Este dejó de enviar lecturas, hay que cambiar la pieza.
+Este;limpieza;En Este se cambió el filtro sucio, lecturas normales tras la limpieza.
+Sur;calibracion;El equipo de Sur mostraba un desfase de cinco unidades, queda calibrado.
+Norte;averia;El equipo de Norte no responde desde la madrugada, hay que cambiar la pieza.
+Este;limpieza;Hoy en Este se despejó la rejilla tapada, queda limpio.
+Centro;calibracion;Centro: revisión de rutina, detalles en la planilla.
+Este;averia;El analizador de Este no responde desde la madrugada, se pidió un repuesto.
+Centro;limpieza;Visita a Centro, se revisó el equipo.
+Oeste;calibracion;El sensor de Oeste se ajustó la ganancia del sensor, no responde igual que antes del ajuste, se anotó el nuevo factor.
+Este;averia;El equipo de Este se apagó por un corte de energía, queda fuera de servicio.
+Norte;limpieza;En la estación Norte se limpió el filtro lleno de polvo, no hizo falta calibrar, queda limpio.
+Norte;calibracion;El equipo de Norte marcaba valores altos y se ajustó con el patrón, no responde igual que antes del ajuste, queda calibrado.
+Este;averia;La estación Este dejó de enviar lecturas, queda fuera de servicio.
+Este;limpieza;En la estación Este se despejó la rejilla tapada, sin avería, lecturas normales tras la limpieza.
+Este;calibracion;El equipo de Este mostraba un desfase de cinco unidades, no responde igual que antes del ajuste, error dentro de tolerancia.
+Sur;averia;La estación Sur se apagó por un corte de energía, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Sur;limpieza;Hoy en Sur se lavó la carcasa del equipo, sin avería, próxima visita en un mes.
+Oeste;calibracion;El sensor de Oeste se recalibró con gas de referencia, error dentro de tolerancia.
+Oeste;averia;El analizador de Oeste se apagó por un corte de energía, queda fuera de servicio.
+Centro;limpieza;Se pasó por Centro, ver informe del técnico.
+Sur;calibracion;El equipo de Sur mostraba un desfase de cinco unidades, se anotó el nuevo factor.
+Este;averia;El equipo de Este marca cero todo el día, hay que cambiar la pieza.
+Sur;limpieza;Hoy en Sur se cambió el filtro sucio, queda limpio.
+Norte;calibracion;La estación Norte se ajustó la ganancia del sensor, queda calibrado.
+Oeste;averia;Oeste: revisión de rutina, detalles en la planilla.
+Centro;limpieza;Durante la ronda en Centro se cambió el filtro sucio, los valores altos eran por el polvo, queda limpio.
+Norte;calibracion;El analizador de Norte se ajustó la ganancia del sensor, el filtro estaba limpio, queda calibrado.
+Oeste;averia;La estación Oeste marca cero todo el día, se intentó ajustar el cero sin éxito, se pidió un repuesto.
+Oeste;limpieza;Durante la ronda en Oeste se limpió el filtro lleno de polvo, lecturas normales tras la limpieza.
+Norte;calibracion;La estación Norte se comparó con el equipo de referencia, error dentro de tolerancia.
+Este;averia;El sensor de Este se apagó por un corte de energía, queda fuera de servicio.
+Oeste;limpieza;En Oeste se retiraron hojas y telarañas de la toma de aire, sin avería, lecturas normales tras la limpieza.
+Este;calibracion;El analizador de Este marcaba valores altos y se ajustó con el patrón, no responde igual que antes del ajuste, se anotó el nuevo factor.
+Sur;averia;El equipo de Sur se apagó por un corte de energía, se pidió un repuesto.
+Oeste;limpieza;En Oeste se lavó la carcasa del equipo, próxima visita en un mes.
+Sur;calibracion;La estación Sur marcaba valores altos y se ajustó con el patrón, el filtro estaba limpio, queda calibrado.
+Norte;averia;El analizador de Norte se apagó por un corte de energía, se intentó ajustar el cero sin éxito, se pidió un repuesto.
+Norte;limpieza;Visita a Norte, se revisó el equipo.
+Sur;calibracion;El sensor de Sur mostraba un desfase de cinco unidades, error dentro de tolerancia.
+Norte;averia;La estación Norte perdió la conexión con el servidor, se pidió un repuesto.
+Sur;limpieza;Sur: revisión de rutina, detalles en la planilla.
+Centro;calibracion;Visita a Centro, se revisó el equipo.
+Sur;averia;El analizador de Sur se apagó por un corte de energía, la limpieza no lo arregló, se pidió un repuesto.
+Norte;limpieza;Hoy en Norte se lavó la carcasa del equipo, próxima visita en un mes.
+Centro;calibracion;El sensor de Centro se recalibró con gas de referencia, el filtro estaba limpio, error dentro de tolerancia.
+Este;averia;La estación Este tiene la placa quemada, se pidió un repuesto.
+Este;limpieza;En Este se lavó la carcasa del equipo, próxima visita en un mes.
+Sur;calibracion;El sensor de Sur mostraba un desfase de cinco unidades, el filtro estaba limpio, se anotó el nuevo factor.
+Este;averia;El sensor de Este dejó de enviar lecturas, se limpió el filtro pero sigue igual, hay que cambiar la pieza.
+Sur;limpieza;En la estación Sur se limpió el filtro lleno de polvo, sin avería, queda limpio.
+Centro;calibracion;El analizador de Centro mostraba un desfase de cinco unidades, sin avería a la vista, se anotó el nuevo factor.
+Centro;averia;El equipo de Centro marca cero todo el día, hay que cambiar la pieza.
+Oeste;limpieza;En la estación Oeste se lavó la carcasa del equipo, lecturas normales tras la limpieza.
+Norte;calibracion;El analizador de Norte se ajustó la ganancia del sensor, error dentro de tolerancia.
+Centro;averia;El sensor de Centro no responde desde la madrugada, se limpió el filtro pero sigue igual, queda fuera de servicio.
+Este;limpieza;En Este se cambió el filtro sucio, los valores altos eran por el polvo, queda limpio.
+Norte;calibracion;El analizador de Norte marcaba valores altos y se ajustó con el patrón, sin avería a la vista, queda calibrado.
+Centro;averia;El equipo de Centro se apagó por un corte de energía, queda fuera de servicio.
+Sur;limpieza;Durante la ronda en Sur se cambió el filtro sucio, los valores altos eran por el polvo, queda limpio.
+Centro;calibracion;El sensor de Centro mostraba un desfase de cinco unidades, el filtro estaba limpio, se anotó el nuevo factor.
+Este;averia;La estación Este se apagó por un corte de energía, la limpieza no lo arregló, queda fuera de servicio.
+Centro;limpieza;Se pasó por Centro, ver informe del técnico.
+Este;calibracion;El analizador de Este tenía deriva y se corrigió el cero, no responde igual que antes del ajuste, error dentro de tolerancia.
+Centro;averia;La estación Centro marca cero todo el día, se intentó ajustar el cero sin éxito, se pidió un repuesto.
+Norte;limpieza;En la estación Norte se quitó el polvo acumulado en la entrada, no hizo falta calibrar, queda limpio.
+Centro;calibracion;El sensor de Centro se comparó con el equipo de referencia, sin avería a la vista, queda calibrado.
+Este;averia;El analizador de Este perdió la conexión con el servidor, no se pudo calibrar, queda fuera de servicio.
+Oeste;limpieza;En Oeste se retiraron hojas y telarañas de la toma de aire, los valores altos eran por el polvo, queda limpio.
+Centro;calibracion;El analizador de Centro se ajustó la ganancia del sensor, el filtro estaba limpio, error dentro de tolerancia.
+Norte;averia;El analizador de Norte dejó de enviar lecturas, se pidió un repuesto.
+Sur;limpieza;Durante la ronda en Sur se limpió el filtro lleno de polvo, el sensor responde bien, queda limpio.
+Este;calibracion;El equipo de Este se comparó con el equipo de referencia, el filtro estaba limpio, error dentro de tolerancia.
+Norte;averia;El equipo de Norte dejó de enviar lecturas, se intentó ajustar el cero sin éxito, hay que cambiar la pieza.
+Norte;limpieza;Durante la ronda en Norte se quitó el polvo acumulado en la entrada, no hizo falta calibrar, lecturas normales tras la limpieza.
+Norte;calibracion;Se pasó por Norte, ver informe del técnico.
+Centro;averia;El analizador de Centro tiene la placa quemada, se intentó ajustar el cero sin éxito, queda fuera de servicio.
+Centro;limpieza;Durante la ronda en Centro se cambió el filtro sucio, el sensor responde bien, próxima visita en un mes.
+Norte;calibracion;El sensor de Norte se ajustó la ganancia del sensor, se anotó el nuevo factor.
+Centro;averia;El analizador de Centro marca cero todo el día, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Norte;limpieza;En Norte se retiraron hojas y telarañas de la toma de aire, sin avería, queda limpio.
+Oeste;calibracion;Visita a Oeste, se revisó el equipo.
+Centro;averia;El equipo de Centro tiene la placa quemada, se pidió un repuesto.
+Sur;limpieza;Hoy en Sur se lavó la carcasa del equipo, no hizo falta calibrar, queda limpio.
+Norte;calibracion;El equipo de Norte tenía deriva y se corrigió el cero, no responde igual que antes del ajuste, queda calibrado.
+Centro;averia;El sensor de Centro marca cero todo el día, no se pudo calibrar, queda fuera de servicio.
+Norte;limpieza;Durante la ronda en Norte se limpió el filtro lleno de polvo, no hizo falta calibrar, queda limpio.
+Norte;calibracion;La estación Norte mostraba un desfase de cinco unidades, no responde igual que antes del ajuste, error dentro de tolerancia.
+Sur;averia;El sensor de Sur dejó de enviar lecturas, hay que cambiar la pieza.
+Sur;limpieza;En Sur se quitó el polvo acumulado en la entrada, lecturas normales tras la limpieza.
+Norte;calibracion;Visita a Norte, se revisó el equipo.
+Sur;averia;El analizador de Sur no responde desde la madrugada, se limpió el filtro pero sigue igual, queda fuera de servicio.
+Norte;limpieza;En la estación Norte se quitó el polvo acumulado en la entrada, no hizo falta calibrar, próxima visita en un mes.
+Oeste;calibracion;La estación Oeste tenía deriva y se corrigió el cero, tras la limpieza, error dentro de tolerancia.
+Este;averia;La estación Este marca cero todo el día, queda fuera de servicio.
+Norte;limpieza;Durante la ronda en Norte se quitó el polvo acumulado en la entrada, no hizo falta calibrar, queda limpio.
+Centro;calibracion;El sensor de Centro marcaba valores altos y se ajustó con el patrón, el filtro estaba limpio, queda calibrado.
+Norte;averia;El equipo de Norte se apagó por un corte de energía, no se pudo calibrar, queda fuera de servicio.
+Sur;limpieza;En Sur se lavó la carcasa del equipo, próxima visita en un mes.
+Este;calibracion;El analizador de Este tenía deriva y se corrigió el cero, sin avería a la vista, queda calibrado.
+Norte;averia;El sensor de Norte marca cero todo el día, se limpió el filtro pero sigue igual, hay que cambiar la pieza.
+Centro;limpieza;Visita a Centro, se revisó el equipo.
+Sur;calibracion;La estación Sur mostraba un desfase de cinco unidades, el filtro estaba limpio, se anotó el nuevo factor.
+Sur;averia;Visita a Sur, se revisó el equipo.
+Este;limpieza;Durante la ronda en Este se limpió el filtro lleno de polvo, sin avería, próxima visita en un mes.
+Centro;calibracion;El equipo de Centro se recalibró con gas de referencia, el filtro estaba limpio, queda calibrado.
+Este;averia;El analizador de Este dejó de enviar lecturas, hay que cambiar la pieza.
+Sur;limpieza;Hoy en Sur se despejó la rejilla tapada, lecturas normales tras la limpieza.
+Sur;calibracion;El sensor de Sur marcaba valores altos y se ajustó con el patrón, tras la limpieza, queda calibrado.
+Norte;averia;La estación Norte perdió la conexión con el servidor, queda fuera de servicio.
+Este;limpieza;En Este se limpió el filtro lleno de polvo, queda limpio.
+Oeste;calibracion;El analizador de Oeste mostraba un desfase de cinco unidades, el filtro estaba limpio, se anotó el nuevo factor.
+Norte;averia;El equipo de Norte perdió la conexión con el servidor, se pidió un repuesto.
+Este;limpieza;Durante la ronda en Este se cambió el filtro sucio, no hizo falta calibrar, queda limpio.
+Sur;calibracion;El equipo de Sur tenía deriva y se corrigió el cero, queda calibrado.
+Este;averia;La estación Este no responde desde la madrugada, se limpió el filtro pero sigue igual, hay que cambiar la pieza.
+Centro;limpieza;Durante la ronda en Centro se lavó la carcasa del equipo, los valores altos eran por el polvo, próxima visita en un mes.
+Este;calibracion;El analizador de Este tenía deriva y se corrigió el cero, error dentro de tolerancia.
+Oeste;averia;El analizador de Oeste dejó de enviar lecturas, se limpió el filtro pero sigue igual, queda fuera de servicio.
+Oeste;limpieza;Durante la ronda en Oeste se despejó la rejilla tapada, el sensor responde bien, lecturas normales tras la limpieza.
+Norte;calibracion;Se pasó por Norte, ver informe del técnico.
+Oeste;averia;El sensor de Oeste dejó de enviar lecturas, no se pudo calibrar, hay que cambiar la pieza.
+Oeste;limpieza;Oeste: revisión de rutina, detalles en la planilla.
+Centro;calibracion;El sensor de Centro mostraba un desfase de cinco unidades, sin avería a la vista, error dentro de tolerancia.
+Este;averia;La estación Este dejó de enviar lecturas, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Oeste;limpieza;En la estación Oeste se lavó la carcasa del equipo, no hizo falta calibrar, queda limpio.
+Este;calibracion;Visita a Este, se revisó el equipo.
+Norte;averia;El sensor de Norte dejó de enviar lecturas, la limpieza no lo arregló, hay que cambiar la pieza.
+Norte;limpieza;En Norte se retiraron hojas y telarañas de la toma de aire, no hizo falta calibrar, queda limpio.
+Norte;calibracion;El analizador de Norte se ajustó la ganancia del sensor, sin avería a la vista, error dentro de tolerancia.
+Oeste;averia;El sensor de Oeste se apagó por un corte de energía, la limpieza no lo arregló, se pidió un repuesto.
+Oeste;limpieza;En Oeste se retiraron hojas y telarañas de la toma de aire, queda limpio.
+Sur;calibracion;El analizador de Sur se recalibró con gas de referencia, tras la limpieza, error dentro de tolerancia.
+Sur;averia;El analizador de Sur perdió la conexión con el servidor, queda fuera de servicio.
+Sur;limpieza;Durante la ronda en Sur se lavó la carcasa del equipo, próxima visita en un mes.
+Centro;calibracion;La estación Centro se recalibró con gas de referencia, el filtro estaba limpio, se anotó el nuevo factor.
+Norte;averia;El analizador de Norte no responde desde la madrugada, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Este;limpieza;En la estación Este se cambió el filtro sucio, no hizo falta calibrar, queda limpio.
+Centro;calibracion;La estación Centro se recalibró con gas de referencia, sin avería a la vista, se anotó el nuevo factor.
+Este;averia;Visita a Este, se revisó el equipo.
+Este;limpieza;Durante la ronda en Este se lavó la carcasa del equipo, lecturas normales tras la limpieza.
+Norte;calibracion;El sensor de Norte tenía deriva y se corrigió el cero, tras la limpieza, error dentro de tolerancia.
+Norte;averia;La estación Norte se apagó por un corte de energía, no se pudo calibrar, hay que cambiar la pieza.
+Oeste;limpieza;Durante la ronda en Oeste se quitó el polvo acumulado en la entrada, los valores altos eran por el polvo, lecturas normales tras la limpieza.
+Centro;calibracion;El sensor de Centro marcaba valores altos y se ajustó con el patrón, no responde igual que antes del ajuste, error dentro de tolerancia.
+Norte;averia;El sensor de Norte dejó de enviar lecturas, se intentó ajustar el cero sin éxito, queda fuera de servicio.
+Norte;limpieza;Visita a Norte, se revisó el equipo.
+Este;calibracion;La estación Este mostraba un desfase de cinco unidades, se anotó el nuevo factor.
+Este;averia;El analizador de Este dejó de enviar lecturas, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Norte;limpieza;Durante la ronda en Norte se limpió el filtro lleno de polvo, los valores altos eran por el polvo, próxima visita en un mes.
+Oeste;calibracion;El analizador de Oeste se comparó con el equipo de referencia, se anotó el nuevo factor.
+Norte;averia;El sensor de Norte tiene la placa quemada, no se pudo calibrar, queda fuera de servicio.
+Norte;limpieza;En la estación Norte se quitó el polvo acumulado en la entrada, el sensor responde bien, queda limpio.
+Centro;calibracion;El analizador de Centro marcaba valores altos y se ajustó con el patrón, el filtro estaba limpio, se anotó el nuevo factor.
+Este;averia;El equipo de Este marca cero todo el día, se pidió un repuesto.
+Oeste;limpieza;En la estación Oeste se lavó la carcasa del equipo, los valores altos eran por el polvo, queda limpio.
+Sur;calibracion;El equipo de Sur mostraba un desfase de cinco unidades, tras la limpieza, error dentro de tolerancia.
+Este;averia;El sensor de Este marca cero todo el día, se intentó ajustar el cero sin éxito, se pidió un repuesto.
+Norte;limpieza;En Norte se lavó la carcasa del equipo, queda limpio.
+Sur;calibracion;El equipo de Sur se ajustó la ganancia del sensor, queda calibrado.
+Norte;averia;El equipo de Norte dejó de enviar lecturas, la limpieza no lo arregló, hay que cambiar la pieza.
+Sur;limpieza;En la estación Sur se cambió el filtro sucio, sin avería, próxima visita en un mes.
+Centro;calibracion;El equipo de Centro se ajustó la ganancia del sensor, sin avería a la vista, queda calibrado.
+Este;averia;El sensor de Este marca cero todo el día, se pidió un repuesto.
+Norte;limpieza;Durante la ronda en Norte se despejó la rejilla tapada, queda limpio.
+Sur;calibracion;La estación Sur marcaba valores altos y se ajustó con el patrón, tras la limpieza, error dentro de tolerancia.
+Oeste;averia;El sensor de Oeste no responde desde la madrugada, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Sur;limpieza;Sur: revisión de rutina, detalles en la planilla.
+Oeste;calibracion;Visita a Oeste, se revisó el equipo.
+Este;averia;Este: revisión de rutina, detalles en la planilla.
+Norte;limpieza;En Norte se despejó la rejilla tapada, los valores altos eran por el polvo, queda limpio.
+Este;calibracion;El equipo de Este se ajustó la ganancia del sensor, se anotó el nuevo factor.
+Oeste;averia;La estación Oeste marca cero todo el día, la limpieza no lo arregló, se pidió un repuesto.
+Sur;limpieza;Sur: revisión de rutina, detalles en la planilla.
+Este;calibracion;El analizador de Este se comparó con el equipo de referencia, se anotó el nuevo factor.
+Oeste;averia;El analizador de Oeste marca cero todo el día, se limpió el filtro pero sigue igual, se pidió un repuesto.
+Oeste;limpieza;En Oeste se lavó la carcasa del equipo, los valores altos eran por el polvo, próxima visita en un mes.
+Centro;calibracion;La estación Centro se recalibró con gas de referencia, queda calibrado.
+Centro;averia;La estación Centro dejó de enviar lecturas, se intentó ajustar el cero sin éxito, se pidió un repuesto.
+Oeste;limpieza;Durante la ronda en Oeste se quitó el polvo acumulado en la entrada, próxima visita en un mes.
+Sur;calibracion;El sensor de Sur se comparó con el equipo de referencia, error dentro de tolerancia.
+Sur;averia;El analizador de Sur no responde desde la madrugada, no se pudo calibrar, hay que cambiar la pieza.
+Este;limpieza;En la estación Este se cambió el filtro sucio, próxima visita en un mes.
+Oeste;calibracion;El sensor de Oeste marcaba valores altos y se ajustó con el patrón, se anotó el nuevo factor.
+Este;averia;El equipo de Este se apagó por un corte de energía, se intentó ajustar el cero sin éxito, queda fuera de servicio.
+Oeste;limpieza;Visita a Oeste, se revisó el equipo.
+Norte;calibracion;El sensor de Norte tenía deriva y se corrigió el cero, tras la limpieza, se anotó el nuevo factor.
+Este;averia;El equipo de Este no responde desde la madrugada, se intentó ajustar el cero sin éxito, hay que cambiar la pieza.
+Norte;limpieza;En Norte se limpió el filtro lleno de polvo, no hizo falta calibrar, lecturas normales tras la limpieza.
+Oeste;calibracion;La estación Oeste mostraba un desfase de cinco unidades, el filtro estaba limpio, queda calibrado.
+Oeste;averia;Visita a Oeste, se revisó el equipo.
+Este;limpieza;En Este se cambió el filtro sucio, queda limpio.
+Norte;calibracion;Norte: revisión de rutina, detalles en la planilla.
+Sur;averia;El sensor de Sur tiene la placa quemada, se limpió el filtro pero sigue igual, queda fuera de servicio.
+Centro;limpieza;Hoy en Centro se quitó el polvo acumulado en la entrada, lecturas normales tras la limpieza.
+Sur;calibracion;La estación Sur se comparó con el equipo de referencia, error dentro de tolerancia.
+Oeste;averia;Se pasó por Oeste, ver informe del técnico.
+Oeste;limpieza;En la estación Oeste se retiraron hojas y telarañas de la toma de aire, queda limpio.
+Norte;calibracion;El analizador de Norte se ajustó la ganancia del sensor, no responde igual que antes del ajuste, queda calibrado.
+Centro;averia;La estación Centro se apagó por un corte de energía, no se pudo calibrar, queda fuera de servicio.
+Sur;limpieza;Hoy en Sur se retiraron hojas y telarañas de la toma de aire, no hizo falta calibrar, lecturas normales tras la limpieza.
+Oeste;calibracion;El equipo de Oeste mostraba un desfase de cinco unidades, sin avería a la vista, se anotó el nuevo factor.
+Centro;averia;La estación Centro tiene la placa quemada, hay que cambiar la pieza.
+Sur;limpieza;En Sur se despejó la rejilla tapada, próxima visita en un mes.
+Norte;calibracion;La estación Norte tenía deriva y se corrigió el cero, sin avería a la vista, se anotó el nuevo factor.
+Este;averia;Visita a Este, se revisó el equipo.
+Centro;limpieza;Durante la ronda en Centro se despejó la rejilla tapada, sin avería, queda limpio.
+Este;calibracion;El analizador de Este se ajustó la ganancia del sensor, sin avería a la vista, error dentro de tolerancia.
+Sur;averia;La estación Sur marca cero todo el día, la limpieza no lo arregló, se pidió un repuesto.
+Sur;limpieza;En Sur se lavó la carcasa del equipo, sin avería, lecturas normales tras la limpieza.
+Oeste;calibracion;La estación Oeste se ajustó la ganancia del sensor, error dentro de tolerancia.
+Sur;averia;El equipo de Sur no responde desde la madrugada, hay que cambiar la pieza.
+Norte;limpieza;En Norte se retiraron hojas y telarañas de la toma de aire, queda limpio.
+Norte;calibracion;El sensor de Norte se comparó con el equipo de referencia, el filtro estaba limpio, queda calibrado.
+Sur;averia;Visita a Sur, se revisó el equipo.
+Norte;limpieza;En la estación Norte se limpió el filtro lleno de polvo, el sensor responde bien, queda limpio.
+Oeste;calibracion;El analizador de Oeste tenía deriva y se corrigió el cero, queda calibrado.
+Este;averia;La estación Este dejó de enviar lecturas, no se pudo calibrar, hay que cambiar la pieza.
+Sur;limpieza;Hoy en Sur se retiraron hojas y telarañas de la toma de aire, no hizo falta calibrar, próxima visita en un mes.
+Centro;calibracion;El sensor de Centro tenía deriva y se corrigió el cero, no responde igual que antes del ajuste, se anotó el nuevo factor.
+Centro;averia;La estación Centro se apagó por un corte de energía, se pidió un repuesto.
+Centro;limpieza;En la estación Centro se cambió el filtro sucio, el sensor responde bien, queda limpio.
+Norte;calibracion;El sensor de Norte marcaba valores altos y se ajustó con el patrón, sin avería a la vista, se anotó el nuevo factor.
+Sur;averia;Visita a Sur, se revisó el equipo.
+Sur;limpieza;En la estación Sur se cambió el filtro sucio, lecturas normales tras la limpieza.
+Centro;calibracion;La estación Centro mostraba un desfase de cinco unidades, sin avería a la vista, se anotó el nuevo factor.
+Centro;averia;Centro: revisión de rutina, detalles en la planilla.
+Norte;limpieza;Durante la ronda en Norte se lavó la carcasa del equipo, los valores altos eran por el polvo, próxima visita en un mes.
+Sur;calibracion;Sur: revisión de rutina, detalles en la planilla.
+Centro;averia;El equipo de Centro no responde desde la madrugada, hay que cambiar la pieza.
+Este;limpieza;En Este se quitó el polvo acumulado en la entrada, lecturas normales tras la limpieza.
+Este;calibracion;El analizador de Este marcaba valores altos y se ajustó con el patrón, queda calibrado.
+Sur;averia;Visita a Sur, se revisó el equipo.
+Sur;limpieza;En la estación Sur se cambió el filtro sucio, lecturas normales tras la limpieza.
+Norte;calibracion;La estación Norte tenía deriva y se corrigió el cero, se anotó el nuevo factor.
+Centro;averia;El equipo de Centro se apagó por un corte de energía, se intentó ajustar el cero sin éxito, queda fuera de servicio.
+Sur;limpieza;En la estación Sur se quitó el polvo acumulado en la entrada, lecturas normales tras la limpieza.
+Sur;calibracion;La estación Sur mostraba un desfase de cinco unidades, queda calibrado.
+Oeste;averia;El equipo de Oeste perdió la conexión con el servidor, hay que cambiar la pieza.
+Centro;limpieza;En la estación Centro se quitó el polvo acumulado en la entrada, sin avería, lecturas normales tras la limpieza.
+Sur;calibracion;La estación Sur tenía deriva y se corrigió el cero, se anotó el nuevo factor.
+Norte;averia;El sensor de Norte tiene la placa quemada, se intentó ajustar el cero sin éxito, queda fuera de servicio.
+Oeste;limpieza;Durante la ronda en Oeste se limpió el filtro lleno de polvo, los valores altos eran por el polvo, lecturas normales tras la limpieza.
+Oeste;calibracion;El sensor de Oeste se comparó con el equipo de referencia, queda calibrado.
+Este;averia;El equipo de Este dejó de enviar lecturas, se pidió un repuesto.
+Centro;limpieza;En la estación Centro se lavó la carcasa del equipo, sin avería, próxima visita en un mes.
+Norte;calibracion;El sensor de Norte se recalibró con gas de referencia, el filtro estaba limpio, se anotó el nuevo factor.
+Centro;averia;El equipo de Centro no responde desde la madrugada, la limpieza no lo arregló, queda fuera de servicio.
+Oeste;limpieza;Visita a Oeste, se revisó el equipo.
+Este;calibracion;El equipo de Este se ajustó la ganancia del sensor, se anotó el nuevo factor.
+Este;averia;El sensor de Este perdió la conexión con el servidor, no se pudo calibrar, queda fuera de servicio.
+Norte;limpieza;Durante la ronda en Norte se retiraron hojas y telarañas de la toma de aire, el sensor responde bien, queda limpio.
+Norte;calibracion;El sensor de Norte se comparó con el equipo de referencia, no responde igual que antes del ajuste, error dentro de tolerancia.
+Este;averia;El analizador de Este no responde desde la madrugada, hay que cambiar la pieza.
+Sur;limpieza;En la estación Sur se cambió el filtro sucio, no hizo falta calibrar, queda limpio.
+Centro;calibracion;Centro: revisión de rutina, detalles en la planilla.

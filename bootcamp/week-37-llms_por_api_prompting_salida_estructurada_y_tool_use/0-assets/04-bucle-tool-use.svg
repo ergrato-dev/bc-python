@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" role="img" aria-labelledby="t d">
+  <title id="t">El bucle de tool use</title>
+  <desc id="d">Tu código envía mensajes y herramientas; si Claude responde con stop_reason tool_use, tu código ejecuta las funciones pedidas y devuelve los tool_result con el mismo id, y se repite hasta que Claude responde sin pedir herramientas.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#86efac"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fcd34d"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fca5a5"/></marker></defs>
+  <rect width="900" height="400" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="34" text-anchor="middle" font-size="18" fill="#e2e8f0" font-weight="bold">El bucle de tool use: Claude pide, tu código ejecuta</text>
+    <rect x="40" y="70" width="220" height="80" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="150" y="100" text-anchor="middle" font-size="15" fill="#93c5fd" font-weight="bold">Tu código</text>
+    <text x="150" y="124" text-anchor="middle" font-size="13" fill="#94a3b8">messages + tools</text>
+    <rect x="340" y="70" width="220" height="80" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="450" y="100" text-anchor="middle" font-size="15" fill="#86efac" font-weight="bold">Claude</text>
+    <text x="450" y="124" text-anchor="middle" font-size="13" fill="#94a3b8">decide si necesita un dato</text>
+    <line x1="262" y1="110" x2="338" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="640" y="70" width="220" height="80" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="750" y="100" text-anchor="middle" font-size="15" fill="#fcd34d" font-weight="bold">stop_reason</text>
+    <text x="750" y="124" text-anchor="middle" font-size="13" fill="#94a3b8">¿tool_use?</text>
+    <line x1="562" y1="110" x2="638" y2="110" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="750" y1="152" x2="750" y2="228" stroke="#fcd34d" stroke-width="2" marker-end="url(#y)"/>
+    <text x="765" y="195" text-anchor="start" font-size="13" fill="#fcd34d">sí</text>
+    <rect x="640" y="230" width="220" height="80" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="750" y="258" text-anchor="middle" font-size="14" fill="#fcd34d">bloques tool_use</text>
+    <text x="750" y="282" text-anchor="middle" font-size="13" fill="#94a3b8">nombre · entrada · id</text>
+    <line x1="638" y1="270" x2="562" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="340" y="230" width="220" height="80" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="450" y="258" text-anchor="middle" font-size="14" fill="#93c5fd">ejecutas tus funciones</text>
+    <text x="450" y="282" text-anchor="middle" font-size="13" fill="#94a3b8">las que pidió, todas</text>
+    <line x1="338" y1="270" x2="262" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="40" y="230" width="220" height="80" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="150" y="254" text-anchor="middle" font-size="14" fill="#93c5fd">tool_result</text>
+    <text x="150" y="276" text-anchor="middle" font-size="12" fill="#94a3b8">mismo id · is_error si falla</text>
+    <text x="150" y="296" text-anchor="middle" font-size="12" fill="#94a3b8">todos en un mensaje user</text>
+    <line x1="150" y1="228" x2="150" y2="152" stroke="#93c5fd" stroke-width="2" marker-end="url(#a)"/>
+    <text x="165" y="195" text-anchor="start" font-size="13" fill="#94a3b8">otra vuelta</text>
+    <text x="860" y="62" text-anchor="end" font-size="13" fill="#86efac">si no: la respuesta final, end_turn</text>
+    <text x="450" y="350" text-anchor="middle" font-size="14" fill="#fcd34d">Pon siempre un límite de vueltas: cada vuelta reenvía la conversación entera y se paga.</text>
+    <text x="450" y="375" text-anchor="middle" font-size="14" fill="#fca5a5">Claude nunca ejecuta nada: las herramientas que cambian datos, que las confirme una persona.</text>
+  </g>
+</svg>

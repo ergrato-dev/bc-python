@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="t d">
+  <title id="t">Una llamada a la API de Messages</title>
+  <desc id="d">La petición lleva model, max_tokens, system y la lista de mensajes de la conversación; la respuesta trae id, bloques de contenido, stop_reason y los tokens de entrada y salida.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#86efac"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fcd34d"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fca5a5"/></marker></defs>
+  <rect width="900" height="420" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="34" text-anchor="middle" font-size="18" fill="#e2e8f0" font-weight="bold">Una llamada a la API de Messages</text>
+    <rect x="30" y="60" width="380" height="300" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="220" y="88" text-anchor="middle" font-size="15" fill="#93c5fd" font-weight="bold">Petición · POST /v1/messages</text>
+    <text x="50" y="122" text-anchor="start" font-size="14" fill="#94a3b8">model</text>
+    <text x="160" y="122" text-anchor="start" font-size="14" fill="#e2e8f0">claude-sonnet-5-5</text>
+    <text x="50" y="150" text-anchor="start" font-size="14" fill="#94a3b8">max_tokens</text>
+    <text x="160" y="150" text-anchor="start" font-size="14" fill="#e2e8f0">300</text>
+    <text x="50" y="178" text-anchor="start" font-size="14" fill="#94a3b8">system</text>
+    <text x="160" y="178" text-anchor="start" font-size="14" fill="#e2e8f0">quién responde, a quién y cómo</text>
+    <text x="50" y="212" text-anchor="start" font-size="14" fill="#94a3b8">messages</text>
+    <rect x="160" y="196" width="230" height="32" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="170" y="217" text-anchor="start" font-size="13" fill="#e2e8f0">user · ¿qué es un sensor…?</text>
+    <rect x="160" y="238" width="230" height="32" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="170" y="259" text-anchor="start" font-size="13" fill="#e2e8f0">assistant · Mide contaminantes…</text>
+    <rect x="160" y="280" width="230" height="32" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="170" y="301" text-anchor="start" font-size="13" fill="#e2e8f0">user · ¿Y cada cuánto se calibra?</text>
+    <text x="220" y="340" text-anchor="middle" font-size="13" fill="#94a3b8">toda la conversación, en cada petición</text>
+    <line x1="415" y1="150" x2="485" y2="150" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <line x1="485" y1="270" x2="415" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="490" y="60" width="380" height="300" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="680" y="88" text-anchor="middle" font-size="15" fill="#86efac" font-weight="bold">Respuesta</text>
+    <text x="510" y="122" text-anchor="start" font-size="14" fill="#94a3b8">id</text>
+    <text x="620" y="122" text-anchor="start" font-size="14" fill="#e2e8f0">msg_2d2b…</text>
+    <text x="510" y="156" text-anchor="start" font-size="14" fill="#94a3b8">content</text>
+    <text x="620" y="156" text-anchor="start" font-size="14" fill="#e2e8f0">bloques: text, tool_use…</text>
+    <text x="510" y="190" text-anchor="start" font-size="14" fill="#94a3b8">stop_reason</text>
+    <text x="620" y="190" text-anchor="start" font-size="14" fill="#e2e8f0">end_turn · max_tokens</text>
+    <text x="510" y="224" text-anchor="start" font-size="14" fill="#94a3b8"></text>
+    <text x="620" y="224" text-anchor="start" font-size="14" fill="#e2e8f0">tool_use · refusal</text>
+    <text x="510" y="258" text-anchor="start" font-size="14" fill="#94a3b8">usage</text>
+    <text x="620" y="258" text-anchor="start" font-size="14" fill="#e2e8f0">30 de entrada · 54 de salida</text>
+    <text x="680" y="310" text-anchor="middle" font-size="13" fill="#94a3b8">los tokens son lo que pagas:</text>
+    <text x="680" y="330" text-anchor="middle" font-size="13" fill="#94a3b8">entrada y salida, a precios distintos</text>
+    <text x="450" y="392" text-anchor="middle" font-size="14" fill="#fcd34d">La API no guarda nada entre peticiones: la historia la mandas tú, y se cobra cada vez.</text>
+  </g>
+</svg>

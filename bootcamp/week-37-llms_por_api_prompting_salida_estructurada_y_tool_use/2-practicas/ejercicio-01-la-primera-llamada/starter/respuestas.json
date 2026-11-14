@@ -1,0 +1,129 @@
+{
+ "380f3800d454aecdc71a030846a5d31109637036a29cc7f9660981d2fbffb302": [
+  400,
+  {
+   "error": {
+    "message": "messages: at least one message is required",
+    "type": "invalid_request_error"
+   },
+   "request_id": "req_81e1bd9d04d29426de5423ab",
+   "type": "error"
+  }
+ ],
+ "67af2d03246454d07813e65b37e5264ca6d7e18f1a9fd2348c490e730a08229f": [
+  404,
+  {
+   "error": {
+    "message": "model: claude-sonnet-9",
+    "type": "not_found_error"
+   },
+   "request_id": "req_9e812a89a988023a3a9a6af6",
+   "type": "error"
+  }
+ ],
+ "725d432263ceaef467ead30bc9deef29008412b8ce610e2d7dc818bf66fd1bae": [
+  200,
+  {
+   "content": [
+    {
+     "text": "Mide contaminantes del aire, como partículas u ozono, para saber si es sano.",
+     "type": "text"
+    }
+   ],
+   "id": "msg_ca73da5e175b58bfcf18a6c8",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 53,
+    "output_tokens": 26
+   }
+  }
+ ],
+ "7f9d6e6c987b13fe3f9dd26edc409d9cb14267db39f633e2ed4de9d37ded8fda": [
+  200,
+  {
+   "content": [
+    {
+     "text": "Un sensor de calidad del aire es un dispositivo que mide la concentración de contaminantes, como partículas finas, ozono o dióxido de nitrógeno, en el aire que lo rodea.",
+     "type": "text"
+    }
+   ],
+   "id": "msg_2d2bc052cb57790cef9bc96c",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 30,
+    "output_tokens": 54
+   }
+  }
+ ],
+ "9f0aac2c5014bb48adc7b17c9f265f29890c621754d1d8f34a8bc08e24eafc75": [
+  200,
+  {
+   "content": [
+    {
+     "text": "Según el fabricante; lo habitual, cada tres a seis meses y tras cada reparación.",
+     "type": "text"
+    }
+   ],
+   "id": "msg_d0f637ab6498a2805c567310",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 104,
+    "output_tokens": 28
+   }
+  }
+ ],
+ "c5f0d7b2a56c68a0fa0ffe4cd3e40fa0971d7f8045feb756b6282fce1a9491f9": [
+  200,
+  {
+   "content": [
+    {
+     "text": "¿Qué equipo quieres calibrar? Dímelo y te digo cada cuánto.",
+     "type": "text"
+    }
+   ],
+   "id": "msg_a54ab25585eba277ac6b75d3",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "end_turn",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 46,
+    "output_tokens": 21
+   }
+  }
+ ],
+ "ed5ba31d50c473ce1a16ae0b1cc01662f9cabc1fe34d7d9339e90f3f788c5eaa": [
+  200,
+  {
+   "content": [
+    {
+     "text": "Un sensor de calidad del aire es un dispositivo que mide la concentración de contaminantes",
+     "type": "text"
+    }
+   ],
+   "id": "msg_7554478d4d29482afbc6860b",
+   "model": "claude-sonnet-5-5",
+   "role": "assistant",
+   "stop_reason": "max_tokens",
+   "stop_sequence": null,
+   "type": "message",
+   "usage": {
+    "input_tokens": 30,
+    "output_tokens": 20
+   }
+  }
+ ]
+}

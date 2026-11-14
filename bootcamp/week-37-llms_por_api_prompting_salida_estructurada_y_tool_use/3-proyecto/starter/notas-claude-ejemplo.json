@@ -1,0 +1,2162 @@
+{
+ "002825b6102edf852d42b72d50225a82416e8e36d4452eb110a7b031db6b6e8c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Norte: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_31db59cba02d1d87",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 28
+  }
+ },
+ "00cafb9a92cb04c4c85443b3121a50b42710d85c7c10ce4b4dba514ecaca7c9c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Sur: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_3af6b5fefb690746",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 471,
+   "output_tokens": 28
+  }
+ },
+ "01e2b44266d81f4718f8a1e0e4e93cda6fc5448628c2d1be9aee2d1998f2b4e3": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Sur: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_0b04a75ca88f3f1c",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 661,
+   "output_tokens": 28
+  }
+ },
+ "0359cbfe2a50bb91edc54b0f9856487076fe57262e49a1e0e1598f293a7afa7e": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_967884ebaa42c0c6",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 468,
+   "output_tokens": 29
+  }
+ },
+ "047eed6d9c9e9d73f94c83efae65d883fa2be929a5223983deaba133659d9ee4": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_47521a1a7f7f5421",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 672,
+   "output_tokens": 29
+  }
+ },
+ "0732baa9c922222a7fe111d97a8084e356a6e80748bbf277c19cbf33263b2e32": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_74e115aea84f43a2",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 478,
+   "output_tokens": 29
+  }
+ },
+ "0ba6978bbce1409d652ad409d829c17fd9027c9e35a8537b204eef9b0fd6fd4e": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8691ed6d5a0c2975",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 675,
+   "output_tokens": 31
+  }
+ },
+ "13c6272e4dea5c84f93c3a5307a202590cbb38ca301c35b2093cd8a85c4ca12f": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Este: rejilla tapada despejada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_94b08069b29e35e9",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 675,
+   "output_tokens": 29
+  }
+ },
+ "13dd10ba575a73d70545f20783079126197d276f22b89ea3dd31862e744a16d5": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: comparado con el equipo de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1bbc25a9f2660393",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 684,
+   "output_tokens": 34
+  }
+ },
+ "157191c99151146cd03f47097a86fe6c53076c8d144c4ebd7cd11e9cbe41a88c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_f393816ca26e9527",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 662,
+   "output_tokens": 28
+  }
+ },
+ "17264809acedbab57ad432cde56e5dd8c764119335208cd958767adff49ebb44": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_74b377f41a7ade15",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 662,
+   "output_tokens": 28
+  }
+ },
+ "17be02211d93dbc1112ea9345c0753417ece85d55df4364af7a249ffd05da614": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: marca cero todo el día\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_b764e6a20846bda9",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 467,
+   "output_tokens": 27
+  }
+ },
+ "18d68f71321b9466556e5690407d7a9ece1f01c844bd34e38f0ee7e3448c73c0": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_864fc7da1daf4c25",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 682,
+   "output_tokens": 30
+  }
+ },
+ "1bffc1ba616d5eb986a038ce1abd8cb4cc51932c80e8d39c6ec3665dd01d92a3": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: valores altos ajustados con el patrón\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_2449e03e90940691",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 683,
+   "output_tokens": 34
+  }
+ },
+ "1d17cd239d1bfcd6e57e66aa61b550851a00ddcc5278064aa73cc6ec2d80692e": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: placa quemada, hay que cambiarla\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_75fac5c7a07e35b2",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 31
+  }
+ },
+ "1d67c8e796ba9c6badccd6ef6d9f6627850288241c34201b570592ac2f430b2d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Sur: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_3af6b5fefb690746",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 670,
+   "output_tokens": 28
+  }
+ },
+ "2228d51cfc4653fa2b036f2a115fe1c56b4fa32b3f1765fdfdf5ae4bf6f09603": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: desfase de cinco unidades\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8fd08a61f153288f",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 471,
+   "output_tokens": 30
+  }
+ },
+ "239c3279040a1d30c59e3b71ebe9d14c4334613996240f51e792e85ac65f633c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: desfase de cinco unidades\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8fd08a61f153288f",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 670,
+   "output_tokens": 30
+  }
+ },
+ "25e311a22fd298a5a8a0aa5a8ffce57eb3ea74861d89789343dbabee74378844": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Norte: sin conexión con el servidor\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_6548a367b3194c5c",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 470,
+   "output_tokens": 29
+  }
+ },
+ "2afed9b31d1ac8bdc19e7eff932504e65e6999afc93a0840f19d541b508cc832": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: filtro con polvo limpiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_963a4eedc8fbe664",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 484,
+   "output_tokens": 29
+  }
+ },
+ "2b131db7062e6fef97d2afb90102028a0b2a8f4a4b87457f49249da06e6eb61d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Oeste: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_4dce718cd1be30e8",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 676,
+   "output_tokens": 30
+  }
+ },
+ "2b134a9cac088cb21a53ac4d39c4529b845c70fb5809caf4404be3bd0f890fe7": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Este: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_ea701bb7c707d265",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 466,
+   "output_tokens": 29
+  }
+ },
+ "2c2044b13f9d165f0e0a9af10fddb6b8a8627db1227b44e635365b571480f380": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sur: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_879bad8e1ec1f8e0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 480,
+   "output_tokens": 30
+  }
+ },
+ "2eb226e4fd25f3341b213bd77ec60d05ea983b49ebc4660fe19d157de43feb2d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: recalibrado con gas de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_67698ee3820c5cef",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 675,
+   "output_tokens": 33
+  }
+ },
+ "2f6a0be4162c2c056b2480ae522917c880f5b5db66e0ce4a2cc33c99ae3b94a5": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8a6fd3f5d8fe946e",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 681,
+   "output_tokens": 31
+  }
+ },
+ "2fa48db011c78149ca913982f3bb76a955c2c3b3913b5320fb60cc9d9e5efe6c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Sur: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_d9a730f8c47c58aa",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 31
+  }
+ },
+ "318a6e9d62479f5e6b1c0b1b7d491aa681e0da486d9ebf24f1227510ae8adfa9": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: polvo de la entrada retirado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_2cd49f647262daaf",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 31
+  }
+ },
+ "323ea9dcd2ec408207c029d718b26e9f666c2f015d2a916d53f1e1509d3693a7": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Sur: valores altos ajustados con el patrón\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_2280766cfc1c9515",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 480,
+   "output_tokens": 33
+  }
+ },
+ "35fe8523549bbcb188e86e08459f2a02d02d4c49ad3da0dbd1b3d11c0e5b575a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: hojas y telarañas retiradas de la toma\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_98e66dfd9f5eb6a1",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 679,
+   "output_tokens": 33
+  }
+ },
+ "36d8a21244784e1ff65e8e9b30d3eb66c92d4509fb0419867f12e3aaddc20a15": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Sur: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_3038fe2a5822d3f2",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 657,
+   "output_tokens": 27
+  }
+ },
+ "38f04db63c84a0b74b1ba665a82b147d890f6e4abb40c8921164983749d495ce": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: comparado con el equipo de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_5dda04bdc23d59cd",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 679,
+   "output_tokens": 34
+  }
+ },
+ "3917fd1b97a4c3d3a0e5e503c25ca6010b514b555ad4f3f22294bb0bc2b34060": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_787b5526613c25f0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 669,
+   "output_tokens": 31
+  }
+ },
+ "3d0dabce29bb3bb021a089637d49e4c8b06e01923c9fdc175f2e75604780f5a9": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Este: rejilla tapada despejada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_94b08069b29e35e9",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 476,
+   "output_tokens": 29
+  }
+ },
+ "3fe943ab230843f90d881cade26ca7df723df555818de9abc0e50841771c8931": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sur: no responde desde la madrugada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_0eef2229832d5bd3",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 477,
+   "output_tokens": 29
+  }
+ },
+ "40bbae12895bc45a291f33615f01b8828ced221d9c1c0acdef663b5979434b73": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: polvo de la entrada retirado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_2cd49f647262daaf",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 467,
+   "output_tokens": 31
+  }
+ },
+ "4419ab64a886152f62c5d9f47f4be4df88a4c46453812ebe266023295fd86f04": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_319591d82b74d602",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 472,
+   "output_tokens": 31
+  }
+ },
+ "4c94b2585d45465b8506806c306d9d3b140446a53bfe6437b8e1906d28de1c36": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_7928acb082811e21",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 477,
+   "output_tokens": 31
+  }
+ },
+ "519ad79688153c470772b83c99663c7ab2b6077aa9407d78cdcf9402401b41e7": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_47521a1a7f7f5421",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 473,
+   "output_tokens": 29
+  }
+ },
+ "5266a22e184390083fb3a3a87e55b0e8153c4be582e27792092dda0e6a9d4c4a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: no responde desde la madrugada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_4c6c7cd1856b580e",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 670,
+   "output_tokens": 30
+  }
+ },
+ "55739c13c032310a36fed4eb733503d3d3ca5cd517877e6c7eaa330dd5e6e72c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_4049f52e2122e3fa",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 677,
+   "output_tokens": 31
+  }
+ },
+ "5a19e2fd2df407db30afb4382fc4f7b0a850e7b878cb5bd6e5d263abfabc0f05": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_b6d1461b37523c3a",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 470,
+   "output_tokens": 30
+  }
+ },
+ "5a65c82680526706311950c1cdd3b83d835d4645971a066afc2613198513f191": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_74e115aea84f43a2",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 677,
+   "output_tokens": 29
+  }
+ },
+ "61ecfc9492937fb3f32fc4e364cb6ac314437c2fecf4263207352be3ce1371a1": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sur: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8e9eebc0becacedd",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 467,
+   "output_tokens": 27
+  }
+ },
+ "629c708fcc03b50428e9b131f822c192b4749aee3972b8db54b1789a0f81c999": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Oeste: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_df0dc329c368e818",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 669,
+   "output_tokens": 31
+  }
+ },
+ "6c9f81cbc00108f55f339079e4f892c27cb60d28be5b1290ba8d3e7b42011bd0": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Oeste: valores altos ajustados con el patrón\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1fe2430cbc87c15e",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 475,
+   "output_tokens": 34
+  }
+ },
+ "701c3a482851424263750b5d7f4d3a49c5141e4f6a5185a8aeff860a9685a7cc": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Norte: no responde desde la madrugada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_874f05252d0c17f6",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 669,
+   "output_tokens": 30
+  }
+ },
+ "75ac8054b508ba18e77678f8cda8a2f0820b6337cbba2210079415b9ef0ff82e": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: hojas y telarañas retiradas de la toma\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_736abbc894eafefe",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 680,
+   "output_tokens": 33
+  }
+ },
+ "79d6b0daf5389bcb8cd4068e7ca6394942d549bf7a6df1bf2659e5003b0d09bd": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_317059cd71d93781",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 479,
+   "output_tokens": 31
+  }
+ },
+ "7fb5e9d22a73bb994f4a0d204c778420c0e28c4a410f84e51375d6c5d80437a3": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Norte: sin datos desde ayer\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_740805f7ac04a40c",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 659,
+   "output_tokens": 27
+  }
+ },
+ "80bd62b4f629b22db206ba0e238a50247408a9ed0694da8b8110a7570f377a82": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: rejilla tapada despejada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_cd454deb4a5ea812",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 671,
+   "output_tokens": 29
+  }
+ },
+ "828068d99721539901d8f205e40c9ba57f26200938c5e2453b01411c50e51f7a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: no responde desde la madrugada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_4c6c7cd1856b580e",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 471,
+   "output_tokens": 30
+  }
+ },
+ "85f7852467355599cf6ea35286edc38964a0bfbd6bf13d5bf957e1a7ac8ff345": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Sur: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_3038fe2a5822d3f2",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 458,
+   "output_tokens": 27
+  }
+ },
+ "86167a9f92361c28fab7268a1d4558e706b3cade957a110aa727a23449505f31": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: recalibrado con gas de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_763c569e50c315c9",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 678,
+   "output_tokens": 33
+  }
+ },
+ "86e23bdcd236d813b10dbc30eedcc2787745843dd69df9e3c5e6490ded94b5f6": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_d3a1818613338cd0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 677,
+   "output_tokens": 31
+  }
+ },
+ "87da4ab509459b2185c81af610b703b6f4baa1aaebf93eb442438adcb8c69898": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Oeste: sin conexión con el servidor\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_63bced93171597f7",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 471,
+   "output_tokens": 29
+  }
+ },
+ "8939a87f0c7482536c724aea3d6b6289012fa8a770b3d97e8191f164a94681bb": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_f4fab2b67a0c55d4",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 466,
+   "output_tokens": 28
+  }
+ },
+ "8a1df871b5432a36b8e9f005c8a7ccdbd4d67da2cb418c8556189568b0a463c6": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sur: no responde desde la madrugada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_0eef2229832d5bd3",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 676,
+   "output_tokens": 29
+  }
+ },
+ "8b86e532bd3396363812c9c4624a50bea5e460738a1f6622f92b4c5916884c87": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Centro: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_467fdc93ae62b52c",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 460,
+   "output_tokens": 28
+  }
+ },
+ "8c4006270fa67175c5a297caa217b4cfef923280409efa2fd8888a202a29fae6": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Norte: sin conexión con el servidor\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_6548a367b3194c5c",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 669,
+   "output_tokens": 29
+  }
+ },
+ "905b34523338410485254a87639a55f66e072b774bf224766e7ed434ee94656c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: rejilla tapada despejada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_ed150d5b8be472d0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 474,
+   "output_tokens": 29
+  }
+ },
+ "9299c525ed0cedd963da10ab5423a32ec01b8af44c10c8749516604c18cbf9cc": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sur: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8e9eebc0becacedd",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 27
+  }
+ },
+ "94cb8c72a618d5a91651a5d3d8a9c769d5837433485c3afdb8e108e09113fe50": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: placa quemada, hay que cambiarla\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1e722183523a166f",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 667,
+   "output_tokens": 31
+  }
+ },
+ "956436e6716fcbd2a6029ae3dcfafc7b9e71e7b9a1760d5bb8bfe73a63770ea4": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8a6fd3f5d8fe946e",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 482,
+   "output_tokens": 31
+  }
+ },
+ "972fe18560e560875d75ce0b3d12de88712940cdd9858275bcf69f7c21c6c47d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Oeste: valores altos ajustados con el patrón\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1fe2430cbc87c15e",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 674,
+   "output_tokens": 34
+  }
+ },
+ "985504aebbfb0e37c859e8f1c4c703f954bba0c955eefb758830404eadc7a3e0": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_7f49684ca1a361ed",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 669,
+   "output_tokens": 30
+  }
+ },
+ "991a674ee0fbdd7dfd2a581ffa75c63ebac72c557e781ac347b9688e1dddd62a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: rejilla tapada despejada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_cd454deb4a5ea812",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 472,
+   "output_tokens": 29
+  }
+ },
+ "9da04f0bb1d046c38e5844e7fef752869ebbd84a83ee14211053f01f50b8f0d5": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_74b377f41a7ade15",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 463,
+   "output_tokens": 28
+  }
+ },
+ "9ee093e764bd568436a04e4272387aa0b4145c70ab7d63085ebb64aee70ddf46": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Sur: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_d9a730f8c47c58aa",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 467,
+   "output_tokens": 31
+  }
+ },
+ "a38d27e37d3b8c7b75ac63c2125b1acd38949d141c54400de0907c490a7758d9": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Sur: desfase de cinco unidades\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_ec4d9e2a695d9625",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 678,
+   "output_tokens": 30
+  }
+ },
+ "a3c4cefa5a45d84db93db3694edc4cbd521b5649e31267698583129f18c1a61a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_bc75f56250053ecf",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 677,
+   "output_tokens": 29
+  }
+ },
+ "a689c1adb66f294e1c3561245e9438e573c62fbda938286fbe0843ac83f5ef1b": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Sur: desfase de cinco unidades\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_ec4d9e2a695d9625",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 479,
+   "output_tokens": 30
+  }
+ },
+ "a6df8c515b975c452f2a432205e3b29ff3cb4d9c3a74e89275a5b97952973f85": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: filtro con polvo limpiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_963a4eedc8fbe664",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 683,
+   "output_tokens": 29
+  }
+ },
+ "a97140d79189c48e92a302eceab99551856fef682330b937f539c0153aebd953": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Norte: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_31db59cba02d1d87",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 467,
+   "output_tokens": 28
+  }
+ },
+ "aa79f3026d91051d9461a08f6922f273be02840684d232b0f4359fd85120d74f": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: rejilla tapada despejada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_ed150d5b8be472d0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 673,
+   "output_tokens": 29
+  }
+ },
+ "abe64312312721b4e2cc4a11a43cc3ef299c50f34bbe1166474def7d1bb110fd": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Centro: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_864fc7da1daf4c25",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 483,
+   "output_tokens": 30
+  }
+ },
+ "adc1136db76d7877a4782cadfe469670a211343f4fff3c52c8111c835163c52d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_8691ed6d5a0c2975",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 476,
+   "output_tokens": 31
+  }
+ },
+ "ae2d40fbd1113a7cd032a7a23eb3af5c55659176fe629c6c642da75272dfff8f": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_7f49684ca1a361ed",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 470,
+   "output_tokens": 30
+  }
+ },
+ "ae69e36e2c255a2f3bd3c273d3a2c1fd01a652a85eaab464d4ce9d85e5c44f1a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Centro: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_467fdc93ae62b52c",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 660,
+   "output_tokens": 28
+  }
+ },
+ "aee9ef42afc020b54acb9f238a19294cbb4c2c930f729d442bab19de01309f5e": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_f4fab2b67a0c55d4",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 665,
+   "output_tokens": 28
+  }
+ },
+ "af76f74a59afae372a7851b33e14a33669aebdf276f074b26687240bb078e91d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_967884ebaa42c0c6",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 667,
+   "output_tokens": 29
+  }
+ },
+ "af996d804c48770249f761720a908fbac0b521891f3dd4df4a206a1f95501d36": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: comparado con el equipo de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_5dda04bdc23d59cd",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 480,
+   "output_tokens": 34
+  }
+ },
+ "b39bd614271914c64a893751886041d75522706c62574ab714674e3d333aff7a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Cero ajustado después de la limpieza\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_752f0b8ee6f734b7",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 657,
+   "output_tokens": 32
+  }
+ },
+ "b579903fd35c60ee613d7781ae289ccfc7445dcf5ff4fa8ab026c3c358957348": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Sur: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1ef76d8852ce4444",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 472,
+   "output_tokens": 28
+  }
+ },
+ "b66ab092594379ad7bbf01b10da0182f3c84b80211f8faddca8961360e946518": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: valores altos ajustados con el patrón\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_2449e03e90940691",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 484,
+   "output_tokens": 34
+  }
+ },
+ "b860f4569bef60743e339fd9e7e055b6b5e5dc9268146ed29f3f2f9809b89f5c": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_7928acb082811e21",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 676,
+   "output_tokens": 31
+  }
+ },
+ "bcfd0ab8b52ab006c0fb2e5c8bc095576fec489c34efc57f56e47cfc957d4b19": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Sur: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_879bad8e1ec1f8e0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 679,
+   "output_tokens": 30
+  }
+ },
+ "bcfd2c4326bd6360231456ee8ddec9654ae6708fb7fdfe39a72316e61eb41911": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Sur: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_0b04a75ca88f3f1c",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 462,
+   "output_tokens": 28
+  }
+ },
+ "bde02cbf2ed9a946aef2f726c0f086a5eedd32e4d3b0a0c88ab50be5a5d68c59": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Oeste: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_4dce718cd1be30e8",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 477,
+   "output_tokens": 30
+  }
+ },
+ "be216b8b4594f00313e3a29563d56cf602117dd4ef8d6a2e09cd144909803a59": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_4049f52e2122e3fa",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 478,
+   "output_tokens": 31
+  }
+ },
+ "c196e03ed85610e99a56bcd7cfba1467c1e2b852226257bcc56badbfef187ff1": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_317059cd71d93781",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 678,
+   "output_tokens": 31
+  }
+ },
+ "c563d5ffa5df4ca6eb449eafe8a963a58addfc51b72187f1574904f62ca9f88a": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Este: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_d748fd6c6ac2d038",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 472,
+   "output_tokens": 28
+  }
+ },
+ "c6bf34e624d61e41e135b8db6c5e3de19debbe548364b0b2817211d2011d2956": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Oeste: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_df0dc329c368e818",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 470,
+   "output_tokens": 31
+  }
+ },
+ "cd0ef0faf8a888f1768a8272bd0c18ae889c6e2d6dfc77cd15b46320b904e729": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_5c18d7284886defe",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 473,
+   "output_tokens": 28
+  }
+ },
+ "ced3d1ab3900dacd43c3e37d3e9b380923a8521d3fbea7c0f0d92da372be42f8": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: deriva corregida en el cero\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_d3a1818613338cd0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 478,
+   "output_tokens": 31
+  }
+ },
+ "ceef12dc3d8fe7f6ddc92a27221157127c0ed47dd8d4b722068e16612955cd15": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Norte: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_cbf1ba8ed9d97d85",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 460,
+   "output_tokens": 28
+  }
+ },
+ "cf4e012a7a3a4aae5899a43fcb89dd2080fffe3570095c43ccef20dd5d0d089d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Norte: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_cbf1ba8ed9d97d85",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 659,
+   "output_tokens": 28
+  }
+ },
+ "d2a046feff5df8d611bbd17007012d55277e17a8153a6001917af675837d117e": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: apagado por un corte de energía\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_b6d1461b37523c3a",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 669,
+   "output_tokens": 30
+  }
+ },
+ "d3521612ec45b36900d13c2ca14ec7dca3d10244ad4deda377bfcefbddae902b": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Este: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_ea701bb7c707d265",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 665,
+   "output_tokens": 29
+  }
+ },
+ "d83bbfbe394cc5dbf77c60db37734dcd66e65ea1df29d4e79da3c792dd418cd3": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Sur: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1ef76d8852ce4444",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 671,
+   "output_tokens": 28
+  }
+ },
+ "d88998f525795a401abeec888ae2a5fa3d18a4c46e5945854f17257dca3c5ed0": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: placa quemada, hay que cambiarla\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1e722183523a166f",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 468,
+   "output_tokens": 31
+  }
+ },
+ "d947de423cca25bfad3afd60dd5f11d7b07a040b5857880be3396772fe2f9082": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Este: filtro sucio cambiado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_d748fd6c6ac2d038",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 671,
+   "output_tokens": 28
+  }
+ },
+ "db40eb2dc2d2d6535462e7dac0ce143a968611156bf2788ca5d2d01f62dd7161": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: carcasa del equipo lavada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_bc75f56250053ecf",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 478,
+   "output_tokens": 29
+  }
+ },
+ "dba1d47dcbf4019bb6ef838b934cfc391690789e5f4989d1841c7768edb528d4": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: marca cero todo el día\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_b764e6a20846bda9",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 666,
+   "output_tokens": 27
+  }
+ },
+ "dcac2d1718d34e2724bf4e21a424eb1a7ae28629d1b11fcf340ea275771c7d9d": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: polvo de la entrada retirado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_a6a4fac858d8f290",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 479,
+   "output_tokens": 30
+  }
+ },
+ "de665042ffd4c810e8ef87d50cd6de96822ff7dd0df94ffecd8481b36ccff610": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Este: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_787b5526613c25f0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 470,
+   "output_tokens": 31
+  }
+ },
+ "dfed480c89c8a39a7e2457c36b15e3d9cb07bbc8fbe5c8ec25b20dcc5a047f42": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Norte: no responde desde la madrugada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_874f05252d0c17f6",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 470,
+   "output_tokens": 30
+  }
+ },
+ "e273edf405b31f5e3987b3a71dc1dc7c133fbe1825f82c58db8c59f834c710b0": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Este: dejó de enviar lecturas\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_5c18d7284886defe",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 673,
+   "output_tokens": 28
+  }
+ },
+ "e5bcdc351f4b05defafa2193bdd0c3c4e5d4c5922962ca4eef1ac777a74df0b9": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: recalibrado con gas de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_67698ee3820c5cef",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 476,
+   "output_tokens": 33
+  }
+ },
+ "e6f2086dbb6ace4a64d43b8d32eb28d293514bb3f0b67ffbac44f9f2c55b5cfd": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Sur: valores altos ajustados con el patrón\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_2280766cfc1c9515",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 679,
+   "output_tokens": 33
+  }
+ },
+ "e92f052a6387166c233984d608ef4a2473457cc7ec2747e6403f4a3948704995": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Centro: placa quemada, hay que cambiarla\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_75fac5c7a07e35b2",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 467,
+   "output_tokens": 31
+  }
+ },
+ "e97ba16fa9dbda55b9494ef42aeb764a657fb06ddfa01fc52d94e934cc9323b8": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Centro: recalibrado con gas de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_763c569e50c315c9",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 478,
+   "output_tokens": 33
+  }
+ },
+ "e9b017ec6864d20553d63f25de405d23a000ef327f645edd34b3cd077ee20224": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": true, \"resumen\": \"Oeste: sin conexión con el servidor\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_63bced93171597f7",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 670,
+   "output_tokens": 29
+  }
+ },
+ "ea5a2a3c0606e4d2b240a17f4c94578eb0a3c1decaa29f5ef25e972160e3ba78": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Este: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_6c3ed4aa9f7e73b0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 659,
+   "output_tokens": 27
+  }
+ },
+ "f260caedcabacd7a345db7eae343d3c61ea89d6b71fc432d4d5805238f58ac09": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: ganancia del sensor ajustada\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_319591d82b74d602",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 671,
+   "output_tokens": 31
+  }
+ },
+ "f2e5720bfd9dd3e10fcc948122b09f27be2e0e41bd910bad537da5c3848a9fc6": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: polvo de la entrada retirado\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_a6a4fac858d8f290",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 678,
+   "output_tokens": 30
+  }
+ },
+ "f392c2ada28a33cbb756acc2fb68ae3b04b61260d0c004e123e0e9c092777e76": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_f393816ca26e9527",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 463,
+   "output_tokens": 28
+  }
+ },
+ "f8ef7a8600d47c0708dd2fe5c17d62d2ee1093eadc18cf9f3e3c641d7636ae5f": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"calibracion\", \"urgente\": false, \"resumen\": \"Norte: comparado con el equipo de referencia\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_1bbc25a9f2660393",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 485,
+   "output_tokens": 34
+  }
+ },
+ "fcb56a0a53f24c364f5e19ba9873fcd8b2b60234f07017ab8ce6c9976b72da89": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"averia\", \"urgente\": false, \"resumen\": \"Este: revisión sin detalles\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_6c3ed4aa9f7e73b0",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 460,
+   "output_tokens": 27
+  }
+ },
+ "ff223ed3426ce2f6faeb8addc0a11bbf573a1b08ae2a5351f5e225f8e225ad3e": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Oeste: hojas y telarañas retiradas de la toma\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_98e66dfd9f5eb6a1",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 480,
+   "output_tokens": 33
+  }
+ },
+ "ffed7bdd12652248838897f98cce2719eef07fdad69cdf8f7dcdb1bc607e04a7": {
+  "content": [
+   {
+    "text": "{\"tipo\": \"limpieza\", \"urgente\": false, \"resumen\": \"Norte: hojas y telarañas retiradas de la toma\"}",
+    "type": "text"
+   }
+  ],
+  "id": "msg_ejemplo_736abbc894eafefe",
+  "model": "claude-sonnet-5-5",
+  "role": "assistant",
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+   "input_tokens": 481,
+   "output_tokens": 33
+  }
+ }
+}

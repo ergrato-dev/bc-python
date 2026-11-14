@@ -174,4 +174,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 35](../week-35-pytorch_cnn_entrenamiento_y_transfer_learning/README.md) | **Semana 36** | Semana 37 (próximamente) |
+| [Semana 35](../week-35-pytorch_cnn_entrenamiento_y_transfer_learning/README.md) | **Semana 36** | [Semana 37](../week-37-llms_por_api_prompting_salida_estructurada_y_tool_use/README.md) |

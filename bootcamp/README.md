@@ -68,7 +68,7 @@ La columna **Estado** dice la verdad sobre el repositorio: ✅ la semana está p
 | [34](week-34-pytorch_tensores_autograd_y_mlp/README.md) | PyTorch I: tensores, autograd y MLP | ✅ |
 | [35](week-35-pytorch_cnn_entrenamiento_y_transfer_learning/README.md) | PyTorch II: CNN, entrenamiento y transfer learning | ✅ |
 | [36](week-36-nlp_y_transformers_tokenizacion_atencion_y_hugging_face/README.md) | NLP y Transformers: tokenización, atención y Hugging Face | ✅ |
-| 37 | LLMs por API: prompting, salida estructurada y tool use | ⬜ |
+| 37 | [LLMs por API: prompting, salida estructurada y tool use](week-37-llms_por_api_prompting_salida_estructurada_y_tool_use/README.md) | ✅ |
 | 38 | RAG: embeddings, pgvector en PostgreSQL y evaluación | ⬜ |
 | 39 | Agentes y MCP en Python | ⬜ |
 | 40 | MLOps: MLflow, servir el modelo con FastAPI y drift | ⬜ |
