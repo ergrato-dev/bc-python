@@ -173,4 +173,4 @@ En los ejercicios, cada paso descomentado da la salida que muestra su README.
 
 | Anterior | Actual | Siguiente |
 | -------- | ------ | --------- |
-| [Semana 34](../week-34-pytorch_tensores_autograd_y_mlp/README.md) | **Semana 35** | Semana 36 (próximamente) |
+| [Semana 34](../week-34-pytorch_tensores_autograd_y_mlp/README.md) | **Semana 35** | [Semana 36](../week-36-nlp_y_transformers_tokenizacion_atencion_y_hugging_face/README.md) |

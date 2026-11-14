@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 466" role="img" aria-labelledby="t d">
+  <title id="t">BPE junta parejas de letras</title>
+  <desc id="d">La palabra recalibrado empieza en once letras sueltas; en cada paso BPE junta la pareja más frecuente del corpus, hasta quedar en seis piezas conocidas</desc>
+  <defs></defs>
+  <rect width="900" height="466" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" fill="#e2e8f0" font-weight="700">BPE: juntar una y otra vez la pareja más frecuente</text>
+    <text x="450" y="60" text-anchor="middle" font-size="12" fill="#94a3b8">Cada unión es una pieza nueva del vocabulario; una palabra que nunca vio se parte en piezas que sí conoce</text>
+    <text x="180" y="116" text-anchor="end" font-size="13" fill="#94a3b8">letras sueltas</text>
+    <rect x="200" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="217.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="241" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="258.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">e</text>
+    <rect x="282" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="299.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">c</text>
+    <rect x="323" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="340.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">a</text>
+    <rect x="364" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="381.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">l</text>
+    <rect x="405" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="422.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">i</text>
+    <rect x="446" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="463.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">b</text>
+    <rect x="487" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="504.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="528" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="545.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">a</text>
+    <rect x="569" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="586.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">d</text>
+    <rect x="610" y="90" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="627.5" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">o</text>
+    <text x="180" y="172" text-anchor="end" font-size="13" fill="#94a3b8">junta a + l</text>
+    <rect x="200" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="217.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="241" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="258.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">e</text>
+    <rect x="282" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="299.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">c</text>
+    <rect x="323" y="146" width="48" height="40" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="347.0" y="172" text-anchor="middle" font-size="15" fill="#fcd34d">al</text>
+    <rect x="377" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="394.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">i</text>
+    <rect x="418" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="435.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">b</text>
+    <rect x="459" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="476.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="500" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="517.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">a</text>
+    <rect x="541" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="558.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">d</text>
+    <rect x="582" y="146" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="599.5" y="172" text-anchor="middle" font-size="15" fill="#e2e8f0">o</text>
+    <text x="180" y="228" text-anchor="end" font-size="13" fill="#94a3b8">junta r + e</text>
+    <rect x="200" y="202" width="48" height="40" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="224.0" y="228" text-anchor="middle" font-size="15" fill="#fcd34d">re</text>
+    <rect x="254" y="202" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="271.5" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">c</text>
+    <rect x="295" y="202" width="48" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="319.0" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">al</text>
+    <rect x="349" y="202" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="366.5" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">i</text>
+    <rect x="390" y="202" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="407.5" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">b</text>
+    <rect x="431" y="202" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="448.5" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="472" y="202" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="489.5" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">a</text>
+    <rect x="513" y="202" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="530.5" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">d</text>
+    <rect x="554" y="202" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="571.5" y="228" text-anchor="middle" font-size="15" fill="#e2e8f0">o</text>
+    <text x="180" y="284" text-anchor="end" font-size="13" fill="#94a3b8">junta c + al</text>
+    <rect x="200" y="258" width="48" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="224.0" y="284" text-anchor="middle" font-size="15" fill="#e2e8f0">re</text>
+    <rect x="254" y="258" width="61" height="40" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="284.5" y="284" text-anchor="middle" font-size="15" fill="#fcd34d">cal</text>
+    <rect x="321" y="258" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="338.5" y="284" text-anchor="middle" font-size="15" fill="#e2e8f0">i</text>
+    <rect x="362" y="258" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="379.5" y="284" text-anchor="middle" font-size="15" fill="#e2e8f0">b</text>
+    <rect x="403" y="258" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="420.5" y="284" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="444" y="258" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="461.5" y="284" text-anchor="middle" font-size="15" fill="#e2e8f0">a</text>
+    <rect x="485" y="258" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="502.5" y="284" text-anchor="middle" font-size="15" fill="#e2e8f0">d</text>
+    <rect x="526" y="258" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="543.5" y="284" text-anchor="middle" font-size="15" fill="#e2e8f0">o</text>
+    <text x="180" y="340" text-anchor="end" font-size="13" fill="#94a3b8">junta cal + i</text>
+    <rect x="200" y="314" width="48" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="224.0" y="340" text-anchor="middle" font-size="15" fill="#e2e8f0">re</text>
+    <rect x="254" y="314" width="74" height="40" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="291.0" y="340" text-anchor="middle" font-size="15" fill="#fcd34d">cali</text>
+    <rect x="334" y="314" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="351.5" y="340" text-anchor="middle" font-size="15" fill="#e2e8f0">b</text>
+    <rect x="375" y="314" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="392.5" y="340" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="416" y="314" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="433.5" y="340" text-anchor="middle" font-size="15" fill="#e2e8f0">a</text>
+    <rect x="457" y="314" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="474.5" y="340" text-anchor="middle" font-size="15" fill="#e2e8f0">d</text>
+    <rect x="498" y="314" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="515.5" y="340" text-anchor="middle" font-size="15" fill="#e2e8f0">o</text>
+    <text x="180" y="396" text-anchor="end" font-size="13" fill="#94a3b8">junta a + d</text>
+    <rect x="200" y="370" width="48" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="224.0" y="396" text-anchor="middle" font-size="15" fill="#e2e8f0">re</text>
+    <rect x="254" y="370" width="74" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="291.0" y="396" text-anchor="middle" font-size="15" fill="#e2e8f0">cali</text>
+    <rect x="334" y="370" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="351.5" y="396" text-anchor="middle" font-size="15" fill="#e2e8f0">b</text>
+    <rect x="375" y="370" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="392.5" y="396" text-anchor="middle" font-size="15" fill="#e2e8f0">r</text>
+    <rect x="416" y="370" width="48" height="40" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="440.0" y="396" text-anchor="middle" font-size="15" fill="#fcd34d">ad</text>
+    <rect x="470" y="370" width="35" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="487.5" y="396" text-anchor="middle" font-size="15" fill="#e2e8f0">o</text>
+    <text x="450" y="442" text-anchor="middle" font-size="13" fill="#86efac">«recalibrado» no estaba en ninguna nota: con 120 piezas sale re · cali · b · r · ad · o (ejercicio 01, paso 4)</text>
+  </g>
+</svg>

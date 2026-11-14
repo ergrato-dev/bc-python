@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 542" role="img" aria-labelledby="t d">
+  <title id="t">El bloque Transformer de tu Encoder</title>
+  <desc id="d">Los identificadores de las piezas pasan a vectores con su posición, por una capa de atención y una red por pieza con sumas y normalizaciones, luego la media sin relleno y una capa lineal con tres puntuaciones</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker></defs>
+  <rect width="900" height="542" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" fill="#e2e8f0" font-weight="700">Tu Encoder: un Transformer de una capa que clasifica notas</text>
+    <text x="450" y="60" text-anchor="middle" font-size="12" fill="#94a3b8">Forma de cada paso para un lote de 16 notas de 48 piezas y vectores de 16 números</text>
+    <rect x="160" y="84" width="580" height="38" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="176" y="108" text-anchor="start" font-size="14" fill="#e2e8f0">piezas de la nota (identificadores)</text>
+    <text x="726" y="108" text-anchor="end" font-size="13" fill="#93c5fd">(16, 48)</text>
+    <line x1="450" y1="124" x2="450" y2="138" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="160" y="140" width="580" height="38" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="176" y="164" text-anchor="start" font-size="14" fill="#e2e8f0">nn.Embedding de piezas + nn.Embedding de posiciones</text>
+    <text x="726" y="164" text-anchor="end" font-size="13" fill="#93c5fd">(16, 48, 16)</text>
+    <line x1="450" y1="180" x2="450" y2="194" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="220" y="196" width="460" height="38" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="236" y="220" text-anchor="start" font-size="14" fill="#e2e8f0">atención de 2 cabezas, sin mirar el relleno</text>
+    <text x="666" y="220" text-anchor="end" font-size="13" fill="#fcd34d">(16, 48, 16)</text>
+    <line x1="450" y1="236" x2="450" y2="250" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="220" y="252" width="460" height="38" rx="6" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="236" y="276" text-anchor="start" font-size="14" fill="#e2e8f0">suma con la entrada y normalización</text>
+    <text x="666" y="276" text-anchor="end" font-size="13" fill="#94a3b8">(16, 48, 16)</text>
+    <line x1="450" y1="292" x2="450" y2="306" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="220" y="308" width="460" height="38" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="236" y="332" text-anchor="start" font-size="14" fill="#e2e8f0">red de cada pieza: Linear 16→32, ReLU, Linear 32→16</text>
+    <text x="666" y="332" text-anchor="end" font-size="13" fill="#86efac">(16, 48, 16)</text>
+    <line x1="450" y1="348" x2="450" y2="362" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="220" y="364" width="460" height="38" rx="6" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="236" y="388" text-anchor="start" font-size="14" fill="#e2e8f0">suma con la entrada y normalización</text>
+    <text x="666" y="388" text-anchor="end" font-size="13" fill="#94a3b8">(16, 48, 16)</text>
+    <line x1="450" y1="404" x2="450" y2="418" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="160" y="420" width="580" height="38" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="176" y="444" text-anchor="start" font-size="14" fill="#e2e8f0">media de las piezas, sin el relleno</text>
+    <text x="726" y="444" text-anchor="end" font-size="13" fill="#93c5fd">(16, 16)</text>
+    <line x1="450" y1="460" x2="450" y2="474" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="160" y="476" width="580" height="38" rx="6" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="176" y="500" text-anchor="start" font-size="14" fill="#e2e8f0">nn.Linear 16 → 3: una puntuación por tipo</text>
+    <text x="726" y="500" text-anchor="end" font-size="13" fill="#fca5a5">(16, 3)</text>
+    <rect x="196" y="192" width="508" height="224" rx="10" fill="none" stroke="#fcd34d" stroke-dasharray="5 4"/>
+    <text x="712" y="300" text-anchor="start" font-size="13" fill="#fcd34d">nn.TransformerEncoderLayer</text>
+    <text x="712" y="320" text-anchor="start" font-size="12" fill="#94a3b8">(se puede apilar: LAYERS)</text>
+  </g>
+</svg>

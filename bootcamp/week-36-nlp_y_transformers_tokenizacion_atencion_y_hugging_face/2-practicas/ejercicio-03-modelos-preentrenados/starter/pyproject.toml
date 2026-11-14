@@ -1,0 +1,19 @@
+[project]
+name = "modelos-preentrenados"
+version = "0.1.0"
+description = "Ejercicio 03 de la semana 36: modelos preentrenados"
+requires-python = ">=3.14,<3.15"
+dependencies = ["scikit-learn==1.9.1", "torch==2.15.0", "transformers==5.22.1"]
+
+[tool.uv]
+# Es un ejercicio, no un paquete instalable: uv solo crea el entorno.
+package = false
+
+[[tool.uv.index]]
+# Las ruedas de PyTorch solo para CPU: las de PyPI traen CUDA para Linux, más de 2 GB.
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }

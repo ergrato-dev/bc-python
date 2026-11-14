@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 474" role="img" aria-labelledby="t d">
+  <title id="t">La atención con consultas, claves y valores</title>
+  <desc id="d">Cada palabra da una clave y un valor; la consulta de responde se compara con las tres claves, softmax da tres pesos que suman uno, y la salida es la suma de los valores con esos pesos</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#86efac"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fcd34d"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fca5a5"/></marker></defs>
+  <rect width="900" height="474" rx="12" fill="#0f172a"/>
+  <g font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif" font-size="14" fill="#e2e8f0">
+    <text x="450" y="36" text-anchor="middle" font-size="17" fill="#e2e8f0" font-weight="700">La atención de «responde»: consulta, claves, pesos y valores</text>
+    <text x="450" y="58" text-anchor="middle" font-size="12" fill="#94a3b8">La salida es la suma de los valores de todas las palabras, cada uno con su peso</text>
+    <rect x="120" y="90" width="160" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="200" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">sensor</text>
+    <line x1="200" y1="132" x2="200" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="120" y="170" width="74" height="36" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="157" y="194" text-anchor="middle" font-size="13" fill="#86efac">clave k</text>
+    <rect x="206" y="170" width="74" height="36" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="243" y="194" text-anchor="middle" font-size="13" fill="#fcd34d">valor v</text>
+    <line x1="157" y1="208" x2="157" y2="230" stroke="#86efac" stroke-width="2" marker-end="url(#g)"/>
+    <rect x="114" y="232" width="86" height="34" rx="6" fill="#1e293b" stroke="#fca5a5" stroke-dasharray="5 4"/>
+    <text x="157" y="254" text-anchor="middle" font-size="13" fill="#fca5a5">q · k / √d</text>
+    <line x1="157" y1="268" x2="157" y2="290" stroke="#fca5a5" stroke-width="2" marker-end="url(#r)"/>
+    <rect x="122" y="292" width="70" height="36" rx="6" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="157" y="316" text-anchor="middle" font-size="15" fill="#fca5a5">0.25</text>
+    <text x="112" y="316" text-anchor="end" font-size="12" fill="#94a3b8">peso</text>
+    <line x1="243" y1="208" x2="243" y2="376" stroke="#fcd34d" stroke-width="2" marker-end="url(#y)"/>
+    <line x1="170" y1="330" x2="220" y2="376" stroke="#fca5a5" stroke-width="2" marker-end="url(#r)"/>
+    <rect x="350" y="90" width="160" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="430" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">no</text>
+    <line x1="430" y1="132" x2="430" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="350" y="170" width="74" height="36" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="387" y="194" text-anchor="middle" font-size="13" fill="#86efac">clave k</text>
+    <rect x="436" y="170" width="74" height="36" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="473" y="194" text-anchor="middle" font-size="13" fill="#fcd34d">valor v</text>
+    <line x1="387" y1="208" x2="387" y2="230" stroke="#86efac" stroke-width="2" marker-end="url(#g)"/>
+    <rect x="344" y="232" width="86" height="34" rx="6" fill="#1e293b" stroke="#fca5a5" stroke-dasharray="5 4"/>
+    <text x="387" y="254" text-anchor="middle" font-size="13" fill="#fca5a5">q · k / √d</text>
+    <line x1="387" y1="268" x2="387" y2="290" stroke="#fca5a5" stroke-width="2" marker-end="url(#r)"/>
+    <rect x="352" y="292" width="70" height="36" rx="6" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="387" y="316" text-anchor="middle" font-size="15" fill="#fca5a5">0.30</text>
+    <text x="342" y="316" text-anchor="end" font-size="12" fill="#94a3b8">peso</text>
+    <line x1="473" y1="208" x2="473" y2="376" stroke="#fcd34d" stroke-width="2" marker-end="url(#y)"/>
+    <line x1="400" y1="330" x2="450" y2="376" stroke="#fca5a5" stroke-width="2" marker-end="url(#r)"/>
+    <rect x="580" y="90" width="160" height="40" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="660" y="116" text-anchor="middle" font-size="15" fill="#e2e8f0">responde</text>
+    <line x1="660" y1="132" x2="660" y2="168" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="580" y="170" width="74" height="36" rx="6" fill="#1e293b" stroke="#86efac"/>
+    <text x="617" y="194" text-anchor="middle" font-size="13" fill="#86efac">clave k</text>
+    <rect x="666" y="170" width="74" height="36" rx="6" fill="#1e293b" stroke="#fcd34d"/>
+    <text x="703" y="194" text-anchor="middle" font-size="13" fill="#fcd34d">valor v</text>
+    <line x1="617" y1="208" x2="617" y2="230" stroke="#86efac" stroke-width="2" marker-end="url(#g)"/>
+    <rect x="574" y="232" width="86" height="34" rx="6" fill="#1e293b" stroke="#fca5a5" stroke-dasharray="5 4"/>
+    <text x="617" y="254" text-anchor="middle" font-size="13" fill="#fca5a5">q · k / √d</text>
+    <line x1="617" y1="268" x2="617" y2="290" stroke="#fca5a5" stroke-width="2" marker-end="url(#r)"/>
+    <rect x="582" y="292" width="70" height="36" rx="6" fill="#1e293b" stroke="#fca5a5"/>
+    <text x="617" y="316" text-anchor="middle" font-size="15" fill="#fca5a5">0.45</text>
+    <text x="572" y="316" text-anchor="end" font-size="12" fill="#94a3b8">peso</text>
+    <line x1="703" y1="208" x2="703" y2="376" stroke="#fcd34d" stroke-width="2" marker-end="url(#y)"/>
+    <line x1="630" y1="330" x2="680" y2="376" stroke="#fca5a5" stroke-width="2" marker-end="url(#r)"/>
+    <text x="450" y="80" text-anchor="middle" font-size="12" fill="#fca5a5">q: la consulta de «responde», comparada con la clave de cada palabra (las tres, también la suya)</text>
+    <rect x="170" y="378" width="560" height="44" rx="6" fill="#1e293b" stroke="#93c5fd"/>
+    <text x="450" y="406" text-anchor="middle" font-size="14" fill="#e2e8f0">salida de «responde» = 0.25 · v(sensor) + 0.30 · v(no) + 0.45 · v(responde)</text>
+    <text x="450" y="450" text-anchor="middle" font-size="12" fill="#94a3b8">softmax convierte las tres comparaciones en pesos que suman 1; con máscara, el relleno (o el futuro) recibe 0</text>
+  </g>
+</svg>

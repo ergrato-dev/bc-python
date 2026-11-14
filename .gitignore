@@ -146,3 +146,8 @@ mlartifacts/
 
 # Archivos que escriben los ejercicios guiados al ejecutarse (semana 26)
 **/2-practicas/*/starter/salida/
+
+# -----------------------------------------------------------------------------
+# Modelos que guardan los ejercicios (semana 36: cientos de MB)
+# -----------------------------------------------------------------------------
+modelo-afinado/
